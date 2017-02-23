@@ -9,7 +9,7 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
 	gwtank = 1
@@ -62,7 +62,7 @@ give_guarantee = URG
 1939.1.1 = {
 
 	add_political_power = 1199
-
+	
 	#adding ministers
 	add_ideas = {
 		USA_robert_taft
@@ -160,20 +160,20 @@ set_national_unity = 0.6
 set_politics = {
 
 	parties = {
-		democratic = {
+		democratic = { 
 			popularity = 99
 		}
 
 		fascism = {
 			popularity = 0
 		}
-
+		
 		communism = {
 			popularity = 1
 			#banned = no #default is no
 		}
 	}
-
+	
 	ruling_party = democratic
 	last_election = "1932.11.8"
 	election_frequency = 48
@@ -199,20 +199,20 @@ set_autonomy = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 99
 			}
 
 			fascism = {
 				popularity = 0
 			}
-
+			
 			communism = {
 				popularity = 1
 				#banned = no #default is no
 			}
 		}
-
+		
 		ruling_party = democratic
 		last_election = "1936.11.3"
 		election_frequency = 48
@@ -223,7 +223,7 @@ set_autonomy = {
 create_country_leader = {
 	name = "Abraham Lincoln"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_ACU_Abraham_Lincoln.dds"
+	picture = "Portrait_USA_Franklin_Roosevelt.dds"
 	expire = "1947.1.1"
 	ideology = liberalism
 	traits = {
@@ -238,7 +238,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-
+		
 	}
 }
 
@@ -249,7 +249,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-
+		
 	}
 }
 
@@ -383,7 +383,7 @@ create_corps_commander = {
 		picture = "Portrait_USA_William_Hood_Simpson.dds"
 	traits = {  }
 	skill = 3
-
+	
 }
 
 create_corps_commander = {
@@ -391,7 +391,7 @@ create_corps_commander = {
 		picture = "Portrait_USA_Lawton_Collins.dds"
 	traits = {  trickster }
 	skill = 3
-
+	
 }
 
 create_corps_commander = {
@@ -406,7 +406,7 @@ create_corps_commander = {
 	name = "Joseph Stilwell"
 		picture = "Portrait_USA_Joseph_Stilwell.dds"
 	traits = {  }
-	skill = 1
+	skill = 1 
 }
 
 create_corps_commander = {
@@ -551,7 +551,7 @@ create_equipment_variant = {
 }
 
 1939.1.1 = {
-
+	
 	create_equipment_variant = {
 		name = "Salmon Class"
 		type = submarine_2
