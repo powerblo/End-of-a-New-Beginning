@@ -91,12 +91,12 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "infantry_subtitle_motorized"
+					name = "infantry_subtitle_mobile"
 					position = { x = 30 y = 510 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = { x = 0 y = 0}
-					text = "INFANTRY_TITLE_MOTORISED"
+					text = "INFANTRY_TITLE_MOBILE_DIVISIONS"
 					maxWidth = 600
 					maxHeight = 62
 					format = left
@@ -293,14 +293,6 @@ guiTypes = {
 			}
 
 
-			gridboxtype = {
-				name = "support_weapons_tree"
-				position = { x = 140 y = 210 }
-				#size = { width = 420 height = 500 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-
 			iconType = {
 				name = "highlight_infantry_1"
 				spriteType = "GFX_tutorial_research_small_item_icon_glow"
@@ -317,40 +309,87 @@ guiTypes = {
 			}
 
 			gridboxtype = {
-				name = "infantry_weapons_tree"
+				name = "sights_tree"
 				position = { x = 140 y = 325 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "infantry_weapons_tree"
+				position = { x = 140 y = 440 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 
 			}
 
 			gridboxtype = {
+				name = "handguns_tree"
+				position = { x = 140 y = 935 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "support_weapons_tree"
+				position = { x = 140 y = 1050 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "clothings_tree"
+				position = { x = 140 y = 1165 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
 				name = "motorised_infantry_tree"
-				position = { x = 140 y = 620 }
+				position = { x = 140 y = 1270 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "cavalry_tree"
+				position = { x = 140 y = 1375 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "dragoon_tree"
+				position = { x = 140 y = 1480 }
+				#size = { width = 420 height = 500 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "marines_tree"
-				position = { x = 140 y = 825 }
+				position = { x = 140 y = 1585 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "tech_mountaineers_tree"
-				position = { x = 140 y = 930 }
+				position = { x = 140 y = 1690 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "paratroopers_tree"
-				position = { x = 140 y = 1035 }
+				position = { x = 140 y = 1795 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
+
+
 		}
 
 		containerWindowType = {
