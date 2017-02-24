@@ -119,25 +119,25 @@ set_politics = {
 
 	parties = {
 
-		neutrality = { 
+		despotic_autocracy = { 
 			popularity = 70
 		}
 
-		democratic = { 
+		liberal_conservatism = { 
 			popularity = 15
 		}
 
-		fascism = {
+		totalitarian_nationalism = {
 			popularity = 10
 		}
 		
-		communism = {
+		marxism_leninism = {
 			popularity = 5
 			#banned = no #default is no
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = despotic_autocracy
 	last_election = "1935.10.14"
 	election_frequency = 60
 	elections_allowed = yes
@@ -194,21 +194,21 @@ set_national_unity = 0.9
 	set_politics = {
 
 		parties = {
-			democratic = { 
+			liberal_conservatism = { 
 				popularity = 98
 			}
 
-			fascism = {
+			totalitarian_nationalism = {
 				popularity = 1
 			}
 			
-			communism = {
+			marxism_leninism = {
 				popularity = 1
 				#banned = no #default is no
 			}
 		}
 		
-		ruling_party = democratic
+		ruling_party = liberal_conservatism
 		last_election = "1935.10.14"
 		election_frequency = 60
 		elections_allowed = yes

@@ -160,21 +160,21 @@ set_national_unity = 0.6
 set_politics = {
 
 	parties = {
-		democratic = { 
+		liberal_conservatism = { 
 			popularity = 10
 		}
 
-		fascism = {
+		totalitarian_nationalism = {
 			popularity = 89
 		}
 		
-		communism = {
+		marxism_leninism = {
 			popularity = 1
 			#banned = no #default is no
 		}
 	}
 	
-	ruling_party = fascism
+	ruling_party = totalitarian_nationalism
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
@@ -198,21 +198,21 @@ set_autonomy = {
 	set_politics = {
 
 		parties = {
-			democratic = { 
+			liberal_conservatism = { 
 				popularity = 99
 			}
 
-			fascism = {
+			totalitarian_nationalism = {
 				popularity = 0
 			}
 			
-			communism = {
+			marxism_leninism = {
 				popularity = 1
 				#banned = no #default is no
 			}
 		}
 		
-		ruling_party = democratic
+		ruling_party = liberal_conservatism
 		last_election = "1936.11.3"
 		election_frequency = 48
 		elections_allowed = yes
@@ -235,7 +235,7 @@ create_country_leader = {
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_USA_William_Dudley_Pelley.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
+	ideology = totalitarian_nationalism_ideology
 	traits = {
 		
 	}
