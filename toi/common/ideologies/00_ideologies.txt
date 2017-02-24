@@ -216,6 +216,42 @@ ideologies = {
 
 	}
 
+	marxism_leninism = {
+
+		types = {
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_MARXLEN_1"
+			"FACTION_NAME_MARXLEN_2"
+			"FACTION_NAME_MARXLEN_3"
+			"FACTION_NAME_MARXLEN_4"
+			"FACTION_NAME_MARXLEN_5"
+		}
+
+		color = { 168 0 0 }
+
+		war_impact_on_world_tension = 0.75		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+
+		ai_communist = yes # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		modifiers = {
+			puppet_cost_factor = -0.3
+		}
+
+		faction_modifiers = {
+
+		}
+
+	}
+
 	despotic_autocracy = {
 
 		types = {
