@@ -142,7 +142,7 @@ set_politics = {
 
 	parties = {
 		liberal_conservatism = {
-			popularity = 69
+			popularity = 1
 		}
 
 		totalitarian_nationalism = {
@@ -150,14 +150,16 @@ set_politics = {
 		}
 
 		marxism_leninism = {
-			popularity = 30
+			popularity = 0
+		}
+		despotic_autocracy = {
+			popularity = 98
 		}
 	}
 
-	ruling_party = liberal_conservatism
-	last_election = "1932.5.1"
+	ruling_party = despotic_autocracy
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 add_ideas = {

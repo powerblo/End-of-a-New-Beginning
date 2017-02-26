@@ -5,11 +5,11 @@ oob = "AUS_1936"
 set_research_slots = 3
 
 set_technology = {
-	
-	
+
+
 	tech_recon = 1
 	tech_engineers = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_mountaineers = 1
 	early_fighter = 1
 }
@@ -17,25 +17,24 @@ set_technology = {
 set_politics = {
 
 	parties = {
-		despotic_autocracy = { 
-			popularity = 48
+		despotic_autocracy = {
+			popularity = 99
 		}
 
 		totalitarian_nationalism = {
-			popularity = 50
+			popularity = 0
 		}
 
 		liberal_conservatism = {
 			popularity = 1
 		}
-		
+
 		marxism_leninism = {
 			popularity = 1
 		}
 	}
-	
+
 	ruling_party = despotic_autocracy
-	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -43,10 +42,9 @@ set_politics = {
 set_national_unity = 0.50
 
 create_country_leader = {
-	name = "Kurt Schuschnigg"
+	name = "Franz Joseph I"
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
-	expire = "1965.1.1"
+	picture = "Portrait_AUS_Franz_Joseph_I.dds"
 	ideology = spiffyking
 	traits = {
 		#
