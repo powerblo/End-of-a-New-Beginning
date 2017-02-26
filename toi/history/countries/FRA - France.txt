@@ -6,8 +6,8 @@ set_research_slots = 3
 
 # Starting tech
 set_technology = {
-	
-	
+
+
 	tech_support = 1
 	tech_recon = 1
 	tech_mountaineers = 1
@@ -100,7 +100,7 @@ set_technology = {
 		fighter_baiting = 1
 		low_echelon_support = 1
 		dispersed_fighting = 1
-		
+
 			grand_battle_plan = 1
 
 		trench_warfare = 1
@@ -141,19 +141,19 @@ set_national_unity = 0.4
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 69
 		}
 
 		totalitarian_nationalism = {
 			popularity = 1
 		}
-		
+
 		marxism_leninism = {
 			popularity = 30
 		}
 	}
-	
+
 	ruling_party = liberal_conservatism
 	last_election = "1932.5.1"
 	election_frequency = 48
@@ -177,16 +177,16 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = democrat
 	traits = {
-		
+
 	}
 }
 
 create_country_leader = {
-	name = "Édouard Daladier"
+	name = "Napoleon III"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Portrait_France_Edouard_Daladier.dds"
-	expire = "1965.1.1"
-	ideology = democrat
+	picture = "Portrait_FRA_Napoleon_III.dds"
+	expire = "1865.1.1"
+	ideology = despotic_autocrat
 	traits = {
 		stout_defender
 	}
@@ -199,7 +199,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = 	commie
 	traits = {
-		
+
 	}
 }
 
@@ -210,7 +210,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = hazitazinazi
 	traits = {
-		
+
 	}
 }
 
@@ -373,7 +373,7 @@ create_equipment_variant = {
 }
 
 1939.1.1 = {
-	
+
 	create_equipment_variant = {
 		name = "Aurore Class"
 		type = submarine_2

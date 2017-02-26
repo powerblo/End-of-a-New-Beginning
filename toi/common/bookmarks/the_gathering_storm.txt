@@ -1,19 +1,35 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
+		name = "NATION_DIVIDED_NAME"
+		desc = "NATION_DIVIDED_DESC"
 		date = 1861.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "GER"
+		default_country = "ACU"
 		default = yes
-		
+
 		"ACU"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "ACU_NATION_DIVIDED_DESC"
 			ideology = liberal_conservatism
 		}
 		"ACC"={
-			history = "USA_GATHERING_STORM_DESC"
-			ideology = liberal_conservatism
+			history = "ACC_NATION_DIVIDED_DESC"
+			ideology = reactionary
+		}
+		"PRU"={
+			history = "PRU_NATION_DIVIDED_DESC"
+			ideology = despotic_autocracy
+		}
+		"FRA"={
+			history = "FRA_NATION_DIVIDED_DESC"
+			ideology = despotic_autocracy
+		}
+		"AUS"={
+			history = "AUS_NATION_DIVIDED_DESC"
+			ideology = despotic_autocracy
+		}
+		"ITA"={
+			history = "ITA_NATION_DIVIDED_DESC"
+			ideology = despotic_autocracy
 		}
 
 	}

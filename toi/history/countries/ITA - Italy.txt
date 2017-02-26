@@ -5,19 +5,14 @@ oob = "ITA_1936"
 set_research_slots = 4
 
 add_ideas = {
-	victor_emmanuel
-	vittoria_mutilata
-	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
 }
 
 
 # Starting tech
 set_technology = {
-	
-	
-	tech_support = 1		
+
+
+	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
@@ -52,7 +47,7 @@ set_technology = {
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#white_peace = ETH
 
 	#adding ministers
@@ -105,7 +100,7 @@ set_technology = {
 		prepared_defense = 1
 		battlefleet_concentration = 1
 		submarine_operations = 1
-		
+
 		#Air
 		force_rotation = 1
 		fighter_baiting = 1
@@ -136,7 +131,7 @@ set_technology = {
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
 	}
-	
+
 	set_national_unity = 0.8
 	GER = { add_to_faction = ITA }
 }
@@ -148,19 +143,19 @@ set_national_unity = 0.6
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 22
 		}
 
 		totalitarian_nationalism = {
 			popularity = 76
 		}
-		
+
 		marxism_leninism = {
 			popularity = 2
 		}
 	}
-	
+
 	ruling_party = totalitarian_nationalism
 	last_election = "1934.3.26"
 	election_frequency = 60
@@ -171,13 +166,13 @@ set_politics = {
 
 
 create_country_leader = {
-	name = "Benito Mussolini"
+	name = "Victor Emmanuel II"
 	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
-	picture = "Portrait_Italy_Benito_Mussolini.dds"
-	expire = "1965.1.1"
+	picture = "Portrait_ITA_Victor_Emmanuel_II.dds"
+	expire = "1878.1.1"
 	ideology = hazitazinazi
 	traits = {
-		
+
 	}
 }
 
