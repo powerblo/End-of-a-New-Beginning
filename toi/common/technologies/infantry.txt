@@ -2,21 +2,21 @@ technologies = {
 
 	#Civil War Era
 	@1840 = 0
-	@1850 = 0
-	@1860 = 3
-	@1862 = 6
-	@1864 = 8
-	@1865 = 10
-	@1868 = 12
-	@1870 = 14
-	@1872 = 16
-	@1874 = 18
-	@1875 = 20
-	@1876 = 22
-	@1878 = 24
-	@1880 = 26
-	@1882 = 28
-	@1885 = 30
+	@1850 = 3
+	@1860 = 6
+	@1862 = 9
+	@1864 = 11
+	@1865 = 13
+	@1868 = 15
+	@1870 = 17
+	@1872 = 19
+	@1874 = 21
+	@1875 = 23
+	@1876 = 25
+	@1878 = 27
+	@1880 = 29
+	@1882 = 31
+	@1885 = 33
 
 	#WW2 Era
 	@1918 = 68
@@ -56,6 +56,11 @@ technologies = {
 
 		path = {
 			leads_to_tech = socket_musket
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = vic_army_cloth
 			research_cost_coeff = 1
 		}
 
@@ -362,7 +367,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = -1}
+			position = { x = -2 y = -1}
 		}
 
 		categories = {
@@ -389,7 +394,7 @@ technologies = {
 		start_year = 1850
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1850}
+			position = { x = -2 y = @1850}
 		}
 
 		categories = {
@@ -416,7 +421,7 @@ technologies = {
 		start_year = 1865
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1865}
+			position = { x = -2 y = @1865}
 		}
 
 		categories = {
@@ -438,7 +443,7 @@ technologies = {
 		start_year = 1880
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1880}
+			position = { x = -2 y = @1880}
 		}
 
 		categories = {
@@ -466,7 +471,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = -1}
+			position = { x = 2 y = -1}
 		}
 
 		categories = {
@@ -488,7 +493,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = @1840}
+			position = { x = 2 y = @1840}
 		}
 
 		categories = {
@@ -497,6 +502,532 @@ technologies = {
 
 		ai_will_do = {
 		 factor = 1
+		}
+	}
+
+	#### Clothing Equipment
+
+	vic_army_cloth = {
+
+		research_cost = 1
+		start year = 1840
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1840}
+		}
+
+		path = {
+			leads_to_tech = civil_army_cloth
+		}
+
+		path = {
+			leads_to_tech = basic_cavalry
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	civil_army_cloth = {
+
+		research_cost = 1
+		start year = 1850
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1850}
+		}
+
+		path = {
+			leads_to_tech = 1864_army_cloth
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	1864_army_cloth = {
+
+		research_cost = 1
+		start year = 1864
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1864}
+		}
+
+		path = {
+			leads_to_tech = durable_cloth
+		}
+
+		path = {
+			leads_to_tech = camo_uniform
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	camo_uniform = {
+
+		research_cost = 1
+		start year = 1868
+		folder = {
+			name = infantry_folder
+			position = { x = 8 y = @1868}
+		}
+
+		path = {
+			leads_to_tech = solid_camo
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	solid_camo = {
+
+		research_cost = 1
+		start year = 1875
+		folder = {
+			name = infantry_folder
+			position = { x = 8 y = @1875}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	durable_cloth = {
+
+		research_cost = 1
+		start year = 1870
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1870}
+		}
+
+		path = {
+			leads_to_tech = 1872_army_cloth
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	1872_army_cloth = {
+
+		research_cost = 1
+		start year = 1872
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1872}
+		}
+
+		path = {
+			leads_to_tech = 1878_army_cloth
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	1878_army_cloth = {
+
+		research_cost = 1
+		start year = 1878
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1878}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#### Cavalry
+
+	basic_cavalry = {
+
+		research_cost = 1
+		start year = 1840
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1840}
+		}
+
+		path = {
+			leads_to_tech = horse_transport
+		}
+
+		path = {
+			leads_to_tech = improved_cavalry
+		}
+
+		path = {
+			leads_to_tech = mounted_infantry
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	horse_transport = {
+
+		research_cost = 1
+		start year = 1850
+		folder = {
+			name = infantry_folder
+			position = { x = 10 y = @1850}
+		}
+
+		path = {
+			leads_to_tech = horse_artillery
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	horse_artillery = {
+
+		research_cost = 1
+		start year = 1860
+		folder = {
+			name = infantry_folder
+			position = { x = 10 y = @1860}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mounted_infantry = {
+
+		research_cost = 1
+		start year = 1850
+		folder = {
+			name = infantry_folder
+			position = { x = 14 y = @1850}
+		}
+
+		path = {
+			leads_to_tech = dragoon_equipment
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dragoon_equipment = {
+
+		research_cost = 1
+		start year = 1862
+		folder = {
+			name = infantry_folder
+			position = { x = 14 y = @1862}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	improved_cavalry = {
+
+		research_cost = 1
+		start year = 1860
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1860}
+		}
+
+		path = {
+			leads_to_tech = specialized_cavalry
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	specialized_cavalry = {
+
+		research_cost = 1
+		start year = 1862
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1862}
+		}
+
+		path = {
+			leads_to_tech = cavalry_recon
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cavalry_recon = {
+
+		research_cost = 1
+		start year = 1864
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1864}
+		}
+
+		path = {
+			leads_to_tech = cav_supply
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cav_supply = {
+
+		research_cost = 1
+		start year = 1865
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1865}
+		}
+
+		path = {
+			leads_to_tech = cav_integrity
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cav_integrity = {
+
+		research_cost = 1
+		start year = 1872
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1872}
+		}
+
+		path = {
+			leads_to_tech = modern_cavalry
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	modern_cavalry = {
+
+		research_cost = 1
+		start year = 1876
+		folder = {
+			name = infantry_folder
+			position = { x = 12 y = @1876}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#### Automatic Weaps.
+
+	gatling_gun = {
+
+		research_cost = 1
+		start year = 1860
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1860}
+		}
+
+		path = {
+			leads_to_tech = lighter_designs
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lighter_designs = {
+
+		research_cost = 1
+		start year = 1864
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1864}
+		}
+
+		path = {
+			leads_to_tech = improved_fire_rate
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	improved_fire_rate = {
+
+		research_cost = 1
+		start year = 1868
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1868}
+		}
+
+		path = {
+			leads_to_tech = enhanced_rotary
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	enhanced_rotary = {
+
+		research_cost = 1
+		start year = 1874
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1874}
+		}
+
+		path = {
+			leads_to_tech = automatic_arms
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	automatic_arms = {
+
+		research_cost = 1
+		start year = 1882
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1882}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
