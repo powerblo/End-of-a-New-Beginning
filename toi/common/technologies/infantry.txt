@@ -136,8 +136,16 @@ technologies = {
 
 	improved_matchlock = {
 
-		category_light_infantry = {
+		category_all_infantry = {
 			soft_attack = 0.02
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		cavalry = {
+			soft_attack = 0.02
+			defense = 0.05
+			breakthrough = 0.05
 		}
 
 		path = {
@@ -192,6 +200,7 @@ technologies = {
 
 		category_light_infantry = {
 			soft_attack = 0.02
+			breakthrough = 0.04
 		}
 
 		path = {
@@ -217,8 +226,9 @@ technologies = {
 
 	enhanced_firearm = {
 
-		category_light_infantry = {
-			soft_attack = 0.02
+		category_all_infantry = {
+			soft_attack = 0.03
+			max_organization = 0.03
 		}
 
 		path = {
@@ -273,6 +283,7 @@ technologies = {
 
 		category_light_infantry = {
 			soft_attack = 0.02
+			max_organization = 0.05
 		}
 
 		path = {
@@ -783,6 +794,11 @@ technologies = {
 
 	dragoon_equipment = {
 
+	cavalry = {
+		soft_attack = 0.04
+		max_organization = 0.03
+	}
+
 		research_cost = 1
 		start year = 1862
 		folder = {
@@ -800,6 +816,11 @@ technologies = {
 	}
 
 	improved_cavalry = {
+
+		cavalry = {
+			soft_attack = 0.04
+			max_organization = 0.05
+		}
 
 		research_cost = 1
 		start year = 1860
@@ -823,6 +844,12 @@ technologies = {
 
 	specialized_cavalry = {
 
+		cavalry = {
+			recon = 0.1
+			soft_attack = 0.2
+			max_organization = 0.3
+		}
+
 		research_cost = 1
 		start year = 1862
 		folder = {
@@ -844,6 +871,10 @@ technologies = {
 	}
 
 	cavalry_recon = {
+
+		cavalry = {
+			recon = 1
+		}
 
 		research_cost = 1
 		start year = 1864
@@ -867,6 +898,12 @@ technologies = {
 
 	cav_supply = {
 
+		cavalry = {
+			recon = 0.5
+			max_organization = 0.03
+			soft_attack = 0.4
+		}
+
 		research_cost = 1
 		start year = 1865
 		folder = {
@@ -888,6 +925,11 @@ technologies = {
 	}
 
 	cav_integrity = {
+
+		cavalry = {
+			recon = 0.3
+
+		}
 
 		research_cost = 1
 		start year = 1872
