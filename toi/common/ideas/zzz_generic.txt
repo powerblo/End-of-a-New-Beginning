@@ -216,6 +216,32 @@ ideas = {
 			}
 		}
 
+		crown_of_blood = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				unity_factor = 0.1
+				add_popularity = {
+					ideology = despotic_monarchy
+					value = 0.05
+				}
+				add_popularity = {
+					ideology = parliarmental_oligarchy
+					value = 0.03
+				}
+			}
+		}
+
 		nationalism = {
 
 			allowed = {

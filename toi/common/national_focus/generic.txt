@@ -7,7 +7,7 @@ focus_tree = {
 	focus = {
 		id = political_focus
 		icon = GFX_goal_generic_demand_territory
-		cost = 0.00
+		cost = 7.00
 		x = 23
 		y = 0
 		completion_reward = {
@@ -18,7 +18,7 @@ focus_tree = {
 	focus = {
 		id = one_to_rule
 		icon = GFX_goal_tripartite_pact
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = political_focus
 		}
@@ -39,7 +39,7 @@ focus_tree = {
 	focus = {
 		id = rule_of_patriots
 		icon = GFX_goal_generic_political_pressure
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = one_to_rule
 		}
@@ -71,7 +71,7 @@ focus_tree = {
 	focus = {
 		id = reworked_laws
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = rule_of_patriots
 		}
@@ -94,7 +94,7 @@ focus_tree = {
 	focus = {
 		id = nationalise_industry
 		icon = GFX_focus_SAF_support_ossewabrandwag
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = reworked_laws
 		}
@@ -138,7 +138,7 @@ focus_tree = {
 	focus = {
 		id = extended_conscription
 		icon = GFX_focus_generic_little_entente
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = reworked_laws
 		}
@@ -154,7 +154,7 @@ focus_tree = {
 	focus = {
 		id = historical_heritage
 		icon = GFX_goal_generic_small_arms
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = rule_of_patriots
 		}
@@ -165,10 +165,11 @@ focus_tree = {
 	focus = {
 		id = adopt_nationalism
 		icon = GFX_goal_generic_support_fascism
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = rule_of_patriots
 		}
+		#Nationalist event fires
 		x = 6
 		y = 3
 
@@ -176,7 +177,7 @@ focus_tree = {
 	focus = {
 		id = our_people_first
 		icon = GFX_goal_generic_territory_or_war
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = historical_heritage
 		}
@@ -190,29 +191,45 @@ focus_tree = {
 	focus = {
 		id = education_project
 		icon = GFX_focus_research
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = our_people_first
 		}
 		x = 4
 		y = 5
 
+		completion_bonus = {
+			experience_gain_factor = 0.5
+			enemy_partisan_effect = -0.3
+			production_speed_buildings_factor = 0.2
+			unity_factor = 0.15
+		}
+
 	}
 	focus = {
 		id = propaganda_project
 		icon = GFX_goal_generic_radar
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = our_people_first
 		}
 		x = 6
 		y = 5
 
+		completion_bonus = {
+			add_popularity = {
+				ideology = totalitarian_nationalism
+				popularity = 0.1
+			}
+			conscription = 0.02
+			unity_factor = 0.2
+		}
+
 	}
 	focus = {
 		id = common_enemy
 		icon = GFX_goal_rhineland
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = propaganda_project
 		}
@@ -222,11 +239,54 @@ focus_tree = {
 		x = 5
 		y = 6
 
+		add_popularity = {
+			ideology = liberal_conservatism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = traditional_conservatism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = reactionary
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = economic_liberalism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = democratic_socialism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = radical_socialism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = marxism_leninism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = rexism_falangism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology =
+			popularity = 0.2
+		}
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		trade_opinion_factor = 0.2
+
 	}
 	focus = {
 		id = rally_under_cause
 		icon = GFX_goal_generic_propaganda
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = propaganda_project
 		}
@@ -236,11 +296,17 @@ focus_tree = {
 		x = 7
 		y = 6
 
+		completion_reward = {
+			unity_factor = 0.2
+			political_power_factor = 0.08
+			conscription = 0.05
+		}
+
 	}
 	focus = {
 		id = crown_of_blood
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = one_to_rule
 		}
@@ -250,11 +316,15 @@ focus_tree = {
 		x = 14
 		y = 2
 
+		completion_reward = {
+			add_ideas = crown_of_blood
+		}
+
 	}
 	focus = {
 		id = stronger_rule
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = rule_of_patriots
 			focus = crown_of_blood
@@ -262,22 +332,64 @@ focus_tree = {
 		x = 8
 		y = 3
 
+		allowed = {
+			has_government = despotic_monarchy
+		}
+
+		completion_reward = {
+			unity_factor = 0.04
+		}
+
 	}
 	focus = {
 		id = repel_civil_rights
 		icon = GFX_focus_SAF_colonialist_crusade
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = stronger_rule
 		}
 		x = 8
 		y = 4
 
+		allowed = {
+			has_national_unity > 65
+		}
+
+		completion_reward = {
+		add_popularity = {
+			ideology = liberal_conservatism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = traditional_conservatism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = reactionary
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = economic_liberalism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = democratic_socialism
+			popularity = -0.05
+		}
+
+		unity_factor = -0.03
+		add_political_power = -30
+		}
+
 	}
 	focus = {
 		id = monarch_to_death
 		icon = GFX_focus_generic_home_defense
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = crown_of_blood
 		}
@@ -291,7 +403,7 @@ focus_tree = {
 	focus = {
 		id = respect_of_crown
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = monarch_to_death
 		}
@@ -302,29 +414,44 @@ focus_tree = {
 	focus = {
 		id = solidify_the_heir
 		icon = GFX_goal_generic_construct_military
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = monarch_to_death
 		}
 		x = 12
 		y = 4
 
+		complete_reward = {
+			country_event = {
+				days = 1
+				id = toipolitical.10
+			}
+			add_national_unity = 0.02
+		}
+
 	}
 	focus = {
 		id = royal_family
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = solidify_the_heir
 		}
 		x = 12
 		y = 5
 
+		complete_reward = {
+			country_event = {
+				days = 1
+				id = toipolitical.11
+			}
+		}
+
 	}
 	focus = {
 		id = royal_institute
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = royal_family
 		}
@@ -335,7 +462,7 @@ focus_tree = {
 	focus = {
 		id = farspread_blood
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = royal_family
 		}
@@ -349,7 +476,7 @@ focus_tree = {
 	focus = {
 		id = holy_grail
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = crown_of_blood
 		}
@@ -364,7 +491,7 @@ focus_tree = {
 	focus = {
 		id = pyramid_of_rule
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = monarch_to_death
 			focus = holy_grail
@@ -376,7 +503,7 @@ focus_tree = {
 	focus = {
 		id = new_hierarchy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = pyramid_of_rule
 		}
@@ -387,7 +514,7 @@ focus_tree = {
 	focus = {
 		id = prioritize_faith
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = holy_grail
 		}
@@ -398,7 +525,7 @@ focus_tree = {
 	focus = {
 		id = only_true_faith
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = prioritize_faith
 		}
@@ -412,7 +539,7 @@ focus_tree = {
 	focus = {
 		id = crusade
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = only_true_faith
 		}
@@ -423,7 +550,7 @@ focus_tree = {
 	focus = {
 		id = melting_pot
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = prioritize_faith
 		}
@@ -437,7 +564,7 @@ focus_tree = {
 	focus = {
 		id = holy_union
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = melting_pot
 		}
@@ -448,7 +575,7 @@ focus_tree = {
 	focus = {
 		id = state_religion
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = holy_grail
 		}
@@ -459,7 +586,7 @@ focus_tree = {
 	focus = {
 		id = the_cross
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = state_religion
 		}
@@ -473,7 +600,7 @@ focus_tree = {
 	focus = {
 		id = the_crescent
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = state_religion
 		}
@@ -488,7 +615,7 @@ focus_tree = {
 	focus = {
 		id = our_own_belief
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = state_religion
 		}
@@ -502,7 +629,7 @@ focus_tree = {
 	focus = {
 		id = parliamental_ideas
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = crown_of_blood
 		}
@@ -516,7 +643,7 @@ focus_tree = {
 	focus = {
 		id = adoption_of_constitution
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = parliamental_ideas
 		}
@@ -527,7 +654,7 @@ focus_tree = {
 	focus = {
 		id = democratic_monarchy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = adoption_of_constitution
 		}
@@ -538,7 +665,7 @@ focus_tree = {
 	focus = {
 		id = liberty_to_people
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = political_focus
 		}
@@ -552,7 +679,7 @@ focus_tree = {
 	focus = {
 		id = for_freedom
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = liberty_to_people
 		}
@@ -563,7 +690,7 @@ focus_tree = {
 	focus = {
 		id = power_to_the_people
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = for_freedom
 		}
@@ -574,7 +701,7 @@ focus_tree = {
 	focus = {
 		id = direct_elections
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = power_to_the_people
 		}
@@ -585,7 +712,7 @@ focus_tree = {
 	focus = {
 		id = civil_rights
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = power_to_the_people
 		}
@@ -596,7 +723,7 @@ focus_tree = {
 	focus = {
 		id = conserve_traditions
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = for_freedom
 		}
@@ -610,7 +737,7 @@ focus_tree = {
 	focus = {
 		id = traditions_first
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = conserve_traditions
 		}
@@ -621,7 +748,7 @@ focus_tree = {
 	focus = {
 		id = status_quo
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = traditions_first
 		}
@@ -635,7 +762,7 @@ focus_tree = {
 	focus = {
 		id = status_quo_antum
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = traditions_first
 		}
@@ -649,7 +776,7 @@ focus_tree = {
 	focus = {
 		id = plutocratic_government
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = status_quo_antum
 		}
@@ -660,7 +787,7 @@ focus_tree = {
 	focus = {
 		id = progressive_decisions
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = for_freedom
 		}
@@ -675,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = liberal_conservatism
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = progressive_decisions
 			focus = conserve_traditions
@@ -690,7 +817,7 @@ focus_tree = {
 	focus = {
 		id = meritocratic_government
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = liberal_conservatism
 		}
@@ -701,7 +828,7 @@ focus_tree = {
 	focus = {
 		id = open_the_economy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = liberty_to_people
 		}
@@ -715,7 +842,7 @@ focus_tree = {
 	focus = {
 		id = absolute_freedom
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = progressive_decisions
 		}
@@ -733,7 +860,7 @@ focus_tree = {
 	focus = {
 		id = laissez-faire
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = absolute_freedom
 		}
@@ -744,7 +871,7 @@ focus_tree = {
 	focus = {
 		id = economics_prior
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = meritocratic_government
 			focus = laissez-faire
@@ -756,7 +883,7 @@ focus_tree = {
 	focus = {
 		id = social_decisions
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = liberty_to_people
 		}
@@ -767,7 +894,7 @@ focus_tree = {
 	focus = {
 		id = adopt_socialist_policies
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = social_decisions
 		}
@@ -778,7 +905,7 @@ focus_tree = {
 	focus = {
 		id = middle_selection
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = progressive_decisions
 		}
@@ -796,7 +923,7 @@ focus_tree = {
 	focus = {
 		id = democratic_approach
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = adopt_socialist_policies
 		}
@@ -811,7 +938,7 @@ focus_tree = {
 	focus = {
 		id = wellfare_focus
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = middle_selection
 			focus = democratic_approach
@@ -823,7 +950,7 @@ focus_tree = {
 	focus = {
 		id = reject_capitalism
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = social_decisions
 		}
@@ -837,7 +964,7 @@ focus_tree = {
 	focus = {
 		id = red_flag
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = reject_capitalism
 		}
@@ -851,7 +978,7 @@ focus_tree = {
 	focus = {
 		id = state_economy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = democratic_approach
 			focus = red_flag
@@ -863,7 +990,7 @@ focus_tree = {
 	focus = {
 		id = organized_ideology
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = red_flag
 		}
@@ -874,7 +1001,7 @@ focus_tree = {
 	focus = {
 		id = birth_of_revolution
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = reject_capitalism
 		}
@@ -888,7 +1015,7 @@ focus_tree = {
 	focus = {
 		id = equal_but_unequal
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = birth_of_revolution
 		}
@@ -902,7 +1029,7 @@ focus_tree = {
 	focus = {
 		id = centralized_party
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = equal_but_unequal
 		}
@@ -913,7 +1040,7 @@ focus_tree = {
 	focus = {
 		id = draw_lines
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = equal_but_unequal
 		}
@@ -927,7 +1054,7 @@ focus_tree = {
 	focus = {
 		id = purge
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = draw_lines
 		}
@@ -938,7 +1065,7 @@ focus_tree = {
 	focus = {
 		id = vanguard
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = centralized_party
 		}
@@ -949,7 +1076,7 @@ focus_tree = {
 	focus = {
 		id = every_man_equal
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = birth_of_revolution
 		}
@@ -963,7 +1090,7 @@ focus_tree = {
 	focus = {
 		id = popular_approach
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = every_man_equal
 			focus = equal_but_unequal
@@ -978,7 +1105,7 @@ focus_tree = {
 	focus = {
 		id = red_propaganda
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = popular_approach
 		}
@@ -989,7 +1116,7 @@ focus_tree = {
 	focus = {
 		id = proletarianists
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = every_man_equal
 		}
@@ -1000,7 +1127,7 @@ focus_tree = {
 	focus = {
 		id = revolution
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = proletarianists
 		}
@@ -1011,7 +1138,7 @@ focus_tree = {
 	focus = {
 		id = devoted_civilian
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = nationalise_industry
 		}
@@ -1022,7 +1149,7 @@ focus_tree = {
 	focus = {
 		id = devoted_army
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = state_of_mind
 		}
@@ -1033,7 +1160,7 @@ focus_tree = {
 	focus = {
 		id = state_of_mind
 		icon = GFX_goal_generic_secret_weapon
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = propaganda_project
 			focus = education_project
@@ -1045,7 +1172,7 @@ focus_tree = {
 	focus = {
 		id = only_us
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = royal_family
 		}
@@ -1059,7 +1186,7 @@ focus_tree = {
 	focus = {
 		id = mercantile_economy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = status_quo
 			focus = democratic_monarchy
@@ -1071,7 +1198,7 @@ focus_tree = {
 	focus = {
 		id = increased_participation
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = direct_elections
 		}
@@ -1082,7 +1209,7 @@ focus_tree = {
 	focus = {
 		id = athenian_democracy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = increased_participation
 		}
@@ -1093,7 +1220,7 @@ focus_tree = {
 	focus = {
 		id = of_by_for
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = civil_rights
 		}
@@ -1104,7 +1231,7 @@ focus_tree = {
 	focus = {
 		id = promote_new_economy
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = state_economy
 		}
@@ -1115,7 +1242,7 @@ focus_tree = {
 	focus = {
 		id = rally_against_capitalism
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = promote_new_economy
 		}
@@ -1126,7 +1253,7 @@ focus_tree = {
 	focus = {
 		id = under_communism
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = organized_ideology
 		}
@@ -1140,7 +1267,7 @@ focus_tree = {
 	focus = {
 		id = global_revolution
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = revolution
 			focus = vanguard
@@ -1155,7 +1282,7 @@ focus_tree = {
 	focus = {
 		id = the_motherland
 		icon = GFX_goal_unknown
-		cost = 0.00
+		cost = 7.00
 		prerequisite = {
 			focus = vanguard
 			focus = revolution
