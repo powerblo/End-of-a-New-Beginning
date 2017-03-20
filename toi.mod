@@ -6,4 +6,4 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-supported_version="1.3.3"
+supported_version="1.3.2"

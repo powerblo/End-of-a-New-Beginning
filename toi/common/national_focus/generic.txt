@@ -187,10 +187,6 @@ focus_tree = {
 		x = 6
 		y = 4
 
-   completion_bonus = {
-     add_national_unity = 0.03
-   }
-
 	}
 	focus = {
 		id = education_project
@@ -206,7 +202,7 @@ focus_tree = {
 			experience_gain_factor = 0.5
 			enemy_partisan_effect = -0.3
 			production_speed_buildings_factor = 0.2
-			add_national_unity = 0.15
+			unity_factor = 0.15
 		}
 
 	}
@@ -428,7 +424,7 @@ focus_tree = {
 		complete_reward = {
 			country_event = {
 				days = 1
-				id = toimonarch.3
+				id = toipolitical.10
 			}
 			add_national_unity = 0.02
 		}
@@ -447,8 +443,9 @@ focus_tree = {
 		complete_reward = {
 			country_event = {
 				days = 1
-				id = toimonarch.1
+				id = toipolitical.11
 			}
+			create_faction = "[Root.GetAdjective] Dynasty"
 		}
 
 	}
@@ -461,10 +458,6 @@ focus_tree = {
 		}
 		x = 11
 		y = 6
-
-completion_reward = {
- add_ideas = royal_institute_idea
-}
 
 	}
 	focus = {
@@ -480,26 +473,14 @@ completion_reward = {
 		x = 13
 		y = 7
 
-completion_reward = {
-
-all_neighbour_country = {
-if = {
-limit = {
-has_government = despotic_monarchy
-}
-
-country_event = {
-days = 1
-id = toimonarch.2
-}
-
-}
-
-}
-
-add_national_unity = 0.03
-
-}
+		complete_reward = {
+			all_neighbor_country = {
+				country_event = {
+					days = 1
+					id = toipolitical.12
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -516,14 +497,9 @@ add_national_unity = 0.03
 		x = 18
 		y = 3
 
-completion_reward = {
-add_population = {
-ideology = theology
-value = 0.05
-}
-
-#Accept religion event
-}
+		complete_reward = {
+			
+		}
 
 	}
 	focus = {
@@ -537,17 +513,13 @@ value = 0.05
 		x = 14
 		y = 4
 
-completion_reward = {
-add_ideas = pyramid_rule_idea
-}
-
 	}
 	focus = {
 		id = new_hierarchy
 		icon = GFX_goal_unknown
 		cost = 7.00
 		prerequisite = {
-			focus = pyramid_of_rule_idea
+			focus = pyramid_of_rule
 		}
 		x = 14
 		y = 5
@@ -562,14 +534,6 @@ add_ideas = pyramid_rule_idea
 		}
 		x = 17
 		y = 4
-
-completion_reward = {
-add_population = {
-ideology=theology
-value=0.08
-}
-add_ideas = faith_first
-}
 
 	}
 	focus = {
@@ -595,18 +559,6 @@ add_ideas = faith_first
 		}
 		x = 16
 		y = 7
-
-completion_reward = {
-all_country = {
-if= {
-limit = {
-NOT = {
-has_idea = state_religion
-}
-}
-
-}
-}
 
 	}
 	focus = {
@@ -644,10 +596,6 @@ has_idea = state_religion
 		x = 21
 		y = 4
 
-completion_reward = {
- add_ideas = state_religion_idea
-}
-
 	}
 	focus = {
 		id = the_cross
@@ -661,10 +609,6 @@ completion_reward = {
 		}
 		x = 19
 		y = 5
-complete_reward= {
-add_ideas=christianity_idea
-set_cosmetic_tag=CHR
-}
 
 	}
 	focus = {
@@ -680,10 +624,6 @@ set_cosmetic_tag=CHR
 		}
 		x = 21
 		y = 5
-complete_reward={
-add_ideas=muslim_ideas
-set_cosmetic_tag=MUS
-}
 
 	}
 	focus = {
@@ -698,10 +638,6 @@ set_cosmetic_tag=MUS
 		}
 		x = 23
 		y = 5
-complete_reward={
-add_ideas=own_religion_idea
-set_cosmetic_tag=OWR
-}
 
 	}
 	focus = {
