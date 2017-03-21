@@ -1,0 +1,304 @@
+namespace = usacivilwar
+
+#Template
+country_event = {
+  id =
+  title =
+  desc =
+  #major = Yes
+  #is_triggered_only = Yes
+  #hidden = Yes
+  #fire_only_once = Yes
+
+  trigger = {
+
+  }
+
+  immediate = {
+
+  }
+
+  option = {
+
+  }
+
+  mean_time_to_happen = {
+
+  }
+
+}
+
+
+#Rise of Alaska
+  country_event = {
+    id = usacivlwar.30
+    title = usacivilwar.30.t
+    desc = usacivilwar.30.d
+    picture =
+
+    trigger = {
+      has_national_unity < 70
+      }
+      immediate = {
+      ALA = (set_state_owner = }
+      }
+      }
+
+
+  #Battle of Fort Sumter
+  country_event = {
+    id = usacivilwar.100
+    title = usacivilwar.100.t
+    desc = usacivilwar.100.d
+    #major = Yes
+    #is_triggered_only = Yes
+    #hidden = Yes
+    #fire_only_once = Yes
+
+    trigger = {
+      364 = {is_owned_by = ACC}
+    }
+
+    option = {
+      name = usacivilwar.100.a
+    }
+
+    option = {
+      name = usacivilwar.100.a
+    }
+
+  }
+
+  #Seceding of States
+  #Maryland against war with Confederate
+
+  country_event = {
+    id = usacivilwar.150
+    title = usacivilwar.150.t
+    desc = usacivilwar.150.d
+    #major = Yes
+    #is_triggered_only = Yes
+    #hidden = Yes
+    #fire_only_once = Yes
+
+    option = {
+      name = usacivilwar.150.a
+      set_country_flag = maryland_martial
+    }
+
+    option = {
+      name = usacivilwar.150.b
+      361 = {remove_building = {type = infrastructure = 10}}
+      361 = {set_demilitarized_zone = yes}
+    }
+  }
+
+  country_event = {
+    id = usacivilwar.151
+    title = usacivilwar.151.t
+    desc = usacivilwar.d
+    #major = Yes
+    #is_triggered_only = Yes
+    #hidden = Yes
+    #fire_only_once = Yes
+
+    trigger = {
+      has_country_flag = maryland_martial
+    }
+
+    option = {
+      name = usacivilwar.151.a
+      clr_country_flag = maryland_martial
+      set_country_flag = maryland_siezed
+        random = { 70 = {clr_country_flag = maryland_siezed set_country_flag = maryland_revolts}}
+    }
+
+    option = {
+      name = usacivilwar.151.b
+      random = { 30 = {clr_country_flag = maryland_martial set_country_flag = maryland_revolts}}
+    }
+
+    mean_time_to_happen = {
+      days = 20
+    }
+
+  }
+
+  country_event = {
+    id = usacivilwar.152
+    title = usacivilwar.152.t
+    desc = usacivilwar.152.d
+    #major = Yes
+    #is_triggered_only = Yes
+    #hidden = Yes
+    #fire_only_once = Yes
+
+    trigger = {
+      AND = {
+        has_country_flag = maryland_revolts
+        date > 1863.1.1.1
+      }
+    }
+
+    immediate = {
+      ACC = {setowner = 361}
+    }
+
+    if = {
+      limit = {
+        tag = ACU
+      }
+
+      option = {
+        name = usacivilwar.152.a
+        random = {20 = {set_capital = 358} 20 = {set_capital = 362} 20 = {set_capital = 357} 20 = {set_capital = 360} 20 = {set_capital = 361}}
+      }
+
+      option = {
+        name = usacivilwar.152.ba
+        set_capital = 359
+      }
+    }
+
+    if = {
+      limit = {
+        tag = ACC
+      }
+
+      option = {
+        name = usacivilwar.152.c
+        add_manpower = 100000
+      }
+
+      option = {
+        name = usacivilwar.152.e
+        add_political_points = 5
+      }
+    }
+
+    mean_time_to_happen = {
+      days = 20
+    }
+
+  }
+
+  #Split of Virginia : April 17
+
+  country_event = {
+    id = usacivilwar.161
+    title = usacivilwar.161.t
+    desc = usacivilwar.161.d
+
+    trigger = {
+      date > 1861.4.17.1
+    }
+
+    option = {
+      name = usacivilwar.160.a
+    }
+
+    option = {
+      name = usacivilwar.160.b
+      set_country_flag = hurry_virginia
+      random = {70 = {add_political_power = -10}}
+      random = {50 = {add_national_unity = -5}}
+    }
+
+    mean_time_to_happen = {
+      days = 10
+    }
+
+  }
+
+  country_event = {
+    id = usacivilwar.161
+    title = usacivilwar.161.t
+    desc = usacivilwar.161.d
+
+    trigger = {
+      OR = {
+        date > 1862.5.13.1
+        has_country_flag = hurry_virginia
+      }
+
+    }
+
+    immediate = {
+      ACU = {setowner = 362}
+    }
+
+    option = {
+    #Embrace it!
+      name = usacivilwar.161.a
+    }
+
+    if = {
+      limit = {
+        tag = ACC
+      }
+      #Enforce reunition of Virginia
+      option = {
+        name = usacivilwar.161.b
+        random = {10 = ACC = {setowner = 362}}
+      }
+
+    }
+
+    if = {
+      limit = {
+        tag = ACU
+      }
+      #Bring the rest of Virginia in
+      option = {
+        name = usacivilwar.161.c
+        random = {10 = ACC = {setowner = 746}}
+      }
+    }
+
+  }
+
+  #Missouri Election : After the war
+
+  country_event = {
+    id = usacivilwar.170
+    title = usacivilwar.170.t
+    desc = usacivilwar.170.d
+
+    trigger = {
+      NOT = {
+        has_global_flag = usa_civil_war
+      }
+    }
+
+    option = {
+      name = usacivilwar.170.a
+    }
+
+  }
+
+  #Kentucky September Union Declaration
+
+  #Diplomats within Canada
+
+  #Template
+  news_event = {
+    id =
+    title =
+    desc =
+    #major = Yes
+    #is_triggered_only = Yes
+    #hidden = Yes
+    #fire_only_once = Yes
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+
+    }
+  }
