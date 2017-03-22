@@ -1,6 +1,6 @@
 ﻿capital = 361
 
-oob = "USA_1936"
+oob = "ACU_1936"
 
 set_research_slots = 4
 
@@ -10,7 +10,7 @@ set_research_slots = 4
 1939.1.1 = {
 
 	add_political_power = 1199
-	
+
 	#adding ministers
 	add_ideas = {
 		USA_robert_taft
@@ -46,20 +46,20 @@ set_national_unity = 0.6
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 90
 		}
 
 		totalitarian_nationalism = {
 			popularity = 5
 		}
-		
+
 		marxism_leninism = {
 			popularity = 5
 			#banned = no #default is no
 		}
 	}
-	
+
 	ruling_party = liberal_conservatism
 	last_election = "1932.11.8"
 	election_frequency = 48
@@ -85,20 +85,20 @@ set_autonomy = {
 	set_politics = {
 
 		parties = {
-			liberal_conservatism = { 
+			liberal_conservatism = {
 				popularity = 99
 			}
 
 			totalitarian_nationalism = {
 				popularity = 0
 			}
-			
+
 			marxism_leninism = {
 				popularity = 1
 				#banned = no #default is no
 			}
 		}
-		
+
 		ruling_party = liberal_conservatism
 		last_election = "1936.11.3"
 		election_frequency = 48
@@ -124,7 +124,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = hazitazinazi
 	traits = {
-		
+
 	}
 }
 
@@ -135,7 +135,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = commie
 	traits = {
-		
+
 	}
 }
 
@@ -253,7 +253,7 @@ create_equipment_variant = {
 }
 
 1939.1.1 = {
-	
+
 	create_equipment_variant = {
 		name = "Salmon Class"
 		type = submarine_2
