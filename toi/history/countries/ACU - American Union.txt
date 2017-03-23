@@ -112,65 +112,40 @@ create_country_leader = {
 	picture = "Portrait_ACU_Abraham_Lincoln.ddg"
 	expire = "1947.1.1"
 	ideology = democrat
-	traits = {
-		dislikes_germany
-	}
-}
-
-create_country_leader = {
-	name = "William Dudley Pelley"
-	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-	picture = "Portrait_USA_William_Dudley_Pelley.dds"
-	expire = "1965.1.1"
-	ideology = hazitazinazi
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Earl Browder"
-	desc = "POLITICS_EARL_BROWDER_DESC"
-	picture = "Portrait_USA_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = commie
-	traits = {
-
-	}
 }
 
 create_corps_commander = {
 	name = "Ulysses S. Grant"
 		picture = "Portrait_ACU_Ulysses_grant.dds"
-	traits = {}
+	traits = { old_guard ranger }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "William T. Sherman"
 		picture = "Portrait_ACU_William_Sherman.dds"
-	traits = {}
+	traits = { swamp_fox commando }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "George McClellan"
 		picture = "Portrait_ACU_George_McClellan.dds"
-	traits = {}
+	traits = { ranger hill_fighter mountaineer }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "Henry Halleck"
 		picture = "Portrait_ACU_Henry_Halleck.dds"
-	traits = {}
+	traits = { old_guard engineer }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "George Meade"
 		picture = "Portrait_ACU_George_Meade.dds"
-	traits = {}
+	traits = { fort_buster urban_assault_specialist }
 	skill = 3
 }
 

@@ -292,7 +292,66 @@ country_event = {
 
   #Kentucky September Union Declaration
 
+  country_event = {
+    id = usacivilwar.180
+    title = usacivilwar.180.t
+    desc = usacivilwar.180.d
+
+    trigger = {
+      date > 1861.9.1.1
+    }
+
+    option = {
+      name = usacivilwar.180.a
+    }
+
+    mean_time_to_happen = {
+      days = 10
+    }
+
+  }
+
   #Diplomats within Canada
+
+  country_event = {
+    id = usacivilwar.200
+    title = usacivilwar.200.t
+    desc = usacivilwar.200.d
+
+    is_triggered_only = yes
+
+    immediate = {
+      add_opinion_modifier = {target = CAN modifier = union_diplomats}
+    }
+
+    option = {
+      name = usacivilwar.200.a
+      set_country_flag = canadian_alliance
+    }
+
+  }
+
+  #Canada joins war
+
+  country_event = {
+    id = usacivilwar.201
+    title = usacivilwar.201.t
+    desc = usacivilwar.201.d
+
+    trigger = {
+      has_country_flag = canadian_alliance
+    }
+
+    immediate = {
+      add_to_war = { targeted_alliance = CAN enemy = ACC}
+    }
+
+    option = {
+      name = usacivilwar.200.a
+      set_country_flag = canadian_alliance
+    }
+
+  }
 
   #Template
   news_event = {
