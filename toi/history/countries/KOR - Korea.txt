@@ -4,7 +4,7 @@ oob = "KOR_1936"
 
 # Starting tech
 set_technology = {
-	
+
 	mass_assault = 1
 }
 
@@ -13,35 +13,35 @@ set_convoys = 5
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
-			popularity = 35
+		liberal_conservatism = {
+			popularity = 0
 		}
 
 		totalitarian_nationalism = {
-			popularity = 25
+			popularity = 5
 		}
-		
+
 		marxism_leninism = {
-			popularity = 30
+			popularity = 0
 			#banned = no #default is no
 		}
-		
-		despotic_autocracy = { 
-			popularity = 10
+
+		despotic_autocracy = {
+			popularity = 90
 		}
 	}
-	ruling_party = liberal_conservatism
-	last_election = "1936.1.1"
+	ruling_party = despotic_autocracy
+	last_election = "1800.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Syngman Rhee"
+	name = "Cheoljong"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	picture = "gfx/leaders/KOR/Portrait_Cheoljong"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = spiffyking
 	traits = {
 		#
 	}
