@@ -7,3 +7,4 @@ tags={
 	"Technologies"
 }
 supported_version="1.3.3"
+picture="toi.jpg"

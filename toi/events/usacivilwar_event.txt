@@ -66,7 +66,7 @@ country_event = {
     if = {
 
       limit = {
-        tag = ACU
+        tag = USA
       }
 
       option = {
@@ -160,7 +160,7 @@ country_event = {
 
     if = {
       limit = {
-        tag = ACU
+        tag = USA
       }
 
       option = {
@@ -238,7 +238,7 @@ country_event = {
     }
 
     immediate = {
-      ACU = {setowner = 362}
+      USA = {setowner = 362}
     }
 
     option = {
@@ -260,7 +260,7 @@ country_event = {
 
     if = {
       limit = {
-        tag = ACU
+        tag = USA
       }
       #Bring the rest of Virginia in
       option = {
@@ -349,6 +349,35 @@ country_event = {
     option = {
       name = usacivilwar.200.a
       set_country_flag = canadian_alliance
+    }
+
+  }
+
+  # Peace Conference - USA wings
+
+  country_event = {
+    id = usacivilwar.300
+    title = usacivilwar.300.t
+    desc = usacivilwar.300.d
+    fire_only_once = Yes
+
+    trigger = {
+      AND = {
+        tag = USA
+
+      }
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+
+    }
+
+    mean_time_to_happen = {
+
     }
 
   }
