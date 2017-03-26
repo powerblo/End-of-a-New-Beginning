@@ -2,10 +2,14 @@
 
 oob = "USA_1936"
 
+declare_war_on = {
+	target = ACC
+	type = annex_everything
+}
+
 set_research_slots = 4
 
 # Starting tech
-
 
 1939.1.1 = {
 
@@ -13,19 +17,6 @@ set_research_slots = 4
 
 	#adding ministers
 	add_ideas = {
-		USA_robert_taft
-		carl_spaatz
-		jimmy_doolittle
-		army_ordnance_department
-		general_electric
-		robert_goddard
-		USA_prepare_intervention
-
-		#laws
-		isolation
-		volunteer_only
-
-		new_deal
 	}
 
 	#focuses
@@ -109,49 +100,49 @@ set_autonomy = {
 create_country_leader = {
 	name = "Abraham Lincoln"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_ACU_Abraham_Lincoln.ddg"
+	picture = "Portrait_USA_Abraham_Lincoln.ddg"
 	expire = "1947.1.1"
 	ideology = democrat
 }
 
 create_corps_commander = {
 	name = "Ulysses S. Grant"
-		picture = "Portrait_ACU_Ulysses_grant.dds"
+		picture = "Portrait_USA_Ulysses_grant.dds"
 	traits = { old_guard ranger }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "William T. Sherman"
-		picture = "Portrait_ACU_William_Sherman.dds"
+		picture = "Portrait_USA_William_Sherman.dds"
 	traits = { swamp_fox commando }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "George McClellan"
-		picture = "Portrait_ACU_George_McClellan.dds"
+		picture = "Portrait_USA_George_McClellan.dds"
 	traits = { ranger hill_fighter mountaineer }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "Henry Halleck"
-		picture = "Portrait_ACU_Henry_Halleck.dds"
+		picture = "Portrait_USA_Henry_Halleck.dds"
 	traits = { old_guard engineer }
 	skill = 3
 }
 
 create_corps_commander = {
 	name = "George Meade"
-		picture = "Portrait_ACU_George_Meade.dds"
+		picture = "Portrait_USA_George_Meade.dds"
 	traits = { fort_buster urban_assault_specialist }
 	skill = 3
 }
 
 create_navy_leader = {
 	name = "David Farragut"
-		picture = "Portrait_ACU_David_farragut.dds"
+		picture = "Portrait_USA_David_farragut.dds"
 	traits = {}
 	skill = 3
 }
