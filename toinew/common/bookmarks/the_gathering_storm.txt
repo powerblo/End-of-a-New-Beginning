@@ -1,0 +1,43 @@
+bookmarks = {
+	bookmark = {
+		name = "NATION_DIVIDED_NAME"
+		desc = "NATION_DIVIDED_DESC"
+		date = 1861.4.12.12
+		picture = "GFX_select_date_1861"
+		default_country = "USA"
+		default = yes
+
+		"USA"={
+			history = "USA_NATION_DIVIDED_DESC"
+			ideology = democratic
+		}
+		"CSA"={
+			history = "ACC_NATION_DIVIDED_DESC"
+			ideology = fascism
+		}
+		"PRS"={
+			history = "PRS_NATION_DIVIDED_DESC"
+			ideology = neutrality
+		}
+		"FRA"={
+			history = "FRA_NATION_DIVIDED_DESC"
+			ideology = neutrality
+		}
+		"AUS"={
+			history = "AUS_NATION_DIVIDED_DESC"
+			ideology = neutrality
+		}
+		"ITA"={
+			history = "ITA_NATION_DIVIDED_DESC"
+			ideology = neutrality
+		}
+		"OTO"={
+			history = "OTO_NATION_DIVIDED_DESC"
+			ideology = neutrality
+		}
+    "---"={
+      history = "OTHER_GATHERING_STORM_DESC"
+    }
+
+	}
+}
