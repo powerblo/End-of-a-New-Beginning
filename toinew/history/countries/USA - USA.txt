@@ -1,0 +1,202 @@
+﻿capital = 361
+
+oob = "USA_1861"
+
+declare_war_on = {
+	target = CSA
+	type = annex_everything
+}
+
+set_convoys = 400
+set_national_unity = 0.6
+
+set_politics = {
+
+	parties = {
+		democracy = {
+			popularity = 90
+		}
+
+		communism = {
+			popularity = 5
+		}
+
+		fascism = {
+			popularity = 5
+		}
+	}
+
+	ruling_party = democracy
+	last_election = "1860.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Abraham Lincoln"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = "Portrait_USA_Abraham_Lincoln.ddg"
+	expire = "1947.1.1"
+	ideology = democrat
+}
+
+create_corps_commander = {
+	name = "Ulysses S. Grant"
+		picture = "Portrait_USA_Ulysses_grant.dds"
+	traits = { old_guard ranger }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "William T. Sherman"
+		picture = "Portrait_USA_William_Sherman.dds"
+	traits = { swamp_fox commando }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "George McClellan"
+		picture = "Portrait_USA_George_McClellan.dds"
+	traits = { ranger hill_fighter mountaineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Henry Halleck"
+		picture = "Portrait_USA_Henry_Halleck.dds"
+	traits = { old_guard engineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "George Meade"
+		picture = "Portrait_USA_George_Meade.dds"
+	traits = { fort_buster urban_assault_specialist }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "David Farragut"
+		picture = "Portrait_USA_David_farragut.dds"
+	traits = {}
+	skill = 3
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Barracuda Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Farragut Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 3
+		destroyer_engine_upgrade = 3
+		ship_ASW_upgrade = 3
+		ship_anti_air_upgrade = 3
+	}
+}
+
+create_equipment_variant = {
+	name = "Portland Class"
+	type = heavy_cruiser_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_armor_upgrade = 2
+		ship_gun_upgrade = 2
+	}
+}
+
+create_equipment_variant = {
+	name = "Pennsylvania Class"
+	type = battleship_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_armor_upgrade = 1
+		ship_gun_upgrade = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "New Mexico Class"
+	type = battleship_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_armor_upgrade = 2
+		ship_gun_upgrade = 2
+	}
+}
+
+create_equipment_variant = {
+	name = "Yorktown Class"
+	type = carrier_2
+	upgrades = {
+		ship_deckspace_upgrade = 1
+		carrier_armor_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_reliability_upgrade = 1
+	}
+
+}
+
+1939.1.1 = {
+
+	create_equipment_variant = {
+		name = "Salmon Class"
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Benson & Gleaves Class"
+		type = destroyer_2
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Wasp Class"
+		type = carrier_2
+		upgrades = {
+			ship_deckspace_upgrade = 2
+			carrier_armor_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_reliability_upgrade = 2
+		}
+	}
+
+	# 1941
+	#create_equipment_variant = {
+	#	name = "South Dakota Class"
+	#	type = battleship_2
+	#	upgrades = {
+	#		ship_reliability_upgrade = 3
+	#		ship_engine_upgrade = 3
+	#		ship_armor_upgrade = 3
+	#		ship_gun_upgrade = 3
+	#	}
+	#}
+}

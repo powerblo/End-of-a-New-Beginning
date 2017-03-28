@@ -1,0 +1,59 @@
+﻿capital = 4
+
+oob = "AUS_1861"
+
+set_research_slots = 3
+
+set_technology = {
+
+
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+}
+
+set_politics = {
+
+	parties = {
+		neutrality = {
+			popularity = 99
+		}
+
+		fascism = {
+			popularity = 0
+		}
+
+		democracy = {
+			popularity = 1
+		}
+
+		communism = {
+			popularity = 1
+		}
+	}
+
+	ruling_party = neutrality
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_national_unity = 0.8
+
+create_country_leader = {
+	name = "Franz Joseph I"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Portrait_AUS_Franz_Joseph_I.dds"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Karl Eglseer"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer trickster }
+	skill = 3
+}
