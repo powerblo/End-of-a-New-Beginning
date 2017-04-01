@@ -1,0 +1,41 @@
+capital = 44
+
+OOB = "THU_1861"
+
+
+
+set_politics = {
+    parties = {
+      liberal_conservatism = {
+        popularity = 2
+      }
+
+      totalitarian_nationalism = {
+        popularity = 3
+      }
+      marxism_leninism = {
+        popularity = 2
+      }
+      despotic_autocracy = {
+        popularity = 93
+      }
+    }
+
+    ruling_party = despotic_autocracy
+    last_election = "1860.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+#Represented by Saxe-Weimar-Eisenach
+
+create_country_leader = {
+  name = "Karl Alexander"
+  desc = "POLITICS_KARL_ALEXANDER_DESC"
+  picture = "Karl_Alexander.dds"
+  expire = "1900.1.1"
+  ideology = despotism
+  traits = {
+
+  }
+}

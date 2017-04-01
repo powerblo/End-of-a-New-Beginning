@@ -1,0 +1,75 @@
+capital = 367
+
+OOB = "CSA_1861"
+
+declare_war_on = {
+	target = USA
+	type = annex_everything
+}
+
+set_politics = {
+    parties = {
+      liberal_conservatism = {
+        popularity = 32
+      }
+      totalitarian_nationalism = {
+        popularity = 64
+      }
+      marxism_leninism = {
+        popularity = 2
+      }
+      despotic_autocracy = {
+        popularity = 2
+      }
+    }
+
+    ruling_party = totalitarian_nationalism
+    last_election = "1860.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Jefferson Davis"
+	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+	picture = "Portrait_CSA_Jefferson_Davis.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+
+	}
+}
+create_corps_commander = {
+	name = "Albert Sidney Johnston"
+		picture = "Portrait_CSA_Albert_Johnson.dds"
+	traits = { desert_fox engineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Braxton Bragg"
+		picture = "Portrait_CSA_Braxton_Bragg.dds"
+	traits = { old_guard hill_fighter }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Joseph Jonston"
+		picture = "Portrait_CSA_Joseph_Jonston.dds"
+	traits = { urban_assualt_specialist fort_buster }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "G. T. Beauregard"
+		picture = "Portrait_CSA_PGT_Beauregard.dds"
+	traits = {}
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Robert Lee"
+		picture = "Portrait_CSA_Robert_Lee.dds"
+	traits = {}
+	skill = 3
+}
