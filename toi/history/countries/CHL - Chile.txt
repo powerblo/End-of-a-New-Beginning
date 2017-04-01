@@ -4,7 +4,7 @@ oob = "CHL_1936"
 
 # Starting tech
 set_technology = {
-	
+	infantry_weapons = 1
 	gw_artillery = 1
 	early_fighter = 1
 	cv_early_fighter = 1
@@ -40,7 +40,7 @@ set_convoys = 20
 		tactical_bomber1 = 1
 		CAS1 = 1
 		interwar_artillery = 1
-		
+		infantry_weapons1 = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
 
@@ -103,7 +103,7 @@ create_country_leader = {
 	desc = "POLITICS_ARTURO_ALESSANDRI_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = liberalism
 	traits = {
 		#
 	}
@@ -138,7 +138,7 @@ create_country_leader = {
 		desc = "POLITICS_PEDRO_AGUIRRE_CERDA_DESC"
 		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
 		expire = "1965.1.1"
-		ideology = democrat
+		ideology = socialism
 		traits = {
 			#
 		}
@@ -150,7 +150,7 @@ create_country_leader = {
 	desc = "POLITICS_JORGE_GONZÁLEZ_VON_MARÉES_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = nazism
 	traits = {
 		#
 	}
@@ -161,7 +161,7 @@ create_country_leader = {
 	desc = "POLITICS_CARLOS_CONTRERAS_LABARCA_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = marxism
 	traits = {
 		#
 	}
@@ -169,7 +169,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Escudero Oscar Otárola"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_9.dds"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
 	traits = { trait_mountaineer }
 	skill = 4
 }

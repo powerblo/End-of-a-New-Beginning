@@ -4,8 +4,8 @@ oob = "AST_1936"
 
 # Starting tech
 set_technology = {
-	
-	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
@@ -41,6 +41,7 @@ if = {
 	oob = "AST_1939"
 	
 	if = {
+		limit = { has_dlc = "Together for Victory" }
 		complete_national_focus = AST_additional_militia_training
 		complete_national_focus = AST_royal_australian_artillery
 		complete_national_focus = AST_daimler_dingo
@@ -144,7 +145,7 @@ create_country_leader = {
 	desc = "POLITICS_JOHN_CURTIN_DESC"
 	picture = "Portrait_Australia_John_Curtin.dds"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = socialism
 	traits = {
 		#
 	}
@@ -155,7 +156,7 @@ create_country_leader = {
 	desc = "POLITICS_ERIC_CAMPBELL_DESC"
 	picture = "GFX_AST_eric_campbell"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
@@ -166,7 +167,7 @@ create_country_leader = {
 	desc = "POLITICS_RICHARD_DIXON_DESC"
 	picture = "GFX_AST_richard_dixon"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = stalinism
 	traits = {
 		#
 	}
@@ -177,7 +178,7 @@ create_country_leader = {
 	desc = "POLITICS_EARLE_PAGE_DESC"
 	picture = "GFX_AST_earle_page"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = centrism
 	traits = {
 		#
 	}
@@ -186,9 +187,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rod Hull"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "Portrait_Australia_Rod_Hull.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = despotism
 	traits = {
 		#
 	}

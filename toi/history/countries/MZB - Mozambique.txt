@@ -4,7 +4,7 @@ oob = "MZB_1936"
 
 # Starting tech
 set_technology = {
-	
+	infantry_weapons = 1
 	tech_mountaineers = 1
 }
 
@@ -77,9 +77,9 @@ create_country_leader = {
 	
 	
 	name = "Eduardo Tsonga"
-	picture = "gfx//leaders//Africa//Portrait_Africa_Generic__land_2.dds"
+	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_land_2.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = despotism
 	traits = {
 		#
 	}
@@ -119,9 +119,3 @@ create_country_leader = {
 	}
 }
 
-create_corps_commander = {
-	name = "Seyoum Mengesha"
-	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-	traits = {  desert_fox }
-	skill = 2
-}

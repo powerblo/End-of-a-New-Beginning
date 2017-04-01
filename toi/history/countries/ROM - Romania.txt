@@ -12,8 +12,8 @@ set_technology = {
 	motorised_infantry = 1
 	gwtank = 1
 	basic_light_tank = 1
-	
-	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
 	gw_artillery = 1
 	early_fighter = 1
 	early_submarine = 1
@@ -21,12 +21,12 @@ set_technology = {
 }
 
  #Ideas
- add_ideas = despotic_autocracy_idea
+ add_ideas = neutrality_idea
 
 set_convoys = 10
 1939.1.1 = {
 	
-	remove_ideas = despotic_autocracy_idea
+	remove_ideas = neutrality_idea
 
 	add_political_power = 1198
 	
@@ -107,7 +107,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = liberal_conservatism
+	ruling_party = despotic_autocracy
 	last_election = "1933.12.20"
 	election_frequency = 48
 	elections_allowed = yes
@@ -134,7 +134,7 @@ set_politics = {
 			}
 		}
 		
-		ruling_party = totalitarian_nationalism
+		ruling_party = liberal_conservatism
 		last_election = "1939.7.15"
 		election_frequency = 48
 		elections_allowed = no
@@ -146,7 +146,7 @@ create_country_leader = {
 	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
 	picture = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Tatarescu.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = centrism
 	traits = {
 		#
 	}
@@ -157,7 +157,7 @@ create_country_leader = {
 	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
 	picture = "Portrait_Romania_Constantin_Parhon.dds"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = leninism
 	traits = {
 		#
 	}
@@ -168,7 +168,7 @@ create_country_leader = {
 	desc = "POLITICS_ARMAND_CALINESCU_DESC"
 	picture = "gfx/leaders/ROM/Portrait_Romania_Armand_Calinescu.dds"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = conservatism
 	traits = {
 		#
 	}
@@ -179,7 +179,7 @@ create_country_leader = {
 	desc = "POLITICS_OCTAVIAN_GOGA_DESC"
 	picture = "Portrait_Romania_Octavian_Goga.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
@@ -190,7 +190,7 @@ create_country_leader = {
 	desc = "POLITICS_ION_ANTONESCU_DESC"
 	picture = "Portrait_Romania_Ion_Antonescu.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = fascism_ideology
 	traits = {
 		#
 	}

@@ -4,7 +4,7 @@ oob = "BOL_1936"
 
 # Starting tech
 set_technology = {
-	
+	infantry_weapons = 1
 	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
@@ -31,7 +31,7 @@ set_country_flag = monroe_doctrine
 	oob = "BOL_1939"
 	set_technology = {
 		interwar_artillery = 1
-		
+		infantry_weapons1 = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
 
@@ -96,7 +96,7 @@ create_country_leader = {
 	desc = "POLITICS_JOSE_LUIS_TEJADA_SORZANO_DESC"
 	picture = "Portrait_Bolivia_Jose_Luis_Tejada_Sorzano.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking # democrat, personally, but puppet for military
+	ideology = despotism # liberalism, personally, but puppet for military
 	traits = {
 		#
 	}
@@ -107,7 +107,7 @@ create_country_leader = {
 	desc = "POLITICS_OSCAR_UNZAGA_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = falangism
 	traits = {
 		#
 	}
@@ -145,7 +145,7 @@ create_country_leader = {
 		desc = "POLITICS_CARLOS_QUINTANILLA_DESC"
 		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
 		expire = "1965.1.1"
-		ideology = spiffyking
+		ideology = oligarchism
 		traits = {
 			#
 		}

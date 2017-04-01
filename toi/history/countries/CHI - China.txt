@@ -4,7 +4,7 @@ oob = "CHI_1936"
 
 # Starting tech
 set_technology = {
-	
+	infantry_weapons = 1
 	gwtank = 1
 	early_fighter = 1
 	early_bomber = 1
@@ -24,7 +24,7 @@ set_convoys = 40
 1939.1.1 = {
 
 	add_political_power = 1198
-
+	
 	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
@@ -50,7 +50,7 @@ set_convoys = 40
 		CHI_chen_shaokuan
 		jiangnan_shipyard_group
 	}
-
+	
 	set_global_flag = fall_of_nanjing
 	create_faction = chinese_united_front
 	add_to_faction = PRC
@@ -62,7 +62,7 @@ set_convoys = 40
 
 		#PLACEHOLDER techs for vehicles
 		motorised_infantry = 1
-		tech_support = 1
+		tech_support = 1		
 		tech_recon = 1
 		tech_engineers = 1
 
@@ -101,24 +101,24 @@ set_convoys = 40
 set_politics = {
 
 	parties = {
-		liberal_conservatism = {
+		liberal_conservatism = { 
 			popularity = 0
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-
+		
 		marxism_leninism = {
 			popularity = 0
 			#banned = no #default is no
 		}
-
-		despotic_autocracy = {
+		
+		despotic_autocracy = { 
 			popularity = 100
 		}
 	}
-
+	
 	ruling_party = despotic_autocracy
 	last_election = "1936.1.1"
 	election_frequency = 48
@@ -130,18 +130,18 @@ create_country_leader = {
 	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
 	picture = "Portrait_China_Chiang_Kai_Shek.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = despotism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Mao Zedong"
-	desc = "POLITICS_MAO_ZEDONG_DESC"
-	picture = "Portrait_China_Mao_Zedong.dds"
+	name = "Zhang Guotao"
+	desc = "POLITICS_ZHANG_GUOTAO_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = leninism
 	traits = {
 		cornered_fox
 	}
@@ -150,9 +150,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Wang Jingwei"
 	desc = "POLITICS_WANG_JINGWEI_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_totalitarian_nationalism.dds"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
@@ -163,7 +163,7 @@ create_country_leader = {
 	desc = "POLITICS_ZHANG_LAN_DESC"
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = socialism
 	traits = {
 		#
 	}
@@ -175,24 +175,24 @@ add_opinion_modifier = { target = PRC modifier = hostile_status }
 	set_politics = {
 
 		parties = {
-		liberal_conservatism = {
+		liberal_conservatism = { 
 			popularity = 0
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-
+		
 		marxism_leninism = {
 			popularity = 0
 			#banned = no #default is no
 		}
-
-		despotic_autocracy = {
+		
+		despotic_autocracy = { 
 			popularity = 100
 		}
 	}
-
+		
 		ruling_party = despotic_autocracy
 		last_election = "1936.1.1"
 		election_frequency = 48

@@ -7,8 +7,8 @@ set_research_slots = 3
 # Starting tech
 # clone of France
 set_technology = {
-	
-	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1
 	tech_recon = 1
 	tech_mountaineers = 1
@@ -44,18 +44,18 @@ set_politics = {
 
 	parties = {
 		liberal_conservatism = { 
-			popularity = 25
+			popularity = 35
 		}
 
 		totalitarian_nationalism = {
-			popularity = 25
+			popularity = 15
 		}
 		
 		marxism_leninism = {
-			popularity = 25
+			popularity = 15
 		}
 		despotic_autocracy = {
-			popularity = 25
+			popularity = 35
 		}
 	}
 
@@ -68,44 +68,44 @@ set_politics = {
 #NOTICE# please watch out for spelling, im using Vietnamese names as they spell them, game might not support these characters!
 
 create_country_leader = {
-	name = "Phan Bội Châu" 
+	name = "Phan Bôi Châu" 
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
 	expire = "1953.3.1"
-	ideology = hazitazinazi 
+	ideology = fascism_ideology 
 	traits = {
 		
 	}
 }
 
 create_country_leader = {
-	name = "Hồ Chí Minh" 
+	name = "Ho Chí Minh" 
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_marxism_leninism.dds"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_communism.dds"
 	expire = "1953.3.1"
-	ideology = commie
+	ideology = marxism
 	traits = {
 		
 	}
 }
 
 create_country_leader = {
-	name = "Ngô Đình Diệm"
+	name = "Ngô Đình Diêm"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
 	expire = "1953.3.1"
-	ideology = democrat
+	ideology = conservatism
 	traits = {
 		
 	}
 }
 
 create_country_leader = {
-	name = "Nguyễn Tường Tam"
+	name = "Nguyen Tuong Tam"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
 	expire = "1953.3.1"
-	ideology = spiffyking
+	ideology = moderatism
 	traits = {
 		
 	}

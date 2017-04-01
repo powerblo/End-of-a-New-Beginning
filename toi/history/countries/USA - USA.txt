@@ -1,35 +1,11 @@
 ﻿capital = 361
 
-oob = "USA_1936"
+oob = "USA_1861"
 
 declare_war_on = {
-	target = ACC
+	target = CSA
 	type = annex_everything
 }
-
-set_research_slots = 4
-
-# Starting tech
-
-1939.1.1 = {
-
-	add_political_power = 1199
-
-	#adding ministers
-	add_ideas = {
-	}
-
-	#focuses
-
-	set_global_flag = earhart_disappeared
-	oob = "USA_1939"
-	set_technology = {
-
-	}
-}
-
-
-
 
 set_convoys = 400
 set_national_unity = 0.6
@@ -41,68 +17,27 @@ set_politics = {
 			popularity = 90
 		}
 
-		totalitarian_nationalism = {
+		marxism_leninism = {
 			popularity = 5
 		}
 
-		marxism_leninism = {
+		totalitarian_nationalism = {
 			popularity = 5
-			#banned = no #default is no
 		}
 	}
 
 	ruling_party = liberal_conservatism
-	last_election = "1932.11.8"
+	last_election = "1860.11.8"
 	election_frequency = 48
 	elections_allowed = yes
-}
-
-add_ideas = {
-	limited_conscription
-	free_trade
-	home_of_the_free
-}
-
-
-# DIPLOMACY
-set_autonomy = {
-	target = PHI
-	autonomous_state =  autonomy_puppet
-}
-
-1939.1.1 = {
-	set_national_unity = 0.7
-
-	set_politics = {
-
-		parties = {
-			liberal_conservatism = {
-				popularity = 99
-			}
-
-			totalitarian_nationalism = {
-				popularity = 0
-			}
-
-			marxism_leninism = {
-				popularity = 1
-				#banned = no #default is no
-			}
-		}
-
-		ruling_party = liberal_conservatism
-		last_election = "1936.11.3"
-		election_frequency = 48
-		elections_allowed = yes
-	}
 }
 
 create_country_leader = {
 	name = "Abraham Lincoln"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Abraham_Lincoln.ddg"
+	picture = "Portrait_USA_Abraham_Lincoln.dds"
 	expire = "1947.1.1"
-	ideology = democrat
+	ideology = conservatism
 }
 
 create_corps_commander = {

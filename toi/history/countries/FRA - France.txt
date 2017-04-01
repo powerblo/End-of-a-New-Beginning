@@ -1,142 +1,11 @@
 ﻿capital = 16
 
-oob = "FRA_1936"
+oob = "FRA_1861"
 
 set_research_slots = 3
 
-# Starting tech
-set_technology = {
-
-
-	tech_support = 1
-	tech_recon = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	gwtank = 1
-	basic_light_tank = 1
-	improved_light_tank = 1
-	early_fighter = 1
-	naval_bomber1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	early_bomber = 1
-	tactical_bomber1 = 1
-	CAS1 = 1
-	early_submarine = 1
-	basic_submarine = 1
-	early_destroyer = 1
-	basic_destroyer = 1
-	early_light_cruiser = 1
-	basic_light_cruiser = 1
-	early_heavy_cruiser = 1
-	basic_heavy_cruiser = 1
-	early_battleship = 1
-	early_battlecruiser = 1
-	basic_battlecruiser = 1
-	early_carrier = 1
-	transport = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-}
-
-1939.1.1 = {
-
-	add_political_power = 899
-
-	#adding ministers
-	add_ideas = {
-		FRA_charles_tillon
-		francois_darlan
-		philippe_fequant
-		famh
-		jean_marie_bergeret
-		renault_fra
-
-		#laws
-		partial_economic_mobilisation
-	}
-
-	complete_national_focus = FRA_metropolitan_france
-	complete_national_focus = FRA_industrial_expansion
-	complete_national_focus = FRA_initiate_government_reform
-	complete_national_focus = FRA_support_status_quo
-	complete_national_focus = FRA_go_with_britain
-	complete_national_focus = FRA_navy_focus
-	complete_national_focus = FRA_improved_screen_ships
-	complete_national_focus = FRA_air_focus
-	complete_national_focus = FRA_metropolitan_france
-	complete_national_focus = FRA_algerie_france
-	complete_national_focus = FRA_colonial_industry
-	complete_national_focus = FRA_colonial_military_factories
-
-	give_guarantee = POL
-	ENG = { add_to_faction = FRA }
-
-	oob = "FRA_1939"
-	set_technology = {
-		fighter1 = 1
-		fighter2 = 1
-		heavy_fighter1 = 1
-		tactical_bomber2 = 1
-		strategic_bomber1 = 1
-		cv_fighter1 = 1
-		cv_CAS1 = 1
-		improved_light_tank = 1
-		basic_medium_tank = 1
-		basic_heavy_tank = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		basic_battleship = 1
-		basic_battlecruiser = 1
-
-		#doctrines
-		#Air
-		force_rotation = 1
-		fighter_baiting = 1
-		low_echelon_support = 1
-		dispersed_fighting = 1
-
-			grand_battle_plan = 1
-
-		trench_warfare = 1
-		prepared_defense = 1
-		battlefleet_concentration = 1
-		subsidiary_carrier_role = 1
-		convoy_sailing = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_plant = 1
-		improved_oil_plant = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-}
-
 set_convoys = 300
-set_national_unity = 0.4
+set_national_unity = 0.7
 
 set_politics = {
 
@@ -144,11 +13,9 @@ set_politics = {
 		liberal_conservatism = {
 			popularity = 1
 		}
-
 		totalitarian_nationalism = {
 			popularity = 1
 		}
-
 		marxism_leninism = {
 			popularity = 0
 		}
@@ -162,57 +29,16 @@ set_politics = {
 	elections_allowed = no
 }
 
-add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
-	limited_conscription
-}
-
 #give_guarantee = CZE
-
-#Order matters here Daladier will start as leaders because added last
-create_country_leader = {
-	name = "Charles de Gaulle"
-	desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
-	picture = "Portrait_France_Charles_De_Gaulle.dds"
-	expire = "1965.1.1"
-	ideology = democrat
-	traits = {
-
-	}
-}
 
 create_country_leader = {
 	name = "Napoleon III"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Portrait_FRA_Napoleon_III.dds"
+	picture = "Napoleon_III.dds"
 	expire = "1865.1.1"
-	ideology = spiffyking
+	ideology = despotism
 	traits = {
 		stout_defender
-	}
-}
-
-create_country_leader = {
-	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "Portrait_France_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = 	commie
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Philippe Pétain"
-	desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
-	picture = "Portrait_France_Philippe_Petain.dds"
-	expire = "1965.1.1"
-	ideology = hazitazinazi
-	traits = {
-
 	}
 }
 

@@ -5,8 +5,8 @@ oob = "SWI_1936"
 set_research_slots = 3
 
 set_technology = {
-	
-	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_mountaineers = 1
 	tech_support = 1		
 	tech_engineers = 1
@@ -114,7 +114,7 @@ set_politics = {
 }
 
 add_ideas = {
-	despotic_autocracy_idea	
+	neutrality_idea	
 	limited_conscription
 }
 
@@ -125,7 +125,7 @@ create_country_leader = {
 	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
 	picture = "Portrait_Switzerland_Federal_council.dds"
 	expire = "1965.1.1"
-	ideology = democrat
+	ideology = conservatism
 	traits = {
 		#
 	}
@@ -136,7 +136,7 @@ create_country_leader = {
 	desc = "POLITICS_ERNST_BEGUIN_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = centrism
 	traits = {
 		#
 	}
@@ -147,7 +147,7 @@ create_country_leader = {
 	desc = "POLITICS_MAX_LEO_KELLER_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds" 
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = nazism
 	traits = {
 		#
 	}
@@ -158,7 +158,7 @@ create_country_leader = {
 	desc = "POLITICS_FRITZ_PLATTEN_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = marxism
 	traits = {
 		#
 	}

@@ -4,7 +4,7 @@ oob = "KOR_1936"
 
 # Starting tech
 set_technology = {
-
+	infantry_weapons = 1
 	mass_assault = 1
 }
 
@@ -13,35 +13,35 @@ set_convoys = 5
 set_politics = {
 
 	parties = {
-		liberal_conservatism = {
-			popularity = 0
+		liberal_conservatism = { 
+			popularity = 35
 		}
 
 		totalitarian_nationalism = {
-			popularity = 5
+			popularity = 25
 		}
-
+		
 		marxism_leninism = {
-			popularity = 0
+			popularity = 30
 			#banned = no #default is no
 		}
-
-		despotic_autocracy = {
-			popularity = 90
+		
+		despotic_autocracy = { 
+			popularity = 10
 		}
 	}
-	ruling_party = despotic_autocracy
-	last_election = "1800.1.1"
+	ruling_party = liberal_conservatism
+	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 create_country_leader = {
-	name = "Cheoljong"
+	name = "Syngman Rhee"
 	desc = ""
-	picture = "gfx/leaders/KOR/Portrait_Cheoljong"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = conservatism
 	traits = {
 		#
 	}
@@ -52,7 +52,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
 	expire = "1965.1.1"
-	ideology = spiffyking
+	ideology = despotism
 	traits = {
 		#
 	}
@@ -63,7 +63,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
 	expire = "1965.1.1"
-	ideology = commie
+	ideology = stalinism
 	traits = {
 		#
 	}
@@ -74,7 +74,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
 	expire = "1965.1.1"
-	ideology = hazitazinazi
+	ideology = fascism_ideology
 	traits = {
 		#
 	}

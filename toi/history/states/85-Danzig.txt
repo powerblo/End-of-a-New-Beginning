@@ -1,13 +1,12 @@
+
 state={
 	id=85
 	name="STATE_85"
-	manpower = 1080100
-	
-	state_category = city
+
 	history={
 		owner = PRS
 		victory_points = {
-			362 10
+			334 10
 		}
 		buildings = {
 			infrastructure = 6
@@ -17,15 +16,22 @@ state={
 			air_base = 3
 			362 = {
 				naval_base = 5
+
 			}
+
 		}
 		add_core_of = PRS
 		1938.3.12 = {
-			add_claim_by = PRS
+			add_claim_by = GER
+
 		}
+
 	}
 
 	provinces={
 		279 334 362 389 3295 3324 9263 
 	}
+	manpower=1080100
+	buildings_max_level_factor=1.000
+	state_category=city
 }
