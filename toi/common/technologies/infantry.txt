@@ -55,12 +55,17 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = socket_musket
+			leads_to_tech = socket_bayonet
 			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = vic_army_cloth
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = gatling_gun
 			research_cost_coeff = 1
 		}
 
@@ -142,7 +147,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 
-		cavalry = {
+		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.05
 			breakthrough = 0.05
@@ -198,9 +203,18 @@ technologies = {
 
 	needle_guns = {
 
-		category_light_infantry = {
+		category_all_infantry = {
 			soft_attack = 0.02
 			breakthrough = 0.04
+		}
+
+		category_ranged_cavalry = {
+			soft_attack = 0.02
+			breakthrough = 0.04
+		}
+
+		enable_subunits = {
+			united_infantry
 		}
 
 		path = {
@@ -228,7 +242,12 @@ technologies = {
 
 		category_all_infantry = {
 			soft_attack = 0.03
-			max_organisation = 0.03
+			max_organization = 0.03
+		}
+
+		category_ranged_cavalry = {
+			soft_attack = 0.03
+			max_organization = 0.03
 		}
 
 		path = {
@@ -281,9 +300,14 @@ technologies = {
 
 	improved_ammunition = {
 
-		category_light_infantry = {
+		category_all_infantry = {
 			soft_attack = 0.02
-			max_organisation = 0.05
+			max_organization = 0.05
+		}
+
+		category_ranged_cavalry = {
+			soft_attack = 0.02
+			max_organization = 0.05
 		}
 
 		path = {
@@ -336,7 +360,11 @@ technologies = {
 
 	reduced_recoil = {
 
-		category_light_infantry = {
+		category_all_infantry = {
+			soft_attack = 0.02
+		}
+
+		category_ranged_cavalry = {
 			soft_attack = 0.02
 		}
 
@@ -365,7 +393,7 @@ technologies = {
 
 	hand_revolvers = {
 
-		category_light_infantry = {
+		category_front_line = {
 			soft_attack = 0.02
 		}
 
@@ -392,7 +420,7 @@ technologies = {
 
 	improved_handguns = {
 
-		category_light_infantry = {
+		category_front_line = {
 			soft_attack = 0.02
 		}
 
@@ -419,7 +447,7 @@ technologies = {
 
 	standardized_handguns = {
 
-		category_light_infantry = {
+		category_front_line = {
 			soft_attack = 0.02
 		}
 
@@ -446,7 +474,7 @@ technologies = {
 
 	semi_automatic_pistols = {
 
-		category_light_infantry = {
+		category_front_line = {
 			soft_attack = 0.02
 		}
 
@@ -466,16 +494,20 @@ technologies = {
 		}
 	}
 
-	#### Support Equipment
+	#### Bayonets
 
-	socket_musket = {
+	socket_bayonet = {
 
-		category_light_infantry = {
+		category_all_infantry = {
 			soft_attack = 0.02
 		}
 
+#		path = {
+#			leads_to_tech = basic_field_gear
+#		}
+
 		path = {
-			leads_to_tech = basic_field_gear
+			leads_to_tech = yataghan_bayonet
 		}
 
 		research_cost = 1.5
@@ -494,17 +526,21 @@ technologies = {
 		}
 	}
 
-	basic_field_gear = {
+	yataghan_bayonet = {
 
-		enable_equipments = {
-			civil_war_field_gear
+		category_all_infantry = {
+			soft_attack = 0.02
+		}
+
+		path = {
+			leads_to_tech = sawback_bayonet
 		}
 
 		research_cost = 1.5
-		start_year = 1840
+		start_year = 1850
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1840}
+			position = { x = 2 y = @1850}
 		}
 
 		categories = {
@@ -516,6 +552,79 @@ technologies = {
 		}
 	}
 
+
+	sawback_bayonet = {
+
+		category_all_infantry = {
+			breakthrough = 0.02
+		}
+
+		path = {
+			leads_to_tech = knife_bayonet
+		}
+
+		research_cost = 1.5
+		start_year = 1864
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1864}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+		 factor = 1
+		}
+	}
+
+	knife_bayonet = {
+
+		category_all_infantry = {
+			soft_attack = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1884
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 32}
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+		 factor = 1
+		}
+	}
+
+	#### Support Equipment
+
+#	basic_field_gear = {
+#
+#		enable_equipments = {
+#			civil_war_field_gear
+#		}
+#
+#		research_cost = 1.5
+#		start_year = 1850
+#		folder = {
+#			name = infantry_folder
+#			position = { x = 4 y = @1850}
+#		}
+#
+#		categories = {
+#			infantry_weapons
+#		}
+#
+#		ai_will_do = {
+#		 factor = 1
+#		}
+#	}
+
 	#### Clothing Equipment
 
 	vic_army_cloth = {
@@ -525,6 +634,10 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = { x = 6 y = @1840}
+		}
+
+		enable_equipments = {
+			uniform_equipment_0
 		}
 
 		path = {
@@ -553,8 +666,12 @@ technologies = {
 			position = { x = 6 y = @1850}
 		}
 
+		enable_equipments = {
+			uniform_equipment_1
+		}
+
 		path = {
-			leads_to_tech = sixtyfour_army_cloth
+			leads_to_tech = 1864_army_cloth
 		}
 
 		categories = {
@@ -566,13 +683,17 @@ technologies = {
 		}
 	}
 
-	sixtyfour_army_cloth = {
+	1864_army_cloth = {
 
 		research_cost = 1
 		start_year = 1864
 		folder = {
 			name = infantry_folder
 			position = { x = 6 y = @1864}
+		}
+
+		enable_equipments = {
+			uniform_equipment_2
 		}
 
 		path = {
@@ -601,6 +722,11 @@ technologies = {
 			position = { x = 8 y = @1868}
 		}
 
+		category_army = {
+			defense = 0.04
+			breakthrough = 0.02
+		}
+
 		path = {
 			leads_to_tech = solid_camo
 		}
@@ -623,6 +749,11 @@ technologies = {
 			position = { x = 8 y = @1875}
 		}
 
+		category_army = {
+			defense = 0.04
+			breakthrough = 0.02
+		}
+
 		categories = {
 			infantry_weapons
 		}
@@ -641,8 +772,12 @@ technologies = {
 			position = { x = 6 y = @1870}
 		}
 
+		uniform_equipment = {
+			reliability = 0.05
+		}
+
 		path = {
-			leads_to_tech = seventytwo_army_cloth
+			leads_to_tech = 1872_army_cloth
 		}
 
 		categories = {
@@ -654,7 +789,7 @@ technologies = {
 		}
 	}
 
-	seventytwo_army_cloth = {
+	1872_army_cloth = {
 
 		research_cost = 1
 		start_year = 1872
@@ -663,8 +798,12 @@ technologies = {
 			position = { x = 6 y = @1872}
 		}
 
+		enable_equipments = {
+			uniform_equipment_3
+		}
+
 		path = {
-			leads_to_tech = seventyeight_army_cloth
+			leads_to_tech = 1878_army_cloth
 		}
 
 		categories = {
@@ -676,13 +815,17 @@ technologies = {
 		}
 	}
 
-	seventyeight_army_cloth = {
+	1878_army_cloth = {
 
 		research_cost = 1
 		start_year = 1878
 		folder = {
 			name = infantry_folder
 			position = { x = 6 y = @1878}
+		}
+
+		enable_equipments = {
+			uniform_equipment_4
 		}
 
 		categories = {
@@ -707,6 +850,10 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1840}
+		}
+
+		enable_subunits = {
+			light_cavalry
 		}
 
 		path = {
@@ -739,6 +886,12 @@ technologies = {
 			position = { x = 10 y = @1850}
 		}
 
+		enable_equipments = {
+			transport_equipment_0
+		}
+
+		org_loss_when_moving = -0.1
+
 		path = {
 			leads_to_tech = horse_artillery
 		}
@@ -761,6 +914,10 @@ technologies = {
 			position = { x = 10 y = @1860}
 		}
 
+		enable_equipments = {
+			horse_artillery_equipment_0
+		}
+
 		categories = {
 			infantry_weapons
 		}
@@ -779,6 +936,14 @@ technologies = {
 			position = { x = 14 y = @1850}
 		}
 
+		enable_subunits = {
+			dragoon
+		}
+
+		enable_subunits = {
+			mounted_infantry
+		}
+
 		path = {
 			leads_to_tech = dragoon_equipment
 		}
@@ -794,9 +959,9 @@ technologies = {
 
 	dragoon_equipment = {
 
-	cavalry = {
+	category_ranged_cavalry = {
 		soft_attack = 0.04
-		max_organisation = 0.03
+		max_organization = 0.03
 	}
 
 		research_cost = 1
@@ -817,9 +982,9 @@ technologies = {
 
 	improved_cavalry = {
 
-		cavalry = {
+		category_cavalry = {
 			soft_attack = 0.04
-			max_organisation = 0.05
+			max_organization = 0.05
 		}
 
 		research_cost = 1
@@ -844,10 +1009,10 @@ technologies = {
 
 	specialized_cavalry = {
 
-		cavalry = {
+		category_cavalry = {
 			recon = 0.1
-			soft_attack = 0.2
-			max_organisation = 0.3
+			soft_attack = 0.02
+			max_organization = 0.3
 		}
 
 		research_cost = 1
@@ -872,7 +1037,7 @@ technologies = {
 
 	cavalry_recon = {
 
-		cavalry = {
+		category_cavalry = {
 			recon = 1
 		}
 
@@ -898,9 +1063,9 @@ technologies = {
 
 	cav_supply = {
 
-		cavalry = {
+		category_cavalry = {
 			recon = 0.5
-			soft_attack = 0.4
+			soft_attack = 0.04
 		}
 
 		research_cost = 1
@@ -925,7 +1090,7 @@ technologies = {
 
 	cav_integrity = {
 
-		cavalry = {
+		category_cavalry = {
 			recon = 0.3
 
 		}
@@ -959,6 +1124,11 @@ technologies = {
 			position = { x = 12 y = @1876}
 		}
 
+		category_cavalry = {
+			recon = 0.1
+			soft_attack = 0.05
+		}
+
 		categories = {
 			infantry_weapons
 		}
@@ -977,6 +1147,14 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1860}
+		}
+
+		enable_equipments = {
+			machine_gun_equipment_0
+		}
+
+		enable_subunits = {
+			machine_gun_company
 		}
 
 		path = {
@@ -1005,6 +1183,10 @@ technologies = {
 			leads_to_tech = improved_fire_rate
 		}
 
+		machine_gun_company = {
+			breakthrough = 0.02
+		}
+
 		categories = {
 			infantry_weapons
 		}
@@ -1025,6 +1207,11 @@ technologies = {
 
 		path = {
 			leads_to_tech = enhanced_rotary
+		}
+
+		machine_gun_company = {
+			soft_attack = 0.04
+			defense = 0.02
 		}
 
 		categories = {
@@ -1049,6 +1236,11 @@ technologies = {
 			leads_to_tech = automatic_arms
 		}
 
+		machine_gun_company = {
+			soft_attack = 0.04
+			defense = 0.02
+		}
+
 		categories = {
 			infantry_weapons
 		}
@@ -1065,6 +1257,10 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1882}
+		}
+
+		enable_equipments = {
+			machine_gun_equipment_1
 		}
 
 		categories = {

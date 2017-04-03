@@ -3,14 +3,14 @@ technologies = {
 	gw_artillery = {
 
 		enable_equipments = {
-			bore_gun
+			cannon_equipment_0
 		}
 
 		research_cost = 1
 		start_year = 1840
 		folder = {
 			name = artillery_folder
-			position = { x = 4 y = 0}
+			position = { x = 0 y = 0}
 		}
 
 		path = {
@@ -37,14 +37,14 @@ technologies = {
  	improved_smoothbore = {
 
 		enable_equipments = {
-			smoothbore_gun
+			cannon_equipment_1
 		}
 
 		research_cost = 1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
-			position = { x = 4 y = 4}
+			position = { x = 0 y = 4}
 		}
 
 		categories = {
@@ -59,14 +59,14 @@ technologies = {
 	early_howitzer = {
 
 		enable_equipments = {
-			early_howitzer
+			howitzer_equipment_0
 		}
 
 		research_cost = 1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
-			position = { x = -2 y = 2}
+			position = { x = -3 y = 2}
 		}
 
 		path = {
@@ -85,14 +85,14 @@ technologies = {
 	rifled_howitzer = {
 
 		enable_equipments = {
-			rifled_howitzer
+			howitzer_equipment_1
 		}
 
 		research_cost = 1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
-			position = { x = -2 y = 4}
+			position = { x = -3 y = 4}
 		}
 
 		path = {
@@ -114,7 +114,11 @@ technologies = {
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = -2 y = 6}
+			position = { x = -3 y = 6}
+		}
+		
+		category_artillery = {
+		hard_attack = 0.05
 		}
 
 		path = {
@@ -136,7 +140,11 @@ technologies = {
 		start_year = 1870
 		folder = {
 			name = artillery_folder
-			position = { x = -2 y = 8}
+			position = { x = -3 y = 8}
+		}
+		
+		category_artillery = {
+		hard_attack = 0.05
 		}
 
 		path = {
@@ -155,14 +163,14 @@ technologies = {
 	rml_field_gun = {
 
 		enable_equipments = {
-			rml_field_gun
+			rifled_cannon_equipment_0
 		}
 
 		research_cost = 1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 2}
+			position = { x = 3 y = 2}
 		}
 
 		path = {
@@ -181,14 +189,14 @@ technologies = {
 	rbl_field_gun = {
 
 		enable_equipments = {
-			rbl_field_gun
+			rifled_cannon_equipment_1
 		}
 
 		research_cost = 1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 4}
+			position = { x = 3 y = 4}
 		}
 
 		path = {
@@ -214,11 +222,16 @@ technologies = {
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 6}
+			position = { x = 3 y = 6}
 		}
 
 		path = {
 			leads_to_tech = improved_artillery
+		}
+		
+		category_artillery = {
+		soft_attack = 0.05
+		breakthrough = 0.02
 		}
 
 		categories = {
@@ -233,14 +246,14 @@ technologies = {
 	improved_artillery = {
 
 		enable_equipments = {
-			seventy_field_gun
+			rifled_cannon_equipment_2
 		}
 
 		research_cost = 1
 		start_year = 1870
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 8}
+			position = { x = 3 y = 8}
 		}
 
 		path = {
@@ -262,11 +275,15 @@ technologies = {
 		start_year = 1875
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 10}
+			position = { x = 3 y = 10}
+		}
+		
+		category_artillery = {
+		soft_attack = 0.05
 		}
 
 		path = {
-		 leads_to_tech = gw_infantry_0
+		 tech_leads_to = gw_infantry_0
 		}
 
 		categories = {
@@ -288,7 +305,7 @@ technologies = {
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 6}
+			position = { x = 6 y = 6}
 		}
 
 		categories = {

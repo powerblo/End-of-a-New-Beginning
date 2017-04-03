@@ -4,7 +4,7 @@
 
 sub_units = {
 
-	cavalry = {
+	light_cavalry = {
 		sprite = cavalry
 		map_icon_category = other
 		priority = 599
@@ -16,7 +16,9 @@ sub_units = {
 		group = mobile
 
 		categories = {
+			category_ranged_cavalry
 			category_front_line
+			category_cavalry
 			category_army
 		}
 
@@ -38,9 +40,18 @@ sub_units = {
 
 		#Offensive Abilities
 		suppression = 2
+		
+		essential = {
+			infantry_equipment
+			cavalry_equipment
+		}
+
+		# this is what moves us and sets speed
+		transport = cavalry_equipment
 
 		need = {
-			infantry_equipment = 120
+			cavalry_equipment = 100
+			infantry_equipment = 100
 		}
 
 		forest = {
@@ -81,6 +92,8 @@ sub_units = {
 		group = mobile
 
 		categories = {
+			category_ranged_cavalry
+			category_cavalry
 			category_front_line
 			category_army
 		}
@@ -103,9 +116,18 @@ sub_units = {
 
 		#Offensive Abilities
 		suppression = 2
+		
+		essential = {
+			infantry_equipment
+			cavalry_equipment
+		}
+
+		# this is what moves us and sets speed
+		transport = cavalry_equipment
 
 		need = {
-			infantry_equipment = 120
+			infantry_equipment = 100
+			cavalry_equipment = 100
 		}
 
 		forest = {

@@ -58,7 +58,10 @@ sub_units = {
 		group = infantry
 
 		categories = {
-
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
 		}
 
 		combat_width = 1
@@ -73,6 +76,122 @@ sub_units = {
 		training_time = 90
 		suppression = 1
 		weight = 0.5
+
+		supply_consumption = 0.07
+
+		need = {
+			infantry_equipment = 100
+		}
+	}
+	
+	mounted_infantry = {
+		sprite = cavalry
+		map_icon_category = other
+		priority = 599
+		active = no
+		cavalry = yes
+
+		type = { infantry }
+		
+		group = infantry
+
+		categories = {
+			category_all_infantry
+			category_front_line
+			category_army
+		}
+
+
+		combat_width = 2
+
+		#Size Definitions
+		max_organisation = 60
+		max_strength = 25
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		maximum_speed = 0.6
+		training_time = 120
+		weight = 0.5
+
+		supply_consumption = 0.12
+
+		#Offensive Abilities
+		suppression = 2
+		
+		essential = {
+			infantry_equipment
+			cavalry_equipment
+		}
+
+		# this is what moves us and sets speed
+		transport = cavalry_equipment
+
+		need = {
+			infantry_equipment = 100
+			cavalry_equipment = 100
+		}
+
+		forest = {
+			attack = -0.05
+		}
+
+		hills = {
+			attack = -0.05
+		}
+
+		mountain = {
+			attack = -0.1
+			movement = -0.05
+		}
+
+		jungle = {
+			attack = -0.1
+		}
+
+		urban = {
+			attack = -0.05
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+	
+	united_infantry = {
+		sprite = infantry
+		map_icon_category = infantry
+
+		priority = 600
+		active = yes
+
+		type = {
+			infantry
+		}
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 2
+
+		#Size Definitions
+		max_strength = 25
+		max_organisation = 70
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 90
+		suppression = 1
+		weight = 0.5
+		breakthrough = 0.3
 
 		supply_consumption = 0.07
 

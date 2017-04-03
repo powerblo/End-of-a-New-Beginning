@@ -56,4 +56,78 @@ equipments = {
 		priority = 20
 	}
 	
+	uniform_equipment = {
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		reliability = 0.9
+		
+		lend_lease_cost = 0.10
+		
+		build_cost_ic = 1
+		resources = {
+		}
+	}
+	
+	uniform_equipment_0 = {
+		archetype = uniform_equipment
+		priority = 20
+	}
+
+	uniform_equipment_1 = {
+		archetype = uniform_equipment
+		priority = 20
+	}
+
+	uniform_equipment_2 = {
+		archetype = uniform_equipment
+		priority = 20
+	}	
+
+	uniform_equipment_3 = {
+		archetype = uniform_equipment
+		priority = 20
+	}
+
+	uniform_equipment_4 = {
+		archetype = uniform_equipment
+		priority = 20
+	}
+	
+	transport_equipment = {
+		is_archetype = yes
+		picture = archetype_motorized_equipment		
+		is_buildable = no
+		type = {
+			#infantry #Removing inf type 
+			motorized
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		maximum_speed = 4
+		reliability = 0.8
+		hardness = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+
+		build_cost_ic = 2.5
+		resources = {
+		}
+	}
+
+	transport_equipment_0 = {
+		archetype = motorized_equipment
+		priority = 30			
+	}
+	
 }
