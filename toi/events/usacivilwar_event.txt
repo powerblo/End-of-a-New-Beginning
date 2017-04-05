@@ -71,22 +71,15 @@ country_event = {
 
       option = {
         name = usacivilwar.100.b
-        set_country_flag = northern_rally
       }
 
     }
-
-    if = {
-
-      limit = {
-        tag = CSA
-      }
 
       option = {
         name = usacivilwar.100.c
       }
 
-    }
+
 
   }
 
@@ -360,7 +353,7 @@ country_event = {
 
   }
 
-  # Peace Conference - USA wins
+  # Peace Conference - USA wings
 
   country_event = {
     id = usacivilwar.300
@@ -371,78 +364,22 @@ country_event = {
     trigger = {
       AND = {
         tag = USA
-        CSA = {has_capitulated = yes}
+
       }
     }
 
     immediate = {
-      white_peace = CSA
+
     }
 
-    #Complete Annexation
     option = {
-      name = usacivilwar.300.a
-      annex_country = {target = USA}
-      add_national_unity = -0.3
-      add_political_power = -100
+
     }
 
-    #Partially independent government in south
-    if = {
-      limit = {
-        NOT = {has_country_flag = northern_rally}
-      }
+    mean_time_to_happen = {
 
-      option = {
-        name = usacivilwar.300.b
-        puppet = CSA
-        CSA = {set_country_flag = american_puppet}
-        add_national_unity = -0.1
-        add_political_power = -30
-      }
     }
 
-    #Freed Texas, Louisiana and Florida, new constitution
-    if = {
-      limit = {
-        NOT = {has_country_flag = northern_rally}
-      }
-
-      option = {
-        name = usacivilwar.300.c
-        annex_country = {target = CSA}
-        release_puppet = TEX
-        release_puppet = LOU
-        release_puppet = FLO
-        TEX = {set_country_flag = american_puppet}
-        LOU = {set_country_flag = american_puppet}
-        FLO = {set_country_flag = american_puppet}
-        add_national_unity = 0.05
-        add_political_power = -30
-      }
-    }
-
-    #Mexican gains
-    if = {
-      limit = {
-        AND = {
-          MEX = {has_war_with = CSA}
-          MEX = {has_war_together_with = USA}
-        }
-      }
-      #Mexico takes New Mexico, Texas
-      option = {
-        name = usacivilwar.300.e
-        MEX = {set_state_owner = #Southern American States}
-        
-      }
-
-      #Mexico takes all
-      option = {
-        name = usacivilwar.300.f
-        MEX = {annex_country = {target = CSA}}
-      }
-    }
   }
 
   #Template
