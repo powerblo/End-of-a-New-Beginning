@@ -1,0 +1,40 @@
+namespace = usacivilwar
+
+#100s - Battles
+#Battle of Fort Sumter
+country_event = {
+  id = usacivilwar.100
+  title = usacivilwar.100.t
+  desc = usacivilwar.100.d
+  picture = GFX_fort_sumter
+
+  trigger = {
+    364 = {is_owned_by = CSA}
+  }
+
+  #Short term artillery increase
+  option = {
+    name = usacivilwar.100.a
+    #Add spirit(idea) for artillery increase - Siege Tactics
+  }
+
+  #CSA Rally
+  option = {
+    trigger = {
+      tag = CSA
+    }
+    name = usacivilwar.100.b
+    #Add spirit for CSA victory - The first step
+  }
+
+  #USA Rally
+  option = {
+    trigger = {
+      tag = USA
+    }
+    name = usacivilwar.100.c
+    #Add spirit for USA nationalism - Rally for Sumter
+    #Increased nationalism popularity
+  }
+
+}
