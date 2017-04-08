@@ -15,7 +15,7 @@ country_event = {
   #Short term artillery increase
   option = {
     name = usacivilwar.100.a
-    #Add spirit(idea) for artillery increase - Siege Tactics
+    add_ideas = siege_tactics
   }
 
   #CSA Rally
@@ -24,7 +24,7 @@ country_event = {
       tag = CSA
     }
     name = usacivilwar.100.b
-    #Add spirit for CSA victory - The first step
+    add_ideas = first_step
   }
 
   #USA Rally
@@ -33,8 +33,8 @@ country_event = {
       tag = USA
     }
     name = usacivilwar.100.c
-    #Add spirit for USA nationalism - Rally for Sumter
-    #Increased nationalism popularity
+    add_ideas = rally_for_sumter
+    add_popularity = {ideology = totalitarian_nationalism popularity = 0.03}
   }
 
 }
