@@ -1,0 +1,249 @@
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	focus = {
+		id = FRA_new_public_works
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			16 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_new_public_works
+		icon = GFX_goal_generic_construction
+		x = 2
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_enforce_censorship
+		icon = GFX_goal_generic_forceful_treaty
+		mutually_exclusive = {
+	 		focus = FRA_discrimate_censorship
+	 		focus = FRA_end_censorship
+	 	}
+		x = 10
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea=FRA_censorship
+				add_idea=FRA_censorship_2
+			}
+		}
+	}
+	focus = {
+		id = FRA_fascist_influence
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = FRA_enforce_censorship }
+		mutually_exclusive = {
+	 		focus = FRA_discrimate_censorship
+	 	}
+		x = 8
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea=FRA_censorship_2
+				add_idea=FRA_censorship_fascist
+			}
+		}
+	}
+	focus = {
+		id = FRA_discrimate_censorship
+		icon = GFX_goal_generic_propaganda
+		mutually_exclusive = {
+	 		focus = FRA_enforce_censorship
+	 		focus = FRA_end_censorship
+	 	}
+		x = 14
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_end_censorship
+		icon = GFX_goal_generic_national_unity
+		mutually_exclusive = {
+	 		focus = FRA_enforce_censorship
+	 		focus = FRA_discrimate_censorship
+	 	}
+		x = 18
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_catch_up
+		icon = GFX_goal_generic_cavalry
+		
+		x = 14
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			all_country = {
+				country_event = { id = FRA.imperialism }
+			}
+		}
+	}
+	focus = {
+		id = FRA_asia_question
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = FRA_catch_up }
+		x = 14
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_french_indochina
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = FRA_asia_question }
+		x = 15
+		y = 10
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = VIN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CAM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LAO
+			}
+		}
+	}
+	focus = {
+		id = FRA_asia_question
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = FRA_catch_up }
+		x = 14
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRA_army_reform
+		icon = GFX_goal_generic_army_doctrines
+		
+		x = 21
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_army_reform
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = FRA_troop_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		
+		x = 20
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_troop_focus
+				bonus = 0.25
+				uses = 4
+				category = support_tech
+			}
+		}
+	}
+}
