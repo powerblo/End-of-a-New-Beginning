@@ -112,6 +112,8 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 
+			picture = sumter
+
 		}
 
 		first_step = {
@@ -141,6 +143,8 @@ ideas = {
 				unity_factor = 0.03
 				planning_speed = 0.05
 			}
+
+			picture = sumter
 		}
 
 		nationalism = {
@@ -601,122 +605,42 @@ ideas = {
 		}
 	}
 
+	#Slave laws
 	political_advisor = {
 		# POLITICAL
-		generic_communist_revolutionary = {
+		allowed_slaves = {
+			picture = generic_tank_manufacturer_1
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CHI tag = AST tag = RAJ tag = CAN tag = SAF} }
 				NOT = {
-					has_available_idea_with_traits = { idea = communist_revolutionary limit = 1 }
-				}
-
-			}
-
-			available = {
-				if = {
-					limit = {
-						original_tag = NZL
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = NZL_the_lee_affair
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
 				}
 			}
 
-			traits = { communist_revolutionary }
+			cost = 400
+			removal_cost = 10
 
-			on_add = {
-				country_event = political.1
-			}
-
-			do_effect = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			ai_will_do = {
-				factor = 0
-			}
+			production_factory_max_efficiency_factor = 0.1
+			production_speed_building_factor = 0.1
+			local_resources_factor = 0.3
+			unity_factor = -0.1
 		}
 
-		generic_democratic_reformer = {
+		banned_slaves = {
+			picture = generic_tank_manufacturer_1
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF } }
 				NOT = {
-					has_available_idea_with_traits = { idea = democratic_reformer limit = 1 }
-				}
-
-			}
-
-			available = {
-				if = {
-					limit = {
-						original_tag = NZL
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = NZL_strengthen_the_commonwealth
-						has_completed_focus = NZL_constitution_amendment_act
-					}
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
 				}
 			}
 
+			cost = 400
+			removal_cost = 10
 
-			traits = { democratic_reformer }
-
-			on_add = {
-				country_event = political.13
-			}
-
-			do_effect = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-
-			ai_will_do = {
-				factor = 0
-			}
+			conscription = 0.05
 		}
 
-		generic_fascist_demagogue = {
-
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF } }
-				NOT = {
-					has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
-				}
-
-			}
-
-			available = {
-				if = {
-					limit = {
-						original_tag = NZL
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = NZL_in_the_darkness
-				}
-			}
-
-			traits = { fascist_demagogue }
-
-			on_add = {
-				country_event = political.7
-			}
-
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-
-			ai_will_do = {
-				factor = 0
-			}
-		}
 	}
 
 

@@ -7,6 +7,7 @@ country_event = {
   title = usacivilwar.100.t
   desc = usacivilwar.100.d
   picture = GFX_fort_sumter
+  fire_only_once = yes
 
   trigger = {
     364 = {is_owned_by = CSA}
@@ -38,3 +39,159 @@ country_event = {
   }
 
 }
+
+#200s - Scripted Decisions
+#
+
+
+#300s - Secedings
+#Seceding of Virginia -
+country_event = {
+  id = usacivilwar.300
+  title = usacivilwar.300.t
+  desc = usacivilwar.300.d
+  fire_only_once = yes
+
+  trigger = {
+    AND = {has_idea = banned_slaves
+          tag = USA}
+  }
+
+  mean_time_to_happen = {
+    days = 30
+    modifier = {
+      factor = 1.2
+      has_idea = gettysburg
+    }
+  }
+
+  option = {
+    name = usacivilwar.300.a
+  }
+
+  option = {
+    name = usacivilwar.300.b
+  }
+
+  immediate = {
+    CSA = {set_state_owner = 362}
+    CSA = {set_state_controller = 362}
+    CSA = {set_state_owner = 746}
+    CSA = {set_state_controller = 746}
+  }
+
+}
+
+#Arkansas
+country_event = {
+  id = usacivilwar.301
+  title = usacivilwar.301.t
+  desc = usacivilwar.301.d
+  fire_only_once = yes
+
+  trigger = {
+    AND = {has_idea = banned_slaves
+          tag = USA}
+  }
+
+  mean_time_to_happen = {
+    days = 30
+    modifier = {
+      factor = 1.2
+      has_idea = gettysburg
+    }
+  }
+
+  option = {
+    name = usacivilwar.301.a
+  }
+
+  option = {
+    name = usacivilwar.301.b
+  }
+
+  immediate = {
+    CSA = {set_state_owner = 372}
+    CSA = {set_state_controller = 372}
+  }
+
+}
+
+
+country_event = {
+  id = usacivilwar.302
+  title = usacivilwar.302.t
+  desc = usacivilwar.302.d
+  fire_only_once = yes
+
+  trigger = {
+    AND = {has_idea = banned_slaves
+          tag = USA}
+  }
+
+  mean_time_to_happen = {
+    days = 40
+    modifier = {
+      factor = 1.2
+      has_idea = gettysburg
+    }
+  }
+
+  option = {
+    name = usacivilwar.302.a
+  }
+
+  option = {
+    name = usacivilwar.302.b
+  }
+
+  immediate = {
+    CSA = {set_state_owner = 368}
+    CSA = {set_state_controller = 368}
+  }
+
+}
+
+country_event = {
+  id = usacivilwar.303
+  title = usacivilwar.303.t
+  desc = usacivilwar.303.d
+  fire_only_once = yes
+
+  trigger = {
+    AND = {has_idea = banned_slaves
+          tag = USA}
+  }
+
+  mean_time_to_happen = {
+    days = 50
+    modifier = {
+      factor = 1.2
+      has_idea = gettysburg
+    }
+  }
+
+  option = {
+    name = usacivilwar.303.a
+  }
+
+  option = {
+    name = usacivilwar.303.b
+  }
+
+  immediate = {
+    CSA = {set_state_owner = 363}
+    CSA = {set_state_controller = 363}
+  }
+
+}
+
+#400s - Diplomatic/Government Events
+
+#500s - Cabinet Events
+
+#600s - Peace treaties, results
+
+#700s - After the War
+
+#800s - International Intervention
