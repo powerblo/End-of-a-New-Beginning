@@ -1,18 +1,954 @@
-division_template = {
-	name = "Union Soldier"
+"29th Illinois28th Illinoisdivision_template = {
+	name = "Infantry Regiment"
 
 	regiments = {
 		line_infantry = { x = 0 y = 0 }
-		line_infantry = { x = 0 y = 1 }
-		line_infantry = { x = 1 y = 0 }
-		line_infantry = { x = 1 y = 1 }
-		line_infantry = { x = 2 y = 0 }
-		line_infantry = { x = 2 y = 1 }
 	}
 
 }
 
+divsion_template = {
+	name = "Infantry Regiment II"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment I"
+
+	regiment = {
+		cavalry = { x = 0 y = 0}
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment II"
+
+	regiment = {
+		cavalry = { x = 0 y = 0}
+		cavalry = { x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Siege Artillery Regiment"
+
+	regiment = {
+		line_infantry = { x = 0 y = 0}
+		artillery = { x = 0 y = 1}
+	}
+}
+
 units = {
+	division = {
+		#Memphis, Tennessee
+		name = "1st Alabama Cavalry Regiment"
+		location = 7797
+		division_template = "Cavalry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Alabama Siege Artillery Regiment"
+		location = 913
+		division_template = "Siege Artillery Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+
+	division = {
+		#Memphis, Tennessee
+		name = "1st Alabama Infantry Regiment"
+		location = 7797
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		#Pulaski, Tennessee
+		name = "2nd Alabama Infantry Regiment"
+		location = 10281
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.76
+	}
+
+	division = {
+		#Athens, Tennessee
+		name = "3rd Alabama Infantry Reigment"
+		location = 10909
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		#Pulaski, Tennessee
+		name = "4th Alabama Infantry Regiment"
+		location = 10281
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	#1st Arkansas Cavalry in July 1862
+	#1st Arkansas Light Artillery in January 1863
+	#1st Arkansas Infantry in 1863
+	#Arkansas gives 11 divisions when occupied by USA
+	division = {
+		name = "1st California Cavalry Battalion"
+		location = 9671
+		division_template = "Cavalry Regiment I"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st California Cavalry Regiment"
+		location = 9814
+		division_template = "Cavalry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st California Infantry Regiment"
+		location = 4727
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "2nd California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "3rd California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "4th California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "5th California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "6th California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "7th California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "8th California Infantry Regiment"
+		location = 941
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = " Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "2nd Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "3rd Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "4th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "5th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "6th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "7th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "8th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "9th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "10th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "11th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "12th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "13th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "14th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "15th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "16th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "17th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "18th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "19th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "20th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "21st Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "22nd Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "23rd Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "24th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "25th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "26th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "27th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "28th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "29th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "30th Regiment Connecticut Volunteer Infantry"
+		location = 9832
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Regiment Connecticut Volunteer Cavalry"
+		location = 9832
+		division_template = "Cavalry Reigment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Regiment Connecticut Heavy Artillery"
+		location = 9832
+		division_template = "Artillery Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "2nd Regiment Connecticut Heavy Artillery"
+		location = 9832
+		division_template = "Artillery Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "2nd Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = " Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "3rd Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "4th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "5th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "6th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "7th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "8th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "9th Delware Infantry Regiment"
+		location = 9786
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+#More Illinois Divisions
+	division = {
+		name = "1th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "2nd Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "3rd Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "4th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "5th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "6th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "7th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "8th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "9th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "10th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "11th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "12th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "13th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "14th Illinois Volunteer Infantry"
+		location = 7626
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "15th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "16th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "17th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "18th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "19th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "20th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "21st Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "22nd Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "23rd Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "24th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "25th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "26th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "27th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "28th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "29th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "30th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "31th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "32th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "33th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "34th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "35th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "36th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "37th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "38th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "39th Illinois Volunteer Infantry"
+		location = 7626
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "40th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "41th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "42th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "43th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "44th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "45th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "46th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "47th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "48th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "49th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "50th Illinois Volunteer Infantry"
+		location = 9450
+		division_template = "Infantry Regiment II"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = ""
+		location =
+		division_template = ""
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
 	#Maryland
 	division = {
 		name = "Union Soldier"
