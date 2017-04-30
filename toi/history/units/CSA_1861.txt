@@ -1,168 +1,135 @@
 division_template = {
-  name = "Confederate Soldier"
+	name = "Infantry Regiment"
 
-  regiments = {
-    line_infantry = { x = 0 y = 0 }
-    line_infantry = { x = 0 y = 1 }
-    line_infantry = { x = 1 y = 0 }
-    line_infantry = { x = 1 y = 1 }
-    line_infantry = { x = 2 y = 0 }
-    line_infantry = { x = 2 y = 1 }
-  }
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+	}
 
 }
 
+divsion_template = {
+	name = "Infantry Regiment II"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment I"
+
+	regiment = {
+		cavalry = { x = 0 y = 0}
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment II"
+
+	regiment = {
+		cavalry = { x = 0 y = 0}
+		cavalry = { x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Siege Artillery Regiment"
+
+	regiment = {
+		line_infantry = { x = 0 y = 0}
+		artillery = { x = 0 y = 1}
+	}
+}
 units = {
 
-	#Texas
-	division = {
-		name = "Confederate Soldier"
-		location = 2055
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-	division = {
-		name = "Confederate Soldier"
-		location = 3875
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-	division = {
-		name = "Confederate Soldier"
-		location = 9829
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-	division = {
-		name = "Confederate Soldier"
-		location = 5001
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-	#Arkansas
-	division = {
-		name = "Confederate Soldier"
-		location = 12778
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+  division = {
+    name = "1st Regiment Alabama Infantry"
+    location =12735
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 7586
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "15th Arkansas Infantry Regiment "Josey's Regiment""
+    location = 12458
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 4597
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-  #Mississippi
+    name = "1st Georgia Infantry"
+    location = 12384
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 7464
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "5th Georgia Infantry"
+    location = 12384
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 10753
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-
-  #Alabama
+    name = "1st Louisiana Infantry "Nelligan's Regiment""
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 10192
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "5th Louisiana Infantry "Hay's Fighting Tigers""
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 5059
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-
-  #Georgia
+    name = "1st Mississippi Infantry "Johnston's Regiment""
+    location = 4464
+    division_template = "Infantry Regiment I"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 968
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-
-  #North Carolina
+    name = "1st Tennessee Infantry Regiment"
+    location = 10192
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 9967
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "1st Texas Infantry "Ragged Old First""
+    location = 3960
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 10468
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "2nd Texas Infantry "Moore's 1st Infantry""
+    location = 10337
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
   division = {
-		name = "Confederate Soldier"
-		location = 12445
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
+    name = "1st Virginia Infantry "Old First""
+    location = 7202
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
 
-  division = {
-		name = "Confederate Soldier"
-		location = 11783
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-
-  division = {
-		name = "Confederate Soldier"
-		location = 6943
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
-
-  #South Carolina
-
-  division = {
-		name = "Confederate Soldier"
-		location = 7202
-		division_template = "Confederate Soldier"
-		start_experience_factor = 0.2
-    start_equipment_factor = 0.15
-	}
 
 }

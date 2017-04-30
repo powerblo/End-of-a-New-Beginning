@@ -11,7 +11,7 @@ country_event = {
 
   trigger = {
   AND = {
-    364 = {is_owned_by = CSA}
+    364 = {is_controlled_by = CSA}
     OR = {
       TAG = USA
       TAG = CSA
@@ -62,7 +62,7 @@ country_event = {
 
   trigger = {
   AND = {
-    362 = {is_owned_by = CSA}
+    362 = {is_controlled_by = CSA}
     OR = {
       TAG = USA
       TAG = CSA
@@ -92,7 +92,7 @@ country_event = {
 
   trigger = {
   AND = {
-    369 = {is_owned_by = USA}
+    369 = {is_controlled_by = USA}
     OR = {
       TAG = USA
       TAG = CSA
@@ -132,7 +132,7 @@ country_event = {
 
   trigger = {
   AND = {
-    371 = {is_owned_by = USA}
+    371 = {is_controlled_by = USA}
     OR = {
       TAG = USA
       TAG = CSA
@@ -167,10 +167,6 @@ country_event = {
   desc = usacivilwar.200.d
   fire_only_once = yes
   is_triggered_only = yes
-
-  mean_time_to_happen = {
-    days = 1
-  }
 
   option = {
     name = usacivilwar.a
@@ -366,7 +362,13 @@ country_event = {
 
 }
 
+#Virginia splits
+
+
 #400s - Diplomatic/Government Events
+#Slaves escape from Confederate States
+
+#Troops from West Virginia, May 1861
 
 #500s - Cabinet Events
 
