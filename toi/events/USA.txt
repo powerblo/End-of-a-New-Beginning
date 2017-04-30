@@ -1,0 +1,61 @@
+namespace = usa
+
+#100s: After the war
+#Decide leader of Autonomous Republic of America
+country_event = {
+  name = usa.100
+  title = usa.100.t
+  desc = usa.100.d
+
+  fire_only_once = yes
+
+  trigger = {
+    AND = {
+      country_exists = ARA
+      ARA = {is_puppet_of = USA}
+      tag = USA
+    }
+  }
+
+  #A War General
+  option = {
+    name = usa.100.a
+    ARA = {create_leader = { name = "William Sherman" desc = "" picture = "Portrait_USA_William_Sherman.dds" expire = "" ideology = liberal_conservatism traits = {}}}
+    hidden = {
+      ARA = {set_country_flag = military_leader}
+    }
+  }
+  #An avid Centralist
+  option = {
+    name = usa.100.b
+    ARA = {create_leader = { name = "" desc = "" picture = "" expire = "" ideology = traits = {}}}
+    hidden = {
+      ARA = {set_country_flag = centralist_leader}
+    }
+  }
+  #A symptathist for slavery
+  option = {
+    name = usa.100.c
+    ARA = {create_leader = { name = "" desc = "" picture = "" expire = "" ideology = traits = {}}}
+    hidden = {
+      ARA = {set_country_flag = sympathist_leader}
+    }
+  }
+}
+
+#The fate of Confederate leaders
+country_event = {
+  name = usa.101
+  title = usa.101.t
+  desc = usa.101.d
+
+  is_triggered_only = yes
+
+  #Imprison all
+  option = {
+    name = usa.101
+    hidden = {
+      set_country_flag = imprisoned_leaders
+    }
+  }
+}

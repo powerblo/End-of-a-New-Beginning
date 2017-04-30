@@ -10,7 +10,20 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
+  AND = {
     364 = {is_owned_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  hidden_effect = {
+    country_event = {
+      id = usacivilwar.200
+      days = 10
+    }
   }
 
   #Short term artillery increase
@@ -40,9 +53,141 @@ country_event = {
 
 }
 
-#200s - Scripted Decisions
-#
+#First Battle of Bull Run
+country_event = {
+  id = usacivilwar.101
+  title = usacivilwar.101.t
+  desc = usacivilwar.101.d
+  fire_only_once = yes
 
+  trigger = {
+  AND = {
+    362 = {is_owned_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  option = {
+    name = usacivilwar.101.a
+  }
+
+  option = {
+    name = usacivilwar.101.b
+  }
+
+  option = {
+    name = usacivilwar.101.c
+  }
+
+}
+#Battle of Fort Donelson : Cumberland River
+country_event = {
+  id = usacivilwar.102
+  title = usacivilwar.102.t
+  desc = usacivilwar.102.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    369 = {is_owned_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    has_country_flag = {kentucky_secedes}
+    }
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.102.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.102.b
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.102.c
+  }
+
+}
+#Capture of New Orleans
+country_event = {
+  id = usacivilwar.103
+  title = usacivilwar.103.t
+  desc = usacivilwar.103.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    371 = {is_owned_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  option = {
+    name = usacivilwar.103.a
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.103.b
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.103.c
+  }
+
+}
+#200s - Scripted Decisions
+#War Decisions
+country_event = {
+  id = usacivilwar.200
+  title = usacivilwar.200.t
+  desc = usacivilwar.200.d
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+    days = 1
+  }
+
+  option = {
+    name = usacivilwar.a
+    add_timed_idea = { idea = to_the_border days = 365}
+  }
+
+  option = {
+    name = usacivilwar.b
+    add_timed_idea = { idea = raise_forces days = 365}
+    add_manpwoer = 100000
+  }
+
+  option = {
+    name = usacivilwar.c
+    add_timed_idea = { idea = doctrinal_planning days = 365}
+  }
+}
 
 #300s - Secedings
 #Seceding of Virginia -
@@ -186,12 +331,159 @@ country_event = {
 
 }
 
+country_event = {
+  id = usacivilwar.304
+  title = usacivilwar.304.t
+  desc = usacivilwar.304.d
+  fire_only_once = yes
+
+  trigger = {
+    AND = {has_idea = banned_slaves
+          tag = USA}
+  }
+
+  mean_time_to_happen = {
+    days = 50
+    modifier = {
+      factor = 1.2
+      has_idea = gettysburg
+    }
+  }
+
+  option = {
+    name = usacivilwar.304.a
+  }
+
+  option = {
+    name = usacivilwar.304.b
+  }
+
+  immediate = {
+    CSA = {set_state_owner = 369}
+    CSA = {set_state_controller = 369}
+    set_country_flag = {kentucky_secedes}
+  }
+
+}
+
 #400s - Diplomatic/Government Events
 
 #500s - Cabinet Events
 
 #600s - Peace treaties, results
+#USA wins war
+  country_event = {
+    name = usacivilwar.600
+    title = usacivilwar.600.t
+    desc = usacivilwar.600.d
 
-#700s - After the War
+    fire_only_once = yes
+
+    trigger = {
+      CSA = {has_capitulated = yes}
+    }
+
+    mean_time_to_happen = {
+      hours = 1
+    }
+
+    #Annex
+    option = {
+      name = usacivilwar.600.a
+      annex_country = {target = CSA}
+      hidden = {
+        white_peace = CSA
+        clr_country_flag = {mexico_joins_war}
+      }
+      if = {
+        limit = {
+          has_country_flag = {mexico_joins_war}
+        }
+
+        MEX = {set_country_flag = usa_betrays}
+      }
+    }
+
+    #Satellite Government
+    option = {
+      name = usacivilwar.b
+      ARA = {annex_country = {target = CSA}}
+      hidden = {
+        puppet = ARA
+        white_peace = CSA
+        clr_country_flag = {mexico_joins_war}
+      }
+      if = {
+        limit = {
+          has_country_flag = {mexico_joins_war}
+        }
+
+        MEX = {set_country_flag = usa_betrays}
+      }
+    }
+
+    #Split into smaller states
+    option = {
+      name = usacivilwar.c
+      NMX = { set_state_owner = 376}
+      NMX = { set_state_owner = 377}
+      TEX = { set_state_owner = 375}
+      LOU = { set_state_owner = 371}
+      LOU = { set_state_owner = 372}
+      LOU = { set_state_owner = 370}
+      LOU = { set_state_owner = 373}
+      FLO = { set_state_owner = 366}
+      FLO = { set_state_owner = 367}
+      FLO = { set_state_owner = 365}
+      FLO = { set_state_owner = 363}
+      FLO = { set_state_owner = 364}
+      FLO = { set_state_owner = 362}
+      FLO = { set_state_owner = 369}
+      FLO = { set_state_owner = 746}
+      if = {
+        limit = {
+          has_country_flag = {mexico_joins_war}
+        }
+
+        MEX = {set_country_flag = usa_betrays}
+      }
+      hidden = {
+        white_peace = CSA
+        puppet = NMX
+        puppet = TEX
+        puppet = LOU
+        puppet = FLO
+        clr_country_flag = {mexico_joins_war}
+      }
+    }
+
+    #Split between Mexico
+    option = {
+      name = usacivilwar.e
+      trigger = {
+        has_country_flag = {mexico_joins_war}
+      }
+      MEX = { set_state_owner = 376}
+      MEX = { set_state_owner = 377}
+      USA = { set_state_owner = 375}
+      USA = { set_state_owner = 371}
+      USA = { set_state_owner = 372}
+      USA = { set_state_owner = 370}
+      USA = { set_state_owner = 373}
+      USA = { set_state_owner = 366}
+      USA = { set_state_owner = 367}
+      USA = { set_state_owner = 365}
+      USA = { set_state_owner = 363}
+      USA = { set_state_owner = 364}
+      USA = { set_state_owner = 362}
+      USA = { set_state_owner = 369}
+      USA = { set_state_owner = 746}
+      hidden = {
+        white_peace = CSA
+        clr_country_flag = {mexico_joins_war}
+      }
+    }
+
+  }
 
 #800s - International Intervention

@@ -98,6 +98,52 @@ ideas = {
 	# Special ones that can be applied on other countries through focus system.
 	country = {
 
+		#Event causes decide between To the Border(Rush to border), Raise Forces(Quicker recruitment/higher manpower), Doctrinal Planning(Increased planning/defense)
+		to_the_border = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.4
+				org_loss_when_moving = -0.3
+			}
+		}
+
+		raise_forces = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.7
+				army_morale_factor = -0.2
+				army_attack_factor = -0.05
+				max_planning = -0.2
+				planning_speed = -0.3
+			}
+		}
+
+		doctrinal_planning = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_planing = 0.5
+				planning_speed = 0.3
+				army_defense_factor = 0.3
+				dig_in_speed_factor = 0.3
+				max_dig_in = 10
+			}
+		}
+
 		siege_tactics = {
 
 			allowed = {

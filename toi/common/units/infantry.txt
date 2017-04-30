@@ -40,7 +40,8 @@ sub_units = {
 		supply_consumption = 0.07
 
 		need = {
-			infantry_equipment = 100
+			rifle_equipment = 100
+			uniform_equipment = 100
 		}
 	}
 
@@ -80,7 +81,8 @@ sub_units = {
 		supply_consumption = 0.07
 
 		need = {
-			infantry_equipment = 100
+			rifle_equipment = 100
+			uniform_equipment = 100
 		}
 	}
 	
@@ -121,7 +123,7 @@ sub_units = {
 		suppression = 2
 		
 		essential = {
-			infantry_equipment
+			rifle_equipment
 			cavalry_equipment
 		}
 
@@ -129,8 +131,9 @@ sub_units = {
 		transport = cavalry_equipment
 
 		need = {
-			infantry_equipment = 100
+			rifle_equipment = 100
 			cavalry_equipment = 100
+			uniform_equipment = 100
 		}
 
 		forest = {
@@ -164,7 +167,7 @@ sub_units = {
 		map_icon_category = infantry
 
 		priority = 600
-		active = yes
+		active = no
 
 		type = {
 			infantry
@@ -196,7 +199,8 @@ sub_units = {
 		supply_consumption = 0.07
 
 		need = {
-			infantry_equipment = 100
+			rifle_equipment = 100
+			uniform_equipment = 100
 		}
 	}
 
@@ -238,7 +242,8 @@ sub_units = {
 		breakthrough = 0.3
 
 		need = {
-			infantry_equipment = 150
+			rifle_equipment = 150
+			uniform_equipment = 100
 		}
 
 		marsh = {
@@ -291,7 +296,8 @@ sub_units = {
 		breakthrough = 0.3
 
 		need = {
-			infantry_equipment = 140
+			rifle_equipment = 140
+			uniform_equipment = 100
 		}
 
 		hills = {
@@ -344,7 +350,8 @@ sub_units = {
 		can_be_parachuted = yes
 
 		need = {
-			infantry_equipment = 130
+			rifle_equipment = 130
+			uniform_equipment = 100
 		}
 	}
 
@@ -385,8 +392,9 @@ sub_units = {
 		transport = motorized_equipment
 
 		need = {
-			infantry_equipment = 100
+			rifle_equipment = 100
 			motorized_equipment = 50
+			uniform_equipment = 100
 		}
 
 		forest = {
@@ -456,7 +464,7 @@ sub_units = {
 
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
-			infantry_equipment
+			rifle_equipment
 			mechanized_equipment
 		}
 
@@ -465,7 +473,8 @@ sub_units = {
 
 		need = {
 			mechanized_equipment = 50
-			infantry_equipment = 100
+			rifle_equipment = 100
+			uniform_equipment = 100
 		}
 
 		forest = {
