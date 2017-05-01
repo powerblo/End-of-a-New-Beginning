@@ -3,7 +3,7 @@ namespace = usa
 #100s: After the war
 #Decide leader of Autonomous Republic of America
 country_event = {
-  name = usa.100
+  id = usa.100
   title = usa.100.t
   desc = usa.100.d
 
@@ -41,11 +41,25 @@ country_event = {
       ARA = {set_country_flag = sympathist_leader}
     }
   }
+
+  #Confederate Leader
+  option = {
+    name = usa.100.e
+    trigger = {
+      NOT = {
+        has_country_flag = {executed_leaders}
+      }
+    }
+    ARA = {create_leader = { name = "Robert E. Lee" desc = "" picture = "Portrait_CSA_Robert_Lee" expire = "1870.10.12" ideology = totalitarian_nationalism traits = {}}}
+    hidden = {
+      set_country_flag = confederate_leader
+    }
+  }
 }
 
 #The fate of Confederate leaders
 country_event = {
-  name = usa.101
+  id = usa.101
   title = usa.101.t
   desc = usa.101.d
 
@@ -53,9 +67,25 @@ country_event = {
 
   #Imprison all
   option = {
-    name = usa.101
+    name = usa.101.a
     hidden = {
       set_country_flag = imprisoned_leaders
+    }
+  }
+
+  option = {
+    name = usa.101.b
+    add_national_unity = -0.03
+    hidden = {
+      set_country_flag = executed_leaders
+    }
+  }
+
+  option = {
+    name = usa.101.c
+    add_national_unity = -0.1
+    hidden = {
+      set_country_flag = unstable_government
     }
   }
 }

@@ -10,12 +10,11 @@ set_technology = {
 	early_bomber = 1
 	CAS1 = 1
 }
-set_country_flag = monroe_doctrine
 
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
@@ -26,7 +25,7 @@ set_country_flag = monroe_doctrine
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
-	
+
 	oob = "MEX_1939"
 	set_technology = {
 		interwar_artillery = 1
@@ -70,23 +69,23 @@ set_convoys = 45
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 5
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-		
+
 		marxism_leninism = {
 			popularity = 1
 		}
-		
-		despotic_autocracy = { 
+
+		despotic_autocracy = {
 			popularity = 94
 		}
 	}
-	
+
 	ruling_party = despotic_autocracy
 	last_election = "1934.7.1"
 	election_frequency = 72
@@ -96,10 +95,10 @@ set_politics = {
 set_national_unity = 0.8
 
 create_country_leader = {
-	name = "Lázaro Cárdenas"
+	name = "Maximilian I"
 	desc = "POLITICS_LAZARO_CARDENAS_DESC"
-	picture = "Portrait_Mexico_Lazaro_Cardenas.dds"
-	expire = "1965.1.1"
+	picture = "Maximilian_I.dds"
+	expire = "1861.11.1"
 	ideology = despotism
 	traits = {
 		#
@@ -143,23 +142,23 @@ create_country_leader = {
 	set_politics = {
 
 		parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 1
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-		
+
 		marxism_leninism = {
 			popularity = 1
 		}
-		
-		despotic_autocracy = { 
+
+		despotic_autocracy = {
 			popularity = 98
 		}
 	}
-	
+
 	ruling_party = despotic_autocracy
 		last_election = "1934.7.1"
 		election_frequency = 72

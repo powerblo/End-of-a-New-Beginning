@@ -6,7 +6,7 @@ oob = "BRA_1936"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	gw_artillery = 1
 	gwtank = 1
@@ -23,7 +23,7 @@ set_country_flag = monroe_doctrine
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
@@ -34,7 +34,7 @@ set_country_flag = monroe_doctrine
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
-	
+
 	oob = "BRA_1939"
 	set_technology = {
 		interwar_artillery = 1
@@ -78,23 +78,23 @@ set_country_flag = monroe_doctrine
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 0
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-		
+
 		marxism_leninism = {
 			popularity = 0
 		}
-		
-		despotic_autocracy = { 
+
+		despotic_autocracy = {
 			popularity = 100
 		}
 	}
-	
+
 	ruling_party = despotic_autocracy
 	last_election = "1934.7.17"
 	election_frequency = 48
@@ -102,9 +102,9 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Getúlio Vargas"
+	name = "Pedro II"
 	desc = "POLITICS_GETULIO_VARGAS_DESC"
-	picture = "Portrait_Brazil_Getulio_Vargas.dds"
+	picture = "Pedro_II_1865.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
@@ -151,23 +151,23 @@ set_convoys = 40
 	set_politics = {
 
 		parties = {
-		liberal_conservatism = { 
+		liberal_conservatism = {
 			popularity = 0
 		}
 
 		totalitarian_nationalism = {
 			popularity = 0
 		}
-		
+
 		marxism_leninism = {
 			popularity = 0
 		}
-		
-		despotic_autocracy = { 
+
+		despotic_autocracy = {
 			popularity = 100
 		}
 	}
-	
+
 	ruling_party = despotic_autocracy
 		last_election = "1934.7.17"
 		election_frequency = 48
