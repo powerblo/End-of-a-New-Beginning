@@ -1,29 +1,41 @@
-namespace = confederate
+add_namespace = confederate
 
+#400s: Diplomatic Events
 #King Cotton
 country_event = {
-  id = confederate.1
-  title = confederate.1.t
-  desc = confederate.1.d
+  id = confederate.400
+  title = confederate.400.t
+  desc = confederate.400.d
 
   #Focus, King Cotton
   is_triggered_only = Yes
   fire_only_once = Yes
 
   immediate = {
-    add_resource = {type = cotton amount = 10 }
+    #add_resource = {type = cotton amount = 20 }
   }
 
   option = {
     #Cut English Cotton Trade
-    name = confederate.1.a
+    name = confederate.400.a
     add_opinion_modifier = {target = ENG modifier = king_cotton}
   }
 
   option = {
     #Increase exports
-    name = confederate.1.b
+    name = confederate.400.b
     ENG = {create_import = {resource = cotton amount = 16 exporter = ACC}}
   }
 
 }
+
+
+country_event = {
+
+}
+
+#500s: Government/Cabinet Events
+
+#600s: After the war
+
+#700s: Not the war

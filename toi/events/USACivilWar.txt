@@ -1,4 +1,4 @@
-namespace = usacivilwar
+add_namespace = usacivilwar
 
 #100s - Battles
 #Battle of Fort Sumter
@@ -370,122 +370,40 @@ country_event = {
 
 #Troops from West Virginia, May 1861
 
-#500s - Cabinet Events
+##Event chain - "Fate of Lincoln"
+#Exchange of prisoners of war
+country_event = {
+  id = usacivilwar.402
+  title = usacivilwar.402.t
+  desc = usacivilwar.402.d
+  hidden = yes
+  fire_only_once = yes
 
-#600s - Peace treaties, results
-#USA wins war
-  country_event = {
-    name = usacivilwar.600
-    title = usacivilwar.600.t
-    desc = usacivilwar.600.d
-
-    fire_only_once = yes
-
-    trigger = {
-      CSA = {has_capitulated = yes}
-    }
-
-    mean_time_to_happen = {
-      hours = 1
-    }
-
-    #Annex
-    option = {
-      name = usacivilwar.600.a
-      annex_country = {target = CSA}
-      hidden = {
-        white_peace = CSA
-        clr_country_flag = {mexico_joins_war}
-      }
-      if = {
-        limit = {
-          has_country_flag = {mexico_joins_war}
-        }
-
-        MEX = {set_country_flag = usa_betrays}
-      }
-    }
-
-    #Satellite Government
-    option = {
-      name = usacivilwar.b
-      ARA = {annex_country = {target = CSA}}
-      hidden = {
-        puppet = ARA
-        white_peace = CSA
-        clr_country_flag = {mexico_joins_war}
-      }
-      if = {
-        limit = {
-          has_country_flag = {mexico_joins_war}
-        }
-
-        MEX = {set_country_flag = usa_betrays}
-      }
-    }
-
-    #Split into smaller states
-    option = {
-      name = usacivilwar.c
-      NMX = { set_state_owner = 376}
-      NMX = { set_state_owner = 377}
-      TEX = { set_state_owner = 375}
-      LOU = { set_state_owner = 371}
-      LOU = { set_state_owner = 372}
-      LOU = { set_state_owner = 370}
-      LOU = { set_state_owner = 373}
-      FLO = { set_state_owner = 366}
-      FLO = { set_state_owner = 367}
-      FLO = { set_state_owner = 365}
-      FLO = { set_state_owner = 363}
-      FLO = { set_state_owner = 364}
-      FLO = { set_state_owner = 362}
-      FLO = { set_state_owner = 369}
-      FLO = { set_state_owner = 746}
-      if = {
-        limit = {
-          has_country_flag = {mexico_joins_war}
-        }
-
-        MEX = {set_country_flag = usa_betrays}
-      }
-      hidden = {
-        white_peace = CSA
-        puppet = NMX
-        puppet = TEX
-        puppet = LOU
-        puppet = FLO
-        clr_country_flag = {mexico_joins_war}
-      }
-    }
-
-    #Split between Mexico
-    option = {
-      name = usacivilwar.e
-      trigger = {
-        has_country_flag = {mexico_joins_war}
-      }
-      MEX = { set_state_owner = 376}
-      MEX = { set_state_owner = 377}
-      USA = { set_state_owner = 375}
-      USA = { set_state_owner = 371}
-      USA = { set_state_owner = 372}
-      USA = { set_state_owner = 370}
-      USA = { set_state_owner = 373}
-      USA = { set_state_owner = 366}
-      USA = { set_state_owner = 367}
-      USA = { set_state_owner = 365}
-      USA = { set_state_owner = 363}
-      USA = { set_state_owner = 364}
-      USA = { set_state_owner = 362}
-      USA = { set_state_owner = 369}
-      USA = { set_state_owner = 746}
-      hidden = {
-        white_peace = CSA
-        clr_country_flag = {mexico_joins_war}
-      }
-    }
-
+  trigger = {
+    CSA = {surrender_progress > 0.7}
   }
 
-#800s - International Intervention
+  immediate = {
+    USA = {country_event = {hours = 1 id = usa.400}}
+  }
+}
+
+#500s: News events
+#Prisoner Exchange
+news_event = {
+  id = usacivilwar.500
+  title = usacivilwar.500.t
+  desc = {text = usacivilwar.500.dcsa trigger = {TAG = CSA}}
+  desc = {text = usacivilwar.500.dusa trigger = {TAG = USA}}
+
+  trigger = {
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+  }
+
+  option = {
+    name = usacivilwar.500.a
+  }
+}

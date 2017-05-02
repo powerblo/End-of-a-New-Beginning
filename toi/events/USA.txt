@@ -1,11 +1,159 @@
-namespace = usa
+add_namespace = usa
 
-#100s: After the war
+#400s: Diplomatic Events
+#Request to exchange war prisoners with CSA
+country_event = {
+  id = usa.400
+  title = usa.400.t
+  desc = usa.400.d
+  is_triggered_only = yes
+
+  #Agree
+  option = {
+    name = usa.400.a
+    add_manpower = 2000
+    hidden = {
+      random = {20 = CSA = {add_manpower = 2000} 50 = CSA = {add_manpower = 3000} 30 = CSA = {add_manpower = 5000}}
+    }
+    news_event = usacivilwar.500
+  }
+
+  #Disagree
+  option = {
+    name = usa.400.b
+    add_national_unity = -0.05
+    hidden = {
+      #CSA = {country_event = }
+    }
+  }
+}
+
+#500s: Government/Cabinet Events
+
+
+#600s: After the war
+#Peace Treaty
+country_event = {
+  id = usa.600
+  title = usa.601.t
+  desc = usa.601.d
+
+  fire_only_once = yes
+
+  trigger = {
+    AND = {
+      CSA = {capitulated = yes}
+      TAG = USA
+    }
+  }
+
+  mean_time_to_happen = {
+    hours = 1
+  }
+
+  #Annex
+  option = {
+    name = usacivilwar.600.a
+    annex_country = {target = CSA}
+    hidden = {
+      white_peace = CSA
+      clr_country_flag = {mexico_joins_war}
+    }
+    if = {
+      limit = {
+        has_country_flag = {mexico_joins_war}
+      }
+
+      MEX = {set_country_flag = usa_betrays}
+    }
+  }
+
+  #Satellite Government
+  option = {
+    name = usacivilwar.b
+    ARA = {annex_country = {target = CSA}}
+    hidden = {
+      puppet = ARA
+      white_peace = CSA
+      clr_country_flag = {mexico_joins_war}
+    }
+    if = {
+      limit = {
+        has_country_flag = {mexico_joins_war}
+      }
+
+      MEX = {set_country_flag = usa_betrays}
+    }
+  }
+
+  #Split into smaller states
+  option = {
+    name = usacivilwar.c
+    NMX = { set_state_owner = 376}
+    NMX = { set_state_owner = 377}
+    TEX = { set_state_owner = 375}
+    LOU = { set_state_owner = 371}
+    LOU = { set_state_owner = 372}
+    LOU = { set_state_owner = 370}
+    LOU = { set_state_owner = 373}
+    FLO = { set_state_owner = 366}
+    FLO = { set_state_owner = 367}
+    FLO = { set_state_owner = 365}
+    FLO = { set_state_owner = 363}
+    FLO = { set_state_owner = 364}
+    FLO = { set_state_owner = 362}
+    FLO = { set_state_owner = 369}
+    FLO = { set_state_owner = 746}
+    if = {
+      limit = {
+        has_country_flag = {mexico_joins_war}
+      }
+
+      MEX = {set_country_flag = usa_betrays}
+    }
+    hidden = {
+      white_peace = CSA
+      puppet = NMX
+      puppet = TEX
+      puppet = LOU
+      puppet = FLO
+      clr_country_flag = {mexico_joins_war}
+    }
+  }
+
+  #Split between Mexico
+  option = {
+    name = usacivilwar.e
+    trigger = {
+      has_country_flag = {mexico_joins_war}
+    }
+    MEX = { set_state_owner = 376}
+    MEX = { set_state_owner = 377}
+    USA = { set_state_owner = 375}
+    USA = { set_state_owner = 371}
+    USA = { set_state_owner = 372}
+    USA = { set_state_owner = 370}
+    USA = { set_state_owner = 373}
+    USA = { set_state_owner = 366}
+    USA = { set_state_owner = 367}
+    USA = { set_state_owner = 365}
+    USA = { set_state_owner = 363}
+    USA = { set_state_owner = 364}
+    USA = { set_state_owner = 362}
+    USA = { set_state_owner = 369}
+    USA = { set_state_owner = 746}
+    hidden = {
+      white_peace = CSA
+      clr_country_flag = {mexico_joins_war}
+    }
+  }
+}
+
 #Decide leader of Autonomous Republic of America
 country_event = {
-  id = usa.100
-  title = usa.100.t
-  desc = usa.100.d
+  id = usa.601
+  title = usa.601.t
+  desc = usa.601.d
 
   fire_only_once = yes
 
@@ -19,7 +167,7 @@ country_event = {
 
   #A War General
   option = {
-    name = usa.100.a
+    name = usa.601.a
     ARA = {create_leader = { name = "William Sherman" desc = "" picture = "Portrait_USA_William_Sherman.dds" expire = "" ideology = liberal_conservatism traits = {}}}
     hidden = {
       ARA = {set_country_flag = military_leader}
@@ -27,7 +175,7 @@ country_event = {
   }
   #An avid Centralist
   option = {
-    name = usa.100.b
+    name = usa.601.b
     ARA = {create_leader = { name = "" desc = "" picture = "" expire = "" ideology = traits = {}}}
     hidden = {
       ARA = {set_country_flag = centralist_leader}
@@ -35,7 +183,7 @@ country_event = {
   }
   #A symptathist for slavery
   option = {
-    name = usa.100.c
+    name = usa.601.c
     ARA = {create_leader = { name = "" desc = "" picture = "" expire = "" ideology = traits = {}}}
     hidden = {
       ARA = {set_country_flag = sympathist_leader}
@@ -44,7 +192,7 @@ country_event = {
 
   #Confederate Leader
   option = {
-    name = usa.100.e
+    name = usa.601.e
     trigger = {
       NOT = {
         has_country_flag = {executed_leaders}
@@ -59,22 +207,22 @@ country_event = {
 
 #The fate of Confederate leaders
 country_event = {
-  id = usa.101
-  title = usa.101.t
-  desc = usa.101.d
+  id = usa.602
+  title = usa.602.t
+  desc = usa.602.d
 
   is_triggered_only = yes
 
   #Imprison all
   option = {
-    name = usa.101.a
+    name = usa.602.a
     hidden = {
       set_country_flag = imprisoned_leaders
     }
   }
 
   option = {
-    name = usa.101.b
+    name = usa.602.b
     add_national_unity = -0.03
     hidden = {
       set_country_flag = executed_leaders
@@ -82,10 +230,12 @@ country_event = {
   }
 
   option = {
-    name = usa.101.c
+    name = usa.602.c
     add_national_unity = -0.1
     hidden = {
       set_country_flag = unstable_government
     }
   }
 }
+
+#700s: Not the war
