@@ -1,50 +1,222 @@
 add_namespace = usa
 
-#400s: Diplomatic Events
-#Request to exchange war prisoners with CSA
+#300s: Midwar Events
+#Robert Lee Resigns
 country_event = {
-  id = usa.400
-  title = usa.400.t
-  desc = usa.400.d
-  is_triggered_only = yes
+	id = usa.300
+	title = usa.300.t
+	desc = usa.300.d
 
-  #Agree
-  option = {
-    name = usa.400.a
-    add_manpower = 2000
-    hidden = {
-      random = {20 = CSA = {add_manpower = 2000} 50 = CSA = {add_manpower = 3000} 30 = CSA = {add_manpower = 5000}}
-    }
-    news_event = usacivilwar.500
-  }
+	is_triggered_only = no
+	fire_only_once = yes
 
-  #Disagree
-  option = {
-    name = usa.400.b
-    add_national_unity = -0.05
-    hidden = {
-      #CSA = {country_event = }
-    }
-  }
+	trigger = {
+		has_idea = {nation_divided}
+		tag = USA
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	#Imprison him
+	option = {
+		name = usa.300.a
+		remove_unit_leader = #
+		set_country_flag = robert_lee_imprisoned
+	}
+
+	#Let him go
+	option = {
+		name = usa.300.b
+		remove_unit_leader = #
+		CSA = {create_corps_commander = {name = "Robert Lee" gfx = "Portrait_CSA_Robert_Lee.dds" traits = {} skill = 3}}
+	}
+
 }
 
-#500s: Government/Cabinet Events
+#Taking measures
+country_event = {
+	id = usa.301
+	title = usa.301.t
+	desc = usa.301.d
 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	#Threat states to return, otherwise will be forced to ban slavery
+	option = {
+		name = usa.301.a
+		country_event = {days = 60 id = usa.3011}
+	}
+
+	#Ask for cooperation from other border states
+	option = {
+		name = usa.301.b
+		add_manpower = 30000
+		add_political_power = 50
+	}
+
+}
+
+#Dummy Event, cause national flag to appear
+country_event = {
+	id = usa.3011
+	title = usa.3011
+	hidden = yes
+	immediate = {
+		CSA = {set_country_flag = threat_for_slavery}
+	}
+}
+
+#Emancipation Proclamation
+country_event = {
+	id = usa.302
+	title = usa.302.t
+	desc = usa.302.d
+
+	fire_only_once = yes
+
+	trigger = {
+		CSA = {has_country_flag = threat_for_slavery}
+		OR = {
+			CSA = {has_country_flag = virginia_secedes}
+			CSA = {has_country_flag = north_carolina_secedes}
+			CSA = {has_country_flag = kentucky_secedes}
+			CSA = {has_country_flag = tennesse_secedes}
+			CSA = {has_country_flag = arkansas_secedes}
+		}
+		tag = USA
+	}
+
+	#Emancipation Proclamation
+	option = {
+		name = usa.302.a
+		CSA = {set_country_flag = emancipation_proclamation}
+	}
+
+}
+
+#Gettysburg Address
+country_event = {
+	id = usa.303
+	title = usa.303.t
+	desc = usa.303.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	#Of the people,
+	option = {
+		name = usa.303.a
+	}
+
+	option = {
+		name = usa.303.b
+	}
+
+}
+
+#Slaves escape from Confederate States
+country_event = {
+	id = usa.304
+	title = usa.304.t
+	desc = usa.304.d
+
+	is_triggered_only = no
+	fire_only_once = no
+
+	trigger = {
+		tag = USA
+		CSA = {has_country_flag = emancipation_proclamation}
+		OR = {
+			CSA = {has_national_unity < 0.6}
+			CSA = {surrender_progress > 0.8}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	immediate = {
+		add_manopwer = 8000
+		CSA = {add_national_unity = -0.02}
+	}
+
+	#The land for the people
+	option = {
+		name = usa.304.a
+	}
+
+}
+
+#Trade request for Prisoners of war
+country_event = {
+	id = usa.305
+	title = usa.305.t
+	desc = usa.305.d
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		CSA = {surrender_progress > 0.7}
+	}
+
+	#Agree
+	option = {
+		name = usa.305.a
+		USA = {add_manpower = 40000}
+		CSA = {add_manpower = 100000}
+	}
+
+	#Disagree
+	option = {
+		name = usa.305.b
+		hidden = {
+			CSA = {set_country_flag = prisoners_denied}
+		}
+	}
+
+}
+
+#400s: Political Events
+#Lincoln Assasinated
+
+#Lincoln Captured
+
+#Assasination Failed
+
+#Planning for Assasinating Davis
+
+#Geroge B. McClellan Elected as Democrat
+
+#1864 Election
+
+#Thirteenth Amendment
+
+
+
+#500s: Diplomatic Events
+#America Requests Mexican help
+
+#Treaty of Hampton Roads: Can succeed or fail, historically fails
+
+#Lincoln tour of Confederate White House
 
 #600s: After the war
 #Peace Treaty
 country_event = {
-  id = usa.600
-  title = usa.601.t
-  desc = usa.601.d
+  name = usa.600
+  title = usa.600.t
+  desc = usa.600.d
 
   fire_only_once = yes
 
   trigger = {
-    AND = {
-      CSA = {capitulated = yes}
-      TAG = USA
-    }
+    CSA = {has_capitulated = yes}
   }
 
   mean_time_to_happen = {
@@ -53,7 +225,7 @@ country_event = {
 
   #Annex
   option = {
-    name = usacivilwar.600.a
+    name = usa.600.a
     annex_country = {target = CSA}
     hidden = {
       white_peace = CSA
@@ -70,7 +242,7 @@ country_event = {
 
   #Satellite Government
   option = {
-    name = usacivilwar.b
+    name = usa.600.b
     ARA = {annex_country = {target = CSA}}
     hidden = {
       puppet = ARA
@@ -88,7 +260,7 @@ country_event = {
 
   #Split into smaller states
   option = {
-    name = usacivilwar.c
+    name = usa.600.c
     NMX = { set_state_owner = 376}
     NMX = { set_state_owner = 377}
     TEX = { set_state_owner = 375}
@@ -123,7 +295,7 @@ country_event = {
 
   #Split between Mexico
   option = {
-    name = usacivilwar.e
+    name = usa.600.e
     trigger = {
       has_country_flag = {mexico_joins_war}
     }
@@ -147,8 +319,8 @@ country_event = {
       clr_country_flag = {mexico_joins_war}
     }
   }
-}
 
+}
 #Decide leader of Autonomous Republic of America
 country_event = {
   id = usa.601
@@ -158,11 +330,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    AND = {
-      country_exists = ARA
-      ARA = {is_puppet_of = USA}
-      tag = USA
-    }
+    country_exists = ARA
+    ARA = {is_puppet_of = USA}
+    tag = USA
   }
 
   #A War General
@@ -238,4 +408,4 @@ country_event = {
   }
 }
 
-#700s: Not the war
+#700s: Reconstruction

@@ -1,41 +1,207 @@
-add_namespace = confederate
+add_namespace = csa
 
-#400s: Diplomatic Events
+#300s: Midwar Events
+#Change of capital
+country_event = {
+  id = csa.300
+  title = csa.300.t
+  desc = csa.300.d
+  fire_only_once = yes
+
+  trigger = {
+    TAG = CSA
+  }
+
+  mean_time_to_happen = {
+    days = 300
+  }
+
+  #Encourage the border states
+  option = {
+    name = csa.300.a
+    set_capital = 362
+    trigger = {
+      362 = {is_controlled_by = CSA}
+      362 = {is_owned_by = CSA}
+    }
+    hidden = {
+      set_country_flag = richmond_capital
+    }
+  }
+
+  #Defend in far lines
+  option = {
+    name = csa.300.b
+    set_capital = 375
+    trigger = {
+      375 = {is_controlled_by = CSA}
+      375 = {is_owned_by = CSA}
+    }
+    hidden = {
+      set_country_flag = dallas_capital
+    }
+  }
+
+  #Remain in home
+  option = {
+    name = csa.300.c
+  }
+}
+
+#Conscription Extensions
+
+#Speeches of Davis
+
+#Death of Stonewall Jackson
+country_event = {
+	id =
+	title =
+	desc =
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name =
+	}
+
+	option = {
+		name =
+	}
+
+}
+
+#Voting for Split of Virginia
+country_event = {
+	id = csa.304
+	title = csa.304.t
+	desc = csa.304.d
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+    AND = {
+    OR = {
+      has_national_unity < 50
+      surrender_progress > 0.7
+    }
+    TAG = CSA
+    }
+	}
+
+  #Suppress voting
+	option = {
+		name = csa.304.a
+    if = {
+      limit = {
+        has_national_unity < 70
+      }
+      random_list = { 30 = {country_event = {days = 30 id = csa.3040}} 50 = {country_event = {days = 10 id = csa.3040}} 20 = {country_event = {days = 5 id = csa.3040}}}
+    }
+    if = {
+      limit = {
+        AND = {
+          has_national_unity < 80
+          num_divisions < 50
+        }
+      }
+      random_list = { 40 = {country_event = {days = 30 id = csa.3040}} 30 = {country_event = {days = 10 id = csa.3040}} 20 = {country_event = {days = 5 id = csa.3040}} 10 = {}}
+    }
+	}
+
+  #Hold referrendum
+	option = {
+		name = csa.304.b
+    random_list = { 70 = {country_event = {days = 30 id = csa.3041}} 30 = {}}
+	}
+
+}
+
+#West Virginia Revolts
+country_event = {
+	id = csa.3040
+	title = csa.3040.t
+	desc = csa.3040.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  trigger = {
+    tag = CSA
+  }
+
+  immediate = {
+    CSA = {add_national_unity = -0.02}
+    USA = {transfer_state = 746}
+  }
+
+	option = {
+		name = csa.3040.a
+	}
+
+}
+
+#Virginia Agrees to Split
+country_event = {
+	id = csa.3041
+	title = csa.3041.t
+	desc = csa.3041.d
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+    tag = CSA
+	}
+
+	option = {
+		name = csa.3041.a
+	}
+
+}
+
+#400s: Political Events
+#Planning of Assasination : After disagreements for slave trade
+
+#Davis Assasinated
+
+#Assasination of Lincoln
+
+#500s: Diplomatic Events
+#csa reaches out to foreign nations
+
+(#csa Requests Help)
+
+#600s: After the war
 #King Cotton
 country_event = {
-  id = confederate.400
-  title = confederate.400.t
-  desc = confederate.400.d
+  id = csa.1
+  title = csa.1.t
+  desc = csa.1.d
 
   #Focus, King Cotton
   is_triggered_only = Yes
   fire_only_once = Yes
 
   immediate = {
-    #add_resource = {type = cotton amount = 20 }
+    add_resource = {type = cotton amount = 10 }
   }
 
   option = {
     #Cut English Cotton Trade
-    name = confederate.400.a
+    name = csa.1.a
     add_opinion_modifier = {target = ENG modifier = king_cotton}
   }
 
   option = {
     #Increase exports
-    name = confederate.400.b
+    name = csa.1.b
     ENG = {create_import = {resource = cotton amount = 16 exporter = ACC}}
   }
 
 }
-
-
-country_event = {
-
-}
-
-#500s: Government/Cabinet Events
-
-#600s: After the war
-
-#700s: Not the war

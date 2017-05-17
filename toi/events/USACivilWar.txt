@@ -19,7 +19,7 @@ country_event = {
     }
   }
 
-  hidden_effect = {
+  immediate = {
     country_event = {
       days = 10
       id = usacivilwar.200
@@ -70,6 +70,10 @@ country_event = {
     }
   }
 
+  immediate = {
+    CSA = {add_national_unity = 0.05}
+  }
+
   option = {
     name = usacivilwar.101.a
   }
@@ -84,6 +88,7 @@ country_event = {
 
 }
 #Battle of Fort Donelson : Cumberland River
+#grant recieves nickname unconditional surrender
 country_event = {
   id = usacivilwar.102
   title = usacivilwar.102.t
@@ -97,8 +102,13 @@ country_event = {
       TAG = USA
       TAG = CSA
     }
-    has_country_flag = {kentucky_secedes}
+    368 = {is_controlled_by = CSA}
     }
+  }
+
+  immediate = {
+    USA = {add_national_unity = 0.01}
+    #add_unit_leader_trait =
   }
 
   option = {
@@ -140,6 +150,10 @@ country_event = {
     }
   }
 
+  immediate = {
+    USA = {add_national_unity = 0.04}
+  }
+
   option = {
     name = usacivilwar.103.a
   }
@@ -159,6 +173,311 @@ country_event = {
   }
 
 }
+
+#Battle of Glorieta Pass
+country_event = {
+  id = usacivilwar.104
+  title = usacivilwar.104.t
+  desc = usacivilwar.104.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    376 = {is_controlled_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  immediate = {
+    USA = {add_national_unity = -0.03}
+    CSA = {add_national_unity = 0.03}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.104.b
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.104.c
+  }
+
+}
+
+#Shiloh
+country_event = {
+  id = usacivilwar.105
+  title = usacivilwar.105.t
+  desc = usacivilwar.105.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    368 = {is_controlled_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    date>1862.4.1
+    }
+  }
+
+  immediate = {
+    USA = {add_national_unity = -0.03}
+    CSA = {add_national_unity = 0.03}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.105.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.105.b
+  }
+}
+
+#Chancellorsville
+country_event = {
+  id = usacivilwar.106
+  title = usacivilwar.106.t
+  desc = usacivilwar.106.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    362 = {is_controlled_by = USA}
+    362 = {is_owned_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    date>1863.5.1
+    }
+  }
+
+  immediate = {
+    USA = {add_national_unity = -0.03}
+    CSA = {add_national_unity = 0.03}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.106.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.106.b
+  }
+}
+
+#Confederate march on Pennsylvania
+country_event = {
+  id = usacivilwar.107
+  title = usacivilwar.107.t
+  desc = usacivilwar.107.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    360 = {is_controlled_by = CSA}
+    360 = {is_owned_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  immediate = {
+    set_country_flag = {pennsylvania_taken}
+    USA = {add_national_unity = -0.03}
+    CSA = {add_national_unity = 0.03}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.107.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.107.b
+  }
+}
+
+#Gettysburg
+#Changes tide of war if Confederate was winning
+country_event = {
+  id = usacivilwar.108
+  title = usacivilwar.108.t
+  desc = usacivilwar.108.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    360 = {is_controlled_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+    USA = {has_country_flag = pennsylvania_taken}
+  }
+
+  immediate = {
+    CSA = {add_national_unity = -0.03}
+  }
+
+  immediate = {
+    USA = {country_event = {days = 2 id = usa.303}}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.108.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.108.b
+  }
+}
+
+#Capture of Atlanta
+country_event = {
+  id = usacivilwar.109
+  title = usacivilwar.109.t
+  desc = usacivilwar.109.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    365 = {is_controlled_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  immediate = {
+    CSA = {add_national_unity = -0.03}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.109.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.109.b
+  }
+}
+
+#Capture of Richmond
+country_event = {
+  id = usacivilwar.110
+  title = usacivilwar.110.t
+  desc = usacivilwar.110.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    362 = {is_controlled_by = USA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    CSA = {has_country_flag = richmond_capital}
+    }
+  }
+
+  immediate = {
+    CSA = {add_national_unity = -0.1}
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.110.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.110.b
+  }
+}
+
+
+##Alternate Historical Events
+
+#Siege of Washington
+country_event = {
+  id = usacivilwar.111
+  title = usacivilwar.111.t
+  desc = usacivilwar.111.d
+  fire_only_once = yes
+
+  trigger = {
+  AND = {
+    361 = {is_controlled_by = CSA}
+    OR = {
+      TAG = USA
+      TAG = CSA
+    }
+    }
+  }
+
+  option = {
+    trigger = {
+      TAG = USA
+    }
+    name = usacivilwar.111.a
+  }
+
+  option = {
+    trigger = {
+      TAG = CSA
+    }
+    name = usacivilwar.111.b
+  }
+}
+
 #200s - Scripted Decisions
 #War Decisions
 country_event = {
@@ -168,242 +487,594 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes
 
-  option = {
-    name = usacivilwar.a
-    add_timed_idea = { idea = to_the_border days = 365}
-  }
-
-  option = {
-    name = usacivilwar.b
-    add_timed_idea = { idea = raise_forces days = 365}
-    add_manpwoer = 100000
-  }
-
-  option = {
-    name = usacivilwar.c
-    add_timed_idea = { idea = doctrinal_planning days = 365}
-  }
-}
-
-#300s - Secedings
-#Seceding of Virginia -
-country_event = {
-  id = usacivilwar.300
-  title = usacivilwar.300.t
-  desc = usacivilwar.300.d
-  fire_only_once = yes
-
   trigger = {
-    AND = {has_idea = banned_slaves
-          tag = USA}
-  }
-
-  mean_time_to_happen = {
-    days = 30
-    modifier = {
-      factor = 1.2
-      has_idea = gettysburg
-    }
-  }
-
-  option = {
-    name = usacivilwar.300.a
-  }
-
-  option = {
-    name = usacivilwar.300.b
-  }
-
-  immediate = {
-    CSA = {set_state_owner = 362}
-    CSA = {set_state_controller = 362}
-    CSA = {set_state_owner = 746}
-    CSA = {set_state_controller = 746}
-  }
-
-}
-
-#Arkansas
-country_event = {
-  id = usacivilwar.301
-  title = usacivilwar.301.t
-  desc = usacivilwar.301.d
-  fire_only_once = yes
-
-  trigger = {
-    AND = {has_idea = banned_slaves
-          tag = USA}
-  }
-
-  mean_time_to_happen = {
-    days = 30
-    modifier = {
-      factor = 1.2
-      has_idea = gettysburg
-    }
-  }
-
-  option = {
-    name = usacivilwar.301.a
-  }
-
-  option = {
-    name = usacivilwar.301.b
-  }
-
-  immediate = {
-    CSA = {set_state_owner = 372}
-    CSA = {set_state_controller = 372}
-  }
-
-}
-
-
-country_event = {
-  id = usacivilwar.302
-  title = usacivilwar.302.t
-  desc = usacivilwar.302.d
-  fire_only_once = yes
-
-  trigger = {
-    AND = {has_idea = banned_slaves
-          tag = USA}
-  }
-
-  mean_time_to_happen = {
-    days = 40
-    modifier = {
-      factor = 1.2
-      has_idea = gettysburg
-    }
-  }
-
-  option = {
-    name = usacivilwar.302.a
-  }
-
-  option = {
-    name = usacivilwar.302.b
-  }
-
-  immediate = {
-    CSA = {set_state_owner = 368}
-    CSA = {set_state_controller = 368}
-  }
-
-}
-
-country_event = {
-  id = usacivilwar.303
-  title = usacivilwar.303.t
-  desc = usacivilwar.303.d
-  fire_only_once = yes
-
-  trigger = {
-    AND = {has_idea = banned_slaves
-          tag = USA}
-  }
-
-  mean_time_to_happen = {
-    days = 50
-    modifier = {
-      factor = 1.2
-      has_idea = gettysburg
-    }
-  }
-
-  option = {
-    name = usacivilwar.303.a
-  }
-
-  option = {
-    name = usacivilwar.303.b
-  }
-
-  immediate = {
-    CSA = {set_state_owner = 363}
-    CSA = {set_state_controller = 363}
-  }
-
-}
-
-country_event = {
-  id = usacivilwar.304
-  title = usacivilwar.304.t
-  desc = usacivilwar.304.d
-  fire_only_once = yes
-
-  trigger = {
-    AND = {has_idea = banned_slaves
-          tag = USA}
-  }
-
-  mean_time_to_happen = {
-    days = 50
-    modifier = {
-      factor = 1.2
-      has_idea = gettysburg
-    }
-  }
-
-  option = {
-    name = usacivilwar.304.a
-  }
-
-  option = {
-    name = usacivilwar.304.b
-  }
-
-  immediate = {
-    CSA = {set_state_owner = 369}
-    CSA = {set_state_controller = 369}
-    set_country_flag = {kentucky_secedes}
-  }
-
-}
-
-#Virginia splits
-
-
-#400s - Diplomatic/Government Events
-#Slaves escape from Confederate States
-
-#Troops from West Virginia, May 1861
-
-##Event chain - "Fate of Lincoln"
-#Exchange of prisoners of war
-country_event = {
-  id = usacivilwar.402
-  title = usacivilwar.402.t
-  desc = usacivilwar.402.d
-  hidden = yes
-  fire_only_once = yes
-
-  trigger = {
-    CSA = {surrender_progress > 0.7}
-  }
-
-  immediate = {
-    USA = {country_event = {hours = 1 id = usa.400}}
-  }
-}
-
-#500s: News events
-#Prisoner Exchange
-news_event = {
-  id = usacivilwar.500
-  title = usacivilwar.500.t
-  desc = {text = usacivilwar.500.dcsa trigger = {TAG = CSA}}
-  desc = {text = usacivilwar.500.dusa trigger = {TAG = USA}}
-
-  trigger = {
-    OR = {
+    OR= {
       TAG = USA
       TAG = CSA
     }
   }
 
   option = {
-    name = usacivilwar.500.a
+    name = usacivilwar.200.a
+    add_timed_idea = { idea = to_the_border days = 365}
+    hidden = {
+      cou
+    }
+  }
+
+  option = {
+    name = usacivilwar.200.b
+    add_timed_idea = { idea = raise_forces days = 365}
+    add_manpower = 100000
+  }
+
+  option = {
+    name = usacivilwar.200.c
+    add_timed_idea = { idea = doctrinal_planning days = 365}
   }
 }
+
+#300s - Secedings
+
+#Virginia splits
+#1: Voting for secession of Virginia
+country_event = {
+	id = usacivilwar.300
+	title = usacivilwar.300.t
+	desc = usacivilwar.300.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    random_list = {60 = {country_event = {days = 10 id = usacivilwar.3001}} 40 = {country_event = {days = 10 id = usacivilwar.3003}}}
+  }
+
+	option = {
+		name = usacivilwar.300.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.300.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#2: Virginia Secedes
+country_event = {
+	id = usacivilwar.3001
+	title = usacivilwar.3001.t
+	desc = usacivilwar.3001.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+  immediately = {
+    362 = {set_demilitarized_zone = yes}
+    746 = {set_demilitarized_zone = yes}
+    random_list = {20 = {country_event = {days = 1 id = usacivilwar.3002}} 20 = {country_event = {days = 3 id = usacivilwar.3002}} 30 = {country_event = {days = 5 id = usacivilwar.3002} 30 = {country_event = {days = 10 id = usacivilwar.3002}} }
+  }
+
+  option = {
+		name = usacivilwar.3001.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3001.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#3: Virginia is transferred
+country_event = {
+	id = usacivilwar.3002
+	title = usacivilwar.3002.t
+	desc = usacivilwar.3002.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    CSA = {transfer_state = 362}
+    CSA = {transfer_state = 746}
+    CSA = {set_country_flag = virginia_secedes}
+  }
+
+	option = {
+		name = usacivilwar.3002.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3002.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#4: Virginia refuses to secede
+country_event = {
+	id = usacivilwar.3003
+	title = usacivilwar.3003.t
+	desc = usacivilwar.3003.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  option = {
+		name = usacivilwar.3003.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3003.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#Arkansas Secedes
+country_event = {
+	id = usacivilwar.301
+	title = usacivilwar.301.t
+	desc = usacivilwar.301.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    random_list = {60 = {country_event = {days = 10 id = usacivilwar.3011}} 40 = {country_event = {days = 10 id = usacivilwar.3013}}}
+  }
+
+	option = {
+		name = usacivilwar.301.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.301.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3011
+	title = usacivilwar.3011.t
+	desc = usacivilwar.3011.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+  immediately = {
+     = {set_demilitarized_zone = yes}
+    random_list = {20 = {country_event = {days = 1 id = usacivilwar.3012}} 20 = {country_event = {days = 3 id = usacivilwar.3012}} 30 = {country_event = {days = 5 id = usacivilwar.3012} 30 = {country_event = {days = 10 id = usacivilwar.3012}} }
+  }
+
+  option = {
+		name = usacivilwar.3011.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3011.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3012
+	title = usacivilwar.3012.t
+	desc = usacivilwar.3012.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    CSA = {transfer_state = }
+    CSA = {set_country_flag = _secedes}
+  }
+
+	option = {
+		name = usacivilwar.3012.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3012.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3013
+	title = usacivilwar.3013.t
+	desc = usacivilwar.3013.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  option = {
+		name = usacivilwar.3013.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3013.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#Tennesse
+country_event = {
+	id = usacivilwar.302
+	title = usacivilwar.302.t
+	desc = usacivilwar.302.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    random_list = {60 = {country_event = {days = 10 id = usacivilwar.3021}} 40 = {country_event = {days = 10 id = usacivilwar.3023}}}
+  }
+
+	option = {
+		name = usacivilwar.302.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.302.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3021
+	title = usacivilwar.3021.t
+	desc = usacivilwar.3021.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+  immediately = {
+    368 = {set_demilitarized_zone = yes}
+    random_list = {20 = {country_event = {days = 1 id = usacivilwar.3022}} 20 = {country_event = {days = 3 id = usacivilwar.3022}} 30 = {country_event = {days = 5 id = usacivilwar.3022} 30 = {country_event = {days = 10 id = usacivilwar.3022}} }
+  }
+
+  option = {
+		name = usacivilwar.3021.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3021.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3022
+	title = usacivilwar.3022.t
+	desc = usacivilwar.3022.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    CSA = {transfer_state = 368}
+    CSA = {set_country_flag = tennesse_secedes}
+  }
+
+	option = {
+		name = usacivilwar.3022.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3022.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3023
+	title = usacivilwar.3023.t
+	desc = usacivilwar.3023.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  option = {
+		name = usacivilwar.3023.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3023.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#North Carolina
+country_event = {
+	id = usacivilwar.303
+	title = usacivilwar.303.t
+	desc = usacivilwar.303.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    random_list = {60 = {country_event = {days = 10 id = usacivilwar.3031}} 40 = {country_event = {days = 10 id = usacivilwar.3033}}}
+  }
+
+	option = {
+		name = usacivilwar.303.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.303.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3031
+	title = usacivilwar.3031.t
+	desc = usacivilwar.3031.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+  immediately = {
+    363 = {set_demilitarized_zone = yes}
+    random_list = {20 = {country_event = {days = 1 id = usacivilwar.3032}} 20 = {country_event = {days = 3 id = usacivilwar.3032}} 30 = {country_event = {days = 5 id = usacivilwar.3032} 30 = {country_event = {days = 10 id = usacivilwar.3032}} }
+  }
+
+  option = {
+		name = usacivilwar.3031.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3031.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3032
+	title = usacivilwar.3032.t
+	desc = usacivilwar.3032.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    CSA = {transfer_state = 363}
+    CSA = {set_country_flag = north_carolina_secedes}
+  }
+
+	option = {
+		name = usacivilwar.3032.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3032.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3033
+	title = usacivilwar.3033.t
+	desc = usacivilwar.3033.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  option = {
+		name = usacivilwar.3033.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3033.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#Kentucky
+country_event = {
+	id = usacivilwar.304
+	title = usacivilwar.304.t
+	desc = usacivilwar.304.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    random_list = {60 = {country_event = {days = 10 id = usacivilwar.3041}} 40 = {country_event = {days = 10 id = usacivilwar.3043}}}
+  }
+
+	option = {
+		name = usacivilwar.304.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.304.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3041
+	title = usacivilwar.3041.t
+	desc = usacivilwar.3041.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+  immediately = {
+    369 = {set_demilitarized_zone = yes}
+    random_list = {20 = {country_event = {days = 1 id = usacivilwar.3042}} 20 = {country_event = {days = 3 id = usacivilwar.3042}} 30 = {country_event = {days = 5 id = usacivilwar.3042} 30 = {country_event = {days = 10 id = usacivilwar.3042}} }
+  }
+
+  option = {
+		name = usacivilwar.3041.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3041.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3042
+	title = usacivilwar.3042.t
+	desc = usacivilwar.3042.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  immediately = {
+    CSA = {transfer_state = 369}
+    CSA = {set_country_flag = kentucky_secedes}
+  }
+
+	option = {
+		name = usacivilwar.3042.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3042.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+country_event = {
+	id = usacivilwar.3043
+	title = usacivilwar.3043.t
+	desc = usacivilwar.3043.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+  option = {
+		name = usacivilwar.3043.a
+    trigger = {
+      TAG = USA
+    }
+	}
+
+	option = {
+		name = usacivilwar.3043.b
+    trigger = {
+      TAG = CSA
+    }
+	}
+
+}
+
+#400s: News Events
