@@ -106,12 +106,11 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	#Of the people, by the people, for the people
+	#Of the people,
 	option = {
 		name = usa.303.a
 	}
 
-	#The bastion of freedom and torch of liberty
 	option = {
 		name = usa.303.b
 	}
@@ -184,77 +183,18 @@ country_event = {
 }
 
 #400s: Political Events
-#Lincoln Assasinated
-
-#Lincoln Captured
-
-#Assasination Failed
 
 #Planning for Assasinating Davis
 
 #Geroge B. McClellan Elected as Democrat
-country_event = {
-	id = usa.404
-	title = usa.404.t
-	desc = usa.404.d
-
-	is_triggered_only = no
-	fire_only_once = yes
-
-	immediate = {
-		create_country_leader = {name = "George B. McClellan" picture = "Portrait_George_McClellan.dds" expire = 1885.10.29 ideology = social_liberalism traits = {}}
-	}
-
-	trigger = {
-		date > 1864.8.10
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = usa.404.a
-	}
-}
 
 #1864 Election
-country_event = {
-	id = usa.405
 
-	is_triggered_only = no
-	fire_only_once = yes
-	hidden = yes
+#Thirteenth Amendment
 
-	trigger = {
-		date > 1864.11.8
-	}
 
-	mean_time_to_happen = {
-		hours = 1
-	}
-
-	immediate = {
-		random_list = {80 = {news_event = usa.4050} 20 = {news_event = usa.4051}}
-	}
-
-}
-
-#Lincoln stays
-news_event = {
-	id = usa.4050
-	title = usa.4050.t
-	desc = usa.4050.d
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	immediate = {}
-}
 
 #500s: Diplomatic Events
-#USA requests Britain help
-
 #America Requests Mexican help
 
 #Treaty of Hampton Roads: Can succeed or fail, historically fails
@@ -464,5 +404,3 @@ country_event = {
 }
 
 #700s: Reconstruction
-
-#Thirteenth Amendment

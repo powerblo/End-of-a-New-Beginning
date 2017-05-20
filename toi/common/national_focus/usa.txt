@@ -18,8 +18,55 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#Event USA requests Britain help happens
+			#Event USA draws closer to Britain happens
 			country_event = usa.500
+			add_opinion_modifier = { target = ENG modifier = closer_to_britain}
+		}
+	}
+
+	focus = {
+		id = reestablish_relations
+		icon =
+		x = 6
+		y = 2
+		cost = 10
+
+		completion_reward = {
+			#Add opinion modifier with Britain
+			add_opinion_modifier = { target = ENG modifier = royal_relations}
+			hidden = {
+				remove_opinion_modifier = {target = ENG modifier = closer_to_britain}
+				add_popularity = {ideology = parliarmental_oligarchy popularity = 0.05}
+			}
+			#Add country spirit Royal relations
+			add_ideas = royal_relations
+		}
+	}
+
+	focus = {
+		id = british_support
+		icon =
+		x = 6
+		y = 3
+		cost = 10
+
+		bypass = {
+			OR = {
+				AND = {
+					ENG = {has_war_with = CSA}
+					ENG = {has_war_together_with = USA}
+				}
+				AND = {
+					ENG = {has_war_with = USA}
+					ENG = {has_war_together_with = CSA}
+				}
+			}
+
+		}
+
+		completion_reward = {
+			#Britain gets event to join war
+			ENG = {country_event = britain.500}
 		}
 	}
 }

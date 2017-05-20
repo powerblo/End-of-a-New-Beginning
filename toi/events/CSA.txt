@@ -48,29 +48,90 @@ country_event = {
   }
 }
 
-#Conscription Extensions
+#Volunteers conscript
+country_event = {
+  id = csa.301
+  title = csa.301.t
+  desc = csa.301.d
 
-#Speeches of Davis
+  trigger = {
+    has_national_unity > 0.5
+    tag = CSA
+  }
+
+  mean_time_to_happen = {
+    days = 300
+  }
+
+  option = {
+    name = csa.301.a
+    if = {
+      limit = {
+        has_national_unity > 0.9
+      }
+      add_manpower = 100000
+    }
+    if = {
+      limit = {
+        AND = {
+          has_national_unity < 0.9
+          has_national_unity > 0.8
+        }
+      }
+      add_manpower = 60000
+    }
+    if = {
+      limit = {
+        AND = {
+          has_national_unity < 0.8
+          has_national_unity > 0.7
+        }
+      }
+      add_manpower = 50000
+    }
+    if = {
+      limit = {
+        AND = {
+          has_national_unity < 0.7
+          has_national_unity > 0.6
+        }
+      }
+      add_manpower = 30000
+    }
+    if = {
+      limit = {
+        AND = {
+          has_national_unity < 0.6
+          has_national_unity > 0.5
+        }
+      }
+      add_manpower = 10000
+    }
+  }
+}
+
 
 #Death of Stonewall Jackson
 country_event = {
-	id =
-	title =
-	desc =
+	id = csa.303
+	title = csa.303.t
+	desc = csa.303.d
 
-	is_triggered_only = no
+	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
+  immediate = {
+    #Kill him
+  }
 
-	}
-
-	option = {
-		name =
-	}
+  #Both dummy options
 
 	option = {
-		name =
+		name = csa.303.a
+	}
+
+  option = {
+		name = csa.303.a
 	}
 
 }
@@ -159,6 +220,10 @@ country_event = {
     tag = CSA
 	}
 
+  immediate = {
+    USA = {transfer_state = 746}
+  }
+
 	option = {
 		name = csa.3041.a
 	}
@@ -166,14 +231,72 @@ country_event = {
 }
 
 #400s: Political Events
-#Planning of Assasination : After disagreements for slave trade
+#After disagreements for slave trade
+country_event = {
+  id = csa.400
+  title = csa.400.t
+  desc = csa.400.d
 
-#Davis Assasinated
+  fire_only_once = yes
 
-#Assasination of Lincoln
+  trigger = {
+    has_country_flag = prisoners_denied
+    tag = CSA
+  }
+
+  #Take revenge
+  option = {
+    name = csa.400.a
+    country_event = {days = 10 id = csa.401}
+  }
+
+  #Take them by force
+  option = {
+    name = csa.400.b
+    #Something to buff
+  }
+}
+
+#Planning of Assasination
+country_event = {
+  id = csa.401
+  title = csa.401.t
+  desc = csa.401.d
+
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  #Begin immediately
+  option = {
+    name = csa.401.a
+    hidden = {
+      random_list = {80 = {#Add failure} 20 = {news_event = {days = 10 id = usacivilwar.401}}}
+    }
+  }
+
+  #Plan ahead
+  option = {
+    name = csa.401.b
+    hidden = {
+      random_list = {50 = {#Add failure} 40 = {news_event = {days = 200 id = usacivilwar.401}} 10 = {news_event = {days = 400 id = usacivilwar.401}}}
+    }
+  }
+
+  #Capture him
+  option = {
+    name = csa.401.c
+    hidden = {
+      random_list = {95 = {#Add failure} 5 = {news_event = {days = 300 id = usacivilwar.405}}}
+    }
+  }
+}
 
 #500s: Diplomatic Events
-#csa reaches out to foreign nations
+#CSA 
+country_event = {
+  id = csa.500
+
+}
 
 (#csa Requests Help)
 

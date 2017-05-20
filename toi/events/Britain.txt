@@ -1,1 +1,29 @@
 ﻿add_namespace = britain
+
+country_event = {
+  id = britain.500
+  title = britain.500.t
+  desc = britain.500.d
+
+  is_triggered_only = yes
+
+  #Full support
+  option = {
+    name = britain.500.a
+    declare_war_on = {target = CSA type = annex_everything}
+  }
+
+  #Backhand support
+  option = {
+    name = britain.500.b
+    hidden = {
+      set_country_flag = support_usa
+    }
+  }
+
+  #Refusal
+  option = {
+    name = britain.500.c
+    #Event for USA happens, USA can declare war on Britain
+  }
+}

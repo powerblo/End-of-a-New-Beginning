@@ -1078,3 +1078,119 @@ country_event = {
 }
 
 #400s: News Events
+
+#Davis Assasinated
+news_event = {
+  id = usacivilwar.400
+  title = usacivilwar.400.t
+  desc = usacivilwar.400.d
+
+  immediate = {
+    #Remove country leader
+    #Add national spirit for lincoln assasinated
+    #Hidden : Add national flag
+    #H
+  }
+
+  #Dummy options
+  option = {
+    name = usacivilwar.400.a
+    trigger = {
+      tag = USA
+    }
+  }
+
+  option = {
+    name = usacivilwar.400.b
+    trigger = {
+      tag = CSA
+    }
+  }
+
+  option = {
+    name = usacivilwar.400.c
+    trigger = {
+      NOT = {
+        tag = USA
+      }
+    }
+  }
+}
+
+#Lincoln Assasinated
+news_event = {
+  id = usacivilwar.401
+  title = usacivilwar.401.t
+  desc = usacivilwar.401.d
+
+  immediate = {
+    #Remove country leader
+    #Add national spirit for lincoln assasinated
+    #Hidden : Add national flag
+  }
+
+  #Dummy options
+  option = {
+    name = usacivilwar.401.a
+    trigger = {
+      tag = USA
+    }
+  }
+
+  option = {
+    name = usacivilwar.401.b
+    trigger = {
+      tag = CSA
+    }
+  }
+
+  option = {
+    name = usacivilwar.401.c
+    trigger = {
+      NOT = {
+        tag = CSA
+      }
+    }
+  }
+}
+
+#Davis Evades Assasination
+
+#Lincoln Evades Assasination
+
+#Lincoln Captured
+news_event = {
+  id = usacivilwar.405
+  title = usacivilwar.405.t
+  desc = usacivilwar.405.d
+
+  immediate = {
+    #Remove country leader
+    #Add national spirit for lincoln captured
+    #Hidden : Begin negotiation events
+  }
+
+  #Dummy options
+  option = {
+    name = usacivilwar.401.a
+    trigger = {
+      tag = USA
+    }
+  }
+
+  option = {
+    name = usacivilwar.401.b
+    trigger = {
+      tag = CSA
+    }
+  }
+
+  option = {
+    name = usacivilwar.401.c
+    trigger = {
+      NOT = {
+        tag = CSA
+      }
+    }
+  }
+}
