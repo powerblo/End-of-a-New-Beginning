@@ -1,5 +1,5 @@
 division_template = {
-	name = "Infantry Regiment"
+	name = "Infantry Regiment I"
 
 	regiments = {
 		line_infantry = { x = 0 y = 0 }
@@ -20,7 +20,7 @@ division_template = {
 	name = "Cavalry Regiment I"
 
 	regiments = {
-		cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 0}
 	}
 }
 
@@ -28,8 +28,8 @@ division_template = {
 	name = "Cavalry Regiment II"
 
 	regiments = {
-		cavalry = { x = 0 y = 0}
-		cavalry = { x = 0 y = 1}
+		light_cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 1}
 	}
 }
 
@@ -38,7 +38,9 @@ division_template = {
 
 	regiments = {
 		line_infantry = { x = 0 y = 0}
-		artillery = { x = 0 y = 1}
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
 	}
 }
 
@@ -64,7 +66,7 @@ units = {
 		#Memphis, Tennessee
 		name = "1st Alabama Infantry Regiment"
 		location = 7797
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -73,7 +75,7 @@ units = {
 		#Pulaski, Tennessee
 		name = "2nd Alabama Infantry Regiment"
 		location = 10281
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.76
 	}
@@ -82,7 +84,7 @@ units = {
 		#Athens, Tennessee
 		name = "3rd Alabama Infantry Reigment"
 		location = 10909
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -91,7 +93,7 @@ units = {
 		#Pulaski, Tennessee
 		name = "4th Alabama Infantry Regiment"
 		location = 10281
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -115,7 +117,7 @@ units = {
 	division = {
 		name = "1st California Infantry Regiment"
 		location = 4727
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -123,7 +125,7 @@ units = {
 	division = {
 		name = "2nd California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -131,7 +133,7 @@ units = {
 	division = {
 		name = "3rd California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -139,7 +141,7 @@ units = {
 	division = {
 		name = "4th California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -147,7 +149,7 @@ units = {
 	division = {
 		name = "5th California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -155,7 +157,7 @@ units = {
 	division = {
 		name = "6th California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -163,7 +165,7 @@ units = {
 	division = {
 		name = "7th California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -171,7 +173,7 @@ units = {
 	division = {
 		name = "8th California Infantry Regiment"
 		location = 941
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -179,7 +181,7 @@ units = {
 	division = {
 		name = "1st Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -187,7 +189,7 @@ units = {
 	division = {
 		name = " Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -195,7 +197,7 @@ units = {
 	division = {
 		name = "2nd Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -203,7 +205,7 @@ units = {
 	division = {
 		name = "3rd Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -211,7 +213,7 @@ units = {
 	division = {
 		name = "4th Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -219,7 +221,7 @@ units = {
 	division = {
 		name = "5th Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -227,7 +229,7 @@ units = {
 	division = {
 		name = "6th Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -235,7 +237,7 @@ units = {
 	division = {
 		name = "7th Regiment Connecticut Volunteer Infantry"
 		location = 9832
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -259,7 +261,7 @@ units = {
 	division = {
 		name = "1st Delware Infantry Regiment"
 		location = 9786
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -267,7 +269,7 @@ units = {
 	division = {
 		name = "2nd Delware Infantry Regiment"
 		location = 9786
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -275,7 +277,7 @@ units = {
 	division = {
 		name = "3rd Delware Infantry Regiment"
 		location = 9786
-		division_template = "Infantry Regiment"
+		division_template = "Infantry Regiment I"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
@@ -524,7 +526,7 @@ units = {
 	}
 
 	division = {
-		name = "2nd New York Volunteer Infantry Regiment "Troy Regiment""
+		name = "2nd New York Volunteer Infantry Regiment 'Troy Regiment'"
 		location = 3878
 		division_template = "Infantry Regiment II"
 		start_experience_factor = 0.2
@@ -532,7 +534,7 @@ units = {
 	}
 
 	division = {
-		name = "3rd New York Volunteer Infantry Regiment "Albany Regiment""
+		name = "3rd New York Volunteer Infantry Regiment 'Albany Regiment'"
 		location = 3878
 		division_template = "Infantry Regiment II"
 		start_experience_factor = 0.2

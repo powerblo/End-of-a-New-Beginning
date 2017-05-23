@@ -1,5 +1,5 @@
 division_template = {
-	name = "Infantry Regiment"
+	name = "Infantry Regiment I"
 
 	regiments = {
 		line_infantry = { x = 0 y = 0 }
@@ -20,7 +20,7 @@ division_template = {
 	name = "Cavalry Regiment I"
 
 	regiments = {
-		cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 0}
 	}
 }
 
@@ -28,8 +28,8 @@ division_template = {
 	name = "Cavalry Regiment II"
 
 	regiments = {
-		cavalry = { x = 0 y = 0}
-		cavalry = { x = 0 y = 1}
+		light_cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 1}
 	}
 }
 
@@ -38,9 +38,12 @@ division_template = {
 
 	regiments = {
 		line_infantry = { x = 0 y = 0}
-		artillery = { x = 0 y = 1}
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
 	}
 }
+
 units = {
 
   division = {
@@ -60,7 +63,7 @@ units = {
   }
 
   division = {
-    name = "15th Arkansas Infantry Regiment "Josey's Regiment""
+    name = "15th Arkansas Infantry Regiment 'Josey's Regiment'"
     location = 12458
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -92,7 +95,7 @@ units = {
   }
 
   division = {
-    name = "1st Louisiana Infantry "Nelligan's Regiment""
+    name = "1st Louisiana Infantry 'Nelligan's Regiment'"
     location = 7552
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -116,7 +119,7 @@ units = {
   }
 
   division = {
-    name = "5th Louisiana Infantry "Hay's Fighting Tigers""
+    name = "5th Louisiana Infantry 'Hay's Fighting Tigers'"
     location = 7552
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -124,7 +127,7 @@ units = {
   }
 
   division = {
-    name = "1st Mississippi Infantry "Johnston's Regiment""
+    name = "1st Mississippi Infantry 'Johnston's Regiment'"
     location = 4464
     division_template = "Infantry Regiment I"
     start_experience_factor = 0.2
@@ -132,7 +135,7 @@ units = {
   }
 
 	division = {
-    name = "2nd" Mississippi Infantry"
+    name = "2nd Mississippi Infantry"
     location = 4464
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -156,7 +159,7 @@ units = {
   }
 
   division = {
-    name = "1st Texas Infantry "Ragged Old First""
+    name = "1st Texas Infantry 'Ragged Old First'"
     location = 3960
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -164,7 +167,7 @@ units = {
   }
 
   division = {
-    name = "2nd Texas Infantry "Moore's 1st Infantry""
+    name = "2nd Texas Infantry 'Moore's 1st Infantry'"
     location = 10337
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -172,7 +175,7 @@ units = {
   }
 
   division = {
-    name = "1st Virginia Infantry "Old First""
+    name = "1st Virginia Infantry 'Old First'"
     location = 7202
     division_template = "Infantry Regiment II"
     start_experience_factor = 0.2
@@ -193,6 +196,4 @@ units = {
     start_experience_factor = 0.2
     start_equipment_factor = 0.8
   }
-
-
 }
