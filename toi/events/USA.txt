@@ -47,7 +47,9 @@ country_event = {
 	#Threat states to return, otherwise will be forced to ban slavery
 	option = {
 		name = usa.301.a
-		country_event = {days = 60 id = usa.3011}
+		hidden = {
+			country_event = {days = 60 id = usa.3011}
+		}
 	}
 
 	#Ask for cooperation from other border states
