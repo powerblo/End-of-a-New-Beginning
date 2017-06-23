@@ -19,7 +19,7 @@ set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
 	rifle_equipment2 = 1
-	hand_revolvers = 1		
+	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
 	civil_army_cloth = 1
@@ -37,10 +37,14 @@ set_technology = {
 set_politics = {
     parties = {
       liberal_conservatism = {
-        popularity = 32
+        popularity = 31
       }
+			traditional_conservatism = {
+				popularity = 64
+			}
+
       totalitarian_nationalism = {
-        popularity = 64
+        popularity = 1
       }
       marxism_leninism = {
         popularity = 2
@@ -50,7 +54,7 @@ set_politics = {
       }
     }
 
-    ruling_party = totalitarian_nationalism
+    ruling_party = traditional_conservatism
     last_election = "1860.1.1"
     election_frequency = 48
     elections_allowed = no
@@ -61,14 +65,14 @@ create_country_leader = {
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_CSA_Jefferson_Davis.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
+	ideology = federalist
 	traits = {
 
 	}
 }
 
 create_field_marshal = {
-	name = "Thomas "Stonewall" Jackson"
+	name = "Thomas Jackson"
 	picture = "Portrait_CSA_Stonewall_Jackson.dds"
 	traits = { engineer logistics_magician }
 	skill = 5

@@ -1,5 +1,8 @@
 add_namespace = usa
 
+#200s: Minor Flavour Events
+#
+
 #300s: Midwar Events
 #Robert Lee Resigns
 country_event = {
@@ -187,8 +190,141 @@ country_event = {
 #400s: Political Events
 
 #Planning for Assasinating Davis
+country_event = {
+	id = usa.400
+	title = usa.400.t
+	desc = usa.400.d
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		surrender_progress > 0.7
+		has_national_unity > 70
+	}
+
+	#Rush it
+	option = {
+		name = usa.400.a
+		#Activate "Send the Assasins" evemt
+		hidden = {random_list = {20 = {country_event = {id = usa.401 days = 30}} 80 = {country_event = {id = usa.402 days = 30}}
+	}
+
+	#Carefully planned
+	option = {
+		name = usa.400.b
+		hidden = {random_list = {60 = {country_event = {id = usa.401 days = 150}} 40 = {country_event = {id = usa.402 days = 150}}
+	}
+
+}
+
+#Assasination Suceeds
+country_event = {
+	id = usa.401
+	title = usa.401.t
+	desc = usa.401.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		CSA = {kill_country_leader = yes}
+		CSA = {create_country_leader = {name = "Referrendum" ideology = federalist}}
+		every_country = {
+			news_event = {id = usa.403}
+		}
+	}
+
+	#All is fair in love and war
+	option = {
+		name = usa.401.a
+	}
+
+}
+
+#Assasination fails
+country_event = {
+	id = usa.402
+	title = usa.402.t
+	desc = usa.402.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		CSA = {news_event = {id = usa.403}}
+	}
+	option = {
+		name = usa.402.a
+	}
+
+}
+
+#Assasination News
+news_event = {
+	id = usa.403
+	title = usa.403.t
+	desc = usa.403.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		if = {
+			limit = {TAG = CSA
+			has_national_unity > 0.6}
+		#Reelection
+		country_event = {id = csa.#}
+		}
+		CSA = {add_national_unity = -0.3}
+	}
+
+	trigger = {
+		NOT = {TAG = USA}
+	}
+
+	#Now all is lost...
+	option = {
+		name = usa.403.a
+		trigger = {
+			TAG = CSA
+		}
+	}
+
+	#The Civil War should end soon
+	option = {
+		name = usa.403.b
+	}
+
+	#America is a step closer to being united again
+	option = {
+		name = usa.403.c
+	}
+}
 
 #Geroge B. McClellan Elected as Democrat
+country_event = {
+	id =
+	title =
+	desc =
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name =
+	}
+
+	option = {
+		name =
+	}
+
+}
 
 #1864 Election
 
@@ -197,7 +333,19 @@ country_event = {
 
 
 #500s: Diplomatic Events
-#America Requests Mexican help
+#America announces alignment towards Britain
+
+#America trys to reestablish relations
+
+#America acknowledges the British rule of the Commonwealth
+
+#America agrees to compensate for American-Mexican War
+
+#America asks Mexico to join Civil War
+
+#America agrees to compensate for War of 1812
+
+#
 
 #Treaty of Hampton Roads: Can succeed or fail, historically fails
 
@@ -214,7 +362,12 @@ country_event = {
 
   trigger = {
     CSA = {has_capitulated = yes}
+		tag = USA
   }
+
+	immediate = {
+		clr_country_flag = house_divided
+	}
 
   mean_time_to_happen = {
     hours = 1
