@@ -4,10 +4,14 @@ focus_tree = {
 	default = no
 
 	country = {
-		factor = 1
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = USA
+		}
 	}
 
-	default = yes
 	reset_on_civilwar = no
 
 	focus = {

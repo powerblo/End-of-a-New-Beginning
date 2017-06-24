@@ -12,7 +12,7 @@ set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
 	rifle_equipment2 = 1
-	hand_revolvers = 1		
+	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
 	civil_army_cloth = 1
@@ -41,15 +41,19 @@ set_politics = {
 
 	parties = {
 		liberal_conservatism = {
-			popularity = 55
+			popularity = 41
+		}
+
+		traditional_conservatism = {
+			popularity = 18
+		}
+
+		reactionary = {
+			popularity = 12
 		}
 
 		social_liberalism = {
-			popularity = 40
-		}
-
-		totalitarian_nationalism = {
-			popularity = 5
+			popularity = 29
 		}
 	}
 
@@ -65,6 +69,30 @@ create_country_leader = {
 	picture = "Portrait_USA_Abraham_Lincoln.dds"
 	expire = "1947.1.1"
 	ideology = conservatism
+}
+
+create_country_leader = {
+	name = "John C. Breckinridge"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = ""
+	expire = "1947.1.1"
+	ideology = federalist
+}
+
+create_country_leader = {
+	name = "John Bell"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = ""
+	expire = "1947.1.1"
+	ideology = reactionary
+}
+
+create_country_leader = {
+	name = "Stephen A. Douglas"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = ""
+	expire = "1947.1.1"
+	ideology = social_liberalis
 }
 
 create_corps_commander = {
@@ -114,4 +142,5 @@ create_corps_commander = {
 		picture = "Portrait_CSA_Robert_Lee.dds"
 	traits = {}
 	skill = 3
+	id = 6565
 }
