@@ -25,20 +25,20 @@ country_event = {
 	#Imprison him
 	option = {
 		name = usa.300.a
-		remove_unit_leader = #
+		remove_unit_leader = 6565
 		set_country_flag = robert_lee_imprisoned
 	}
 
 	#Let him go
 	option = {
 		name = usa.300.b
-		remove_unit_leader = #
+		remove_unit_leader = 6565
 		CSA = {create_corps_commander = {name = "Robert Lee" gfx = "Portrait_CSA_Robert_Lee.dds" traits = {} skill = 3}}
 	}
 
 }
 
-#Taking measures
+#Taking measures : Focus Event
 country_event = {
 	id = usa.301
 	title = usa.301.t
@@ -102,7 +102,7 @@ country_event = {
 
 }
 
-#Gettysburg Address
+#Gettysburg Address : Focus Event
 country_event = {
 	id = usa.303
 	title = usa.303.t
@@ -186,6 +186,8 @@ country_event = {
 	}
 
 }
+
+
 
 #400s: Political Events
 
