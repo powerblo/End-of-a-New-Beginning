@@ -144,55 +144,6 @@ ideas = {
 			}
 		}
 
-		siege_tactics = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_attack_factor = 0.03
-				army_speed_factor = 0.10
-				army_morale_factor = 0.05
-			}
-
-			picture = sumter
-
-		}
-
-		first_step = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_speed_factor = 0.2
-				army_morale_factor = 0.1
-			}
-
-		}
-
-		rally_for_sumter = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				unity_factor = 0.03
-				planning_speed = 0.05
-			}
-
-			picture = sumter
-		}
-
 		nationalism = {
 
 			allowed = {
@@ -654,6 +605,26 @@ ideas = {
 	#Slave laws
 	political_advisor = {
 		# POLITICAL
+		#Classical Slaves
+		classical_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.2
+			production_speed_building_factor = 0.2
+			local_resources_factor = 0.5
+			unity_factor = -0.15
+		}
+
+		#Work force level slaves
 		allowed_slaves = {
 			picture = generic_tank_manufacturer_1
 
@@ -672,6 +643,44 @@ ideas = {
 			unity_factor = -0.1
 		}
 
+		#Modernised Slaves
+		modernised_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.02
+			production_speed_building_factor = 0.02
+			local_resources_factor = 0.05
+		}
+
+		#Social structural slaves
+		social_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.03
+			production_speed_building_factor = 0.03
+			local_resources_factor = 0.06
+			unity_factor = 0.03
+		}
+
+		#Completely banned slaves
 		banned_slaves = {
 			picture = generic_tank_manufacturer_1
 
