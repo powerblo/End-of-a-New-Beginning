@@ -1,387 +1,125 @@
 focus_tree = {
-	id = csa
+	id = usa_focus
+
+	default = no
+
 	country = {
 		factor = 0
+
 		modifier = {
 			add = 10
-			tag = CSA
+			tag = USA
 		}
 	}
-	default = no
-	focus = {
-		id = csa_own_government
-		icon = GFX_goal_generic_support_democracy
-		cost = 5.00
-		x = 10
-		y = 1
-			completion_reward = {
-					add_political_power = 100
-					remove_ideas = anarhist_state
-				}
 
-	}
-	focus = {
-		id = csa_open_congress
-		icon = GFX_goal_unknown
-		cost = 0.00
-		x = 21
-		y = 1
+	reset_on_civilwar = no
 
-	}
-	focus = {
-		id = csa_establish_constitution
-		icon = GFX_goal_unknown
-		cost = 5.00
-		prerequisite = {
-			focus = csa_own_government
-		}
-		x = 6
-		y = 2
-			completion_reward = {
-					add_political_power = 50
-					add_national_unity = 0.1
-					add_ideas = csa_constitution
-				}
+  focus = {
+    id = csa_our_government
+    icon =
+    x = 11
+    y = 1
+    cost = 5
 
-	}
-	focus = {
-		id = csa_strike_sumter
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = csa_establish_constitution
-		}
-		x = 6
-		y = 3
-			completion_reward = {
-					declare_war_on = {
-							id = USA
-							type = annex_everything
-						}
-					USA = {
-							country_event = {
-									id = usacivilwar.100
-									days = 1
-								}
-						}
-					CSA = {
-							country_event = {
-									id = usacivilwar.100
-									days = 1
-								}
-						}
-				}
+    available_if_capitulated = no
 
-	}
-	focus = {
-		id = csa_war_soldiers
-		icon = GFX_goal_unknown
-		cost = 5.00
-		prerequisite = {
-			focus = csa_strike_sumter
-		}
-		x = 3
-		y = 4
-			completion_reward = {
-					army_experience = 40
-					country_event = {
-							id = csa.415
-							days = 1
-						}
-				}
+    prerequisite = {
 
-	}
-	focus = {
-		id = csa_quick_surge
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = csa_war_soldiers
-		}
-		mutually_exclusive = {
-			focus = csa_improvise_forts
-		}
-		x = 2
-		y = 5
-			completion_reward = {
-					add_ideas = quick_surge
-					country_event = {
-							id = csa.2
-							days = 1
-						}
-				}
+    }
 
-	}
-	focus = {
-		id = csa_new_capital
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_quick_surge
-		}
-		x = 1
-		y = 6
-			completion_reward = {
-					country_event = {
-							id = csa.300
-							days = 1
-						}
-				}
+    completion_reward = {
+      add_political_power = 100
+      remove_ideas = anarchist_state
 
-	}
-	focus = {
-		id = csa_improvise_forts
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = csa_war_soldiers
-		}
-		mutually_exclusive = {
-			focus = csa_quick_surge
-		}
-		x = 5
-		y = 5
-			complete_tooltip = {
-					add_ideas = csa_fortification
-				}
+    }
 
-	}
-	focus = {
-		id = csa_voluntary_forces
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_strike_sumter
-		}
-		x = 9
-		y = 4
-			completion_reward = {
-					country_event = {
-							id = csa.301
-						}
-					complete_tooltip = {
-							custom_effect_tooltip = csa.301.tt
-						}
-				}
 
-	}
-	focus = {
-		id = csa_mobilise_militia
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_voluntary_forces
-		}
-		x = 7
-		y = 5
+  }
 
-	}
-	focus = {
-		id = csa_parliamental_conscript
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_voluntary_forces
-		}
-		x = 10
-		y = 5
-			completion_reward = {
-					add_ideas = parliamental_conscript
-				}
+  focus = {
+    id = csa_establish_constitution
+    icon =
+    x = 7
+    y = 2
+    cost = 5
 
-	}
-	focus = {
-		id = csa_texas_virginia
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_parliamental_conscript
-		}
-		x = 10
-		y = 6
-			completion_reward = {
+    available_if_capitulated = no
 
-}
+    prerequisite = {
+      focus = csa_our_government
+    }
 
-	}
-	focus = {
-		id = csa_establish_dipomats
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_own_government
-		}
-		x = 14
-		y = 2
+    completion_reward = {
+      add_political_power = 50
+      add_national_unity = 0.1
+    }
 
-	}
-	focus = {
-		id = csa_intern_recog
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_establish_dipomats
-		}
-		x = 14
-		y = 3
 
-	}
-	focus = {
-		id = csa_mother_revolution
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_intern_recog
-		}
-		x = 13
-		y = 4
+  }
 
-	}
-	focus = {
-		id = csa_inherit_royal
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_intern_recog
-		}
-		x = 15
-		y = 4
+  focus = {
+    id = csa_strike_sumter
+    icon =
+    x = 7
+    y = 3
+    cost = 5
 
-	}
-	focus = {
-		id = csa_second_1812
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_inherit_royal
-		}
-		x = 15
-		y = 5
+    available_if_capitulated = no
 
-	}
-	focus = {
-		id = csa_revenge_mexico
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_second_1812
-		}
-		x = 14
-		y = 6
+    prerequisite = {
+      focus = csa_establish_constitution
+    }
 
-	}
-	focus = {
-		id = csa_improve_rights
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_open_congress
-		}
-		mutually_exclusive = {
-			focus = csa_develop_caste
-		}
-		x = 18
-		y = 2
-			available = {
-					has_country_flag = fscs_progress
-				}
-			completion_reward = {
-					add_national_unity = -0.05
-					country_event = {
-							id = csa.412
-							days = 1
-						}
-				}
+    completion_reward = {
+      declare_war_on = {target = USA type = annex_everything}
+      hidden = {
+        set_global_flag = american_civil_war
+      }
+    }
 
-	}
-	focus = {
-		id = csa_develop_caste
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_open_congress
-		}
-		mutually_exclusive = {
-			focus = csa_improve_rights
-		}
-		x = 24
-		y = 2
-			completion_reward = {
-					add_political_power = 30
-					country_event = {
-							id = csa.413
-							days = 1
-						}
-				}
-			available = {
-					has_country_flag = fscs_revert
-				}
 
-	}
-	focus = {
-		id = csa_productivity_first
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_develop_caste
-		}
-		x = 24
-		y = 3
+  }
 
-	}
-	focus = {
-		id = csa_promote_goals
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_productivity_first
-		}
-		x = 22
-		y = 4
+  focus = {
+    id = csa_war_soldiers
+    icon =
+    x = 3
+    y = 4
+    cost = 10
 
-	}
-	focus = {
-		id = csa_industrial_structure
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_productivity_first
-		}
-		x = 24
-		y = 4
+    available_if_capitulated = yes
 
-	}
-	focus = {
-		id = csa_scraping_barrel
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_texas_virginia
-		}
-		x = 10
-		y = 7
+    prerequisite = {
+      focus = csa_strike_sumter
+    }
 
-	}
-	focus = {
-		id = csa_coalition_revolution
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_mother_revolution
-		}
-		x = 13
-		y = 5
+    completion_reward = {
+      army_experience = 10
+      country_event = {id = csa.}
+    }
 
-	}
-	focus = {
-		id = csa_slave_military
-		icon = GFX_goal_unknown
-		cost = 0.00
-		prerequisite = {
-			focus = csa_productivity_first
-		}
-		x = 27
-		y = 4
 
-	}
+  }
+
+  focus = {
+    id = csa_quick_surge
+    icon =
+    x = 2
+    y = 5
+    cost = 10
+
+    available_if_capitulated = yes
+
+    prerequisite = {
+      focus = csa_war_soldiers
+    }
+
+    completion_reward = {
+      //Armies move faster, and have larger bonuses from winning "battles"
+      add_ideas = quick_surge
+    }
+
+
+  }
+
 }
