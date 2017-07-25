@@ -4,7 +4,7 @@ oob = "USA_1861"
 
 set_politics = {
     parties = {
-		economic_market_liberal = {
+		economic_liberalism = {
 			popularity = 41
 		}
 		traditional_conservatism = {
@@ -63,7 +63,7 @@ oob = "USA_1857"
 
 set_politics = {
     parties = {
-      economic_market_liberal = {
+      economic_liberalism = {
         popularity = 41
       }
       traditional_conservatism = {
@@ -106,20 +106,11 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = ""
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait__.dds"
-    expire =
-    ideology = conserv
-}
-}
-
-create_country_leader = {
 	name = "Abraham Lincoln"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = "Portrait_USA_Abraham_Lincoln.dds"
 	expire = "1947.1.1"
-	ideology = conservatism
+	ideology = conserv
 }
 
 create_country_leader = {
@@ -127,7 +118,7 @@ create_country_leader = {
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = ""
 	expire = "1947.1.1"
-	ideology = federalist
+	ideology = federal
 }
 
 create_country_leader = {
@@ -143,7 +134,7 @@ create_country_leader = {
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 	picture = ""
 	expire = "1947.1.1"
-	ideology = social_liberalis
+	ideology = liberal_social
 }
 
 create_corps_commander = {

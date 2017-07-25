@@ -3,56 +3,6 @@
 1857.5.11 = {
 	oob = "ENG_1857"
 
-	if = {
-		limit = {
-			has_dlc = "Together for Victory"
-		}
-		set_autonomy = {
-			target = RAJ
-			autonomous_state = autonomy_colony
-			freedom_level = 0.35
-		}
-		set_autonomy = {
-			target = CAN
-			autonomous_state = autonomy_colony
-			freedom_level = 0.4
-		}
-		set_autonomy = {
-			target = AST
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = NZL
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = BIK
-			autonomous_state = autonomy_princely_state
-		}
-		set_autonomy = {
-			target = HYD
-			autonomous_state = autonomy_princely_state
-		}
-		set_autonomy = {
-			target = KAR
-			autonomous_state = autonomy_princely_state
-		}
-		set_autonomy = {
-			target = KAS
-			autonomous_state = autonomy_princely_state
-		}
-		set_autonomy = {
-			target = MYS
-			autonomous_state = autonomy_princely_state
-		}
-		set_autonomy = {
-			target = TRA
-			autonomous_state = autonomy_princely_state
-		}
-	}
-
 	create_country_leader = {
 		name = "Queen Victoria"
 		picture = "Queen_Victoria.dds"
@@ -84,7 +34,7 @@
 
 	set_politics = {
     parties = {
-      economic_market_liberal = {
+      economic_liberalism = {
         popularity = 32
       }
       traditional_conservatism = {
@@ -133,7 +83,7 @@ set_convoys = 100
 set_politics = {
 
 	parties = {
-	economic_market_liberal = {
+	economic_liberalism = {
 		popularity = 32
 	}
 	traditional_conservatism = {
