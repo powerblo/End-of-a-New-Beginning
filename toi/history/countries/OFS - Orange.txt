@@ -11,7 +11,7 @@ declare_war_on = {
 set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
-	hand_revolvers = 1		
+	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
 	civil_army_cloth = 1
@@ -26,19 +26,36 @@ set_technology = {
 
 set_politics = {
     parties = {
-      liberal_conservatism = {
-        popularity = 2
-      }
-
-      totalitarian_nationalism = {
-        popularity = 3
-      }
-      marxism_leninism = {
-        popularity = 2
-      }
-      despotic_autocracy = {
-        popularity = 93
-      }
+		economic_market_liberal = {
+			popularity = 0
+		}
+		traditional_conservatism = {
+			popularity = 0
+		}
+		social_democracy = {
+			popularity = 0
+		}
+		radical_socialism = {
+			popularity = 0
+		}
+		marxism_leninism = {
+			popularity = 0
+		}
+		despotic_autocracy = {
+			popularity = 100
+		}
+		parliamental_oligarchy = {
+			popularity = 0
+		}
+		totalitarian_nationalism = {
+			popularity = 0
+		}
+		rexism_falangism = {
+			popularity = 0
+		}
+		theocracy = {
+			popularity = 0
+		}
     }
 
     ruling_party = despotic_autocracy

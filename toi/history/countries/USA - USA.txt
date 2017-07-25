@@ -2,12 +2,43 @@
 
 oob = "USA_1861"
 
-declare_war_on = {
-	target = CSA
-	type = annex_everything
+set_politics = {
+    parties = {
+		economic_market_liberal = {
+			popularity = 41
+		}
+		traditional_conservatism = {
+			popularity = 30
+		}
+		social_democracy = {
+			popularity = 29
+		}
+		radical_socialism = {
+			popularity = 0
+		}
+		marxism_leninism = {
+			popularity = 0
+		}
+		despotic_autocracy = {
+			popularity = 0
+		}
+		parliamental_oligarchy = {
+			popularity = 0
+		}
+		totalitarian_nationalism = {
+			popularity = 0
+		}
+		rexism_falangism = {
+			popularity = 0
+		}
+		theocracy = {
+			popularity = 0
+		}
+    }
+
+	ruling_party = traditional_conservatism
 }
 
-# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
@@ -27,40 +58,60 @@ set_technology = {
 	spin_stabilised_rockets = 1
 }
 
-set_convoys = 400
-set_national_unity = 0.6
-
-add_ideas = {
-	recent_banned_slavery
-	manifest_denisty
-	nation_divided
-	banned_slaves
-}
+1857.5.11 = {
+oob = "USA_1857"
 
 set_politics = {
+    parties = {
+      economic_market_liberal = {
+        popularity = 41
+      }
+      traditional_conservatism = {
+        popularity = 30
+      }
+      social_democracy = {
+        popularity = 29
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-	parties = {
-		liberal_conservatism = {
-			popularity = 41
-		}
+	ruling_party = traditional_conservatism
+}
 
-		traditional_conservatism = {
-			popularity = 18
-		}
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
 
-		reactionary = {
-			popularity = 12
-		}
-
-		social_liberalism = {
-			popularity = 29
-		}
-	}
-
-	ruling_party = liberal_conservatism
-	last_election = "1860.11.8"
-	election_frequency = 48
-	elections_allowed = yes
+create_country_leader = {
+    name = ""
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait__.dds"
+    expire =
+    ideology = conserv
+}
 }
 
 create_country_leader = {

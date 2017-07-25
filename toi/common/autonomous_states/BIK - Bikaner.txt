@@ -1,0 +1,37 @@
+capital = 759
+
+1857.5.11 = {
+OOB = "BIK_1857"
+
+set_politics = {
+    parties = {
+      liberal_conservatism = {
+        popularity = 0
+      }
+
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+    }
+
+    ruling_party = despotic_autocracy
+}
+
+create_country_leader = {
+  name = "Sardar Singh"
+  desc = "POLITICS_SINGH_DESC"
+  picture = "Portrait_India_Singh.dds"
+  expire = "1872.5.16"
+  ideology = despotism
+  traits = {
+
+  }
+}
+
+}

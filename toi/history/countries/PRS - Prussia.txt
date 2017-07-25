@@ -1,30 +1,61 @@
 capital = 44
 
-OOB = "PRS_1861"
-
-
+oob = "PRS_1861"
 
 set_politics = {
     parties = {
-      liberal_conservatism = {
-        popularity = 2
+      economic_market_liberal = {
+        popularity = 0
       }
-
-      totalitarian_nationalism = {
-        popularity = 3
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
       }
       marxism_leninism = {
-        popularity = 2
+        popularity = 0
       }
       despotic_autocracy = {
-        popularity = 93
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
       }
     }
 
-    ruling_party = despotic_autocracy
-    last_election = "1860.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	rifle_equipment1 = 1
+	rifle_equipment2 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	rml_field_gun = 1
+	early_rockets = 1
+	spin_stabilised_rockets = 1
 }
 
 create_country_leader = {
@@ -36,4 +67,63 @@ create_country_leader = {
   traits = {
 
   }
+}
+
+1857.5.11 = {
+oob = "PRS_1857"
+
+set_politics = {
+    parties = {
+      economic_market_liberal = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
+  name = "Wilhelm I"
+  desc = "POLITICS_WILHELM_I_DESC"
+  picture = "Wilhelm_I.dds"
+  expire = "1900.1.1"
+  ideology = despotism
+  traits = {
+
+  }
+}
 }

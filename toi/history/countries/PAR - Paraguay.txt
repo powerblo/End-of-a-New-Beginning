@@ -1,149 +1,123 @@
 ﻿capital = 301
 
-oob = "PAR_1936"
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	gw_artillery = 1
-	early_fighter = 1
-}
-set_country_flag = monroe_doctrine
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = construction_effort_2
-	complete_national_focus = production_effort_2
-	complete_national_focus = infrastructure_effort
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	oob = "PAR_1939"
-	set_technology = {
-		CAS1 = 1
-		interwar_artillery = 1
-		interwar_antiair = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_plant = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-}
+oob = "PAR_1861"
 
 set_politics = {
+    parties = {
+      economic_market_liberal = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 80
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-	parties = {
-		liberal_conservatism = { 
-			popularity = 25
-		}
-
-		totalitarian_nationalism = {
-			popularity = 0
-		}
-		
-		marxism_leninism = {
-			popularity = 75
-			#banned = no #default is no
-		}
-	}
-	
-	ruling_party = marxism_leninism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = yes
+	ruling_party = traditional_conservatism
 }
 
-#create_country_leader = {
-#	name = "Eusebio Ayala"
-#	desc = "POLITICS_EUSEBIO_AYALA_DESC"
-#	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-#	expire = "1965.1.1"
-#	ideology = liberalism
-#	traits = {
-#		#
-#	}
-#}
+set_technology = {
+	infantry_weapons = 1
+	rifle_equipment1 = 1
+	rifle_equipment2 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	rml_field_gun = 1
+	early_rockets = 1
+	spin_stabilised_rockets = 1
+}
 
-# Rafael Franco technically comes to and loses power slightly after/before the bookmarks, but is the go-to choice for a socialist leader
 create_country_leader = {
-	name = "Rafael Franco"
-	desc = "POLITICS_RAFAEL_FRANCO_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
+    name = ""
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait__.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 
-1939.1.1 = {
-	set_politics = {
+1857.5.11 = {
+oob = "PAR_1857"
 
-		parties = {
-			liberal_conservatism = { 
-				popularity = 20
-			}
+set_politics = {
+    parties = {
+      economic_market_liberal = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 80
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-			totalitarian_nationalism = {
-				popularity = 0
-			}
-			
-			marxism_leninism = {
-				popularity = 30
-				#banned = no #default is no
-			}
+	ruling_party = traditional_conservatism
+}
 
-			despotic_autocracy = {
-				popularity = 50
-			}
-		}
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
 
-		ruling_party = despotic_autocracy
-		last_election = "1938.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-
-
-	create_country_leader = {
-		name = "Higinio Morinigo"
-		desc = "POLITICS_HIGINIO_MORINIGO_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
-		expire = "1965.1.1"
-		ideology = despotism
-		traits = {
-			#
-		}
-	}
-
-
+create_country_leader = {
+    name = ""
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait__.dds"
+    expire = 1900.1.1
+    ideology = conserv
+}
 }
