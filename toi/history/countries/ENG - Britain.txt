@@ -3,6 +3,81 @@
 1857.5.11 = {
 	oob = "ENG_1857"
 
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = NEP
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = HYD
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAS
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAR
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = BIK
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = REW
+			autnomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = RAJ
+			autonomous_state = autonomy_colony
+			freedom_level = 0.35
+		}
+		set_autonomy = {
+			target = CAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.4
+		}
+		set_autonomy = {
+			target = AST
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NZL
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		else = {
+			puppet = RAJ
+		}
+	}
+
+	#Whig/Liberal
+	create_country_leader = {
+		name = "Henry John Temple"
+		picture = "Portrait_ENG_Henry_Temple.dds"
+		expire = "1858.2.19"
+		ideology = market_liberal
+	}
+
+	#Conservative
+	create_country_leader = {
+		name = "Edward Smith-Stanley"
+		picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
+		expire = "1859.6.11"
+		ideology = conserv
+	}
+
 	create_country_leader = {
 		name = "Queen Victoria"
 		picture = "Queen_Victoria.dds"
@@ -35,10 +110,10 @@
 	set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 32
+        popularity = 66
       }
       traditional_conservatism = {
-        popularity = 64
+        popularity = 34
       }
       social_democracy = {
         popularity = 0
@@ -66,13 +141,42 @@
       }
     }
 
-    	ruling_party = despotic_autocracy
+    	ruling_party = economic_liberalism
 	}
 
 
 }
 
 oob = "ENG_1861"
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_colony
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = CAN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = NZL
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = RAJ
+	}
+}
 
 set_research_slots = 4
 
@@ -84,10 +188,10 @@ set_politics = {
 
 	parties = {
 	economic_liberalism = {
-		popularity = 32
+		popularity = 66
 	}
 	traditional_conservatism = {
-		popularity = 64
+		popularity = 34
 	}
 	social_democracy = {
 		popularity = 0
@@ -115,10 +219,24 @@ set_politics = {
 	}
 	}
 
-	ruling_party = despotic_autocracy
+	ruling_party = economic_liberalism
 	last_election = "1835.11.14"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Henry John Temple"
+	picture = "Portrait_ENG_Henry_Temple.dds"
+	expire = "1858.2.19"
+	ideology = market_liberal
+}
+
+create_country_leader = {
+	name = "Edward Smith-Stanley"
+	picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
+	expire = "1859.6.11"
+	ideology = conserv
 }
 
 create_country_leader = {
