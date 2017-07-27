@@ -114,7 +114,7 @@ equipments = {
 			steel = 2
 		}
 	}
-
+	
 	howitzer_equipment_0 = {
 		archetype = howitzer_equipment
 		parent = cannon_equipment_0
@@ -128,19 +128,19 @@ equipments = {
 		priority = 50
 		visual_level = 0
 	}
-
+	
 	horse_artillery_equipment = {
 		is_archetype = yes
-		picture = archetype_motorized_equipment
+		picture = archetype_motorized_equipment		
 		is_buildable = no
 		type = {
-			#infantry #Removing inf type
+			#infantry #Removing inf type 
 			motorized
 		}
 		group_by = archetype
-
+		
 		interface_category = interface_category_land
-
+		
 		maximum_speed = 4
 		reliability = 0.8
 		hardness = 0
@@ -154,47 +154,8 @@ equipments = {
 	}
 
 	horse_artillery_equipment_0 = {
-		archetype = horse_artillery_equipment
-		priority = 30
-	}
-
-	artillery_equipment = {
-		year = 1934
-
-		is_archetype = yes
-		picture = archetype_artillery_equipment
-		type = {
-			artillery
-			infantry #adding infantry type
-			#motorized #Removing motorized type
-		}
-		group_by = archetype
-
-		interface_category = interface_category_land
-
-		#Misc Abilities
-		reliability = 0.8
-
-		#Defensive Abilities
-		defense = 10
-		breakthrough = 6
-		hardness = 0
-		armor_value = 0
-
-		#Offensive Abilities
-		soft_attack = 24
-		hard_attack = 2
-		ap_attack = 5
-		air_attack = 0
-
-		#Space taken in convoy
-		lend_lease_cost = 4
-
-		build_cost_ic = 3.5
-		resources = {
-			tungsten = 1
-			steel = 2
-		}
+		archetype = motorized_equipment
+		priority = 30			
 	}
 
 	artillery_equipment_1 = {
@@ -335,7 +296,7 @@ equipments = {
 		priority = 70
 		visual_level = 0
 	}
-
+	
 	machine_gun_equipment = {
 		is_archetype = yes
 		picture = archetype_artillery_equipment
@@ -372,13 +333,13 @@ equipments = {
 			steel = 2
 		}
 	}
-
+	
 	machine_gun_equipment_0 = {
 		archetype = machine_gun_equipment
 		priority = 50
 		visual_level = 0
 	}
-
+	
 	machine_gun_equipment_1 = {
 		archetype = machine_gun_equipment
 		priority = 50
