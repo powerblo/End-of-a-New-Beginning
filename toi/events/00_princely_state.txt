@@ -9,6 +9,7 @@ add_namespace = princelystate
 #Receive join request from sepoy rebels
 country_event = {
   id = princelystate.400
+  title = princelystate.400.t
 
   is_triggered_only = yes
 
@@ -62,6 +63,6 @@ country_event = {
   }
 
   immediate = {
-    SRS = {annex_country = FROM}
+    SRS = {annex_country = {target = FROM transfer_troops = yes}}
   }
 }

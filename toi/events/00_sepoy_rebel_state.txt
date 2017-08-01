@@ -29,6 +29,81 @@ country_event = {
 
   trigger = {
     tag = SRS
+    controls_state = 423
+    controls_state = 424
+    controls_state = 425
+    controls_state = 426
+    controls_state = 427
+    controls_state = 428
+    controls_state = 429
+    controls_state = 430
+    controls_state = 431
+    controls_state = 432
+    controls_state = 433
+    controls_state = 434
+    controls_state = 435
+    controls_state = 436
+    controls_state = 437
+    controls_state = 438
+    controls_state = 439
+    controls_state = 440
+    controls_state = 441
+    controls_state = 442
+    controls_state = 443
+    controls_state = 444
+    controls_state = 445
+    controls_state = 754
+    controls_state = 755
+    controls_state = 756
+    controls_state = 757
+    controls_state = 758
+    controls_state = 759
+  }
+
+  #Ask for peace with lighter condition
+  option = {
+    name = sepoystate.500.a
+
+    white_peace = RAJ
+  }
+
+  option = {
+    name = sepoystate.500.b
+
+    hidden = {
+      white_peace = RAJ
+      transfer_state = 423
+      transfer_state = 424
+      transfer_state = 425
+      transfer_state = 426
+      transfer_state = 427
+      transfer_state = 428
+      transfer_state = 429
+      transfer_state = 430
+      transfer_state = 431
+      transfer_state = 432
+      transfer_state = 433
+      transfer_state = 434
+      transfer_state = 435
+      transfer_state = 436
+      transfer_state = 437
+      transfer_state = 438
+      transfer_state = 439
+      transfer_state = 440
+      transfer_state = 441
+      transfer_state = 442
+      transfer_state = 443
+      transfer_state = 444
+      transfer_state = 445
+      transfer_state = 754
+      transfer_state = 755
+      transfer_state = 756
+      transfer_state = 757
+      transfer_state = 758
+      transfer_state = 759
+      set_cosmetic_tag = SRS_selfliberate
+    }
+    annex_country = RAJ
 
   }
 }
