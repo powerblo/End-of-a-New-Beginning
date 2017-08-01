@@ -11,7 +11,7 @@ ideas = {
 
 			modifier = {
 				drift_defence_factor = 0.5
-				consumer_goods_factor = 0.10
+				unity_factor = -0.1
 			}
 		}
 		FRA_censorship_2 = { 
@@ -24,37 +24,236 @@ ideas = {
 			picture = ast_classify_aliens
 
 			modifier = {
-				drift_defence_factor = 0.75
-				consumer_goods_factor = 0.20
+				drift_defence_factor = 0.5
+				unity_factor = -0.2
 			}
 		}
-		FRA_little_napoleon = {
+		FRA_discomptent_politicians = { 
 			allowed = {
 				always = yes
 			}
+
 			removal_cost = -1
-			
-			picture = FRA_matignon_agreements
-			
-			rule {
-				can_create_factions = no
-			}
+
+			picture = ast_classify_aliens
+
 			modifier = {
-				unity_factor = -0.10
+				political_power_cost = 0.5
 			}
 		}
-		FRA_censorship_fascist = {
+		FRA_discomptent_politicians_2 = { 
 			allowed = {
 				always = yes
 			}
+
 			removal_cost = -1
-			
-			picture = FRA_matignon_agreements
-			
+
+			picture = ast_classify_aliens
+
 			modifier = {
-				drift_defence_factor = 0.3
-				consumer_goods_factor = 0.20
-				fascism_drift = 0.2
+				political_power_cost = 0.2
+				unity_factor = -0.1
+			}
+		}
+		FRA_conservative_empire_idea = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+		}
+		FRA_liberal_empire_idea = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+		FRA_unprepared_army = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				conscription = -0.015
+				training_time_army_factor = 0.75
+			}
+		}
+		FRA_privileged_army = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				conscription = -0.01
+				training_time_army_factor = 0.6
+			}
+		}
+		FRA_privileged_army_2 = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				conscription = -0.005
+				training_time_army_factor = 0.25
+			}
+		}
+		FRA_mobilized_army = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				training_time_army_factor = 0.25
+			}
+		}
+		FRA_mobilized_army_2 = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = 0.25
+			}
+		}
+		FRA_war_preparation = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				training_time_army_factor = 0.75
+			}
+		}
+		FRA_unsatisfied_people = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				unity_factor = -0.15
+			}
+		}
+		FRA_unsatisfied_people_2 = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				unity_factor = -0.05
+			}
+		}
+		FRA_profits_gold_rush = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+                consumer_goods_factor = -0.02
+            }
+		}
+		FRA_economic_boom = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+                consumer_goods_factor = -0.5
+            }
+		}
+		FRA_new_banks = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+                consumer_goods_factor = -0.05
+            }
+		}
+		FRA_reformed_schools = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				research_time_factor = -0.02
+			}
+		}
+
+
+		FRA_unstable_government = { 
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_classify_aliens
+
+			modifier = {
+				political_power_cost = 0.85
 			}
 		}
 	}

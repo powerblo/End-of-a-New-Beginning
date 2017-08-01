@@ -1,0 +1,27 @@
+division_template = {
+  name = "Sepoy Regiment"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 0}
+  }
+}
+
+division_template = {
+	name = "Sepoy Cavalry"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0}
+	}
+}
+
+units = {
+
+  division = {
+    name = "Sepoy Infantry"
+    location = 
+    division_template = "Sepoy Regiment"
+    start_experience_factor = 0
+    start_equipment_factor = 0.5
+  }
+}

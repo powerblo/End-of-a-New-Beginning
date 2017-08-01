@@ -46,7 +46,13 @@ generic = {
 	# Land units
 	line_infantry = {
 		prefix = ""
-		generic = { "Line Infantry Division" }
+		generic = { "Line Infantry Regiment" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	light_infantry = {
+		prefix = ""
+		generic = { "Light Infantry Regiment" }
 		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
 		unique = {}
 	}
@@ -149,6 +155,18 @@ generic = {
 	cavalry = {
 		prefix = ""
 		generic = { "Cavalry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	light_cavalry = {
+		prefix = ""
+		generic = { "Hussar Regiment" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	dragoon = {
+		prefix = ""
+		generic = { "Dragoon Regiment" }
 		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
 		unique = {}
 	}

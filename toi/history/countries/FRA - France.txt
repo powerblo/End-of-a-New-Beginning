@@ -2,6 +2,11 @@
 
 oob = "FRA_1861"
 
+add_ideas = FRA_unprepared_army
+add_ideas = FRA_censorship
+add_ideas = FRA_discomptent_politicians
+add_ideas = FRA_unsatisfied_people
+
 set_politics = {
     parties = {
       economic_liberalism = {
@@ -59,15 +64,94 @@ set_technology = {
 }
 
 create_country_leader = {
-	name = "Napoleon III"
+	name = "Auguste Blanqui"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Napoleon_III.dds"
+	picture = "Auguste_Blanqui.dds"
 	expire = "1865.1.1"
-	ideology = despotism
-	traits = {
-		stout_defender
-	}
+	ideology = leninism
+	traits = { }
 }
+create_country_leader = {
+  name = "Louise Michel"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Louise_Michel.dds"
+  expire = "1865.1.1"
+  ideology = anarchism
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Léon Gambetta"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Leon_Gambetta.dds"
+  expire = "1865.1.1"
+  ideology = liberal_social
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Adolphe Thiers"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Adolphe_Thiers.dds"
+  expire = "1865.1.1"
+  ideology = social_liberal
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Patrice de Mac-Mahon"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Patrice_de_Mac_Mahon.dds"
+  expire = "1865.1.1"
+  ideology = reactionary
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Henri V d'Artois"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Henri_V_Artois.dds"
+  expire = "1865.1.1"
+  ideology = plutocracy
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Napoleon III"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Napoleon_III.dds"
+  expire = "1865.1.1"
+  ideology = absolutism
+  traits = { }
+}
+
+create_country_leader = {
+  name = "George Ernest Boulanger"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "George_Ernest_Boulanger.dds"
+  expire = "1865.1.1"
+  ideology = dictator
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Édouard Drumont"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Edouard_Drumont.dds"
+  expire = "1865.1.1"
+  ideology = rexism
+  traits = { }
+}
+
+create_country_leader = {
+  name = "François-Nicholas-Madeleine Morlot"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "François_Nicholas_Madeleine_Morlot.dds"
+  expire = "1865.1.1"
+  ideology = christian
+  traits = { }
+}
+
 
 1857.5.11 = {
 oob = "FRA_1857"
@@ -116,14 +200,4 @@ set_technology = {
   vic_army_cloth = 1
 }
 
-create_country_leader = {
-	name = "Napoleon III"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Napoleon_III.dds"
-	expire = "1865.1.1"
-	ideology = despotism
-	traits = {
-		stout_defender
-	}
-}
 }

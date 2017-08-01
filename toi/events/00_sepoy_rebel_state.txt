@@ -1,0 +1,34 @@
+add_namespace = sepoystate
+
+#100s : Minor inwar events(flavour)
+#200s : Events from focus tree
+#300s : Inwar events(caused from war progress)
+#400s : Diplomatic events
+#500s : Peace treaties, ultimatums
+
+#State agrees to join war
+country_event = {
+  id = sepoystate.400
+  title = sepoystate.400.t
+  desc = sepoystate.400.d
+
+  option = {
+    name = sepoystate.400.a
+  }
+}
+
+#State refuses to join war
+
+#Proclamation of Hindustan
+
+#When most states are taken
+country_event = {
+  id = sepoystate.500
+  title = sepoystate.500.t
+  desc = sepoystate.500.d
+
+  trigger = {
+    tag = SRS
+
+  }
+}

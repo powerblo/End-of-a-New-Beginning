@@ -1,0 +1,103 @@
+ideas = {
+  country = {
+    #1857~1879
+    vic_era = {
+
+      allowed = {
+        always = no
+      }
+
+      picture = era_victorian
+
+      modifier = {
+        radical_socialism_drift = -1
+        marxism_leninism_drift = -1
+        totalitarian_nationalism_drift = -1
+        rexism_falangism_drift = -1
+        production_speed_buildings_factor = -0.5
+
+      }
+    }
+
+    #1880~1913
+    machine_era = {
+      allowed = {
+        always = no
+      }
+
+      picture = era_machine
+
+      modifier = {
+      radical_socialism_drift = -0.8
+      marxism_leninism_drift = -0.8
+      totalitarian_nationalism_drift = -0.8
+      rexism_falangism_drift = -0.8
+      production_speed_buildings_factor = -0.3
+      }
+    }
+
+    #1914~1935
+    oil_era = {
+    allowed = {
+      always = no
+    }
+
+    picture = era_oil
+
+    modifier = {
+    production_speed_buildings_factor = -0.1
+    }
+    }
+
+    #1936~1949
+    modern_era = {
+      allowed = {
+        always = no
+      }
+
+      picture = era_modern
+
+      modifier = {
+      }
+    }
+
+    #1950~1972
+    atomic_era = {
+      allowed = {
+        always = no
+      }
+
+      picture = era_atomic
+
+      modifier = {
+
+      }
+    }
+
+    #1973~2002
+    information_era = {
+      allowed = {
+        always = no
+      }
+
+      picture = era_information
+
+      modifier = {
+
+      }
+    }
+
+    #2002~
+    digital_era = {
+      allowed = {
+        always = no
+      }
+
+      picture = era_digital
+
+      modifier = {
+
+      }
+    }
+  }
+}
