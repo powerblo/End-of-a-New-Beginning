@@ -98,6 +98,28 @@ ideas = {
 	# Special ones that can be applied on other countries through focus system.
 	country = {
 
+		#State not anarchist, merely lacking government
+		uncentralised_state = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_factor = -0.8
+			}
+		}
+
+		#Unrecognised as nation by surrouders
+		unrecognised_state = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+
 		#Event causes decide between To the Border(Rush to border), Raise Forces(Quicker recruitment/higher manpower), Doctrinal Planning(Increased planning/defense)
 		to_the_border = {
 			allowed = {

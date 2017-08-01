@@ -437,8 +437,62 @@ focus_tree = {
   }
 
   focus = {
+    id = establish_diplomacy
+    x = 16
+    y = 0
+
+    completion_reward = {
+      remove_ideas = uncentralised_state
+      hidden = {
+        add_ideas = unrecognised_state
+      }
+    }
+  }
+
+  focus = {
     id = encourage_foreign_states
     icon =
-    x =
+    x = 16
+    y = 1
+    cost = 10
+
+    completion_reward = {
+      BIK = {country_event = {id = princelystate.400}}
+      HYD = {country_event = {id = princelystate.400}}
+      KAR = {country_event = {id = princelystate.400}}
+      KAS = {country_event = {id = princelystate.400}}
+      MYS = {country_event = {id = princelystate.400}}
+      REW = {country_event = {id = princelystate.400}}
+      TRA = {country_event = {id = princelystate.400}}
+    }
+
   }
+
+  focus = {
+    id = keep_federation
+    x = 17
+    y = 2
+    cost = 10
+
+    completion_reward = {
+      add_political_power = 100
+    }
+  }
+
+  focus = {
+    id = unite_nations
+    x = 15
+    y = 3
+    cost = 10
+    completion_reward = {
+    BIK = {country_event = {id = princelystate.401}}
+    HYD = {country_event = {id = princelystate.401}}
+    KAR = {country_event = {id = princelystate.401}}
+    KAS = {country_event = {id = princelystate.401}}
+    MYS = {country_event = {id = princelystate.401}}
+    REW = {country_event = {id = princelystate.401}}
+    TRA = {country_event = {id = princelystate.401}}
+    }
+  }
+
 }
