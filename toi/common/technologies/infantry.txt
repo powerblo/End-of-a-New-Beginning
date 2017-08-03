@@ -123,6 +123,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		enable_sub = {
+			light_infantry
+		}
+
 		path = {
 			leads_to_tech = improved_matchlock
 			research_cost_coeff = 1
@@ -177,29 +181,6 @@ technologies = {
 		ai_will_do = {
 		 factor = 1
 		}
-	}
-
-	light_infantry = {
-
-		enable_sub = {
-			light_infantry
-		}
-
-		research_cost = 1.5
-		start_year = 1861
-		folder = {
-			name = infantry_folder
-			position = { x = 1 y = @1860}
-		}
-
-		categories = {
-			infantry_weapons
-		}
-
-		ai_will_do = {
-		 factor = 1
-		}
-
 	}
 
 	rifle_equipment3 = {
