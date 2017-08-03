@@ -1,0 +1,14 @@
+sub_unit = {
+  coastal_bombard = {
+    sprite = coastal_bombard
+    map_icon_category = ship
+    priority = 5
+    active = yes
+    type = {capital_ship}
+    need = {coastal_bombard = 1}
+
+    max_organisation = 30
+
+    supply_consumption = 0.04
+  }
+}

@@ -1,0 +1,37 @@
+capital = 437
+
+1857.5.11 = {
+OOB = "MYS_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+    }
+
+    ruling_party = despotic_autocracy
+}
+
+create_country_leader = {
+  name = "Krishnaraja Wadiyar III"
+  desc = "POLITICS_WADIYAR_DESC"
+  picture = "Portrait_India_Wadiyar_III.dds"
+  expire = "1868.3.27"
+  ideology = despotism
+  traits = {
+
+  }
+}
+
+}

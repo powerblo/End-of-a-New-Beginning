@@ -1,0 +1,68 @@
+add_namespace = princelystate
+
+#100s : Minor inwar events(flavour)
+#200s : Events from focus tree
+#300s : Inwar events(caused from war progress)
+#400s : Diplomatic events
+#500s : Peace treaties, ultimatums
+
+#Receive join request from sepoy rebels
+country_event = {
+  id = princelystate.400
+  title = princelystate.400.t
+
+  is_triggered_only = yes
+
+  #Agree
+  option = {
+    name = princelystate.400.a
+    ai_chance = {
+    factor = 10
+      modifier = {
+        factor = 40
+        has_defensive_war_with = SRS
+        surrender_progress > 0.5
+        }
+      modifier = {
+        factor = 60
+        has_defensive_war_with = SRS
+        surrender_progress > 0.7
+        }
+      }
+
+    white_peace = SRS
+    SRS = {add_to_faction = ROOT}
+    SRS = {country_event = {id = }}
+  }
+
+  #Disagree
+  option = {
+    name = princelystate.400.b
+    ai_chance = {
+    factor = 90
+      modifier = {
+        factor = 60
+        has_defensive_war_with = SRS
+        surrender_progress > 0.5
+      }
+      modifier = {
+        factor = 40
+        has_defensive_war_with = SRS
+        surrender_progress > 0.7
+      }
+      }
+  }
+}
+
+#Unite under one nation
+country_event = {
+  id = princelystate.401
+
+  trigger = {
+    has_war_together_with = SRS
+  }
+
+  immediate = {
+    SRS = {annex_country = {target = FROM transfer_troops = yes}}
+  }
+}

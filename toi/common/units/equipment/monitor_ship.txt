@@ -1,0 +1,90 @@
+equipments = {
+monitor_ship = {
+  year = 1861
+
+  is_archetype = yes
+  is_buildable = no
+  type = screen_ship
+
+  interface_category = interface_category_screen_ships
+
+  ap_attack = 0.4
+  attack = 0.6
+  fire_range = 6
+  torpedo_attack = 0
+  sub_attack = 0
+
+  anti_air_attack = 0
+
+  armor_value = 0
+  evasion = 12
+
+  surface_detection = 6
+  sub_detection = 1
+  surface_visibility = 3
+  naval_speed = 18
+  reliability = 0.7
+
+  naval_range = 1000
+
+  max_strength = 12
+
+  port_capacity_usage = 1
+  build_cost_ic = 500
+  resources = {
+    oil = 1
+    steel = 1
+  }
+
+  manpower = 180
+}
+
+sixone_monitor_ship = {
+  year = 1861
+
+  archetype = monitor_ship
+  priority = 5
+  type = {
+    screen_ship
+  }
+}
+
+sixfive_monitor_ship = {
+  year = 1865
+
+  archetype = monitor_ship
+  parent = sixone_monitor_ship
+  priority = 5
+
+  ap_attack = 0.5
+  attack = 0.5
+  fire_range = 9
+  torpedo_attack = 0
+  sub_attack = 0
+
+  anti_air_attack = 0
+
+  armor_value = 0
+  evasion = 12
+
+  surface_detection = 10
+  sub_detection = 1
+  surface_visibility = 5
+  naval_speed = 23
+  reliability = 0.7
+
+  naval_range = 1300
+
+  max_strength = 14
+
+  port_capacity_usage = 1
+  build_cost_ic = 550
+
+  manpower = 200
+  resources = {
+    oil = 1
+    steel = 1
+  }
+}
+
+}

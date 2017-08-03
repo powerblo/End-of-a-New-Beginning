@@ -1,6 +1,182 @@
 ﻿capital = 126
 
-oob = "ENG_1816"
+1857.5.11 = {
+	oob = "ENG_1857"
+
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = NEP
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = HYD
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAS
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAR
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = BIK
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = REW
+			autnomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = RAJ
+			autonomous_state = autonomy_colony
+			freedom_level = 0.35
+		}
+		set_autonomy = {
+			target = CAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.4
+		}
+		set_autonomy = {
+			target = AST
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NZL
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		else = {
+			puppet = RAJ
+		}
+	}
+
+	#Whig/Liberal
+	create_country_leader = {
+		name = "Henry John Temple"
+		picture = "Lord_Palmerston.dds"
+		expire = "1858.2.19"
+		ideology = market_liberal
+	}
+
+	#Conservative
+	create_country_leader = {
+		name = "Edward Smith-Stanley"
+		picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
+		expire = "1859.6.11"
+		ideology = conserv
+	}
+
+	create_country_leader = {
+		name = "Queen Victoria"
+		picture = "Queen_Victoria.dds"
+		expire = "1900.1.1"
+		ideology = despotism
+		traits = {
+
+		}
+	}
+
+	set_technology = {
+		infantry_weapons = 1
+		rifle_equipment1 = 1
+		rifle_equipment2 = 1
+		hand_revolvers = 1
+		socket_bayonet = 1
+		vic_army_cloth = 1
+		civil_army_cloth = 1
+		basic_cavalry = 1
+		horse_transport = 1
+		horse_artillery = 1
+		gw_artillery = 1
+		improved_smoothbore = 1
+		early_howitzer = 1
+		rml_field_gun = 1
+		early_rockets = 1
+		spin_stabilised_rockets = 1
+	}
+
+	set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 66
+      }
+      traditional_conservatism = {
+        popularity = 34
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+    	ruling_party = economic_liberalism
+	}
+
+
+}
+
+oob = "ENG_1861"
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_colony
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = CAN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = NZL
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = RAJ
+	}
+}
 
 set_research_slots = 4
 
@@ -8,42 +184,59 @@ set_national_unity = 0.6
 
 set_convoys = 100
 
-create_country_leader = {
-	name = "Neville Chamberlain"
-	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
-	picture = "Portrait_Britain_Neville_Chamberlain.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-
-	}
-}
-
-
 set_politics = {
 
 	parties = {
-		liberal_conservatism = {
-			popularity = 1
-		}
-
-		totalitarian_nationalism = {
-			popularity = 2
-		}
-
-		marxism_leninism = {
-			popularity = 1
-		}
-
-		despotic_autocracy = {
-			popularity = 96
-		}
+	economic_liberalism = {
+		popularity = 66
+	}
+	traditional_conservatism = {
+		popularity = 34
+	}
+	social_democracy = {
+		popularity = 0
+	}
+	radical_socialism = {
+		popularity = 0
+	}
+	marxism_leninism = {
+		popularity = 0
+	}
+	despotic_autocracy = {
+		popularity = 0
+	}
+	parliamental_oligarchy = {
+		popularity = 0
+	}
+	totalitarian_nationalism = {
+		popularity = 0
+	}
+	rexism_falangism = {
+		popularity = 0
+	}
+	theocracy = {
+		popularity = 0
+	}
 	}
 
-	ruling_party = despotic_autocracy
+	ruling_party = economic_liberalism
 	last_election = "1835.11.14"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Henry John Temple"
+	picture = "Portrait_ENG_Henry_Temple.dds"
+	expire = "1858.2.19"
+	ideology = market_liberal
+}
+
+create_country_leader = {
+	name = "Edward Smith-Stanley"
+	picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
+	expire = "1859.6.11"
+	ideology = conserv
 }
 
 create_country_leader = {
@@ -53,480 +246,5 @@ create_country_leader = {
 	ideology = despotism
 	traits = {
 
-	}
-}
-
-create_field_marshal = {
-	name = "Alan Brooke"
-	picture = "Portrait_Britain_Alan_Brooke.dds"
-	traits = { offensive_doctrine defensive_doctrine }
-	skill = 5
-}
-
-create_field_marshal = {
-	name = "Bernard Montgomery"
-	picture = "Portrait_Britain_Bernard_Montgomery.dds"
-	traits = { logistics_wizard offensive_doctrine  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Claude Auchinleck"
-	picture = "Portrait_Britain_Claude_Auchinleck.dds"
-	traits = {  }
-	skill = 5
-}
-
-create_corps_commander = {
-	name = "Neil Ritchie"
-	picture = "Portrait_Britain_Neil_Ritchie.dds"
-	traits = { panzer_leader  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Alan Cunningham"
-	picture = "Portrait_Britain_Alan_Cunningham.dds"
-	traits = {}
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "William Slim"
-	picture = "Portrait_Britain_William_Slim.dds"
-	traits = { trickster }
-	skill = 5
-}
-
-create_corps_commander = {
-	name = "Richard O'Connor"
-	picture = "Portrait_Britain_Richard_OConnor.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "William Platt"
-	picture = "Portrait_Britain_William_Platt.dds"
-	traits = {  }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "George Giffard"
-	picture = "Portrait_Britain_George_Giffard.dds"
-	traits = {  }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Harold Alexander"
-	picture = "Portrait_Britain_Harold_Alexander.dds"
-	traits = {  }
-	skill = 5
-}
-
-create_corps_commander = {
-	name = "Jackie Smyth"
-	picture = "Portrait_Britain_John_Jackie_Smyth.dds"
-	traits = { old_guard }
-	skill = 1
-}
-
-create_corps_commander = {
-	name = "Thomas Jacomb Hutton"
-		picture = "Portrait_Britain_Thomas_Jacomb_Hutton.dds"
-	traits = {  }
-	skill = 2
-}
-
-create_corps_commander = {
-	name = "Arthur Percival"
-		picture = "Portrait_Britain_Arthur_Percival.dds"
-	traits = {   }
-	skill = 2
-}
-
-create_corps_commander = {
-	name = "Merton Beckwith-Smith"
-		picture = "Portrait_Britain_Merton_Beckwith_Smith.dds"
-	traits = { commando }
-	skill = 1
-}
-
-create_corps_commander = {
-	name = "Henry Pownall"
-	picture = "Portrait_Britain_Henry_Pownall.dds"
-	traits = {  trickster }
-	skill = 2
-}
-
-create_corps_commander = {
-	name = "John Vereker Lord Gort"
-	picture = "Portrait_Britain_John_Vereker.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Henry Wilson"
-		picture = "Portrait_Britain_Henry_Maitland_Wilson.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "William Gott"
-		picture = "Portrait_Britain_William_Gott.dds"
-	traits = { panzer_leader }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Jock Campbell"
-		picture = "Portrait_Britain_Jock_Campbell.dds"
-	traits = { panzer_leader  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Oliver Leese"
-	picture = "Portrait_Britain_Oliver_Leese.dds"
-	traits = {  panzer_leader }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Miles Dempsey"
-	picture = "Portrait_Britain_Miles_Dempsey.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Brian Horrocks"
-	picture = "Portrait_Britain_Brian_Horrocks.dds"
-	traits = {  panzer_leader }
-	skill = 3
-
-}
-
-create_corps_commander = {
-	name = "Archibald Wavell"
-	picture = "Portrait_Britain_Archibald_Wavell.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "James Fownes Somerville"
-		picture = "Portrait_Britain_James_Fownes_Somerville.dds"
-	traits = { superior_tactician }
-	skill = 5
-}
-
-create_navy_leader = {
-	name = "Henry Harwood"
-		picture = "Portrait_Britain_Henry_Harwood.dds"
-	traits = { old_guard_navy blockade_runner }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Andrew Cunningham"
-		picture = "Portrait_Britain_Andrew_Cunningham.dds"
-	traits = { blockade_runner superior_tactician }
-	skill = 5
-}
-
-create_navy_leader = {
-	name = "Bruce Fraser"
-		picture = "Portrait_Britain_Bruce_Fraser.dds"
-	traits = { blockade_runner }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "John Tovey"
-		picture = "Portrait_Britain_John_Tovey.dds"
-	traits = { superior_tactician }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Bernard Rawlings"
-		picture = "Portrait_Britain_Bernard_Rawlings.dds"
-	traits = {  }
-	skill = 1
-}
-
-create_navy_leader = {
-	name = "John Cunningham"
-		picture = "Portrait_Britain_John_Cunningham.dds"
-	traits = {  }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Charles Forbes"
-		picture = "Portrait_Britain_Charles_Forbes.dds"
-	traits = { fly_swatter }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Algernon Willis"
-		picture = "Portrait_Britain_Algernon_Willis.dds"
-	traits = { spotter }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Arthur Power"
-		picture = "Portrait_Britain_Arthur_Power.dds"
-	traits = {  }
-	skill = 2
-}
-
-### Ship Variants ###
-
-#create_equipment_variant = {
-#	name = "O/P/R Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		sub_engine_upgrade = 1
-#		sub_stealth_upgrade = 1
-#		sub_torpedo_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "S Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		sub_engine_upgrade = 2
-#		sub_stealth_upgrade =2
-#		sub_torpedo_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "A/B/C/D Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_ASW_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Tribal Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_ASW_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Emerald Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_gun_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Amphion Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_gun_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Edinburgh Class"
-#	type = light_cruiser_2
-#	upgrades = {
-#		ship_reliability_upgrade = 3
-#		ship_engine_upgrade = 3
-#		ship_gun_upgrade = 3
-#		ship_anti_air_upgrade = 3
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "County Class"
-#	type = heavy_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_armor_upgrade = 2
-#		ship_gun_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Admiral Class"
-#	type = battle_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Nelson Class"
-#	type = battleship_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
-
-### Variants ###
-# Submarines #
-create_equipment_variant = {
-	name = "O/P/R Class"
-	type = submarine_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 3
-		sub_engine_upgrade = 2
-		sub_stealth_upgrade = 2
-		sub_torpedo_upgrade = 3
-	}
-}
-create_equipment_variant = {
-	name = "S Class"
-	type = submarine_1
-	parent_version = 1
-	upgrades = {
-		ship_reliability_upgrade = 2
-		sub_engine_upgrade = 0
-		sub_stealth_upgrade = 2
-		sub_torpedo_upgrade = 3
-	}
-}
-# Destroyers #
-create_equipment_variant = {
-	name = "A/B/C/D Class"
-	type = destroyer_1
-	parent_version = 0
-	upgrades = {
-		ship_torpedo_upgrade = 1
-		destroyer_engine_upgrade = 3
-		ship_ASW_upgrade = 2
-		ship_anti_air_upgrade = 1
-	}
-	obsolete = yes
-}
-# Light Cruisers #
-create_equipment_variant = {
-	name = "Emerald Class"
-	type = light_cruiser_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 3
-		ship_engine_upgrade = 3
-		ship_gun_upgrade = 2
-		ship_anti_air_upgrade = 3
-	}
-	obsolete = yes
-}
-create_equipment_variant = {
-	name = "Amphion Class"
-	type = light_cruiser_1
-	parent_version = 1
-	upgrades = {
-		ship_reliability_upgrade = 3
-		ship_engine_upgrade = 3
-		ship_gun_upgrade = 3
-		ship_anti_air_upgrade = 3
-	}
-}
-# Heavy Cruisers #
-create_equipment_variant = {
-	name = "County Class"
-	type = heavy_cruiser_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 2
-		ship_engine_upgrade = 3
-		ship_armor_upgrade = 3
-		ship_gun_upgrade = 3
-	}
-}
-# Battlecruisers #
-create_equipment_variant = {
-	name = "Admiral Class"
-	type = battle_cruiser_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 3
-		ship_engine_upgrade = 2
-		ship_armor_upgrade = 3
-		ship_gun_upgrade = 2
-	}
-}
-# Battleships #
-create_equipment_variant = {
-	name = "Nelson Class"
-	type = battleship_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 3
-		ship_engine_upgrade = 2
-		ship_armor_upgrade = 3
-		ship_gun_upgrade = 3
-	}
-}
-create_equipment_variant = {
-	name = "Queen Elizabeth Class"
-	type = battleship_1
-	parent_version = 0
-	upgrades = {
-		ship_reliability_upgrade = 1
-		ship_engine_upgrade = 2
-		ship_armor_upgrade = 1
-	}
-}
-
-1939.1.1 = {
-	create_equipment_variant = {
-		name = "Tribal Class"
-		type = destroyer_2
-		upgrades = {
-			ship_torpedo_upgrade = 2
-			destroyer_engine_upgrade = 2
-			ship_ASW_upgrade = 2
-			ship_anti_air_upgrade = 2
-		}
-	}
-	create_equipment_variant = {
-		name = "Edinburgh Class"
-		type = light_cruiser_2
-		upgrades = {
-			ship_reliability_upgrade = 3
-			ship_engine_upgrade = 3
-			ship_gun_upgrade = 3
-			ship_anti_air_upgrade = 3
-		}
 	}
 }

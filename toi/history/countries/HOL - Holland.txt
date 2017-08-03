@@ -1,199 +1,123 @@
 ﻿capital = 7
 
-oob = "HOL_1936"
+oob = "HOL_1861"
 
-set_research_slots = 3
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 80
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
+	ruling_party = traditional_conservatism
+}
 
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_support = 1		
-	tech_recon = 1
-	early_fighter = 1
-	early_bomber = 1
-	early_submarine = 1
-	basic_destroyer = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	basic_light_cruiser = 1
-	early_heavy_cruiser = 1
-	transport = 1
+	rifle_equipment1 = 1
+	rifle_equipment2 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	rml_field_gun = 1
+	early_rockets = 1
+	spin_stabilised_rockets = 1
 }
 
-# DIPLOMACY
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = INS
-		autonomous_state = autonomy_integrated_puppet
-	}
-	else = {
-		puppet = INS
-	}
+create_country_leader = {
+    name = "Jacob van Zuylen van Nijevelt"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait__.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 
-
-1939.1.1 = {
-	add_ideas = {
-		limited_conscription
-	}
-
-	add_political_power = 1198
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	oob = "HOL_1939"
-	set_technology = {
-		gw_artillery = 1
-		tech_engineers = 1
-		motorised_infantry = 1
-		fighter1 = 1
-		tactical_bomber1 = 1
-		naval_bomber1 = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		interwar_antiair = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		basic_submarine = 1
-		improved_light_cruiser = 1
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_plant = 1
-		improved_oil_plant = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-}
+1857.5.11 = {
+oob = "HOL_1857"
 
 set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 80
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-	parties = {
-		liberal_conservatism = { 
-			popularity = 93
-		}
-
-		totalitarian_nationalism = {
-			popularity = 4
-		}
-		
-		marxism_leninism = {
-			popularity = 3
-		}
-	}
-	
-	ruling_party = liberal_conservatism
-	last_election = "1933.4.26"
-	election_frequency = 48
-	elections_allowed = yes
+	ruling_party = traditional_conservatism
 }
 
-set_convoys = 500
-set_national_unity = 0.75
-
-create_country_leader = {
-	name = "Dirk Jan de Geer"
-	desc = "POLITICS_DIRK_JAN_DE_GEER_DESC"
-	picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Anton Mussert"
-	desc = "POLITICS_ANTON_MUSSERT_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
 }
 
 create_country_leader = {
-	name = "Lou de Visser"
-	desc = "POLITICS_LOU_DE_VISSER_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
+    name = "Justinus van der Brugghen"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait__.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
-
-create_country_leader = {
-	name = "Hendrikus Colijn"
-	desc = "POLITICS_HENDRIKUS_COLJIN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Petrus Wilhelmus Best"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-	traits = { panzer_leader fortress_buster }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Johannes Theodorus Furstner"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
-	traits = { blockade_runner superior_tactician }
-	skill = 4
-}
-
-
-### Ship Variants ###
-
-create_equipment_variant = {
-	name = "K-XIV Class"
-	type = submarine_1
-	upgrades = {
-		ship_reliability_upgrade = 2
-		sub_engine_upgrade = 2
-		sub_stealth_upgrade = 2
-		sub_torpedo_upgrade = 2
-	}
 }

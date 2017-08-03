@@ -36,22 +36,36 @@ set_technology = {
 
 set_politics = {
     parties = {
-      liberal_conservatism = {
-        popularity = 31
-      }
-			traditional_conservatism = {
-				popularity = 64
-			}
-
-      totalitarian_nationalism = {
-        popularity = 1
-      }
-      marxism_leninism = {
-        popularity = 2
-      }
-      despotic_autocracy = {
-        popularity = 2
-      }
+		economic_liberalism = {
+			popularity = 31
+		}
+		traditional_conservatism = {
+			popularity = 64
+		}
+		social_democracy = {
+			popularity = 0
+		}
+		radical_socialism = {
+			popularity = 0
+		}
+		marxism_leninism = {
+			popularity = 0
+		}
+		despotic_autocracy = {
+			popularity = 0
+		}
+		parliamental_oligarchy = {
+			popularity = 0
+		}
+		totalitarian_nationalism = {
+			popularity = 0
+		}
+		rexism_falangism = {
+			popularity = 0
+		}
+		theocracy = {
+			popularity = 0
+		}
     }
 
     ruling_party = traditional_conservatism
@@ -65,7 +79,7 @@ create_country_leader = {
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_CSA_Jefferson_Davis.dds"
 	expire = "1965.1.1"
-	ideology = federalist
+	ideology = federal
 	traits = {
 
 	}

@@ -98,6 +98,28 @@ ideas = {
 	# Special ones that can be applied on other countries through focus system.
 	country = {
 
+		#State not anarchist, merely lacking government
+		uncentralised_state = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_factor = -0.8
+			}
+		}
+
+		#Unrecognised as nation by surrouders
+		unrecognised_state = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+
 		#Event causes decide between To the Border(Rush to border), Raise Forces(Quicker recruitment/higher manpower), Doctrinal Planning(Increased planning/defense)
 		to_the_border = {
 			allowed = {
@@ -142,55 +164,6 @@ ideas = {
 				dig_in_speed_factor = 0.3
 				max_dig_in = 10
 			}
-		}
-
-		siege_tactics = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_attack_factor = 0.03
-				army_speed_factor = 0.10
-				army_morale_factor = 0.05
-			}
-
-			picture = sumter
-
-		}
-
-		first_step = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_speed_factor = 0.2
-				army_morale_factor = 0.1
-			}
-
-		}
-
-		rally_for_sumter = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				unity_factor = 0.03
-				planning_speed = 0.05
-			}
-
-			picture = sumter
 		}
 
 		nationalism = {
@@ -654,6 +627,26 @@ ideas = {
 	#Slave laws
 	political_advisor = {
 		# POLITICAL
+		#Classical Slaves
+		classical_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.2
+			production_speed_building_factor = 0.2
+			local_resources_factor = 0.5
+			unity_factor = -0.15
+		}
+
+		#Work force level slaves
 		allowed_slaves = {
 			picture = generic_tank_manufacturer_1
 
@@ -672,6 +665,44 @@ ideas = {
 			unity_factor = -0.1
 		}
 
+		#Modernised Slaves
+		modernised_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.02
+			production_speed_building_factor = 0.02
+			local_resources_factor = 0.05
+		}
+
+		#Social structural slaves
+		social_slaves = {
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = political_advisor limit = 1 }
+				}
+			}
+
+			cost = 400
+			removal_cost = 10
+
+			production_factory_max_efficiency_factor = 0.03
+			production_speed_building_factor = 0.03
+			local_resources_factor = 0.06
+			unity_factor = 0.03
+		}
+
+		#Completely banned slaves
 		banned_slaves = {
 			picture = generic_tank_manufacturer_1
 

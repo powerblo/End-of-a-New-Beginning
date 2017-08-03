@@ -1,0 +1,37 @@
+capital = 437
+
+1857.5.11 = {
+OOB = "KAR_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+    }
+
+    ruling_party = despotic_autocracy
+}
+
+create_country_leader = {
+  name = "Randhir Singh"
+  desc = "POLITICS_Randhir_DESC"
+  picture = "Portrait_India_Randhir.dds"
+  expire = "1870.4.2"
+  ideology = despotism
+  traits = {
+
+  }
+}
+
+}

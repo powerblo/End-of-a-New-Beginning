@@ -62,7 +62,7 @@ set_convoys = 5
 set_politics = {
 
 	parties = {
-		liberal_conservatism = { 
+		economic_liberalism = { 
 			popularity = 40
 		}
 
@@ -76,7 +76,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = liberal_conservatism
+	ruling_party = economic_liberalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -86,7 +86,7 @@ create_country_leader = {
 	name = "Ahmed Hilmi Pasha"
 	desc = ""
 	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_navy_1.dds"
-	ideology = liberalism
+	ideology = market_liberal
 	traits = {
 		#
 	}
@@ -96,7 +96,7 @@ create_country_leader = {
 	name = "Amin al-Husseini"
 	desc = ""
 	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_land_2.dds"
-	ideology = fascism_ideology
+	ideology = fascism
 	traits = {
 		#
 	}

@@ -1,0 +1,125 @@
+focus_tree = {
+	id = usa_focus
+
+	default = no
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+
+	reset_on_civilwar = no
+
+  focus = {
+    id = csa_our_government
+    icon =
+    x = 11
+    y = 1
+    cost = 5
+
+    available_if_capitulated = no
+
+    prerequisite = {
+
+    }
+
+    completion_reward = {
+      add_political_power = 100
+      remove_ideas = anarchist_state
+
+    }
+
+
+  }
+
+  focus = {
+    id = csa_establish_constitution
+    icon =
+    x = 7
+    y = 2
+    cost = 5
+
+    available_if_capitulated = no
+
+    prerequisite = {
+      focus = csa_our_government
+    }
+
+    completion_reward = {
+      add_political_power = 50
+      add_national_unity = 0.1
+    }
+
+
+  }
+
+  focus = {
+    id = csa_strike_sumter
+    icon =
+    x = 7
+    y = 3
+    cost = 5
+
+    available_if_capitulated = no
+
+    prerequisite = {
+      focus = csa_establish_constitution
+    }
+
+    completion_reward = {
+      declare_war_on = {target = USA type = annex_everything}
+      hidden = {
+        set_global_flag = american_civil_war
+      }
+    }
+
+
+  }
+
+  focus = {
+    id = csa_war_soldiers
+    icon =
+    x = 3
+    y = 4
+    cost = 10
+
+    available_if_capitulated = yes
+
+    prerequisite = {
+      focus = csa_strike_sumter
+    }
+
+    completion_reward = {
+      army_experience = 10
+      country_event = {id = csa.}
+    }
+
+
+  }
+
+  focus = {
+    id = csa_quick_surge
+    icon =
+    x = 2
+    y = 5
+    cost = 10
+
+    available_if_capitulated = yes
+
+    prerequisite = {
+      focus = csa_war_soldiers
+    }
+
+    completion_reward = {
+      //Armies move faster, and have larger bonuses from winning "battles"
+      add_ideas = quick_surge
+    }
+
+
+  }
+
+}

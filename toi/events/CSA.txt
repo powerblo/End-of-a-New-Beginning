@@ -1,4 +1,64 @@
 add_namespace = csa
+#100s: General Events
+#Bimonthly conscription
+country_event = {
+  id = csa.100
+  title = csa.100.t
+  desc = csa.100.d
+
+  trigger = {
+    OR = {
+      has_ideas = parliamental_conscript
+    }
+    tag = CSA
+  }
+
+  mean_time_to_happen = {
+    days = 60
+  }
+
+  immediate = {
+    if = {
+      limit = {
+        has_national_unity > 0.9
+      }
+      add_manpower = 50000
+    }
+    if = {
+      limit = {
+        has_national_unity < 0.9
+        has_national_unity > 0.8
+      }
+      add_manpower = 40000
+    }
+    if = {
+      limit = {
+        has_national_unity < 0.8
+        has_national_unity > 0.7
+      }
+      add_manpower = 30000
+    }
+    if = {
+      limit = {
+        has_national_unity < 0.7
+        has_national_unity > 0.6
+      }
+      add_manpower = 20000
+    }
+    if = {
+      limit = {
+        has_national_unity < 0.6
+      }
+      add_manpower = 10000
+    }
+    if = {
+      limit = {
+        has_ideas = parliamental_conscript
+      }
+      add_manpower = 10000
+    }
+  }
+}
 
 #300s: Midwar Events
 #Change of capital
@@ -7,14 +67,7 @@ country_event = {
   title = csa.300.t
   desc = csa.300.d
   fire_only_once = yes
-
-  trigger = {
-    TAG = CSA
-  }
-
-  mean_time_to_happen = {
-    days = 300
-  }
+  is_triggered_only
 
   #Encourage the border states
   option = {
@@ -146,13 +199,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-    AND = {
     OR = {
       has_national_unity < 50
       surrender_progress > 0.7
     }
     TAG = CSA
-    }
 	}
 
   #Suppress voting
@@ -291,10 +342,148 @@ country_event = {
   }
 }
 
+#First Confederate States Congress : Slavery
+country_event = {
+  id = csa.410
+  title = csa.401.t
+  desc = csa.401.d
+
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  #Revert to the classical slavery system
+  option = {
+    name = csa.410.a
+    hidden = {
+      set_country_flag = fcsc_revert
+    }
+  }
+
+  #Remain the status quo
+  option = {
+    name = csa.410.b
+    add_political_power = 80
+    hidden = {
+      set_country_flag = fcsc_statusq
+    }
+  }
+
+  #Open up for change
+  option = {
+    name = csa.410.c
+    hidden = {
+      set_country_flag = fcsc_progress
+      country_event = {id = csa.411 days = 5}
+    }
+  }
+}
+
+#When opening up for change : closer to news, public and officials request for official opinion
+country_event = {
+  id = csa.411
+  title = csa.411.t
+  desc = csa.411.d
+  #Mostly higher officials unhappy with decision
+
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    add_political_power = -10
+  }
+
+  #Perhaps USA may be better
+  option = {
+    name = csa.411.a
+    hidden = {
+      USA = {set_country_flag = usa_sympathy}
+      set_country_Flag = usa_sympathy
+      news_event = {id = csa.4111 days = 1}
+    }
+  }
+
+  #Not that radical...
+  option = {
+    name = csa.411.b
+    hidden = {
+      news_event = {id = csa.4112 days = 1}
+    }
+  }
+}
+
+#Sympathy towards USA system
+news_event = {
+  id = csa.4111
+  title = csa.4111.t
+  desc = csa.4111.d
+
+  option = {
+    name = csa.4111.a
+  }
+}
+
+#Second Confederate States Congress : Improve Rights
+country_event = {
+  id = csa.412
+  title = csa.412.t
+  desc = csa.412.d
+
+  is_triggered_only = yes
+
+  #Increase productivity and reform
+  option = {
+    name = csa.412.a
+    hidden = {
+      set_country_flag = sscs_reform
+    }
+  }
+
+  #Encourage more human rights
+  option = {
+    name = csa.412.b
+    hidden = {
+      set_country_flag = sscs_rights
+    }
+  }
+}
+
+#Second Confederate States Congress : Further Develop Caste
+country_event = {
+  id = csa.413
+  title = csa.413.t
+  desc = csa.413.d
+
+  is_triggered_only = yes
+
+  #
+}
+
+#Not such radical changes
+news_event = {
+  id = csa.4112
+  title = csa.4112.t
+  desc = csa.4112.d
+
+  option = {
+    name = csa.4112.a
+  }
+}
+
+#Confederate council promotes war effort
+country_event = {
+  id = csa.415
+}
+
 #500s: Diplomatic Events
-#CSA requests international recognition
+#CSA invests in diplomacy : Start of diplomatic event chain
 country_event = {
   id = csa.500
+
+}
+
+#CSA requests international recognition
+country_event = {
+  id = csa.505
 
 }
 

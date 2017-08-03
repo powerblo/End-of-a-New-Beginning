@@ -1,7 +1,7 @@
+add_namespace = USA
+
 focus_tree = {
 	id = usa_focus
-
-	default = no
 
 	country = {
 		factor = 0
@@ -10,67 +10,685 @@ focus_tree = {
 			add = 10
 			tag = USA
 		}
+
+		modifier = {
+			add = 10
+			original_tag = USA
+		}
 	}
 
-	reset_on_civilwar = no
+	default = no
 
 	focus = {
-		id = closer_to_britain
-		icon =
+		id = USA_election_of_1860
+		icon = GFX_goal_support_democracy
+		cost = 1.00
+		x = 6
+		y = 0
+		available = {
+				is_puppet = no
+				has_government = democratic
+				date > 1860.12.1
+			}
+		completion_reward = {
+			USA = {
+				country_event = doe_usa.1
+			}
+		}
+
+	}
+
+	focus = {
+		id = USA_treaty_of_columbia  
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		mutually_exclusive = {
+			focus = jefferson_folly
+		}
+
+		prerequisite = {
+			focus = reconquest_rebel_states
+		}
+
+		x = 4
+		y = 5
+		available = {
+			is_puppet = no
+			date > 1864.1.1
+		}
+
+		completion_reward = {
+			CSA = {
+				country_event = doe_usa.18
+			}
+		}
+	}
+
+	focus = {
+		id = USA_jefferson_folly
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		mutually_exclusive = {
+			focus = treaty_of_columbia
+		}
+
+		prerequisite = {
+			focus = reconquest_rebel_states
+		}
+		x = 8
+		y = 5
+
+		completion_reward = {
+			add_state_core = 364 #South Carolina
+			add_state_core = 370 #Mississippi
+			add_state_core = 366 #Florida
+			add_state_core = 367 #Alabama
+			add_state_core = 365 #Georgia
+			add_state_core = 371 #Louisiana
+			add_state_core = 375 #Texas
+			add_state_core = 362 #Virginia
+			add_state_core = 372 #Arkansas
+			add_state_core = 368 #Tennessee
+			add_state_core = 363 #North Carolina
+		}
+	}
+
+	focus = {
+		id = USA_first_virginia_award
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = treaty_of_columbia
+		}
+		x = 4
+		y = 6
+
+		available = {
+			has_country_flag = civil_war_over
+		}
+
+		completion_reward = {
+			USA = {
+				country_event = { id = doe_usa.13 days = 1}
+			}
+
+			CSA = {
+				country_event = { id = doe_usa.14 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_ordinance_of_secession
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = election_of_1860
+		}
 		x = 6
 		y = 1
-		cost = 5
-
+		available = {
+				always = no
+			}
+		bypass = {
+				date > 1861.1.20
+			}
 		completion_reward = {
-			#Event USA draws closer to Britain happens
-			country_event = usa.500
-			add_opinion_modifier = { target = ENG modifier = closer_to_britain}
+			news_event = {
+				id = worldnews.5
+				days = 1
+			}
+			set_country_flag = ordinance_of_secession
 		}
+
 	}
 
 	focus = {
-		id = reestablish_relations
-		icon =
+		id = USA_invasion_of_fort_sumter
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = ordinance_of_secession
+		}
 		x = 6
 		y = 2
-		cost = 10
-
-		completion_reward = {
-			#Add opinion modifier with Britain
-			add_opinion_modifier = { target = ENG modifier = royal_relations}
-			hidden = {
-				remove_opinion_modifier = {target = ENG modifier = closer_to_britain}
-				add_popularity = {ideology = parliarmental_oligarchy popularity = 0.05}
-			}
-			#Add country spirit Royal relations
-			add_ideas = royal_relations
+		available = {
+			always = no
+		}
+		bypass = {
+			date > 1861.4.12
 		}
 	}
 
 	focus = {
-		id = british_support
-		icon =
+		id = USA_mobilisation_of_the_states
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = invasion_of_fort_sumter
+		}
+		x = 1
+		y = 3
+			
+		available {
+			has_country_flag = civil_war
+		} 
+		completion_reward = {
+
+				add_ideas = {
+					accelerated_growth
+				}
+				
+				389 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+				390 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+				394 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = USA_emancipation_proclamation
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = invasion_of_fort_sumter
+		}
 		x = 6
 		y = 3
+
+		completion_reward = {
+			set_country_flag = emancipation_proclamation
+		}
+
+	}
+
+	focus = {
+		id = USA_reconquest_rebel_states
+		icon = GFX_goal_generic_major_war
 		cost = 10
+		prerequisite = {
+			focus = emancipation_proclamation
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 99999 }
+		}
+		x = 6
+		y = 4
 
-		bypass = {
-			OR = {
-				AND = {
-					ENG = {has_war_with = CSA}
-					ENG = {has_war_together_with = USA}
-				}
-				AND = {
-					ENG = {has_war_with = USA}
-					ENG = {has_war_together_with = CSA}
-				}
-			}
+		completion_reward = {
+			set_country_flag = reconquest_rebel_states
+		}
+	}
 
+	focus = {
+		id = USA_reconstruction_of_realm
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = jefferson_folly
+		}
+		x = 8
+		y = 6
+
+		available = {
+			has_country_flag = civil_war_over
 		}
 
 		completion_reward = {
-			#Britain gets event to join war
-			ENG = {country_event = britain.500}
+			add_ideas = { reconstruction_era }
+		}
+	}
+
+	focus = {
+		id = USA_election_of_1864
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = first_virginia_award
+			focus = reconstruction_of_realm
+		}
+		x = 6
+		y = 7
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			date > 1864.12.9
+		}
+
+		completion_reward = {
+			USA = {
+				country_event = doe_usa.15
+			}
+		}
+	}
+
+	focus = {
+		id = USA_reorganised_draft_law 
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = invasion_of_fort_sumter
+		}
+		x = 13
+		y = 3
+
+		completion_reward = {
+			add_ideas = limited_conscription
+		}
+	}
+
+	focus = {
+		id = USA_lincoln_minutemen
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = reorganised_draft_law
+		}
+		x = 13
+		y = 4
+
+		completion_reward = {
+			USA = {
+				country_event = doe_usa.17
+			}
+		}
+	}
+
+	focus = {
+		id = USA_pressure_border_states
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = lincoln_minutemen
+		}
+		mutually_exclusive = {
+			focus = western_territorial_expansion
+		}
+		x = 11
+		y = 5
+
+		completion_reward = {
+			USA = {
+				transfer_state = 369
+				transfer_state = 373
+			}
+			add_political_power = 50	
+		}
+	}
+
+	focus = {
+		id = USA_found_springfield_federal_academy
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = mobilisation_of_the_states
+		}
+		x = 1
+		y = 4
+
+		completion_reward = {
+			395 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			395 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			set_country_flag = springfield_federal_academy
+		}
+	}
+
+	focus = {
+		id = USA_national_treasury_reform
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = found_springfield_federal_academy
+		}
+		x = 1
+		y = 5
+
+		completion_reward = {
+			add_ideas = closed_economy
+			set_country_flag = USA_national_treasury_reform
+		}
+	}
+
+	focus = {
+		id = USA_establishment_of_internal_revenue_bureau
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = national_treasury_reform
+		}
+		x = 1
+		y = 6
+
+		ai_will_do = {
+			factor = 0 
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = USA_internal_revenue_bureau
+			set_country_flag = USA_internal_revenue_bureau
+			add_ideas = { effects_of_IRB }
+		}
+	}
+
+	focus = {
+		id = USA_reintroduce_income_tax
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = establishment_of_internal_revenue_bureau
+		}
+		x = 1
+		y = 7
+
+		completion_reward = {		
+			add_ideas = { reintroduce_i_tax }
+			remove_ideas = { effects_of_IRB }
+			set_country_flag = i_tax
+		}
+
+	}
+
+	focus = {
+		id = USA_western_territorial_expansion
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = lincoln_minutemen
+		}
+		mutually_exclusive = {
+			focus = pressure_border_states
+		}
+		x = 15
+		y = 5
+
+		completion_reward = {
+			390 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			381 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			388 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			387 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			389 = {
+				if = {
+					limit = { is_controlled_by = ROOT}
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			392 = {
+				if = {
+					limit = { is_controlled_by = ROOT}
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}		
+	}
+
+
+	focus = {
+		id = USA_eastern_pacific_agreement
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = western_territorial_expansion
+			focus = pressure_border_states
+		}
+		mutually_exclusive = {
+			focus = kentucky_maneuver
+		}
+		x = 15
+		y = 6
+
+		completion_reward = {
+			USA = { puppet = CAL }  #CAL is tag for California
+		}
+	}
+
+	focus = {
+		id = USA_kentucky_maneuver
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = pressure_border_states
+		}
+		mutually_exclusive = {
+			focus = eastern_pacific_agreement
+		}
+		x = 11
+		y = 6
+
+		available = {
+			CSA = {
+				controls_state = 368
+			}
+		}
+
+		completion_reward = {
+			USA = { transfer_state = 369 }
+
+			368 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7615
+					instant_build = yes
+				}
+			}
+
+			368 ={
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1987
+					instant_build = yes
+				}
+			}
+
+			368 ={
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12670
+					instant_build = yes
+				}
+			}
+
+			368 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 8083
+					instant_build = yes
+				}
+			}
+
+			368 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10657
+					instant_build = yes
+				}
+			}
+
+			368 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 913
+					instant_build = yes
+				}
+			}
+
+			368 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 8014
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_anaconda_plan
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10
+		prerequisite = {
+			focus = kentucky_maneuver
+			focus = eastern_pacific_agreement
+		}
+		x = 11
+		y = 7
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			CSA = {
+				add_ideas = { crippled_overseas_trade }
+				add_ideas = { closed_economy }
+			}
+			set_global_flag = anaconda_plan
+
+			create_navy_leader = {
+				name = "Samuel Perry Carter"
+					picture = "spcarter.dds"
+				traits = { superior_tactician spotter }
+				skill = 3
+			}
+		}
+	}
+
+	focus = {
+		id = USA_secure_new_york
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = kentucky_maneuver
+			focus = eastern_pacific_agreement
+		}
+		x = 15
+		y = 7
+
+		available = {
+			has_country_flag = bread_riots
+		}
+
+		bypass = {
+			has_country_flag = civil_war_over
+		}
+
+		completion_reward = {
+			clr_country_flag = secure_new_york
+			USA = {
+				country_event = { id = doe_usa.23 days = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = USA_lee_last_stand
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = secure_new_york
+		}
+		prerequisite = {
+			focus = anaconda_plan
+		}
+		x = 13
+		y = 8
+
+		completion_reward = {
+			USA = {
+				country_event = { id = doe_usa.24 days = 2}
+			}
 		}
 	}
 }

@@ -1,24 +1,31 @@
 ideologies = {
-	liberal_conservatism = {
+	economic_liberalism = {
 
 		types = {
 
-			conservatism = {
+			conserv_liberal = {
 			}
 
-			liberalism = {
+			social_liberal = {
 			}
 
-			socialism = {
+			radical_liberal = {
+			}
+
+			anarcho_capital = {
+			}
+
+			market_liberal = {
+
 			}
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_LIBCON_1"
-			"FACTION_NAME_LIBCON_2"
-			"FACTION_NAME_LIBCON_3"
-			"FACTION_NAME_LIBCON_4"
-			"FACTION_NAME_LIBCON_5"
+			"FACTION_NAME_ECOLIB_1"
+			"FACTION_NAME_ECOLIB_2"
+			"FACTION_NAME_ECOLIB_3"
+			"FACTION_NAME_ECOLIB_4"
+			"FACTION_NAME_ECOLIB_5"
 		}
 
 		color = { 0 250 255 }
@@ -40,12 +47,26 @@ ideologies = {
 
 		types = {
 
-				toryist = {
+				toryism = {
 
 				}
 
-				federalist = {
+				federal = {
 
+				}
+
+				reactionary ={
+
+				}
+
+				neoconserv = {
+				}
+
+				conserv = {
+
+				}
+
+				moderatism = {
 				}
 		}
 
@@ -72,114 +93,28 @@ ideologies = {
 
 	}
 
-	reactionary = {
+	social_democracy = {
 
 		types = {
-
-			reactionary = {
-				
+			bernstein = {
 			}
 
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_REAC_1"
-			"FACTION_NAME_REAC_2"
-			"FACTION_NAME_REAC_3"
-			"FACTION_NAME_REAC_4"
-			"FACTION_NAME_REAC_5"
-		}
-
-		color = { 0 50 255 }
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_force_government = no
-			can_puppet = no
-			can_send_volunteers = no
-		}
-
-		ai_democratic = yes
-
-	}
-
-	social_liberalism = {
-
-		types = {
-			modern_liberalism = {
-
+			liberal_social = {
 			}
 
-			social_liberalism = {
+			market_social = {
+			}
 
+			third = {
 			}
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_SOCLIB_1"
-			"FACTION_NAME_SOCLIB_2"
-			"FACTION_NAME_SOCLIB_3"
-			"FACTION_NAME_SOCLIB_4"
-			"FACTION_NAME_SOCLIB_5"
-		}
-
-		color = { 255 150 0 }
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_force_government = no
-			can_puppet = no
-			can_send_volunteers = no
-		}
-
-		ai_democratic = yes
-
-	}
-
-	economic_liberalism = {
-
-		types = {
-
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_ECOLIB_1"
-			"FACTION_NAME_ECOLIB_2"
-			"FACTION_NAME_ECOLIB_3"
-			"FACTION_NAME_ECOLIB_4"
-			"FACTION_NAME_ECOLIB_5"
-		}
-
-		color = { 255 255 0 }
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_force_government = no
-			can_puppet = no
-			can_send_volunteers = no
-		}
-
-		ai_democratic = yes
-
-	}
-
-	democratic_socialism = {
-
-		types = {
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_CENTSOC_1"
-			"FACTION_NAME_CENTSOC_2"
-			"FACTION_NAME_CENTSOC_3"
-			"FACTION_NAME_CENTSOC_4"
-			"FACTION_NAME_CENTSOC_5"
+			"FACTION_NAME_SOCDEM_1"
+			"FACTION_NAME_SOCDEM_2"
+			"FACTION_NAME_SOCDEM_3"
+			"FACTION_NAME_SOCDEM_4"
+			"FACTION_NAME_SOCDEM_5"
 		}
 
 		color = { 255 0 0 }
@@ -208,6 +143,20 @@ ideologies = {
 	radical_socialism = {
 
 		types = {
+			stalinism = {
+			}
+
+			trotskyism = {
+			}
+
+			owensim = {
+			}
+
+			anarchism = {
+			}
+
+			religious_social = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -251,13 +200,10 @@ ideologies = {
 			leninism = {
 			}
 
-			stalinism = {
+			maoism = {
 			}
 
 			anti_revisionism = {
-			}
-
-			anarchist_communism = {
 			}
 		}
 
@@ -296,16 +242,19 @@ ideologies = {
 
 		types = {
 
-			despotism  = {
+			despotism = {
 			}
 
-			oligarchism  = {
+			tribe = {
 			}
 
-			moderatism = {
+			absolutism = {
 			}
 
-			centrism = {
+			constit_monarch = {
+			}
+
+			dictator = {
 			}
 		}
 
@@ -351,6 +300,17 @@ ideologies = {
 	parliamental_oligarchy = {
 
 		types = {
+			oligarchism = {
+			}
+
+			parlia_repub = {
+			}
+
+			plutocracy = {
+			}
+
+			military_junta = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -399,13 +359,13 @@ ideologies = {
 			nazism = {
 			}
 
-			fascism_ideology = {
+			fascism = {
 			}
 
-			falangism = {
+			neofascism = {
 			}
 
-			rexism = {
+			cleric_fascism = {
 			}
 		}
 
@@ -439,6 +399,21 @@ ideologies = {
 	rexism_falangism = {
 
 		types = {
+			rexism = {
+			}
+
+			falangism = {
+			}
+
+			francoism = {
+			}
+
+			tropical = {
+			}
+
+			social_fascism = {
+			}
+
 		}
 
 		dynamic_faction_names = {
@@ -480,7 +455,7 @@ ideologies = {
 
 			}
 
-			own_religion = {
+			other = {
 
 			}
 

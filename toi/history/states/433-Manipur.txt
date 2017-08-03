@@ -1,14 +1,9 @@
 
 state={
 	id=433
-	name="STATE_433" # Rajasthan
-	manpower = 11786000
-	
-	state_category = town
-	
-	
+	name="STATE_433"
 	resources={
-		tungsten=42
+		tungsten=42.000
 	}
 
 	history={
@@ -16,11 +11,15 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+
 		}
 
 	}
 
 	provinces={
-		1199 1908 2054 4149 4915 4971 4984 7905 7998 10847 10866 12041 12718 12743 12829 12844 12876 12886 
+		1199 4149 4971 4984 10847 10866 12041 12718 12743 12829 12844 12876 12886 
 	}
+	manpower=11786000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

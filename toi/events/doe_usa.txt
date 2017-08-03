@@ -1,0 +1,1358 @@
+add_namespace = doe_usa
+
+# Election of 1860
+country_event = {
+	id = doe_usa.1
+	title = doe_usa.1.t
+	desc = doe_usa.1.d
+	picture = "PLACEHOLDER"
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.1.a
+		create_country_leader = {
+			name = "Abraham Lincoln"
+			desc = "POLITICS_ABRAHAM_LINCOLN_DESC"
+			picture = "lincoln.dds"
+			expire = "1866.1.1"
+			ideology = liberalism
+			traits = {
+
+			}
+		}
+		news_event = { hours = 1 id = worldnews.1}
+		add_ideas = question_on_slavery
+		set_party_name = {
+			ideology = democratic
+			long_name = doe_USA_republican_party
+			name = doe_USA_republican_party
+		}
+	}
+}
+
+# Invasion of Fort Sumter
+country_event = {
+	id = doe_usa.2
+	title = doe_usa.2.t
+	desc = doe_usa.2.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war_ready
+		USA = {
+			has_completed_focus = invasion_of_fort_sumter
+		}
+	}
+
+	option = {
+		name = doe_usa.2.a
+		remove_ideas = question_on_slavery
+		news_event = { hours = 1 id = worldnews.2}
+		set_country_flag = civil_war
+		declare_war_on = {
+			target = CSA type = annex_everything
+		}
+	}
+}
+
+# Internal Revenue Bureau Secession negative event 
+country_event = {
+	id = doe_usa.3
+	title = doe_usa.3.t
+	desc = doe_usa.3.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = internal_revenue_bureau
+	}
+
+	option = {
+		name = doe_usa.3.a
+		random_list = {
+			40 = {
+				add_political_power = 50
+			}
+
+			30 = {
+				country_event = { id = doe_usa.4 days = 1}
+			}
+
+			20 = {
+				country_event = { id = doe_usa.4 days = 1}
+				country_event = { id = doe_usa.5 days = 3}
+			}
+
+			10 = {
+				country_event = { id = doe_usa.4 days = 1}
+				country_event = { id = doe_usa.5 days = 3}
+				country_event = { id = doe_usa.6 days = 5}
+			}
+		}
+	}
+}
+
+# First Secession Event from Internal Revenue Bureau
+country_event = {
+	id = doe_usa.4
+	title = doe_usa.4.t
+	desc = doe_usa.4.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.4.a
+		add_manpower = -5000
+	}
+}
+
+# Second Secession Event from Internal Revenue Bureau
+country_event = {
+	id = doe_usa.5
+	title = doe_usa.5.t
+	desc = doe_usa.5.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.5.a
+		add_manpower = -2000
+	}
+}
+
+# Third Secession Event from Internal Revenue Bureau
+country_event = {
+	id = doe_usa.6
+	title = doe_usa.6.t
+	desc = doe_usa.6.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.6.a
+		add_manpower = -10000
+	}
+}
+
+# Emancipation Proclamation - South Carolina
+country_event = {
+	id = doe_usa.7
+	title = doe_usa.7.t
+	desc = doe_usa.7.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					364 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.7.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Mississippi
+country_event = {
+	id = doe_usa.38    # Numbering for Emancipation Proclamation events is weird due to human error
+	title = doe_usa.38.t
+	desc = doe_usa.38.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					370 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.38.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Florida
+country_event = {
+	id = doe_usa.39
+	title = doe_usa.39.t
+	desc = doe_usa.39.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					366 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.39.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Alabama 
+country_event = {
+	id = doe_usa.40
+	title = doe_usa.40.t
+	desc = doe_usa.40.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					367 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.40.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Georgia
+country_event = {
+	id = doe_usa.41
+	title = doe_usa.41.t
+	desc = doe_usa.41.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					365 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.41.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Louisiana
+country_event = {
+	id = doe_usa.42
+	title = doe_usa.42.t
+	desc = doe_usa.42.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					371 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.42.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Texas
+country_event = {
+	id = doe_usa.43
+	title = doe_usa.43.t
+	desc = doe_usa.43.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					375 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.43.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Virginia
+country_event = {
+	id = doe_usa.44
+	title = doe_usa.44.t
+	desc = doe_usa.44.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					362 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.44.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Arkansas
+country_event = {
+	id = doe_usa.45
+	title = doe_usa.45.t
+	desc = doe_usa.45.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					372 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.45.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - Tennessee
+country_event = {
+	id = doe_usa.46
+	title = doe_usa.46.t
+	desc = doe_usa.46.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					368 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.46.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+# Emancipation Proclamation - North Carolina
+country_event = {
+	id = doe_usa.47
+	title = doe_usa.47.t
+	desc = doe_usa.47.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = emancipation_proclamation
+		if = {
+			limit = {
+				AND = {
+					363 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.47.a
+		add_manpower = 3000   #PLACEHOLDER FIGURE
+	}
+}
+
+# Senate debates Implementation of Income Tax
+country_event = {
+	id = doe_usa.8
+	title = doe_usa.8.t
+	desc = doe_usa.8.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = i_tax
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = doe_usa.8.a
+		remove_ideas = {
+			reintroduce_i_tax
+		}
+		add_ideas = {
+			tax_the_rich
+		}
+	}
+
+	option = {
+		name = doe_usa.8.b
+		remove_ideas = {
+			reintroduce_i_tax
+		}
+		add_ideas = {
+			tax_both
+		}
+	}
+}
+
+# Reconquest of the Rebel States - Arkansas
+country_event = {
+	id = doe_usa.9
+	title = doe_usa.9.t
+	desc = doe_usa.9.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = reconquest_rebel_states
+		if = {
+			limit = {
+				AND = {
+					372 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.9.a
+		add_state_core = 372
+	}
+}
+# Reconquest of the Rebel States - Tennessee
+country_event = {
+	id = doe_usa.10
+	title = doe_usa.10.t
+	desc = doe_usa.10.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = reconquest_rebel_states
+		if = {
+			limit = {
+				AND = {
+					368 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.10.a
+		add_state_core = 368
+	}
+}
+# Reconquest of the Rebel States - Louisiana
+country_event = {
+	id = doe_usa.11
+	title = doe_usa.11.t
+	desc = doe_usa.11.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = reconquest_rebel_states
+		if = {
+			limit = {
+				AND = {
+					371 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.11.a
+		add_state_core = 371
+	}
+}
+# Reconquest of the Rebel States - Mississippi
+country_event = {
+	id = doe_usa.12
+	title = doe_usa.12.t
+	desc = doe_usa.12.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = { has_country_flag = civil_war_over}
+		has_country_flag = reconquest_rebel_states
+		if = {
+			limit = {
+				AND = {
+					370 = {
+						owner = {original_tag = CSA}
+						is_controlled_by = USA
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.12.a
+		add_state_core = 370
+	}
+}
+
+#First Virginia Award - Tennessee ceded to Union
+country_event = {
+	id = doe_usa.13
+	title = doe_usa.13.t
+	desc = doe_usa.13.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.13.a
+		USA = { transfer_state = 368 }
+	}
+}
+
+#First Virginia Award - Virginia and Maryland ceded to Confederacy
+country_event = {
+	id = doe_usa.14
+	title = doe_usa.14.t
+	desc = doe_usa.14.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.14.a
+		CSA = { transfer_state = 362 }
+		CSA = { transfer_state = 361 }
+	}
+}
+
+#Election of 1864
+country_event = {
+	id = doe_usa.15
+	title = doe_usa.15.t
+	desc = doe_usa.15.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.15.a
+		add_political_power = 50
+	}
+}
+
+#Assassination of Lincoln
+country_event = {
+	id = doe_usa.16
+	title = doe_usa.16.t
+	desc = doe_usa.16.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1865.3.4
+	}
+
+	option = {
+		name = doe_usa.16.a
+		add_political_power = -50
+		create_country_leader = {
+			name = "Andrew Johnson"
+			desc = "POLITICS_ABRAHAM_LINCOLN_DESC"
+			picture = "johnson.dds"
+			expire = "1866.1.1"
+			ideology = conservatism
+			traits = {
+
+			}
+		}
+		news_event = { hours = 1 id = worldnews.3 }
+		set_party_name = {
+			ideology = democratic
+			long_name = doe_USA_democratic_party
+			name = doe_USA_democratic_party
+		}
+	}
+}
+
+# Lincoln's Minutemen
+country_event = {
+	id = doe_usa.17
+	title = doe_usa.17.t
+	desc = doe_usa.17.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.17.a
+		random_list = {
+			40 = {
+				add_manpower = 70000
+			}
+			60 = {
+				add_manpower = 45000
+			}
+		}
+	}
+}
+
+# Treaty of Columbia
+country_event = {
+	id = doe_usa.18
+	title = doe_usa.18.t
+	desc = doe_usa.18.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.18.a
+		CSA = { white_peace = USA }
+	}
+
+	option = {
+		name = doe_usa.18.b
+		add_political_power = -50
+	}
+}
+
+# New York Bread Riots
+country_event = {
+	id = doe_usa.19
+	title = doe_usa.19.t
+	desc = doe_usa.19.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		date > 1862.1.1
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = doe_usa.19.a
+		358 = {
+			random_list = {
+				50 = { damage_building = { type = infrastructure damage = 2} }
+				50 = { damage_building = { type = infrastructure damage = 1} }
+			}
+		}
+		set_country_flag = bread_riots
+	}
+}
+
+# Bread Suppression - Event  1
+country_event = {
+	id = doe_usa.20
+	title = doe_usa.20.t
+	desc = doe_usa.20.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = secure_new_york
+	}
+
+	option = {
+		name = doe_usa.20.a
+		USA = {
+			country_event = { id = doe_usa.21 days = 30 }
+		}
+		358 = {
+			random_list = {
+				70 = { damage_building = { type = industrial_complex damage = 1 } }
+				30 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -1000
+	}
+
+	option = {
+		name = doe_usa.20.b
+		USA = {
+			country_event = { id = doe_usa.21 days = 30}
+		}
+		358 = {
+			random_list = {
+				50 = { damage_building = { type = industrial_complex damage = 1 } }
+				50 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -2000
+	}
+
+	option = {
+		name = doe_usa.20.c
+		USA = {
+			country_event = { id = doe_usa.21 days = 30}
+		}
+		358 = {
+			random_list = {
+				30 = { damage_building = { type = industrial_complex damage = 1} }
+				70 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -3000
+	}
+}
+
+# Bread Suppression - Event  2
+country_event = {
+	id = doe_usa.21
+	title = doe_usa.21.t
+	desc = doe_usa.21.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.21.a
+		USA = {
+			country_event = { id = doe_usa.22 days = 30 }
+		}
+		358 = {
+			random_list = {
+				70 = { damage_building = { type = arms_factory damage = 1 } }
+				30 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -1000
+	}
+
+	option = {
+		name = doe_usa.21.b
+		USA = {
+			country_event = { id = doe_usa.22 days = 30}
+		}
+		358 = {
+			random_list = {
+				50 = { damage_building = { type = arms_factory damage = 1 } }
+				50 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -2000
+	}
+
+	option = {
+		name = doe_usa.21.c
+		USA = {
+			country_event = { id = doe_usa.22 days = 30}
+		}
+		358 = {
+			random_list = {
+				30 = { damage_building = { type = arms_factory damage = 1} }
+				70 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -3000
+	}
+}
+
+# Bread Suppression - Event  3
+country_event = {
+	id = doe_usa.22
+	title = doe_usa.22.t
+	desc = doe_usa.22.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.22.a
+		358 = {
+			random_list = {
+				70 = { damage_building = { type = infrastructure damage = 1 } }
+				30 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -1000
+	}
+
+	option = {
+		name = doe_usa.22.b
+		358 = {
+			random_list = {
+				50 = { damage_building = { type = infrastructure damage = 1 } }
+				50 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -2000
+	}
+
+	option = {
+		name = doe_usa.22.c
+		358 = {
+			random_list = {
+				30 = { damage_building = { type = infrastructure damage = 1} }
+				70 = { USA = {add_political_power = 25} }
+			}
+		}
+		add_manpower = -3000
+	}
+}
+
+# Bread Riots Over
+country_event = {
+	id = doe_usa.23
+	title = doe_usa.23.t
+	desc = doe_usa.23.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.23.a
+		add_political_power = 10
+	}
+}
+
+# Lee's Last Stand
+country_event = {
+	id = doe_usa.24
+	title = doe_usa.24.t
+	desc = doe_usa.24.d
+	picture = PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = doe_usa.24.a
+		random_list = {
+			50 = {
+				CSA = {
+					#remove_unit_leader = #Unknown id
+					add_manpower = -5000
+				}
+				USA = {
+					add_manpower = -1000
+				}
+				USA = {add_political_power = 25}
+			}
+			50 = {
+				CSA = {
+					add_manpower = -500
+				}
+				USA = {
+					add_manpower = -7000
+				}
+				USA = {add_political_power = -30}
+			}
+		}
+	}
+
+	option = {
+		name = doe_usa.24.b
+		add_political_power = -10
+	}
+}
+
+# South Carolina secedes 
+country_event = {
+	id = doe_usa.25
+	title = doe_usa.25.t
+	desc = doe_usa.25.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1860.12.20
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.25.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 364
+		}
+	}
+}
+
+# Mississippi secedes
+country_event = {
+	id = doe_usa.26
+	title = doe_usa.26.t
+	desc = doe_usa.26.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.1.9
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.26.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 370
+		}
+	}
+}
+
+# Florida secedes
+country_event = {
+	id = doe_usa.27
+	title = doe_usa.27.t
+	desc = doe_usa.27.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.1.10
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.27.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 366
+		}
+	}
+}
+
+# Alabama secedes
+country_event = {
+	id = doe_usa.28
+	title = doe_usa.28.t
+	desc = doe_usa.28.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.1.11
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.28.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 367
+		}
+	}
+}
+
+# Georgia secedes
+country_event = {
+	id = doe_usa.29
+	title = doe_usa.29.t
+	desc = doe_usa.29.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.1.19
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.29.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 365
+		}
+	}
+}
+
+# Louisiana secedes
+country_event = {
+	id = doe_usa.30
+	title = doe_usa.30.t
+	desc = doe_usa.30.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.1.26
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.30.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 371
+		}
+	}
+}
+
+# Texas secedes
+country_event = {
+	id = doe_usa.31
+	title = doe_usa.31.t
+	desc = doe_usa.31.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.2.1
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.31.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 375
+		}
+		set_country_flag = civil_war_ready
+	}
+}
+
+# Virginia secedes
+country_event = {
+	id = doe_usa.32
+	title = doe_usa.32.t
+	desc = doe_usa.32.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.4.17
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.32.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 362
+		}
+	}
+}
+
+# Arkansas secedes
+country_event = {
+	id = doe_usa.33
+	title = doe_usa.33.t
+	desc = doe_usa.33.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.5.6
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.33.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 372
+		}
+	}
+}
+
+# Tennessee secedes
+country_event = {
+	id = doe_usa.34
+	title = doe_usa.34.t
+	desc = doe_usa.34.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.5.6
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.34.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 368
+		}
+	}
+}
+
+# North Carolina secedes
+country_event = {
+	id = doe_usa.35
+	title = doe_usa.35.t
+	desc = doe_usa.35.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = USA
+		date > 1861.5.20
+		has_country_flag = ordinance_of_secession
+	}
+
+	option = {
+		name = doe_usa.35.a
+		add_political_power = -40
+		CSA = {
+			transfer_state = 363
+		}
+	}
+}
+
+# Civil War Over
+country_event = {
+	id = doe_usa.36
+	title = doe_usa.36.t
+	desc = doe_usa.36.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+		NOT = {
+			has_war_with = CSA
+		}
+	}
+
+	option = {
+		name = doe_usa.36.a
+		clr_country_flag = civil_war
+		set_country_flag = civil_war_over
+		add_political_power = 70
+		news_event = { hours = 1 id = worldnews.4 }
+	}
+}
+
+# USA tries to Secure New York
+country_event = {
+	id = doe_usa.37
+	title = doe_usa.37.t
+	desc = doe_usa.37.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		focus_progress = {
+			focus = secure_new_york
+			progress > 0
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = doe_usa.37.a
+		set_country_flag = secure_new_york
+	}
+}
+
+# Independent Border States
+country_event = {
+	id = doe_usa.48
+	title = doe_usa.48.t
+	desc = doe_usa.48.d
+	picture = PLACEHOLDER
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = civil_war
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = doe_usa.48.a
+		add_political_power = -40
+		IBS = {
+			transfer_state = 369
+			transfer_state = 373
+		}
+	}
+}
