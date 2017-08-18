@@ -1,21 +1,137 @@
-﻿add_namespace = britain
+﻿add_namespace = britain_mod
+
+country_event = { # Orsini Affair
+  id = britain_mod.1
+  title = britain_mod.1.t
+  desc = britain_mod.1.d
+
+  is_triggered_only = yes
+
+  option = {
+    name = britain_mod.1.a
+    set_country_flag = ENG_orsini
+  }
+}
+
+country_event = { # Orsini Affair Reaction
+  id = britain_mod.2
+  title = britain_mod.2.t
+  desc = britain_mod.2.d
+
+  is_triggered_only = yes
+
+  option = { # Anti-Terrorist Act
+    name = britain_mod.2.a
+    country_event = {
+      id = britain_mod.3
+      days = 1
+    }
+  }
+
+  option = { # Do Nothing
+    name = britain_mod.2.b
+    add_political_power = -150
+    add_popularity = {
+        ideology = radical_socialism
+        popularity = 0.1
+      }
+      set_country_flag = ENG_palmerston_stays
+  }
+}
+
+country_event = { # Orsini Affair Parliament Decision
+  id = britain_mod.3
+  title = britain_mod.3.t
+  desc = britain_mod.3.d
+
+  is_triggered_only = yes
+
+  option = { # Parliament Refuses
+    name = britain_mod.3.a
+    country_event = {
+      id = britain_mod.4
+      days = 1
+    }
+  }
+
+  option = { # Parliament Accepts
+    name = britain_mod.3.b
+    add_political_power = 25
+    set_country_flag = ENG_palmerston_stays
+  }
+}
+
+country_event = { # Orsini Affair Government Meltdown
+  id = britain_mod.4
+  title = britain_mod.4.t
+  desc = britain_mod.4.d
+
+  is_triggered_only = yes
+
+  option = {
+    name = britain_mod.4.a
+    country_event = {
+      id = britain_mod.5
+      days = 1
+    }
+    add_political_power = -100
+  }
+}
+
+country_event = { # Orsini Affair Palmerston Resignation
+  id = britain_mod.5
+  title = britain_mod.5.t
+  desc = britain_mod.5.d
+
+  is_triggered_only = yes
+
+  option = {
+    name = britain_mod.5.a
+    add_political_power = -100
+    set_country_flag = ENG_palmerston_away
+    add_popularity = {
+      ideology = traditional_conservatism
+      popularity = 0.15
+    } 
+    set_politics = {
+      ruling_party = traditional_conservatism
+      elections_allowed = no 
+    }
+  }
+}
+
+country_event = { # Sepoy Debate
+  id = britain_mod.10
+  title = britain_mod.10.t
+  desc = britain_mod.10.d
+
+  is_triggered_only = yes
+
+  option = { # Full intervention
+    name = britain_mod.10.a
+  }
+
+  option = { # Send some volunteers
+    name = britain_mod.10.b
+  }
+}
 
 country_event = {
-  id = britain.500
-  title = britain.500.t
-  desc = britain.500.d
+  id = britain_mod.500
+  title = britain_mod.500.t
+  desc = britain_mod.500.d
 
   is_triggered_only = yes
 
   #Full support
   option = {
-    name = britain.500.a
+    name = britain_mod.500.a
     declare_war_on = {target = CSA type = annex_everything}
   }
 
   #Backhand support
   option = {
-    name = britain.500.b
+    name = britain_mod.500.b
     hidden = {
       set_country_flag = support_usa
     }
@@ -23,7 +139,7 @@ country_event = {
 
   #Refusal
   option = {
-    name = britain.500.c
+    name = britain_mod.500.c
     #Event for USA happens, USA can declare war on Britain
   }
 }

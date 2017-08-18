@@ -1,4 +1,4 @@
-add_namespace = sepoystate
+﻿add_namespace = sepoystate
 
 #100s : Minor inwar events(flavour)
 #200s : Events from focus tree
@@ -22,6 +22,7 @@ country_event = {
 #Proclamation of Hindustan
 
 #When most states are taken
+
 country_event = {
   id = sepoystate.500
   title = sepoystate.500.t
@@ -63,15 +64,191 @@ country_event = {
   #Ask for peace with lighter condition
   option = {
     name = sepoystate.500.a
-
     white_peace = RAJ
   }
 
   option = {
     name = sepoystate.500.b
 
-    hidden = {
+    transfer_state = 423
+    transfer_state = 424
+    transfer_state = 425
+    transfer_state = 426
+    transfer_state = 427
+    transfer_state = 428
+    transfer_state = 429
+    transfer_state = 430
+    transfer_state = 431
+    transfer_state = 432
+    transfer_state = 433
+    transfer_state = 434
+    transfer_state = 435
+    transfer_state = 436
+    transfer_state = 437
+    transfer_state = 438
+    transfer_state = 439
+    transfer_state = 440
+    transfer_state = 441
+    transfer_state = 442
+    transfer_state = 443
+    transfer_state = 444
+    transfer_state = 445
+    transfer_state = 754
+    transfer_state = 755
+    transfer_state = 756
+    transfer_state = 757
+    transfer_state = 758
+    transfer_state = 759
+    set_cosmetic_tag = SRS_selfliberate
+
+    annex_country = { 
+      target = RAJ
+    }
+  }
+  
+}
+
+country_event = { # UK asks for peace
+  id = sepoystate.501
+  title = sepoystate.501.t
+  desc = sepoystate.501.d
+  is_triggered_only = yes
+
+  option = { # Ask for half the country
+    name = sepoystate.501.a
+    ai_chance = { factor = 99 }
+
+    ENG = { 
+      country_event = {
+        id = sepoystate.502
+        days = 1 
+      }
+    }
+  }
+
+  option = { # Ask for the entire country
+    name = sepoystate.501.b
+    ai_chance = { factor = 1 }
+
+    ENG = { 
+      country_event = {
+        id = sepoystate.503
+        days = 1 
+      }
+    }
+  }
+}
+
+country_event = { # Half the Country, UK's answer
+  id = sepoystate.502
+  title = sepoystate.502.t
+  desc = sepoystate.502.d
+  is_triggered_only = yes
+
+  option = { # Ok
+    name = sepoystate.502.a
+    ai_chance = { 
+      factor = 65 
+      modifier = {
+        factor = 30
+        has_defensive_war_with = SRS
+        RAJ = {
+          surrender_progress > 0.3
+        }
+      }
+      modifier = {
+        factor = 50
+        has_defensive_war_with = SRS
+        RAJ = {
+          surrender_progress > 0.5
+        }
+      }
+    }
+    SRS = {
       white_peace = RAJ
+    }
+    
+      RAJ = {
+        transfer_state = 422
+        transfer_state = 428
+        transfer_state = 433
+        transfer_state = 437
+        transfer_state = 438
+        transfer_state = 439
+        transfer_state = 440
+        transfer_state = 441
+        transfer_state = 442
+        transfer_state = 443
+        transfer_state = 444
+        transfer_state = 445
+        transfer_state = 756
+        transfer_state = 759
+      }
+      SRS = {
+        set_cosmetic_tag = SRS_selfliberate
+        transfer_state = 288
+        transfer_state = 423
+        transfer_state = 424
+        transfer_state = 425
+        transfer_state = 426
+        transfer_state = 427
+        transfer_state = 429
+        transfer_state = 430
+        transfer_state = 431
+        transfer_state = 432
+        transfer_state = 434
+        transfer_state = 435
+        transfer_state = 436
+        transfer_state = 640
+        transfer_state = 754
+        transfer_state = 755
+        transfer_state = 757
+        transfer_state = 758
+      }
+  }
+
+  option = { # No
+    name = sepoystate.502.b
+    add_political_power = -100
+    ai_chance = { factor = 35 }
+    declare_war_on= { 
+      target = SRS
+      type = annex_everything 
+    }
+  }
+}
+
+country_event = { # Entire Country, UK's answer
+  id = sepoystate.503
+  title = sepoystate.503.t
+  desc = sepoystate.503.d
+  is_triggered_only = yes
+
+  option = { # Ok
+    name = sepoystate.503.a
+    ai_chance = { 
+      factor = 15 
+      modifier = {
+        factor = 40
+        has_defensive_war_with = SRS
+        RAJ = {
+          surrender_progress > 0.7
+        }
+      }
+      modifier = {
+        factor = 70
+        has_defensive_war_with = SRS
+        RAJ = {
+          surrender_progress > 0.9
+        }
+      }
+    }
+    SRS = {
+      white_peace = RAJ
+    }
+    
+    SRS = {
+      set_cosmetic_tag = SRS_selfliberate
       transfer_state = 423
       transfer_state = 424
       transfer_state = 425
@@ -101,9 +278,16 @@ country_event = {
       transfer_state = 757
       transfer_state = 758
       transfer_state = 759
-      set_cosmetic_tag = SRS_selfliberate
     }
-    annex_country = RAJ
+  }
 
+  option = { # No
+    name = sepoystate.503.b
+    ai_chance = { factor = 85 }
+    add_political_power = -50
+    declare_war_on= { 
+      target = SRS
+      type = annex_everything 
+    }
   }
 }

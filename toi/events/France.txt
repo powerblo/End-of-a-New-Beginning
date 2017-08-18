@@ -662,6 +662,94 @@ country_event = { # Switzerland - Refused
 }
 
 #----------------------------------------------------------------------------------------------
+# INDOCHINA INTERACTION
+#----------------------------------------------------------------------------------------------
+
+country_event = { # Indochina - French Expansion
+  id = nap_france.360
+  title = nap_france.360.t
+  desc = nap_france.360.d
+  is_triggered_only = yes
+
+  option = { # Give Cambodia and Laos
+    name = nap_france.360.a
+    FRA = {
+      country_event = {
+        id = nap_france.361
+        days = 1
+      }
+    }
+  }
+
+  option = { # Give Cambodia
+    name = nap_france.360.b
+    FRA = {
+      country_event = {
+        id = nap_france.362
+        days = 1
+      }
+    }
+  }
+
+  option = { # Give nothing
+    name = nap_france.360.c
+    FRA = {
+      declare_war_on= { 
+        target = SIA
+        type = annex_everything 
+      }
+    }
+  }
+}
+
+country_event = { # France - Indochina give us Cambodia and Laos
+  id = nap_france.361
+  title = nap_france.361.t
+  desc = nap_france.361.d
+  is_triggered_only = yes
+
+  option = { # That's enough for us
+    name = nap_france.361.a
+    transfer_state = 741
+    transfer_state = 670
+  }
+
+  option = { # War !
+    name = nap_france.361.b
+    add_political_power = -400
+    FRA = {
+      declare_war_on= { 
+        target = SIA
+        type = annex_everything 
+      }
+    }
+  }
+}
+
+country_event = { # France - Indochina give us Cambodia
+  id = nap_france.362
+  title = nap_france.362.t
+  desc = nap_france.362.d
+  is_triggered_only = yes
+
+  option = { # That's enough for us
+    name = nap_france.362.a
+    transfer_state = 741
+  }
+
+  option = { # War !
+    name = nap_france.362.b
+    add_political_power = -150
+    FRA = {
+      declare_war_on= { 
+        target = SIA
+        type = annex_everything 
+      }
+    }
+  }
+}
+
+#----------------------------------------------------------------------------------------------
 # NAPOLEON III DEATH AND DISHONOR EVENTS
 #----------------------------------------------------------------------------------------------
 
@@ -717,18 +805,30 @@ country_event = { # Orisini Affair
     	ai_chance = { factor = 5 }
     	kill_country_leader = yes
     	create_country_leader = {
-			name = "Eugénie de Montijo"
-			picture = "Eugenie_de_Montijo.dds"
-			ideology = despotism
-		}
-		add_political_power = -200
-		set_country_flag = fra_orsini_success
-		custom_effect_tooltip = FRA_orisini_branch
+  			name = "Eugénie de Montijo"
+  			picture = "Eugenie_de_Montijo.dds"
+  			ideology = despotism
+  		}
+      ENG = {
+        country_event = {
+          id = britain_mod.1
+          days = 1
+        }
+      }
+  		add_political_power = -200
+  		set_country_flag = fra_orsini_success
+  		custom_effect_tooltip = FRA_orisini_branch
   	}
   	option = { # Emperor Alive
     	name = nap_france.398.b
     	ai_chance = { factor = 95 }
     	add_political_power = -50
+      ENG = {
+        country_event = {
+          id = britain_mod.1
+          days = 1
+        }
+      }
   	}
 }
 
