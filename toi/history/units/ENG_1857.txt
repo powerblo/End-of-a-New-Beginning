@@ -1,0 +1,184 @@
+division_template = {
+  name = "Line Infantry Regiment"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 1}
+		line_infantry = { x = 0 y = 2}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 1 y = 1}
+		line_infantry = { x = 1 y = 2}
+  }
+}
+
+division_template = {
+  name = "Grenadier Regiment"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+    light_infantry = { x = 0 y = 1}
+		light_infantry = { x = 0 y = 2}
+  }
+}
+
+division_template = {
+	name = "Hussar Regiment"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 1}
+		light_cavalry = { x = 0 y = 2}
+	}
+}
+
+division_template = {
+	name = "Dragoon Regiment"
+
+	regiments = {
+		dragoon = { x = 0 y = 0 }
+		dragoon = { x = 0 y = 1 }
+		dragoon = { x = 0 y = 2 }
+	}
+}
+
+units = {
+		#Aldershot Command
+		division= {
+			name = "1st Line Infantry Regiment"
+			location = 9458
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "2nd Line Infantry Regiment"
+			location = 9458
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.3
+		}
+		#Scottish Command
+		division= {
+			name = "51st 'Highland' Line Infantry Regiment"
+			location = 3273
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "52nd 'Lowland' Line Infantry Regiment"
+			location = 9392
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		#Northern Command
+		division= {
+			name = "5th Hussar Regiment"
+			location = 11297
+			division_template = "Hussar Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "5th Line Infantry Regiment"
+			location = 351
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "50th 'Northumbrian' Motorized Division"
+			location = 9397
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "49th 'West Riding' Line Infantry Regiment"
+			location = 11218
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		#Eastern Command
+		division= {
+			name = "4th Line Infantry Regiment"
+			location = 11253
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "44th 'Home Counties' Line Infantry Regiment"
+			location = 11221
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "54th 'East Anglia' Line Infantry Regiment"
+			location = 3287
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		#Western Command
+		division= {
+			name = "6th Hussar Regiment"
+			location = 407
+			division_template = "Hussar Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "42nd 'East Lancashire' Line Infantry Regiment"
+			location = 6318
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "53rd 'Welsh' Line Infantry Regiment"
+			location = 311
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "55th 'West Lancashire' Line Infantry Regiment"
+			location = 6384
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "3rd Line Infantry Regiment"
+			location = 13070
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "43rd 'Wessex' Line Infantry Regiment"
+			location = 3369
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+		division= {
+			name = "48th 'South Midland' Line Infantry Regiment"
+			location = 6351
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.3
+
+		}
+}
