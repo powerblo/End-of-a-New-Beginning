@@ -9,32 +9,32 @@
 		}
 		set_autonomy = {
 			target = NEP
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = HYD
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAS
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAR
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = BIK
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = REW
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
@@ -59,64 +59,6 @@
 		}
 		else = {
 			puppet = RAJ
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "Together for Victory"
-			}
-		}
-		set_autonomy = {
-			target = NEP
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = HYD
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = KAS
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = KAR
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = BIK
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = REW
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = RAJ
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.35
-		}
-		set_autonomy = {
-			target = CAN
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.4
-		}
-		set_autonomy = {
-			target = AST
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = NZL
-			autonomous_state = autonomy_puppet
-			freedom_level = 0.2
 		}
 	}
 
@@ -213,22 +155,22 @@ if = {
 	}
 	set_autonomy = {
 		target = RAJ
-		autonomous_state = autonomy_puppet
+		autonomous_state = autonomy_colony
 		freedom_level = 0.35
 	}
 	set_autonomy = {
 		target = CAN
-		autonomous_state = autonomy_puppet
+		autonomous_state = autonomy_colony
 		freedom_level = 0.4
 	}
 	set_autonomy = {
 		target = AST
-		autonomous_state = autonomy_puppet
+		autonomous_state = autonomy_colony
 		freedom_level = 0.2
 	}
 	set_autonomy = {
 		target = NZL
-		autonomous_state = autonomy_puppet
+		autonomous_state = autonomy_colony
 		freedom_level = 0.2
 	}
 	else = {
