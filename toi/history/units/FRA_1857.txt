@@ -40,7 +40,7 @@ division_template = {
 division_template = {
 	name = "Régiment de Hussards"
 
-	regiment = {
+	regiments = {
 		light_cavalry = { x=0 y=0}
 		light_cavalry = { x=0 y=1}
 		light_cavalry = { x=0 y=2}
@@ -52,7 +52,7 @@ division_template = {
 division_template = {
 	name = "Régiment de Dragons"
 
-	regiment = {
+	regiments = {
 		dragoons = { x = 0 y = 0 }
 		dragoons = { x = 0 y = 1 }
 		dragoons = { x = 0 y = 2 }
@@ -70,6 +70,7 @@ units = {
 		location = 11502
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "2ème Div. d'Inf. Nord-Africaine"
@@ -94,6 +95,7 @@ units = {
 		location = 6529
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# XXe Corps d'Armée (Région Militaire in 1936) -- Nancy
@@ -110,6 +112,7 @@ units = {
 		location = 549
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "4ème Div. d'Inf. Nord-Africaine"
@@ -144,6 +147,7 @@ units = {
 		location = 454
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# IIIe Corps d'Armée (Région Militaire in 1936) -- Rouen
@@ -152,6 +156,7 @@ units = {
 		location = 11563
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# XIIe Corps d'Armée (Région Militaire in 1936) -- Reims
@@ -160,6 +165,7 @@ units = {
 		location = 9472
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# IVe Corps d'Armée (Région Militaire in 1936) -- Le Mans
@@ -168,6 +174,7 @@ units = {
 		location = 3509
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# Ve Corps d'Armée (Région Militaire in 1936) -- Orleans
@@ -176,6 +183,7 @@ units = {
 		location = 3509
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "1ère Régiment de Hussards"
@@ -192,6 +200,7 @@ units = {
 		location = 3671
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "3ème Div. d'Inf. Nord-Africaine"
@@ -216,6 +225,7 @@ units = {
 		location = 6536
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# Région Militaire de Paris -- Paris
@@ -258,12 +268,14 @@ units = {
 		location = 678
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "14ème Régiments d'Infanterie"
 		location = 9642
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# VIIIe Corps d'Armée (Région Militaire in 1936) -- Dijon
@@ -272,6 +284,7 @@ units = {
 		location = 3652
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "24ème Régiments d'Infanterie"
@@ -347,6 +360,7 @@ units = {
 		location = 11576
 		division_template = "Régiments d'Infanterie" 	# All motorized are frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# XVIIe Corps d'Armée (Région Militaire in 1936) -- Toulouse
@@ -373,6 +387,7 @@ units = {
 		location = 9737
 		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "1ère Div. d'Inf. Coloniale"
@@ -383,21 +398,6 @@ units = {
 
 	}
 
-	# XIVe Corps d'Armée (Région Militaire in 1936) -- Lyon
-	division= {
-		name = "27ème Régiments d'Infanterie Alpine"
-		location = 778
-		division_template = "Régiments d'Infanterie Alpine" 	# Frontline, best equipment
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "30ème Régiments d'Infanterie Alpine"
-		location = 9745
-		division_template = "Régiments d'Infanterie Alpine" 	# Second line, reserve equipment
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
-	}
 	division= {
 		name = "1ère Div. d'Inf. Nord-Africaine"
 		location = 3764
@@ -406,22 +406,9 @@ units = {
 		start_equipment_factor = 0.5
 
 	}
-	division= {
-		name = "1ère Brigade de Chars de Combat"
-		location = 6613
-		division_template = "Brigade de Chars de Combat" 			# FT-17s
-		start_experience_factor = 0.2
-		force_equipment_variants = { gw_tank_equipment = { owner = "FRA" } }
-	}
 
 
 	# XVe Corps d'Armée (Région Militaire in 1936) -- Marseille
-	division= {
-		name = "29ème Régiments d'Infanterie Alpine"
-		location = 6975
-		division_template = "Régiments d'Infanterie Alpine" 	# Frontline, best equipment
-		start_experience_factor = 0.3
-	}
 	division= {
 		name = "2ème Div. d'Inf. Coloniale"
 		location = 11834
@@ -435,8 +422,9 @@ units = {
 	division= {
 		name = "31ème Régiments d'Infanterie Alpine"
 		location = 9898
-		division_template = "Régiments d'Infanterie Alpine" 	# Frontline, best equipment
+		division_template = "Régiments d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 
 	# Division d'Inf. Forteresse -- Nice
@@ -446,184 +434,6 @@ units = {
 		division_template = "Régiment de Grenadiers" 	# Garrison unit, reserve equipment
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
-
-	}
-
-
-	##### North African Theatre #####
-	### Army: Troupes de Alger ###
-	# XIXe Corps d'Armée (Région Militaire in 1936) -- Alger
-	division= {
-		name = "1ère Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "2ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "4ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "5ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	# attached directly to Army
-	division= {
-		name = "3ème Bge. d'Infanterie Algérienne"
-		location = 7132
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "7ème Bge. d'Infanterie Algérienne"
-		location = 7132
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "Groupement Cavalerie d'Algérienne"
-		location = 7132
-		division_template = "Régiment de Dragons"
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
-	### Army: Protectorat de Tunisie ### -- Tunis
-	division= {
-		name = "Division de Tunis"
-		location = 11969
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {
-		name = "Division de Sousse"
-		location = 9994
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-
-	### Army: Protectorat du Maroc ### -- Casablanca
-	division= {
-		name = "Division de Meknès"
-		location = 7069
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {
-		name = "Division de Casablanca"
-		location = 7069
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "Division de Fès"
-		location = 7100
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "Division de Marrakech"
-		location = 7069
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "Groupement de Maroc"
-		location = 7100
-		division_template = "Régiment de Dragons"
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
-
-	##### Eastern Mediterranean Theatre #####
-	### Army: Mandat du Levant ### -- Beirut
-	division= {
-		name = "Mandat du Levant"
-		location = 792
-		division_template = "Régiment de Grenadiers" 	# Colonial unit, reserve equipment
-
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-
-	# Troupes de Madagascar
-	division= {
-		name = "Troupes de Madagascar"
-		location = 5222
-		division_template = "Régiment de Grenadiers" 	# Miltia unit, reserve equipment
-
-		start_equipment_factor = 0.15
-
-	}
-
-
-	##### Far Seas Theatre ##### -- Dakar
-	division= {
-		name = "Troupes de Sénégalais"
-		location = 4948
-		division_template = "Régiment de Grenadiers" 	# Miltia unit, reserve equipment
-
-		start_equipment_factor = 0.3
-
-	}
-	division= {
-		name = "Troupes de Afrique Equatoriale Française"
-		location = 5139
-		division_template = "Régiment de Grenadiers" 	# Miltia unit, reserve equipment
-
-		start_equipment_factor = 0.15
 
 	}
 ###################
