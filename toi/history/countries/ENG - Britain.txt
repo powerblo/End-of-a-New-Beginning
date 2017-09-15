@@ -4,39 +4,41 @@
 	oob = "ENG_1857"
 	
 	set_convoys = 150
-
+	
 	if = {
+		
 		limit = {
 			has_dlc = "Together for Victory"
 		}
+	
 		set_autonomy = {
 			target = NEP
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = HYD
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAS
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAR
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = BIK
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = REW
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
@@ -59,10 +61,23 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
+	
 		else = {
 			puppet = RAJ
 		}
 	}
+		
+		#create_faction = "The Commonwealth"
+		#add_to_faction = NEP
+		#add_to_faction = HYD
+		#add_to_faction = KAS
+		#add_to_faction = KAR
+		#add_to_faction = BIK
+		#add_to_faction = REW
+		#add_to_faction = RAJ
+		#add_to_faction = CAN
+		#add_to_faction = AST
+		#add_to_faction = NZL
 
 	#Whig/Liberal
 	create_country_leader = {
