@@ -37,6 +37,20 @@
  support_equipment_desc:0 "Radios, Jeeps, Pontoons & other equipment used to support troops."
  support_equipment_1:0 "Support Equipment"
  support_equipment_1_desc:0 "Radios, Jeeps, Pontoons & other equipment used to support troops."
+ rifle_equipment:0 "Rifle Equipment"
+ rifle_equipment_desc:0 "Troops armed with edge-cutting rifle and bayonet technology."
+ cavalry_equipment:0 "Cavalry Equipment"
+ cavalry_equipment_desc:0 "Horses, saddles and mounted infantry equipment for the average mounted warrior."
+ uniform_equipment:0 "Uniform Equipment"
+ uniform_equipment_desc:0 "Helmets, armour, boots and several survival equipment required to supply the soldier."
+ artillery_equipment:0 "Artillery"
+ artillery_equipment_desc:0 "Whether used for siege or as a field battery, the artillery has proved a brilliant source of fire and shock."
+ rocket_artillery_equipment:0 "Rocket Artillery"
+ rocket_artillery_equipment_desc:0 "Rather than being propelled by initial shock, rocket artillery equip ammunition that propel itself, increasing firepower and mobility."
+ light_cavalry:0 "Light Cavalry"
+ light_cavalry_desc:0 "Swift and nimble cavalry used to scout the field and divert enemy attention."
+ dragoon:0 "Dragoons"
+ dragoon_desc:0 "Dragoons are used in the traditional sense of cavalry, charging and dealing heavy blows to infantry lines on a mobile position."
  EQUIPMENT_DESIGNER_DESC:0 "Designed by: $DESIGNER|Y$"
  EQUIPMENT_ARMOR:0 "Armor"
  EQUIPMENT_MOTORIZED:0 "Motorized"
@@ -66,6 +80,9 @@
  EQUIPMENT_AIR:0 "Air Equipment"
  EQUIPMENT_VERSION:0 "Mk$VERSION|0$"
  EQUIPMENT_VEHICLE:0 "Vehicle"
+ EQUIPMENT_LINE_INFANTRY:0 "Line Infantry"
+ EQUIPMENT_LIGHT_CAVALRY:0 "Light Cavalry"
+ EQUIPMENT_DRAGOON:0 "Dragoon"
  UNIT_GENERIC_NAME_GENERIC_INFANTRY:0 "$NR$. $NAME$"
  UNIT_GENERIC_NAME_GER:0 "$NR$. $NAME$"
  UNIT_GENERIC_NAME_FRA:0 "$NR$ème $NAME$"
@@ -2625,7 +2642,7 @@
  USA_motorized_rocket_equipment_1_short:0 "Xylophone"
 
  #new
- 
+
  rifle_equipment_0:0 "Flintlock Rifle"
  rifle_equipment_1:0 "Minie Rifle"
  rifle_equipment_2:0 "Pattern 1853 Enfield Rifle-Musket"
@@ -2633,34 +2650,34 @@
  rifle_equipment_3:0 "Snider-Enfield Rifle"
  rifle_equipment_4:0 "Martini-Henry Rifle"
  rifle_equipment_5:0 "Lee-Metford Rifle"
- 
+
  machine_gun_equipment_0:0 "Gatling Gun"
  machine_gun_equipment_1:0 "Maxim Gun"
- 
+
  cannon_equipment_0:0 "Bore Gun"
  cannon_equipment_1:0 "Smoothbore Gun"
  rifled_cannon_equipment_0:0 "RML Field Gun"
  rifled_cannon_equipment_1:0 "RBL Field Gun"
  rifled_cannon_equipment_2:0 "1870 Field Gun"
- 
+
  siege_gun_0:0 "Siege Gun"
- 
+
  howitzer_equipment_0:0 "Howitzer"
  howitzer_equipment_1:0 "Rifled Howitzer"
- 
+
  rocket_artillery_equipment_0: "Congreve Rocket"
  rocket_artillery_equipment_1:0 "Hale Rocket"
- 
+
  cavalry_equipment_0:0 "Horse and Tack"
  transport_equipment_0:0 "Covered Wagon"
  horse_artillery_equipment_0:0 "Horse Limber"
- 
+
  uniform_equipment_0:0 "Victorian Uniform"
  uniform_equipment_1:0 "1850 Uniform"
  uniform_equipment_2:0 "1864 Uniform"
  uniform_equipment_3:0 "1872 Uniform"
  uniform_equipment_4:0 "1878 Uniform"
- 
+
  #AUS
  AUS_rifle_equipment_0:0 "Pattern 1842 Augustin Rifle-Musket"
  AUS_rifle_equipment_0_short:0 "Augustin Rifle-Musket"
@@ -2672,12 +2689,12 @@
  AUS_rifle_equipment_3_short:0 "M1867"
  AUS_rifle_equipment_5:0 "Repeating Rifle Model 1886"
  AUS_rifle_equipment_5_short:0 "M1886"
- 
+
  #BAD
  BAD_rifle_equipment_0:0 "Modèle 1777 corrigé en l'an IX"
  BAD_rifle_equipment_0_short:0 "Modèle 1777 corrigé"
  BAD_rifle_equipment_1:0 "Vereinsgewehr 1857"
- 
+
  #CSA
  CSA_rifle_equipment_0:0 "Model 1842 Percussion Musket"
  CSA_rifle_equipment_0_desc:0 "Springfield Musket"
@@ -2685,9 +2702,9 @@
  CSA_rifle_equipment_2_short:0 "Richmond Musket"
  CSA_rifle_equipment_3:0 "Springfield Model 1866"
  CSA_rifle_equipment_3_short:0 "Springfield Rifle"
- 
+
  CSA_machine_gun_equipment_0:0 "Gorgas Gun"
- 
+
  CSA_cannon_equipment_0:0 "Model 1841 6-pounder Gun"
  CSA_cannon_equipment_0_short:0 "6pdr Gun"
  CSA_cannon_equipment_1:0 "Model 1857 12-pounder Napoleon"
@@ -2696,20 +2713,20 @@
  CSA_rifled_cannon_equipment_0_short:0 "10pdr Parrot Rifle"
  CSA_rifled_cannon_equipment_1:0 "12-pounder Whitworth Breech-Loading Gun"
  CSA_rifled_cannon_equipment_1_short:0 "12pdr Whitworth"
- 
+
  CSA_siege_gun_0:0 "200-pounder Parrot Rifled Muzzle-Loader"
  CSA_siege_gun_0_short:0 "200pdr Parrot Rifle"
- 
+
  CSA_howitzer_equipment_0:0 "Model 1841 12-pounder Howitzer"
  CSA_howitzer_equipment_0_short:0 "12pdr Howitzer"
  CSA_howitzer_equipment_1:0 "12-pounder Dahlgren Boat Howitzer"
  CSA_howitzer_equipment_1_short:0 "12pdr Dahlgren"
- 
+
  #HES
  HES_rifle_equipment_0:0 "Modèle 1777 corrigé en l'an IX"
  HES_rifle_equipment_0_short:0 "Modèle 1777 corrigé"
  HES_rifle_equipment_1:0 "Vereinsgewehr 1857"
- 
+
  #PRS
  PRS_rifle_equipment_0:0 "M1839"
  PRS_rifle_equipment_1:0 "M1839/55"
@@ -2718,16 +2735,16 @@
  PRS_rifle_equipment_3_short:0 "Dreyse M/1841"
  PRS_rifle_equipment_4:0 "Gewehr 71"
  PRS_rifle_equipment_5:0 "Gewehr 88"
- 
+
  #SAX
  SAX_rifle_equipment_0:0 "M-1844"
  SAX_rifle_equipment_1:0 "M-1851"
  SAX_rifle_equipment_2:0 "M-1857"
- 
+
  #SWE
  SWE_machine_gun_equipment_1:0 "Kulsprutegevär Fm/Kjellman"
  SWE_machine_gun_equipment_1_short:0 "Kjellman"
- 
+
  #THU
  THU_rifle_equipment_0:0 "M1839"
  THU_rifle_equipment_1:0 "M1839/55"
@@ -2736,7 +2753,7 @@
  THU_rifle_equipment_3_short:0 "Dreyse M/1841"
  THU_rifle_equipment_4:0 "Gewehr 71"
  THU_rifle_equipment_5:0 "Gewehr 88"
- 
+
  #USA
  USA_rifle_equipment_0:0 "Model 1842 Percussion Musket"
  USA_rifle_equipment_0_desc:0 "Springfield Musket"
@@ -2744,24 +2761,24 @@
  USA_rifle_equipment_2_short:0 "Springfield Rifle-Musket"
  USA_rifle_equipment_3:0 "Springfield Model 1866"
  USA_rifle_equipment_3_short:0 "Springfield Rifle"
- 
+
  USA_machine_gun_equipment_0:0 "Agar Gun"
- 
+
  USA_cannon_equipment_0:0 "Model 1841 6-pounder Gun"
  USA_cannon_equipment_0_short:0 "6pdr Gun"
  USA_cannon_equipment_1:0 "Model 1857 12-pounder Napoleon"
  USA_cannon_equipment_1_short:0 "12pdr Napoleon"
  USA_rifled_cannon_equipment_0:0 "10-pounder Parrot Rifled Muzzle-Loader"
  USA_rifled_cannon_equipment_0_short:0 "10pdr Parrot Rifle"
- 
+
  USA_siege_gun_0:0 "200-pounder Parrot Rifled Muzzle-Loader"
  USA_siege_gun_0_short:0 "200pdr Parrot Rifle"
- 
+
  USA_howitzer_equipment_0:0 "Model 1841 12-pounder Howitzer"
  USA_howitzer_equipment_0_short:0 "12pdr Howitzer"
  USA_howitzer_equipment_1:0 "12-pounder Dahlgren Boat Howitzer"
  USA_howitzer_equipment_1_short:0 "12pdr Dahlgren"
- 
+
  #WUR
  WUR_rifle_equipment_0:0 "Modèle 1777 corrigé en l'an IX"
  WUR_rifle_equipment_0_short:0 "Modèle 1777 corrigé"
