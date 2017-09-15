@@ -1,0 +1,345 @@
+add_namespace = csa_focus
+
+  country_event = { # CSA Independance
+    id = csa_focus.1
+    title = csa_focus.1.t
+    desc = csa_focus.1.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Fight the Rebels !
+      name = csa_focus.1.a
+      if = {
+        limit = {
+          has_government = traditional_conservative
+        }
+        ai_chance = {
+          factor = 50
+        }
+      }
+      if = {
+        limit = {
+          has_government = economic_liberalism
+        }
+        ai_chance = {
+          factor = 95
+        }
+      }
+      CSA = {
+        add_ideas = CSA_rebel_nation
+        hidden = {
+          country_event = csa_focus.2
+        }
+      }
+    }
+
+    option = { # Try to reach an agreement
+      name = csa_focus.1.b
+      if = {
+        limit = {
+          has_government = traditional_conservative
+        }
+        ai_chance = {
+          factor = 50
+        }
+      }
+      if = {
+        limit = {
+          has_government = economic_liberalism
+        }
+        ai_chance = {
+          factor = 5
+        }
+      }
+      CSA = {
+        add_ideas = CSA_us_collaboration
+        hidden = {
+          country_event = csa_focus.3
+        }
+      }
+    }
+  }
+
+  country_event = { # US Response - Civil War
+    id = csa_focus.2
+    title = csa_focus.2.t
+    desc = csa_focus.2.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+      name = csa_focus.2.a
+    }
+  }
+
+  country_event = { # US Response - Ready to Negotiate
+    id = csa_focus.3
+    title = csa_focus.3.t
+    desc = csa_focus.3.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+      name = csa_focus.3.a
+    }
+  }
+
+  country_event = { # CSA wants West
+    id = csa_focus.100
+    title = csa_focus.100.t
+    desc = csa_focus.100.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Agree to give the Western Territories
+      name = csa_focus.100.a
+      CSA = {
+        set_country_flag = CSA_west_accepted
+      }
+    }
+
+    option = { # Refuse to give the Western Terrotiries
+      name = csa_focus.100.b
+      CSA = {
+        set_country_flag = CSA_west_refused
+      }
+    }
+  }
+
+  country_event = { # CSA wants Center
+    id = csa_focus.101
+    title = csa_focus.101.t
+    desc = csa_focus.101.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Agree to give the Western Territories
+      name = csa_focus.101.a
+      CSA = {
+        set_country_flag = CSA_center_accepted
+      }
+    }
+
+    option = { # Refuse to give the Western Terrotiries
+      name = csa_focus.101.b
+      CSA = {
+        set_country_flag = CSA_center_refused
+      }
+    }
+  }
+
+  country_event = { # A Fair Deal
+    id = csa_focus.102
+    title = csa_focus.102.t
+    desc = csa_focus.102.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # They call that a fair deal ?
+      name = csa_focus.102.a
+      trigger = {
+        has_country_flag = CSA_center_refused
+        has_country_flag = CSA_west_refused
+      }
+      CSA = {
+        set_country_flag = CSA_center_accepted
+      }
+    }
+
+    option = { # It's better than nothing
+      name = csa_focus.102.b
+      trigger = {
+        OR = {
+          has_country_flag = CSA_center_refused
+          has_country_flag = CSA_west_refused
+        }
+        NOT = {
+          has_country_flag = CSA_center_refused
+          has_country_flag = CSA_west_refused
+        }
+      }
+      CSA = {
+        set_country_flag = CSA_center_refused
+      }
+    }
+
+    option = { # Glad we could reach a deal
+      name = csa_focus.102.c
+      NOT = {
+        has_country_flag = CSA_center_refused
+        has_country_flag = CSA_west_refused
+      }
+      CSA = {
+        set_country_flag = CSA_center_refused
+      }
+    }
+  }
+
+  country_event = { # CSS Virginia
+    id = csa_focus.200
+    title = csa_focus.200.t
+    desc = csa_focus.200.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+      name = csa_focus.200.a
+      #add_equipment_to_stockpile = { 
+      #  type = ironclad
+      #  amount = 1 
+      #  producer = CSA 
+      #}
+    }
+  }
+
+  country_event = { # Seek French Support
+    id = csa_focus.201
+    title = csa_focus.201.t
+    desc = csa_focus.201.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Support the CSA
+      name = csa_focus.201.a
+      ai_chance = { factor = 80 }
+      FRA = {
+        add_opinion_modifier = {
+          target = CSA
+          modifier = CSA_positive_civil_war_support
+        }
+        add_opinion_modifier = {
+          target = USA
+          modifier = CSA_negative_civil_war_support
+        }
+      }
+    }
+
+    option = { # Support the USA
+      name = csa_focus.201.b
+      ai_chance = { factor = 5 }
+      FRA = {
+        add_opinion_modifier = {
+          target = CSA
+          modifier = CSA_negative_civil_war_support
+        }
+        add_opinion_modifier = {
+          target = USA
+          modifier = CSA_positive_civil_war_support
+        }
+      }
+    }
+
+    option = { # Stay neutral
+      name = csa_focus.201.c
+      ai_chance = { factor = 15 }
+    }
+  }
+
+  country_event = { # Seek British Support
+    id = csa_focus.202
+    title = csa_focus.202.t
+    desc = csa_focus.202.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Support the CSA
+      ai_chance = { factor = 55 }
+      name = csa_focus.202.a
+      ENG = {
+        add_opinion_modifier = {
+          target = CSA
+          modifier = CSA_positive_civil_war_support
+        }
+        add_opinion_modifier = {
+          target = USA
+          modifier = CSA_negative_civil_war_support
+        }
+      }
+    }
+
+    option = { # Support the USA
+      name = csa_focus.202.b
+      ai_chance = { factor = 15 }
+      ENG = {
+        add_opinion_modifier = {
+          target = CSA
+          modifier = CSA_negative_civil_war_support
+        }
+        add_opinion_modifier = {
+          target = USA
+          modifier = CSA_positive_civil_war_support
+        }
+      }
+    }
+
+    option = { # Stay neutral
+      name = csa_focus.202.c
+      ai_chance = { factor = 30 }
+    }
+  }
+
+  country_event = { # Ask the help of the natives
+    id = csa_focus.203
+    title = csa_focus.203.t
+    desc = csa_focus.203.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { # Join war
+      name = csa_focus.203.a
+      ai_chance = { factor = 85 }
+      SIX = {
+        add_to_war = { 
+          targeted_alliance = CSA
+          enemy = USA 
+        }
+      }
+    }
+
+    option = { # Not join war
+      name = csa_focus.203.a
+      ai_chance = { factor = 15 }
+      add_political_power = 50
+      CSA = {
+        country_event = {
+          id = csa_focus.204
+          days = 0
+        }
+      }
+    }
+
+    country_event = { # Sioux response
+    id = csa_focus.204
+    title = csa_focus.204.t
+    desc = csa_focus.204.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+      name = csa_focus.203.a
+      add_political_power = -20
+    }
+  }
+}

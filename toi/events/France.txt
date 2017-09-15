@@ -5,6 +5,64 @@
 add_namespace = nap_france
 
 #----------------------------------------------------------------------------------------------
+# FLAVOR EVENTS - 1857 TO 1870
+#----------------------------------------------------------------------------------------------
+
+country_event = { # 1867 Unviersal Exposition
+  id = nap_france.100
+  title = nap_france.100.t
+  desc = nap_france.100.d
+  picture = GFX_report_event_nap_france_exposition_universelle_1867
+
+  fire_only_once = yes
+
+  trigger = {
+    date > 1867.4.1
+    tag = FRA
+  }
+
+    mean_time_to_happen = {
+      days = 10
+    }
+
+    option = { # The Greatest Exposition
+      name = nap_france.100.a
+      add_political_power = 100
+    }
+}
+
+country_event = { # Creation of the Compagnie universelle du canal maritime de Suez
+  id = nap_france.101
+  title = nap_france.101.t
+  desc = nap_france.101.d
+
+  fire_only_once = yes
+
+  major = no
+
+  trigger = {
+    date > 1857.5.11
+    date < 1858.1.1
+    tag = FRA
+  }
+
+  mean_time_to_happen = {
+    days = 2
+  }
+
+  option = { # Invest
+    name = nap_france.101.a
+    add_political_power = 50
+    add_ideas = FRA_suez_investments
+  }
+
+  option = { # No
+    name = nap_france.101.b
+    add_political_power = -50
+  }
+}
+
+#----------------------------------------------------------------------------------------------
 # FRANCO-PRUSSIAN WAR
 #----------------------------------------------------------------------------------------------
 
@@ -12,6 +70,7 @@ country_event = { # Call for Peace
 	id = nap_france.301
 	title = nap_france.301.t
 	desc = nap_france.301.d
+  picture = GFX_report_event_nap_france_peace_prussia
 
 	fire_only_once = yes
 
@@ -45,6 +104,7 @@ country_event = { # France ask for peace
 	title = nap_france.302.t
 	desc = nap_france.302.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_peace_prussia
 
 	option = {
     	name = nap_france.302.a # OK
@@ -94,6 +154,7 @@ country_event = { # Treaty of Luxemburg - Deal
 	title = nap_france.310.t
 	desc = nap_france.310.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # France fully annex Luxemburg
     	name = nap_france.310.a
@@ -147,6 +208,7 @@ country_event = { # Treaty of Luxemburg - Deal - Annex
 	title = nap_france.311.t
 	desc = nap_france.311.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Ok
     	name = nap_france.311.a
@@ -184,6 +246,7 @@ country_event = { # Treaty of Luxemburg - Deal - Annex - Refused
 	title = nap_france.313.t
 	desc = nap_france.313.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Fine
     	name = nap_france.313.a
@@ -199,6 +262,7 @@ country_event = { # Treaty of Luxemburg - Deal - Puppet
 	title = nap_france.314.t
 	desc = nap_france.314.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Ok
     	name = nap_france.314.a
@@ -221,6 +285,7 @@ country_event = { # Treaty of Luxemburg - Deal - Puppet - Accepted
 	title = nap_france.315.t
 	desc = nap_france.315.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Ok
     	name = nap_france.315.a
@@ -236,6 +301,7 @@ country_event = { # Treaty of Luxemburg - Deal - Puppet - Refused
 	title = nap_france.316.t
 	desc = nap_france.316.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Fine
     	name = nap_france.316.a
@@ -251,6 +317,7 @@ country_event = { # Treaty of Luxemburg - Deal - Neutral
 	title = nap_france.317.t
 	desc = nap_france.317.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Ok
     	name = nap_france.317.a
@@ -273,6 +340,7 @@ country_event = { # Treaty of Luxemburg - Deal - Neutral - Accepted
 	title = nap_france.318.t
 	desc = nap_france.318.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Ok
     	name = nap_france.318.a
@@ -287,6 +355,7 @@ country_event = { # Treaty of Luxemburg - Deal - Neutral - Refused
 	title = nap_france.319.t
 	desc = nap_france.319.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Fine
     	name = nap_france.319.a
@@ -306,6 +375,7 @@ country_event = { # Treaty of Luxemburg - Victory
 	title = nap_france.320.t
 	desc = nap_france.320.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # France fully annex Luxemburg
     	name = nap_france.320.a
@@ -324,6 +394,7 @@ country_event = { # Treaty of Luxemburg - Victory - Annex
 	title = nap_france.321.t
 	desc = nap_france.321.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Accept
     	name = nap_france.321.a
@@ -349,6 +420,7 @@ country_event = { # Treaty of Luxemburg - Victory - Puppet
 	title = nap_france.322.t
 	desc = nap_france.322.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # Accept
     	name = nap_france.322.a
@@ -375,6 +447,7 @@ country_event = { # Treaty of Luxemburg - Victory - Annex - Refuse
 	title = nap_france.323.t
 	desc = nap_france.323.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_treaty_luxemburg
 
 	option = { # War
     	name = nap_france.323.a
@@ -396,6 +469,8 @@ country_event = { # Buy Luxemburg - Netherland answer
 	title = nap_france.330.t
 	desc = nap_france.330.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
+
 
 	option = {
     	name = nap_france.330.a # Accept
@@ -419,6 +494,7 @@ country_event = { # Buy Luxemburg - Netherland answers no
 	title = nap_france.331.t
 	desc = nap_france.331.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
 
 	option = {
     	name = nap_france.331.a # Fine
@@ -430,6 +506,7 @@ country_event = { # Buy Luxemburg - Prussia interpose
 	title = nap_france.332.t
 	desc = nap_france.332.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
 
 	option = {
     	name = nap_france.332.a # Wait no !
@@ -453,6 +530,7 @@ country_event = { # Buy Luxemburg - France answer
 	title = nap_france.333.t
 	desc = nap_france.333.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
 
 	option = {
     	name = nap_france.333.a # Ok
@@ -475,6 +553,7 @@ country_event = { # Buy Luxemburg - France answer
 	title = nap_france.334.t
 	desc = nap_france.334.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
 
 	option = {
     	name = nap_france.334.a # Fantastic
@@ -487,6 +566,7 @@ country_event = { # Buy Luxemburg - Prussia threathened
 	title = nap_france.335.t
 	desc = nap_france.335.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_luxemburg
 
 	option = {
     	name = nap_france.335.a # War
@@ -516,6 +596,7 @@ country_event = { # France - Ask for Savoy
 	title = nap_france.340.t
 	desc = nap_france.340.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = { # Savoy and Alliance
     	name = nap_france.340.a 
@@ -538,6 +619,7 @@ country_event = { # Italy - Ask for Savoy and Alliance
 	title = nap_france.341.t
 	desc = nap_france.341.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = { # Accept
     	name = nap_france.341.a 
@@ -560,6 +642,7 @@ country_event = { # Italy - Ask for Savoy
 	title = nap_france.342.t
 	desc = nap_france.342.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = { # Accept
     	name = nap_france.342.a 
@@ -582,6 +665,7 @@ country_event = { # France - Answer Yes - Savoy + Alliance
 	title = nap_france.343.t
 	desc = nap_france.343.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = {
     	name = nap_france.343.a 
@@ -596,6 +680,7 @@ country_event = { # France - Answer Yes - Savoy
 	title = nap_france.344.t
 	desc = nap_france.344.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = {
     	name = nap_france.344.a 
@@ -608,6 +693,7 @@ country_event = { # France - Answer No
 	title = nap_france.344.t
 	desc = nap_france.344.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_savoy
 
 	option = {
     	name = nap_france.344.a 
@@ -623,6 +709,7 @@ country_event = { # Switzerland - France ask guarenties
 	title = nap_france.350.t
 	desc = nap_france.350.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_switzerland
 
 	option = {
     	name = nap_france.350.a # Accept
@@ -644,6 +731,7 @@ country_event = { # Switzerland - Accepted
 	title = nap_france.351.t
 	desc = nap_france.351.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_switzerland
 
 	option = {
     	name = nap_france.351.a
@@ -655,6 +743,7 @@ country_event = { # Switzerland - Refused
 	title = nap_france.352.t
 	desc = nap_france.352.d
 	is_triggered_only = yes
+  picture = GFX_report_event_nap_france_switzerland
 
 	option = {
     	name = nap_france.352.a
@@ -670,6 +759,7 @@ country_event = { # Indochina - French Expansion
   title = nap_france.360.t
   desc = nap_france.360.d
   is_triggered_only = yes
+  picture = GFX_report_event_nap_france_indochina
 
   option = { # Give Cambodia and Laos
     name = nap_france.360.a
@@ -707,6 +797,7 @@ country_event = { # France - Indochina give us Cambodia and Laos
   title = nap_france.361.t
   desc = nap_france.361.d
   is_triggered_only = yes
+  picture = GFX_report_event_nap_france_indochina
 
   option = { # That's enough for us
     name = nap_france.361.a
@@ -731,6 +822,7 @@ country_event = { # France - Indochina give us Cambodia
   title = nap_france.362.t
   desc = nap_france.362.d
   is_triggered_only = yes
+  picture = GFX_report_event_nap_france_indochina
 
   option = { # That's enough for us
     name = nap_france.362.a
@@ -750,6 +842,542 @@ country_event = { # France - Indochina give us Cambodia
 }
 
 #----------------------------------------------------------------------------------------------
+# LEGISLATIVE ELECTIONS AND POLITICAL DECITIONS
+#----------------------------------------------------------------------------------------------
+
+country_event = { # France - Legislative Elections 1857
+  id = nap_france.370
+  title = nap_france.370.t
+  desc = nap_france.370.d
+  picture = GFX_report_event_nap_france_legislative_elections
+  
+  trigger = {
+    tag = FRA
+    date > 1857.5.1
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Power to the Official Candidate
+    name = nap_france.370.a
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = 75
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = 25
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = -50
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = 40
+    }
+    add_popularity = { 
+      ideology = despotic_autocracy
+      popularity = 0.05
+    }
+  }
+
+  option = { # The Republicans
+    name = nap_france.370.b
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = -75
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = -10
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = 25
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = -25
+    }
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.025 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.025
+    }
+  }
+}
+
+country_event = { # France - Legislative Elections 1863
+  id = nap_france.371
+  title = nap_france.371.t
+  desc = nap_france.371.d
+  picture = GFX_report_event_nap_france_legislative_elections
+
+  trigger = {
+    tag = FRA
+    date > 1863.5.1
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Power to the Official Candidate
+    name = nap_france.371.a
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = 100
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = 20
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = -75
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = 30
+    }
+    add_popularity = { 
+      ideology = despotic_autocracy
+      popularity = 0.125
+    }
+  }
+
+  option = { # The Republicans
+    name = nap_france.371.b
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = -100
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = -10
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = 50
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = 10
+    }
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.05 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.05
+    }
+  }
+}
+
+country_event = { # France - Legislative Elections 1869
+  id = nap_france.372
+  title = nap_france.372.t
+  desc = nap_france.372.d
+  picture = GFX_report_event_nap_france_legislative_elections
+  
+  trigger = {
+    tag = FRA
+    date > 1869.5.1
+    has_government = despotic_autocracy
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Power to the Official Candidate
+    name = nap_france.372.a
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = 150
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = 10
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = -125
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = -15
+    }
+    add_popularity = { 
+      ideology = despotic_autocracy
+      popularity = 0.2
+    }
+  }
+
+  option = { # The Republicans
+    name = nap_france.372.b
+    if = {
+      limit = {
+        has_completed_focus = FRA_conservative_empire
+      }
+      add_political_power = -150
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_fair_empire
+      }
+      add_political_power = 25
+    }
+    if = {
+      limit = {
+        has_completed_focus = FRA_liberal_empire
+      }
+      add_political_power = 100
+    }
+    if = {
+      limit = {
+        NOT = { has_completed_focus = FRA_conservative_empire }
+        NOT = { has_completed_focus = FRA_fair_empire }
+        NOT = { has_completed_focus = FRA_liberal_empire }
+      }
+      add_political_power = 60
+    }
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.1 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.1 
+    }
+  }
+}
+
+country_event = { # General Amnesty
+  id = nap_france.373
+  title = nap_france.373.t
+  desc = nap_france.373.d
+  picture = GFX_report_event_nap_france_amnesty
+  
+  trigger = {
+    tag = FRA
+    date > 1859.1.1
+    date < 1861.1.1
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Full Amnesty
+    name = nap_france.373.a
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.08 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.08 
+    }
+    add_political_power = 50
+    hidden_effect = {
+      country_event = {
+        id = nap_france.374
+        days = 25
+      }
+    }
+  }
+
+  option = { # Partial Amnesty
+    name = nap_france.373.b
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.02 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.02
+    }
+    add_political_power = -75
+    hidden_effect = {
+      country_event = {
+        id = nap_france.375
+        days = 25
+      }
+    }
+  }
+}
+
+country_event = { # Victor Hugo and Pierre-Joseph Proudhon refuses to come back
+  id = nap_france.374
+  title = nap_france.374.t
+  desc = nap_france.374.d
+  picture = GFX_report_event_nap_france_victor_hugo
+  
+  is_triggered_only = yes
+
+  fire_only_once = yes
+
+  option = { # Damn
+    name = nap_france.374.a
+    add_political_power = -75
+  }
+}
+
+country_event = { # Victor Hugo denouces the government
+  id = nap_france.375
+  title = nap_france.375.t
+  desc = nap_france.375.d
+  picture = GFX_report_event_nap_france_victor_hugo
+  
+  is_triggered_only = yes
+
+  fire_only_once = yes
+
+  option = { # Damn
+    name = nap_france.375.a
+    add_political_power = -150
+  }
+}
+
+#----------------------------------------------------------------------------------------------
+# POPULAR UPRISINGS
+#----------------------------------------------------------------------------------------------
+
+country_event = { # Republicans demands more liberties
+  id = nap_france.380
+  title = nap_france.380.t
+  desc = nap_france.380.d
+  
+  trigger = {
+    tag = FRA
+    
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Side with the Republicans
+    name = nap_france.380.a
+    add_political_power = 20
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.1 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.1 
+    }
+  }
+
+  option = { # Oppose the Republicans
+    name = nap_france.380.b
+    add_political_power = -40
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = -0.1 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = -0.1 
+    }
+  }
+}
+
+country_event = { # Legitimist worries
+  id = nap_france.381
+  title = nap_france.381.t
+  desc = nap_france.381.d
+  
+  trigger = {
+    tag = FRA
+    
+  }
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Side with the Legitimists
+    name = nap_france.381.a
+    add_political_power = 20
+    add_popularity = { 
+      ideology = despotic_autocracy
+      popularity = 0.2 
+    }
+    hidden_effect = {
+      country_event = {
+        id = nap_france.382
+        days = 80
+      }
+    }
+  }
+
+  option = { # Oppose the Legitimists
+    name = nap_france.381.b
+    add_political_power = -40
+    add_popularity = { 
+      ideology = despotic_autocracy
+      popularity = -0.1 
+    }
+  }
+}
+
+country_event = { # Republican Uprising
+  id = nap_france.382
+  title = nap_france.382.t
+  desc = nap_france.382.d
+  
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Send the Army
+    name = nap_france.382.a
+    add_political_power = 20
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = -0.05 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = -0.05 
+    }
+    add_political_power = 100
+  }
+
+  option = { # Give in the Republican
+    name = nap_france.382.b
+    add_political_power = -40
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.1 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.1 
+    }
+    add_political_power = -100
+  }
+}
+
+country_event = { # Legitimist Uprising
+  id = nap_france.382
+  title = nap_france.382.t
+  desc = nap_france.382.d
+  
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+    days = 15
+  }
+
+  fire_only_once = yes
+
+  option = { # Send the Army
+    name = nap_france.382.a
+    add_political_power = 20
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = -0.05 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = -0.05 
+    }
+    add_political_power = 100
+  }
+
+  option = { # Give in the Republican
+    name = nap_france.382.b
+    add_political_power = -40
+    add_popularity = { 
+      ideology = traditional_conservatism 
+      popularity = 0.1 
+    }
+    add_popularity = { 
+      ideology = economic_liberalism
+      popularity = 0.1 
+    }
+    add_political_power = -100
+  }
+}
+
+#----------------------------------------------------------------------------------------------
 # NAPOLEON III DEATH AND DISHONOR EVENTS
 #----------------------------------------------------------------------------------------------
 
@@ -757,6 +1385,7 @@ country_event = { # Napoleon III in exile
 	id = nap_france.397
 	title = nap_france.397.t
 	desc = nap_france.397.d
+  picture = GFX_report_event_nap_france_exile_napoleon_iii
 
 	fire_only_once = yes
 
@@ -789,6 +1418,7 @@ country_event = { # Orisini Affair
 	id = nap_france.398
 	title = nap_france.398.t
 	desc = nap_france.398.d
+  picture = GFX_report_event_nap_france_orsini_affair
 
 	fire_only_once = yes
 
@@ -836,6 +1466,7 @@ country_event = { # Death of Napoleon III
 	id = nap_france.399
 	title = nap_france.399.t
 	desc = nap_france.399.d
+  picture = GFX_report_event_napoleon_iii_death
 
 	fire_only_once = yes
 
