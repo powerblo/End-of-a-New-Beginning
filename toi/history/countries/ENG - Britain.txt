@@ -2,43 +2,39 @@
 
 1857.5.11 = {
 	oob = "ENG_1857"
-	
-	set_convoys = 150
-	
+
 	if = {
-		
 		limit = {
 			has_dlc = "Together for Victory"
 		}
-	
 		set_autonomy = {
 			target = NEP
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = HYD
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAS
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAR
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = BIK
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = REW
-			autonomous_state = autonomy_princely_state
+			autnomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
@@ -61,28 +57,15 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
-	
 		else = {
 			puppet = RAJ
 		}
 	}
-		
-		#create_faction = "The Commonwealth"
-		#add_to_faction = NEP
-		#add_to_faction = HYD
-		#add_to_faction = KAS
-		#add_to_faction = KAR
-		#add_to_faction = BIK
-		#add_to_faction = REW
-		#add_to_faction = RAJ
-		#add_to_faction = CAN
-		#add_to_faction = AST
-		#add_to_faction = NZL
 
 	#Whig/Liberal
 	create_country_leader = {
-		name = "Lord Palmerston"
-		picture = "Portrait_ENG_Lord_Palmerston.dds"
+		name = "Henry John Temple"
+		picture = "Lord_Palmerston.dds"
 		expire = "1858.2.19"
 		ideology = market_liberal
 	}
