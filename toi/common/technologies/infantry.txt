@@ -1,22 +1,24 @@
 technologies = {
 
+	#140 : 2
+
 	#Civil War Era
-	@1840 = 0
-	@1850 = 3
-	@1860 = 6
-	@1862 = 9
-	@1864 = 11
-	@1865 = 13
-	@1868 = 15
-	@1870 = 17
-	@1872 = 19
-	@1874 = 21
-	@1875 = 23
-	@1876 = 25
-	@1878 = 27
-	@1880 = 29
-	@1882 = 31
-	@1885 = 33
+	@1840 = 2
+	@1850 = 6
+	@1860 = 10
+	@1862 = 12
+	@1864 = 14
+	@1865 = 16
+	@1868 = 18
+	@1870 = 20
+	@1872 = 22
+	@1874 = 24
+	@1875 = 26
+	@1876 = 28
+	@1878 = 30
+	@1880 = 32
+	@1882 = 34
+	@1885 = 36
 
 	#WW2 Era
 	@1918 = 68
@@ -73,7 +75,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = -2 }
+			position = { x = 0 y = -1 }
 		}
 
 		categories = {
@@ -406,7 +408,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = -1}
+			position = { x = -2 y = @1840}
 		}
 
 		categories = {
@@ -514,7 +516,7 @@ technologies = {
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = -1}
+			position = { x = 2 y = @1840}
 		}
 
 		categories = {
@@ -671,7 +673,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = 1864_army_cloth
+			leads_to_tech = sixfour_army_cloth
 		}
 
 		categories = {
@@ -683,7 +685,7 @@ technologies = {
 		}
 	}
 
-	1864_army_cloth = {
+	sixfour_army_cloth = {
 
 		research_cost = 1
 		start_year = 1864
@@ -777,7 +779,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = 1872_army_cloth
+			leads_to_tech = seventwo_army_cloth
 		}
 
 		categories = {
@@ -789,7 +791,7 @@ technologies = {
 		}
 	}
 
-	1872_army_cloth = {
+	seventwo_army_cloth = {
 
 		research_cost = 1
 		start_year = 1872
@@ -803,7 +805,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = 1878_army_cloth
+			leads_to_tech = seveneight_army_cloth
 		}
 
 		categories = {
@@ -815,7 +817,7 @@ technologies = {
 		}
 	}
 
-	1878_army_cloth = {
+	seveneight_army_cloth = {
 
 		research_cost = 1
 		start_year = 1878
