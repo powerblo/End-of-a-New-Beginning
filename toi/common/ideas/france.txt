@@ -7,7 +7,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_censorship
 
 			modifier = {
 				drift_defence_factor = 0.5
@@ -21,7 +21,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_censorship
 
 			modifier = {
 				drift_defence_factor = 0.5
@@ -35,7 +35,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = generic_disjointed_gov
 
 			modifier = {
 				political_power_cost = 0.5
@@ -48,7 +48,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = generic_disjointed_gov
 
 			modifier = {
 				political_power_cost = 0.2
@@ -62,7 +62,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_authoritarian_empire
 
 			modifier = {
 				drift_defence_factor = 0.5
@@ -75,7 +75,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_liberal_empire
 
 			modifier = {
 				unity_factor = 0.1
@@ -88,7 +88,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_unprepared_army
 
 			modifier = {
 				conscription = -0.005
@@ -102,7 +102,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_privileged_army
 
 			modifier = {
 				conscription = -0.01
@@ -116,7 +116,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_privileged_army
 
 			modifier = {
 				conscription = -0.005
@@ -130,7 +130,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_mobilized_army
 
 			modifier = {
 				training_time_army_factor = 0.25
@@ -143,7 +143,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_mobilized_army
 
 			modifier = {
 				conscription = 0.02
@@ -157,7 +157,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_war_preparations
 
 			modifier = {
 				training_time_army_factor = 0.75
@@ -170,7 +170,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_unsatisfied_people
 
 			modifier = {
 				unity_factor = -0.15
@@ -183,7 +183,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_unsatisfied_people
 
 			modifier = {
 				unity_factor = -0.05
@@ -196,7 +196,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_profits_gold_rush
 
 			modifier = {
                 consumer_goods_factor = -0.02
@@ -209,7 +209,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_economic_boom
 
 			modifier = {
                 consumer_goods_factor = -0.5
@@ -222,7 +222,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_new_banks
 
 			modifier = {
                 consumer_goods_factor = -0.05
@@ -235,11 +235,24 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_new_schools
 
 			modifier = {
 				research_time_factor = -0.02
 			}
+		}
+		FRA_suez_investments = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_new_banks
+
+			modifier = {
+                consumer_goods_factor = 0.02
+            }
 		}
 
 
@@ -250,7 +263,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = ast_classify_aliens
+			picture = FRA_unstable_government
 
 			modifier = {
 				political_power_cost = 0.85

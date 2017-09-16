@@ -1407,7 +1407,7 @@ country_event = { # Napoleon III in exile
     	name = nap_france.397.a
     	create_country_leader = {
 			name = "Louis-Jules Trochu"
-			picture = "Louis_Jules_Trochu.dds"
+			picture = "Portrait_FRA_Louis_Jules_Trochu.dds"
 			ideology = despotism
 		}
 		set_country_flag = fra_nap_iii_captured
@@ -1436,7 +1436,7 @@ country_event = { # Orisini Affair
     	kill_country_leader = yes
     	create_country_leader = {
   			name = "Eugénie de Montijo"
-  			picture = "Eugenie_de_Montijo.dds"
+  			picture = "Portrait_FRA_Eugenie_de_Montijo.dds"
   			ideology = despotism
   		}
       ENG = {
@@ -1480,12 +1480,12 @@ country_event = { # Death of Napoleon III
 
 	option = {
     	name = nap_france.399.a
+    	kill_country_leader = yes
     	create_country_leader = {
 				name = "Napoleon IV"
-				picture = "Napoleon_IV.dds"
+				picture = "Portrait_FRA_Napoleon_IV.dds"
 				ideology = despotism
 		}
-		kill_country_leader = yes
     	hidden = {
       		news_event = { days = 10 id = nap_france.399 }
     	}
