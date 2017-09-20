@@ -1,0 +1,65 @@
+equipments = {
+
+	coastal = {
+		year = 1851
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+
+		interface_category = interface_category_capital_ships
+
+		ap_attack = 11
+		attack = 10
+		fire_range = 24
+		torpedo_attack = 0
+		shore_bombardment = 3
+
+		anti_air_attack = 6
+
+		armor_value = 9
+		evasion = 20
+
+		surface_detection = 12
+		sub_detection = 5
+		surface_visibility = 20
+		naval_speed = 24
+		reliability = 0.80
+
+		naval_range = 3000
+
+		max_strength = 150
+
+		port_capacity_usage = 1
+
+		build_cost_ic = 4200
+		resources = {
+			oil = 1
+			steel = 3
+		}
+
+		manpower = 1500
+	}
+
+  sixone_coastal = {
+    year = 1861
+
+    archetype = coastal
+    priority = 20
+    type = {
+      capital_ship
+    }
+  }
+
+  sixfive_coastal = {
+    year = 1865
+
+    archetype = coastal
+    parent = sixone_coastal
+    priority = 20
+    type = {
+      capital_ship
+    }
+  }
+}

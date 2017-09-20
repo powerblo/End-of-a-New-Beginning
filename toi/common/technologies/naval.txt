@@ -1,0 +1,420 @@
+technologies = {
+
+	@1812 = 1
+	@1848 = 8
+	@1856 = 15
+	@1861 = 22
+	@1865 = 29
+	@1870 = 38
+
+	@monitor = 15
+	@cruiser = 11
+	@frigate = 9
+	@destroyer = 7
+	@corvette = 5
+	@coastal = 3
+	@submarine = 1
+
+	early_destroyer = {
+
+		enable_equipments = {
+			twelve_frigate
+		}
+
+
+		path = {
+			leads_to_tech = foureight_frigate
+			research_cost_coeff = 1
+		}
+
+		research_cost = 0.8
+
+		start_year = 1812
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	foureight_frigate = {
+
+		path = {
+			leads_to_tech = fivesix_frigate
+		}
+
+		enable_equipments = {
+			foureight_frigate
+		}
+
+		research_cost = 1
+
+		start_year = 1848
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = @1848 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	fivesix_frigate = {
+
+		path = {
+			leads_to_tech = sixone_monitor
+		}
+
+		path = {
+			leads_to_tech = ironclad
+		}
+
+		path = {
+			leads_to_tech = sixone_gunboat
+		}
+
+		enable_equipments = {
+			fivesix_frigate
+		}
+
+		research_cost = 1
+
+		start_year = 1856
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = @1856 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixone_monitor = {
+
+		path = {
+			leads_to_tech = sixfive_monitor
+		}
+
+		enable_equipments = {
+			sixone_monitor
+		}
+
+		research_cost = 2
+
+		start_year = 1861
+
+		folder = {
+			name = naval_folder
+			position = { x = @monitor y = @1861 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixfive_monitor = {
+
+		research_cost = 2
+
+		enable_equipments = {
+			sixfive_monitor
+		}
+
+		start_year = 1865
+
+		folder = {
+			name = naval_folder
+			position = { x = @monitor y = @1865 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixone_gunboat = {
+
+		path = {
+			leads_to_tech = sixfive_gunboat
+		}
+
+		research_cost = 1
+
+		start_year = 1861
+
+		enable_equipments = {
+			sixone_coastal
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @coastal y = @1861 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixfive_gunboat = {
+
+		research_cost = 1
+
+		start_year = 1865
+
+		enable_equipments = {
+			sixfive_coastal
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @coastal y = @1865 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	ironclad = {
+
+		path = {
+			leads_to_tech = sixfive_cruiser
+		}
+
+		path = {
+			leads_to_tech = sixfive_corvette
+		}
+
+		path = {
+			leads_to_tech = sloop_of_war
+		}
+
+		enable_equipments = {
+			sixone_frigate
+		}
+
+		research_cost = 1
+
+		start_year = 1861
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = @1861 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixfive_cruiser = {
+
+		research_cost = 1
+
+		start_year = 1865
+
+		enable_equipments = {
+			sixfive_cruiser
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @cruiser y = @1865 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sixfive_corvette = {
+
+		path = {
+			leads_to_tech = seventy_frigate
+		}
+
+		path = {
+			leads_to_tech = seventy_torpedo
+		}
+
+		path = {
+			leads_to_tech = seventy_corvette
+		}
+
+		enable_equipments = {
+			sixfive_frigate
+		}
+
+		research_cost = 1
+
+		start_year = 1865
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = @1865 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	seventy_frigate = {
+
+		research_cost = 1
+
+		start_year = 1870
+
+		enable_equipments = {
+			seventy_frigate
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @frigate y = @1870 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	seventy_corvette = {
+
+		research_cost = 1
+
+		start_year = 1870
+
+		enable_equipments = {
+			seventy_corvette
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @corvette y = @1870 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	sloop_of_war = {
+
+		research_cost = 1
+
+		start_year = 1863
+
+		enable_equipments = {
+			sloop
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @corvette y = 25 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+
+	seventy_torpedo = {
+		research_cost = 1
+		start_year = 1870
+		enable_equipments = {
+			seventy_torpedo
+		}
+
+		folder = {
+			name = naval_folder
+			position = { x = @submarine y = @1870}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+
+	}
+
+}

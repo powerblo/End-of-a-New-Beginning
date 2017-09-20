@@ -1,0 +1,51 @@
+equipments = {
+
+submarine = {
+  year = 1870
+
+  is_archetype = yes
+  is_buildable = no
+  type = submarine
+  group_by = archetype
+
+  interface_category = interface_category_other_ships
+
+  ap_attack = 0
+  attack = 0 # Their main weapon is torpedo_attack.
+  fire_range = 6
+  torpedo_attack = 10
+
+  anti_air_attack = 0.5
+
+  armor_value = 0
+  evasion = 25
+
+  surface_detection = 30
+  sub_detection = 0
+  surface_visibility = 10
+  sub_visibility = 30
+  naval_speed = 14
+  reliability = 0.60
+
+  naval_range = 2500
+
+  max_strength = 10
+
+  port_capacity_usage = 0.5
+
+  build_cost_ic = 450
+
+  manpower = 200
+}
+
+  seventy_torpedo = {
+    year = 1870
+    archetype = submarine
+
+    priority = 20
+    type = {
+      submarine
+    }
+  }
+
+}

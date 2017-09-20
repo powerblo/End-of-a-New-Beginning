@@ -1,0 +1,55 @@
+equipments = {
+
+  light_cruiser = {
+    year = 1865
+    is_archetype = yes
+    is_buildable = no
+    type = screen_ship
+    interface_category = interface_category_screen_ships
+
+    ap_attack = 5.5
+		attack = 6
+		fire_range = 18
+		torpedo_attack = 5
+		sub_attack = 2
+
+		anti_air_attack = 3
+
+		armor_value = 5
+		evasion = 50
+
+		surface_detection = 15
+		sub_detection = 20
+		surface_visibility = 15
+		naval_speed = 28
+		reliability = 0.8
+
+		naval_range = 2400
+
+		max_strength = 100
+
+		port_capacity_usage = 1
+
+    manpower = 600
+  }
+
+  sixfive_cruiser = {
+    year = 1865
+    archetype = cruiser
+    priority = 30
+    type = {
+      screen_ship
+    }
+  }
+
+  sixeight_cruiser = {
+    year = 1868
+    parent = sixfive_cruiser
+    archetype = cruiser
+    priority = 30
+    type = {
+      screen_ship
+    }
+  }
+
+}

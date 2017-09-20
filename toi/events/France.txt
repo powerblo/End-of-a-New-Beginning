@@ -47,7 +47,7 @@ country_event = { # Creation of the Compagnie universelle du canal maritime de S
   }
 
   mean_time_to_happen = {
-    days = 2
+    days = 40
   }
 
   option = { # Invest
@@ -381,11 +381,17 @@ country_event = { # Treaty of Luxemburg - Victory
     	name = nap_france.320.a
     	ai_chance = { factor = 35 }
     	annex_country = { target = LUX }
+    	PRS = {
+    		country_event = { days = 1 id = nap_france.321 }
+    	}
   	}
   	option = { # France puppets Luxemburg
     	name = nap_france.320.b
     	ai_chance = { factor = 65 }
     	FRA = { puppet = LUX }
+    	PRS = {
+    		country_event = { days = 1 id = nap_france.322 }
+    	}
   	}
 }
 
@@ -511,7 +517,7 @@ country_event = { # Buy Luxemburg - Prussia interpose
 	option = {
     	name = nap_france.332.a # Wait no !
     	ai_chance = { factor = 100 }
-    	PRS = { 
+    	FRA = { 
 			country_event = { days = 1 id = nap_france.333 }
 		}
   	}
@@ -689,14 +695,14 @@ country_event = { # France - Answer Yes - Savoy
 }
 
 country_event = { # France - Answer No
-	id = nap_france.344
-	title = nap_france.344.t
-	desc = nap_france.344.d
+	id = nap_france.345
+	title = nap_france.345.t
+	desc = nap_france.345.d
 	is_triggered_only = yes
-  picture = GFX_report_event_nap_france_savoy
+  	picture = GFX_report_event_nap_france_savoy
 
 	option = {
-    	name = nap_france.344.a 
+    	name = nap_france.345.a 
   	}
 }
 
@@ -718,11 +724,23 @@ country_event = { # Switzerland - France ask guarenties
     	FRA = {
     		give_guarantee = SWI
     	}
+    	FRA = {
+	      country_event = {
+	        id = nap_france.351
+	        days = 1
+	      }
+	    }
   	}
 
 	option = {
     	name = nap_france.350.b # Refuse
     	ai_chance = { factor = 65 }
+    	FRA = {
+	      country_event = {
+	        id = nap_france.352
+	        days = 1
+	      }
+	    }
   	}
 }
 
@@ -853,11 +871,11 @@ country_event = { # France - Legislative Elections 1857
   
   trigger = {
     tag = FRA
-    date > 1857.5.1
+    date > 1857.5.11
   }
 
   mean_time_to_happen = {
-    days = 15
+    days = 5
   }
 
   fire_only_once = yes
@@ -1216,11 +1234,11 @@ country_event = { # Republicans demands more liberties
   
   trigger = {
     tag = FRA
-    
+  	despotic_autocracy > 0.8
   }
 
   mean_time_to_happen = {
-    days = 15
+    days = 150
   }
 
   fire_only_once = yes
@@ -1236,6 +1254,7 @@ country_event = { # Republicans demands more liberties
       ideology = economic_liberalism
       popularity = 0.1 
     }
+    set_country_flag = fra_demanded_more_liberty
   }
 
   option = { # Oppose the Republicans
@@ -1249,6 +1268,7 @@ country_event = { # Republicans demands more liberties
       ideology = economic_liberalism
       popularity = -0.1 
     }
+    set_country_flag = fra_demanded_more_liberty
   }
 }
 
@@ -1259,11 +1279,14 @@ country_event = { # Legitimist worries
   
   trigger = {
     tag = FRA
-    
+    OR = {
+    	economic_liberalism > 0.1
+    	traditional_conservatism > 0.1
+    }
   }
 
   mean_time_to_happen = {
-    days = 15
+    days = 200
   }
 
   fire_only_once = yes
@@ -1300,8 +1323,14 @@ country_event = { # Republican Uprising
   
   is_triggered_only = yes
 
+  trigger = {
+  	tag = FRA
+  	despotic_autocracy > 0.9
+  	has_country_flag = fra_demanded_more_liberty
+  }
+
   mean_time_to_happen = {
-    days = 15
+    days = 300
   }
 
   fire_only_once = yes
@@ -1336,20 +1365,28 @@ country_event = { # Republican Uprising
 }
 
 country_event = { # Legitimist Uprising
-  id = nap_france.382
-  title = nap_france.382.t
-  desc = nap_france.382.d
+  id = nap_france.383
+  title = nap_france.383.t
+  desc = nap_france.383.d
   
   is_triggered_only = yes
 
   mean_time_to_happen = {
-    days = 15
+    days = 300
+  }
+
+  trigger = {
+  	tag = FRA
+  	OR = {
+    	economic_liberalism > 0.25
+    	traditional_conservatism > 0.25
+    }
   }
 
   fire_only_once = yes
 
   option = { # Send the Army
-    name = nap_france.382.a
+    name = nap_france.383.a
     add_political_power = 20
     add_popularity = { 
       ideology = traditional_conservatism 
@@ -1363,7 +1400,7 @@ country_event = { # Legitimist Uprising
   }
 
   option = { # Give in the Republican
-    name = nap_france.382.b
+    name = nap_france.383.b
     add_political_power = -40
     add_popularity = { 
       ideology = traditional_conservatism 

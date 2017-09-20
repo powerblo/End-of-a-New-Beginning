@@ -1,0 +1,115 @@
+equipments = {
+
+    frigate = {
+      year = 1812
+      is_archetype = yes
+      is_buildable = no
+      type = screen_ship
+      interface_category = interface_category_screen_ships
+
+      ap_attack = 1
+  		attack = 1
+  		fire_range = 14
+  		torpedo_attack = 3
+  		sub_attack = 10
+
+  		anti_air_attack = 1.5
+
+  		armor_value = 0
+  		evasion = 70
+
+  		surface_detection = 20
+  		sub_detection = 50
+  		surface_visibility = 10
+  		naval_speed = 33
+  		reliability = 0.80
+
+  		naval_range = 1500
+
+  		max_strength = 25
+
+  		port_capacity_usage = 1
+
+  		build_cost_ic = 900
+  		resources = {
+  			oil = 1
+  			steel = 2
+  		}
+
+  		manpower = 250
+    }
+
+    twelve_frigate = {
+      year = 1812
+
+      archetype = frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+    foureight_frigate = {
+      year = 1848
+
+      archetype = frigate
+      parent = twelve_frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+    #ironclad
+    fivesix_frigate = {
+      year = 1856
+
+      archetype = frigate
+      parent = foureight_frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+    sixone_frigate = {
+      year = 1861
+
+      archetype = frigate
+      parent = fivesix_frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+    #steam corvette
+    sixfive_frigate = {
+      year = 1865
+
+      archetype = frigate
+      parent = sixone_frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+    seventy_frigate = {
+      year = 1870
+
+      archetype = frigate
+      parent = sixfive_frigate
+      priority = 20
+      type = {
+        screen_ship
+        anti_air
+        }
+    }
+
+}
