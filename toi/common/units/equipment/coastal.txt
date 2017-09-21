@@ -1,7 +1,7 @@
 equipments = {
 
 	coastal = {
-		year = 1851
+		year = 1861
 
 		is_archetype = yes
 		is_buildable = no
@@ -10,36 +10,34 @@ equipments = {
 
 		interface_category = interface_category_capital_ships
 
-		ap_attack = 11
-		attack = 10
-		fire_range = 24
+		build_cost_ic = 1200
+		manpower = 160
+		naval_range = 1000
+		naval_speed = 10
+
+		surface_detection = 8
+		sub_detection = 6
+		surface_visibility = 14
+		#sub_visibility =
+
+		max_strength = 9
+		evasion = 18
+		armor_value = 0.8
+		reliability = 0.6
+
+		fire_range = 8
+		attack = 0.3
 		torpedo_attack = 0
+		anti_air_attack = 0
+		sub_attack = 0
+		ap_attack = 0.2
 		shore_bombardment = 3
-
-		anti_air_attack = 6
-
-		armor_value = 9
-		evasion = 20
-
-		surface_detection = 12
-		sub_detection = 5
-		surface_visibility = 20
-		naval_speed = 24
-		reliability = 0.80
-
-		naval_range = 3000
-
-		max_strength = 150
 
 		port_capacity_usage = 1
 
-		build_cost_ic = 4200
 		resources = {
-			oil = 1
-			steel = 3
+			steel = 2
 		}
-
-		manpower = 1500
 	}
 
   sixone_coastal = {
@@ -50,6 +48,8 @@ equipments = {
     type = {
       capital_ship
     }
+
+
   }
 
   sixfive_coastal = {
@@ -61,5 +61,34 @@ equipments = {
     type = {
       capital_ship
     }
+
+		build_cost_ic = 1800
+		manpower = 220
+		naval_range = 1050
+		naval_speed = 11
+
+		surface_detection = 9
+		sub_detection = 7
+		surface_visibility = 14
+		#sub_visibility =
+
+		max_strength = 12
+		evasion = 20
+		armor_value = 1
+		reliability = 0.6
+
+		fire_range = 9
+		attack = 2.5
+		torpedo_attack = 0
+		anti_air_attack = 0
+		sub_attack = 0
+		ap_attack = 4
+		shore_bombardment = 4
+
+		port_capacity_usage = 1
+
+		resources = {
+			steel = 2
+		}
   }
 }

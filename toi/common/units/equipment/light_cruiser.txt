@@ -7,30 +7,34 @@ equipments = {
     type = screen_ship
     interface_category = interface_category_screen_ships
 
-    ap_attack = 5.5
-		attack = 6
-		fire_range = 18
-		torpedo_attack = 5
-		sub_attack = 2
+    build_cost_ic = 1080
+	  manpower = 200
+		naval_range = 1000
+		naval_speed = 18
 
-		anti_air_attack = 3
+		surface_detection = 10
+		sub_detection = 5
+		surface_visibility = 9
+		#sub_visibility =
 
-		armor_value = 5
-		evasion = 50
+		max_strength = 10
+		evasion = 30
+		armor_value = 0.3
+		reliability = 0.7
 
-		surface_detection = 15
-		sub_detection = 20
-		surface_visibility = 15
-		naval_speed = 28
-		reliability = 0.8
-
-		naval_range = 2400
-
-		max_strength = 100
+		fire_range = 10
+		attack = 2
+		torpedo_attack = 0.5
+		anti_air_attack = 0
+		sub_attack = 0
+		ap_attack = 1
+		#shore_bombardment =
 
 		port_capacity_usage = 1
 
-    manpower = 600
+		resources = {
+			steel = 1
+		}
   }
 
   sixfive_cruiser = {
@@ -50,6 +54,35 @@ equipments = {
     type = {
       screen_ship
     }
+
+    build_cost_ic = 1320
+	  manpower = 220
+		naval_range = 1100
+		naval_speed = 20
+
+		surface_detection = 11
+		sub_detection = 5
+		surface_visibility = 10
+		#sub_visibility =
+
+		max_strength = 12
+		evasion = 35
+		armor_value = 0.4
+		reliability = 0.7
+
+		fire_range = 11
+		attack = 2.1
+		torpedo_attack = 0.6
+		anti_air_attack = 0
+		sub_attack = 0
+		ap_attack = 1.2
+		#shore_bombardment =
+
+		port_capacity_usage = 1
+
+		resources = {
+			steel = 1
+		}
   }
 
 }

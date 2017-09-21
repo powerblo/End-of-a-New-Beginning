@@ -7,29 +7,34 @@ equipments = {
     type = capital_ship
     interface_category = interface_category_capital_ships
 
-    ap_attack = 31
-		attack = 18
-		fire_range = 32
-		torpedo_attack = 0
-		shore_bombardment = 10
+    build_cost_ic = 2000
+    manpower = 180
+    naval_range = 1000
+    naval_speed = 10
 
-		anti_air_attack = 4
+    surface_detection = 6
+    sub_detection = 4
+    surface_visibility = 20
+    #sub_visibility =
 
-		armor_value = 26
-		evasion = 10
+    max_strength = 8
+    evasion = 12
+    armor_value = 1.2
+    reliability = 0.5
 
-		surface_detection = 12
-		sub_detection = 5
-		surface_visibility = 30
-		naval_speed = 20
-		reliability = 0.80
+    fire_range = 10
+    attack = 2
+    torpedo_attack = 0
+    anti_air_attack = 0
+    sub_attack = 0
+    ap_attack = 3
+    shore_bombardment = 0.3
 
-		naval_range = 3000
+    port_capacity_usage = 1
 
-		max_strength = 350
-		port_capacity_usage = 2
-
-    manpower = 6000
+    resources = {
+      steel = 2
+    }
   }
 
   sixone_monitor = {
@@ -50,6 +55,35 @@ equipments = {
     priority = 20
     type = {
       capital_ship
+    }
+
+    build_cost_ic = 2200
+    manpower = 185
+    naval_range = 1050
+    naval_speed = 10
+
+    surface_detection = 8
+    sub_detection = 6
+    surface_visibility = 20
+    #sub_visibility =
+
+    max_strength = 12
+    evasion = 15
+    armor_value = 1.3
+    reliability = 0.55
+
+    fire_range = 11
+    attack = 2.5
+    torpedo_attack = 0
+    anti_air_attack = 0
+    sub_attack = 0
+    ap_attack = 3
+    shore_bombardment = 0.4
+
+    port_capacity_usage = 1
+
+    resources = {
+      steel = 2
     }
   }
 
