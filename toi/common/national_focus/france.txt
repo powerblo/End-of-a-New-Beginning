@@ -102,8 +102,6 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_continue_censorship
-		}
-		prerequisite = {
 			focus = FRA_end_censorship
 		}
 		mutually_exclusive = {
@@ -1210,11 +1208,11 @@ focus_tree = {
 		y = 7
 
 	}
-	
+
 	#-------------------------------------------------------------------------------
 	#	WAR CHOICES
 	#-------------------------------------------------------------------------------
-	
+
 	focus = {
 		id = FRA_war_prussia
 		icon = GFX_goal_generic_major_war
@@ -1230,9 +1228,9 @@ focus_tree = {
 			focus = FRA_deal_with_prussians
 		}
 		completion_reward = {
-			declare_war_on= { 
+			declare_war_on= {
 				target = PRS
-				type = annex_everything 
+				type = annex_everything
 			}
 		}
 		x = 14
@@ -2882,7 +2880,7 @@ focus_tree = {
 				has_country_flag = fra_prs_war_defeat
 			}
 			NOT = {
-				has_idea = FRA_unstable_government 
+				has_idea = FRA_unstable_government
 			}
 		}
 		x = 61

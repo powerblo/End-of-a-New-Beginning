@@ -1,0 +1,160 @@
+division_template = {
+   name = "Infanterie Division"
+
+   regiments = {
+     line_infantry = { x = 0 y = 0 }
+     line_infantry = { x = 0 y = 1 }
+     line_infantry = { x = 1 y = 0 }
+     line_infantry = { x = 1 y = 1 }
+     light_cavalry = { x = 2 y = 0 }
+     light_infantry = { x = 3 y = 0 }
+  }
+  support = {
+      artillery = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+  }
+}
+
+division_template = {
+	name = "Kavalerie Division"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+		light_cavalry = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+		light_cavalry = { x = 1 y = 2 }
+		artillery = { x = 0 y = 3 }
+	 }
+}
+division_template  =  {
+ name = "Landwehr Kavalerie Division"
+
+ regiments = {
+   light_cavalry = { x = 0 y = 0 }
+   light_cavalry = { x = 0 y = 1 }
+   light_cavalry = { x = 1 y = 0 }
+   light_cavalry = { x = 1 y = 1 }
+   light_cavalry = { x = 2 y = 0 }
+   light_cavalry = { x = 2 y = 1 }
+  }
+}
+division_template = {
+  name = "Garde Division"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0 }
+    line_infantry = { x = 0 y = 1 }
+    line_infantry = { x = 1 y = 0 }
+    line_infantry = { x = 1 y = 1 }
+    dragoon = { x = 2 y = 0 }
+    light_infantry = { x = 3 y = 0 }
+  }
+  support = {
+    artillery = { x = 0 y = 0 }
+    engineer = { x = 0 y = 1 }
+  }
+  priority = 2
+}
+
+	units = {
+		#Kaiserliche Preussische Armee
+		division= {
+			name = "1. Division"
+			location = 6332
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "2. Division"
+			location = 362
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "3. Division"
+			location = 6282
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "4. Division"
+			location = 3295
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "5. Division"
+			location = 3207
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "6. Division"
+			location = 3444
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "7. Division"
+			location = 3522
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "8. Division"
+			location = 6521
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "9. Division"
+			location = 3283
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "10. Division"
+			location = 6558
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+    division= {
+			name = "11. Division"
+			location = 9570
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "12. Division"
+			location = 9457
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "13. Division"
+			location = 6535
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "14. Division"
+			location = 3444
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+                }
+		division= {
+			name = "15. Division"
+			location = 587
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "16. Division"
+			location = 3547
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+
+		}
+}
