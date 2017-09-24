@@ -1,0 +1,217 @@
+add_namespace = prussia
+
+#Speech of Blood and Iron
+country_event = {
+		id = prussia.1
+		title = prussia.1.t
+		desc = prussia.1.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				AND = {
+					date > 1862.9.29
+				}
+		}
+		
+		option = {
+				name = prussia.1.a
+				add_ideas = PRS_BloodIron
+		}
+}
+
+#Realpolitik
+country_event = {
+		id = prussia.2
+		title = prussia.2.t
+		desc = prussia.2.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				AND = {
+					has_country_leader = { id = 1000 ruling_only = no name = "Otto von Bismarck" }
+				}
+				AND = {
+					date > 1862.1.1
+				}
+		}
+		
+		option = {
+				name = prussia.2.a
+				add_ideas = PRS_Realpolitik
+		}
+}
+
+#Railway Funding
+country_event = {
+		id = prussia.3
+		title = prussia.3.t
+		desc = prussia.3.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				AND = {
+					date > 1858.2.1
+				}
+		}
+		
+		option = {
+				name = prussia.3.a
+				add_ideas = PRS_Railways
+				add_political_power = -500
+		}
+		
+		option = {
+				name = prussia.3.b
+				add_political_power = 200
+		}
+}
+
+#Prussian Northern Railway
+country_event = {
+		id = prussia.4
+		title = prussia.4.t
+		desc = prussia.4.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				AND = {
+					date > 1875.1.1
+				}
+		}
+		
+		option = {
+				name = prussia.4.a
+				68 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }}
+				64 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes }}
+				62 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes }}
+				add_political_power = -500
+		}
+		option = {
+				name = prussia.4.b
+				add_political_power = 200
+		}
+}
+
+#The German Question (Event Chain)
+country_event = {
+		id = prussia.5
+		title = prussia.5.t
+		desc = prussia.5.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				AND = {
+					date > 1866.6.29
+				}
+		}
+		
+		#Großdeutschland Solution
+		option = { 
+				name = prussia.5.a
+				add_ideas = PRS_GrossDE
+				create_wargoal = { type = annex_everything target = HAN }
+				create_wargoal = { type = annex_everything target = OLD }
+				create_wargoal = { type = annex_everything target = MCK }
+				create_wargoal = { type = annex_everything target = SAX }
+				create_wargoal = { type = annex_everything target = THU }
+				create_wargoal = { type = annex_everything target = HES }
+				create_wargoal = { type = annex_everything target = BAV }
+				create_wargoal = { type = annex_everything target = WUR }
+				create_wargoal = { type = annex_everything target = BAD }
+				add_state_claim = 152
+				add_state_claim = 4
+				add_state_claim = 102
+				add_state_claim = 736
+				add_state_claim = 153
+				add_state_claim = 39
+		}
+		
+		#Kleindeutschland Solution
+		option = {
+				name = prussia.5.b
+				add_ideas = PRS_KleinDE
+				hidden_effect = { PRS = { country_event = { days = 730 id = prussia.7 }}}
+		}
+}
+
+#Großdeutschland formed
+country_event = {
+		id = prussia.6
+		title = prussia.6.t
+		desc = prussia.6.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+				tag = PRS
+				NOT = {
+					country_exists = HAN
+					country_exists = OLD
+					country_exists = MCK
+					country_exists = SAX
+					country_exists = THU
+					country_exists = HES
+					country_exists = BAV
+					country_exists = WUR
+					country_exists = BAD
+				}
+				AND = {
+					GER = { has_full_control_of_state = 152 }
+					GER = { has_full_control_of_state = 4 }
+					GER = { has_full_control_of_state = 102 }
+					GER = { has_full_control_of_state = 736 }
+					GER = { has_full_control_of_state = 153 }
+					GER = { has_full_control_of_state = 39 }
+				}
+		}
+		
+		option = {
+				name = prussia.6.a
+				remove_ideas = PRS_GrossDE
+		}
+}
+
+#Danish-Prussian War
+#This event will only handle the starting of the war, not the peace deal.
+country_event = {
+		id = prussia.7
+		title = prussia.7.t
+		desc = prussia.7.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = prussia.7.a
+				declare_war_on = { target = DEN type = annex_everything }
+				add_to_war = { targeted_alliance = AUS enemy = DEN }
+		}
+}
+		
+
+				

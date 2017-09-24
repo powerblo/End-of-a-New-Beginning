@@ -1,0 +1,59 @@
+division_template = {
+   name = "Infanterie Division"
+
+   regiments = {
+     line_infantry = { x = 0 y = 0 }
+     line_infantry = { x = 0 y = 1 }
+     light_infantry = { x = 0 y = 2 }
+     line_infantry = { x = 1 y = 0 }
+     line_infantry = { x = 1 y = 1 }
+     light_infantry = { x = 1 y = 2 }
+     light_cavalry = { x = 2 y = 0 }
+ 		 light_cavalry = { x = 2 y = 1 }
+     artillery = { x = 3 y = 0}
+     artillery = { x = 3 y = 0}
+  }
+}
+
+division_template = {
+	name = "Kavalerie Korps"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+		light_cavalry = { x = 0 y = 1 }
+		light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+		light_cavalry = { x = 1 y = 2 }
+		artillery = { x = 2 y = 0 }
+    artillery = { x = 2 y = 1 }
+	 }
+}
+
+  units = {
+    #Kaiserliche Bayerische Armee
+    division= {
+      name = "1.Infantere Division"
+      location = 692
+      division_template = "Infanterie Division"
+      start_experience_factor = 0.3
+   }
+   division= {
+     name = "2.Infantere Division"
+     location = 532
+     division_template = "Infanterie Division"
+     start_experience_factor = 0.3
+   }
+   division= {
+     name = "3.Infantere Division"
+     location = 11544
+     division_template = "Infanterie Division"
+     start_experience_factor = 0.3
+   }
+   division= {
+     name = "4.Infantere Division"
+     location = 6594
+     division_template = "Infanterie Division"
+     start_experience_factor = 0.3
+
+		}
+}

@@ -1,0 +1,69 @@
+ideas = {
+
+	country = {
+		PRS_BloodIron = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.4
+				army_morale_factor = 0.1
+				traditional_conservatism_drift = 0.025
+			}
+		}
+		PRS_Realpolitik = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				political_power_gain = 0.25
+				conscription_factor = 0.2
+			}	
+		}
+		PRS_Railways = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		PRS_GrossDE = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = -0.2
+				enemy_partisan_effect = 0.2
+				attrition = 0.1 #Because the locals in the other german states refuse to help the invading Armies
+				research_time_factor = 0.05 #Rapid Expansion takes away focus from Research
+			}
+		}
+		PRS_KleinDE = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}		
+	}
+
+
+}
