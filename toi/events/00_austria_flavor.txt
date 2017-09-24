@@ -1,0 +1,159 @@
+add_namespace = 00_austria_flavor
+
+#Floridsdorf Locomotive Factory
+country_event = {
+		id = 00_austria_flavor.1
+		title = 00_austria_flavor.1.t
+		desc = 00_austria_flavor.1.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1869.9.5
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.1.a
+				add_political_power = -300
+				add_ideas = AUS_Locomotive
+		}
+		option = {
+				name = 00_austria_flavor.1.b
+		}
+}
+
+#Trieste Port
+country_event = {
+		id = 00_austria_flavor.2
+		title = 00_austria_flavor.2.t
+		desc = 00_austria_flavor.2.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1862.6.1
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.2.a
+				6626 = { set_building_level = { type = naval_base level = 4 } }
+				add_timed_idea = { idea = AUS_Trieste_Construction days = 120 }
+		}
+		option = {
+				name = 00_austria_flavor.2.b
+				add_political_power = 50
+		}
+}
+
+#Budapest Stock Exchange
+country_event = {
+		id = 00_austria_flavor.3
+		title = 00_austria_flavor.3.t
+		desc = 00_austria_flavor.3.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1863.3.24
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.3.a
+				add_political_power = -500
+				add_ideas = AUS_BSE
+		}
+		option = {
+				name = 00_austria_flavor.3.b
+		}
+}
+
+#Telefon Hírmondó
+country_event = {
+		id = 00_austria_flavor.4
+		title = 00_austria_flavor.4.t
+		desc = 00_austria_flavor.4.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1893.2.15
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.4.a
+		}
+}
+
+#Novara Expedition
+country_event = {
+		id = 00_austria_flavor.5
+		title = 00_austria_flavor.5.t
+		desc = 00_austria_flavor.5.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1857.12.10
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.5.a
+				add_political_power = -25
+				add_timed_idea = { idea = AUS_Expedition days = 730 }
+		{
+		option = {
+				name = 00_austria_flavor.5.b
+		}
+}
+
+#Novara Expedition Results
+country_event = {
+		id = 00_austria_flavor.6
+		title = 00_austria_flavor.6.t
+		desc = 00_austria_flavor.6.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			tag = AUS
+			AND = {
+				date > 1859.12.10
+			}
+			NOT = {
+				has_idea = AUS_Expedition
+			}
+		}
+
+		option = {
+				name = 00_austria_flavor.6.a
+				navy_experience = 20
+				add_timed_idea = { idea = AUS_Results days = 730 }
+		}
+}

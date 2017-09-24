@@ -1,0 +1,59 @@
+#No namespace here, since a file for Britain already exists in the mod. Just copypaste the events in.
+#I will use the id 01_britain for all british events scripted by me since I can't reserve event ids.
+add_namespace = 01_britain
+
+#Treaty of San Stefano
+country_event = {
+		id = 01_britain.1
+		title = 01_britain.1.t
+		desc = 01_britain.1.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+				tag = ENG
+				AND = {
+					date > 1878.3.2
+				}
+		}
+
+		option = {
+				name = 01_britain.1.a
+				add_political_power = -150
+		}
+		option = {
+				name = 01_britain.1.b
+				add_relation_modifier = { target = RUS modifier = Stefano_Objection }
+		}
+}
+
+#Treaty of Berlin
+country_event = {
+		id = 01_britain.2
+		title = 01_britain.2.t
+		desc = 01_britain.2.d
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+				tag = ENG
+				AND = {
+					date > 1878.7.12
+				}
+		}
+
+		option = {
+				name = 01_britain.2.a
+				GRE = { set_state_owner = 183 }
+				add_relation_modifier = { target = GRE modifier = Cyprus_Gift }
+		}
+		option = {
+				name = 01_britain.2.b
+				add_state_core = 183
+				ENG = { set_state_owner = 183 }
+		}
+}

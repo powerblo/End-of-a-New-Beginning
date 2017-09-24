@@ -57,6 +57,11 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
+		set_autonomy = {
+			target = ION
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
 		else = {
 			puppet = RAJ
 		}
@@ -91,7 +96,7 @@
 	set_technology = {
 		infantry_weapons = 1
 		rifle_equipment1 = 1
-		 
+
 		hand_revolvers = 1
 		socket_bayonet = 1
 		vic_army_cloth = 1

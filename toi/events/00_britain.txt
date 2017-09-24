@@ -1,4 +1,4 @@
-add_namespace = 00_britain
+﻿add_namespace = 00_britain
 
 country_event = { # Orsini Affair
   id = 00_britain.1
@@ -113,5 +113,33 @@ country_event = { # Sepoy Debate
 
   option = { # Send some volunteers
     name = 00_britain.10.b
+  }
+}
+
+country_event = {
+  id = 00_britain.500
+  title = 00_britain.500.t
+  desc = 00_britain.500.d
+
+  is_triggered_only = yes
+
+  #Full support
+  option = {
+    name = 00_britain.500.a
+    declare_war_on = {target = CSA type = annex_everything}
+  }
+
+  #Backhand support
+  option = {
+    name = 00_britain.500.b
+    hidden = {
+      set_country_flag = support_usa
+    }
+  }
+
+  #Refusal
+  option = {
+    name = 00_britain.500.c
+    #Event for USA happens, USA can declare war on Britain
   }
 }
