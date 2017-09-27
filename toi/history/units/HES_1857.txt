@@ -1,0 +1,26 @@
+division_template = {
+  name = "Hessische Infanterie"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 2 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "Erste Hessische Infanterie"
+			location = 6488
+			division_template = "Hessische Infanterie"
+			start_experience_factor = 0.2
+		}
+		#Scattered Divisions
+		division= {
+			name = "Zweite Hessische Infanterie"
+			location = 6549
+			division_template = "Hessische Infanterie"
+			start_experience_factor = 0.2
+		}
+}

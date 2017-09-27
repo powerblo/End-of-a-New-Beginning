@@ -2,6 +2,66 @@ ideas = {
 
   country = {
 
+  USA_OldImmigration = {
+    allowed = {
+      original_tag = USA
+    }
+
+    removal_cost = -1
+
+    modifier = {
+      consumer_goods_factor = 0.05
+      MONTHLY_POPULATION = 0.5
+    }
+  }
+  USA_OldImmigrationStopped = {
+    allowed = {
+      original_tag = USA
+    }
+
+    removal_cost = -1
+
+    modifier = {
+      consumer_goods_factor = -0,025
+      MONTHLY_POPULATION = -0.25
+    }
+  }
+  USA_1857Panic = {
+    allowed = {
+      original_tag = USA
+    }
+
+    removal_cost = -1
+
+    modifier = {
+      consumer_goods_factor = 0.1
+      industrial_capacity_factory = -0.25
+      political_power_gain = -0.1
+    }
+  }
+  USA_JBSlavery = {
+    allowed = {
+      original_tag = USA
+    }
+
+    removal_cost = -1
+
+    modifier = {
+      unity_factor = -0.1
+    }
+  }
+  USA_JBAbolishment = {
+    allowed = {
+      original_tag = USA
+    }
+
+    removal_cost = -1
+
+    modifier = {
+      unity_factor = -0.1
+    }
+  }
+
     recent_banned_slavery = {
 
       allowed = {

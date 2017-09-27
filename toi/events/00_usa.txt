@@ -1,0 +1,175 @@
+add_namespace = 00_USA
+
+#Old Immigration Period
+country_event = {
+		id = 00_USA.1
+		title = 00_USA.1.t
+		desc = 00_USA.1.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1857.8.23
+			}
+		}
+		
+		option = {
+				name = 00_USA.1.a
+				add_timed_idea = { idea = USA_OldImmigration days = 1000 }
+		}
+		option = {
+				name = 00_USA.1.b
+				add_political_power = -300
+				add_timed_idea = { idea = USA_OldImmigrationStopped days = 1000 }
+		}
+}
+
+#Panic of 1857
+country_event = {
+		id = 00_USA.2
+		title = 00_USA.2.t
+		desc = 00_USA.2.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1857.8.10
+			}
+		}
+		
+		option = {
+				name = 00_USA.2.a
+				add_timed_idea = { idea = USA_1857Panic days = 730 }
+		}
+}
+
+#Lincoln's "House Divided" Speech
+country_event = {
+		id = 00_USA.3
+		title = 00_USA.3.t
+		desc = 00_USA.3.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1858.6.15
+			}
+		}
+		
+		option = {
+				name = 00_USA.3.a
+				add_political_power = 100
+		}
+}
+
+#John Brown's Rebellion Attempt - if the USA is leaning towards slavery
+country_event = {
+		id = 00_USA.4
+		title = 00_USA.4.t
+		desc = 00_USA.4.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1859.10.15
+			}
+			AND = {
+				traditional_conservatism > 0.4
+				economic_liberalism < 0.4
+			}
+		}
+		
+		option = {
+				name = 00_USA.4.a
+				add_timed_idea = { idea = USA_JBSlavery days = 365 }
+		}
+}
+
+#John Brown's Rebellion Attempt - if the USA is leaning towards abolishment
+country_event = {
+		id = 00_USA.5
+		title = 00_USA.5.t
+		desc = 00_USA.5.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1859.10.15
+			}
+			AND = {
+				economic_liberalism > 0.4
+				traditional_conservatism < 0.4
+			}
+		}
+		
+		option = {
+				name = 00_USA.5.a
+				add_timed_idea = { idea = USA_JBAbolishment days = 365 }
+		}
+}
+
+#Transatlantic Cable
+country_event = {
+		id = 00_USA.6
+		title = 00_USA.6.t
+		desc = 00_USA.6.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1858.8.15
+			}
+		}
+		
+		option = {
+				name = 00_USA.6.a
+				add_relation_modifier = { target = ENG modifier = USA_TAC }
+		}
+}
+
+#Pennsylvania Oil
+country_event = {
+		id = 00_USA.7
+		title = 00_USA.7.t
+		desc = 00_USA.7.d
+		
+		fire_only_once = yes
+		
+		major = no
+		
+		trigger = {
+			tag = USA
+			AND = {
+				date > 1859.8.26
+			}
+		}
+		
+		option = {
+				name = 00_USA.7.a
+				add_resource = { type = oil amount = 4 state = 360 }
+		}
+}
