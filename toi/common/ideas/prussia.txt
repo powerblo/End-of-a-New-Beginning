@@ -5,9 +5,9 @@ ideas = {
 			allowed = {
 				original_tag = PRS
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				justify_war_goal_time = -0.4
 				army_morale_factor = 0.1
@@ -18,22 +18,22 @@ ideas = {
 			allowed = {
 				original_tag = PRS
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				drift_defence_factor = 0.25
 				political_power_gain = 0.25
 				conscription_factor = 0.2
-			}	
+			}
 		}
 		PRS_Railways = {
 			allowed = {
 				original_tag = PRS
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_infrastructure_factor = 0.2
 			}
@@ -42,9 +42,9 @@ ideas = {
 			allowed = {
 				original_tag = PRS
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				unity_factor = -0.2
 				enemy_partisan_effect = 0.2
@@ -56,13 +56,44 @@ ideas = {
 			allowed = {
 				original_tag = PRS
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = 0.25
 			}
-		}		
+		}
+		PRS_BNG = {
+			allowed = {
+				original_tag = PRS
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		PRS_RedCross = {
+			allowed = {
+				original_tag = PRS
+				original_tag = WUR
+				original_tag = BAD
+				original_tag = HES
+				original_tag = SAX
+				original_tag = THU
+				original_tag = HAN
+				original_tag = OLD
+				original_tag = MCK
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				consumer_goods_factor = -0.025
+			}
+		}
 	}
 
 
