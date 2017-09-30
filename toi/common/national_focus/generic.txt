@@ -9,6 +9,203 @@ focus_tree = {
 	reset_on_civilwar = no
 
 
+	###Industrial Branch
+
+	###Reform towards industrialisation
+
+	#
+
+	###Economy reformation
+
+
+
+
+	###Military Branch
+
+	#Research Military Theories
+
+	focus = {
+		id = military_theory
+		icon = GFX
+		cost = 3
+		x = 9
+		y = 0
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	#Doctrine Tree
+
+	focus = {
+		id = military_doctrines
+		icon = GFX
+		cost = 10
+		x = 9
+		y = 1
+
+		prerequisite = {
+			focus = military_theory
+		}
+
+		completion_reward = {
+			#Will give bonus to doctrine when inf doctrines and tactics are finished
+		}
+	}
+
+	#Strengthen Napoleonic Tactics - Leads into conscription reformation
+
+	focus = {
+		id = napoleonic_tactics
+		icons = GFX
+		cost = 10
+		x = 8
+		y = 2
+
+		mutually_exclusive = {
+			focus = new_ideals
+		}
+
+		prerequisite = {
+			focus = military_doctrines
+		}
+
+		completion_reward = {
+			#Bonus to Napoleonic military doctrines
+		}
+
+	}
+
+	#Hire new generals
+
+	focus = {
+		id = new_generals
+		cost = 10
+		x = 8
+		y = 3
+
+		prerequisite = {
+			focus = napoleonic_tactics
+		}
+
+		completion_reward = {
+			#Hire new generals with good stats
+			create_corps_commander = {traits = {} skills = 4}
+			create_corps_commander = {traits = {} skills = 3}
+			create_corps_commander = {traits = {} skills = 4}
+		}
+	}
+
+	#Recruit more people
+
+	focus = {
+		id = higher_draft
+		cost = 10
+		x = 8
+		y = 4
+
+		prerequisite = {
+			focus = new_generals
+		}
+
+		completion_reward = {
+			#Add spirit with higher population, faster recruit speed
+			add_ideas = draft_reformation
+		}
+	}
+
+	#Innovate New Ideals - Leads into army reformation
+
+	focus = {
+		id = new_ideals
+		icons = GFX
+		cost = 10
+		x = 10
+		y = 2
+
+		mutually_exclusive = {
+			focus = napoleonic_tactics
+		}
+
+		prerequisite = {
+			focus = military_doctrines
+		}
+
+		completion_reward = {
+			#Bonus to reformed military doctrines
+		}
+
+	}
+
+	###Army Reformation
+
+	#Adapt to new techs
+
+	focus = {
+		id = adapt_techs
+		icons = GFX
+		cost = 10
+		x = 12
+		y = 0
+
+		completion_reward = {
+			#Remove idea hindering infantry tech
+			remove_ideas = unadapted_new_tech
+		}
+	}
+
+	#Reform military
+
+	focus = {
+		id = reform_military
+		icons = GFX
+		cost = 10
+		x = 12
+		y = 3
+
+		prerequisite = {
+			focus = new_ideals
+		}
+
+		prerequisite = {
+			focus = adapt_techs
+		}
+
+		completion_reward = {
+			#tech bonus to infantry/cavalry tech
+			army_experience = 5
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	#Reorganisation of troops
+
+	focus = {
+		id = reorganise_troops
+		icons = GFX
+		cost = 10
+		x = 12
+		y = 4
+
+		prerequisite = {
+			focus = reform_military
+		}
+
+		completion_reward = {
+			#Add spirit that lowers division recruitment speed, tech bonus to infantry(doctrines/organisation)
+			army_experience = 20
+			add_timed_idea = {id = reform_military days = 100}
+		}
+	}
+
+
+
 	###Political Branch : Monarchist Nation
 	###Strengthen Monarchy Branch
 
@@ -17,8 +214,8 @@ focus_tree = {
 		id = strengthen_regime
 		icon = GFX_goal_strengthen_regime
 		cost = 10
-		x = 13
-		y = 0
+		x = 17
+		y = 1
 
 		mutually_exclusive = {
 			focus = establish_parliament
@@ -42,15 +239,16 @@ focus_tree = {
 		id = solidify_heredity
 		icon = GFX_goal_solidify_heredity
 		cost = 10
-		x = 13
-		y = 1
+		x = 17
+		y = 2
 
 		prerequisite {
 			focus = strengthen_regime
 		}
 
 		completion_reward = {
-			add_ideas = {}
+			add_national_unity = 0.05
+			add_political_power = 30
 		}
 
 		trigger = {
@@ -67,8 +265,8 @@ focus_tree = {
 		id = centralised_rule
 		icon = GFX_goal_centralised_rule
 		cost = 10
-		x = 13
-		y = 2
+		x = 17
+		y = 3
 
 		prerequisite = {
 			focus = solidify_heredity
@@ -76,7 +274,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			add_ideas = {}
+			add_ideas = centralised_rule
 		}
 
 		trigger = {
@@ -93,20 +291,43 @@ focus_tree = {
 		id = repel_democracy
 		icon = GFX_goal_repel_democracy
 		cost = 10
-		x = 13
-		y = 3
+		x = 17
+		y = 4
 
 		prerequisite = {
 			focus = centralised_rule
 		}
 
 		completion_reward = {
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
-			add_popularity = {ideology = traditional_conservatism popularity = -0.5}
+			if = {
+				limit = {
+					OR = {
+						traditional_conservatism > 0.3
+						economic_liberalism > 0.3
+						social_democracy > 0.3
+					}
+				}
+
+				add_popularity = {ideology = traditional_conservatism popularity = -0.3}
+				add_popularity = {ideology = economic_liberalism popularity = -0.3}
+				add_popularity = {ideology = social_democracy popularity = -0.3}
+
+				add_ideas = democratic_unrest
+				add_ideas = democratic_oppression
+			}
+
+		if = {
+			limit = {
+			traditional_conservatism < 0.3
+			economic_liberalism < 0.3
+			social_democracy < 0.3
+			}
+
+			add_popularity = {ideology = traditional_conservatism popularity = -0.3}
+			add_popularity = {ideology = economic_liberalism popularity = -0.3}
+			add_popularity = {ideology = social_democracy popularity = -0.3}
+		}
+
 		}
 
 		trigger = {
@@ -129,7 +350,7 @@ focus_tree = {
 		icon = GFX_goals_establish_parliament
 		cost = 10
 		x = 15
-		y = 0
+		y = 1
 
 		mutually_exclusive = {
 			focus = strengthen_regime
@@ -137,8 +358,12 @@ focus_tree = {
 
 		completion_reward = {
 			#Establishment of Parliament - more pp, less nu, decreasing monarch
-			add_ideas = {}
+			add_ideas = parliament
 			#Decreased popularity of Monarchism
+			add_popularity = {
+				ideology = despotic_autocracy
+				popularity = -0.1
+			}
 		}
 
 		trigger = {
@@ -156,7 +381,7 @@ focus_tree = {
 		icon = GFX_goal_adopt_constitution
 		cost = 10
 		x = 15
-		y = 1
+		y = 2
 
 		prerequisite = {
 			focus = establish_parliament
@@ -164,9 +389,9 @@ focus_tree = {
 
 		completion_reward = {
 			#Adoption of Constitution, stops radical policies
-			add_ideas = {}
+			swap_ideas = {remove_idea = parliament add_idea = constitution}
 			#Destabilisation
-			add_ideas = {}
+			add_ideas = monarch_destabilisation
 		}
 
 		trigger = {
@@ -184,7 +409,7 @@ focus_tree = {
 		icon = GFX_goals_electorate_party
 		cost = 10
 		x = 15
-		y = 2
+		y = 3
 
 		prerequisite = {
 			focus = adopt_constitution
@@ -192,6 +417,13 @@ focus_tree = {
 
 		completion_reward = {
 			#Add ideas for increased popularity for most ideologies - randomly assigns
+			hidden_effect = {
+				random_list = {30 = {add_timed_idea = {id = conserv_growth days = 100}} 30 = {add_timed_idea = {id = liberal_growth days = 100}} 40 = {add_timed_idea = {id = social_growth days = 100}}}
+			}
+
+			effect_tooltip = {
+				add_timed_idea = {id = random_growth days = 100}
+			}
 		}
 
 		trigger = {
@@ -207,9 +439,9 @@ focus_tree = {
 	focus = {
 		id = cede_power
 		icon = GFX_goals_cede_power
-		cost = 15
+		cost = 17
 		x = 15
-		y = 3
+		y = 4
 
 		prerequisite = {
 			focus = electorate_party
@@ -235,8 +467,8 @@ focus_tree = {
 		id = solidify_claims
 		icon = GFX_goal_solidify_claims
 		cost = 10
-		x = 17
-		y = 0
+		x = 19
+		y = 1
 
 		completion_reward = {
 			add_state_claim = {every_owned_state}
@@ -255,10 +487,10 @@ focus_tree = {
 
 	focus = {
 		id = outward_expansion
-		icon = GFX_goal_expansion
+		icon = GFX_goal_outward_expansion
 		cost = 10
-		x = 17
-		y = 1
+		x = 19
+		y = 2
 
 		prerequisite = {
 			focus = solidify_claims
@@ -283,11 +515,11 @@ focus_tree = {
 		id = direct_integration
 		icon = GFX_goal_direct_integration
 		cost = 10
-		x = 17
-		y = 2
+		x = 19
+		y = 3
 
 		prerequisite = {
-			focus = solidify_claims
+			focus = outward_expansion
 		}
 
 		completion_reward = {
@@ -309,8 +541,8 @@ focus_tree = {
 		id = establish_empire
 		icon = GFX_goal_establish_empire
 		cost = 10
-		x = 17
-		y = 3
+		x = 19
+		y = 4
 
 		prerequisite = {
 			focus = direct_integration
@@ -338,8 +570,8 @@ focus_tree = {
 		id = colonial_ambitions
 		icon = GFX_goal_colonial_amibtions
 		cost = 10
-		x = 17
-		y = 4
+		x = 19
+		y = 5
 
 		prerequisite = {
 			focus = establish_empire
@@ -360,5 +592,9 @@ focus_tree = {
 	#Establish Dynasty : faction branch
 
 	#Subjugate Neighbours(Requires Outward Expansion)
+
+	###Politic Tree : Democratic Nation
+
+
 
 }
