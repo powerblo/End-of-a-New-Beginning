@@ -1,600 +1,1104 @@
 focus_tree = {
-	id = generic_focus
-
-	country = {
-		factor = 1
-	}
-
-	default = yes
-	reset_on_civilwar = no
-
-
-	###Industrial Branch
-
-	###Reform towards industrialisation
-
-	#
-
-	###Economy reformation
-
-
-
-
-	###Military Branch
-
-	#Research Military Theories
-
-	focus = {
-		id = military_theory
-		icon = GFX
-		cost = 3
-		x = 9
-		y = 0
-
-		completion_reward = {
-			army_experience = 10
-		}
-	}
-
-	#Doctrine Tree
-
-	focus = {
-		id = military_doctrines
-		icon = GFX
-		cost = 10
-		x = 9
-		y = 1
-
-		prerequisite = {
-			focus = military_theory
-		}
-
-		completion_reward = {
-			#Will give bonus to doctrine when inf doctrines and tactics are finished
-		}
-	}
-
-	#Strengthen Napoleonic Tactics - Leads into conscription reformation
-
-	focus = {
-		id = napoleonic_tactics
-		icons = GFX
-		cost = 10
-		x = 8
-		y = 2
-
-		mutually_exclusive = {
-			focus = new_ideals
-		}
-
-		prerequisite = {
-			focus = military_doctrines
-		}
-
-		completion_reward = {
-			#Bonus to Napoleonic military doctrines
-		}
-
-	}
-
-	#Hire new generals
-
-	focus = {
-		id = new_generals
-		cost = 10
-		x = 8
-		y = 3
-
-		prerequisite = {
-			focus = napoleonic_tactics
-		}
-
-		completion_reward = {
-			#Hire new generals with good stats
-			create_corps_commander = {traits = {} skills = 4}
-			create_corps_commander = {traits = {} skills = 3}
-			create_corps_commander = {traits = {} skills = 4}
-		}
-	}
-
-	#Recruit more people
-
-	focus = {
-		id = higher_draft
-		cost = 10
-		x = 8
-		y = 4
-
-		prerequisite = {
-			focus = new_generals
-		}
-
-		completion_reward = {
-			#Add spirit with higher population, faster recruit speed
-			add_ideas = draft_reformation
-		}
-	}
-
-	#Innovate New Ideals - Leads into army reformation
-
-	focus = {
-		id = new_ideals
-		icons = GFX
-		cost = 10
-		x = 10
-		y = 2
-
-		mutually_exclusive = {
-			focus = napoleonic_tactics
-		}
-
-		prerequisite = {
-			focus = military_doctrines
-		}
-
-		completion_reward = {
-			#Bonus to reformed military doctrines
-		}
-
-	}
-
-	###Army Reformation
-
-	#Adapt to new techs
-
-	focus = {
-		id = adapt_techs
-		icons = GFX
-		cost = 10
-		x = 12
-		y = 0
-
-		completion_reward = {
-			#Remove idea hindering infantry tech
-			remove_ideas = unadapted_new_tech
-		}
-	}
-
-	#Reform military
-
-	focus = {
-		id = reform_military
-		icons = GFX
-		cost = 10
-		x = 12
-		y = 3
-
-		prerequisite = {
-			focus = new_ideals
-		}
-
-		prerequisite = {
-			focus = adapt_techs
-		}
-
-		completion_reward = {
-			#tech bonus to infantry/cavalry tech
-			army_experience = 5
-			add_tech_bonus = {
-				name = infantry_bonus
-				bonus = 0.2
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-
-	#Reorganisation of troops
-
-	focus = {
-		id = reorganise_troops
-		icons = GFX
-		cost = 10
-		x = 12
-		y = 4
-
-		prerequisite = {
-			focus = reform_military
-		}
-
-		completion_reward = {
-			#Add spirit that lowers division recruitment speed, tech bonus to infantry(doctrines/organisation)
-			army_experience = 20
-			add_timed_idea = {id = reform_military days = 100}
-		}
-	}
-
-
-
-	###Political Branch : Monarchist Nation
-	###Strengthen Monarchy Branch
-
-	#Strengthen Regime
-	focus = {
-		id = strengthen_regime
-		icon = GFX_goal_strengthen_regime
-		cost = 10
-		x = 17
-		y = 1
-
-		mutually_exclusive = {
-			focus = establish_parliament
-		}
-
-		completion_reward = {
-			add_political_power = 60
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Solidify Heredity : stability branch
-
-	focus = {
-		id = solidify_heredity
-		icon = GFX_goal_solidify_heredity
-		cost = 10
-		x = 17
-		y = 2
-
-		prerequisite {
-			focus = strengthen_regime
-		}
-
-		completion_reward = {
-			add_national_unity = 0.05
-			add_political_power = 30
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Increase centralised rule
-
-	focus = {
-		id = centralised_rule
-		icon = GFX_goal_centralised_rule
-		cost = 10
-		x = 17
-		y = 3
-
-		prerequisite = {
-			focus = solidify_heredity
-		}
-
-		completion_reward = {
-			add_political_power = 50
-			add_ideas = centralised_rule
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Repel Democratic Views
-
-	focus = {
-		id = repel_democracy
-		icon = GFX_goal_repel_democracy
-		cost = 10
-		x = 17
-		y = 4
-
-		prerequisite = {
-			focus = centralised_rule
-		}
-
-		completion_reward = {
-			if = {
+id = 'generic'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = 
+}
+}
+default = no
+#Custom focuses start here
+#Focus for Questioning the Status Quo 
+	focus = { 
+	id = questioningthestatusquo 
+	icon = GFX_goal_generic_propaganda 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Reform 
+	focus = { 
+	id = reform 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = questioningthestatusquo} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Argument of Tradition 
+	focus = { 
+	id = argumentoftradition 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =8 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Questioning the Status Quo 
+	focus = { 
+	id = questioningthestatusquo 
+	icon = GFX_goal_generic_propaganda 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Reform 
+	focus = { 
+	id = reform 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = questioningthestatusquo} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Argument of Tradition 
+	focus = { 
+	id = argumentoftradition 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =8 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Questioning the Status Quo 
+	focus = { 
+	id = questioningthestatusquo 
+	icon = GFX_goal_generic_propaganda 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Reform 
+	focus = { 
+	id = reform 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = questioningthestatusquo} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Argument of Tradition 
+	focus = { 
+	id = argumentoftradition 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =8 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Establish a Parliament 
+	focus = { 
+	id = establishaparliament 
+	icon = GFX_goal_generic_improve_relations 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =10 
+ y =2 
+ mutually_exclusive = { focus = strengthenregime} 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Adopt a constitution 
+	focus = { 
+	id = adoptaconstitution 
+	icon = GFX_focus_generic_concessions 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =10 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = establishaparliament} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Remain a Monarchy 
+	focus = { 
+	id = remainamonarchy 
+	icon = GFX_focus_generic_home_defense 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =9 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = adoptaconstitution} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Strengthen Regime 
+	focus = { 
+	id = strengthenregime 
+	icon = GFX_goal_generic_territory_or_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =13 
+ y =2 
+ mutually_exclusive = { focus = establishaparliament} 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Solidify Heredity 
+	focus = { 
+	id = solidifyheredity 
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = strengthenregime} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Solidify Claims 
+	focus = { 
+	id = solidifyclaims 
+	icon = GFX_goal_generic_demand_territory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = strengthenregime} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Introduce Electoral Parties 
+	focus = { 
+	id = introduceelectoralparties 
+	icon = GFX_goal_generic_support_democracy 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =11 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = adoptaconstitution} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Centralised Rule 
+	focus = { 
+	id = centralisedrule 
+	icon = GFX_goal_generic_cavalry 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = solidifyheredity} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Outward Expansion 
+	focus = { 
+	id = outwardexpansion 
+	icon = GFX_focus_generic_strike_at_democracy1 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =13 
+ y =4 
+ mutually_exclusive = { focus = indirectintegration} 
+ prerequisite = { focus = solidifyclaims} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Indirect Integration 
+	focus = { 
+	id = indirectintegration 
+	icon = GFX_focus_generic_diplomatic_treaty 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =15 
+ y =4 
+ mutually_exclusive = { focus = outwardexpansion} 
+ prerequisite = { focus = solidifyclaims} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Establish an Empire 
+	focus = { 
+	id = establishanempire 
+	icon = GFX_focus_hun_elect_a_king 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = outwardexpansion  focus = indirectintegration} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Repel Democracy 
+	focus = { 
+	id = repeldemocracy 
+	icon = GFX_focus_rom_royal_dictatorship 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = centralisedrule} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Cede Power to the Prime Minister 
+	focus = { 
+	id = cedepowertotheprimeminister 
+	icon = GFX_goal_tripartite_pact 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =11 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = introduceelectoralparties} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Absolutist State 
+	focus = { 
+	id = absolutiststate 
+	icon = GFX_focus_renounce_the_treaty_of_triannon 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =13 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = repeldemocracy} 
+  prerequisite = { focus =establishanempire} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Colonial Ambitions 
+	focus = { 
+	id = colonialambitions 
+	icon = GFX_focus_SAF_colonialist_crusade 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =15 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = establishanempire} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Establish a Commonwealth 
+	focus = { 
+	id = establishacommonwealth 
+	icon = GFX_focus_generic_self_management 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =15 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = colonialambitions} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Military Theory 
+	focus = { 
+	id = militarytheory 
+	icon = GFX_goal_generic_more_territorial_claims 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =5 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = napoleonictactics} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Reformation of the Military 
+	focus = { 
+	id = reformationofthemilitary 
+	icon = GFX_goal_generic_fortify_city 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =5 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reform} 
+  prerequisite = { focus =militarytheory} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Reorganising Military Structure 
+	focus = { 
+	id = reorganisingmilitarystructure 
+	icon = GFX_goal_generic_build_tank 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =6 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reformationofthemilitary} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Adapting to new Technology 
+	focus = { 
+	id = adaptingtonewtechnology 
+	icon = GFX_goal_continuous_research 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =4 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reformationofthemilitary} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Military Staff Expansion 
+	focus = { 
+	id = militarystaffexpansion 
+	icon = GFX_goal_generic_military_deal 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =3 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = napoleonictactics} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Increased Drafts 
+	focus = { 
+	id = increaseddrafts 
+	icon = GFX_focus_generic_military_mission 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =3 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = militarystaffexpansion} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Utilizing Military Structure 
+	focus = { 
+	id = utilizingmilitarystructure 
+	icon = GFX_goal_generic_axis_build_infantry 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =3 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = increaseddrafts} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for The new Tactics 
+	focus = { 
+	id = thenewtactics 
+	icon = GFX_goal_molotov_ribbentrop_pact 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =4 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = adaptingtonewtechnology} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Mass Conscription 
+	focus = { 
+	id = massconscription 
+	icon = GFX_focus_generic_little_entente 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =5 
+ y =7 
+ mutually_exclusive = { focus = heavydrills} 
+ prerequisite = { focus = reorganisingmilitarystructure} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Napoleonic Tactics 
+	focus = { 
+	id = napoleonictactics 
+	icon = GFX_goal_generic_small_arms 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =3 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Division of Labour 
+	focus = { 
+	id = divisionoflabour 
+	icon = GFX_goal_generic_consumer_goods 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =0 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	country_event = { days = 1 id = focus.2 }
+ } 
+ }#Focus for Invest in Serfdom 
+	focus = { 
+	id = investinserfdom 
+	icon = GFX_goal_generic_dangerous_deal 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =-1 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = divisionoflabour} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = serfdom_invest
+ } 
+ }#Focus for Embrace Industrialisation 
+	focus = { 
+	id = embraceindustrialisation 
+	icon = GFX_goal_generic_construction 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =1 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = divisionoflabour} 
+  prerequisite = { focus =reform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	country_event = { days = 1 id = focus.3 }
+ } 
+ }#Focus for Increase Production 
+	focus = { 
+	id = increaseproduction 
+	icon = GFX_goal_generic_construction2 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =1 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = embraceindustrialisation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
 				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
 					OR = {
-						traditional_conservatism > 0.3
-						economic_liberalism > 0.3
-						social_democracy > 0.3
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
 					}
 				}
-
-				add_popularity = {ideology = traditional_conservatism popularity = -0.3}
-				add_popularity = {ideology = economic_liberalism popularity = -0.3}
-				add_popularity = {ideology = social_democracy popularity = -0.3}
-
-				add_ideas = democratic_unrest
-				add_ideas = democratic_oppression
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-
-		if = {
-			limit = {
-			traditional_conservatism < 0.3
-			economic_liberalism < 0.3
-			social_democracy < 0.3
+ } 
+ }#Focus for Improve Infrastructure 
+	focus = { 
+	id = improveinfrastructure 
+	icon = GFX_goal_generic_construct_infrastructure 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =2 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = embraceindustrialisation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
-
-			add_popularity = {ideology = traditional_conservatism popularity = -0.3}
-			add_popularity = {ideology = economic_liberalism popularity = -0.3}
-			add_popularity = {ideology = social_democracy popularity = -0.3}
-		}
-
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-	###Monarchist Development Branch(requires monarchist strengthen)
-
-
-	###Monarch to Democratic Branch
-
-	#Establish Parliament
-
-	focus = {
-		id = establish_parliament
-		icon = GFX_goals_establish_parliament
-		cost = 10
-		x = 15
-		y = 1
-
-		mutually_exclusive = {
-			focus = strengthen_regime
-		}
-
-		completion_reward = {
-			#Establishment of Parliament - more pp, less nu, decreasing monarch
-			add_ideas = parliament
-			#Decreased popularity of Monarchism
-			add_popularity = {
-				ideology = despotic_autocracy
-				popularity = -0.1
+ } 
+ }#Focus for Infrastructure Projects I 
+	focus = { 
+	id = infrastructureprojectsi 
+	icon = GFX_goal_generic_construct_infrastructure 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =2 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = improveinfrastructure} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-	#Adopt Constitution
-
-	focus = {
-		id = adopt_constitution
-		icon = GFX_goal_adopt_constitution
-		cost = 10
-		x = 15
-		y = 2
-
-		prerequisite = {
-			focus = establish_parliament
-		}
-
-		completion_reward = {
-			#Adoption of Constitution, stops radical policies
-			swap_ideas = {remove_idea = parliament add_idea = constitution}
-			#Destabilisation
-			add_ideas = monarch_destabilisation
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+ } 
+ }#Focus for Heavy Drills 
+	focus = { 
+	id = heavydrills 
+	icon = GFX_goal_generic_army_doctrines 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =7 
+ y =7 
+ mutually_exclusive = { focus = massconscription} 
+ prerequisite = { focus = reorganisingmilitarystructure} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Military Construction I 
+	focus = { 
+	id = militaryconstructioni 
+	icon = GFX_goal_generic_construct_mil_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =1 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = increaseproduction} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-	#Introduce Electorate Parties
-
-	focus = {
-		id = electorate_party
-		icon = GFX_goals_electorate_party
-		cost = 10
-		x = 15
-		y = 3
-
-		prerequisite = {
-			focus = adopt_constitution
-		}
-
-		completion_reward = {
-			#Add ideas for increased popularity for most ideologies - randomly assigns
-			hidden_effect = {
-				random_list = {30 = {add_timed_idea = {id = conserv_growth days = 100}} 30 = {add_timed_idea = {id = liberal_growth days = 100}} 40 = {add_timed_idea = {id = social_growth days = 100}}}
+ } 
+ }#Focus for Military Construction II 
+	focus = { 
+	id = militaryconstructionii 
+	icon = GFX_goal_generic_construct_mil_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =1 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = militaryconstructioni} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-
-			effect_tooltip = {
-				add_timed_idea = {id = random_growth days = 100}
+ } 
+ }#Focus for Civilian Expansion I 
+	focus = { 
+	id = civilianexpansioni 
+	icon = GFX_goal_generic_construct_civ_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =0 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = increaseproduction} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+ } 
+ }#Focus for Civilian Expansion II 
+	focus = { 
+	id = civilianexpansionii 
+	icon = GFX_goal_generic_construct_civ_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =0 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = civilianexpansioni} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-	#Cede Power to Prime Minister - Transition to Democracy, slight popularity change, adds spirit for leader
-
-	focus = {
-		id = cede_power
-		icon = GFX_goals_cede_power
-		cost = 17
-		x = 15
-		y = 4
-
-		prerequisite = {
-			focus = electorate_party
-		}
-
-		completion_reward = {
-			#Fires event for ruling ideology change, player chooses
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+ } 
+ }#Focus for Infrastructure Projects II 
+	focus = { 
+	id = infrastructureprojectsii 
+	icon = GFX_goal_generic_construct_infrastructure 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =2 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = infrastructureprojectsi} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-	###Monarchist Expansion/Dynasty Branch
-
-	#Solidify Claims : expansion branch
-
-	focus = {
-		id = solidify_claims
-		icon = GFX_goal_solidify_claims
-		cost = 10
-		x = 19
-		y = 1
-
-		completion_reward = {
-			add_state_claim = {every_owned_state}
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
-		}
-	}
-
-
-	#Outward Expansion
-
-	focus = {
-		id = outward_expansion
-		icon = GFX_goal_outward_expansion
-		cost = 10
-		x = 19
-		y = 2
-
-		prerequisite = {
-			focus = solidify_claims
-		}
-
-		completion_reward = {
-		#Solidify random claim on neighbour
-		add_state_claim = {random_state = {random_neighbor_country}}
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Direct Integration
-
-	focus = {
-		id = direct_integration
-		icon = GFX_goal_direct_integration
-		cost = 10
-		x = 19
-		y = 3
-
-		prerequisite = {
-			focus = outward_expansion
-		}
-
-		completion_reward = {
-		#Solidify random claim on neighbour
-		add_state_claim = {random_state = {random_neighbor_country}}
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Establish an Empire
-
-	focus = {
-		id = establish_empire
-		icon = GFX_goal_establish_empire
-		cost = 10
-		x = 19
-		y = 4
-
-		prerequisite = {
-			focus = direct_integration
-		}
-
-		available = {
-			#Needs to have control of other nation's cores
-		}
-
-		completion_reward = {
-		#Addd Empire modification
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Colonial Ambitions
-
-	focus = {
-		id = colonial_ambitions
-		icon = GFX_goal_colonial_amibtions
-		cost = 10
-		x = 19
-		y = 5
-
-		prerequisite = {
-			focus = establish_empire
-		}
-
-		completion_reward = {
-		#Adds Colonial Ambition spirit, allows colonisation
-		}
-
-		trigger = {
-			OR = {
-				has_government = {despotic_autocracy}
-				has_government = {parliamental_oligarchy}
-			}
-		}
-	}
-
-	#Establish Dynasty : faction branch
-
-	#Subjugate Neighbours(Requires Outward Expansion)
-
-	###Politic Tree : Democratic Nation
-
-
-
+ } 
+ }#Focus for Innovation 
+	focus = { 
+	id = innovation 
+	icon = GFX_focus_research 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =-1 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = embraceindustrialisation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 3 category = industry_tech }
+ } 
+ }#Focus for Electrification 
+	focus = { 
+	id = electrification 
+	icon = GFX_goal_continuous_repairments 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =-1 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = innovation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 3 category = electricity_tech }
+ } 
+ }#End of focuses 
 }
