@@ -1,0 +1,227 @@
+focus_tree = {
+id = 'sardiniapiedmont'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = PIE
+}
+}
+default = no
+#Custom focuses start here
+#Focus for Risorgimento 
+	focus = { 
+	id = risorgimento 
+	icon = GFX_goal_molotov_ribbentrop_pact 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Move alone 
+	focus = { 
+	id = movealone 
+	icon = GFX_goal_generic_wolf_pack 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =22 
+ y =1 
+ mutually_exclusive = { focus = gethelpfromnapoleoniii} 
+ prerequisite = { focus = risorgimento} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }#Focus for Get Help from Napoleon III 
+	focus = { 
+	id = gethelpfromnapoleoniii 
+	icon = GFX_focus_rom_preserve_romania 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =1 
+ mutually_exclusive = { focus = movealone} 
+ prerequisite = { focus = risorgimento} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	PIE = { country_event = 00_ITAUni.1 }
+ } 
+ }#Focus for The second war of independence 
+	focus = { 
+	id = thesecondwarofindependence 
+	icon = GFX_goal_generic_occypy_states_ongoing_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = movealone  focus = gethelpfromnapoleoniii} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	declare_war_on = { target = LVN type = annex_everything }
+	PIE = { country_event = 00_ITAUni.9 }
+ } 
+ }#Focus for Add Milan to the Kingdom 
+	focus = { 
+	id = addmilantothekingdom 
+	icon = GFX_goal_generic_improve_relations 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thesecondwarofindependence} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_state_core = 159
+ } 
+ }#Focus for The Central Plebiscito 
+	focus = { 
+	id = thecentralplebiscito 
+	icon = GFX_goal_anschluss 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = gethelpfromnapoleoniii} 
+  prerequisite = { focus =addmilantothekingdom} 
+	prerequisite = { has_global_flag = 00_ITAUni_FRAYes }
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	TUS = { country_event = 00_ITAUni.3 }
+ } 
+ }#Focus for Expand Tuscany 
+	focus = { 
+	id = expandtuscany 
+	icon = GFX_goal_generic_intelligence_exchange 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thecentralplebiscito} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	PRM = { country_event = 00_ITAUni.12 }
+	MOD = { country_event = 00_ITAUni.14 }
+ } 
+ }#Focus for Take central Italy by Force 
+	focus = { 
+	id = takecentralitalybyforce 
+	icon = GFX_goal_generic_major_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = addmilantothekingdom} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	declare_war_on = { target = TUS type = annex_everything }
+	declare_war_on = { target = PRM type = annex_everything }
+	declare_war_on = { target = MOD type = annex_everything }
+ } 
+ }#Focus for Force a Tuscan Puppet 
+	focus = { 
+	id = forceatuscanpuppet 
+	icon = GFX_goal_generic_build_tank 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = takecentralitalybyforce} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	release_puppet = TUS
+ } 
+ }#Focus for Demand Romagna 
+	focus = { 
+	id = demandromagna 
+	icon = GFX_goal_generic_demand_territory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = expandtuscany} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	PIE = { country_event =	00_ITAUni.16 }
+ } 
+ }#Focus for Integrate Tuscany 
+	focus = { 
+	id = integratetuscany 
+	icon = GFX_goal_generic_construction2 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = forceatuscanpuppet  focus = demandromagna} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	annex_country = { target = TUS }
+ } 
+ }#Focus for Demand Marche 
+	focus = { 
+	id = demandmarche 
+	icon = GFX_goal_generic_territory_or_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =22 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = integratetuscany} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	PIE = { country_event = 00_ITAUni.17 }
+ } 
+ }#Focus for Unity at last 
+	focus = { 
+	id = unityatlast 
+	icon = GFX_focus_generic_the_giant_wakes 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =22 
+ y =9 
+ mutually_exclusive = { } 
+ prerequisite = { focus = demandmarche} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	PIE = { country_event = 00_ITAUni.18 }
+ } 
+ }#End of focuses 
+}

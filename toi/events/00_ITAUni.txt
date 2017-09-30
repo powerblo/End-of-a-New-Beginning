@@ -1,0 +1,286 @@
+#This file contains events relating to the Italian Unification
+add_namespace = 00_ITAUni
+
+#Help from Napoleon III (PIE)
+country_event = {
+		id = 00_ITAUni.1
+		title = 00_ITAUni.1.t
+		desc = 00_ITAUni.1.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.1.a
+				hidden_effect = { FRA = { country_event = { days = 10 id = 00_ITAUni.2 }}}
+		}
+}
+
+#France gets call for help (FRA)
+country_event = {
+		id = 00_ITAUni.2
+		title = 00_ITAUni.2.t
+		desc = 00_ITAUni.2.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.2.a
+				set_global_flag = 00_ITAUni_FRAYes
+		}
+		option = {
+				id = 00_ITAUni.2.b
+		}
+}
+
+#Referendum (TUS)
+country_event = {
+		id = 00_ITAUni.3
+		title = 00_ITAUni.3.t
+		desc = 00_ITAUni.3.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.3.a
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.4 }}}
+		}
+		option = {
+				id = 00_ITAUni.3.b
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.5 }}}
+		}
+}
+
+#Tuscany says yes (PIE)
+country_event = {
+		id = 00_ITAUni.4
+		title = 00_ITAUni.4.t
+		desc = 00_ITAUni.4.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.4.a
+				puppet = TUS
+		}
+}
+
+#Tuscany says no (PIE)
+country_event = {
+		id = 00_ITAUni.5
+		title = 00_ITAUni.5.t
+		desc = 00_ITAUni.5.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.5.a
+				add_state_core = 910
+				declare_war_on = { target = TUS type = annex_everything }
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.6 }}}
+		}
+}
+
+#France joins the war (PIE)
+country_event = {
+		id = 00_ITAUni.6
+		title = 00_ITAUni.6.t
+		desc = 00_ITAUni.6.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.6.a
+				add_to_war = { targeted_alliance = FRA enemy = TUS }
+		}
+}
+
+#Peace Treaty (Lombardy) (PIE)
+country_event = {
+		id = 00_ITAUni.7
+		title = 00_ITAUni.7.t
+		desc = 00_ITAUni.7.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+				tag = PIE
+				PIE = { controls_state = 159 }
+		}
+		
+		option = {
+				id = 00_ITAUni.7.a
+				white_peace = AUS
+				white_pecae = LVN
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.8 }}}
+		}
+}
+
+#Sardinia gets Lombardy (PIE)
+country_event = {
+		id = 00_ITAUni.8
+		title = 00_ITAUni.8.t
+		desc = 00_ITAUni.8.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.8.a
+				PIE = { set_state_owner = 159 }
+		}
+}
+		
+#Sicily gets Referendum (NSC)
+country_event = {
+		id = 00_ITAUni.9
+		title = 00_ITAUni.9.t
+		desc = 00_ITAUni.9.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.9.a
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.10 }}}
+		}
+		option = {
+				id = 00_ITAUni.9.b
+				hidden_effect = { PIE = { country_event = { days = 10 id = 00_ITAUni.11 }}}
+		}
+}
+
+#Sicily says yes (PIE)
+country_event = {
+		id = 00_ITAUni.10
+		title = 00_ITAUni.10.t
+		desc = 00_ITAUni.10.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.10.a
+				puppet = NSC
+		}
+}
+
+#Sicily says no (PIE)
+country_event = {
+		id = 00_ITAUni.11
+		title = 00_ITAUni.11.t
+		desc = 00_ITAUni.11.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.11.a
+				declare_war_on = { target = TUS type = annex_everything }
+		}
+}
+
+#Expand Tuscany (PRM)
+country_event = {
+		id = 00_ITAUni.12
+		title = 00_ITAUni.12.t
+		desc = 00_ITAUni.12.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.12.a
+				hidden_effect = { TUS = { country_event = { days = 10 id = 00_ITAUni.13 }}}
+		}
+}
+
+#Tuscany gets Parma (TUS)
+country_event = {
+		id = 00_ITAUni.13
+		title = 00_ITAUni.13.t
+		desc = 00_ITAUni.13.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.13.a
+				annex_country = { target = PRM }
+		}
+}
+
+#Expand Tuscany (MOD)
+country_event = {
+		id = 00_ITAUni.14
+		title = 00_ITAUni.14.t
+		desc = 00_ITAUni.14.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.14.a
+				hidden_effect = { TUS = { country_event = { days = 10 id = 00_ITAUni.15 }}}
+		}
+}
+
+#Tuscany gets Modena (TUS)
+country_event = {
+		id = 00_ITAUni.15
+		title = 00_ITAUni.15.t
+		desc = 00_ITAUni.15.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.15.a
+				annex_country = { target = MOD }
+		}
+}
+
+#Romagna goes to Sardinia (PIE)
+country_event = {
+		id = 00_ITAUni.16
+		title = 00_ITAUni.16.t
+		desc = 00_ITAUni.16.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.16.a
+				PIE = { transfer_state = 161 }
+		}
+}
+
+#Marche goes to Sardinia (PIE)
+country_event = {
+		id = 00_ITAUni.17
+		title = 00_ITAUni.17.t
+		desc = 00_ITAUni.17.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.17.a
+				PIE = {transfer_state = 157 }
+		}
+}
+
+#Unification at last (PIE)
+country_event = {
+		id = 00_ITAUni.18
+		title = 00_ITAUni.18.t
+		desc = 00_ITAUni.18.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				id = 00_ITAUni.18.a
+				add_state_core = 159
+				add_state_core = 808
+				add_state_core = 813
+				add_state_core = 157
+				add_state_core = 161
+				add_state_core = 115
+				add_state_core = 156
+				add_state_core = 117
+				add_state_core = 812
+		}
+}
+				
+				
+
+				
