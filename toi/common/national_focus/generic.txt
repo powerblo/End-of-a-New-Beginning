@@ -1,13 +1,10 @@
 focus_tree = {
-id = 'generic'
+id = generic_focus
 country = {
-factor=0
-modifier = {
-add = 10
-tag = 
-}
-}
-default = no
+		factor = 1
+	}
+	
+default = yes
 #Custom focuses start here
 #Focus for Questioning the Status Quo 
 	focus = { 
@@ -156,7 +153,7 @@ default = no
  }#Focus for Establish a Parliament 
 	focus = { 
 	id = establishaparliament 
-	icon = GFX_goal_generic_improve_relations 
+	icon = GFX_goal_estabish_parliament 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =10 
@@ -172,7 +169,7 @@ default = no
  }#Focus for Adopt a constitution 
 	focus = { 
 	id = adoptaconstitution 
-	icon = GFX_focus_generic_concessions 
+	icon = GFX_goal_adopt_constitution 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =10 
@@ -204,7 +201,7 @@ default = no
  }#Focus for Strengthen Regime 
 	focus = { 
 	id = strengthenregime 
-	icon = GFX_goal_generic_territory_or_war 
+	icon = GFX_goal_strengthen_regime
 	bypass = {} 
  ai_will_do = { factor = } 
  x =13 
@@ -220,7 +217,7 @@ default = no
  }#Focus for Solidify Heredity 
 	focus = { 
 	id = solidifyheredity 
-	icon = GFX_goal_tfv_strengthen_commonwealth_ties 
+	icon = GFX_goal_solidify_heredity
 	bypass = {} 
  ai_will_do = { factor = } 
  x =12 
@@ -252,7 +249,7 @@ default = no
  }#Focus for Introduce Electoral Parties 
 	focus = { 
 	id = introduceelectoralparties 
-	icon = GFX_goal_generic_support_democracy 
+	icon = GFX_goal_introduce_electoral_parties
 	bypass = {} 
  ai_will_do = { factor = } 
  x =11 
@@ -284,7 +281,7 @@ default = no
  }#Focus for Outward Expansion 
 	focus = { 
 	id = outwardexpansion 
-	icon = GFX_focus_generic_strike_at_democracy1 
+	icon = GFX_goal_outward_expansion
 	bypass = {} 
  ai_will_do = { factor = } 
  x =13 
@@ -300,7 +297,7 @@ default = no
  }#Focus for Indirect Integration 
 	focus = { 
 	id = indirectintegration 
-	icon = GFX_focus_generic_diplomatic_treaty 
+	icon = GFX_goal_direct_integration 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =15 
@@ -332,7 +329,7 @@ default = no
  }#Focus for Repel Democracy 
 	focus = { 
 	id = repeldemocracy 
-	icon = GFX_focus_rom_royal_dictatorship 
+	icon = GFX_goal_repel_democracy 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =12 
@@ -348,7 +345,7 @@ default = no
  }#Focus for Cede Power to the Prime Minister 
 	focus = { 
 	id = cedepowertotheprimeminister 
-	icon = GFX_goal_tripartite_pact 
+	icon = GFX_goal_cede_power_people 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =11 
@@ -381,7 +378,7 @@ default = no
  }#Focus for Colonial Ambitions 
 	focus = { 
 	id = colonialambitions 
-	icon = GFX_focus_SAF_colonialist_crusade 
+	icon = GFX_goal_colonial_ambitions 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =15 
@@ -397,7 +394,7 @@ default = no
  }#Focus for Establish a Commonwealth 
 	focus = { 
 	id = establishacommonwealth 
-	icon = GFX_focus_generic_self_management 
+	icon = GFX_goal_establish_commonwealth
 	bypass = {} 
  ai_will_do = { factor = } 
  x =15 
@@ -558,7 +555,7 @@ default = no
  }#Focus for Napoleonic Tactics 
 	focus = { 
 	id = napoleonictactics 
-	icon = GFX_goal_generic_small_arms 
+	icon = GFX_goal_napoleonic_tactics
 	bypass = {} 
  ai_will_do = { factor = } 
  x =3 
@@ -574,7 +571,7 @@ default = no
  }#Focus for Division of Labour 
 	focus = { 
 	id = divisionoflabour 
-	icon = GFX_goal_generic_consumer_goods 
+	icon = GFX_goal_division_labor 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =0 
@@ -1087,7 +1084,7 @@ default = no
  }#Focus for Electrification 
 	focus = { 
 	id = electrification 
-	icon = GFX_goal_continuous_repairments 
+	icon = GFX_goal_electrification 
 	bypass = {} 
  ai_will_do = { factor = } 
  x =-1 
