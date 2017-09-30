@@ -1,0 +1,110 @@
+division_template = {
+  name = "Imperial Line Infantry"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 1}
+	line_infantry = { x = 0 y = 2}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 1 y = 1}
+	line_infantry = { x = 1 y = 2}
+  }
+}
+
+division_template = {
+  name = "Imperial Grenadiers"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+	light_infantry = { x = 0 y = 1}
+	light_infantry = { x = 1 y = 0}
+	light_infantry = { x = 1 y = 1}
+  }
+}
+
+division_template = {
+  name = "Austrian Hussars"
+
+  regiments = {
+    light_cavalry = { x = 0 y = 0}
+	light_cavalry = { x = 1 y = 0}
+	light_cavalry = { x = 2 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1st Line Infantry"
+			location = 11666
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "2nd Line Infantry"
+			location = 11666
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "1st Grenadiers"
+			location = 11666
+			division_template = "Imperial Grenadiers
+			start_experience_factor = 0.2
+		}
+		#Scattered Divisions
+		division= {
+			name = "1st Hussars"
+			location = 11542
+			division_template = "Austrian Hussars"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Line Infantry"
+			location = 11542
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "4th Line Infantry"
+			location = 9660
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "2nd Grenadiers"
+			location = 9660
+			division_template = "Imperial Grenadiers"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "2nd Hussars"
+			location = 3569
+			division_template = "Austrian Hussars"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Line Infantry"
+			location = 6626
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "6th Line Infantry"
+			location = 9648
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "3rd Grenadiers"
+			location = 11581
+			division_template = "Imperial Grenadiers"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "3rd Hussars"
+			location = 11479
+			division_template = "Austrian Hussars"
+			start_experience_factor = 0.1
+		}
+}

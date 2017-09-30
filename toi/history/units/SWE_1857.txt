@@ -1,0 +1,74 @@
+division_template = {
+  name = "Swedish Infantry"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+	line_infantry = { x = 0 y = 1}
+	light_infantry = { x = 1 y = 0}
+	light_infantry = { x = 1 y = 1}
+  }
+}
+
+division_template = {
+  name = "Swedish Cavalry"
+
+  regiments = {
+    light_cavalry = { x = 0 y = 0}
+	light_cavalry = { x = 0 y = 1}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1st Swedish Infantry"
+			location = 6050
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.2
+		}
+		units = {
+		division= {
+			name = "2nd Swedish Infantry"
+			location = 6050
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.2
+		}
+		units = {
+		division= {
+			name = "3rd Swedish Infantry"
+			location = 6050
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.2
+		}
+		#Scattered Divisions
+		division= {
+			name = "4th Swedish Infantry"
+			location = 9279
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Swedish Infantry"
+			location = 11380
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "6th Swedish Infantry"
+			location = 6115
+			division_template = "Swedish Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Swedish Cavalry"
+			location = 9108
+			division_template = "Swedish Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "2nd Swedish Cavalry"
+			location = 122
+			division_template = "Swedish Cavalry"
+			start_experience_factor = 0.3
+		}
+}

@@ -1,16 +1,12 @@
-﻿capital = 37
-
-oob = "DEN_1861"
-
-puppet = SCH
+capital = 58
 
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 20
+        popularity = 0
       }
       traditional_conservatism = {
-        popularity = 80
+        popularity = 0
       }
       social_democracy = {
         popularity = 0
@@ -22,7 +18,7 @@ set_politics = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 0
+        popularity = 100
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -38,13 +34,13 @@ set_politics = {
       }
     }
 
-	ruling_party = traditional_conservatism
+	ruling_party = despotic_autocracy
 }
 
 set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
-	 
+
 	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
@@ -61,23 +57,25 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "Carl Christian Hall"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_DEN_Carl_Christian_Hall_.dds"
-    expire = 1863.12.31
-    ideology = conserv
+  name = "Frederick VII"
+  desc = "POLITICS_FREDERICK_VII_DESC"
+  picture = "Portrait_SCH_Frederick_VII.dds"
+  expire = "1907.1.1"
+  ideology = despotism
+  traits = {
+
+  }
 }
 
 1857.5.11 = {
-oob = "DEN_1857"
 
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 20
+        popularity = 0
       }
       traditional_conservatism = {
-        popularity = 80
+        popularity = 0
       }
       social_democracy = {
         popularity = 0
@@ -89,7 +87,7 @@ set_politics = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 0
+        popularity = 100
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -105,7 +103,7 @@ set_politics = {
       }
     }
 
-	ruling_party = traditional_conservatism
+	ruling_party = despotic_autocracy
 }
 
 set_technology = {
@@ -116,10 +114,14 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "Carl Christoffer Georg Andræ"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_DEN_Carl_Christoffer_Georg_Andrae.dds"
-    expire = 1857.5.13
-    ideology = conserv
+  name = "Frederick VII"
+  desc = "POLITICS_FREDERICK_VII_DESC"
+  picture = "Portrait_SCH_Frederick_VII.dds"
+  expire = "1907.1.1"
+  ideology = despotism
+  traits = {
+
+  }
 }
+
 }

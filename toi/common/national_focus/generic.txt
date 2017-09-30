@@ -12,7 +12,7 @@ default = yes
 	icon = GFX_goal_generic_propaganda
 	bypass = {}
  ai_will_do = { factor = }
- x =7
+ x =20
  y =0
  mutually_exclusive = { }
  prerequisite = { }
@@ -28,7 +28,7 @@ default = yes
 	icon = GFX_goal_generic_neutrality_focus
 	bypass = {}
  ai_will_do = { factor = }
- x =7
+ x =20
  y =1
  mutually_exclusive = { }
  prerequisite = { focus = questioningthestatusquo}
@@ -44,103 +44,7 @@ default = yes
 	icon = GFX_goal_generic_position_armies
 	bypass = {}
  ai_will_do = { factor = }
- x =8
- y =2
- mutually_exclusive = { }
- prerequisite = { focus = reform}
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Questioning the Status Quo
-	focus = {
-	id = questioningthestatusquo
-	icon = GFX_goal_generic_propaganda
-	bypass = {}
- ai_will_do = { factor = }
- x =7
- y =0
- mutually_exclusive = { }
- prerequisite = { }
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Reform
-	focus = {
-	id = reform
-	icon = GFX_goal_generic_neutrality_focus
-	bypass = {}
- ai_will_do = { factor = }
- x =7
- y =1
- mutually_exclusive = { }
- prerequisite = { focus = questioningthestatusquo}
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Argument of Tradition
-	focus = {
-	id = argumentoftradition
-	icon = GFX_goal_generic_position_armies
-	bypass = {}
- ai_will_do = { factor = }
- x =8
- y =2
- mutually_exclusive = { }
- prerequisite = { focus = reform}
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Questioning the Status Quo
-	focus = {
-	id = questioningthestatusquo
-	icon = GFX_goal_generic_propaganda
-	bypass = {}
- ai_will_do = { factor = }
- x =7
- y =0
- mutually_exclusive = { }
- prerequisite = { }
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Reform
-	focus = {
-	id = reform
-	icon = GFX_goal_generic_neutrality_focus
-	bypass = {}
- ai_will_do = { factor = }
- x =7
- y =1
- mutually_exclusive = { }
- prerequisite = { focus = questioningthestatusquo}
- available = {  }
- cost = 10
-  available_if_capitulated = yes
- completion_reward = {
-
- }
- }#Focus for Argument of Tradition
-	focus = {
-	id = argumentoftradition
-	icon = GFX_goal_generic_position_armies
-	bypass = {}
- ai_will_do = { factor = }
- x =8
+ x =22
  y =2
  mutually_exclusive = { }
  prerequisite = { focus = reform}
@@ -156,7 +60,7 @@ default = yes
 	icon = GFX_goal_estabish_parliament
 	bypass = {}
  ai_will_do = { factor = }
- x =10
+ x =26
  y =2
  mutually_exclusive = { focus = strengthenregime}
  prerequisite = { focus = reform}
@@ -172,7 +76,7 @@ default = yes
 	icon = GFX_goal_adopt_constitution
 	bypass = {}
  ai_will_do = { factor = }
- x =10
+ x =26
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = establishaparliament}
@@ -188,7 +92,7 @@ default = yes
 	icon = GFX_focus_generic_home_defense
 	bypass = {}
  ai_will_do = { factor = }
- x =9
+ x =24
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = adoptaconstitution}
@@ -204,7 +108,7 @@ default = yes
 	icon = GFX_goal_strengthen_regime
 	bypass = {}
  ai_will_do = { factor = }
- x =13
+ x =32
  y =2
  mutually_exclusive = { focus = establishaparliament}
  available = {  }
@@ -219,7 +123,7 @@ default = yes
 	icon = GFX_goal_solidify_heredity
 	bypass = {}
  ai_will_do = { factor = }
- x =12
+ x =30
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = strengthenregime}
@@ -235,7 +139,7 @@ default = yes
 	icon = GFX_goal_generic_demand_territory
 	bypass = {}
  ai_will_do = { factor = }
- x =14
+ x =34
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = strengthenregime}
@@ -251,7 +155,7 @@ default = yes
 	icon = GFX_goal_introduce_electoral_parties
 	bypass = {}
  ai_will_do = { factor = }
- x =11
+ x =28
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = adoptaconstitution}
@@ -267,7 +171,7 @@ default = yes
 	icon = GFX_goal_generic_cavalry
 	bypass = {}
  ai_will_do = { factor = }
- x =12
+ x =30
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = solidifyheredity}
@@ -283,7 +187,7 @@ default = yes
 	icon = GFX_goal_outward_expansion
 	bypass = {}
  ai_will_do = { factor = }
- x =13
+ x =32
  y =4
  mutually_exclusive = { focus = indirectintegration}
  prerequisite = { focus = solidifyclaims}
@@ -299,7 +203,7 @@ default = yes
 	icon = GFX_goal_direct_integration
 	bypass = {}
  ai_will_do = { factor = }
- x =15
+ x =36
  y =4
  mutually_exclusive = { focus = outwardexpansion}
  prerequisite = { focus = solidifyclaims}
@@ -315,7 +219,7 @@ default = yes
 	icon = GFX_focus_hun_elect_a_king
 	bypass = {}
  ai_will_do = { factor = }
- x =14
+ x =34
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = outwardexpansion  focus = indirectintegration}
@@ -331,7 +235,7 @@ default = yes
 	icon = GFX_goal_repel_democracy
 	bypass = {}
  ai_will_do = { factor = }
- x =12
+ x =30
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = centralisedrule}
@@ -347,7 +251,7 @@ default = yes
 	icon = GFX_goal_cede_power_people
 	bypass = {}
  ai_will_do = { factor = }
- x =11
+ x =28
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = introduceelectoralparties}
@@ -363,7 +267,7 @@ default = yes
 	icon = GFX_focus_renounce_the_treaty_of_triannon
 	bypass = {}
  ai_will_do = { factor = }
- x =13
+ x =32
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = repeldemocracy}
@@ -380,7 +284,7 @@ default = yes
 	icon = GFX_goal_colonial_ambitions
 	bypass = {}
  ai_will_do = { factor = }
- x =15
+ x =36
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = establishanempire}
@@ -396,7 +300,7 @@ default = yes
 	icon = GFX_goal_establish_commonwealth
 	bypass = {}
  ai_will_do = { factor = }
- x =15
+ x =36
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = colonialambitions}
@@ -412,7 +316,7 @@ default = yes
 	icon = GFX_goal_generic_more_territorial_claims
 	bypass = {}
  ai_will_do = { factor = }
- x =5
+ x =16
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = napoleonictactics}
@@ -428,7 +332,7 @@ default = yes
 	icon = GFX_goal_generic_fortify_city
 	bypass = {}
  ai_will_do = { factor = }
- x =5
+ x =16
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = reform}
@@ -445,7 +349,7 @@ default = yes
 	icon = GFX_goal_generic_build_tank
 	bypass = {}
  ai_will_do = { factor = }
- x =6
+ x =18
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = reformationofthemilitary}
@@ -461,7 +365,7 @@ default = yes
 	icon = GFX_goal_continuous_research
 	bypass = {}
  ai_will_do = { factor = }
- x =4
+ x =14
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = reformationofthemilitary}
@@ -477,7 +381,7 @@ default = yes
 	icon = GFX_goal_generic_military_deal
 	bypass = {}
  ai_will_do = { factor = }
- x =3
+ x =12
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = napoleonictactics}
@@ -493,7 +397,7 @@ default = yes
 	icon = GFX_focus_generic_military_mission
 	bypass = {}
  ai_will_do = { factor = }
- x =3
+ x =12
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = militarystaffexpansion}
@@ -509,7 +413,7 @@ default = yes
 	icon = GFX_goal_generic_axis_build_infantry
 	bypass = {}
  ai_will_do = { factor = }
- x =3
+ x =12
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = increaseddrafts}
@@ -525,7 +429,7 @@ default = yes
 	icon = GFX_goal_molotov_ribbentrop_pact
 	bypass = {}
  ai_will_do = { factor = }
- x =4
+ x =14
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = adaptingtonewtechnology}
@@ -541,7 +445,7 @@ default = yes
 	icon = GFX_focus_generic_little_entente
 	bypass = {}
  ai_will_do = { factor = }
- x =5
+ x =16
  y =7
  mutually_exclusive = { focus = heavydrills}
  prerequisite = { focus = reorganisingmilitarystructure}
@@ -557,7 +461,7 @@ default = yes
 	icon = GFX_goal_napoleonic_tactics
 	bypass = {}
  ai_will_do = { factor = }
- x =3
+ x =12
  y =2
  mutually_exclusive = { }
  available = {  }
@@ -572,7 +476,7 @@ default = yes
 	icon = GFX_goal_division_labor
 	bypass = {}
  ai_will_do = { factor = }
- x =0
+ x =6
  y =1
  mutually_exclusive = { }
  prerequisite = { }
@@ -588,8 +492,8 @@ default = yes
 	icon = GFX_goal_generic_dangerous_deal
 	bypass = {}
  ai_will_do = { factor = }
- x =-1
- y =2
+ x =4
+ y =3
  mutually_exclusive = { }
  prerequisite = { focus = divisionoflabour}
  available = {  }
@@ -604,7 +508,7 @@ default = yes
 	icon = GFX_goal_generic_construction
 	bypass = {}
  ai_will_do = { factor = }
- x =1
+ x =8
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = divisionoflabour}
@@ -621,7 +525,7 @@ default = yes
 	icon = GFX_goal_generic_construction2
 	bypass = {}
  ai_will_do = { factor = }
- x =1
+ x =8
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = embraceindustrialisation}
@@ -666,7 +570,7 @@ default = yes
 	icon = GFX_goal_generic_construct_infrastructure
 	bypass = {}
  ai_will_do = { factor = }
- x =2
+ x =10
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = embraceindustrialisation}
@@ -735,7 +639,7 @@ default = yes
 	icon = GFX_goal_generic_construct_infrastructure
 	bypass = {}
  ai_will_do = { factor = }
- x =2
+ x =10
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = improveinfrastructure}
@@ -804,7 +708,7 @@ default = yes
 	icon = GFX_goal_generic_army_doctrines
 	bypass = {}
  ai_will_do = { factor = }
- x =7
+ x =20
  y =7
  mutually_exclusive = { focus = massconscription}
  prerequisite = { focus = reorganisingmilitarystructure}
@@ -820,7 +724,7 @@ default = yes
 	icon = GFX_goal_generic_construct_mil_factory
 	bypass = {}
  ai_will_do = { factor = }
- x =1
+ x =8
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = increaseproduction}
@@ -865,7 +769,7 @@ default = yes
 	icon = GFX_goal_generic_construct_mil_factory
 	bypass = {}
  ai_will_do = { factor = }
- x =1
+ x =8
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = militaryconstructioni}
@@ -910,7 +814,7 @@ default = yes
 	icon = GFX_goal_generic_construct_civ_factory
 	bypass = {}
  ai_will_do = { factor = }
- x =0
+ x =6
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = increaseproduction}
@@ -955,7 +859,7 @@ default = yes
 	icon = GFX_goal_generic_construct_civ_factory
 	bypass = {}
  ai_will_do = { factor = }
- x =0
+ x =6
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = civilianexpansioni}
@@ -1000,7 +904,7 @@ default = yes
 	icon = GFX_goal_generic_construct_infrastructure
 	bypass = {}
  ai_will_do = { factor = }
- x =2
+ x =10
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = infrastructureprojectsi}
@@ -1069,7 +973,7 @@ default = yes
 	icon = GFX_focus_research
 	bypass = {}
  ai_will_do = { factor = }
- x =-1
+ x =4
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = embraceindustrialisation}
@@ -1085,7 +989,7 @@ default = yes
 	icon = GFX_goal_electrification
 	bypass = {}
  ai_will_do = { factor = }
- x =-1
+ x =4
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = innovation}

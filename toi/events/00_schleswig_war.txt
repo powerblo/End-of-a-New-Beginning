@@ -1,0 +1,315 @@
+﻿add_namespace = schleswig_war
+
+country_event = { # The Death of Frederick VII
+  id = schleswig_war.0
+  title = schleswig_war.0.t
+  desc = schleswig_war.0.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = DEN
+    date > 1863.10.18
+  }
+
+  mean_time_to_happen = {
+    days = 30
+  }
+
+  option = { # Crown Christian IX
+    name = schleswig_war.0.a
+    add_political_power = -10
+    set_country_flag = DEN_christian_ix
+    create_country_leader = {
+      name = "Christian IX"
+      picture = "Portrait_DEN_Christian_IX.dds"
+      ideology = despotism
+    }
+  }
+}
+
+country_event = { # The November Constitution
+  id = schleswig_war.1
+  title = schleswig_war.1.t
+  desc = schleswig_war.1.d
+
+  fire_only_once = yes
+
+  trigger = {
+  	tag = DEN
+  	has_country_flag = DEN_christian_ix
+  }
+
+  mean_time_to_happen = {
+    days = 10
+  }
+
+  option = { # Adopt
+  	name = schleswig_war.1.a
+  	add_political_power = 100
+    annex_country = { target = SCH }
+  	PRS = {
+      	country_event = {
+      		id = schleswig_war.3
+     	}
+    }
+  	hidden_effect = {
+      news_event = {
+        id = schleswig_war.2
+      }
+    }
+  }
+}
+
+news_event = { # The November Constitution - News
+  id = schleswig_war.2
+  title = schleswig_war.2.t
+  desc = schleswig_war.2.d
+
+  is_triggered_only = yes
+
+  option = { # Prussia
+  	name = schleswig_war.2.a
+  	trigger = {
+  	  OR = {
+  	  	tag = PRS
+  	  	tag = AUS
+  	  }
+    }
+  }
+
+  option = { # Not Prussia
+  	name = schleswig_war.2.b
+  	trigger = {
+      NOT = { tag = PRS }
+    }
+  }
+}
+
+country_event = { # The Schleswig-Holstein Question
+  id = schleswig_war.3
+  title = schleswig_war.3.t
+  desc = schleswig_war.3.d
+
+  is_triggered_only = yes
+
+  option = { # Diplomatic Approach
+  	name = schleswig_war.3.a
+  	add_political_power = 100
+  	ai_chance = { factor = 95 }
+  	DEN = {
+  		country_event = {
+  			days = 1
+  			id = schleswig_war.4
+  		}
+  	}
+   }
+
+   option = { # Allow it to Happen
+    name = schleswig_war.3.b
+    ai_chance = { factor = 5 }
+  	add_political_power = -50
+  	add_national_unity = -0.1
+  }
+}
+
+country_event = { # PRS Demands to repel the Nov. Constitution
+  id = schleswig_war.4
+  title = schleswig_war.4.t
+  desc = schleswig_war.4.d
+
+  is_triggered_only = yes
+
+   option = { # Refuse
+    name = schleswig_war.4.a
+    ai_chance = { factor = 95 }
+  	PRS = {
+  		country_event = {
+  			days = 1
+  			id = schleswig_war.5
+  		}
+  	}
+  	AUS = {
+  		country_event = {
+  			days = 1
+  			id = schleswig_war.5
+  		}
+  	}
+   }
+
+   option = { # Accept
+    name = schleswig_war.4.b
+    ai_chance = { factor = 5 }
+    SCH = {
+      transfer_state = 58
+    }
+    DEN = {
+      puppet = SCH
+    }
+    SCH = {
+      set_politics = {
+        ruling_party = despotic_autocracy
+        elections_allowed = no
+      }
+    }
+  	add_political_power = -50
+   }
+}
+
+country_event = { # DEN refuses to back down
+  id = schleswig_war.5
+  title = schleswig_war.5.t
+  desc = schleswig_war.5.d
+
+  is_triggered_only = yes
+
+  option = { # War
+  	name = schleswig_war.5.a
+  	ai_chance = { factor = 95 }
+  	declare_war_on = { target = DEN type = annex_everything }
+    hidden_effect = {
+      PRS = {
+        country_event = {
+          id = schleswig_war.6
+          days = 300
+        }
+      }
+    }
+   }
+
+   option = { # No war
+  	name = schleswig_war.5.b
+  	ai_chance = { factor = 5 }
+  	add_political_power = -50
+  	add_national_unity = -0.1
+   }
+}
+
+country_event = { # Occupation
+  id = schleswig_war.6
+  title = schleswig_war.6.t
+  desc = schleswig_war.6.d
+
+  is_triggered_only = yes
+
+  option = { # Enforce Subjugation
+    name = schleswig_war.6.a
+    ai_chance = { factor = 95 }
+    trigger = {
+      DEN = {
+        surrender_progress > 0.7
+      }
+    }
+    DEN = {
+      country_event = schleswig_war.7
+    }
+   }
+
+   option = { # Impose Schleswig-Holstein Independance
+    name = schleswig_war.6.b
+    ai_chance = { factor = 95 }
+    trigger = {
+      PRS = {
+        controls_state = 58
+      }
+    }
+    DEN = {
+      country_event = schleswig_war.8
+    }
+   }
+
+   option = { # White Peace
+    name = schleswig_war.6.c
+    ai_chance = { factor = 5 }
+    add_political_power = -50
+    trigger = {
+      DEN = {
+        surrender_progress < 0.2
+      }
+    }
+    white_peace = {
+        tag = DEN
+    }
+    DEN = {
+      country_event = schleswig_war.9
+    }
+  }
+
+   option = { # Continue the War
+    name = schleswig_war.6.e
+    ai_chance = { factor = 5 }
+    add_political_power = -250
+   }
+}
+
+country_event = { # Denmark - Prussia wants to puppet DEN
+  id = schleswig_war.7
+  title = schleswig_war.7.t
+  desc = schleswig_war.7.d
+
+  is_triggered_only = yes
+
+  option = { # Ok
+    name = schleswig_war.7.a
+    ai_chance = { factor = 100 }
+    PRS = {
+        puppet = DEN
+    }
+    white_peace = {
+        tag = PRS
+    }
+   }
+
+   option = { # No
+    name = schleswig_war.7.b
+    ai_chance = { factor = 0 }
+    add_political_power = -300
+   }
+}
+
+country_event = { # Denmark - Prussia wants to liberate Schleswig-Holstein
+  id = schleswig_war.8
+  title = schleswig_war.8.t
+  desc = schleswig_war.8.d
+
+  is_triggered_only = yes
+
+  option = { # Ok
+    name = schleswig_war.8.a
+    ai_chance = { factor = 100 }
+    SCH = {
+      transfer_state = 58
+    }
+    white_peace = {
+        tag = PRS
+    }
+   }
+
+   option = { # No
+    name = schleswig_war.8.b
+    ai_chance = { factor = 0 }
+    add_political_power = -300
+   }
+}
+
+country_event = { # Denmark - Prussia wants to white peace
+  id = schleswig_war.9
+  title = schleswig_war.9.t
+  desc = schleswig_war.9.d
+
+  is_triggered_only = yes
+
+  option = { # Ok
+    name = schleswig_war.9.a
+    ai_chance = { factor = 100 }
+    white_peace = {
+        tag = PRS
+    }
+   }
+
+   option = { # No
+    name = schleswig_war.9.b
+    ai_chance = { factor = 0 }
+    add_political_power = -300
+   }
+}

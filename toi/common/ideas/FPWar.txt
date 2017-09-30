@@ -1,0 +1,57 @@
+ideas = {
+
+	country = {
+		FPWar_InsultUnchallenged = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.25
+				unity_factor = -0.05
+			}
+		}
+		FPWar_PRSReaction = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.1
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+			}
+		}
+		FPWAR_FRAReaction = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		FPWar_PRSLosingInfluence = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+					drift_defence_factor = -0.25
+					political_power_gain = -0.1
+			}
+		}
+	}
+
+	
+}
