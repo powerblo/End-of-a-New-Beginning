@@ -1,0 +1,269 @@
+ideas = {
+  constitution = {
+
+    adapted = {
+      allowed = {
+        OR = {
+          has_ideology = traditional_conservatism
+          has_ideology = market_liberal
+          has_ideology = social_democracy
+          AND = {
+            has_ideology = despotic_autocracy
+            has_completed_focus = adoptaconstitution
+          }
+        }
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        political_power_factor = 0.1
+      }
+
+      custom_effect_tooltip = constitution_adapted
+
+    }
+
+    human_rights = {
+      allowed = {
+        always = no
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        political_power_factor = 0.2
+      }
+
+      custom_effect_tooltip = humanrights_constitution
+    }
+
+    no_constitution = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        political_power_factor = -0.05
+        unity_factor = -0.05
+      }
+
+      custom_effect_tooltip = no_constitution
+    }
+
+
+  }
+
+
+  growth_policies = {
+
+    enforced = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        MONTHLY_POPULATION = 1.2
+        consumer_goods_factor = 0.2
+      }
+    }
+
+    encouraged = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        MONTHLY_POPULATION = 0.4
+        consumer_goods_factor = 0.08
+      }
+    }
+
+    stagnation = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    disencouraged = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        MONTHLY_POPULATION = -0.1
+        consumer_goods_factor = -0.08
+      }
+    }
+
+    restricted = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        MONTHLY_POPULATION = -0.6
+        consumer_goods_factor = -0.15
+      }
+    }
+  }
+
+  tax_rates = {
+
+    very_high = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = -0.1
+        unity_factor = -0.1
+      }
+    }
+
+    high = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = -0.02
+        unity_factor = -0.03
+      }
+    }
+
+    normal = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.03
+      }
+    }
+
+    low = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.1
+        unity_factor = 0.05
+      }
+    }
+
+    very_low = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.2
+        unity_factor = 0.1
+      }
+    }
+  }
+
+  military_spendage = {
+
+    ten_percent = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.2
+        production_factory_max_efficiency_factor = 0.3
+        industrial_capacity_factor = 0.3
+        training_time_factor = -0.1
+      }
+    }
+
+    five_percent = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        industrial_capacity_factor = 0.1
+        training_time_factor = -0.05
+      }
+    }
+
+    three_percent = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = 0.05
+      }
+    }
+
+    two_percent = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = -0.05
+        production_factory_max_efficiency_factor = -0.15
+        industrial_capacity_factor = -0.2
+        training_time_factor = 0.1
+      }
+    }
+
+    one_percent = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        consumer_goods_factor = -0.08
+        production_factory_max_efficiency_factor = -0.3
+        industrial_capacity_factor = -0.4
+        training_time_factor = 0.2
+      }
+    }
+  }
+
+}
