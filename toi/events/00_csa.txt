@@ -1,16 +1,16 @@
-add_namespace = 00_csa
+add_namespace = csa
 
   country_event = { # CSA Independance
-    id = 00_csa.1
-    title = 00_csa.1.t
-    desc = 00_csa.1.d
+    id = csa.1
+    title = csa.1.t
+    desc = csa.1.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # Fight the Rebels !
-      name = 00_csa.1.a
+      name = csa.1.a
       if = {
         limit = {
           has_government = traditional_conservative
@@ -30,13 +30,13 @@ add_namespace = 00_csa
       CSA = {
         add_ideas = CSA_rebel_nation
         hidden = {
-          country_event = 00_csa.2
+          country_event = csa.2
         }
       }
     }
 
     option = { # Try to reach an agreement
-      name = 00_csa.1.b
+      name = csa.1.b
       if = {
         limit = {
           has_government = traditional_conservative
@@ -56,58 +56,58 @@ add_namespace = 00_csa
       CSA = {
         add_ideas = CSA_us_collaboration
         hidden = {
-          country_event = 00_csa.3
+          country_event = csa.3
         }
       }
     }
   }
 
   country_event = { # US Response - Civil War
-    id = 00_csa.2
-    title = 00_csa.2.t
-    desc = 00_csa.2.d
+    id = csa.2
+    title = csa.2.t
+    desc = csa.2.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = {
-      name = 00_csa.2.a
+      name = csa.2.a
     }
   }
 
   country_event = { # US Response - Ready to Negotiate
-    id = 00_csa.3
-    title = 00_csa.3.t
-    desc = 00_csa.3.d
+    id = csa.3
+    title = csa.3.t
+    desc = csa.3.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = {
-      name = 00_csa.3.a
+      name = csa.3.a
     }
   }
 
   country_event = { # CSA wants West
-    id = 00_csa.100
-    title = 00_csa.100.t
-    desc = 00_csa.100.d
+    id = csa.100
+    title = csa.100.t
+    desc = csa.100.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # Agree to give the Western Territories
-      name = 00_csa.100.a
+      name = csa.100.a
       CSA = {
         set_country_flag = CSA_west_accepted
       }
     }
 
     option = { # Refuse to give the Western Terrotiries
-      name = 00_csa.100.b
+      name = csa.100.b
       CSA = {
         set_country_flag = CSA_west_refused
       }
@@ -115,23 +115,23 @@ add_namespace = 00_csa
   }
 
   country_event = { # CSA wants Center
-    id = 00_csa.101
-    title = 00_csa.101.t
-    desc = 00_csa.101.d
+    id = csa.101
+    title = csa.101.t
+    desc = csa.101.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # Agree to give the Western Territories
-      name = 00_csa.101.a
+      name = csa.101.a
       CSA = {
         set_country_flag = CSA_center_accepted
       }
     }
 
     option = { # Refuse to give the Western Terrotiries
-      name = 00_csa.101.b
+      name = csa.101.b
       CSA = {
         set_country_flag = CSA_center_refused
       }
@@ -139,16 +139,16 @@ add_namespace = 00_csa
   }
 
   country_event = { # A Fair Deal
-    id = 00_csa.102
-    title = 00_csa.102.t
-    desc = 00_csa.102.d
+    id = csa.102
+    title = csa.102.t
+    desc = csa.102.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # They call that a fair deal ?
-      name = 00_csa.102.a
+      name = csa.102.a
       trigger = {
         has_country_flag = CSA_center_refused
         has_country_flag = CSA_west_refused
@@ -159,7 +159,7 @@ add_namespace = 00_csa
     }
 
     option = { # It's better than nothing
-      name = 00_csa.102.b
+      name = csa.102.b
       trigger = {
         OR = {
           has_country_flag = CSA_center_refused
@@ -176,7 +176,7 @@ add_namespace = 00_csa
     }
 
     option = { # Glad we could reach a deal
-      name = 00_csa.102.c
+      name = csa.102.c
       NOT = {
         has_country_flag = CSA_center_refused
         has_country_flag = CSA_west_refused
@@ -188,16 +188,16 @@ add_namespace = 00_csa
   }
 
   country_event = { # CSS Virginia
-    id = 00_csa.200
-    title = 00_csa.200.t
-    desc = 00_csa.200.d
+    id = csa.200
+    title = csa.200.t
+    desc = csa.200.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = {
-      name = 00_csa.200.a
+      name = csa.200.a
       #add_equipment_to_stockpile = { 
       #  type = ironclad
       #  amount = 1 
@@ -207,16 +207,16 @@ add_namespace = 00_csa
   }
 
   country_event = { # Seek French Support
-    id = 00_csa.201
-    title = 00_csa.201.t
-    desc = 00_csa.201.d
+    id = csa.201
+    title = csa.201.t
+    desc = csa.201.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # Support the CSA
-      name = 00_csa.201.a
+      name = csa.201.a
       ai_chance = { factor = 80 }
       FRA = {
         add_opinion_modifier = {
@@ -231,7 +231,7 @@ add_namespace = 00_csa
     }
 
     option = { # Support the USA
-      name = 00_csa.201.b
+      name = csa.201.b
       ai_chance = { factor = 5 }
       FRA = {
         add_opinion_modifier = {
@@ -246,15 +246,15 @@ add_namespace = 00_csa
     }
 
     option = { # Stay neutral
-      name = 00_csa.201.c
+      name = csa.201.c
       ai_chance = { factor = 15 }
     }
   }
 
   country_event = { # Seek British Support
-    id = 00_csa.202
-    title = 00_csa.202.t
-    desc = 00_csa.202.d
+    id = csa.202
+    title = csa.202.t
+    desc = csa.202.d
 
     is_triggered_only = yes
 
@@ -262,7 +262,7 @@ add_namespace = 00_csa
 
     option = { # Support the CSA
       ai_chance = { factor = 55 }
-      name = 00_csa.202.a
+      name = csa.202.a
       ENG = {
         add_opinion_modifier = {
           target = CSA
@@ -276,7 +276,7 @@ add_namespace = 00_csa
     }
 
     option = { # Support the USA
-      name = 00_csa.202.b
+      name = csa.202.b
       ai_chance = { factor = 15 }
       ENG = {
         add_opinion_modifier = {
@@ -291,22 +291,22 @@ add_namespace = 00_csa
     }
 
     option = { # Stay neutral
-      name = 00_csa.202.c
+      name = csa.202.c
       ai_chance = { factor = 30 }
     }
   }
 
   country_event = { # Ask the help of the natives
-    id = 00_csa.203
-    title = 00_csa.203.t
-    desc = 00_csa.203.d
+    id = csa.203
+    title = csa.203.t
+    desc = csa.203.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = { # Join war
-      name = 00_csa.203.a
+      name = csa.203.a
       ai_chance = { factor = 85 }
       SIX = {
         add_to_war = { 
@@ -317,28 +317,28 @@ add_namespace = 00_csa
     }
 
     option = { # Not join war
-      name = 00_csa.203.a
+      name = csa.203.a
       ai_chance = { factor = 15 }
       add_political_power = 50
       CSA = {
         country_event = {
-          id = 00_csa.204
+          id = csa.204
           days = 0
         }
       }
     }
 
     country_event = { # Sioux response
-    id = 00_csa.204
-    title = 00_csa.204.t
-    desc = 00_csa.204.d
+    id = csa.204
+    title = csa.204.t
+    desc = csa.204.d
 
     is_triggered_only = yes
 
     fire_only_once = yes
 
     option = {
-      name = 00_csa.203.a
+      name = csa.203.a
       add_political_power = -20
     }
   }

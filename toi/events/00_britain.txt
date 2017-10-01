@@ -1,35 +1,35 @@
-﻿add_namespace = 00_britain
+﻿add_namespace = britain
 
 country_event = { # Orsini Affair
-  id = 00_britain.1
-  title = 00_britain.1.t
-  desc = 00_britain.1.d
+  id = britain.1
+  title = britain.1.t
+  desc = britain.1.d
 
   is_triggered_only = yes
 
   option = {
-    name = 00_britain.1.a
+    name = britain.1.a
     set_country_flag = ENG_orsini
   }
 }
 
 country_event = { # Orsini Affair Reaction
-  id = 00_britain.2
-  title = 00_britain.2.t
-  desc = 00_britain.2.d
+  id = britain.2
+  title = britain.2.t
+  desc = britain.2.d
 
   is_triggered_only = yes
 
   option = { # Anti-Terrorist Act
-    name = 00_britain.2.a
+    name = britain.2.a
     country_event = {
-      id = 00_britain.3
+      id = britain.3
       days = 1
     }
   }
 
   option = { # Do Nothing
-    name = 00_britain.2.b
+    name = britain.2.b
     add_political_power = -150
     add_popularity = {
         ideology = radical_socialism
@@ -40,38 +40,38 @@ country_event = { # Orsini Affair Reaction
 }
 
 country_event = { # Orsini Affair Parliament Decision
-  id = 00_britain.3
-  title = 00_britain.3.t
-  desc = 00_britain.3.d
+  id = britain.3
+  title = britain.3.t
+  desc = britain.3.d
 
   is_triggered_only = yes
 
   option = { # Parliament Refuses
-    name = 00_britain.3.a
+    name = britain.3.a
     country_event = {
-      id = 00_britain.4
+      id = britain.4
       days = 1
     }
   }
 
   option = { # Parliament Accepts
-    name = 00_britain.3.b
+    name = britain.3.b
     add_political_power = 25
     set_country_flag = ENG_palmerston_stays
   }
 }
 
 country_event = { # Orsini Affair Government Meltdown
-  id = 00_britain.4
-  title = 00_britain.4.t
-  desc = 00_britain.4.d
+  id = britain.4
+  title = britain.4.t
+  desc = britain.4.d
 
   is_triggered_only = yes
 
   option = {
-    name = 00_britain.4.a
+    name = britain.4.a
     country_event = {
-      id = 00_britain.5
+      id = britain.5
       days = 1
     }
     add_political_power = -100
@@ -79,14 +79,14 @@ country_event = { # Orsini Affair Government Meltdown
 }
 
 country_event = { # Orsini Affair Palmerston Resignation
-  id = 00_britain.5
-  title = 00_britain.5.t
-  desc = 00_britain.5.d
+  id = britain.5
+  title = britain.5.t
+  desc = britain.5.d
 
   is_triggered_only = yes
 
   option = {
-    name = 00_britain.5.a
+    name = britain.5.a
     add_political_power = -100
     set_country_flag = ENG_palmerston_away
     add_popularity = {
@@ -101,37 +101,37 @@ country_event = { # Orsini Affair Palmerston Resignation
 }
 
 country_event = { # Sepoy Debate
-  id = 00_britain.10
-  title = 00_britain.10.t
-  desc = 00_britain.10.d
+  id = britain.10
+  title = britain.10.t
+  desc = britain.10.d
 
   is_triggered_only = yes
 
   option = { # Full intervention
-    name = 00_britain.10.a
+    name = britain.10.a
   }
 
   option = { # Send some volunteers
-    name = 00_britain.10.b
+    name = britain.10.b
   }
 }
 
 country_event = {
-  id = 00_britain.500
-  title = 00_britain.500.t
-  desc = 00_britain.500.d
+  id = britain.500
+  title = britain.500.t
+  desc = britain.500.d
 
   is_triggered_only = yes
 
   #Full support
   option = {
-    name = 00_britain.500.a
+    name = britain.500.a
     declare_war_on = {target = CSA type = annex_everything}
   }
 
   #Backhand support
   option = {
-    name = 00_britain.500.b
+    name = britain.500.b
     hidden = {
       set_country_flag = support_usa
     }
@@ -139,7 +139,7 @@ country_event = {
 
   #Refusal
   option = {
-    name = 00_britain.500.c
+    name = britain.500.c
     #Event for USA happens, USA can declare war on Britain
   }
 }

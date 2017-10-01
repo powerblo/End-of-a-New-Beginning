@@ -1,10 +1,10 @@
-add_namespace = 00_russia
+add_namespace = russia
 
 #Emancipation Reform
 country_event = {
-		id = 00_russia.1
-		title = 00_russia.1.t
-		desc = 00_russia.1.d
+		id = russia.1
+		title = russia.1.t
+		desc = russia.1.d
 
 		fire_only_once = yes
 
@@ -18,14 +18,14 @@ country_event = {
 		}
 
 		option = {
-				name = 00_russia.1.a
+				name = russia.1.a
 				remove_ideas = RUS_Serfdom
 				add_political_power = -1000
 				add_timed_idea = { idea = RUS_Reform days = 700 }
 		}
 
 		option = {
-				name = 00_russia.1.b
+				name = russia.1.b
 				add_timed_idea = { idea = RUS_Unrest days = 365 }
 				unity_factor = -0.1
 		}
@@ -33,9 +33,9 @@ country_event = {
 
 #Agriculture vs. Industry (Minor Decision)
 country_event = {
-		id = 00_russia.2
-		title = 00_russia.2.t
-		desc = 00_russia.2.d
+		id = russia.2
+		title = russia.2.t
+		desc = russia.2.d
 
 		fire_only_once = yes
 
@@ -49,26 +49,26 @@ country_event = {
 		}
 
 		option = {
-				name = 00_russia.2.a
+				name = russia.2.a
 				add_timed_idea = { idea = RUS_Agriculture days = 3650 }
 		}
 
 		option = {
-				name = 00_russia.2.b
+				name = russia.2.b
 				add_timed_idea = { idea = RUS_Industry days = 3650 }
 		}
 
 		option = {
-				name = 00_russia.2.c
+				name = russia.2.c
 				add_timed_idea = { idea = RUS_Development days = 3650 }
 		}
 }
 
 #Judicial Reform
 country_event = {
-		id = 00_russia.3
-		title = 00_russia.3.t
-		desc = 00_russia.3.d
+		id = russia.3
+		title = russia.3.t
+		desc = russia.3.d
 
 		fire_only_once = yes
 
@@ -82,7 +82,7 @@ country_event = {
 		}
 
 		option = {
-				name = 00_russia.3.a
+				name = russia.3.a
 				add_ideas = RUS_JudicialReform
 				add_political_power = -500
 		}
@@ -90,9 +90,9 @@ country_event = {
 
 #Military Reform
 country_event = {
-		id = 00_russia.4
-		title = 00_russia.4.t
-		desc = 00_russia.4.d
+		id = russia.4
+		title = russia.4.t
+		desc = russia.4.d
 
 		fire_only_once = yes
 
@@ -106,7 +106,7 @@ country_event = {
 		}
 
 		option = {
-				name = 00_russia.4.a
+				name = russia.4.a
 				add_ideas = RUS_MilitaryReform
 				add_political_power = -750
 		}
@@ -114,9 +114,9 @@ country_event = {
 
 #Russian State Bank
 country_event = {
-		id = 00_russia.5
-		title = 00_russia.5.t
-		desc = 00_russia.5.d
+		id = russia.5
+		title = russia.5.t
+		desc = russia.5.d
 
 		fire_only_once = yes
 
@@ -130,13 +130,13 @@ country_event = {
 		}
 
 		option = {
-				name = 00_russia.5.a
+				name = russia.5.a
 				add_ideas = RUS_StateBank
 				add_political_power = -500
 		}
 
 		option = {
-				name = 00_russia.5.b
+				name = russia.5.b
 				add_timed_idea = { idea = RUS_NoStateBank days = 7300 }
 		}
 }

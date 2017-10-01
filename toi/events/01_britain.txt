@@ -1,12 +1,12 @@
 #No namespace here, since a file for Britain already exists in the mod. Just copypaste the events in.
-#I will use the id 01_britain for all british events scripted by me since I can't reserve event ids.
-add_namespace = 01_britain
+#I will use the id britainlond for all british events scripted by me since I can't reserve event ids.
+add_namespace = britainlond
 
 #Treaty of San Stefano
 country_event = {
-		id = 01_britain.1
-		title = 01_britain.1.t
-		desc = 01_britain.1.d
+		id = britainlond.1
+		title = britainlond.1.t
+		desc = britainlond.1.d
 
 		fire_only_once = yes
 
@@ -20,20 +20,20 @@ country_event = {
 		}
 
 		option = {
-				name = 01_britain.1.a
+				name = britainlond.1.a
 				add_political_power = -150
 		}
 		option = {
-				name = 01_britain.1.b
+				name = britainlond.1.b
 				add_relation_modifier = { target = RUS modifier = Stefano_Objection }
 		}
 }
 
 #Treaty of Berlin
 country_event = {
-		id = 01_britain.2
-		title = 01_britain.2.t
-		desc = 01_britain.2.d
+		id = britainlond.2
+		title = britainlond.2.t
+		desc = britainlond.2.d
 
 		fire_only_once = yes
 
@@ -47,12 +47,12 @@ country_event = {
 		}
 
 		option = {
-				name = 01_britain.2.a
+				name = britainlond.2.a
 				GRE = { set_state_owner = 183 }
 				add_relation_modifier = { target = GRE modifier = Cyprus_Gift }
 		}
 		option = {
-				name = 01_britain.2.b
+				name = britainlond.2.b
 				add_state_core = 183
 				ENG = { set_state_owner = 183 }
 		}
@@ -60,9 +60,9 @@ country_event = {
 
 #April Uprising
 country_event = {
-		id = 01_britain.3
-		title = 01_britain.3.t
-		desc = 01_britain.3.d
+		id = britainlond.3
+		title = britainlond.3.t
+		desc = britainlond.3.d
 		
 		fire_only_once = yes
 		
@@ -76,28 +76,28 @@ country_event = {
 		}
 		
 		option = {
-				name = 01_britain.3.a
+				name = britainlond.3.a
 				add_opinion_modifier = { target = OTO modifier = kept_support }
 				add_political_power = -100
 		}
 		
 		option = {
-				name = 01_britain.3.b
+				name = britainlond.3.b
 				add_opinion_modifier = { target = OTO modifier = no_support }
 				add_political_power = -100
 		}
 		
 		option = {
-				name = 01_britain.3.c
+				name = britainlond.3.c
 				add_political_power = 50
 		}
 }
 
 #Rorkes Drift
 country_event = {
-		id = 01_britain.4
-		title = 01_britain.4.t
-		desc = 01_britain.4.d
+		id = britainlond.4
+		title = britainlond.4.t
+		desc = britainlond.4.d
 		
 		fire_only_once = yes
 		
@@ -115,7 +115,7 @@ country_event = {
 		}
 		
 		option = {
-				name = 01_britain.4.a
+				name = britainlond.4.a
 				add_timed_idea = { idea = ENG_Rorke days = 30 }
 		}
 }

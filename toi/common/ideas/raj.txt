@@ -1,0 +1,561 @@
+focus_tree = {
+id = 'raj'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = RAJ
+}
+}
+default = no
+#Custom focuses start here
+#Focus for The Future of British India 
+	focus = { 
+	id = thefutureofbritishindia 
+	icon = GFX_focus_RAJ_all_india_forward_bloc 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 100
+	add_ideas = RAJ_Troubles
+ } 
+ }#Focus for Reform our countrys standing 
+	focus = { 
+	id = reformourcountrysstanding 
+	icon = GFX_goal_generic_national_unity 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thefutureofbritishindia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }#Focus for Propose a Commonwealth 
+	focus = { 
+	id = proposeacommonwealth 
+	icon = GFX_goal_generic_support_democracy 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =3 
+ mutually_exclusive = { focus = remainapuppetofbritain} 
+ prerequisite = { focus = reformourcountrysstanding} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	create_faction = "BritishRajAlliance"
+	add_to_faction = ENG
+ } 
+ }#Focus for The Sepoy Crisis 
+	focus = { 
+	id = thesepoycrisis 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reformourcountrysstanding} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	
+ } 
+ }#Focus for Strive for cooperation 
+	focus = { 
+	id = striveforcooperation 
+	icon = GFX_goal_generic_intelligence_exchange 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =3 
+ mutually_exclusive = { focus = policyofoppression} 
+ prerequisite = { focus = thesepoycrisis} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = RAJ_Cooperation
+ } 
+ }#Focus for Eliminate religious conflicts. 
+	focus = { 
+	id = eliminatereligiousconflicts 
+	icon = GFX_goal_generic_propaganda 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = striveforcooperation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }#Focus for Policy of Oppression 
+	focus = { 
+	id = policyofoppression 
+	icon = GFX_goal_generic_secret_weapon 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =3 
+ mutually_exclusive = { focus = striveforcooperation} 
+ prerequisite = { focus = thesepoycrisis} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	
+ } 
+ }#Focus for Christianize India 
+	focus = { 
+	id = christianizeindia 
+	icon = GFX_goal_generic_major_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = policyofoppression} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = RAJ_Christianity
+ } 
+ }#Focus for Calming the waves 
+	focus = { 
+	id = calmingthewaves 
+	icon = GFX_goal_continuous_boost_freedom 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = christianizeindia  focus = eliminatereligiousconflicts} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	remove_ideas = RAJ_Troubles
+ } 
+ }#Focus for Strength through unity 
+	focus = { 
+	id = strengththroughunity 
+	icon = GFX_goal_generic_national_unity 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = calmingthewaves} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }#Focus for English Technology 
+	focus = { 
+	id = englishtechnology 
+	icon = GFX_goal_generic_scientific_exchange 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = proposeacommonwealth} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 2 category = industry }
+ } 
+ }#Focus for We are recognized 
+	focus = { 
+	id = wearerecognized 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = englishtechnology} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Seek Distance from Britain 
+	focus = { 
+	id = seekdistancefrombritain 
+	icon = GFX_focus_RAJ_clamp_down_on_corruption 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =6 
+ mutually_exclusive = { focus = strengthenbritishindianties} 
+ prerequisite = { focus = wearerecognized} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	dismantle_faction = yes
+ } 
+ }#Focus for Remain a puppet of Britain 
+	focus = { 
+	id = remainapuppetofbritain 
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =3 
+ mutually_exclusive = { focus = proposeacommonwealth} 
+ prerequisite = { focus = reformourcountrysstanding} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Joint Military Drills 
+	focus = { 
+	id = jointmilitarydrills 
+	icon = GFX_focus_generic_little_entente 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = remainapuppetofbritain} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 2 category = land_doctrine }
+ } 
+ }#Focus for Legacy of the Royal Navy 
+	focus = { 
+	id = legacyoftheroyalnavy 
+	icon = GFX_goal_generic_amphibious_assault 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = jointmilitarydrills} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 2 category = naval_doctrine }
+ } 
+ }#Focus for Develop India 
+	focus = { 
+	id = developindia 
+	icon = GFX_goal_generic_production2 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reformourcountrysstanding} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = RAJ_Development
+ } 
+ }#Focus for Indian Military Industry 
+	focus = { 
+	id = indianmilitaryindustry 
+	icon = GFX_goal_generic_military_sphere 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = developindia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = RAJ_Mil days = 730 }
+ } 
+ }#Focus for Build Military Factories 
+	focus = { 
+	id = buildmilitaryfactories 
+	icon = GFX_goal_generic_construct_mil_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = indianmilitaryindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for Indian Goods Industry 
+	focus = { 
+	id = indiangoodsindustry 
+	icon = GFX_goal_generic_consumer_goods 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = developindia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = RAJ_Civ days = 730 }
+ } 
+ }#Focus for Indian State Railways 
+	focus = { 
+	id = indianstaterailways 
+	icon = GFX_goal_generic_construct_civilian 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = developindia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = RAJ_Rail days = 730 }
+ } 
+ }#Focus for Build more Railways 
+	focus = { 
+	id = buildmorerailways 
+	icon = GFX_goal_generic_construct_infrastructure 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = indianstaterailways} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for Build Civilian Factories 
+	focus = { 
+	id = buildcivilianfactories 
+	icon = GFX_goal_generic_construct_civ_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = indiangoodsindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for An industrialized Nation 
+	focus = { 
+	id = anindustrializednation 
+	icon = GFX_goal_generic_construction 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = buildmorerailways} 
+  prerequisite = { focus =buildcivilianfactories} 
+  prerequisite = { focus =buildmilitaryfactories} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	remove_ideas = RAJ_Development
+ } 
+ }#Focus for Strengthen British-Indian Ties 
+	focus = { 
+	id = strengthenbritishindianties 
+	icon = GFX_goal_generic_build_tank 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =22 
+ y =6 
+ mutually_exclusive = { focus = seekdistancefrombritain} 
+ prerequisite = { focus = wearerecognized} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Fortify India 
+	focus = { 
+	id = fortifyindia 
+	icon = GFX_goal_continuous_def_against_influence 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = legacyoftheroyalnavy} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = RAJ_Forts days = 1825 }
+ } 
+ }#Focus for A new age for India 
+	focus = { 
+	id = anewageforindia 
+	icon = GFX_focus_generic_the_giant_wakes 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = strengththroughunity} 
+  prerequisite = { focus =anindustrializednation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#End of focuses 
+}

@@ -1,11 +1,11 @@
 #This file contains events relating to the Franco-Prussian war.
-add_namespace = 00_FPWar
+add_namespace = fp_war
 
 #Tension - as Prussia
 country_event = {
-		id = 00_FPWar.1
-		title = 00_FPWar.1.t
-		desc = 00_FPWar.1.d
+		id = fp_war.1
+		title = fp_war.1.t
+		desc = fp_war.1.d
 		
 		fire_only_once = yes
 		
@@ -15,29 +15,29 @@ country_event = {
 		}
 		
 		option = {
-				name = 00_FPWar.1.a
-				hidden_effect = { FRA = { country_event = { days = 1 id = 00_FPWar.2 }}}
+				name = fp_war.1.a
+				hidden_effect = { FRA = { country_event = { days = 1 id = fp_war.2 }}}
 		}
 }
 
 #Tension - as France
 country_event = {
-		id = 00_FPWar.2
-		title = 00_FPWar.2.t
-		desc = 00_FPWar.2.d
+		id = fp_war.2
+		title = fp_war.2.t
+		desc = fp_war.2.d
 		
 		is_triggered_only = yes
 		
 		option = {
-				name = 00_FPWar.2.a
+				name = fp_war.2.a
 		}
 }
 
 #Ems Dispatch
 country_event = {
-		id = 00_FPWar.3
-		title = 00_FPWar.3.t
-		desc = 00_FPWar.3.d
+		id = fp_war.3
+		title = fp_war.3.t
+		desc = fp_war.3.d
 		
 		mean_time_to_happen = { days = 100 }
 		
@@ -53,35 +53,35 @@ country_event = {
 		}
 		
 		option = {
-				name = 00_FPWar.3.a
+				name = fp_war.3.a
 				declare_war_on = { target = PRS type = annex_everything }
-				hidden_effect = { PRS = { country_event = { days = 10 id = 00_FPWar.4 }}}
+				hidden_effect = { PRS = { country_event = { days = 10 id = fp_war.4 }}}
 		}
 		option = {
-				name = 00_FPWar.3.b
+				name = fp_war.3.b
 				add_timed_idea = { idea = FPWar_InsultUnchallenged days = 365 }
 		}
 }
 
 #France Declares War after Ems - Prussian Reaction
 country_event = {
-		id = 00_FPWar.4
-		title = 00_FPWar.4.t
-		desc = 00_FPWar.4.d
+		id = fp_war.4
+		title = fp_war.4.t
+		desc = fp_war.4.d
 		
 		is_triggered_only = yes
 		
 		option = {
-				name = 00_FPWar.4.a
+				name = fp_war.4.a
 				add_timed_idea = { idea = FPWar_PRSReaction days = 180 }
 		}
 }
 
 #The Luxembourg Incident
 country_event = {
-		id = 00_FPWar.5
-		title = 00_FPWar.5.t
-		desc = 00_FPWar.5.d
+		id = fp_war.5
+		title = fp_war.5.t
+		desc = fp_war.5.d
 		
 		fire_only_once = yes
 		
@@ -93,26 +93,26 @@ country_event = {
 		}
 		
 		option = {
-				name = 00_FPWar.5.a
+				name = fp_war.5.a
 				declare_war_on = { target = FRA type = annex_everything }
-				hidden_effect = { FRA = { country_event = { days = 10 id = 00_FPWar.6 }}}
+				hidden_effect = { FRA = { country_event = { days = 10 id = fp_war.6 }}}
 		}
 		option = {
-				name = 00_FPWar.5.b
+				name = fp_war.5.b
 				add_timed_idea = { idea = FPWar_PRSLosingInfluence days = 730 }
 		}
 }
 
 #Prussia declares war after Luxembourg - French Reaction
 country_event = {
-		id = 00_FPWar.6
-		title = 00_FPWar.6.t
-		desc = 00_FPWar.6.d
+		id = fp_war.6
+		title = fp_war.6.t
+		desc = fp_war.6.d
 		
 		is_triggered_only = yes
 		
 		option = {
-				name = 00_FPWar.6.a
+				name = fp_war.6.a
 				add_timed_idea = { idea = FPWar_FRAReaction days = 180 }
 		}
 }

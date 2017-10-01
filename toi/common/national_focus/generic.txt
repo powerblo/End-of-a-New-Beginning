@@ -11,7 +11,7 @@ default = yes
 	id = questioningthestatusquo
 	icon = GFX_goal_generic_propaganda
 	bypass = {}
- ai_will_do = { factor = }
+ ai_will_do = { factor =  }
  x =20
  y =0
  mutually_exclusive = { }
@@ -27,7 +27,24 @@ default = yes
 	id = reform
 	icon = GFX_goal_generic_neutrality_focus
 	bypass = {}
- ai_will_do = { factor = }
+ ai_will_do = { factor = 0.5
+ modifier = {
+ 	factor = 2
+	OR = {
+		has_government = traditional_conservatism
+		has_government = market_liberalism
+		has_government = social_democracy
+	}
+ }
+modifier = {
+	factor = 0.2
+	has_government = despotic_autocracy
+}
+modifier = {
+	factor = 10
+	has_idea = demand_reform
+}
+  }
  x =20
  y =1
  mutually_exclusive = { }
@@ -36,7 +53,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+add_timed_idea = {id = reformation days = 100}
  }
  }#Focus for Argument of Tradition
 	focus = {
@@ -68,6 +85,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
+		add_ideas = parliament
 
  }
  }#Focus for Adopt a constitution
@@ -84,7 +102,8 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+		add_political_power = 50
+		
  }
  }#Focus for Remain a Monarchy
 	focus = {

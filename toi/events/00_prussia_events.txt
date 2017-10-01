@@ -1,10 +1,10 @@
-add_namespace = 00_prussia_flavor
+add_namespace = prussia_flavor
 
 #Grimm Brother Death
 country_event = {
-		id = 00_prussia_flavor.1
-		title = 00_prussia_flavor.1.t
-		desc = 00_prussia_flavor.1.d
+		id = prussia_flavor.1
+		title = prussia_flavor.1.t
+		desc = prussia_flavor.1.d
 
 		fire_only_once = yes
 
@@ -18,16 +18,16 @@ country_event = {
 		}
 
 		option = {
-				name = 00_prussia_flavor.1.a
+				name = prussia_flavor.1.a
 				add_political_power = -25
 		}
 }
 
 #Lalande Prize
 country_event = {
-		id = 00_prussia_flavor.2
-		title = 00_prussia_flavor.2.t
-		desc = 00_prussia_flavor.2.d
+		id = prussia_flavor.2
+		title = prussia_flavor.2.t
+		desc = prussia_flavor.2.d
 
 		fire_only_once = yes
 
@@ -41,7 +41,7 @@ country_event = {
 		}
 
 		option = {
-				name = 00_prussia_flavor.2.a
+				name = prussia_flavor.2.a
 				add_political_power = 50
 				add_tech_bonus = { bonus = 0.25 uses = 1 category = industry}
 		}
@@ -49,9 +49,9 @@ country_event = {
 
 #Cologne Zoological Garden
 country_event = {
-		id = 00_prussia_flavor.3
-		title = 00_prussia_flavor.3.t
-		desc = 00_prussia_flavor.3.d
+		id = prussia_flavor.3
+		title = prussia_flavor.3.t
+		desc = prussia_flavor.3.d
 
 		fire_only_once = yes
 
@@ -65,7 +65,7 @@ country_event = {
 		}
 
 		option = {
-				name = 00_prussia_flavor.3.a
+				name = prussia_flavor.3.a
 				51 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes}}
 				51 = { add_extra_state_shared_building_slots = 1}
 		}
@@ -73,9 +73,9 @@ country_event = {
 
 #Berlin National Gallery
 country_event = {
-		id = 00_prussia_flavor.4
-		title = 00_prussia_flavor.4.t
-		desc =  00_prussia_flavor.4.d
+		id = prussia_flavor.4
+		title = prussia_flavor.4.t
+		desc =  prussia_flavor.4.d
 
 		fire_only_once = yes
 
@@ -89,16 +89,16 @@ country_event = {
 		}
 
 		option = {
-				name = 00_prussia_flavor.4.a
+				name = prussia_flavor.4.a
 				add_timed_idea = { idea = PRS_BNG days = 365 }
 		}
 }
 
 #German Red Cross
 country_event = {
-		id = 00_prussia_flavor.5
-		title = 00_prussia_flavor.5.t
-		desc = 00_prussia_flavor.5.d
+		id = prussia_flavor.5
+		title = prussia_flavor.5.t
+		desc = prussia_flavor.5.d
 
 		fire_only_once = yes
 
@@ -120,7 +120,7 @@ country_event = {
 		}
 
 		option = {
-				name = 00_prussia_flavor.5.a
+				name = prussia_flavor.5.a
 				add_ideas = PRS_RedCross
 		}
 }
