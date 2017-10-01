@@ -1,0 +1,38 @@
+division_template = {
+  name = "Siamese Infantry"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+    light_infantry = { x = 1 y = 0}
+	light_infantry = { x = 2 y = 0]
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1st Siamese Infantry"
+			location = 7408
+			division_template = "Siamese Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Siamese Infantry"
+			location = 7408
+			division_template = "Siamese Infantry"
+			start_experience_factor = 0.1
+		}
+		#Scattered Divisions
+		division= {
+			name = "3rd Siamese Infantry"
+			location = 1488
+			division_template = "Siamese Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Siamese Infantry"
+			location = 7236
+			division_template = "Siamese Infantry"
+			start_experience_factor = 0.1
+		}
+}
