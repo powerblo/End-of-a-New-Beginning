@@ -1,0 +1,919 @@
+focus_tree = {
+id = 'germanminors'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = WUR
+}
+modifier = {
+add = 10
+tag = BAD
+}
+modifier = {
+add = 10
+tag = HES
+}
+modifier = {
+add = 10
+tag = SAX
+}
+modifier = {
+add = 10
+tag = THU
+}
+modifier = {
+add = 10
+tag = HAN
+}
+modifier = {
+add = 10
+tag = OLD
+}
+modifier = {
+add = 10
+tag = MCK
+}
+modifier = {
+add = 10
+tag = LUX
+}
+}
+default = no
+#Custom focuses start here
+#Focus for The German Question 
+	focus = { 
+	id = thegermanquestion 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 50
+ } 
+ }#Focus for Go with France 
+	focus = { 
+	id = gowithfrance 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =1 
+ mutually_exclusive = { focus = sidewithprussia} 
+ prerequisite = { focus = thegermanquestion} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_opinion_modifier = { target = FRA modifier = ExpressLoyal }
+	add_opinion_modifier = { target = PRS modifier = ExpressHostile }
+ } 
+ }#Focus for Side with Prussia 
+	focus = { 
+	id = sidewithprussia 
+	icon = GFX_goal_generic_improve_relations 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =1 
+ mutually_exclusive = { focus = gowithfrance} 
+ prerequisite = { focus = thegermanquestion} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_opinion_modifier = { target = PRS modifier = ExpressLoyal }
+	add_opinion_modifier = { target = FRA modifier = ExpressHostile }
+ } 
+ }#Focus for Prepare to defend 
+	focus = { 
+	id = preparetodefend 
+	icon = GFX_goal_generic_defence 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = gowithfrance} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Joint Military Research 
+	focus = { 
+	id = jointmilitaryresearch 
+	icon = GFX_goal_continuous_research 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =22 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = gowithfrance} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_tech_bonus = { bonus = 0.3 uses = 1 category = land_doctrine }
+	add_tech_bonus = { bonus = 0.3 uses = 1 category = infantry_weapons }
+ } 
+ }#Focus for Military Cooperation 
+	focus = { 
+	id = militarycooperation 
+	icon = GFX_focus_secret_rearmament 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =18 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = sidewithprussia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_PRScoop
+ } 
+ }#Focus for Standardize Production 
+	focus = { 
+	id = standardizeproduction 
+	icon = GFX_goal_continuous_repairments 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = jointmilitaryresearch  focus = militarycooperation} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_standard days = 730 }
+ } 
+ }#Focus for Army Drills 
+	focus = { 
+	id = armydrills 
+	icon = GFX_focus_generic_military_mission 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = standardizeproduction} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	army_experience = 20
+ } 
+ }#Focus for Fabricate War Plans 
+	focus = { 
+	id = fabricatewarplans 
+	icon = GFX_goal_generic_air_doctrine 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = armydrills} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_warplan days = 1825 }
+ } 
+ }#Focus for Ready our populace 
+	focus = { 
+	id = readyourpopulace 
+	icon = GFX_goal_generic_demand_territory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = fabricatewarplans} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_popready days = 1825 }
+ } 
+ }#Focus for Prussian Production Patterns 
+	focus = { 
+	id = prussianproductionpatterns 
+	icon = GFX_goal_continuous_naval_production 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = sidewithprussia} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	army_experience = 30
+	navy_experience = 10
+ } 
+ }#Focus for Fortify strategic Areas 
+	focus = { 
+	id = fortifystrategicareas 
+	icon = GFX_goal_generic_construction2 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = preparetodefend } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Army Construction Corps 
+	focus = { 
+	id = armyconstructioncorps 
+	icon = GFX_goal_generic_construct_civilian 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = prussianproductionpatterns} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_armybuilder days = 730 }
+ } 
+ }#Focus for War with Prussia 
+	focus = { 
+	id = warwithprussia 
+	icon = GFX_goal_generic_forceful_treaty 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = fortifystrategicareas} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+		declare_war_on = { target = PRS type = annex_everything }
+ } 
+ }#Focus for Focus on Industry 
+	focus = { 
+	id = focusonindustry 
+	icon = GFX_goal_generic_fortify_city 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =32 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = -100
+ } 
+ }#Focus for Agricultural Society 
+	focus = { 
+	id = agriculturalsociety 
+	icon = GFX_goal_generic_consumer_goods 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =1 
+ mutually_exclusive = { focus = industrialrevolution} 
+ prerequisite = { focus = focusonindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_agriculture
+ } 
+ }#Focus for Encourage Population Growth 
+	focus = { 
+	id = encouragepopulationgrowth 
+	icon = GFX_focus_yug_pan_slavic_congress 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = agriculturalsociety} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_popgrow days = 1825 }
+ } 
+ }#Focus for Subsidize Farmers 
+	focus = { 
+	id = subsidizefarmers 
+	icon = GFX_goal_generic_national_unity 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = agriculturalsociety} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_agriculture add_idea = germin_agriculture1 }
+ } 
+ }#Focus for Fertilize our Soil 
+	focus = { 
+	id = fertilizeoursoil 
+	icon = GFX_goal_generic_construction 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = subsidizefarmers} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_agriculture1 add_idea = germin_agriculture2 }
+ } 
+ }#Focus for Self-sufficient Households 
+	focus = { 
+	id = selfsufficienthouseholds 
+	icon = GFX_goal_generic_trade 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = fertilizeoursoil} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_agriculture2 add_idea = germin_agriculture3 }
+ } 
+ }#Focus for Better Recruitment Tactics 
+	focus = { 
+	id = betterrecruitmenttactics 
+	icon = GFX_goal_continuous_def_against_influence 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = encouragepopulationgrowth} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_manpower = 10000
+ } 
+ }#Focus for Fund Officer Schools 
+	focus = { 
+	id = fundofficerschools 
+	icon = GFX_goal_generic_intelligence_exchange 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =30 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = betterrecruitmenttactics} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_officerschool
+ } 
+ }#Focus for A traditional country 
+	focus = { 
+	id = atraditionalcountry 
+	icon = GFX_goal_generic_more_territorial_claims 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =29 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = selfsufficienthouseholds} 
+  prerequisite = { focus =fundofficerschools} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.1
+ } 
+ }#Focus for Economic Development 
+	focus = { 
+	id = economicdevelopment 
+	icon = GFX_goal_generic_positive_trade_relations 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =32 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = focusonindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_industry
+ } 
+ }#Focus for Expand Infrastructure 
+	focus = { 
+	id = expandinfrastructure 
+	icon = GFX_goal_generic_construct_infrastructure 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =32 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = economicdevelopment} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for Civilian Industry 
+	focus = { 
+	id = civilianindustry 
+	icon = GFX_goal_generic_construct_civ_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =32 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = expandinfrastructure} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for Develop Military Industry 
+	focus = { 
+	id = developmilitaryindustry 
+	icon = GFX_goal_generic_construct_mil_factory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =32 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = civilianindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+ } 
+ }#Focus for Industrial Revolution 
+	focus = { 
+	id = industrialrevolution 
+	icon = GFX_goal_continuous_non_factory_construct 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =34 
+ y =1 
+ mutually_exclusive = { focus = agriculturalsociety} 
+ prerequisite = { focus = focusonindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Focus on Construction 
+	focus = { 
+	id = focusonconstruction 
+	icon = GFX_goal_generic_air_production 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =36 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = industrialrevolution} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_construction days = 730 }
+ } 
+ }#Focus for City Growth 
+	focus = { 
+	id = citygrowth 
+	icon = GFX_focus_generic_self_management 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =36 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = focusonconstruction} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_industry add_idea = germin_industry1 }
+ } 
+ }#Focus for German Working Spirit 
+	focus = { 
+	id = germanworkingspirit 
+	icon = GFX_focus_generic_the_giant_wakes 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =36 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = citygrowth} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_industry1 add_idea = germin_industry2 }
+ } 
+ }#Focus for Professional Army 
+	focus = { 
+	id = professionalarmy 
+	icon = GFX_focus_generic_commonwealth_build_infantry 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =34 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = industrialrevolution} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	army_experience = 50
+ } 
+ }#Focus for Work Safety Laws 
+	focus = { 
+	id = worksafetylaws 
+	icon = GFX_focus_generic_concessions 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =34 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = professionalarmy} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_manpower = 5000
+ } 
+ }#Focus for Military Society 
+	focus = { 
+	id = militarysociety 
+	icon = GFX_focus_generic_license_production 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =34 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = worksafetylaws} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = -0.05
+ } 
+ }#Focus for Progress by Force 
+	focus = { 
+	id = progressbyforce 
+	icon = GFX_goal_demand_sudetenland 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =35 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = germanworkingspirit} 
+  prerequisite = { focus =militarysociety} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	swap_ideas = { remove_idea = germin_industry2 add_idea = germin_industry3 }
+ } 
+ }#Focus for War with France 
+	focus = { 
+	id = warwithfrance 
+	icon = GFX_goal_generic_forceful_treaty 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = armyconstructioncorps} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	declare_war_on = { target = FRA type = annex_everything }
+ } 
+ }#Focus for Army Reform 
+	focus = { 
+	id = armyreform 
+	icon = GFX_goal_generic_allies_build_infantry 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 50
+	army_experience = 15
+ } 
+ }#Focus for Landskasernen 
+	focus = { 
+	id = landskasernen 
+	icon = GFX_goal_generic_production2 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = armyreform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_timed_idea = { idea = germin_kaserne days = 3650 }
+ } 
+ }#Focus for Offiziersstab 
+	focus = { 
+	id = offiziersstab 
+	icon = GFX_goal_anschluss 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = armyreform} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	army_experience = 40
+	navy_experience = 20
+ } 
+ }#Focus for Military Infrastructure 
+	focus = { 
+	id = militaryinfrastructure 
+	icon = GFX_goal_generic_construct_civilian 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = landskasernen} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 100
+ } 
+ }#Focus for Centralized Command 
+	focus = { 
+	id = centralizedcommand 
+	icon = GFX_goal_generic_army_doctrines 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = offiziersstab} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_staff
+ } 
+ }#Focus for Improved Tactics 
+	focus = { 
+	id = improvedtactics 
+	icon = GFX_goal_continuous_reduce_training_time 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =13 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = centralizedcommand} 
+  prerequisite = { focus =militaryinfrastructure} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	army_experience = 20
+ } 
+ }#Focus for Army of Quantity 
+	focus = { 
+	id = armyofquantity 
+	icon = GFX_focus_generic_little_entente 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =4 
+ mutually_exclusive = { focus = armyofquality} 
+ prerequisite = { focus = improvedtactics} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_quantity
+ } 
+ }#Focus for Army of Quality 
+	focus = { 
+	id = armyofquality 
+	icon = GFX_goal_continuous_increase_nu 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =12 
+ y =4 
+ mutually_exclusive = { focus = armyofquantity} 
+ prerequisite = { focus = improvedtactics} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_ideas = germin_quality
+ } 
+ }#Focus for Increased Conscription 
+	focus = { 
+	id = increasedconscription 
+	icon = GFX_goal_generic_radar 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =13 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = armyofquality  focus = armyofquantity} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_manpower = 10000
+ } 
+ }#Focus for We are prepared 
+	focus = { 
+	id = weareprepared 
+	icon = GFX_goal_generic_major_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = readyourpopulace} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }#Focus for A new age 
+	focus = { 
+	id = anewage 
+	icon = GFX_goal_generic_major_alliance 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =20 
+ y =9 
+ mutually_exclusive = { } 
+ prerequisite = { focus = weareprepared} 
+  prerequisite = { focus =increasedconscription} 
+  prerequisite = { focus =developmilitaryindustry} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#End of focuses 
+}

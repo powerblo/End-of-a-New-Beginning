@@ -1,0 +1,256 @@
+ideas = {
+
+	country = {
+		germin_PRScoop = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		germin_standard = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				equipment_conversion_speed = 0.1
+			}
+		}
+		germin_warplan = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.05
+				max_planning = 0.2
+			}
+		}
+		germin_popready = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		germin_armybuilder = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		germin_agriculture = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+		germin_popgrow = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		germin_agriculture1 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+		germin_agriculture2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				industrial_capacity_factory = -0.05
+				global_building_slots_factor = 0.10
+			}
+		}
+		germin_agriculture3 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				global_building_slots_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+		germin_officerschool = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_level = 1
+				military_leader_cost_factor = -0.25
+			}
+		}
+		germin_construction = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		germin_industry = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.05
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		germin_industry1 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		germin_industry2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.15
+				MONTHLY_POPULATION = -0.1
+				local_resources_factor = 0.10
+			}
+		}
+		germin_industry3 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.12
+				MONTHLY_POPULATION = -0.05
+				local_resources_factor = 0.10
+			}
+		}
+		germin_kaserne = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.1
+			}
+		}
+		germin_staff = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org = 5
+			}
+		}
+		germin_quality = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.2
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				max_planning = 0.25
+				army_org_factor = 0.1
+			}
+		}
+		germin_quantity = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+				army_org_factor = -0.1
+			}
+		}
+	}
+
+
+}
