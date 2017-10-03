@@ -115,19 +115,6 @@ ideas = {
       }
     }
 
-
-    #stops radical policies, will be replaced with law
-    constitution = {
-      allowed = {
-        always = yes
-      }
-
-      removal_cost = -1
-
-      modifier = {
-      }
-    }
-
     #allows for events to happen within monarchy
     monarch_destabilisation = {
       allowed = {
@@ -185,6 +172,45 @@ ideas = {
     random_growth = {
 
     }
+
+    empire = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        justify_war_goal_time = -0.25
+        conscription = 0.05
+        unity_factor = 0.05
+        political_power_factor = 0.1
+      }
+    }
+
+    absolutist = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+        justify_war_goal_time = -0.3
+        conscription = 0.1
+        unity_factor = -0.1
+        political_power_factor = 0.15s
+      }
+    }
+
+    colonial = {
+      allowed = {
+        always = yes
+      }
+
+      removal_cost = -1
+    }
+
 
   }
 

@@ -1,0 +1,87 @@
+add_namespace = c0_monarchy
+
+#9 : Getting heir chain
+#Two choices : a young new heir from family, someone capable that isn't from family, someone from family(only if has heir)
+
+country_event = {
+  id = c0_monarchy.9
+  title = c0_monarchy.9.t
+  desc = c0_monarchy.9.d
+
+  #Young new heir
+  option = {
+    name = c0_monarchy.9.a
+    if = {
+      limit = {has_idea = no_heir}
+      remove_ideas = no_heir
+    }
+    if = {
+      limit = {has_idea = has_heir}
+      remove_ideas = has_heir
+      country_event = {id = c0_monarchy.10 days = 1}
+    }
+    hidden = {
+      country_event = {id = c0_monarchy.11 days = 10}
+    }
+    add_ideas = weak_heir
+  }
+
+  #Confirm succession of original heir
+  option = {
+    name = c0_monarchy.9.b
+    if = {
+      limit = {has_idea = no_heir}
+      remove_ideas = no_heir
+    }
+    trigger = {
+      has_idea = has_heir
+    }
+  }
+
+  option = {
+    name = c0_monarchy.9.c
+    hidden = {
+      add_ideas = nonfamily_heir
+      country_event = {id = c0_monarchy.10 days = 1}
+    }
+  }
+}
+
+#Current heir gets dethroned
+country_event = {
+  id = c0_monarchy.10
+  title = c0_monarchy.10.t
+  desc = c0_monarchy.10.d
+
+  immediate = {
+    add_political_power = -100
+    hidden = {
+      add_ideas = dethroned_heir
+    }
+  }
+
+  option = {
+    name = c0_monarchy.10.a
+  }
+}
+
+#Coronation of Heir
+country_event = {
+  id = c0_monarchy.11
+  title = c0_monarchy.11.t
+  desc = c0_monarchy.11.d
+
+  immediate = {
+    add_political_power = 50
+  }
+
+  option = {
+    name = c0_monarchy.11.a
+  }
+}
+
+#8 : Succession event chain
+#Trigger : when original leader dies
+#If has the flag "no_heir" starts chain of events for peril
+
+#If has the flag "weak_heir"

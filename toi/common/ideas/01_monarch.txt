@@ -1,0 +1,30 @@
+ideas = {
+  country = {
+    no_heir = {
+      allowed = {
+        always = yes
+      }
+    }
+
+    weak_heir = {
+      allowed = {
+        always = yes
+      }
+
+      modifier = {
+        unity_factor = -0.1
+      }
+    }
+
+    nonfamily_heir = {
+      allowed = {
+        always = yes
+      }
+
+      modifier = {
+        unity_factor = -0.15
+        political_power_factor = -0.25
+      }
+    }
+  }
+}

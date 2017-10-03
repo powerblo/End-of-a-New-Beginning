@@ -72,7 +72,6 @@ default = no
   available_if_capitulated = yes  
  completion_reward = { 
 	declare_war_on = { target = LVN type = annex_everything }
-	PIE = { country_event = itauni.9 }
  } 
  }#Focus for Add Milan to the Kingdom 
 	focus = { 
@@ -223,5 +222,283 @@ default = no
  completion_reward = { 
 	PIE = { country_event = itauni.18 }
  } 
- }#End of focuses 
-}
+ }#Focus
+#Focus for Unite the Peninsula 
+	focus = { 
+	id = unitethepeninsula 
+	icon = GFX_goal_tripartite_pact 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { focus = unityatlast } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 150
+ } 
+ }#Focus for Help Austria for Venice 
+	focus = { 
+	id = helpaustriaforvenice 
+	icon = GFX_goal_generic_position_armies 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = unitethepeninsula} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	give_guarantee = AUS
+	PIE = { transfer_state = 159 }
+ } 
+ }#Focus for Wait for a good opportunity... 
+	focus = { 
+	id = waitforagoodopportunity 
+	icon = GFX_goal_generic_secret_weapon 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = unitethepeninsula} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_state_claim = 159
+ } 
+ }#Focus for Ask Prussia for Help 
+	focus = { 
+	id = askprussiaforhelp 
+	icon = GFX_goal_tfv_sever_ties_with_uk 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = unitethepeninsula} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	give_guarantee = PRS
+	PIE = { transfer_state = 159 }
+ } 
+ }#Focus for The French in Italy 
+	focus = { 
+	id = thefrenchinitaly 
+	icon = GFX_goal_generic_neutrality_focus 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = askprussiaforhelp  focus = waitforagoodopportunity  focus = helpaustriaforvenice} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 50
+ } 
+ }#Focus for Distance from France 
+	focus = { 
+	id = distancefromfrance 
+	icon = GFX_goal_generic_wolf_pack 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =24 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thefrenchinitaly} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for Work with France 
+	focus = { 
+	id = workwithfrance 
+	icon = GFX_goal_continuous_increase_nu 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =28 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thefrenchinitaly} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  
+ } 
+ }#Focus for The pope stands alone 
+	focus = { 
+	id = thepopestandsalone 
+	icon = GFX_focus_rom_handle_king 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = workwithfrance  focus = distancefromfrance} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_state_claim = 2
+ } 
+ }#Focus for War for Rome 
+	focus = { 
+	id = warforrome 
+	icon = GFX_focus_secret_rearmament 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thepopestandsalone} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	declare_war_on = { target = PAP type = annex_everything }
+ } 
+ }#Focus for A new Capital 
+	focus = { 
+	id = anewcapital 
+	icon = GFX_focus_rom_royal_dictatorship 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = warforrome} 
+ available = { 2 = { is_owned_by = PIE } } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	set_capital = 2
+ } 
+ }#Focus for Claims from Austria 
+	focus = { 
+	id = claimsfromaustria 
+	icon = GFX_focus_renounce_the_treaty_of_triannon 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = anewcapital} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_state_claim = 39
+	add_state_claim = 736
+ } 
+ }#Focus for Mediterranian Claims 
+	focus = { 
+	id = mediterranianclaims 
+	icon = GFX_goal_generic_alliance 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =26 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = claimsfromaustria} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_state_claim = 1
+	add_state_claim = 116
+ } 
+ }
+ #Focus for Garibaldis March 
+	focus = { 
+	id = garibaldismarch 
+	icon = GFX_goal_rhineland 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = addmilantothekingdom } 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_political_power = 100
+ } 
+ }#Focus for Fight Sicily 
+	focus = { 
+	id = fightsicily 
+	icon = GFX_goal_generic_major_war 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =14 
+ y =5 
+ mutually_exclusive = { focus = integratesicily} 
+ prerequisite = { focus = garibaldismarch} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	declare_war_on = { target = NSC type = annex_everything }
+ } 
+ }#Focus for Integrate Sicily 
+	focus = { 
+	id = integratesicily 
+	icon = GFX_goal_generic_more_territorial_claims 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =5 
+ mutually_exclusive = { focus = fightsicily} 
+ prerequisite = { focus = garibaldismarch} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	puppet = NSC
+ } 
+ }#Focus for Add Sicily to our nation 
+	focus = { 
+	id = addsicilytoournation 
+	icon = GFX_goal_generic_demand_territory 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = integratesicily} 
+ available = { NSC = { is_puppet_of = PIE } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	annex_country = { target = NSC }
+ } 
+ }#Focus for Victory in the south! 
+	focus = { 
+	id = victoryinthesouth 
+	icon = GFX_goal_generic_allies_build_infantry 
+	bypass = {} 
+ ai_will_do = { factor = } 
+ x =16 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = addsicilytoournation  focus = fightsicily} 
+ available = {  } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+	add_national_unity = 0.05
+ } 
+ }
+ }
