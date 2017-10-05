@@ -1,13 +1,13 @@
-add_namespace = event_government
+add_namespace = c0_government
 
 #0s : Reformation events
 
 #3 : Event for starting reformation
 
 country_event = {
-    id = event_government.1
-    title = event_government.1.t
-    desc = event_government.1.d
+    id = c0_government.1
+    title = c0_government.1.t
+    desc = c0_government.1.d
 
     fire_only_once = yes
 
@@ -15,14 +15,14 @@ country_event = {
 
     #go through sudden reformation
     option = {
-      name = event_government.1.a
+      name = c0_government.1.a
       #go through event for sudden reformation
       #possibilities for riot
     }
 
     #slower reformation
     option = {
-      name = event_government.1.b
+      name = c0_government.1.b
       #go through event for slower reformation
       add_timed_idea = {id = reformation days = 100}
     }
@@ -50,6 +50,9 @@ country_event = {
       }
     }
   }
+  fire_only_once = yes
+
+  is_triggered_only = yes
   option = {
     name = c0_government.2.a
   }
@@ -67,6 +70,10 @@ country_event = {
   id = c0_government.3
   title = c0_government.3.t
   desc = c0_government.3.d
+
+  fire_only_once = yes
+
+  is_triggered_only = yes
   immediate = {
     add_ideas = parliament
   }
@@ -97,6 +104,10 @@ country_event = {
   title = c0_government.4.t
   desc = c0_government.4.d
 
+  fire_only_once = yes
+
+  is_triggered_only = yes
+
   #
   option = {
     name = c0_government.4.a
@@ -119,6 +130,10 @@ country_event = {
   id = c0_government.10
   title = c0_government.10.t
   desc = c0_government.10.d
+
+  fire_only_once = yes
+
+  is_triggered_only = yes
 
   option = {
     name = c0_government.10.a
