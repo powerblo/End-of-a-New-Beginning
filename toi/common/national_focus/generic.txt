@@ -11,7 +11,7 @@ default = yes
 	id = questioningthestatusquo
 	icon = GFX_goal_generic_propaganda
 	bypass = {}
- ai_will_do = { factor = }
+ ai_will_do = { factor =  }
  x =20
  y =0
  mutually_exclusive = { }
@@ -20,14 +20,14 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Reform
 	focus = {
 	id = reform
 	icon = GFX_goal_generic_neutrality_focus
 	bypass = {}
- ai_will_do = { factor = }
+ ai_will_do = {
+  }
  x =20
  y =1
  mutually_exclusive = { }
@@ -36,7 +36,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Argument of Tradition
 	focus = {
@@ -52,7 +51,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+	add_political_power = 50
  }
  }#Focus for Establish a Parliament
 	focus = {
@@ -84,7 +83,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+		add_political_power = 50
  }
  }#Focus for Remain a Monarchy
 	focus = {
@@ -100,7 +99,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Strengthen Regime
 	focus = {
@@ -115,7 +113,9 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+		#add political power
+		add_political_power = 50
+		#add stability modifiers
  }
  }#Focus for Solidify Heredity
 	focus = {
@@ -131,7 +131,8 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+		#add political power
+		add_political_power = 25
  }
  }#Focus for Solidify Claims
 	focus = {
@@ -147,7 +148,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+		#add claims on every owned state
  }
  }#Focus for Introduce Electoral Parties
 	focus = {
@@ -163,7 +164,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Centralised Rule
 	focus = {
@@ -179,7 +179,7 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
+	add_political_power = 50
  }
  }#Focus for Outward Expansion
 	focus = {
@@ -195,7 +195,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Indirect Integration
 	focus = {
@@ -211,7 +210,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Establish an Empire
 	focus = {
@@ -223,11 +221,10 @@ default = yes
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = outwardexpansion  focus = indirectintegration}
- available = {  }
+ available = { any_owned_state = { NOT = {is_claimed_by = TAG}} }
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Repel Democracy
 	focus = {
@@ -243,7 +240,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Cede Power to the Prime Minister
 	focus = {
@@ -276,7 +272,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Colonial Ambitions
 	focus = {
@@ -292,7 +287,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Establish a Commonwealth
 	focus = {
@@ -324,7 +318,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-
  }
  }#Focus for Reformation of the Military
 	focus = {
@@ -484,7 +477,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	country_event = { days = 1 id = focus.2 }
  }
  }#Focus for Invest in Serfdom
 	focus = {
@@ -500,7 +492,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_ideas = serfdom_invest
  }
  }#Focus for Embrace Industrialisation
 	focus = {
@@ -517,7 +508,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	country_event = { days = 1 id = focus.3 }
  }
  }#Focus for Increase Production
 	focus = {
@@ -981,7 +971,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_tech_bonus = { bonus = 0.3 uses = 3 category = industry_tech }
  }
  }#Focus for Electrification
 	focus = {
@@ -997,7 +986,6 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_tech_bonus = { bonus = 0.3 uses = 3 category = electricity_tech }
  }
  }#End of focuses
 }
