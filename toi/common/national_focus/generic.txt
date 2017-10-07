@@ -11,7 +11,7 @@ default = yes
 	id = questioningthestatusquo
 	icon = GFX_goal_generic_propaganda
 	bypass = {}
- ai_will_do = { factor =  }
+ ai_will_do = { factor = }
  x =20
  y =0
  mutually_exclusive = { }
@@ -20,31 +20,14 @@ default = yes
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	country_event = {id = c0_government.2 days = 1}
+
  }
  }#Focus for Reform
 	focus = {
 	id = reform
 	icon = GFX_goal_generic_neutrality_focus
 	bypass = {}
- ai_will_do = { factor = 0.5
- modifier = {
- 	factor = 2
-	OR = {
-		has_government = traditional_conservatism
-		has_government = market_liberalism
-		has_government = social_democracy
-	}
- }
-modifier = {
-	factor = 0.2
-	has_government = despotic_autocracy
-}
-modifier = {
-	factor = 10
-	has_idea = demand_reform
-}
-  }
+ ai_will_do = { factor = }
  x =20
  y =1
  mutually_exclusive = { }
@@ -53,7 +36,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	country_event = {id = c0_government.1 days = 1}
+
  }
  }#Focus for Argument of Tradition
 	focus = {
@@ -69,7 +52,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_political_power = 50
+
  }
  }#Focus for Establish a Parliament
 	focus = {
@@ -85,7 +68,6 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		country_event = {id = c0_government.3 days = 1}
 
  }
  }#Focus for Adopt a constitution
@@ -102,8 +84,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		add_political_power = 50
-		country_event = {id = c0_government.4 days = 1}
+
  }
  }#Focus for Remain a Monarchy
 	focus = {
@@ -119,7 +100,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_popularity = {ideology = despotic_autocracy popularity = 0.1}
+
  }
  }#Focus for Strengthen Regime
 	focus = {
@@ -134,9 +115,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		#add political power
-		add_political_power = 50
-		#add stability modifiers
+
  }
  }#Focus for Solidify Heredity
 	focus = {
@@ -152,10 +131,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		#add political power
-		add_political_power = 25
 
-		country_event = {id = c0_monarchy.9 days = 1}
  }
  }#Focus for Solidify Claims
 	focus = {
@@ -171,8 +147,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		#add claims on every owned state
-		add_state_claim = {every_owned_state}
+
  }
  }#Focus for Introduce Electoral Parties
 	focus = {
@@ -188,10 +163,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		show_ideas_tooltip = {add_ideas = random_growth}
-		hidden = {
-			random_list = {33 = {add_ideas = social_growth} 34 = {add_ideas = liberal_growth} 33 = {add_ideas = conserv_growth}}
-		}
+
  }
  }#Focus for Centralised Rule
 	focus = {
@@ -207,9 +179,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-	add_political_power = 50
-	add_national_unity = 0.05
-	add_ideas = centralised_rule
+
  }
  }#Focus for Outward Expansion
 	focus = {
@@ -225,9 +195,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
- create_wargoal = {type = annex_everything target = random_neighbor_country}
- create_wargoal = {type = annex_everything target = random_neighbor_country}
- create_wargoal = {type = annex_everything target = random_neighbor_country}
+
  }
  }#Focus for Indirect Integration
 	focus = {
@@ -243,9 +211,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
- create_wargoal = {type = puppet target = random_neighbor_country}
- create_wargoal = {type = puppet target = random_neighbor_country}
- create_wargoal = {type = puppet target = random_neighbor_country}
+
  }
  }#Focus for Establish an Empire
 	focus = {
@@ -257,12 +223,11 @@ modifier = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = outwardexpansion  focus = indirectintegration}
- available = { any_owned_state = { NOT = {is_claimed_by = TAG}} }
+ available = {  }
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		add_ideas = empire
-		set_major = yes
+
  }
  }#Focus for Repel Democracy
 	focus = {
@@ -278,17 +243,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		add_popularity = {ideology = despotic_autocracy popularity = -30}
-		add_ideas = democratic_oppression
-		if = {
-			limit = { OR = {
-				traditional_conservatism > 0.3
-				market_liberalism > 0.3
-				social_democracy > 0.3
-			}
-			add_ideas = democratic_unrest
-			}
-		}
+
  }
  }#Focus for Cede Power to the Prime Minister
 	focus = {
@@ -321,7 +276,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		swap_ideas = {remove_idea = empire add_idea = absolutist}
+
  }
  }#Focus for Colonial Ambitions
 	focus = {
@@ -337,7 +292,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		add_ideas = colonial
+
  }
  }#Focus for Establish a Commonwealth
 	focus = {
@@ -369,7 +324,7 @@ modifier = {
  cost = 10
   available_if_capitulated = yes
  completion_reward = {
-		land_xp = 40
+
  }
  }#Focus for Reformation of the Military
 	focus = {
