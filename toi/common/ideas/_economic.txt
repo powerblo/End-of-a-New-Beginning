@@ -90,7 +90,15 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.05
-				}			
+				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}	
 			}
 			
 			cost = 150
@@ -106,10 +114,10 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 2
 
    				modifier = {
-					factor = 2
+					factor = 20
 					
 					is_major = yes
 				}
@@ -124,7 +132,18 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.15
-				}			
+				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					OR = {
+						has_completed_focus = HUN_secret_rearmament
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
+				}
 			}
 
 			cost = 150
@@ -140,10 +159,10 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 2
 
    				modifier = {
-					factor = 2
+					factor = 20
 					
 					is_major = yes
 				}
@@ -168,7 +187,15 @@ ideas = {
 							}
 						}
 					}
-				}			
+				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}		
 			}
 		
 			cost = 150
@@ -184,12 +211,12 @@ ideas = {
 			cancel_if_invalid = no
 			
 			ai_will_do = {
-   				factor = 1
+   				factor = 5
 
-   				modifier = {
-					factor = 40
-					
-					is_major = yes
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
 				}
    			}
 		}
@@ -206,7 +233,41 @@ ideas = {
 						ratio > 0.5
 					}
 				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
 			}
+
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory >  10000
+				}
+
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  3000
+				}
+
+				
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}				
+   			}
 			
 			cost = 150
 			removal_cost = -1
@@ -228,25 +289,7 @@ ideas = {
 
 		free_trade = {
 			
-			available = {
-				NOT = {
-					if = {
-						limit = {
-							original_tag = USA
-						}
-						has_completed_focus = national_treasury_reform
-					}
-				}
-				CSA = {
-					NOT = {
-						if = {
-							has_global_flag = anaconda_plan
-						}
-					}
-				}
-			}
-		
-
+			
 			cost = 150
 			removal_cost = -1
 			
@@ -263,24 +306,7 @@ ideas = {
 		
 		export_focus = {
 			
-			available = {
-				NOT = {
-					if = {
-						limit = {
-							original_tag = USA
-						}
-						has_completed_focus = national_treasury_reform
-					}
-				}
-				CSA = {
-					NOT = {
-						if = {
-							has_global_flag = anaconda_plan
-						}
-					}
-				}
-			}
-
+			
 			cost = 150
 			removal_cost = -1
 			
@@ -321,25 +347,7 @@ ideas = {
 						}
 					}
 				}
-
-				NOT = {
-					if = {
-						limit = {
-							original_tag = USA
-						}
-						has_completed_focus = national_treasury_reform
-					}
-				}
-
-				CSA = {
-					NOT = {
-						if = {
-							has_global_flag = anaconda_plan
-						}
-					}
-				}
 			}
-
 		
 			cost = 150
 			removal_cost = -1
@@ -351,7 +359,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				research_time_factor = -0.01
 			}
-		
+			
 			cancel_if_invalid = no
 
 			ai_will_do = {
@@ -371,15 +379,6 @@ ideas = {
 			
 			
 			available = {
-				NOT = {
-					if = {
-						limit = {
-							original_tag = USA
-						}
-						has_completed_focus = national_treasury_reform
-					}
-				}
-	
 				has_war = yes
 				OR = { 
 					has_government = fascism
