@@ -1,0 +1,79 @@
+focus_tree ={
+  id = ft_00_generic_focus
+
+  country = {
+    factor = 1
+  }
+
+  default = yes
+
+  focus = {
+    id = generic_questioning
+    icon = GFX_goal_generic_propaganda
+
+    #bypass = {
+    #
+    #}
+
+    available_if_capitulated = yes
+
+    #ai_will_do = {
+    #  factor = {
+	#
+    #  }
+    #}
+
+    x = 20
+    y = 0
+
+    #mutually_exclusive = {}
+
+    #prerequisite = {}
+
+    #available = {
+    #Low stability or high political power
+    #}
+
+    cost = 10
+
+    completion_reward = {
+      country_event = {days = 1 id = c0_government.1}
+    }
+
+  }
+
+  focus = {
+    id = generic_reform
+    icon = GFX_goal_generic_neutrality_focus
+
+    #bypass = {
+    #
+    #}
+
+    available_if_capitulated = yes
+
+    #ai_will_do = {
+    #  factor = {
+	#
+    #  }
+    #}
+
+    x = 20
+    y = 1
+
+    #mutually_exclusive = {}
+
+    prerequisite = { focus = generic_questioning }
+
+    #available = {
+    #
+    #}
+
+    cost = 10
+
+    completion_reward = {
+      country_event = { days = 1 id = c0_government.3}
+    }
+
+  }
+}
