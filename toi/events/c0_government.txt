@@ -15,6 +15,9 @@ country_event = {
   immediate = {
     add_political_power = 50
   }
+
+  fire_only_once = yes
+  
   desc = {
     text = c0_government.1.desc.d
     trigger = {
@@ -94,6 +97,7 @@ country_event = {
       remove_country_flag = questionthestatusquob
       remove_country_flag = questionthestatusquoc
       set_country_flag = quickreform
+      set_country_flag = reformdev1
     }
   }
 
@@ -104,6 +108,7 @@ country_event = {
       remove_country_flag = questionthestatusquob
       remove_country_flag = questionthestatusquoc
       set_country_flag = mediumreform
+      set_country_flag = reformdev1
     }
   }
 
@@ -114,16 +119,81 @@ country_event = {
       remove_country_flag = questionthestatusquob
       remove_country_flag = questionthestatusquoc
       set_country_flag = slowreform
+      set_country_flag = reformdev1
     }
   }
 
 
 }
 
+#First dev event for reformation
+
 country_event = {
   id = c0_government.4
   title = c0_government.4.t
-  desc = c0_government.4.d
+  desc = c0_government.4.desc
 
+  trigger = {
+    has_country_flag = reformdev1
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 100
+    modifier = {
+      factor = 0.1
+      has_country_flag = quickreform
+    }
+    modifier = {
+      factor = 2
+      has_country_flag = slowreform
+    }
+  }
+
+  immediate = {
+    hidden_effect = {
+      remove_country_flag = reformdev1
+      set_country_flag = reformdev2
+    }
+  }
+
+  option = {
+    name = c0_government.4.a
+    add_ideas = reformstable1
+  }
 
 }
+
+#Second event for dev reformation : caused by adapting at least one focus
+
+country_event = {
+  id = c0_government.5
+  title = c0_government.5.t
+  desc = c0_government.5.desc
+
+  trigger = {
+    OR = {
+      has_completed_focus = #
+    }
+  }
+
+  mean_time_to_happen = {
+    days = 30
+
+  }
+
+  fire_only_once = yes
+
+  option = {
+    name = c0_government.5.a
+  }
+
+  option = {
+    name = c0_government.5.b
+  }
+}
+
+#Third event for dev reformation : caused by adapting all reformation focuses - decline of destability
+
+#Event for reforming each category
