@@ -76,4 +76,38 @@ focus_tree ={
     }
 
   }
+
+  focus = {
+    id = generic_argutrad
+    icon =
+
+    #bypass = {
+    #
+    #}
+
+    available_if_capitulated = yes
+
+    ai_will_do = {
+      factor = {
+
+      }
+    }
+
+    x = 27
+    y = 2
+
+    #mutually_exclusive = {}
+
+    prerequisite = { focus = generic_reform }
+
+    #available = {
+    #
+    #}
+
+    cost = 10
+
+    completion_reward = {
+      add_political_power = 100
+    }
+  }
 }

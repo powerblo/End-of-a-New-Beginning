@@ -622,10 +622,6 @@ guiTypes = {
 			verticalScrollbar = "right_vertical_slider"
 			horizontalScrollbar = "bottom_horizontal_slider"
 
-			trigger = {
-				has_country_flag = develop_tank
-			}
-
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
@@ -1508,10 +1504,6 @@ guiTypes = {
 			drag_scroll = { left middle }
 			verticalScrollbar = "right_vertical_slider"
 			horizontalScrollbar = "bottom_horizontal_slider"
-
-			trigger = {
-				has_country_flag = develop_plane
-			}
 
 			background = {
 				name = "Background"
@@ -2947,10 +2939,6 @@ guiTypes = {
 			verticalScrollbar = "right_vertical_slider"
 			horizontalScrollbar = "bottom_horizontal_slider"
 
-			trigger = {
-				has_country_flag = develop_electronics
-			}
-
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
@@ -3337,9 +3325,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_armour_folder_tab"
 				frame = 1
 				clicksound = click_default
-				trigger = {
-					date > 1900.1.1.1
-				}
 			}
 
 			buttonType = {
@@ -3387,9 +3372,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
-				trigger = {
-					date > 1900.1.1.1
-				}
 			}
 
 			buttonType = {
@@ -3398,9 +3380,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_air_doctrine_folder_tab"
 				frame = 1
 				clicksound = click_default
-				trigger = {
-					date > 1900.1.1.1
-				}
 			}
 
 			buttonType = {
