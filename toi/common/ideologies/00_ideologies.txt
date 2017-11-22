@@ -1,4 +1,6 @@
 ideologies = {
+
+	#Liberalist side of Democracy
 	economic_liberalism = {
 
 		types = {
@@ -16,7 +18,7 @@ ideologies = {
 			}
 
 			market_liberal = {
-			
+
 			}
 		}
 
@@ -43,6 +45,7 @@ ideologies = {
 
 	}
 
+	#Conservatist side of democracy
 	traditional_conservatism = {
 
 		types = {
@@ -65,7 +68,7 @@ ideologies = {
 				conserv = {
 
 				}
-				
+
 				moderatism = {
 				}
 		}
@@ -93,6 +96,7 @@ ideologies = {
 
 	}
 
+	#Docile version of socialism
 	social_democracy = {
 
 		types = {
@@ -140,6 +144,7 @@ ideologies = {
 
 	}
 
+	#Radicalism
 	radical_socialism = {
 
 		types = {
@@ -190,6 +195,7 @@ ideologies = {
 
 	}
 
+	#Out of radicalism, ideologies that are especially marxist or leninist
 	marxism_leninism = {
 
 		types = {
@@ -238,6 +244,7 @@ ideologies = {
 
 	}
 
+	#All forms of traditional monarchies
 	despotic_autocracy = {
 
 		types = {
@@ -281,7 +288,7 @@ ideologies = {
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
 			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4a
+			join_faction_tension = 0.4
 			lend_lease_tension = 0.4
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
@@ -297,6 +304,7 @@ ideologies = {
 
 	}
 
+ 	#Oligarchies with principally different ideas to despotism
 	parliamental_oligarchy = {
 
 		types = {
@@ -336,7 +344,7 @@ ideologies = {
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
 			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4a
+			join_faction_tension = 0.4
 			lend_lease_tension = 0.4
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
@@ -352,6 +360,7 @@ ideologies = {
 
 	}
 
+	#
 	totalitarian_nationalism = {
 
 		types = {
@@ -368,8 +377,6 @@ ideologies = {
 			cleric_fascism = {
 			}
 
-			dictator = {
-			}
 		}
 
 		dynamic_faction_names = {
@@ -399,6 +406,7 @@ ideologies = {
 
 	}
 
+	#Any totalitarian ideas without heavy ideological alignment (usually slightly left-wing)
 	rexism_falangism = {
 
 		types = {
@@ -415,6 +423,10 @@ ideologies = {
 			}
 
 			social_fascism = {
+			}
+
+			dictator = {
+
 			}
 
 		}
@@ -446,6 +458,7 @@ ideologies = {
 
 	}
 
+	#Ideology entirely based on teachings of religion
 	theocracy = {
 
 		types = {
