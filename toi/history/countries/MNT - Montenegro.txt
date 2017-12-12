@@ -1,71 +1,122 @@
-﻿capital = 105 # Montenegro
+capital = 105
 
-oob = "MON_1936"
-
-set_research_slots = 3
-
-# Starting tech
-# clone of Yugoslavia
-set_technology = {
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	early_fighter = 1
-	gwtank = 1
-	basic_light_tank = 1
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	early_destroyer = 1 transport = 1
-	early_light_cruiser = 1
-	early_submarine = 1
-}
+oob = "MNT_1861"
 
 set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-	parties = {
-		totalitarian_nationalism = { 
-			popularity = 33
-		}
-		despotic_autocracy = { 
-			popularity = 33
-		}		
-		marxism_leninism = {
-			popularity = 34
-		}
-	}
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	rifle_equipment1 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
 }
 
 create_country_leader = {
-	name = "Sekula Drljević"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = fascism
-	traits = {
-		
-	}
+    name = "powerblo"
+    desc = "POLITICS_TEMP_DESC"
+    picture = ""
+    expire = 2000.09.10
+    ideology = despotism
+}
+
+1857.5.11 = {
+oob = "MNT_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
 }
 
 create_country_leader = {
-	name = "Novica Radović"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = oligarchism
-	traits = {
-		
-	}
+    name = "powerblo"
+    desc = "POLITICS_TEMP_DESC"
+    picture = ""
+    expire = 2000.09.10
+    ideology = despotism
 }
-
-create_country_leader = {
-	name = "Blažo Jovanović"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1953.3.1"
-	ideology = leninism
-	traits = {
-		
-	}
 }
-
-
