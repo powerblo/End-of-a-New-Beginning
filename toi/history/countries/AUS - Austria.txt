@@ -2,6 +2,8 @@
 
 oob = "AUS_1861"
 
+add_ideas = GER_confed_member
+
 set_politics = {
     parties = {
       economic_liberalism = {
@@ -70,6 +72,25 @@ create_country_leader = {
 
 1857.5.11 = {
 oob = "AUS_1857"
+
+create_faction = "German Confederation"
+add_to_faction = PRS
+add_to_faction = THU
+add_to_faction = WUR
+add_to_faction = SCH
+add_to_faction = SAX
+add_to_faction = OLD
+add_to_faction = MCK
+add_to_faction = HAN
+add_to_faction = BAV
+add_to_faction = BAD
+add_to_faction = HES
+add_to_faction = HSD
+add_to_faction = BRE
+add_to_faction = HAM
+add_to_faction = FRK
+
+add_ideas = GER_confed_member
 
 set_politics = {
     parties = {
@@ -190,28 +211,28 @@ create_navy_leader = {
   skill = 3
 }
 
-create_navy_leader = {
+create_navy_commander = {
   name = "Leopold Ludwig of Austria"
   picture = "Portrait_AUS_Leopold_Ludwig_of_Austria.dds"
   traits = { }
   skill = 3
 }
 
-create_navy_leader = {
+create_navy_commander = {
   name = "Ludwig von Fautz"
   picture = "Portrait_AUS_Ludwig_von_Fautz.dds"
   traits = { }
   skill = 3
 }
 
-create_navy_leader = {
+create_navy_commander = {
   name = "Maximilian Daublebsky von Sterneck"
   picture = "Portrait_AUS_Maximilian_Daublebsky_von_Sterneck.dds"
   traits = { }
   skill = 3
 }
 
-create_navy_leader = {
+create_navy_commander = {
   name = "Wilhelm von Tegetthoff"
   picture = "Portrait_AUS_Wilhelm_von_Tegetthoff.dds"
   traits = { }

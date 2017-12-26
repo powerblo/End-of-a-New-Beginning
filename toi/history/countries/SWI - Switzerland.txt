@@ -4,39 +4,39 @@ oob = "SWI_1861"
 
 set_politics = {
     parties = {
-		economic_liberalism = {
-			popularity = 10
-		}
-		traditional_conservatism = {
-			popularity = 5
-		}
-		social_democracy = {
-			popularity = 0
-		}
-		radical_socialism = {
-			popularity = 0
-		}
-		marxism_leninism = {
-			popularity = 0
-		}
-		despotic_autocracy = {
-			popularity = 0
-		}
-		parliamental_oligarchy = {
-			popularity = 85
-		}
-		totalitarian_nationalism = {
-			popularity = 0
-		}
-		rexism_falangism = {
-			popularity = 0
-		}
-		theocracy = {
-			popularity = 0
-		}
-	}
+      economic_liberalism = {
+        popularity = 45
+      }
+      traditional_conservatism = {
+        popularity = 40
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 15
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
 
-	ruling_party = parliamental_oligarchy
+	ruling_party = economic_liberalism
 }
 
 set_technology = {
@@ -58,13 +58,6 @@ set_technology = {
 	early_destroyer = 1 transport = 1
 }
 
-create_country_leader = {
-    name = "placeholder"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_SWE_Charles_XV.dds"
-    expire = 1900.1.1
-    ideology = despotism
-}
 
 1857.5.11 = {
 oob = "SWI_1857"
@@ -72,10 +65,10 @@ oob = "SWI_1857"
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 10
+        popularity = 45
       }
       traditional_conservatism = {
-        popularity = 5
+        popularity = 40
       }
       social_democracy = {
         popularity = 0
@@ -90,7 +83,7 @@ set_politics = {
         popularity = 0
       }
       parliamental_oligarchy = {
-        popularity = 85
+        popularity = 15
       }
       totalitarian_nationalism = {
         popularity = 0
@@ -103,7 +96,7 @@ set_politics = {
       }
     }
 
-	ruling_party = parliamental_oligarchy
+	ruling_party = economic_liberalism
 }
 
 set_technology = {
@@ -114,10 +107,10 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "placeholder"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_SWE_Charles_XV.dds"
-    expire = 1900.1.1
-    ideology = despotism
-}
+  name = "Constant Fornerod"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Portrait_SWI_Constant_Fornerod.dds"
+  expire = "1858.1.1"
+  ideology = social_liberal
+  traits = { }
 }

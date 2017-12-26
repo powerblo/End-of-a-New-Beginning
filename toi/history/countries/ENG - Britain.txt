@@ -3,6 +3,10 @@
 1857.5.11 = {
 	oob = "ENG_1857"
 
+	add_ideas = ENG_victoria
+	add_ideas = ENG_palmerston_policy
+	add_ideas = ENG_pax_britannica
+
 	if = {
 		limit = {
 			has_dlc = "Together for Victory"
@@ -62,6 +66,16 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
+		set_autonomy = {
+			target = HYD
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = TCS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
 		else = {
 			puppet = RAJ
 		}
@@ -70,7 +84,7 @@
 	#Whig/Liberal
 	create_country_leader = {
 		name = "Lord Palmerston"
-		picture = "Lord_Palmerston.dds"
+		picture = "Portrait_ENG_Lord_Palmerston.dds"
 		expire = "1858.2.19"
 		ideology = market_liberal
 	}

@@ -1,8 +1,27 @@
-﻿capital = 16
+﻿capital = 814
 
 oob = "FRA_1861"
 
 set_convoys = 150
+
+add_ideas = FRA_unprepared_army
+add_ideas = FRA_censorship
+add_ideas = FRA_discomptent_politicians
+add_ideas = FRA_unsatisfied_people
+
+if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = GBS
+      autonomous_state = autonomy_colony
+      freedom_level = 0.01
+    }
+    else = {
+      puppet = GBS
+    }
+  }
 
 set_politics = {
     parties = {
@@ -64,7 +83,7 @@ set_technology = {
 create_country_leader = {
 	name = "Auguste Blanqui"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Auguste_Blanqui.dds"
+	picture = "Portrait_FRA_Auguste_Blanqui.dds"
 	expire = "1865.1.1"
 	ideology = leninism
 	traits = { }
@@ -72,7 +91,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Louise Michel"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Louise_Michel.dds"
+  picture = "Portrait_FRA_Louise_Michel.dds"
   expire = "1865.1.1"
   ideology = anarchism
   traits = { }
@@ -81,7 +100,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Léon Gambetta"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Leon_Gambetta.dds"
+  picture = "Portrait_FRA_Leon_Gambetta.dds"
   expire = "1865.1.1"
   ideology = liberal_social
   traits = { }
@@ -90,7 +109,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Adolphe Thiers"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Adolphe_Thiers.dds"
+  picture = "Portrait_FRA_Adolphe_Thiers.dds"
   expire = "1865.1.1"
   ideology = social_liberal
   traits = { }
@@ -99,7 +118,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Patrice de Mac-Mahon"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Patrice_de_Mac_Mahon.dds"
+  picture = "Portrait_FRA_Patrice_de_Mac_Mahon.dds"
   expire = "1865.1.1"
   ideology = reactionary
   traits = { }
@@ -108,7 +127,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Henri V d'Artois"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Henri_V_Artois.dds"
+  picture = "Portrait_FRA_Henri_V_Artois.dds"
   expire = "1865.1.1"
   ideology = plutocracy
   traits = { }
@@ -117,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Napoleon III"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Napoleon_III.dds"
+  picture = "Portrait_FRA_Napoleon_III.dds"
   expire = "1865.1.1"
   ideology = absolutism
   traits = { }
@@ -126,7 +145,7 @@ create_country_leader = {
 create_country_leader = {
   name = "George Ernest Boulanger"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "George_Ernest_Boulanger.dds"
+  picture = "Portrait_FRA_George_Ernest_Boulanger.dds"
   expire = "1865.1.1"
   ideology = fascism
   traits = { }
@@ -135,7 +154,7 @@ create_country_leader = {
 create_country_leader = {
   name = "Édouard Drumont"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Edouard_Drumont.dds"
+  picture = "Portrait_FRA_Edouard_Drumont.dds"
   expire = "1865.1.1"
   ideology = rexism
   traits = { }
@@ -144,7 +163,7 @@ create_country_leader = {
 create_country_leader = {
   name = "François-Nicholas-Madeleine Morlot"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "François_Nicholas_Madeleine_Morlot.dds"
+  picture = "Portrait_FRA_François_Nicholas_Madeleine_Morlot.dds"
   expire = "1865.1.1"
   ideology = christian
   traits = { }
@@ -259,28 +278,28 @@ oob = "FRA_1857"
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 0
+        popularity = 13
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 17
       }
       social_democracy = {
-        popularity = 0
+        popularity = 1
       }
       radical_socialism = {
-        popularity = 0
+        popularity = 1
       }
       marxism_leninism = {
-        popularity = 0
+        popularity = 2
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 58
       }
       parliamental_oligarchy = {
-        popularity = 0
+        popularity = 7
       }
       totalitarian_nationalism = {
-        popularity = 0
+        popularity = 1
       }
       rexism_falangism = {
         popularity = 0

@@ -2,6 +2,26 @@
 
 oob = "OMA_1861"
 
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = MOM
+      autnomous_state = autonomy_colony
+      freedom_level = 0.1
+    }
+    set_autonomy = {
+      target = ZAN
+      autnomous_state = autonomy_dominion
+      freedom_level = 0.1
+    }
+    else = {
+      puppet = MOM
+      puppet = ZAN
+    }
+  }
+
 set_politics = {
     parties = {
       economic_liberalism = {
