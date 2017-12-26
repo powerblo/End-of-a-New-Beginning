@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
   name = "Asian Infantry"
 
   regiments = {
@@ -6,27 +6,4 @@ division_template = {
     light_infantry = { x = 1 y = 0}
 	light_infantry = { x = 2 y = 0]
   }
-}
-
-units = {
-		#Capital
-		division= {
-			name = "1st Vietnamese Infantry"
-			location = 4075
-			division_template = "Asian Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "2nd Vietnamese Infantry"
-			location = 4075
-			division_template = "Asian Infantry"
-			start_experience_factor = 0.1
-		}
-		#Scattered Divisions
-		division= {
-			name = "3rd Vietnamese Infantry"
-			location = 4401
-			division_template = "Asian Infantry"
-			start_experience_factor = 0.3
-		}
 }

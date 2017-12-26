@@ -1,4 +1,4 @@
-name="End of a New Beginning"
+﻿name="End of a New Beginning"
 path="mod/toi/"
 tags={
 	"Events"

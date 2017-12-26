@@ -90,14 +90,6 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.05
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}	
 			}
 			
@@ -132,17 +124,6 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.15
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					OR = {
-						has_completed_focus = HUN_secret_rearmament
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
 				}
 			}
 
@@ -187,15 +168,7 @@ ideas = {
 							}
 						}
 					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}		
+				}	
 			}
 		
 			cost = 150
@@ -232,14 +205,6 @@ ideas = {
 						tag = ROOT 
 						ratio > 0.5
 					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 			}
 

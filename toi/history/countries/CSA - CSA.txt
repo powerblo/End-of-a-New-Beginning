@@ -1,17 +1,10 @@
-capital = 367
+﻿capital = 367
 
 OOB = "CSA_1861"
 
 declare_war_on = {
 	target = USA
 	type = annex_everything
-}
-
-add_ideas = {
-	slavery_permitted
-	one_cause
-	nation_divided
-	allowed_slaves
 }
 
 # Starting tech
@@ -85,18 +78,10 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Thomas Jackson"
-	picture = "Portrait_CSA_Stonewall_Jackson.dds"
-	traits = { engineer logistics_magician }
-	skill = 5
-
-}
-
 create_corps_commander = {
 	name = "Albert Sidney Johnston"
 	picture = "Portrait_CSA_Albert_Johnson.dds"
-	traits = { desert_fox engineer }
+	traits = { desert_fox }
 	skill = 3
 }
 
@@ -110,7 +95,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Joseph Jonston"
 		picture = "Portrait_CSA_Joseph_Jonston.dds"
-	traits = { urban_assualt_specialist fort_buster }
+	traits = { urban_assault_specialist }
 	skill = 3
 }
 
