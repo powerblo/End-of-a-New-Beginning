@@ -4,17 +4,13 @@ country = {
 factor=1
 }
 default = yes
-#Custom focuses start here
-#Focus for No Focus Tree 
 		focus = { 
 		id = nofocustree 
 		icon = GFX_goal_generic_more_territorial_claims 
 		ai_will_do = { factor = 100 } 
  x =5 
  y =0 
- mutually_exclusive = { focus = } 
- prerequisite = { focus = } 
  cost = 10000  
   available_if_capitulated = yes  
- }#End of focuses 
+ }
 }
