@@ -552,7 +552,7 @@ guiTypes = {
 					name = "box"
 					position = { x = 10 y = 10 }
 					size = { width = 500 height = 1 }
-					slotsize = { width = 231 height = 75 }
+					slotsize = { width = 231 height = 100 }
 					max_slots_horizontal = 2
 					add_horizontal = yes
 					format = "UPPER_LEFT"
@@ -651,7 +651,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_selectable_idea_entry"
-		size = { width = 231 height = 74 }
+		size = { width = 231 height = 100 }
 		clipping = no
 			
 		background = {
@@ -662,7 +662,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 42 y = 42 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes
@@ -693,14 +693,14 @@ guiTypes = {
 			name = "traits_grid"
 			position = { x = 90 y = 28 }
 			size = { width = 231 height = 100%% }
-			slotsize = { width = 200 height = 15 }
+			slotsize = { width = 200 height = 37 }
 			add_horizontal = no
 			format = "UPPER_LEFT"
 		}
 		
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 80 y = 47 }
+			position = { x = -80 y = 69 }
 			font = "hoi_16mbs"
 			text = ""
 			maxWidth = 142
