@@ -89,11 +89,56 @@ country_event = {
 				hidden_effect = {
 					ENG = { end_puppet = BIK }
 					add_to_war = { targeted_alliance = SRS enemy = ENG }
+					SRS = { add_to_faction = BIK }
 				}
 		}
 		
 		option = {
 				name = sepoy.4.b
 				ai_chance = { factor = 20 }
+		}
+}
+
+#Event for Oudh to join the Sepoy Faction
+country_event = {
+		id = sepoy.5
+		title = sepoy.5.t
+		desc = sepoy.5.d
+		
+		fire_only_once = yes
+		
+		hidden = yes
+		
+		trigger = {
+				TAG = OUD
+				OUD = { has_war_with = ENG }
+				SRS = { has_war_with = ENG }
+		}
+		
+		option = {
+				name = sepoy.5.a
+				SRS = { add_to_faction = OUD }
+		}
+}
+
+#Event for Gwalior to join the Sepoy Faction
+country_event = {
+		id = sepoy.6
+		title = sepoy.6.t
+		desc = sepoy.6.d
+		
+		fire_only_once = yes
+		
+		hidden = yes
+		
+		trigger = {
+				TAG = GWA
+				GWA = { has_war_with = ENG }
+				SRS = { has_war_with = ENG }
+		}
+		
+		option = {
+				name = sepoy.6.a
+				SRS = { add_to_faction = GWA }
 		}
 }
