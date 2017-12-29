@@ -10,5 +10,54 @@ country_event = {
 		
 		option = {
 				name = sepoy.1.a
+				hidden_effect = {
+					OUD = { country_event = { days = 10 id = sepoy.2 } }
+					GWA = { country_event = { days = 10 id = sepoy.2 } }
+				}
+		}
+}
+
+#Oudh and Gwalior get asked to join the rebellion
+country_event = {
+		id = sepoy.2
+		title = sepoy.2.t
+		desc = sepoy.2.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sepoy.2.a
+				ai_chance = { factor = 80 }
+				add_political_power = 50
+				add_to_war = { targeted_alliance = SRS enemy = ENG }
+		}
+		
+		option = {
+				name = sepoy.2.b
+				ai_chance = { factor = 20 }
+				add_political_power = -50
+		}
+}
+
+#Civilians build Forts in Delhi and Lucknow
+country_event = {
+		id = sepoy.3
+		title = sepoy.3.t
+		desc = sepoy.3.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+				TAG = SRS
+				SRS = { has_war_with = ENG }
+				SRS = { controls_state = 438 }
+				SRS = { controls_state = 439 }
+				date > 1857.6.1
+		}
+		
+		option = {
+				name = sepoy.3.a
+				438 = { add_building_construction = { type = bunker province = 2086 level = 1 instant_build = yes } }
+				439 = { add_building_construction = { type = bunker province = 12137 level = 1 instant_build = yes } }
 		}
 }
