@@ -102,10 +102,55 @@ ideas = {
 				original_tag = SAF
 			}
 			
+			picture = #
+			
 			removal_cost = -1
 			
 			modifier = {
 				#
+			}
+		}
+		AI_Defensive = {
+			allowed = {
+				always = yes
+			}
+			
+			picture = FRA_fortification_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+		
+		AI_Aggressive = {
+			allowed = {
+				always = yes
+			}
+			
+			picture = FRA_army_of_aggression_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+		debug_weakarmy = {
+			allowed = {
+				always = yes
+			}
+			
+			picture = #
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -1
+				defence = -0.75
+				offence = -0.75
+				army_org_Factor = -0.75
 			}
 		}
 	}
