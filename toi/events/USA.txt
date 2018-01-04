@@ -1,1 +1,37 @@
-﻿
+﻿add_namespace = usa
+
+#Panic of 1857
+country_event = {
+		id = usa.1
+		title = usa.1.t
+		desc = usa.1.d
+		picture = GFX_report_event_generic_rally2
+		
+		fire_only_once = yes
+		
+		trigger = {
+				TAG = USA
+				date > 1857.9.1
+		}
+		
+		option = {
+				name = usa.1.a
+				add_timed_idea = { idea = USA_1857Panic days = 240 }
+				hidden_effect = { USA = { country_event = { days = 14 id = usa.2 } } }
+		}
+}
+
+#SS Central America crashes
+country_event = {
+		id = usa.2
+		title = usa.2.t
+		desc = usa.2.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.2.a
+				add_political_power = -100
+		}
+}
