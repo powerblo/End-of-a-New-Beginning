@@ -22,22 +22,22 @@ fivesix_frigate = 1
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 0
+        popularity = 70
       }
       traditional_conservatism = {
         popularity = 0
       }
       social_democracy = {
-        popularity = 0
+        popularity = 20
       }
       radical_socialism = {
-        popularity = 0
+        popularity = 3
       }
       marxism_leninism = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 7
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -53,7 +53,7 @@ set_politics = {
       }
     }
 
-    ruling_party = despotic_autocracy
+    ruling_party = economic_liberalism
 }
 
 create_country_leader = {
@@ -64,6 +64,39 @@ create_country_leader = {
   ideology = despotism
   traits = {
 
+  }
+}
+
+create_country_leader = {
+  name = "Camillo Cavour"
+  desc = "POLITICS_LEOPOLDO_O_DONNELL_Y_JORRIS_DESC"
+  picture = "Portrait_PIE_Camillo_Cavour.dds"
+  expire = "1965.1.1"
+  ideology = conserv_liberal
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Urbano Rattazzi"
+  desc = ""
+  picture = "Portrait_PIE_Urbano_Rattazzi.dds"
+  expire = "1965.1.1"
+  ideology = liberal_social
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Giuseppe Mazzini"
+  desc = ""
+  picture = ""
+  expire = "1965.1.1"
+  ideology = anarchism
+  traits = {
+    #
   }
 }
 

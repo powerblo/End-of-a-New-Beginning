@@ -68,7 +68,7 @@ set_politics = {
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 100
       }
       social_democracy = {
         popularity = 0
@@ -80,7 +80,7 @@ set_politics = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 0
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -96,7 +96,7 @@ set_politics = {
       }
     }
 
-	ruling_party = despotic_autocracy
+	ruling_party = traditional_conservatism
 }
 
 set_technology = {
@@ -107,9 +107,9 @@ set_technology = {
 }
 
 create_country_leader = {
-  name = "Otto von Bismarck"
+  name = "Otto Theodor von Manteuffel"
   desc = "POLITICS_OTTO_VON_BISMARCK_DESC"
-  picture = "Portrait_PRS_Otto_von_Bismarck.dds"
+  picture = "Portrait_PRS_Otto_Theodor_von_Manteuffel.dds"
   expire = "1900.1.1"
   ideology = conserv
   traits = {
@@ -122,7 +122,7 @@ create_country_leader = {
   desc = "POLITICS_RUDOLF_VON_BENNIGSEN_DESC"
   picture = "Portrait_PRS_Rudolf_von_Bennigsen.dds"
   expire = "1900.1.1"
-  ideology = conserv
+  ideology = conserv_liberal
   traits = {
 
   }
