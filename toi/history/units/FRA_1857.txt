@@ -49,19 +49,6 @@ division_template = {
 	}
 }
 
-division_template = {
-	name = "Régiment de Dragons"
-
-	regiments = {
-		dragoons = { x = 0 y = 0 }
-		dragoons = { x = 0 y = 1 }
-		dragoons = { x = 0 y = 2 }
-		dragoons = { x = 1 y = 0 }
-		dragoons = { x = 1 y = 1 }
-		dragoons = { x = 1 y = 2 }
-	}
-}
-
 ##### OOB #####
 units = {
 	##### Northern France Region #####
@@ -233,22 +220,6 @@ units = {
 		name = "16ème Régiments d'Infanterie"
 		location = 11506
 		division_template = "Régiments d'Infanterie" 	# Second line, reserve equipment
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.87
-
-	}
-	division= {
-		name = "3ème Régiment de Hussards"
-		location = 11506
-		division_template = "Régiment de Dragons"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.87
-
-	}
-	division= {
-		name = "5ème Régiment de Dragons"
-		location = 11506
-		division_template = "Régiment de Dragons"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.87
 

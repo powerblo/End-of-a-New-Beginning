@@ -76,22 +76,22 @@ oob = "SPR_1857"
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 0
+        popularity = 50
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 30
       }
       social_democracy = {
-        popularity = 0
+        popularity = 10
       }
       radical_socialism = {
-        popularity = 0
+        popularity = 3
       }
       marxism_leninism = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 7
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -107,7 +107,7 @@ set_politics = {
       }
     }
 
-	ruling_party = despotic_autocracy
+	ruling_party = economic_liberalism
 }
 
 set_technology = {
@@ -151,11 +151,22 @@ create_country_leader = {
 }
 
 create_country_leader = {
-  name = "Juan Prim y Prats"
-  desc = "POLITICS_JUAN_PRIM_Y_PRATS_DESC"
-  picture = "Portrait_SPR_Juan_Prim_y_Prats.dds"
+  name = "Baldomero Espartero"
+  desc = ""
+  picture = "Portrait_SPR_Baldomero_Espartero.dds"
   expire = "1965.1.1"
   ideology = liberal_social
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Ramòn de la Sagra"
+  desc = ""
+  picture = "Portrait_SPR_Ramon_de_la_Sagra.dds"
+  expire = "1965.1.1"
+  ideology = anarchism
   traits = {
     #
   }

@@ -1,6 +1,6 @@
-capital = 286
+﻿capital = 286 #Phnom Penh NOT on the map as VP!
 
-oob = "CAM_1861"
+set_research_slots = 3
 
 set_politics = {
     parties = {
@@ -42,6 +42,7 @@ set_politics = {
 set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
+	 
 	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
@@ -58,15 +59,15 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Ang Duong"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
+    picture = "Portrait_CMB_Ang_Duong.dds"
+    expire = 1900.1.1
     ideology = despotism
 }
 
 1857.5.11 = {
-oob = "CAM_1857"
+oob = "VIN_1857"
 
 set_politics = {
     parties = {
@@ -113,10 +114,10 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Ang Duong"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
+    picture = "Portrait_CAM_Ang_Duong.dds"
+    expire = 1900.1.1
     ideology = despotism
 }
 }

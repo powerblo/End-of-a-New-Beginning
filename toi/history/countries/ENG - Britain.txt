@@ -3,42 +3,38 @@
 1857.5.11 = {
 	oob = "ENG_1857"
 
-	add_ideas = ENG_victoria
-	add_ideas = ENG_palmerston_policy
-	add_ideas = ENG_pax_britannica
-
 	if = {
 		limit = {
 			has_dlc = "Together for Victory"
 		}
 		set_autonomy = {
 			target = NEP
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = HYD
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAS
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = KAR
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = BIK
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
 			target = REW
-			autnomous_state = autonomy_princely_state
+			autonomous_state = autonomy_princely_state
 			freedom_level = 0.1
 		}
 		set_autonomy = {
@@ -50,6 +46,21 @@
 			target = CAN
 			autonomous_state = autonomy_colony
 			freedom_level = 0.4
+		}
+		set_autonomy = {
+			target = NFL
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = BRK
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NVS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
 		}
 		set_autonomy = {
 			target = AST
@@ -66,6 +77,41 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
+		set_autonomy = {
+			target = NSW
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = TAS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = SAS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = VIC
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		#set_autonomy = {
+		#	target = SRW
+		#	autonomous_state = autonomy_colony
+		#	freedom_level = 0.2
+		#}
+		set_autonomy = {
+			target = HYD
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = TCS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
 		else = {
 			puppet = RAJ
 		}
@@ -74,7 +120,7 @@
 	#Whig/Liberal
 	create_country_leader = {
 		name = "Lord Palmerston"
-		picture = "Lord_Palmerston.dds"
+		picture = "Portrait_ENG_Lord_Palmerston.dds"
 		expire = "1858.2.19"
 		ideology = market_liberal
 	}
@@ -87,6 +133,17 @@
 		ideology = conserv
 	}
 
+	#Chartist
+	create_country_leader = {
+		name = "William Lovett"
+		picture = "Portrait_ENG_William_Lovett.dds"
+		expire = "1877.1.1"
+		ideology = anarchism
+		traits = {
+
+		}
+	}
+
 	create_country_leader = {
 		name = "Queen Victoria"
 		picture = "Queen_Victoria.dds"
@@ -95,6 +152,76 @@
 		traits = {
 
 		}
+	}
+
+	create_corps_commander = {
+	  name = "Charles George Gordon"
+	  picture = "Portrait_ENG_Charles_George_Gordon.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_corps_commander = {
+	  name = "Colin Campbell"
+	  picture = "Portrait_ENG_Colin_Campbell.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_corps_commander = {
+	  name = "Garnet Wolseley"
+	  picture = "Portrait_ENG_Garnet_Wolseley.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_corps_commander = {
+	  name = "George Brown"
+	  picture = "Portrait_ENG_George_Brown.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_corps_commander = {
+	  name = "Patrick Grant"
+	  picture = "Portrait_ENG_Patrick_Grant.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_corps_commander = {
+	  name = "Richard Airey"
+	  picture = "Portrait_ENG_Richard_Airey.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_navy_leader = {
+	  name = "Edward Seymour"
+	  picture = "Portrait_ENG_Edward_Seymour.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_navy_leader = {
+	  name = "Francis Austen"
+	  picture = "Portrait_ENG_Francis_Austen.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_navy_leader = {
+	  name = "Harry Rawson"
+	  picture = "Portrait_ENG_Harry_Rawson.dds"
+	  traits = { }
+	  skill = 3
+	}
+
+	create_navy_leader = {
+	  name = "Sir William Parker"
+	  picture = "Portrait_ENG_William_Parker.dds"
+	  traits = { }
+	  skill = 3
 	}
 
 	set_technology = {
@@ -233,98 +360,4 @@ set_politics = {
 	last_election = "1835.11.14"
 	election_frequency = 48
 	elections_allowed = no
-}
-
-create_country_leader = {
-	name = "Lord Palmerston"
-	picture = "Portrait_ENG_Lord_Palmerston.dds"
-	expire = "1858.2.19"
-	ideology = market_liberal
-}
-
-create_country_leader = {
-	name = "Edward Smith-Stanley"
-	picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
-	expire = "1859.6.11"
-	ideology = conserv
-}
-
-create_country_leader = {
-	name = "Queen Victoria"
-	picture = "Queen_Victoria.dds"
-	expire = "1900.1.1"
-	ideology = despotism
-	traits = {
-
-	}
-}
-
-create_corps_commander = {
-  name = "Charles George Gordon"
-  picture = "Portrait_ENG_Charles_George_Gordon.dds"
-  traits = { }
-  skill = 3
-}
-
-create_corps_commander = {
-  name = "Colin Campbell"
-  picture = "Portrait_ENG_Colin_Campbell.dds"
-  traits = { }
-  skill = 3
-}
-
-create_corps_commander = {
-  name = "Garnet Wolseley"
-  picture = "Portrait_ENG_Garnet_Wolseley.dds"
-  traits = { }
-  skill = 3
-}
-
-create_corps_commander = {
-  name = "George Brown"
-  picture = "Portrait_ENG_George_Brown.dds"
-  traits = { }
-  skill = 3
-}
-
-create_corps_commander = {
-  name = "Patrick Grant"
-  picture = "Portrait_ENG_Patrick_Grant.dds"
-  traits = { }
-  skill = 3
-}
-
-create_corps_commander = {
-  name = "Richard Airey"
-  picture = "Portrait_ENG_Richard_Airey.dds"
-  traits = { }
-  skill = 3
-}
-
-create_navy_leader = {
-  name = "Edward Seymour"
-  picture = "Portrait_ENG_Edward_Seymour.dds"
-  traits = { }
-  skill = 3
-}
-
-create_navy_leader = {
-  name = "Francis Austen"
-  picture = "Portrait_ENG_Francis_Austen.dds"
-  traits = { }
-  skill = 3
-}
-
-create_navy_leader = {
-  name = "Harry Rawson"
-  picture = "Portrait_ENG_Harry_Rawson.dds"
-  traits = { }
-  skill = 3
-}
-
-create_navy_leader = {
-  name = "Sir William Parker"
-  picture = "Portrait_ENG_William_Parker.dds"
-  traits = { }
-  skill = 3
 }

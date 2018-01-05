@@ -2,8 +2,6 @@
 
 oob = "AUS_1861"
 
-add_ideas = GER_confed_member
-
 set_politics = {
     parties = {
       economic_liberalism = {
@@ -60,6 +58,10 @@ set_technology = {
 	early_destroyer = 1 transport = 1
 }
 
+add_ideas = {
+  AUS_hungarian_revolution
+}
+
 create_country_leader = {
 	name = "Franz Joseph I"
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
@@ -72,21 +74,6 @@ create_country_leader = {
 
 1857.5.11 = {
 oob = "AUS_1857"
-
-create_faction = "German Confederation"
-add_to_faction = PRS
-add_to_faction = THU
-add_to_faction = WUR
-add_to_faction = SCH
-add_to_faction = SAX
-add_to_faction = OLD
-add_to_faction = MCK
-add_to_faction = HAN
-add_to_faction = BAV
-add_to_faction = BAD
-add_to_faction = HES
-
-add_ideas = GER_confed_member
 
 set_politics = {
     parties = {

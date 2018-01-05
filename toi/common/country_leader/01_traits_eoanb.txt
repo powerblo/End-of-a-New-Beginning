@@ -1,0 +1,402 @@
+leader_traits = {
+	
+	traditional_conservative = {
+		random = no
+		# Boosts Democracy
+		sprite = 13
+		traditional_conservatism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	economic_liberal = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		economic_liberalism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	democrat_socialist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		social_democracy_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	radical_socialist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		radical_socialism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	marxism_leninist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		marxism_leninism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	despotic_autocratic = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		despotic_autocracy_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	parliamental_oligarch = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		parliamental_oligarchy_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	totalitarian_nationalist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		totalitarian_nationalism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	rexist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		rexism_falangism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	theocratic = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		theocracy_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	political_independent = {
+		sprite = 10
+		random = yes
+		drift_defence_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	#POLITICAL ALIGNMENT TRAITS
+
+
+	marxism_leninism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		marxism_leninism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	radical_socialism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		radical_socialism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	democratic_socialism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		social_democracy_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	economic_liberalism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		economic_liberalism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	traditional_conservatism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		traditional_conservatism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	parliamental_oligarchy_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		parliamental_oligarchy_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	despotic_autocracy_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		despotic_autocracy_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	totalitarian_nationalism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		totalitarian_nationalism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	rexism_falangism_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		rexism_falangism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	theocracy_alignment = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		theocracy_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	neutral_party = {
+		sprite = 10
+		random = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ideological_promoter = {
+		sprite = 10
+		random = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	#ADVISOR TRAITS
+
+
+	oil_magnate = {
+		sprite = 10
+		random = yes
+		drift_defence_factor = 0.5
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	clever_buisnessman = {
+		sprite = 10
+		random = yes
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	railroad_tycoon = {
+		sprite = 10
+		random = yes
+		production_speed_infrastructure_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	influencial_writer = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	innovative_engineer = {
+		sprite = 10
+		random = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ingenious_scientist = {
+		sprite = 10
+		random = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	efficient_administrator = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.05
+		#PP cost for advisor -5%
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	industrial_promoter = {
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_urbanizer = {
+		sprite = 10
+		random = yes
+		production_speed_infrastructure_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	controversial_figure = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.05
+		unity_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	determined_expansionist = {
+		sprite = 10
+		random = yes
+		justify_war_goal_time = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	war_veteran = {
+		sprite = 10
+		random = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	friend_of_capitalism = {
+		sprite = 10
+		random = yes
+		consumer_goods_factor = -0.1
+		political_power_factor = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	working_class_figurehead = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.1
+		unity_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

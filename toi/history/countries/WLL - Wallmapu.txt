@@ -1,0 +1,55 @@
+﻿capital = 512
+
+oob = "WLL_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+create_country_leader = {
+    name = "Unorganized Government"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_WLL_Mapuche_Unorganized.dds"
+    expire = 1891.12.31
+    ideology = despotism
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}

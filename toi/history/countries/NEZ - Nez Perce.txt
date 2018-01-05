@@ -1,0 +1,94 @@
+﻿capital = 387
+
+set_research_slots = 2
+
+# Starting tech
+# clone of Holland
+set_technology = {
+	infantry_weapons = 1
+	rifle_equipment1 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+}
+
+set_convoys = 25
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+create_country_leader = {
+	name = "Chief Joseph"
+	desc = ""
+	picture = "Portrait_NEZ_Chief_Joseph.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_corps_commander = {
+  name = "Hallalhotsoot"
+  picture = "Portrait_NEZ_Hallalhotsoot.dds"
+  traits = { }
+  skill = 3
+}
+
+create_corps_commander = {
+  name = "Old Chief Joseph"
+  picture = "Portrait_NEZ_Old_Chief_Joseph.dds"
+  traits = { }
+  skill = 3
+}
+
+create_corps_commander = {
+  name = "White Bird"
+  picture = "Portrait_NEZ_White_Bird.dds"
+  traits = { }
+  skill = 3
+}
+

@@ -90,14 +90,6 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.05
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}	
 			}
 			
@@ -132,17 +124,6 @@ ideas = {
 					has_government = communism
 					has_war = yes
 					threat > 0.15
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					OR = {
-						has_completed_focus = HUN_secret_rearmament
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
 				}
 			}
 
@@ -187,15 +168,7 @@ ideas = {
 							}
 						}
 					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}		
+				}	
 			}
 		
 			cost = 150
@@ -232,14 +205,6 @@ ideas = {
 						tag = ROOT 
 						ratio > 0.5
 					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 			}
 
@@ -419,6 +384,242 @@ ideas = {
 					has_war = yes
 				}
    			}
+		}
+	}
+
+	military_spendage = {
+		ten_percent = {
+						
+			cost = 150
+			removal_cost = -1
+			level = 5
+			
+			available = {
+				
+			}
+
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		five_percent = {
+						
+			cost = 150
+			removal_cost = -1
+			level = 4
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					 
+				}
+			}
+
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		three_percent = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 3
+
+			available = {
+				
+			}
+
+			modifier = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
+		two_percent = {
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 2
+			
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		one_percent = {
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 1
+			
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	tax_rates = {
+		very_high_taxes = {
+						
+			cost = 150
+			removal_cost = -1
+			level = 5
+			
+			available = {
+				
+			}
+
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		high_taxes = {
+						
+			cost = 150
+			removal_cost = -1
+			level = 4
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					 
+				}
+			}
+
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		normal_taxes = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 3
+
+			available = {
+				
+			}
+
+			modifier = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
+		low_taxes = {
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 2
+			
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		very_low_taxes = {
+			
+			available = {
+				
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 1
+			
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
 		}
 	}
 }

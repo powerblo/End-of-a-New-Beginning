@@ -39,6 +39,10 @@ set_politics = {
 	ruling_party = despotic_autocracy
 }
 
+give_military_access = REW
+give_military_access = KAR
+give_military_access = KAS
+
 set_cosmetic_tag = EIC
 
 set_technology = {
@@ -122,4 +126,26 @@ create_country_leader = {
     expire = 1900.1.1
     ideology = despotism
 }
+
+create_corps_commander = {
+  name = "John Nicholson"
+  picture = "Portrait_RAJ_John_Nicholson.dds"
+  traits = { trait_mountaineer }
+  skill = 3
+}
+
+create_corps_commander = {
+  name = "James George Smith Neill"
+  picture = "Portrait_RAJ_James_George_Smith_Neill.dds"
+  traits = { trait_mountaineer }
+  skill = 2
+}
+
+create_corps_commander = {
+  name = "John Cheape"
+  picture = "Portrait_RAJ_John_Cheape.dds"
+  traits = { trait_mountaineer }
+  skill = 2
+}
+
 }

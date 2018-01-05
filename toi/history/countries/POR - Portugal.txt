@@ -73,22 +73,22 @@ oob = "POR_1857"
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 0
+        popularity = 4
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 65
       }
       social_democracy = {
-        popularity = 0
+        popularity = 22
       }
       radical_socialism = {
-        popularity = 0
+        popularity = 1
       }
       marxism_leninism = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 8
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -104,7 +104,7 @@ set_politics = {
       }
     }
 
-	ruling_party = despotic_autocracy
+	ruling_party = traditional_conservatism
 }
 
 set_technology = {
@@ -120,6 +120,50 @@ create_country_leader = {
     picture = "Portrait_POR_Pedro_V.dds"
     expire = 1900.1.1
     ideology = despotism
+}
+
+create_country_leader = {
+  name = "Joaquim Antònio de Aguiar"
+  desc = "POLITICS_LEOPOLDO_O_DONNELL_Y_JORRIS_DESC"
+  picture = "Portrait_POR_Joaquim_Antonio_de_Aguiar.dds"
+  expire = "1965.1.1"
+  ideology = conserv_liberal
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Nuno Josè Severo"
+  desc = "POLITICS_RAMON_MARIA_NARVAEZ_DESC"
+  picture = "Portrait_POR_Nuno_Jose_Severo_de_Mendonca_Rolim_de_Moura_Barreto.dds"
+  expire = "1965.1.1"
+  ideology = conserv
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Antonio Josè Severim de Noronha"
+  desc = ""
+  picture = ".dds"
+  expire = "1965.1.1"
+  ideology = liberal_social
+  traits = {
+    #
+  }
+}
+
+create_country_leader = {
+  name = "Eudòxio Cèsar Azedo Gneco"
+  desc = ""
+  picture = ".dds"
+  expire = "1965.1.1"
+  ideology = anarchism
+  traits = {
+    #
+  }
 }
 
 create_corps_commander = {
