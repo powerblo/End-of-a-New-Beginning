@@ -47,3 +47,47 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = vbritian.2
+	title = vbritian.2.t	
+	desc = vbritian.2.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = yes
+
+	trigger = { 
+	date > 1858.2.1
+	has_country_flag = britian_child_labour
+
+	}
+
+	
+	option = {
+		name = vbritian.2.a	
+		
+		
+		effect_tooltip = {
+			add_political_power = -15
+		}
+
+		custom_effect_tooltip = { comprise_labourers }
+		hidden_effect = {			
+		    set_country_flag = britian_child_labour_compromise
+		    country_event = random_list = { { id = vbritian.3 days = 189 } { id = vbritian.4 days = 189 } }		
+		}
+	}
+
+	option = {
+		name = vbritian.2.b	
+		
+		
+		effect_tooltip = {
+			add_political_power = -25
+		}
+
+		hidden_effect = {			
+		    set_country_flag = britian_child_labour_crush		
+		}
+	}
+}
