@@ -1,0 +1,52 @@
+     ################
+     #British Events#
+     ################
+
+add_namespace = vbritian
+
+
+country_event = {
+	id = vbritian.1
+	title = vbritian.1.t	
+	desc = vbritian.1.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = no
+
+	trigger = { 
+	date > random_list = { 
+	25 = { 1857.1.12 }
+	25 = { 1857.2.3 }
+	25 = { 1857.3.28 }
+	25 = { 1857.4.20}
+
+	}
+
+	tag = ENG
+
+  }
+	
+	option = {
+		name = vbritian.1.a	
+		
+		
+		effect_tooltip = {
+			add_political_power = -50
+		}
+		hidden_effect = {			
+		set_country_flag = britian_child_labour		
+		}
+	}
+
+	option = {
+		name = vbritian.1.b	
+		
+		
+		effect_tooltip = {
+			add_political_power = -75
+		}
+		hidden_effect = {			
+		set_country_flag = britian_child_labour		
+		}
+	}
+}
