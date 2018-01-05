@@ -11,14 +11,14 @@ country_event = {
 	desc = vbritian.1.d		
 	picture = GFX_report_event_saf_soldiers					
 	
-	is_triggered_only = no
+	is_triggered_only = yes
 
 	trigger = { 
 	date > random_list = { 
-	25 = { 1857.1.12 }
-	25 = { 1857.2.3 }
-	25 = { 1857.3.28 }
-	25 = { 1857.4.20}
+	25 = { 1857.5.12 }
+	25 = { 1857.6.3 }
+	25 = { 1857.7.28 }
+	25 = { 1857.8.20}
 
 	}
 
@@ -34,7 +34,7 @@ country_event = {
 			add_political_power = -50
 		}
 		hidden_effect = {			
-		set_country_flag = britian_child_labour		
+		    set_country_flag = britian_child_labour		
 		}
 	}
 
@@ -44,9 +44,6 @@ country_event = {
 		
 		effect_tooltip = {
 			add_political_power = -75
-		}
-		hidden_effect = {			
-		set_country_flag = britian_child_labour		
 		}
 	}
 }
