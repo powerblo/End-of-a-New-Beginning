@@ -1,0 +1,122 @@
+add_namespace = sardinia
+
+#Sardinia asks France for help
+country_event = {
+		id = sardinia.1
+		title = sardinia.1.t
+		desc = sardinia.1.d
+		picture = GFX_report_event_generic_sign_treaty1
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.1.a
+				ai_chance = { factor = 80 }
+				PIE = { country_event = { days = 1 id = sardinia.2 } }
+				hidden_effect = { set_global_flag = FRA_supports_PIE_risorgimento }
+		}
+		
+		option = {
+				name = sardinia.1.b
+				ai_chance = { factor = 20 }
+				PIE = { country_event = { days = 1 id = sardinia.3 } }
+		}
+}
+
+#France says yes
+country_event = {
+		id = sardinia.2
+		title = sardinia.2.t
+		desc = sardinia.2.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.2.a
+				FRA = { transfer_state = 735 }
+				hidden_effect = { set_global_flag = FRA_PIE_OneCall }
+		}
+}
+
+#France says no
+country_event = {
+		id = sardinia.3
+		title = sardinia.3.t
+		desc = sardinia.3.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.3.a
+		}
+}
+
+#Fixed Peace for the Second Independence War
+country_event = {
+		id = sardinia.4
+		title = sardinia.4.t
+		desc = sardinia.4.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PIE
+			PIE = { has_completed_focus = PIE_Second_Independence_War }
+			date > 1857.6.1
+		}
+		
+		option = {
+				name = sardinia.4.a
+				PIE = { transfer_state = 159 }
+				custom_effect_tooltip = PIE_2I_Peace
+				hidden_effect = {
+					white_peace = LVN
+					white_peace = AUS
+					news_event = news.1
+					clr_global_flag = FRA_PIE_OneCall
+				}
+		}
+}
+
+#France gets called into the Second Independence War
+country_event = {
+		id = sardinia.5
+		title = sardinia.5.t
+		desc = sardinia.5.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = FRA
+			PIE = { has_completed_focus = PIE_Second_Independence_War }
+			PIE = { has_war_with = LVN }
+			has_global_flag = FRA_PIE_OneCall
+		}
+		
+		option = {
+				name = sardinia.5.a
+				#Can't support PIE right now because whenever FRA is at war the game crashes
+		}
+}
+
+#Garibaldis March
+country_event = {
+		id = sardinia.6
+		title = sardinia.6.t
+		desc = sardinia.6.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.6.a
+				ai_chance = { factor = 90 }
+				add_popularity = { ideology = economic_liberalism popularity = 0.75 }
+				set_politics = { ruling_party = economic_liberalism elections_allowed = no }
+		}
+		
+		option = {
+				name = sardinia.6.b
+				ai_chance = { factor = 10 }
+				add_national_unity = -0.3
+		}
+}

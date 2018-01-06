@@ -1,0 +1,366 @@
+focus_tree = {
+	id = sardiniapiedmont_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PIE
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = PIE_Risorgimento
+		icon = GFX_focus_generic_support_the_left_right
+		x = 4
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = PIE_Napoleon3_Help
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = PIE_Risorgimento }
+		mutually_exclusive = { focus = PIE_GoAlone }
+		
+		completion_reward = {
+			FRA = { country_event = { days = 1 id = sardinia.1 } }
+		}
+	}
+	
+	focus = {
+		id = PIE_GoAlone
+		icon = GFX_goal_generic_wolf_pack
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Risorgimento }
+		mutually_exclusive = { focus = PIE_Napoleon3_Help }
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+	}
+	
+	focus = {
+		id = PIE_Second_Independence_War
+		icon = GFX_goal_generic_special_forces
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Napoleon3_Help focus = PIE_GoAlone }
+		
+		completion_reward = {
+			custom_effect_tooltip = PIE_LVN_War
+			declare_war_on = { target = LVN type = annex_everything }
+		}
+	}
+	
+	focus = {
+		id = PIE_Core_Milan
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 3
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Second_Independence_War }
+		available = { PIE = { controls_state = 159 } }
+		
+		completion_reward = {
+			add_state_core = 159
+		}
+	}
+	
+	focus = {
+		id = PIE_Central_Plebiscito
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = PIE_Core_Milan }
+		available = { has_global_flag = FRA_supports_PIE_risorgimento }
+		available = { NOT = { PIE = { has_completed_focus = PIE_Force_Central_Unity } } }
+		
+		completion_reward = {
+			puppet = TUS
+		}
+	}
+	
+	focus = {
+		id = PIE_Force_Central_Unity
+		icon = GFX_goal_generic_forceful_treaty
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Core_Milan }
+		available = { NOT = { PIE = { has_completed_focus = PIE_Central_Plebiscito } } }
+		mutually_exclusive = { focus = PIE_Expand_Centre }
+		
+		completion_reward = {
+			declare_war_on = { target = TUS type = annex_everything }
+			declare_war_on = { target = PRM type = annex_everything }
+			declare_war_on = { target = MOD type = annex_everything }
+		}
+	}
+	
+	focus = {
+		id = PIE_Expand_Centre
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Central_Plebiscito }
+		mutually_exclusive = { focus = PIE_Force_Central_Unity }
+		
+		completion_reward = {
+			TUS = { annex_country = { target = MOD } }
+			TUS = { annex_country = { target = PRM } }
+		}
+	}
+	
+	focus = {
+		id = PIE_Bologna_ICP
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 6
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Expand_Centre }
+		
+		completion_reward = {
+			TUS = { transfer_state = 161 }
+		}
+	}
+	
+	focus = {
+		id = PIE_Unify_Center
+		icon = GFX_goal_anschluss
+		x = 1
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Bologna_ICP focus = PIE_Force_Central_Unity }
+		
+		completion_reward = {
+			annex_country = { target = TUS }
+			add_state_core = 162
+			add_state_core = 808
+			add_state_core = 813
+		}
+	}
+	
+	focus = {
+		id = PIE_Garibaldi
+		icon = GFX_goal_generic_cavalry
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Core_Milan }
+		
+		completion_reward = {
+			NSC = { country_event = { days = 1 id = sardinia.6 } }
+		}
+	}
+	
+	focus = {
+		id = PIE_Fight_Sicily
+		icon = GFX_focus_generic_military_mission
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = PIE_Garibaldi }
+		mutually_exclusive = { focus = PIE_Annex_Sicily }
+		
+		completion_reward = {
+			declare_war_on = { target = NSC type = annex_everything }
+		}
+	}
+	
+	focus = {
+		id = PIE_Annex_Sicily
+		icon = GFX_goal_generic_dangerous_deal
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = { focus = PIE_Garibaldi }
+		mutually_exclusive = { focus = PIE_Fight_Sicily }
+		available = { NOT = { NSC = { economic_liberalism > 0.5 } } }
+		
+		completion_reward = {
+			puppet = NSC
+		}
+	}
+	
+	focus = {
+		id = PIE_Annex_Sicily_2
+		icon = GFX_goal_generic_military_deal
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Annex_Sicily }
+		
+		completion_reward = {
+			annex_country = { target = NSC }
+		}
+	}
+	
+	focus = {
+		id = PIE_Victory_Sicily
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Fight_Sicily }
+		available = { NOT = { PIE = { has_war_with = NSC } } }
+		
+		completion_reward = {
+			annex_country = { target = NSC }
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PIE_Core_Sicily
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 7
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Victory_Sicily focus = PIE_Annex_Sicily_2 }
+		
+		completion_reward = {
+			add_state_core = 115
+			add_state_core = 117
+			add_state_core = 156
+			add_state_core = 812
+		}
+	}
+	
+	focus = {
+		id = PIE_Demand_Marche
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Core_Sicily }
+		prerequisite = { focus = PIE_Unify_Center }
+		
+		completion_reward = {
+			PIE = { transfer_state = 157 }
+			add_state_core = 157
+		}
+	}
+	
+	focus = {
+		id = PIE_Demand_Marche
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Core_Sicily }
+		prerequisite = { focus = PIE_Unify_Center }
+		bypass = {
+			157 = { is_controlled_by = GER }
+		}
+		
+		completion_reward = {
+			PIE = { transfer_state = 157 }
+			add_state_core = 157
+		}
+	}
+	
+	focus = {
+		id = PIE_Form_Italy
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 4
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PIE_Demand_Marche }
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+	}
+}

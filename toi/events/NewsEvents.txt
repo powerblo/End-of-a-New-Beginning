@@ -1,1 +1,26 @@
-﻿
+﻿add_namespace = news
+
+#PIE wins 2nd Independence war
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				TAG = PIE
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = { TAG = PIE }
+	}
+}
