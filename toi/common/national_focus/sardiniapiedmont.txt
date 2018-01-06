@@ -316,28 +316,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = PIE_Core_Sicily }
-		prerequisite = { focus = PIE_Unify_Center }
-		
-		completion_reward = {
-			PIE = { transfer_state = 157 }
-			add_state_core = 157
-		}
-	}
-	
-	focus = {
-		id = PIE_Demand_Marche
-		icon = GFX_goal_generic_major_alliance
-		x = 4
-		y = 8
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
 		prerequisite = { focus = PIE_Core_Sicily focus = PIE_Unify_Center }
 		bypass = {
-			157 = { is_controlled_by = GER }
+			157 = { is_controlled_by = PIE }
 		}
 		
 		completion_reward = {
