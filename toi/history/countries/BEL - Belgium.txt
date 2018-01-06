@@ -58,16 +58,11 @@ set_technology = {
 	early_destroyer = 1 transport = 1
 }
 
-create_country_leader = {
-    name = "Charles Rogier"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_Charles_Rogier_.dds"
-    expire = 1868.1.3
-    ideology = market_liberal
-}
-
 1857.5.11 = {
 oob = "BEL_1857"
+
+add_ideas = BEL_Leopold_I
+add_ideas = BEL_flemish_tensions
 
 set_politics = {
     parties = {
@@ -114,11 +109,51 @@ set_technology = {
 }
 
 create_country_leader = {
+    name = "César de Paepe"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Cesar_de_Paepe.dds"
+    expire = 1857.11.9
+    ideology = syndicalism
+}
+
+create_country_leader = {
+    name = "Victor Dave"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Victor_Dave.dds"
+    expire = 1857.11.9
+    ideology = anarchism
+}
+
+create_country_leader = {
+    name = "Édouard Anseele"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Edouard_Anseele.dds"
+    expire = 1857.11.9
+    ideology = liberal_social
+}
+
+create_country_leader = {
+    name = "Charles Rogier"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Charles_Rogier.dds"
+    expire = 1868.1.3
+    ideology = market_liberal
+}
+
+create_country_leader = {
     name = "Pierre de Decker"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_BEL_Pierre_de_Decker.dds"
     expire = 1857.11.9
     ideology = conserv
+}
+
+create_country_leader = {
+    name = "Belgian Parliament"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Belgian_Parliament.dds"
+    expire = 1857.11.9
+    ideology = parlia_repub
 }
 
 create_country_leader = {
@@ -128,4 +163,13 @@ create_country_leader = {
     expire = 1870.11.9
     ideology = despotism
 }
+
+create_country_leader = {
+    name = "Engelbert Sterckx"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_BEL_Engelbert_Sterckx.dds"
+    expire = 1857.11.9
+    ideology = christian
+}
+
 }

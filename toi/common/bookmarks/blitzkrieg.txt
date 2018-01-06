@@ -10,6 +10,11 @@ bookmarks = {
     "ENG" = {
       history = "ENG_END_OF_NEW_BEG_DESC"
       ideology = economic_liberalism
+      focuses = {
+        ENG_prime_minister_palmerston
+        FRA_proclaim_liberal_empire
+        ENG_trent_affair
+      }
     }
     "USA" = {
       history = "USA_END_OF_NEW_BEG_DESC"
@@ -23,10 +28,21 @@ bookmarks = {
         FRA_republican_spirit
         FRA_amateur_tacticians
       }
+      focuses = {
+        FRA_keep_authoritarian_empire
+        FRA_proclaim_liberal_empire
+        FRA_continue_haussmann_renovations
+      }
+      focuses = {
+
+      }
     }
     "PRS" = {
       history = "PRS_END_OF_NEW_BEG_DESC"
       ideology = despotic_autocracy
+      ideas={
+        PRS_Friedrich_Wilhelm_IV
+      }
     }
     "RUS" = {
       history = "RUS_END_OF_NEW_BEG_DESC"
@@ -35,6 +51,9 @@ bookmarks = {
     "AUS" = {
       history = "AUS_END_OF_NEW_BEG_DESC"
       ideology = despotic_autocracy
+      ideas={
+        AUS_hungarian_revolution
+      }
     }
     "CHI" = {
       history = "CHI_END_OF_NEW_BEG_DESC"
@@ -47,6 +66,29 @@ bookmarks = {
       history = "OTO_END_OF_NEW_BEG_DESC"
       ideology = despotic_autocracy
       minor = yes
+    }
+    "BEL" = {
+      history = "BEL_END_OF_NEW_BEG_DESC"
+      ideology = economic_liberalism
+      minor = yes
+      ideas={
+        BEL_flemish_tensions
+      }
+      focuses = {
+        BEL_leopold_king_belgians
+        BEL_neuhaus_chocolate
+        BEL_old_burgundian_empire
+      }
+    }
+    "PIE" = {
+      history = "PIE_END_OF_NEW_BEG_DESC"
+      ideology = economic_liberalism
+      minor = yes
+      focuses = {
+        PIE_Risorgimento
+        PIE_Garibaldi
+        PIE_Form_Italy
+      }
     }
     "JAP" = {
       history = "JAP_END_OF_NEW_BEG_DESC"

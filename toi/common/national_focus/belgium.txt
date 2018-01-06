@@ -1,0 +1,1400 @@
+focus_tree = {
+	id = belgium
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BEL
+		}
+	}
+	default = no
+	focus = {
+		id = BEL_leopold_king_belgians
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 0
+
+	}
+	focus = {
+		id = BEL_international_affairs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_leopold_king_belgians
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = BEL_colonial_affairs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_international_affairs
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = BEL_try_buy_mindanao
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_colonial_affairs
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = BEL_scramble_africa
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_colonial_affairs
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = BEL_first_port
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_scramble_africa
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = BEL_explore_interior
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_first_port
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = BEL_allow_british_congo
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_explore_interior
+		}
+		mutually_exclusive = {
+			focus = BEL_reach_indian_ocean
+		}
+		x = 3
+		y = 6
+
+	}
+	focus = {
+		id = BEL_reach_indian_ocean
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_explore_interior
+		}
+		mutually_exclusive = {
+			focus = BEL_allow_british_congo
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = BEL_colonize_kings_land
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_allow_british_congo
+		}
+		prerequisite = {
+			focus = BEL_reach_indian_ocean
+		}
+		x = 4
+		y = 7
+
+	}
+	focus = {
+		id = BEL_exploit_natives
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_colonize_kings_land
+		}
+		x = 4
+		y = 8
+
+	}
+	focus = {
+		id = BEL_consolidate_dutch
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_international_affairs
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = BEL_reaffirm_luxemburg_protection
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_consolidate_dutch
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = BEL_support_maximilian_mexico
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_reaffirm_luxemburg_protection
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = BEL_strengthen_austrian_ties
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_support_maximilian_mexico
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = BEL_support_european_china
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_strengthen_austrian_ties
+		}
+		mutually_exclusive = {
+			focus = BEL_absurd_opium_war
+		}
+		x = 8
+		y = 6
+
+	}
+	focus = {
+		id = BEL_absurd_opium_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_strengthen_austrian_ties
+		}
+		mutually_exclusive = {
+			focus = BEL_support_european_china
+		}
+		x = 12
+		y = 6
+
+	}
+	focus = {
+		id = BEL_work_japenese
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_absurd_opium_war
+		}
+		x = 12
+		y = 7
+
+	}
+	focus = {
+		id = BEL_support_spanish_exploitation_cuba
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_work_japenese
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = BEL_1857_elections
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_leopold_king_belgians
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = BEL_catholic_party
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_1857_elections
+		}
+		mutually_exclusive = {
+			focus = BEL_liberal_party
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = BEL_keep_religion_school
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_catholic_party
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = BEL_royal_belgian_navy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_keep_religion_school
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = BEL_visit_pope
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_keep_religion_school
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = BEL_liberal_party
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_1857_elections
+		}
+		mutually_exclusive = {
+			focus = BEL_catholic_party
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = BEL_flemish_regions
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_catholic_party
+			focus = BEL_liberal_party
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = BEL_linguistic_freedoms
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_flemish_regions
+		}
+		mutually_exclusive = {
+			focus = BEL_only_french_bruxelles
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = BEL_only_french_bruxelles
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_flemish_regions
+		}
+		mutually_exclusive = {
+			focus = BEL_linguistic_freedoms
+		}
+		x = 20
+		y = 4
+
+	}
+	focus = {
+		id = BEL_remove_church_education
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_liberal_party
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = BEL_more_exportations
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_remove_church_education
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = BEL_open_asia_trade
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_more_exportations
+		}
+		x = 24
+		y = 5
+
+	}
+	focus = {
+		id = BEL_invest_railways
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_open_asia_trade
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = BEL_more_trade_with_uk
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_remove_church_education
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = BEL_american_dream
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_more_trade_with_uk
+		}
+		x = 26
+		y = 5
+
+	}
+	focus = {
+		id = BEL_lower_military_service
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_american_dream
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = BEL_expand_ports
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_remove_church_education
+		}
+		x = 28
+		y = 4
+
+	}
+	focus = {
+		id = BEL_work_people
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_expand_ports
+		}
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = BEL_coal_power_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_leopold_king_belgians
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = BEL_john_cockerill_machines
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_coal_power_industry
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = BEL_belgian_companies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_john_cockerill_machines
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = BEL_neuhaus_chocolate
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_belgian_companies
+		}
+		x = 31
+		y = 4
+
+	}
+	focus = {
+		id = BEL_sncb
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_john_cockerill_machines
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = BEL_iron_mining
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_sncb
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = BEL_belgian_east_india_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_belgian_companies
+		}
+		x = 33
+		y = 4
+
+	}
+	focus = {
+		id = BEL_fn_herstal_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_john_cockerill_machines
+		}
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = BEL_protect_capital
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_fn_herstal_company
+		}
+		x = 37
+		y = 4
+
+	}
+	focus = {
+		id = BEL_thinking_with_machines
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_belgian_east_india_company
+			focus = BEL_iron_mining
+			focus = BEL_protect_capital
+		}
+		x = 35
+		y = 5
+
+	}
+	focus = {
+		id = BEL_protect_seas
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_protect_capital
+		}
+		x = 37
+		y = 5
+
+	}
+	focus = {
+		id = BEL_deal_chinese
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_try_buy_mindanao
+		}
+		x = 0
+		y = 5
+
+	}
+	focus = {
+		id = BEL_ask_british_malaya
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_deal_chinese
+		}
+		x = 0
+		y = 8
+
+	}
+	focus = {
+		id = BEL_deal_other_colonial_power
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_exploit_natives
+		}
+		prerequisite = {
+			focus = BEL_ask_british_malaya
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = BEL_portugese_rivalry
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_deal_other_colonial_power
+		}
+		mutually_exclusive = {
+			focus = BEL_collaborate_portugal
+		}
+		x = 0
+		y = 10
+
+	}
+	focus = {
+		id = BEL_demand_angola
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_portugese_rivalry
+		}
+		x = 0
+		y = 11
+
+	}
+	focus = {
+		id = BEL_collaborate_portugal
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_deal_other_colonial_power
+		}
+		mutually_exclusive = {
+			focus = BEL_portugese_rivalry
+		}
+		x = 4
+		y = 10
+
+	}
+	focus = {
+		id = BEL_free_passage_africa
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_collaborate_portugal
+		}
+		x = 4
+		y = 11
+
+	}
+	focus = {
+		id = BEL_buy_british_india
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_support_european_china
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = BEL_demand_tianjin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_buy_british_india
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = BEL_embassy_stockholm
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_demand_tianjin
+			focus = BEL_support_spanish_exploitation_cuba
+		}
+		x = 12
+		y = 9
+
+	}
+	focus = {
+		id = BEL_embassy_saint_petersburg
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_demand_tianjin
+			focus = BEL_support_spanish_exploitation_cuba
+		}
+		x = 10
+		y = 9
+
+	}
+	focus = {
+		id = BEL_embassy_rio
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_demand_tianjin
+			focus = BEL_support_spanish_exploitation_cuba
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = BEL_well_organized_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_keep_religion_school
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = BEL_three_main_borders
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_well_organized_army
+		}
+		x = 18
+		y = 5
+
+	}
+	focus = {
+		id = BEL_upgrade_military_budget
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_three_main_borders
+		}
+		x = 18
+		y = 6
+
+	}
+	focus = {
+		id = BEL_french_culture
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_visit_pope
+		}
+		x = 16
+		y = 5
+
+	}
+	focus = {
+		id = BEL_francophone_world
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_french_culture
+		}
+		x = 16
+		y = 6
+
+	}
+	focus = {
+		id = BEL_protection_from_seas
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_royal_belgian_navy
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = BEL_crown_leopold_ii
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_francophone_world
+			focus = BEL_upgrade_military_budget
+			focus = BEL_invest_railways
+			focus = BEL_lower_military_service
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = BEL_extend_monarch_power
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_crown_leopold_ii
+		}
+		mutually_exclusive = {
+			focus = BEL_government_people
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = BEL_push_continental_system
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_extend_monarch_power
+		}
+		x = 19
+		y = 9
+
+	}
+	focus = {
+		id = BEL_government_people
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_crown_leopold_ii
+		}
+		mutually_exclusive = {
+			focus = BEL_extend_monarch_power
+		}
+		x = 23
+		y = 8
+
+	}
+	focus = {
+		id = BEL_emulate_british
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_government_people
+		}
+		x = 23
+		y = 9
+
+	}
+	focus = {
+		id = BEL_democratic_benelux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_emulate_british
+		}
+		x = 23
+		y = 10
+
+	}
+	focus = {
+		id = BEL_more_power_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_push_continental_system
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = BEL_man_above_law
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_more_power_king
+		}
+		x = 19
+		y = 11
+
+	}
+	focus = {
+		id = BEL_swiss_friend
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_democratic_benelux
+		}
+		x = 23
+		y = 11
+
+	}
+	focus = {
+		id = BEL_franco_prussian_war_coming
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_man_above_law
+			focus = BEL_swiss_friend
+		}
+		x = 21
+		y = 12
+
+	}
+	focus = {
+		id = BEL_heavy_participation_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_man_above_law
+		}
+		prerequisite = {
+			focus = BEL_franco_prussian_war_coming
+		}
+		mutually_exclusive = {
+			focus = BEL_passive_role
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = BEL_old_burgundian_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_heavy_participation_war
+		}
+		x = 20
+		y = 14
+
+	}
+	focus = {
+		id = BEL_strong_military_levrage
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_old_burgundian_empire
+		}
+		x = 18
+		y = 15
+
+	}
+	focus = {
+		id = BEL_military_production
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_old_burgundian_empire
+		}
+		x = 22
+		y = 15
+
+	}
+	focus = {
+		id = BEL_imperial_navy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_military_production
+			focus = BEL_strong_military_levrage
+		}
+		x = 20
+		y = 16
+
+	}
+	focus = {
+		id = BEL_belgian_league
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_strong_military_levrage
+		}
+		x = 18
+		y = 16
+
+	}
+	focus = {
+		id = BEL_defend_europe
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_belgian_league
+		}
+		prerequisite = {
+			focus = BEL_imperial_navy
+		}
+		x = 18
+		y = 17
+
+	}
+	focus = {
+		id = BEL_push_military_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_imperial_navy
+		}
+		x = 22
+		y = 17
+
+	}
+	focus = {
+		id = BEL_take_position
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_heavy_participation_war
+		}
+		x = 11
+		y = 14
+
+	}
+	focus = {
+		id = FRA_french_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_take_position
+		}
+		mutually_exclusive = {
+			focus = BEL_alone_nation_stronger
+			focus = BEL_prussian_superiority
+		}
+		x = 15
+		y = 15
+
+	}
+	focus = {
+		id = BEL_alone_nation_stronger
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_take_position
+		}
+		mutually_exclusive = {
+			focus = BEL_prussian_superiority
+			focus = FRA_french_ally
+		}
+		x = 11
+		y = 15
+
+	}
+	focus = {
+		id = BEL_become_major_power
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_alone_nation_stronger
+		}
+		x = 11
+		y = 16
+
+	}
+	focus = {
+		id = BEL_reunify_benelux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_become_major_power
+		}
+		x = 11
+		y = 17
+
+	}
+	focus = {
+		id = BEL_demand_calais
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_reunify_benelux
+		}
+		x = 10
+		y = 18
+
+	}
+	focus = {
+		id = BEL_iberian_enemies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_demand_calais
+		}
+		x = 10
+		y = 19
+
+	}
+	focus = {
+		id = BEL_demand_west_prussia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_reunify_benelux
+		}
+		x = 12
+		y = 18
+
+	}
+	focus = {
+		id = BEL_expand_north_sea
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_demand_west_prussia
+		}
+		x = 12
+		y = 19
+
+	}
+	focus = {
+		id = BEL_prussian_superiority
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_take_position
+		}
+		mutually_exclusive = {
+			focus = BEL_alone_nation_stronger
+			focus = FRA_french_ally
+		}
+		x = 7
+		y = 15
+
+	}
+	focus = {
+		id = BEL_leopold_visit_berlin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_prussian_superiority
+		}
+		x = 7
+		y = 16
+
+	}
+	focus = {
+		id = BEL_germanic_brothers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_leopold_visit_berlin
+		}
+		x = 7
+		y = 17
+
+	}
+	focus = {
+		id = BEL_verteidigungsvertrag
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_germanic_brothers
+		}
+		x = 7
+		y = 18
+
+	}
+	focus = {
+		id = BEL_join_germanic_confederation
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_verteidigungsvertrag
+		}
+		x = 7
+		y = 19
+
+	}
+	focus = {
+		id = BEL_leopold_visit_paris
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_ally
+		}
+		x = 15
+		y = 16
+
+	}
+	focus = {
+		id = BEL_vive_francophonie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_leopold_visit_paris
+		}
+		x = 15
+		y = 17
+
+	}
+	focus = {
+		id = BEL_traite_defense
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_vive_francophonie
+		}
+		x = 15
+		y = 18
+
+	}
+	focus = {
+		id = BEL_join_napoleonic_alliance
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_traite_defense
+		}
+		x = 15
+		y = 19
+
+	}
+	focus = {
+		id = BEL_passive_role
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_franco_prussian_war_coming
+		}
+		prerequisite = {
+			focus = BEL_swiss_friend
+		}
+		mutually_exclusive = {
+			focus = BEL_heavy_participation_war
+		}
+		x = 26
+		y = 13
+
+	}
+	focus = {
+		id = BEL_allow_volunteers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_passive_role
+		}
+		mutually_exclusive = {
+			focus = BEL_embrace_full_neutrality
+		}
+		x = 26
+		y = 14
+
+	}
+	focus = {
+		id = BEL_seek_alliance
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_allow_volunteers
+		}
+		x = 26
+		y = 15
+
+	}
+	focus = {
+		id = BEL_send_regiment_prussia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_seek_alliance
+		}
+		mutually_exclusive = {
+			focus = BEL_send_regiment_france
+		}
+		x = 24
+		y = 16
+
+	}
+	focus = {
+		id = BEL_send_regiment_france
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_seek_alliance
+		}
+		mutually_exclusive = {
+			focus = BEL_send_regiment_prussia
+		}
+		x = 28
+		y = 16
+
+	}
+	focus = {
+		id = BEL_celebrate_british
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_send_regiment_prussia
+			focus = BEL_send_regiment_france
+		}
+		x = 26
+		y = 17
+
+	}
+	focus = {
+		id = BEL_more_than_british_defence
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_celebrate_british
+		}
+		mutually_exclusive = {
+			focus = BEL_no_alliance
+			focus = BEL_benelux_pact
+		}
+		x = 24
+		y = 18
+
+	}
+	focus = {
+		id = BEL_no_alliance
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_celebrate_british
+		}
+		mutually_exclusive = {
+			focus = BEL_more_than_british_defence
+			focus = BEL_benelux_pact
+		}
+		x = 26
+		y = 18
+
+	}
+	focus = {
+		id = BEL_benelux_pact
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_celebrate_british
+		}
+		mutually_exclusive = {
+			focus = BEL_more_than_british_defence
+			focus = BEL_no_alliance
+		}
+		x = 28
+		y = 18
+
+	}
+	focus = {
+		id = BEL_embrace_full_neutrality
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_passive_role
+		}
+		mutually_exclusive = {
+			focus = BEL_allow_volunteers
+		}
+		x = 30
+		y = 14
+
+	}
+	focus = {
+		id = BEL_the_swiss_system
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_embrace_full_neutrality
+		}
+		x = 30
+		y = 15
+
+	}
+	focus = {
+		id = BEL_expand_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_belgian_east_india_company
+		}
+		x = 33
+		y = 5
+
+	}
+	focus = {
+		id = BEL_massive_tech_investments
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_thinking_with_machines
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = BEL_bruxelles_university
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_massive_tech_investments
+		}
+		x = 35
+		y = 7
+
+	}
+	focus = {
+		id = BEL_force_publique
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = BEL_fn_herstal_company
+		}
+		x = 39
+		y = 4
+
+	}
+}

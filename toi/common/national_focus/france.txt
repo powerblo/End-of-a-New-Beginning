@@ -1,0 +1,992 @@
+focus_tree = {
+	id = france
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	default = yes
+	focus = {
+		id = FRA_second_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 18
+		y = 0
+
+	}
+	focus = {
+		id = FRA_legislative_election_1857
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = FRA_second_empire
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = FRA_future_empire
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = FRA_legislative_election_1857
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = FRA_keep_authoritarian_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_future_empire
+		}
+		mutually_exclusive = {
+			focus = FRA_proclaim_liberal_empire
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = FRA_proclaim_liberal_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_future_empire
+		}
+		mutually_exclusive = {
+			focus = FRA_keep_authoritarian_empire
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = FRA_legislative_election_1863
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = FRA_keep_authoritarian_empire
+			focus = FRA_proclaim_liberal_empire
+		}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = FRA_legislative_elections_1869
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = FRA_legislative_election_1863
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = FRA_reform_empire
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = FRA_proclaim_liberal_empire
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = FRA_loi_ollivier
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_legislative_election_1863
+		}
+		prerequisite = {
+			focus = FRA_reform_empire
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = FRA_edict_tolerance
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_loi_ollivier
+		}
+		x = 6
+		y = 6
+
+	}
+	focus = {
+		id = FRA_end_censorship
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_reform_empire
+		}
+		x = 8
+		y = 5
+
+	}
+	focus = {
+		id = FRA_loi_duruy
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10
+		prerequisite = {
+			focus = FRA_end_censorship
+		}
+		x = 8
+		y = 6
+
+	}
+	focus = {
+		id = FRA_loi_niel
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_edict_tolerance
+		}
+		prerequisite = {
+			focus = FRA_loi_duruy
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = FRA_new_public_works
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = FRA_second_empire
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = FRA_french_railway_system
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = FRA_new_public_works
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = FRA_southern_lines
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_railway_system
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = FRA_northern_lines
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_railway_system
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = FRA_connect_the_country
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = FRA_southern_lines
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = FRA_profits_gold_rush
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = FRA_new_public_works
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = FRA_continue_haussmann_renovations
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_profits_gold_rush
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = FRA_open_new_mines
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = FRA_northern_lines
+		}
+		prerequisite = {
+			focus = FRA_continue_haussmann_renovations
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = FRA_steel_mills
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = FRA_connect_the_country
+		}
+		prerequisite = {
+			focus = FRA_open_new_mines
+		}
+		x = 12
+		y = 5
+
+	}
+	focus = {
+		id = FRA_found_new_banks
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = FRA_profits_gold_rush
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = FRA_external_affairs
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = FRA_second_empire
+		}
+		x = 31
+		y = 1
+
+	}
+	focus = {
+		id = FRA_american_continent
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_external_affairs
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = FRA_american_civil_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_american_continent
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = FRA_neutral_stance_civil_war
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = FRA_american_civil_war
+		}
+		mutually_exclusive = {
+			focus = FRA_recognize_csa
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = FRA_recognize_csa
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_american_civil_war
+		}
+		mutually_exclusive = {
+			focus = FRA_neutral_stance_civil_war
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = FRA_mexican_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_american_continent
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = FRA_support_maximilian
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_mexican_empire
+		}
+		x = 23
+		y = 4
+
+	}
+	focus = {
+		id = FRA_french_colonial_empire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_external_affairs
+		}
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = FRA_submit_kabyle
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_colonial_empire
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = FRA_intervention_lebanon
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = FRA_submit_kabyle
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = FRA_expand_algeria
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = FRA_submit_kabyle
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = FRA_full_control_senegal
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = FRA_expand_algeria
+		}
+		x = 26
+		y = 5
+
+	}
+	focus = {
+		id = FRA_convert_mali
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = FRA_expand_algeria
+		}
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = FRA_french_indochina
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_colonial_empire
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = FRA_convert_vietnamese
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_indochina
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = FRA_claim_cochinchina
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = FRA_french_indochina
+		}
+		x = 30
+		y = 5
+
+	}
+	focus = {
+		id = FRA_demand_laos_cambodia
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = FRA_claim_cochinchina
+		}
+		x = 30
+		y = 6
+
+	}
+	focus = {
+		id = FRA_european_neighbors
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_external_affairs
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = FRA_empire_paix
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = FRA_european_neighbors
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = FRA_approach_uk
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = FRA_empire_paix
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = FRA_deal_prussia
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = FRA_empire_paix
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = FRA_principe_nationalite
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = FRA_empire_paix
+		}
+		x = 37
+		y = 4
+
+	}
+	focus = {
+		id = FRA_ask_buy_luxemburg
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = FRA_principe_nationalite
+		}
+		x = 36
+		y = 5
+
+	}
+	focus = {
+		id = FRA_protect_switzerland
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_principe_nationalite
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = FRA_swiss_affairs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_protect_switzerland
+		}
+		x = 38
+		y = 6
+
+	}
+	focus = {
+		id = FRA_meeting_cavour
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = FRA_external_affairs
+		}
+		mutually_exclusive = {
+			focus = FRA_orsini_tragedy
+		}
+		x = 42
+		y = 2
+
+	}
+	focus = {
+		id = FRA_italian_campaign
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		prerequisite = {
+			focus = FRA_meeting_cavour
+		}
+		x = 42
+		y = 3
+
+	}
+	focus = {
+		id = FRA_nothern_campaign
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = FRA_italian_campaign
+		}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = FRA_central_campaign
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = FRA_italian_campaign
+		}
+		x = 44
+		y = 4
+
+	}
+	focus = {
+		id = FRA_protect_pope
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_central_campaign
+		}
+		mutually_exclusive = {
+			focus = FRA_turn_back_pope
+		}
+		x = 43
+		y = 5
+
+	}
+	focus = {
+		id = FRA_italy_united
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_nothern_campaign
+		}
+		prerequisite = {
+			focus = FRA_central_campaign
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = FRA_forget_pope
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = FRA_protect_pope
+		}
+		x = 43
+		y = 6
+
+	}
+	focus = {
+		id = FRA_treaty_turin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_italy_united
+		}
+		x = 41
+		y = 6
+
+	}
+	focus = {
+		id = FRA_abandon_italians
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = FRA_treaty_turin
+			focus = FRA_forget_pope
+		}
+		x = 43
+		y = 7
+
+	}
+	focus = {
+		id = FRA_turn_back_pope
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_central_campaign
+		}
+		mutually_exclusive = {
+			focus = FRA_protect_pope
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = FRA_orsini_tragedy
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10
+		prerequisite = {
+			focus = FRA_external_affairs
+		}
+		mutually_exclusive = {
+			focus = FRA_meeting_cavour
+		}
+		x = 50
+		y = 2
+
+	}
+	focus = {
+		id = FRA_secure_regency_empress
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = FRA_orsini_tragedy
+		}
+		x = 50
+		y = 3
+
+	}
+	focus = {
+		id = FRA_cut_ties_piedmont
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10
+		prerequisite = {
+			focus = FRA_secure_regency_empress
+		}
+		x = 48
+		y = 4
+
+	}
+	focus = {
+		id = FRA_defensive_tactics
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = FRA_keep_authoritarian_empire
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = FRA_niel_plan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_defend_alsace
+		}
+		prerequisite = {
+			focus = FRA_counter_european_rivalry
+		}
+		x = 3
+		y = 6
+
+	}
+	focus = {
+		id = FRA_modern_war_logistics
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = FRA_niel_plan
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = FRA_defend_alsace
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = FRA_defensive_tactics
+		}
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = FRA_counter_european_rivalry
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = FRA_legislative_election_1863
+		}
+		prerequisite = {
+			focus = FRA_defensive_tactics
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = FRA_learn_italian_intervention
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_defend_alsace
+		}
+		x = 1
+		y = 6
+
+	}
+	focus = {
+		id = FRA_free_trade_prussia
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = FRA_deal_prussia
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = FRA_free_trade_uk
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = FRA_approach_uk
+		}
+		x = 32
+		y = 5
+
+	}
+	focus = {
+		id = FRA_suez_canal_project
+		icon = GFX_goal_generic_production2
+		cost = 10
+		prerequisite = {
+			focus = FRA_free_trade_uk
+		}
+		x = 32
+		y = 6
+
+	}
+	focus = {
+		id = FRA_condemn_french_volunteers
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = FRA_neutral_stance_civil_war
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = FRA_french_expeditionary_troops
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = FRA_recognize_csa
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = FRA_southern_campaign
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = FRA_treaty_turin
+		}
+		x = 41
+		y = 7
+
+	}
+	focus = {
+		id = FRA_war_on_prussia
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = FRA_modern_war_logistics
+			focus = FRA_loi_niel
+		}
+		prerequisite = {
+			focus = FRA_oppose_sucession
+		}
+		mutually_exclusive = {
+			focus = FRA_deal_with_prussia
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = FRA_deal_with_prussia
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = FRA_loi_niel
+		}
+		prerequisite = {
+			focus = FRA_oppose_sucession
+		}
+		mutually_exclusive = {
+			focus = FRA_war_on_prussia
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = FRA_oppose_sucession
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = FRA_biarritz_meeting
+		}
+		x = 34
+		y = 7
+
+	}
+	focus = {
+		id = FRA_biarritz_meeting
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = FRA_free_trade_prussia
+		}
+		x = 34
+		y = 6
+
+	}
+	focus = {
+		id = FRA_develop_steamships
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = FRA_connect_the_country
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = FRA_prepare_heir
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_secure_regency_empress
+		}
+		x = 52
+		y = 4
+
+	}
+	focus = {
+		id = FRA_close_relations_austria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = FRA_cut_ties_piedmont
+		}
+		x = 48
+		y = 5
+
+	}
+	focus = {
+		id = FRA_defy_prussia
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = FRA_close_relations_austria
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = FRA_defy_piedmont
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = FRA_close_relations_austria
+		}
+		x = 49
+		y = 6
+
+	}
+	focus = {
+		id = FRA_joint_war_prussia
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = FRA_defy_prussia
+		}
+		x = 47
+		y = 7
+
+	}
+	focus = {
+		id = FRA_joint_war_piedmont
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = FRA_defy_piedmont
+		}
+		x = 49
+		y = 7
+
+	}
+}
