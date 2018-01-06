@@ -335,8 +335,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = PIE_Core_Sicily }
-		prerequisite = { focus = PIE_Unify_Center }
+		prerequisite = { focus = PIE_Core_Sicily focus = PIE_Unify_Center }
 		bypass = {
 			157 = { is_controlled_by = GER }
 		}
@@ -358,6 +357,10 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PIE_Demand_Marche }
+		available = {
+			PIE = { has_completed_focus = PIE_Core_Sicily }
+			PIE = { has_completed_focus = PIE_Unify_Center }
+		}
 		
 		completion_reward = {
 			add_national_unity = 0.05
