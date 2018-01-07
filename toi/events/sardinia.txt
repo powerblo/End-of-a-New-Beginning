@@ -1,4 +1,4 @@
-add_namespace = sardinia
+﻿add_namespace = sardinia
 
 #Sardinia asks France for help
 country_event = {
@@ -121,5 +121,34 @@ country_event = {
 				name = sardinia.6.b
 				ai_chance = { factor = 10 }
 				add_national_unity = -0.3
+		}
+}
+
+#Sicily loses support
+country_event = {
+		id = sardinia.7
+		title = sardinia.7.t
+		desc = sardinia.7.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.7.a
+				add_ideas = NSC_ArmySupportWeak
+		}
+}
+
+#Garibaldis Troops
+country_event = {
+		id = sardinia.8
+		title = sardinia.8.t
+		desc = sardinia.8.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.8.a
+				custom_effect_tooltip = PIE_Garibaldi_Troops
+				hidden_effect = { load_oob = Garibaldi }
 		}
 }
