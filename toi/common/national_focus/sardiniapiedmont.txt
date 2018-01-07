@@ -110,7 +110,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		prerequisite = { focus = PIE_Core_Milan }
+		prerequisite = { focus = PIE_Core_Milan focus = PIE_Napoleon3_Help }
 		available = { has_global_flag = FRA_supports_PIE_risorgimento }
 		available = { NOT = { PIE = { has_completed_focus = PIE_Force_Central_Unity } } }
 		
