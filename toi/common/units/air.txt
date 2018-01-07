@@ -7,6 +7,15 @@ sub_units = {
 		need = { fighter_equipment = 1 }
 		categories = { category_fighter }
 	}
+	
+	balloon = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { fighter }
+		need = { balloon_equipment = 1 }
+		categories = { category_fighter }
+	}
 
 	cv_fighter = {
 		sprite = light_plane

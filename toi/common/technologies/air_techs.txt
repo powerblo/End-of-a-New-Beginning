@@ -1,0 +1,30 @@
+technologies = {
+	
+	early_balloon = {
+
+		enable_equipments = {
+			balloon_equipment_0
+		}
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		categories = {
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+}
