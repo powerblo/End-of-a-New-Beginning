@@ -70,12 +70,6 @@ technologies = {
 	
 	radio_detection = {
 
-		# 
-		enable_building = {
-			building = radar_station
-			level = 1
-		}
-		
 		path = {
 			leads_to_tech = decimetric_radar 
 			research_cost_coeff = 1
@@ -124,19 +118,11 @@ technologies = {
 			radar_tech
 		}
 		
-		enable_building = {
-			building = radar_station
-			level = 2
-		}
 	}
 	
 	improved_decimetric_radar = {
 
 		# radar boost in air/sea combat depends on radar level
-		enable_building = {
-			building = radar_station
-			level = 3
-		}
 		
 		path = {
 			leads_to_tech = centimetric_radar 
@@ -164,10 +150,6 @@ technologies = {
 	centimetric_radar = {
 
 		# radar boost in air/sea combat depends on radar level
-		enable_building = {
-			building = radar_station
-			level = 4
-		}
 		
 		path = {
 			leads_to_tech = improved_centimetric_radar 
@@ -194,11 +176,6 @@ technologies = {
 	
 	improved_centimetric_radar = {
 
-		# radar boost in air/sea combat depends on radar level
-		enable_building = {
-			building = radar_station
-			level = 5
-		}
 		
 		path = {
 			leads_to_tech = advanced_centimetric_radar 
@@ -225,11 +202,6 @@ technologies = {
 	
 	advanced_centimetric_radar = {
 
-		# radar boost in air/sea combat depends on radar level
-		enable_building = {
-			building = radar_station
-			level = 6
-		}		
 		
 		research_cost = 2.5
 		start_year = 1942
@@ -555,11 +527,6 @@ technologies = {
 	}
 	
 	experimental_rockets = {
-
-		enable_building = {
-			building = rocket_site
-			level = 2
-		}
 		
 		path = {
 			leads_to_tech = rocket_engines 
@@ -819,13 +786,34 @@ technologies = {
 			nuclear
 		}
 		
+	}
+
+	nukes = {
+	
+		enable_building = {
+			building = rocket_site
+			level = 2
+		}
+		enable_building = {
+			building = synthetic_refinery
+			level = 5
+		}
 		enable_building = {
 			building = nuclear_reactor
 			level = 1
 		}
-	}
-
-	nukes = {
+		enable_building = {
+			building = anti_air_building
+			level = 5
+		}
+		enable_building = {
+			building = air_base
+			level = 10
+		}
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
 	
 		start_year = 1945
 		research_cost = 5
