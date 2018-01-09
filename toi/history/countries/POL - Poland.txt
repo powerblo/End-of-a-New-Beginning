@@ -58,7 +58,7 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Mikhail Dmitrievich Gorchakov"
     desc = "POLITICS_TEMP_DESC"
     picture = ""
     expire = 2000.09.10
@@ -67,6 +67,22 @@ create_country_leader = {
 
 1857.5.11 = {
 oob = "POL_1857"
+
+RUS = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = POL
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  }
+  else = {
+    puppet = POL
+  }
+}
 
 set_politics = {
     parties = {
@@ -113,7 +129,7 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Mikhail Dmitrievich Gorchakov"
     desc = "POLITICS_TEMP_DESC"
     picture = ""
     expire = 2000.09.10
