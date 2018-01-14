@@ -10,11 +10,14 @@ focus_tree = {
 	default = no
 	focus = {
 		id = ENG_prime_minister_palmerston
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_palmerston_government
 		cost = 10
-		x = 7
+		x = 4
 		y = 0
 
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = ENG_sepoy_rebellion
@@ -23,6 +26,9 @@ focus_tree = {
 		x = 22
 		y = 0
 
+		completion_reward = {
+			army_experience = 25
+		}
 	}
 	focus = {
 		id = ENG_expand_foreing_ministry
@@ -31,6 +37,9 @@ focus_tree = {
 		x = 45
 		y = 0
 
+		completion_reward = {
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = ENG_industrial_revolution
@@ -39,6 +48,14 @@ focus_tree = {
 		x = 66
 		y = 0
 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
 	}
 	focus = {
 		id = ENG_push_matrimonial_act
@@ -47,20 +64,31 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_prime_minister_palmerston
 		}
-		x = 6
+		x = 3
 		y = 1
 
+		completion_reward = {
+			add_political_power = 25
+			# Will give the decision "Enact the Matrimonial Act"
+		}
 	}
 	focus = {
 		id = ENG_orsini_affair
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_orsini_affair
 		cost = 10
 		prerequisite = {
 			focus = ENG_prime_minister_palmerston
 		}
-		x = 8
+		x = 5
 		y = 1
 
+		available = {
+			has_country_flag = ENG_orsini
+		}
+
+		completion_reward = {
+			#Event direct reaction to the fact that he built his bomb in England
+		}
 	}
 	focus = {
 		id = ENG_conspiracy_murder_bill
@@ -72,7 +100,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_orsini_affair
 		}
-		x = 7
+
+		completion_reward = {
+			#Event push bill or propose bill (first will always be enacted, the second one has way less chance of being enacted but it reduces the chances of the total parliamental breakdown)
+		}
+		x = 4
 		y = 2
 
 	}
@@ -86,7 +118,16 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_failure_palmerston_government
 		}
-		x = 3
+
+		available = {
+			has_country_flag = ENG_conspiracy_murder_bill_enacted
+		}
+
+		completion_reward = {
+			#Event result -> the conservative support the bill and it passes without problems
+			add_political_power = 50
+		}
+		x = 0
 		y = 3
 
 	}
@@ -100,9 +141,18 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_conservative_support
 		}
+
+		available = {
+			has_country_flag = ENG_conspiracy_murder_bill_blocked
+		}
+
 		x = 8
 		y = 3
 
+		completion_reward = {
+			#Event result -> the conservative block the bill and Palmerston's parliament is in dismay
+			add_political_power = -100
+		}
 	}
 	focus = {
 		id = ENG_palmerston_resignation
@@ -114,9 +164,39 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_palmerston_compromise
 		}
-		x = 6
+		x = 4
 		y = 4
 
+		completion_reward = {
+			create_country_leader = {
+				name = "Temporary Government"
+				picture = "Portrait_ENG_British_Parliament.dds"
+				expire = "1900.1.1"
+				ideology = parlia_repub
+				traits = {
+
+				}
+			}
+			set_politics = {
+		    	ruling_party = parliamental_oligarchy
+			}
+		}
+	}
+	focus = {
+		id = ENG_lord_derby
+		icon = GFX_goal_focus_derby_government
+		cost = 10
+		prerequisite = {
+			focus = ENG_palmerston_resignation
+		}
+		x = 4
+		y = 5
+
+		completion_reward = {
+			set_politics = {
+		    	ruling_party = traditional_conservatism
+			}
+		}
 	}
 	focus = {
 		id = ENG_palmerston_compromise
@@ -131,6 +211,9 @@ focus_tree = {
 		x = 10
 		y = 4
 
+		completion_reward = {
+			# Palmerston proposes a compromise, renouncing to the majority in exchange of him keeping his job. If it doesn't stick, he will resing and the parliament will be in chaos.
+		}
 	}
 	focus = {
 		id = ENG_government_of_glass
@@ -142,13 +225,16 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_total_government_meltdown
 		}
-		x = 9
+		x = 7
 		y = 5
 
+		completion_reward = {
+			# Conservatism gets more popularity, add spirit "Cohabitation" which reduces political power gain
+		}
 	}
 	focus = {
 		id = ENG_liberal_leanings
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_support_liberalism
 		cost = 10
 		prerequisite = {
 			focus = ENG_government_of_glass
@@ -156,8 +242,71 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_conservative_leanings
 		}
-		x = 7
+		x = 4
 		y = 6
+
+		completion_reward = {
+			# Liberalism gets more popularity
+		}
+	}
+	focus = {
+		id = ENG_conservative_leanings
+		icon = GFX_goal_focus_support_conservatism
+		cost = 10
+		prerequisite = {
+			focus = ENG_conservative_support
+			focus = ENG_lord_derby
+			focus = ENG_government_of_glass
+		}
+		mutually_exclusive = {
+			focus = ENG_liberal_leanings
+		}
+		x = 0
+		y = 6
+
+		completion_reward = {
+			# Conservatism gets more popularity
+		}
+	}
+	focus = {
+		id = ENG_country_elite
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = ENG_conservative_leanings
+		}
+		mutually_exclusive = {
+			focus = ENG_measures_help_poor
+		}
+		x = 1
+		y = 7
+
+	}
+	focus = {
+		id = ENG_measures_help_poor
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = ENG_liberal_leanings
+			focus = ENG_conservative_leanings
+		}
+		mutually_exclusive = {
+			focus = ENG_country_elite
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = ENG_reforms_industrial_revolution
+		icon = GFX_goal_generic_production2
+		cost = 0
+		prerequisite = {
+			focus = ENG_measures_help_poor
+			focus = ENG_country_elite
+		}
+		x = 2
+		y = 8
 
 	}
 	focus = {
@@ -181,26 +330,25 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_total_government_meltdown
 		}
-		mutually_exclusive = {
-			focus = ENG_the_chartist_revival
-		}
-		x = 10
+		x = 12
 		y = 6
 
 	}
 	focus = {
-		id = ENG_suspend_house_lords
-		icon = GFX_goal_unknown
+		id = ENG_death_prince_albert
+		icon = GFX_goal_focus_death_prince
 		cost = 10
 		prerequisite = {
+			focus = ENG_liberal_leanings
 			focus = ENG_queens_intervention
+			focus = ENG_conservative_leanings
 		}
-		x = 9
+		x = 7
 		y = 7
 
 	}
 	focus = {
-		id = ENG_suspend_house_commons
+		id = ENG_suspend_house_lords
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -211,8 +359,19 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ENG_necessary_mesures
+		id = ENG_suspend_house_commons
 		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_queens_intervention
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = ENG_necessary_mesures
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10
 		prerequisite = {
 			focus = ENG_suspend_house_lords
@@ -220,55 +379,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_suspend_house_commons
 		}
-		x = 10
+		x = 12
 		y = 8
-
-	}
-	focus = {
-		id = ENG_the_chartist_revival
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_total_government_meltdown
-		}
-		mutually_exclusive = {
-			focus = ENG_queens_intervention
-		}
-		x = 13
-		y = 6
-
-	}
-	focus = {
-		id = ENG_topple_houses
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_the_chartist_revival
-		}
-		x = 13
-		y = 7
-
-	}
-	focus = {
-		id = ENG_anti_monarchist_reforms
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_topple_houses
-		}
-		x = 13
-		y = 8
-
-	}
-	focus = {
-		id = ENG_peoples_march_london
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_anti_monarchist_reforms
-		}
-		x = 13
-		y = 9
 
 	}
 	focus = {
@@ -320,7 +432,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_princely_charter
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
 			focus = ENG_south_india_colony
@@ -589,7 +701,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_develop_cape_colony
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_develop_cape_colony
 		cost = 10
 		prerequisite = {
 			focus = ENG_colonial_ambitions
@@ -600,7 +712,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_mining_operations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		prerequisite = {
 			focus = ENG_develop_cape_colony
@@ -611,7 +723,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_develop_natal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_develop_natal
 		cost = 10
 		prerequisite = {
 			focus = ENG_develop_cape_colony
@@ -634,7 +746,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_profits_australian_gold_rush
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_australian_gold_rush
 		cost = 10
 		prerequisite = {
 			focus = ENG_colonial_ambitions
@@ -667,7 +779,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_canadian_development
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_develop_canada
 		cost = 10
 		prerequisite = {
 			focus = ENG_colonial_ambitions
@@ -706,7 +818,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_the_deed_of_surrender
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
 			focus = ENG_accept_confederation_canada
@@ -729,7 +841,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_caribeans
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_develop_british_west_indies
 		cost = 10
 		prerequisite = {
 			focus = ENG_colonial_ambitions
@@ -837,7 +949,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_strengthen_british_trade
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		prerequisite = {
 			focus = ENG_british_home_guards
@@ -865,7 +977,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_prussian_diplomats
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_invite_prussian_diplomats
 		cost = 10
 		prerequisite = {
 			focus = ENG_european_collaboration
@@ -879,7 +991,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_kiel_canal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_kiel_canal
 		cost = 10
 		prerequisite = {
 			focus = ENG_prussian_diplomats
@@ -890,7 +1002,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_secure_north_sea
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_battleship
 		cost = 10
 		prerequisite = {
 			focus = ENG_expand_royal_navy
@@ -902,7 +1014,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_french_diplomats
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_invite_french_diplomats
 		cost = 10
 		prerequisite = {
 			focus = ENG_european_collaboration
@@ -916,7 +1028,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_suez_canal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_suez_canal
 		cost = 10
 		prerequisite = {
 			focus = ENG_french_diplomats
@@ -1008,17 +1120,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ENG_trent_affair
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_sell_boats_confederates
-		}
-		x = 54
-		y = 5
-
-	}
-	focus = {
 		id = ENG_state_atlantic_slave_trade
 		icon = GFX_goal_unknown
 		cost = 10
@@ -1028,6 +1129,17 @@ focus_tree = {
 		}
 		x = 53
 		y = 4
+
+	}
+	focus = {
+		id = ENG_reaction_trent_affair
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_sell_boats_confederates
+		}
+		x = 54
+		y = 6
 
 	}
 	focus = {
@@ -1175,7 +1287,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_listen_veterans
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_mission
 		cost = 10
 		prerequisite = {
 			focus = ENG_peel_commission
@@ -1226,7 +1338,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_dockyard_development
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
 		prerequisite = {
 			focus = ENG_british_navy
@@ -1247,30 +1359,42 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ENG_lord_derby
+		id = ENG_the_chartist_revival
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = ENG_palmerston_resignation
+			focus = ENG_embrace_republican_spirit
 		}
-		x = 6
-		y = 5
+		prerequisite = {
+			focus = ENG_necessary_mesures
+		}
+		mutually_exclusive = {
+			focus = ENG_dilke_reforms
+		}
+		x = 10
+		y = 11
 
 	}
 	focus = {
-		id = ENG_conservative_leanings
+		id = ENG_topple_houses
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = ENG_conservative_support
-			focus = ENG_lord_derby
-			focus = ENG_government_of_glass
+			focus = ENG_the_chartist_revival
 		}
-		mutually_exclusive = {
-			focus = ENG_liberal_leanings
+		x = 11
+		y = 12
+
+	}
+	focus = {
+		id = ENG_peoples_march_london
+		icon = GFX_goal_focus_people_march_london
+		cost = 10
+		prerequisite = {
+			focus = ENG_topple_houses
 		}
-		x = 3
-		y = 6
+		x = 11
+		y = 13
 
 	}
 	focus = {
@@ -1310,18 +1434,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ENG_reforms_industrial_revolution
-		icon = GFX_goal_unknown
-		cost = 0
-		prerequisite = {
-			focus = ENG_measures_help_poor
-			focus = ENG_country_elite
-		}
-		x = 5
-		y = 8
-
-	}
-	focus = {
 		id = ENG_coal_mines_regulation_act
 		icon = GFX_goal_unknown
 		cost = 0
@@ -1331,49 +1443,20 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_measures_help_poor
 		}
-		x = 7
+		x = 4
 		y = 9
 
 	}
 	focus = {
 		id = ENG_factory_acts
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_production2
 		cost = 10
 		prerequisite = {
 			focus = ENG_deregulation_coal_industry
 			focus = ENG_coal_mines_regulation_act
 		}
-		x = 5
+		x = 2
 		y = 10
-
-	}
-	focus = {
-		id = ENG_country_elite
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_conservative_leanings
-		}
-		mutually_exclusive = {
-			focus = ENG_measures_help_poor
-		}
-		x = 4
-		y = 7
-
-	}
-	focus = {
-		id = ENG_measures_help_poor
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ENG_liberal_leanings
-			focus = ENG_conservative_leanings
-		}
-		mutually_exclusive = {
-			focus = ENG_country_elite
-		}
-		x = 6
-		y = 7
 
 	}
 	focus = {
@@ -1392,7 +1475,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_improve_ports
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_amphibious_assault
 		cost = 10
 		prerequisite = {
 			focus = ENG_british_navy
@@ -1425,18 +1508,18 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_country_elite
 		}
-		x = 3
+		x = 0
 		y = 9
 
 	}
 	focus = {
 		id = ENG_develop_banking_system
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_banks_shine
 		cost = 10
 		prerequisite = {
 			focus = ENG_reforms_industrial_revolution
 		}
-		x = 5
+		x = 2
 		y = 9
 
 	}
@@ -1471,6 +1554,212 @@ focus_tree = {
 		}
 		x = 53
 		y = 5
+
+	}
+	focus = {
+		id = ENG_victoria_mourning
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_death_prince_albert
+		}
+		x = 7
+		y = 8
+
+	}
+	focus = {
+		id = ENG_embrace_republican_spirit
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_question_monarchy
+		}
+		mutually_exclusive = {
+			focus = ENG_keep_the_parliament
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = ENG_keep_the_parliament
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_question_monarchy
+		}
+		mutually_exclusive = {
+			focus = ENG_embrace_republican_spirit
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = ENG_dilke_reforms
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_embrace_republican_spirit
+		}
+		mutually_exclusive = {
+			focus = ENG_the_chartist_revival
+		}
+		x = 7
+		y = 11
+
+	}
+	focus = {
+		id = ENG_reinforce_status_quo
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = ENG_keep_the_parliament
+		}
+		prerequisite = {
+			focus = ENG_factory_act
+		}
+		x = 5
+		y = 11
+
+	}
+	focus = {
+		id = ENG_reform_act_1867
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = ENG_reinforce_status_quo
+		}
+		x = 5
+		y = 12
+
+	}
+	focus = {
+		id = ENG_disestablish_chruch_ireland
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = ENG_reform_act_1867
+		}
+		x = 5
+		y = 13
+
+	}
+	focus = {
+		id = ENG_victoria_return_scene
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_disestablish_chruch_ireland
+		}
+		x = 5
+		y = 14
+
+	}
+	focus = {
+		id = ENG_question_monarchy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_victoria_mourning
+		}
+		x = 7
+		y = 9
+
+	}
+	focus = {
+		id = ENG_weaken_house_lords
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_dilke_reforms
+		}
+		x = 7
+		y = 12
+
+	}
+	focus = {
+		id = ENG_question_church_england
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_dilke_reforms
+			focus = ENG_the_chartist_revival
+		}
+		x = 9
+		y = 12
+
+	}
+	focus = {
+		id = ENG_empower_house_commons
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_weaken_house_lords
+		}
+		x = 7
+		y = 13
+
+	}
+	focus = {
+		id = ENG_reform_british_administration
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ENG_question_church_england
+		}
+		x = 9
+		y = 13
+
+	}
+	focus = {
+		id = ENG_abolish_british_monarchy
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10
+		prerequisite = {
+			focus = ENG_empower_house_commons
+		}
+		prerequisite = {
+			focus = ENG_reform_british_administration
+		}
+		x = 8
+		y = 14
+
+	}
+	focus = {
+		id = ENG_chase_dynasty
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10
+		prerequisite = {
+			focus = ENG_peoples_march_london
+		}
+		x = 10
+		y = 14
+
+	}
+	focus = {
+		id = ENG_peoples_commity
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10
+		prerequisite = {
+			focus = ENG_peoples_march_london
+		}
+		x = 12
+		y = 14
+
+	}
+	focus = {
+		id = ENG_proclaim_british_socialist_republic
+		icon = GFX_goal_focus_revolutionary_council
+		cost = 10
+		prerequisite = {
+			focus = ENG_chase_dynasty
+		}
+		prerequisite = {
+			focus = ENG_peoples_commity
+		}
+		x = 11
+		y = 15
 
 	}
 }

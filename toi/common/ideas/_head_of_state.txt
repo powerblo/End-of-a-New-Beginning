@@ -1,5 +1,24 @@
 ideas = {
 	head_of_state = {
+		# AUS
+		AUS_Franz_Joseph_I = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_Franz_Joseph_I
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+
 		# BEL
 		BEL_Leopold_I = {
 			allowed = {
@@ -13,6 +32,25 @@ ideas = {
 			removal_cost = -1
 
 			picture = BEL_Leopold_I
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+
+		# DEN
+		DEN_Frederick_VII = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DEN_Frederick_VII
 			
 			modifier = {
 				unity_factor = 0.1
@@ -38,6 +76,30 @@ ideas = {
 			}
 		}
 
+		#ENG_colonial
+
+		ENG_colonial_Victoria = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_Victoria
+
+			traits = { 
+				hos_trait_colonial_monarch
+			}
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+
 		# GRE
 		GRE_Otto_I = {
 			allowed = {
@@ -57,6 +119,25 @@ ideas = {
 			}
 		}
 
+		# HOL
+		HOL_William_III = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = HOL_William_III
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+
 		# ITA
 		ITA_Victor_Emmanuel_II = {
 			allowed = {
@@ -70,6 +151,25 @@ ideas = {
 			removal_cost = -1
 
 			picture = ITA_Victor_Emmanuel_II
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+
+		# OTO
+		OTO_Abdulmecid = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = OTO_Abdulmecid
 			
 			modifier = {
 				unity_factor = 0.1
@@ -130,6 +230,25 @@ ideas = {
 			removal_cost = -1
 
 			picture = PRS_Wilhelm_I
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+
+		# RUS
+		RUS_Alexander_II = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_Alexander_II
 			
 			modifier = {
 				unity_factor = 0.1

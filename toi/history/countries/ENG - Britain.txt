@@ -125,7 +125,7 @@
 	#Conservative
 	create_country_leader = {
 		name = "Edward Smith-Stanley"
-		picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
+		picture = "Portrait_ENG_Edward_Smith_Stanley.dds"
 		expire = "1859.6.11"
 		ideology = conserv
 	}
@@ -136,6 +136,16 @@
 		picture = "Portrait_ENG_William_Lovett.dds"
 		expire = "1877.1.1"
 		ideology = anarchism
+		traits = {
+
+		}
+	}
+
+	create_country_leader = {
+		name = "George Julian Harney"
+		picture = "Portrait_ENG_George_Julian_Harney.dds"
+		expire = "1877.1.1"
+		ideology = marxism
 		traits = {
 
 		}
@@ -242,38 +252,38 @@
 	}
 
 	set_politics = {
-    parties = {
-      economic_liberalism = {
-        popularity = 66
-      }
-      traditional_conservatism = {
-        popularity = 34
-      }
-      social_democracy = {
-        popularity = 0
-      }
-      radical_socialism = {
-        popularity = 0
-      }
-      marxism_leninism = {
-        popularity = 0
-      }
-      despotic_autocracy = {
-        popularity = 0
-      }
-      parliamental_oligarchy = {
-        popularity = 0
-      }
-      totalitarian_nationalism = {
-        popularity = 0
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
-        popularity = 0
-      }
-    }
+	    parties = {
+	      economic_liberalism = {
+	        popularity = 66
+	      }
+	      traditional_conservatism = {
+	        popularity = 34
+	      }
+	      social_democracy = {
+	        popularity = 0
+	      }
+	      radical_socialism = {
+	        popularity = 0
+	      }
+	      marxism_leninism = {
+	        popularity = 0
+	      }
+	      despotic_autocracy = {
+	        popularity = 0
+	      }
+	      parliamental_oligarchy = {
+	        popularity = 0
+	      }
+	      totalitarian_nationalism = {
+	        popularity = 0
+	      }
+	      rexism_falangism = {
+	        popularity = 0
+	      }
+	      theocracy = {
+	        popularity = 0
+	      }
+	    }
 
     	ruling_party = economic_liberalism
 	}
