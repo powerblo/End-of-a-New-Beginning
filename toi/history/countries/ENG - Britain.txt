@@ -1,6 +1,5 @@
 ﻿capital = 126
 
-1857.5.11 = {
 	oob = "ENG_1857"
 
 	add_ideas = ENG_Victoria
@@ -94,11 +93,6 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
-		#set_autonomy = {
-		#	target = SRW
-		#	autonomous_state = autonomy_colony
-		#	freedom_level = 0.2
-		#}
 		set_autonomy = {
 			target = HYD
 			autonomous_state = autonomy_princely_state
@@ -234,7 +228,6 @@
 	set_technology = {
 		infantry_weapons = 1
 		rifle_equipment1 = 1
-
 		hand_revolvers = 1
 		socket_bayonet = 1
 		vic_army_cloth = 1
@@ -246,7 +239,6 @@
 		improved_smoothbore = 1
 		early_howitzer = 1
 		foureight_frigate = 1
-		#early_rockets = 1
 		early_destroyer = 1 transport = 1
 		fivesix_frigate = 1
 	}
@@ -288,11 +280,6 @@
     	ruling_party = economic_liberalism
 	}
 
-
-}
-
-oob = "ENG_1861"
-
 if = {
 	limit = {
 		has_dlc = "Together for Victory"
@@ -327,44 +314,3 @@ set_research_slots = 4
 set_national_unity = 0.6
 
 set_convoys = 100
-
-set_politics = {
-
-	parties = {
-	economic_liberalism = {
-		popularity = 66
-	}
-	traditional_conservatism = {
-		popularity = 34
-	}
-	social_democracy = {
-		popularity = 0
-	}
-	radical_socialism = {
-		popularity = 0
-	}
-	marxism_leninism = {
-		popularity = 0
-	}
-	despotic_autocracy = {
-		popularity = 0
-	}
-	parliamental_oligarchy = {
-		popularity = 0
-	}
-	totalitarian_nationalism = {
-		popularity = 0
-	}
-	rexism_falangism = {
-		popularity = 0
-	}
-	theocracy = {
-		popularity = 0
-	}
-	}
-
-	ruling_party = economic_liberalism
-	last_election = "1835.11.14"
-	election_frequency = 48
-	elections_allowed = no
-}

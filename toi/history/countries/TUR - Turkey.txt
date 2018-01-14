@@ -1,6 +1,6 @@
 ﻿capital = 49
 
-oob = "TUR_1936"
+oob = "TUR_1857"
 
 set_research_slots = 3
 
@@ -42,40 +42,6 @@ set_politics = {
 
 set_convoys = 20
 set_national_unity = 0.55
-
-# Atatürk still alive in '36, however, Inönü was already Prime Minister (but not President)
-create_country_leader = {
-	name = "Ismet Inönü"
-	desc = "POLITICS_ISMET_INÖNÜ_DESC"
-	picture = "Portrait_Turkey_Ismet_Inonu.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mustafa Kemal Atatürk"
-	desc = "POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
-	picture = "gfx/leaders/TUR/Portrait_Turkey_Mustafa_Kemal_Ataturk.dds"
-	expire = "1938.11.10"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sefik Hüsnü"
-	desc = "POLITICS_SEFIK_HUSNU_DESC"
-	picture = "gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
 
 create_country_leader = {
 	name = "Celâl Bayar"
@@ -127,18 +93,4 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
 	traits = {  }
 	skill = 2
-}
-
-
-### Ship Variants ###
-
-create_equipment_variant = {
-	name = "Dumlupinar Class"
-	type = submarine_1
-	upgrades = {
-		ship_reliability_upgrade = 2
-		sub_engine_upgrade = 2
-		sub_stealth_upgrade = 2
-		sub_torpedo_upgrade = 2
-	}
 }

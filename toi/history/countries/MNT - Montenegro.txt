@@ -1,34 +1,23 @@
 ﻿capital = 105 # Montenegro
 
-oob = "MON_1936"
+oob = "MON_1857"
 
-set_research_slots = 3
-
-# Starting tech
-# clone of Yugoslavia
-set_technology = {
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	early_fighter = 1
-	basic_light_tank = 1
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-}
+set_research_slots = 2
 
 set_politics = {
 
 	parties = {
 		totalitarian_nationalism = { 
-			popularity = 33
+			popularity = 0
 		}
 		despotic_autocracy = { 
-			popularity = 33
+			popularity = 100
 		}		
 		marxism_leninism = {
-			popularity = 34
+			popularity = 0
 		}
 	}
+	 ruling_party = despotic_autocracy
 }
 
 create_country_leader = {

@@ -1,6 +1,6 @@
 ﻿capital = 814
 
-oob = "FRA_1861"
+oob = "FRA_1857"
 
 set_convoys = 150
 
@@ -66,7 +66,6 @@ set_politics = {
 set_technology = {
 	infantry_weapons = 1
 	rifle_equipment1 = 1
-	 
 	hand_revolvers = 1
 	socket_bayonet = 1
 	vic_army_cloth = 1
@@ -78,7 +77,6 @@ set_technology = {
 	improved_smoothbore = 1
 	early_howitzer = 1
 	foureight_frigate = 1
-	#early_rockets = 1
 	early_destroyer = 1 transport = 1
 	fivesix_frigate = 1
 }
@@ -267,54 +265,4 @@ create_navy_leader = {
   picture = "Portrait_FRA_Francois_Thomas_Trehouart.dds"
   traits = { }
   skill = 3
-}
-
-
-1857.5.11 = {
-oob = "FRA_1857"
-
-set_politics = {
-    parties = {
-      economic_liberalism = {
-        popularity = 13
-      }
-      traditional_conservatism = {
-        popularity = 17
-      }
-      social_democracy = {
-        popularity = 1
-      }
-      radical_socialism = {
-        popularity = 1
-      }
-      marxism_leninism = {
-        popularity = 2
-      }
-      despotic_autocracy = {
-        popularity = 58
-      }
-      parliamental_oligarchy = {
-        popularity = 7
-      }
-      totalitarian_nationalism = {
-        popularity = 1
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
-        popularity = 0
-      }
-    }
-
-	ruling_party = despotic_autocracy
-}
-
-set_technology = {
-  infantry_weapons = 1
-  basic_cavalry = 1
-  gw_artillery = 1
-  vic_army_cloth = 1
-}
-
 }
