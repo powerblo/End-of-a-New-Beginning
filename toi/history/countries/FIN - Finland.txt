@@ -2,6 +2,19 @@
 
 oob = "FIN_1857"
 
+RUS = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = FIN
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  }
+}
+
 set_politics = {
     parties = {
       economic_liberalism = {
@@ -47,9 +60,9 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Friedrich Wilhelm Rembert von Berg"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
+    picture = "Portrait_FIN_Friedrich_Wilhelm_Rembert_von_Berg.dds"
     expire = 2000.09.10
     ideology = despotism
 }

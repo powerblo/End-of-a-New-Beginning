@@ -1,8 +1,20 @@
-﻿capital = 105 # Montenegro
+﻿capital = 942 # Montenegro
 
 oob = "MON_1857"
 
-set_research_slots = 2
+OTO = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = BOS
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  }
+}
+
 
 set_politics = {
 

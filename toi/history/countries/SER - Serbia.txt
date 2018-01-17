@@ -2,6 +2,19 @@
 
 oob = "SER_1857"
 
+OTO = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = SER
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  }
+}
+
 set_politics = {
     parties = {
       economic_liberalism = {
@@ -47,9 +60,9 @@ set_technology = {
 }
 
 create_country_leader = {
-    name = "powerblo"
+    name = "Aleksandar Karađorđević"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
+    picture = "Portrait_SER_Aleksandar_Karadordevic.dds"
     expire = 2000.09.10
     ideology = despotism
 }
