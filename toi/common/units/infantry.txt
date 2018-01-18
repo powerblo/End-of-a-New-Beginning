@@ -126,6 +126,46 @@ sub_units = {
 		uniform_equipment = 750
 	}
 	}
+	
+	tribal_infantry = {
+	sprite = infantry
+	map_icon_category = infantry
+
+	priority = 600
+	active = yes
+
+	type = {
+		infantry
+	}
+
+	group = infantry
+
+	categories = {
+		category_front_line
+		category_light_infantry
+		category_all_infantry
+		category_army
+	}
+
+	combat_width = 1
+
+	#Size Definitions
+	max_strength = 5
+	max_organisation = 15
+	default_morale = 0.2
+	manpower = 1000
+
+	#Misc Abilities
+	training_time = 180
+	suppression = 0.25
+	weight = 0.5
+
+	supply_consumption = 0.05
+
+	need = {
+		tribal_weapons = 500
+	}
+	}
 
 	mounted_infantry = {
 		sprite = cavalry
