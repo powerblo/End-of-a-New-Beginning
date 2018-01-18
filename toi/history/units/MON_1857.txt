@@ -1,0 +1,17 @@
+﻿division_template = {
+	name = "Infantry"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 1 y = 0 }
+	}
+}
+
+units = {
+		division= {
+			name = "1st Infantry"
+			location = 9809
+			division_template = "Infantry"
+			start_experience_factor = 0.1
+		}
+}

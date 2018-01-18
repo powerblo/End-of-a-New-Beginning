@@ -1,0 +1,30 @@
+﻿division_template = {
+  name = "Chinese Infantry"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0 }
+    line_infantry = { x = 0 y = 1 }
+	line_infantry = { x = 0 y = 2 }
+  }
+}
+
+units = {
+		division= {
+			name = "1st Chinese Infantry"
+			location = 4504
+			division_template = "Chinese Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Infantry"
+			location = 4504
+			division_template = "Chinese Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Infantry"
+			location = 4504
+			division_template = "Chinese Infantry"
+			start_experience_factor = 0.1
+		}
+}
