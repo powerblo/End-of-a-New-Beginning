@@ -397,3 +397,17 @@ no_artillery = {
 		value = -100 
 	}
 }
+no_tribal = {
+	enable = {
+		num_divisions > 20
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = tribal_infantry
+		value = -100
+	}
+}
