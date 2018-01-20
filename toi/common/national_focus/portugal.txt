@@ -1,0 +1,118 @@
+focus_tree = {
+	id = portugal_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POR
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = POR_Consolidate_Regeneracao
+		icon = GFX_goal_generic_propaganda
+		x = 7
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_Internal_Reform
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = POR_Consolidate_Regeneracao }
+		
+		completion_reward = {
+			add_national_unity = 0.05
+		}
+	}
+	
+	focus = {
+		id = POR_British_Ties
+		icon = GFX_goal_generic_improve_relations
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = POR_Consolidate_Regeneracao }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = POR_ENG_Focus }
+			reverse_add_opinion_modifier = { target = ENG modifier = POR_ENG_Focus }
+		}
+	}
+	
+	focus = {
+		id = POR_Prepare_Constitution
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = POR_Internal_Reform }
+		
+		completion_reward = {
+			add_ideas = POR_Early_Constitution	
+		}
+	}
+	
+	focus = {
+		id = POR_Power_to_King
+		icon = GFX_focus_generic_home_defense
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = POR_Prepare_Constitution }
+		mutually_exclusive = { focus = POR_Regeneracao_continue }
+		
+		completion_reward = {
+			add_popularity = { ideology = traditional_conservatism popularity = 0.125 }
+		}
+	}
+	
+	focus = {
+		id = POR_Regeneracao_continue
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = POR_Prepare_Constitution }
+		mutually_exclusive = { focus = POR_Power_to_King }
+		
+		completion_reward = {
+			add_popularity = { ideology = social_democracy popularity = 0.125 }
+		}
+	}
+}
