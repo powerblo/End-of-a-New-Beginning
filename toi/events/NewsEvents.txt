@@ -24,3 +24,19 @@ news_event = {
 		trigger = { TAG = PIE }
 	}
 }
+
+#POR descends into civil war
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_mex_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+	}
+}
