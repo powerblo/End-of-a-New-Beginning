@@ -248,6 +248,7 @@ country_event = {
 }
 
 #The Situation calms down
+country_event = {
 		id = portugal.11
 		title = portugal.11.t
 		desc = portugal.11.d
@@ -256,5 +257,83 @@ country_event = {
 		
 		option = {
 			name = portugal.11.a
+		}
+}
+
+#Portugal claims Olivenza
+country_event = {
+		id = portugal.12
+		title = portugal.12.t
+		desc = portugal.12.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = portugal.12.a
+			ai_chance = { factor = 100 }
+			POR = { country_event = { days = 1 id = portugal.13 } }
+		}
+		
+		option = {
+			name = portugal.12.b
+			ai_chance = { factor = 0 }
+			POR = { country_event = { days = 1 id = portugal.14 } }
+		}
+}
+
+#Spain says yes
+country_event = {
+		id = portugal.13
+		title = portugal.13.t
+		desc = portugal.13.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = portugal.13.a
+			POR = { transfer_state = 807 }
+			add_opinion_modifier = { target = SPR modifier = POR_SPR_Olivenza2 }
+			reverse_add_opinion_modifier = { target = SPR modifier = POR_SPR_Olivenza2 }
+			hidden_effect = {
+				news_event = news.3
+			}
+		}
+}
+
+#Spain says no
+country_event = {
+		id = portugal.14
+		title = portugal.14.t
+		desc = portugal.14.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = portugal.14.a
+			add_opinion_modifier = { target = SPR modifier = POR_SPR_Olivenza }
+			reverse_add_opinion_modifier = { target = SPR modifier = POR_SPR_Olivenza }
+		}
+}
+
+#Portugal claims Galicia
+country_event = {
+		id = portugal.15
+		title = portugal.15.t
+		desc = portugal.15.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = portugal.15.a
+			ai_chance = { factor = 90 }
+			add_opinion_modifier = { target = POR modifier = POR_SPR_Galicia }
+			reverse_add_opinion_modifier = { target = POR modifier = POR_SPR_Galicia }
+		}
+		
+		option = {
+			name = portugal.15.b
+			ai_chance = { factor = 10 }
+			POR = { transfer_state = 171 }
+			POR = { add_state_core = 171 }
 		}
 }
