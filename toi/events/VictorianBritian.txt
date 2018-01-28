@@ -3,6 +3,9 @@
      ################
 
 add_namespace = vbritian
+add_namespace = vbritian_election
+add_namespace = vbritian_civil_war
+add_namespace = vbritian_civil_war_news
 
 
 country_event = {
@@ -89,5 +92,248 @@ country_event = {
 		hidden_effect = {			
 		    set_country_flag = britian_child_labour_crush		
 		}
+	}
+}
+
+country_event = { 	#General Election 1865
+	id = vbritian_election.1865
+	title = vbritian_election.1865.t	
+	desc = vbritian_election.1865.d		
+	picture = GFX_report_event_saf_soldiers
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = ENG
+		date > 1865.5.1
+		NOT = { has_completed_focus = ENG_queens_intervention }
+	}
+
+	
+	option = { #Edward Smith-Stanley
+		name = vbritian_election.1865.a	
+		
+		create_country_leader = {
+			name = "Edward Smith-Stanley"
+			picture = "Portrait_ENG_Edward_Smith_Stanley.dds"
+			expire = "1870.6.11"
+			ideology = conserv
+		}
+		set_politics = {
+		    ruling_party = traditional_conservatism
+		}
+	}
+
+	option = { #Palmerston
+		name = vbritian_election.1865.b	
+		
+		create_country_leader = {
+			name = "Lord Palmerston"
+			picture = "Portrait_ENG_Lord_Palmerston.dds"
+			expire = "1870.2.19"
+			ideology = market_liberal
+		}
+		set_politics = {
+		    ruling_party = economic_liberalism
+		}
+	}
+
+	option = { #Dilke
+		name = vbritian_election.1865.c
+
+		create_country_leader = {
+			name = "Charles Dilke"
+			picture = "Portrait_ENG_Charles_Dilke.dds"
+			expire = "1870.1.1"
+			ideology = social_liberal
+		}
+		set_politics = {
+		    ruling_party = economic_liberalism
+		}
+	}
+}
+
+country_event = { 	#Victoria Intervention, People demands an election
+	id = vbritian_civil_war.1
+	title = vbritian_civil_war.1.t	
+	desc = vbritian_civil_war.1.d		
+	picture = GFX_report_event_saf_soldiers
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = ENG
+		date > 1865.5.1
+		has_completed_focus = ENG_queens_intervention
+	}
+
+	
+	option = { #Fine
+		name = vbritian_civil_war.1.a	
+		
+		add_political_power = -15
+
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_election.1865
+		    	days = 15
+		    }
+		}
+	}
+
+	option = { #No
+		name = vbritian_civil_war.1.b	
+		
+		add_political_power = -50
+
+		custom_effect_tooltip = vbritian_civil_war_start
+
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_civil_war.2
+		    	days = 15
+		    }			
+		}
+	}
+}
+
+country_event = { 	#Protest over the Decision
+	id = vbritian_civil_war.2
+	title = vbritian_civil_war.2.t	
+	desc = vbritian_civil_war.2.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = yes
+	
+	option = { #Let the protest be
+		name = vbritian_civil_war.2.a	
+		
+		add_political_power = -50
+
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_civil_war.3
+		    	days = 30
+		    }
+		}
+	}
+
+	option = { #Fight the protest
+		name = vbritian_civil_war.2.b	
+		
+		add_political_power = -15
+
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_civil_war.3
+		    	days = 10
+		    }			
+		}
+	}
+}
+
+country_event = { 	#People storms the parliament
+	id = vbritian_civil_war.3
+	title = vbritian_civil_war.3.t	
+	desc = vbritian_civil_war.3.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = yes
+	
+	option = { #What can go wrong?
+		name = vbritian_civil_war.3.a	
+		
+		add_political_power = -25
+
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_civil_war.4
+		    	hours = 15
+		    }
+		}
+	}
+}
+
+country_event = { 	#Ex-Chartist Takeover
+	id = vbritian_civil_war.4
+	title = vbritian_civil_war.4.t	
+	desc = vbritian_civil_war.4.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = yes
+	
+	option = { #The Socialists will not stand !
+		name = vbritian_civil_war.4.a	
+		
+		custom_effect_tooltip = vbritian_civil_war_loyalist
+
+		hidden_effect = {			
+			set_country_flag = vbritian_civil_war_loyalist
+		    country_event = {
+		    	id = vbritian_civil_war.5
+		    	hours = 15
+		    }
+		}
+	}
+
+	option = { #For the proletariat !
+		name = vbritian_civil_war.4.b	
+		
+		custom_effect_tooltip = vbritian_civil_war_chartist
+
+		hidden_effect = {		
+			set_country_flag = vbritian_civil_war_chartist	
+		    country_event = {
+		    	id = vbritian_civil_war.5
+		    	hours = 15
+		    }
+		}
+	}
+}
+
+country_event = { 	#Fights in the streets of London
+	id = vbritian_civil_war.5
+	title = vbritian_civil_war.5.t	
+	desc = vbritian_civil_war.5.d		
+	picture = GFX_report_event_saf_soldiers					
+	
+	is_triggered_only = yes
+	
+	option = { #People of London, rise up against the oppressor !
+		name = vbritian_civil_war.5.a	
+		
+		limit = {
+			has_country_flag = vbritian_civil_war_chartist
+		}
+
+		hidden_effect = {			
+		    set_global_flag = ENG_victorian_civil_war
+		    news_event = vbritian_civil_war_news.1
+		}
+	}
+
+	option = { #Citizens of Great Britain, fight the anarchists !
+		name = vbritian_civil_war.5.b	
+
+		limit = {
+			has_country_flag = vbritian_civil_war_loyalist
+		}
+
+		hidden_effect = {			
+		    set_global_flag = ENG_victorian_civil_war
+		    news_event = vbritian_civil_war_news.1
+		}
+	}
+}
+
+news_event = { #The British civil war
+	id = vbritian_civil_war_news.1
+	title = vbritian_civil_war_news.1.t
+	desc = vbritian_civil_war_news.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = vbritian_civil_war_news.1.a
 	}
 }

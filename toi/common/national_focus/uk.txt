@@ -43,7 +43,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_industrial_revolution
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_industrial_revolution
 		cost = 10
 		x = 66
 		y = 0
@@ -1211,7 +1211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_transatlantic_telegraph_line
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_telegraph_lines
 		cost = 10
 		prerequisite = {
 			focus = ENG_london_metropolitan_railway
@@ -1366,11 +1366,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_embrace_republican_spirit
 		}
-		prerequisite = {
-			focus = ENG_necessary_mesures
-		}
 		mutually_exclusive = {
 			focus = ENG_dilke_reforms
+		}
+		mutually_exclusive = {
+			focus = ENG_counter_the_revolution
 		}
 		x = 10
 		y = 11
@@ -1396,6 +1396,107 @@ focus_tree = {
 		}
 		x = 11
 		y = 13
+
+	}
+	focus = {
+		id = ENG_counter_the_revolution
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_question_monarchy
+		}
+		mutually_exclusive = {
+			focus = ENG_the_chartist_revival
+		}
+		x = 15
+		y = 11
+
+	}
+	focus = {
+		id = ENG_full_power_queen
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_counter_the_revolution
+		}
+		mutually_exclusive = {
+			focus = ENG_military_junta
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = ENG_military_junta
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_counter_the_revolution
+		}
+		mutually_exclusive = {
+			focus = ENG_full_power_queen
+		}
+		x = 16
+		y = 12
+
+	}
+	focus = {
+		id = ENG_settle_new_headquarters
+		icon = GFX_goal_generic_fortify_city
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_full_power_queen
+		}
+		prerequisite = {
+			focus = ENG_military_junta
+		}
+		x = 15
+		y = 13
+
+	}
+	focus = {
+		id = ENG_loyalist_mobilization
+		icon = GFX_focus_generic_little_entente
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_settle_new_headquarters
+		}
+		x = 15
+		y = 14
+
+	}
+	focus = {
+		id = ENG_valient_kingdom
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_full_power_queen
+		}
+		prerequisite = {
+			focus = ENG_loyalist_mobilization
+		}
+		mutually_exclusive = {
+			focus = ENG_british_military_government
+		}
+		x = 14
+		y = 15
+
+	}
+	focus = {
+		id = ENG_british_military_government
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = ENG_loyalist_mobilization
+		}
+		prerequisite = {
+			focus = ENG_military_junta
+		}
+		mutually_exclusive = {
+			focus = ENG_valient_kingdom
+		}
+		x = 16
+		y = 15
 
 	}
 	focus = {
@@ -1578,7 +1679,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_keep_the_parliament
 		}
-		x = 9
+		x = 7
 		y = 10
 
 	}
