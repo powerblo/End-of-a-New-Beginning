@@ -1,30 +1,40 @@
 ﻿division_template = {
-  name = "Chinese Infantry"
+  name = "Panthay Rebel Line Infantry"
 
   regiments = {
-    line_infantry = { x = 0 y = 0 }
-    line_infantry = { x = 0 y = 1 }
-	line_infantry = { x = 0 y = 2 }
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 2 y = 0}
+	line_infantry = { x = 3 y = 0}
+  }
+}
+
+division_template = {
+  name = "Panthay Rebel Cavalry"
+
+  regiments = {
+    light_cavalry = { x = 0 y = 0}
+    light_cavalry = { x = 1 y = 0}
   }
 }
 
 units = {
 		division= {
-			name = "1st Chinese Infantry"
-			location = 4504
-			division_template = "Chinese Infantry"
+			name = "1st Panthay Rebel Line Infantry"
+			location = 4628
+			division_template = "Panthay Rebel Line Infantry"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "2nd Chinese Infantry"
-			location = 4504
-			division_template = "Chinese Infantry"
+			name = "2nd Panthay Rebel Line Infantry"
+			location = 4628
+			division_template = "Panthay Rebel Line Infantry"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "3rd Chinese Infantry"
-			location = 4504
-			division_template = "Chinese Infantry"
+			name = "3rd Panthay Rebel Line Infantry"
+			location = 4628
+			division_template = "Panthay Rebel Line Infantry"
 			start_experience_factor = 0.1
 		}
 }
