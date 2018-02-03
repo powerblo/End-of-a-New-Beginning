@@ -29,22 +29,22 @@ if = {
 set_politics = {
     parties = {
       economic_liberalism = {
-        popularity = 0
+        popularity = 10
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 15
       }
       social_democracy = {
-        popularity = 0
+        popularity = 8
       }
       radical_socialism = {
-        popularity = 0
+        popularity = 2
       }
       marxism_leninism = {
         popularity = 0
       }
       despotic_autocracy = {
-        popularity = 100
+        popularity = 65
       }
       parliamental_oligarchy = {
         popularity = 0
@@ -90,12 +90,23 @@ create_country_leader = {
 	ideology = leninism
 	traits = { }
 }
+
 create_country_leader = {
   name = "Pierre Joseph Proudhon"
   desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
   picture = "Portrait_FRA_Pierre_Joseph_Proudhon.dds"
   expire = "1865.1.1"
   ideology = anarchism
+  traits = { }
+}
+
+create_country_leader = {
+  name = "Henri Tolain"
+  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+  picture = "Portrait_FRA_Henri_Tolain.dds"
+  expire = "1865.1.1"
+  ideology = anarchism
+  # ideology = socialist ######## NEEDS TO BE THAT WHEN THE IDEOLOGY WILL CHANGE
   traits = { }
 }
 
@@ -169,6 +180,15 @@ create_country_leader = {
   expire = "1865.1.1"
   ideology = christian
   traits = { }
+}
+
+create_field_marshal = {
+  name = "Pierre Joseph François Bosquet"
+  id = 10001
+  picture = "Portrait_FRA_Pierre_Joseph_Francois_Bosquet.dds"
+  traits = { offensive_doctrine }
+  skill = 3
+  
 }
 
 create_corps_commander = {
