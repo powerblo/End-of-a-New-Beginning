@@ -1,3 +1,95 @@
 technologies = {
 
+	armor_train_experiment = {
+	
+		category_all_armor = {
+			defense = 0.02
+		}
+	
+		path = {
+			leads_to_tech = armor_train_early
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1860
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+		}
+	}
+	
+	armor_train_early = {
+	
+		enable_equipments = {
+			early_armor_train_0
+		}
+		
+		enable_subunits = {
+			armor_train_company
+		}
+		
+		research_cost = 2
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+		}
+	}
 }
