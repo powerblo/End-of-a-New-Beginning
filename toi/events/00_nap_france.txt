@@ -12,7 +12,7 @@ country_event = { # Future of the Empire
   id = nap_france.1
   title = nap_france.1.t
   desc = nap_france.1.d
-  picture = GFX_report_event_nap_france_exposition_universelle_1867
+  picture = GFX_report_event_nap_france_tuilleries
 
   fire_only_once = yes
   is_triggered_only = yes
@@ -46,7 +46,7 @@ country_event = { # Redrawing of the Cantons
   id = nap_france.2
   title = nap_france.2.t
   desc = nap_france.2.d
-  picture = GFX_report_event_nap_france_exposition_universelle_1867
+  picture = GFX_report_event_nap_france_redraw_cantons
 
   fire_only_once = yes
   is_triggered_only = yes
@@ -922,6 +922,7 @@ country_event = { # Switzerland - Accepted
 
   option = {
       name = nap_france.351.a
+      give_guarantee = SWI
     }
 }
 
@@ -1674,6 +1675,7 @@ country_event = { # Orisini Affair
           days = 1
         }
       }
+      set_country_flag = fra_orsini_failure
     }
 }
 
