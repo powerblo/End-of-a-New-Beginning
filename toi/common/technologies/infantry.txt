@@ -41,6 +41,10 @@ technologies = {
 		enable_equipments = {
 			rifle_equipment_0
 		}
+		
+		dependencies = {
+			tribaltech = 0
+		}
 
 		enable_subunits = {
 			line_infantry
@@ -1167,10 +1171,10 @@ technologies = {
 	gatling_gun = {
 
 		research_cost = 1
-		start_year = 1860
+		start_year = 1865
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1860}
+			position = { x = 4 y = @1865}
 		}
 
 		enable_equipments = {
@@ -1197,14 +1201,14 @@ technologies = {
 	lighter_designs = {
 
 		research_cost = 1
-		start_year = 1864
+		start_year = 1868
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1864}
+			position = { x = 4 y = @1868}
 		}
 
 		path = {
-			leads_to_tech = improved_fire_rate
+			leads_to_tech = mitrailleuse
 		}
 
 		machine_gun_company = {
@@ -1219,14 +1223,40 @@ technologies = {
 			factor = 20
 		}
 	}
+	
+	mitrailleuse = {
+
+		research_cost = 1
+		start_year = 1870
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1870}
+		}
+		
+		path = {
+			leads_to_tech = improved_fire_rate
+		}
+
+		enable_equipments = {
+			machine_gun_equipment_1
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
 
 	improved_fire_rate = {
 
 		research_cost = 1
-		start_year = 1868
+		start_year = 1874
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1868}
+			position = { x = 4 y = @1874}
 		}
 
 		path = {
@@ -1250,10 +1280,10 @@ technologies = {
 	enhanced_rotary = {
 
 		research_cost = 1
-		start_year = 1874
+		start_year = 1876
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1874}
+			position = { x = 4 y = @1876}
 		}
 
 		path = {
@@ -1284,7 +1314,7 @@ technologies = {
 		}
 
 		enable_equipments = {
-			machine_gun_equipment_1
+			machine_gun_equipment_2
 		}
 
 		categories = {
