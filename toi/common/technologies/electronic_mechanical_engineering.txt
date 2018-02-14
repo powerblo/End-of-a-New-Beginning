@@ -67,4 +67,600 @@ technologies = {
 		
 	}
 	
+	new_science_thought = {
+	
+		research_time_factor = -0.02
+	
+		path = {
+			leads_to_tech = extraction_tech
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = precision_tools
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	extraction_tech = {
+	
+		local_resources_factor = 0.05
+	
+		path = {
+			leads_to_tech = periodic_table
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	periodic_table = {
+	
+		research_time_factor = -0.02
+	
+		path = {
+			leads_to_tech = modern_chemistry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	modern_chemistry = {
+	
+		industrial_capacity_factory = 0.05
+	
+		path = {
+			leads_to_tech = early_test_explosive
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	early_test_explosive = {
+	
+		local_resources_factor = 0.05
+	
+		path = {
+			leads_to_tech = plastic_explosives
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1875
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			explosives_tech
+		}
+	}
+	
+	plastic_explosives = {
+	
+		army_infantry_attack_factor = 0.08
+		
+		research_cost = 1.5
+		start_year = 1880
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		dependencies = {
+			blasting_cap = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1895.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			explosives_tech
+		}
+	}
+	
+	precision_tools = {
+	
+		production_factory_max_efficiency_factor = 0.05
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = comms_eng_tech
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mil_eng_tech
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	mil_eng_tech = {
+	
+		production_speed_arms_factory_factor = 0.05
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = dynamite_eng
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+		}
+	}
+	
+	dynamite_eng = {
+	
+		local_resources_factor = 0.02
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		path = {
+			leads_to_tech = blasting_cap
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			explosives_tech
+		}
+	}
+	
+	blasting_cap = {
+	
+		army_morale_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1875
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		path = {
+			leads_to_tech = plastic_explosives
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			explosives_tech
+		}
+	}
+	
+	comms_eng_tech = {
+	
+		land_reinforce_rate = 0.04
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = telegraph
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			comms_tech
+		}
+	}
+	
+	telegraph = {
+	
+		land_reinforce_rate = 0.08
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 6 }
+		}
+		
+		path = {
+			leads_to_tech = telegraph_portable
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			comms_tech
+		}
+	}
+	
+	telegraph_portable = {
+	
+		land_reinforce_rate = 0.04
+		
+		research_cost = 1.5
+		start_year = 1875
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+		}
+		
+		categories = {
+			science_tech
+			comms_tech
+		}
+	}
+	
 }
