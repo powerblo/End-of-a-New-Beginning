@@ -133,5 +133,13 @@ sub_units = {
 		active = yes
 		type = { missile }
 		need = { guided_missile_equipment = 1 }
-	}	
+	}
+
+	zeppelin = {
+		sprite = heavy_plane
+		priority = 1
+		active = yes
+		type = { strategic_bomber }
+		need = { zeppelin_equipment = 1 }
+	}
 }

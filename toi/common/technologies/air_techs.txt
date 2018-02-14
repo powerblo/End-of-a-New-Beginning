@@ -10,6 +10,11 @@ technologies = {
 			aviation_balloons = 1
 		}
 		
+		path = {
+			leads_to_tech = early_zeppelin
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1.5
 		start_year = 1850
 		folder = {
@@ -27,6 +32,53 @@ technologies = {
 			modifier = {
 				factor = 2
 				is_major = yes
+			}
+		}
+	}
+	
+	early_zeppelin = {
+
+		enable_equipments = {
+			zeppelin_equipment_0
+		}
+		
+		dependencies = {
+			zeppelin_models_early = 1
+		}
+		
+		research_cost = 2
+		start_year = 1875
+		folder = {
+			name = air_techs_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			air_equipment
+			zeppelin_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
 			}
 		}
 	}

@@ -11,6 +11,56 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		
+		path = {
+			leads_to_tech = zeppelin_theory
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			aviation_tech
+		}
+	}
+	
+	zeppelin_theory = {
+		
+		air_strategic_bomber_agility_factor = 0.04
+		
+		research_cost = 2.5
+		start_year = 1860
+		folder = {
+			name = aviation_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = zeppelin_models_early
+			research_cost_coeff = 1
+		}
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -37,6 +87,53 @@ technologies = {
 		
 		categories = {
 			aviation_tech
+			zeppelin_tech
+		}
+	}
+	
+	zeppelin_models_early = {
+		
+		air_air_superiority_defence_factor = 0.02
+		
+		research_cost = 2
+		start_year = 1870
+		folder = {
+			name = aviation_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		folder = {
+			name = air_techs_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			aviation_tech
+			zeppelin_tech
 		}
 	}
 	
