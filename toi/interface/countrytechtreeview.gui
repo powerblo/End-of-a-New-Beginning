@@ -2727,7 +2727,7 @@ guiTypes = {
 				name = "aviation_balloons_tree"
 				position = { x=100 y=140 }
 				size = { width = 800 height = 800 }
-				slotsize = { width=70 height= 70 }
+				slotsize = { width=60 height= 60 }
 				format = "UP"
 			}
 
@@ -3869,6 +3869,117 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_electronics_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 204 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=34 y=35 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+	}
+	
+	#Civilian
+	containerWindowType = {
+		name = "techtree_civilian_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 204 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=34 y=35 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+	}
+	
+	#Aviation
+	containerWindowType = {
+		name = "techtree_aviation_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 204 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=34 y=35 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+	}
+	
+	#Projects
+	containerWindowType = {
+		name = "techtree_projects_folder_item"
 		position = { x=0 y=5 }
 		size = { width = 204 height = 72 }
 		clipping = no
