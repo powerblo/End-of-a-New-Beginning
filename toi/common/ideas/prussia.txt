@@ -1,0 +1,88 @@
+ideas = {
+	country = {
+		PRS_Zollverein = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_local_self_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		PRS_Zollverein_1 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_local_self_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		PRS_Zollverein_2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_local_self_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.05
+			}
+		}
+		PRS_Zollverein_3 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_local_self_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		PRS_Rail_Focus = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		PRS_inspect_mine = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = ast_all_in
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+	}
+}

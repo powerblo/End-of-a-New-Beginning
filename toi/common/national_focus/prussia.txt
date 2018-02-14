@@ -1,0 +1,627 @@
+focus_tree = {
+	id = prussia_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PRS
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = PRS_Economy
+		icon = GFX_focus_generic_self_management
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_reconst_zollparlament
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = PRS_Zollverein add_idea = PRS_Zollverein_1 }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_zollparlament
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_reconst_zollparlament }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = PRS_Zollverein_1 add_idea = PRS_Zollverein_2 }
+		}
+	}
+	
+	focus = {
+		id = PRS_norswe_zoll
+		icon = GFX_goal_generic_alliance
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_zollparlament }
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_focus_norswe_gain_zoll
+			hidden_effect = {
+				NOR = { add_ideas = PRS_Zollverein_2 }
+				SWE = { add_ideas = PRS_Zollverein_2 }
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_alsace_zoll
+		icon = GFX_goal_demand_sudetenland
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_norswe_zoll }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = PRS_Zollverein_2 add_idea = PRS_Zollverein_3 }
+		}
+	}
+	
+	focus = {
+		id = PRS_state_rail_0
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		
+		completion_reward = {
+			add_ideas = PRS_Rail_Focus
+		}
+	}
+	
+	focus = {
+		id = PRS_berlin_anhalt_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_state_rail_0 }
+		available = { 
+			PRS = { 
+				controls_state = 60 
+				controls_state = 64
+			} 
+		}
+		bypass = {
+			60 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			64 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+		}
+		
+		completion_reward = {
+			60 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			64 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_ostbahn_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_berlin_anhalt_rail }
+		available = { 
+			PRS = { 
+				controls_state = 5 
+				controls_state = 63
+				controls_state = 64 
+				controls_state = 68 
+				controls_state = 85 
+			} 
+		}
+		bypass = {
+			5 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			63 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			64 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			68 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			85 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+		}
+		
+		completion_reward = {
+			5 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			63 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			64 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			68 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			85 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_silesia_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_ostbahn_rail }
+		available = { 
+			PRS = { 
+				controls_state = 66 
+				controls_state = 67
+			} 
+		}
+		bypass = {
+			66 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			67 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+		}
+		
+		completion_reward = {
+			66 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			67 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_westphalia_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_silesia_rail }
+		available = { 
+			PRS = { 
+				controls_state = 56
+				controls_state = 57
+			} 
+		}
+		bypass = {
+			56 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+			57 = {
+				free_building_slots = { 
+					building = infrastructure 
+					size < 1
+				}
+			}
+		}
+		
+		completion_reward = {
+			56 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			57 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_mining_standards
+		icon = GFX_goal_generic_air_production
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		
+		completion_reward = {
+			add_ideas = PRS_inspect_mine
+		}
+	}
+	
+	focus = {
+		id = PRS_rheinland_steel
+		icon = GFX_goal_generic_construction
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_mining_standards }
+		available = { 
+			PRS = { 
+				controls_state = 51
+			} 
+		}
+		
+		completion_reward = {
+			add_resource = { type = steel amount = 16 state = 51 }
+		}
+	}
+	
+	focus = {
+		id = PRS_silesian_steel
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_rheinland_steel }
+		available = { 
+			PRS = { 
+				controls_state = 66
+				controls_state = 67
+			} 
+		}
+		
+		completion_reward = {
+			add_resource = { type = steel amount = 8 state = 66 }
+			add_resource = { type = steel amount = 8 state = 67 }
+		}
+	}
+	
+	focus = {
+		id = PRS_dreyse_mill
+		icon = GFX_goal_generic_production
+		x = 7
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		available = { 
+			PRS = { 
+				controls_state = 60
+			} 
+		}
+		
+		completion_reward = {
+			60 = { add_extra_state_shared_building_slots = 1 }
+			60 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_spandau_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_dreyse_mill }
+		available = { 
+			PRS = { 
+				controls_state = 64
+			} 
+		}
+		
+		completion_reward = {
+			64 = { add_extra_state_shared_building_slots = 1 }
+			64 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_danzig_rifles
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_spandau_arsenal }
+		available = { 
+			PRS = { 
+				controls_state = 85
+			} 
+		}
+		
+		completion_reward = {
+			85 = { add_extra_state_shared_building_slots = 1 }
+			85 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_erfurt_rifles
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_danzig_rifles }
+		available = { 
+			PRS = { 
+				controls_state = 64
+			} 
+		}
+		
+		completion_reward = {
+			64 = { add_extra_state_shared_building_slots = 1 }
+			64 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_krupp_arty
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_erfurt_rifles }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
+		}
+	}
+	
+	focus = {
+		id = PRS_handelsgesetz_law
+		icon = GFX_goal_generic_trade
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_paris_declare_marlaw
+		icon = GFX_goal_generic_amphibious_assault
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_handelsgesetz_law }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_trade_france_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_paris_declare_marlaw }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_make_big_city
+		icon = GFX_goal_generic_fortify_city
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_Economy }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = construction_tech }
+		}
+	}
+	
+	focus = {
+		id = PRS_berlin_factory_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_make_big_city }
+		available = { 
+			PRS = { 
+				controls_state = 64
+			} 
+		}
+		
+		completion_reward = {
+			64 = { add_extra_state_shared_building_slots = 1 }
+			64 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_danzig_factory_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_berlin_factory_focus }
+		available = { 
+			PRS = { 
+				controls_state = 85
+			} 
+		}
+		
+		completion_reward = {
+			85 = { add_extra_state_shared_building_slots = 1 }
+			85 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_stettin_factory_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_danzig_factory_focus }
+		available = { 
+			PRS = { 
+				controls_state = 62
+			} 
+		}
+		
+		completion_reward = {
+			62 = { add_extra_state_shared_building_slots = 1 }
+			62 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = PRS_powerful_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_stettin_factory_focus }
+		prerequisite = { focus = PRS_trade_france_focus }
+		prerequisite = { focus = PRS_krupp_arty }
+		prerequisite = { focus = PRS_silesian_steel }
+		prerequisite = { focus = PRS_westphalia_rail }
+		prerequisite = { focus = PRS_alsace_zoll }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+}
