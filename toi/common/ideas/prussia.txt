@@ -84,5 +84,97 @@ ideas = {
 				local_resources_factor = 0.1
 			}
 		}
+		PRS_legacy_clausewitz = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = anti_soviet_pact
+			
+			research_bonus = { land_doctrine = -0.25 }
+			
+			modifier = {
+				#
+			}
+		}
+		PRS_landwehr = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				conscription = 0.02
+				political_power_gain = -0.25
+			}
+		}
+		PRS_landwehr_1 = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				conscription = 0.02
+				political_power_gain = -0.25
+				experience_gain_army_factor = 0.15
+			}
+		}
+		PRS_landwehr_2 = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				conscription = 0.01
+				political_power_gain = -0.1
+				experience_gain_army_factor = 0.15
+			}
+		}
+		PRS_high_fleet = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			modifier = {
+				navy_max_range_factor = 0.2
+			}
+		}
+	}
+	army_chief = {
+		PRS_albrecht_von_roon = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				has_completed_focus = PRS_minister_albrecht
+			}
+
+			cost = 50
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 }

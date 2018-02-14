@@ -369,13 +369,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_Economy }
 		available = { 
 			PRS = { 
-				controls_state = 60
+				controls_state = 64
 			} 
 		}
 		
 		completion_reward = {
-			60 = { add_extra_state_shared_building_slots = 1 }
-			60 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			64 = { add_extra_state_shared_building_slots = 1 }
+			64 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -621,6 +621,403 @@ focus_tree = {
 		
 		completion_reward = {
 			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = PRS_the_army
+		icon = GFX_goal_focus_landwehr
+		x = 20
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = PRS_landwehr
+		}
+	}
+	
+	focus = {
+		id = PRS_king_army_prs
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 17
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_the_army }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = PRS_manteuffel_reform
+		icon = GFX_focus_generic_military_mission
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_king_army_prs }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = PRS_landwehr add_idea = PRS_landwehr_1 }
+		}
+	}
+	
+	focus = {
+		id = PRS_army_autonomy
+		icon = GFX_focus_generic_little_entente
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_manteuffel_reform }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_minister_albrecht
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_king_army_prs }
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_albrecht_focus_tt
+		}
+	}
+	
+	focus = {
+		id = PRS_roon_reform_bill
+		icon = GFX_goal_anschluss
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_minister_albrecht }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_landwehr_draft
+		icon = GFX_goal_focus_landwehr
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_roon_reform_bill }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = PRS_landwehr_1 add_idea = PRS_landwehr_2 }
+		}
+	}
+	
+	focus = {
+		id = PRS_krupp_guns_focus
+		icon = GFX_goal_generic_army_artillery
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_landwehr_draft }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
+		}
+	}
+	
+	focus = {
+		id = PRS_minister_moltke
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_minister_albrecht }
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_moltke_focus_tt
+			hidden_effect = {
+				create_corps_commander = {
+					name = "General von Moltke"
+					picture = "#"
+					traits = { } 
+					skill = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_war_theory
+		icon = GFX_goal_generic_build_tank
+		x = 20
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_minister_moltke }
+		
+		completion_reward = {
+			remove_ideas = PRS_legacy_clausewitz
+		}
+	}
+	
+	focus = {
+		id = PRS_war_games
+		icon = GFX_goal_generic_demand_territory
+		x = 18
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_war_theory }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
+		}
+	}
+	
+	focus = {
+		id = PRS_divide_unite_army
+		icon = GFX_focus_generic_support_the_left_right
+		x = 18
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_war_games }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_large_command_tut
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_war_theory }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_army_mobile
+		icon = GFX_goal_generic_air_doctrine
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_war_theory }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_navy_king
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 24
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_the_army }
+		
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	
+	focus = {
+		id = PRS_adalbert_prince
+		icon = GFX_focus_secret_rearmament
+		x = 24
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_navy_king }
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_adalbert_focus_tt
+			hidden_effect = {
+				create_navy_leader = {
+					name = "Prince Adalbert"
+					picture = "#"
+					traits = { } 
+					skill = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_navy_training
+		icon = GFX_goal_generic_navy_cruiser
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_adalbert_prince }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_new_warships
+		icon = GFX_goal_generic_navy_battleship
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_adalbert_prince }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
+		}
+	}
+	
+	focus = {
+		id = PRS_high_seas
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_new_warships }
+		
+		completion_reward = {
+			add_ideas = PRS_high_fleet
+		}
+	}
+	
+	focus = {
+		id = PRS_marine_manage
+		icon = GFX_goal_generic_wolf_pack
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_adalbert_prince }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = PRS_marine_minister
+		icon = GFX_goal_generic_cavalry
+		x = 26
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_marine_manage }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = PRS_mil_supreme
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 20
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_marine_minister }
+		prerequisite = { focus = PRS_high_fleet }
+		prerequisite = { focus = PRS_navy_training }
+		prerequisite = { focus = PRS_army_mobile }
+		prerequisite = { focus = PRS_divide_unite_army }
+		prerequisite = { focus = PRS_large_command_tut }
+		prerequisite = { focus = PRS_krupp_guns_focus }
+		prerequisite = { focus = PRS_army_autonomy }
+		
+		completion_reward = {
+			add_political_power = 120
 		}
 	}
 	
