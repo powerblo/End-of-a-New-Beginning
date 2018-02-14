@@ -11,6 +11,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		path = {
+			leads_to_tech = armor_train_battery
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 2
 		start_year = 1860
 		folder = {
@@ -44,6 +49,7 @@ technologies = {
 		
 		categories = {
 			armor
+			trains_tech
 		}
 	}
 	
@@ -90,6 +96,50 @@ technologies = {
 		
 		categories = {
 			armor
+			trains_tech
+		}
+	}
+	
+	armor_train_battery = {
+	
+		armor_train_company = {
+			soft_attack = 0.08
+		}
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			trains_tech
 		}
 	}
 }
