@@ -1,3 +1,232 @@
 technologies = {
-	#
+
+	early_medicine = {
+		
+		attrition = -0.04
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = civilian_folder
+			position = { x = -2 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = hygiene
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
+	
+	early_vaccination = {
+		
+		army_morale_factor = 0.04
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = civilian_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = early_hospitals
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
+	
+	hygiene = {
+		
+		MONTHLY_POPULATION = 0.02
+		
+		research_cost = 1
+		start_year = 1855
+		folder = {
+			name = civilian_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = germ_theory
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
+	
+	germ_theory = {
+		
+		production_speed_industrial_complex_factor = 0.05
+		
+		research_cost = 1
+		start_year = 1860
+		folder = {
+			name = civilian_folder
+			position = { x = -2 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = early_hospitals
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
+	
+	early_hospitals = {
+		
+		MONTHLY_POPULATION = 0.02
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = civilian_folder
+			position = { x = -2 y = 6 }
+		}
+		
+		dependencies = {
+			early_vaccination = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
+	
 }
