@@ -1233,8 +1233,38 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_mechanical_engineering_folder_tab"
+		textureFile = "gfx//interface//techtree_mechanical_engineering_tab.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_process_engineering_folder_tab"
+		textureFile = "gfx//interface//techtree_process_engineering_tab.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_biochemistry_folder_tab"
+		textureFile = "gfx//interface//techtree_biochemistry_tab.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
 		name = "GFX_aviation_folder_tab"
 		textureFile = "gfx//interface//techtree_aviation_tab.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_electronics_devices_folder_tab"
+		textureFile = "gfx//interface//techtree_electronics_devices_tab.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_humanities_folder_tab"
+		textureFile = "gfx//interface//techtree_humanities_tab.dds"
 		noOfFrames = 2
 	}
 	
@@ -1361,45 +1391,6 @@ spriteTypes = {
 		pause_on_loop = 0.0
 	}
 	
-	### Civilian ####
-	
-	spriteType = {
-		name = "GFX_technology_civilian_folder_small_unavailable_item_bg"
-		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
-	}	
-	
-	spriteType = {
-		name = "GFX_technology_civilian_folder_small_available_item_bg"
-		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_civilian_folder_small_researched_item_bg"
-		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_technology_civilian_folder_branch_item_bg"
-		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_technology_civilian_folder_branch_item_bg"
-		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
-	}
-	
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_civilian_folder_currently_researching_item_bg"
-		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-	
 	### Projects ####
 	
 	spriteType = {
@@ -1429,6 +1420,201 @@ spriteTypes = {
 	
 	frameAnimatedSpriteType = {
 		name = "GFX_technology_projects_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	### Mechanical Engineering ####
+	
+	spriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_small_available_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_branch_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_branch_item_bg"
+		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_mechanical_engineering_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	### Process Engineering ####
+	
+	spriteType = {
+		name = "GFX_technology_process_engineering_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_process_engineering_folder_small_available_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_process_engineering_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_process_engineering_folder_branch_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_process_engineering_folder_branch_item_bg"
+		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_process_engineering_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	### Biochemistry ####
+	
+	spriteType = {
+		name = "GFX_technology_biochemistry_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_biochemistry_folder_small_available_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_biochemistry_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_biochemistry_folder_branch_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_biochemistry_folder_branch_item_bg"
+		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_biochemistry_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	### Electronics and Devices ####
+	
+	spriteType = {
+		name = "GFX_technology_electronics_devices_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_electronics_devices_folder_small_available_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_electronics_devices_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_electronics_devices_folder_branch_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_electronics_devices_folder_branch_item_bg"
+		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_electronics_devices_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	### Socioeconomics and Humanities ####
+	
+	spriteType = {
+		name = "GFX_technology_humanities_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_humanities_folder_small_available_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_humanities_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//tech_landdoctrine_researched_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_humanities_folder_branch_item_bg"
+		textureFile = "gfx//interface//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_humanities_folder_branch_item_bg"
+		textureFile = "gfx/interface/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_humanities_folder_currently_researching_item_bg"
 		texturefile = "gfx//interface//tech_doctrine_researching_anim_strip.dds"
 		noOfFrames = 9
 		loadType = "INGAME"
