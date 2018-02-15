@@ -11,7 +11,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = early_zeppelin
+			leads_to_tech = better_balloon
 			research_cost_coeff = 1
 		}
 		
@@ -24,6 +24,7 @@ technologies = {
 		
 		categories = {
 			air_equipment
+			balloons_tech
 		}
 		
 		ai_will_do = {
@@ -32,6 +33,69 @@ technologies = {
 			modifier = {
 				factor = 2
 				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+		}
+	}
+	
+	better_balloon = {
+
+		enable_equipments = {
+			balloon_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = early_zeppelin
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			air_equipment
+			balloons_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
 			}
 		}
 	}
@@ -46,7 +110,7 @@ technologies = {
 			zeppelin_models_early = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1875
 		folder = {
 			name = air_techs_folder

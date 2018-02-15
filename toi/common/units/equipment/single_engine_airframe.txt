@@ -358,6 +358,27 @@ equipments = {
 		naval_strike_targetting = 1
 
 	}
+	
+	#Upgraded Balloon
+	balloon_equipment_1 = {
+		year = 1870
+
+		archetype = balloon_equipment
+		parent = balloon_equipment_0
+		priority = 8
+		
+		air_range = 140
+		maximum_speed = 12
+		air_agility = 4
+		air_attack = 1
+		air_defence = 2
+
+		naval_strike_attack = 0.25
+		naval_strike_targetting = 1
+		
+		build_cost_ic = 34
+
+	}
 
 	# Early Fighter
 	fighter_equipment_0 = {
