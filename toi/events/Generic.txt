@@ -66,3 +66,57 @@ country_event = {
 				}
 		}
 }
+
+#Startup Event
+country_event = {
+		id = generic.4
+		title = generic.4.t
+		desc = generic.4.d
+		picture = GFX_report_event_soldiers_marching
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = generic.4.a
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = generic.4.b
+			ai_chance = { factor = 0 }
+			country_event = { id = generic.5 }
+		}
+		
+		option = {
+			name = generic.4.c
+			ai_chance = { factor = 0 }
+			country_event = { id = generic.6 }
+		}
+		
+}
+
+#Summary
+country_event = {
+		id = generic.5
+		title = generic.5.t
+		desc = generic.5.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = generic.5.a
+		}
+}
+
+#Credits
+country_event = {
+		id = generic.6
+		title = generic.6.t
+		desc = generic.6.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = generic.6.a
+		}
+}
