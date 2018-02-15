@@ -3460,61 +3460,64 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 			
-			#Those are not needed, used for testing
+			#Those are not needed ingame but DO NOT REMOVE! They stabilize the tech tree.
 			
 			buttonType = {
-				position = { x = 1400 y = 0 }
+				position = { x = 14000 y = 0 }
 				name = "electronics_folder_tab"
 				quadTextureSprite = "GFX_electronics_folder_tab"
 				frame = 1
 				clicksound = click_default
-
+				hide = yes
+				alwaystransparent = yes
 			}
 
 			iconType = {
 				name = "highlight_electronics_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=1400 y=0}
+				position = { x=14000 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
 			
 			buttonType = {
-				position = { x = 1470 y = 0 }
+				position = { x = 14700 y = 0 }
 				name = "industry_folder_tab"
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
 				clicksound = click_default
+				hide = yes
+				alwaystransparent = yes
 
 			}
 
 			iconType = {
 				name = "highlight_industry_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=1470 y=0}
+				position = { x=14700 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
 			
 			buttonType = {
-				position = { x = 1540 y = 0 }
+				position = { x = 15400 y = 0 }
 				name = "civilian_folder_tab"
 				quadTextureSprite = "GFX_projects_folder_tab"
 				frame = 1
 				clicksound = click_default
+				hide = yes
+				alwaystransparent = yes
 
 			}
 
 			iconType = {
 				name = "highlight_civilian_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=1540 y=0}
+				position = { x=15400 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
-
-
-
+			
 		}
 
 		buttonType = {
