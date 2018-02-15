@@ -1,0 +1,434 @@
+focus_tree = {
+	id = german_minor_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BAD
+		}
+		modifier = {
+			add = 10
+			tag = BAV
+		}
+		modifier = {
+			add = 10
+			tag = WUR
+		}
+		modifier = {
+			add = 10
+			tag = HSD
+		}
+		modifier = {
+			add = 10
+			tag = FRK
+		}
+		modifier = {
+			add = 10
+			tag = SAX
+		}
+		modifier = {
+			add = 10
+			tag = THU
+		}
+		modifier = {
+			add = 10
+			tag = HES
+		}
+		modifier = {
+			add = 10
+			tag = HAN
+		}
+		modifier = {
+			add = 10
+			tag = OLD
+		}
+		modifier = {
+			add = 10
+			tag = BRE
+		}
+		modifier = {
+			add = 10
+			tag = HAM
+		}
+		modifier = {
+			add = 10
+			tag = MCK
+		}
+		modifier = {
+			add = 10
+			tag = LCK
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = GER_minor_focus_reform_army
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_barracks
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_reform_army }
+		
+		completion_reward = {
+			add_ideas = GER_minor_idea_barracks_focus
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_officers
+		icon = GFX_focus_generic_military_mission
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_reform_army }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_bright_mil_minds
+		icon = GFX_focus_generic_support_the_left_right
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_barracks focus = GER_minor_focus_officers }
+		
+		completion_reward = {
+			add_ideas = GER_minor_idea_brightmil_focus
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_army_weapons_research
+		icon = GFX_goal_generic_small_arms
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_bright_mil_minds }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_german_question
+		icon = GFX_goal_generic_neutrality_focus
+		x = 9
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_question_pro_prs
+		icon = GFX_goal_focus_landwehr
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_german_question }
+		mutually_exclusive = { focus = GER_minor_focus_question_con_prs }
+		mutually_exclusive = { focus = GER_minor_focus_question_neutral }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = GER_minor_support_focus }
+			reverse_add_opinion_modifier = { target = PRS modifier = GER_minor_support_focus }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_question_con_prs
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 7
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_german_question }
+		mutually_exclusive = { focus = GER_minor_focus_question_neutral }
+		mutually_exclusive = { focus = GER_minor_focus_question_pro_prs }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = GER_minor_antagonize_focus }
+			reverse_add_opinion_modifier = { target = PRS modifier = GER_minor_antagonize_focus }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_question_neutral
+		icon = GFX_goal_generic_demand_territory
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_german_question }
+		mutually_exclusive = { focus = GER_minor_focus_question_con_prs }
+		mutually_exclusive = { focus = GER_minor_focus_question_pro_prs }
+		
+		completion_reward = {
+			add_national_unity = 0.05 #To be replaced with National Stability in 1.5
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_defend
+		icon = GFX_goal_generic_build_tank
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_question_con_prs }
+		
+		completion_reward = {
+			add_ideas = GER_minor_idea_defence_focus
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_arms_trade
+		icon = GFX_goal_generic_air_production
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_question_pro_prs }
+
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = infantry_weapons }
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_readiness
+		icon = GFX_goal_generic_military_sphere
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_question_con_prs focus = GER_minor_focus_question_pro_prs focus = GER_minor_focus_question_neutral }
+		
+		completion_reward = {
+			add_national_unity = 0.05 #To be replaced with war support in 1.5
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_industry
+		icon = GFX_goal_generic_construction2
+		x = 15
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = industry }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_farmer_supp
+		icon = GFX_goal_demand_sudetenland
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_industry }
+		
+		completion_reward = {
+			add_ideas = GER_minor_idea_farm_focus
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_grow_pop
+		icon = GFX_goal_generic_national_unity
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_farmer_supp }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = GER_minor_idea_farm_focus add_idea = GER_minor_idea_farm_focus_1 }
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_infra_build
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_industry }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_civ_build
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_infra_build }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_minor_focus_industry_done
+		icon = GFX_goal_generic_consumer_goods
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_minor_focus_civ_build focus = GER_minor_focus_grow_pop }
+		
+		completion_reward = {
+			add_national_unity = 0.05 #To be replaced with national stability in 1.5
+		}
+	}
+	
+}
