@@ -1,3 +1,48 @@
 technologies = {
+
+	early_hospitals = {
+		
+		MONTHLY_POPULATION = 0.02
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = humanities_folder
+			position = { x = -2 y = 6 }
+		}
+		
+		dependencies = {
+			early_medicine = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			health_tech
+		}
+	}
 	
 }
