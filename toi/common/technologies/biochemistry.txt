@@ -179,4 +179,222 @@ technologies = {
 		}
 	}
 	
+	organic_chemistry = {
+		
+		research_time_factor = -0.02
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = antibiotics
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			chemistry_tech
+		}
+	}
+	
+	antibiotics = {
+		
+		MONTHLY_POPULATION = 0.08
+		supply_consumption_factor = -0.02
+		
+		research_cost = 2
+		start_year = 1880
+		folder = {
+			name = biochemistry_folder
+			position = { x = 2 y = 12 }
+		}
+		
+		dependencies = {
+			germ_theory = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1890.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1895.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			chemistry_tech
+		}
+	}
+	
+	agriculture_engineer = {
+		
+		global_building_slots_factor = 0.10
+		
+		research_cost = 2
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+		}
+	}
+	
+	food_preserving = {
+		
+		consumer_goods_factor = -0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 6 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = refrigeration
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+			chemistry_tech
+		}
+	}
+	
+	refrigeration = {
+		
+		MONTHLY_POPULATION = 0.04
+		
+		research_cost = 2
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 6 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+		}
+	}
+	
 }

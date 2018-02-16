@@ -137,4 +137,89 @@ technologies = {
 		}
 	}
 	
+	early_screw_propeller = {
+		
+		navy_max_range_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = aviation_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = screw_propeller
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			aviation_tech
+		}
+	}
+	
+	screw_propeller = {
+		
+		air_cas_present_factor = 0.08
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = aviation_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			aviation_tech
+		}
+	}
+	
 }
