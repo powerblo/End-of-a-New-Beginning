@@ -40,8 +40,91 @@ technologies = {
 		}
 		
 		categories = {
-			civilian_tech
 			health_tech
+		}
+	}
+	
+	shift_work = {
+		
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		
+		research_cost = 2
+		start_year = 1855
+		folder = {
+			name = humanities_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+		}
+		
+		categories = {
+			work_tech
+		}
+	}
+	
+	mass_transit_early = {
+		
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		local_resources_factor = -0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			humanities_tech
+			transport_tech
 		}
 	}
 	

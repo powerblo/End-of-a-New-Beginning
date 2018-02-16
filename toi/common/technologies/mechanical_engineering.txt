@@ -1,3 +1,45 @@
 technologies = {
+
+	railroad_research = {
+		
+		production_speed_infrastructure_factor = 0.05
+		army_speed_factor = 0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			transport_tech
+		}
+	}
 	
 }
