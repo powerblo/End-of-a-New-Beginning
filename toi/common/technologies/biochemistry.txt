@@ -279,7 +279,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = biochemistry_folder
-			position = { x = 4 y = 0 }
+			position = { x = 4 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -327,6 +327,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		path = {
+			leads_to_tech = canned_food
+			research_cost_coeff = 1
+		}
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -365,7 +370,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = biochemistry_folder
-			position = { x = 6 y = 2 }
+			position = { x = 6 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -389,6 +394,48 @@ technologies = {
 			modifier = {
 				factor = 1.5
 				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			civilian_tech
+		}
+	}
+	
+	canned_food = {
+		
+		production_factory_efficiency_gain_factor = 0.06
+		supply_consumption_factor = -0.04
+		army_morale_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1855
+		folder = {
+			name = biochemistry_folder
+			position = { x = 8 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
 			}
 		}
 		
