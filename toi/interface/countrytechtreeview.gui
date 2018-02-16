@@ -78,32 +78,6 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "infantry_subtitle_specialists"
-					position = { x = 30 y = 740 }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = { x = 0 y = 0}
-					text = "INFANTRY_TITLE_SPECIAL"
-					maxWidth = 600
-					maxHeight = 62
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
-					name = "infantry_subtitle_mobile"
-					position = { x = 30 y = 510 }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = { x = 0 y = 0}
-					text = "INFANTRY_TITLE_MOBILE_DIVISIONS"
-					maxWidth = 600
-					maxHeight = 62
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
 					name = "infantry_year2"
 					position = { x = 300 y = 50 }
 					textureFile = ""
@@ -1403,6 +1377,13 @@ guiTypes = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
 			}
+			
+			iconType = {
+					name ="land_doctrine_techtree_bg"
+					spriteType = "GFX_land_doctrine_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
+			}
 
 			containerWindowType = {
 				name = "size_filler"
@@ -2318,6 +2299,13 @@ guiTypes = {
 				quadTextureSprite ="GFX_tiled_window_2b_border"
 			}
 			
+			iconType = {
+					name ="mechanical_engineering_techtree_bg"
+					spriteType = "GFX_mechanical_engineering_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
+			}
+			
 			containerWindowType = {
 				name = "size_filler"
 				position = { x=0 y=0 }
@@ -2415,6 +2403,13 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+			
+			iconType = {
+					name ="process_engineering_techtree_bg"
+					spriteType = "GFX_process_engineering_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
 			}
 			
 			containerWindowType = {
@@ -2522,6 +2517,13 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+			
+			iconType = {
+					name ="biochemistry_techtree_bg"
+					spriteType = "GFX_biochemistry_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
 			}
 			
 			containerWindowType = {
@@ -2647,6 +2649,13 @@ guiTypes = {
 				quadTextureSprite ="GFX_tiled_window_2b_border"
 			}
 			
+			iconType = {
+					name ="aviation_techtree_bg"
+					spriteType = "GFX_aviation_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
+			}
+			
 			containerWindowType = {
 				name = "size_filler"
 				position = { x=0 y=0 }
@@ -2752,6 +2761,13 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+			
+			iconType = {
+					name ="electronics_devices_techtree_bg"
+					spriteType = "GFX_electronics_devices_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
 			}
 			
 			containerWindowType = {
@@ -2877,6 +2893,13 @@ guiTypes = {
 				quadTextureSprite ="GFX_tiled_window_2b_border"
 			}
 			
+			iconType = {
+					name ="humanities_techtree_bg"
+					spriteType = "GFX_humanities_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
+			}
+			
 			containerWindowType = {
 				name = "size_filler"
 				position = { x=0 y=0 }
@@ -2982,6 +3005,13 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+			
+			iconType = {
+					name = "projects_techtree_bg"
+					spriteType = "GFX_projects_techtree_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
 			}
 			
 			containerWindowType = {
