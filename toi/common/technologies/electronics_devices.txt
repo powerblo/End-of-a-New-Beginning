@@ -56,6 +56,7 @@ technologies = {
 			leads_to_tech = machine_tools_1
 			research_cost_coeff = 1
 		}
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -97,10 +98,6 @@ technologies = {
 			position = { x = 2 y = 2 }
 		}
 		
-		path = {
-			leads_to_tech = machine_tools_1
-			research_cost_coeff = 1
-		}
 		ai_will_do = {
 			factor = 1
 			
@@ -122,6 +119,223 @@ technologies = {
 			modifier = {
 				factor = 1.5
 				date > "1870.1.1"
+			}
+		}
+		
+		categories = {
+			electronics_devices_tech
+		}
+	}
+	
+	pyroglycerine_experiment = {
+		
+		research_time_factor = -0.01
+		
+		research_cost = 2
+		start_year = 1850
+		folder = {
+			name = electronics_devices_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = nitroglycerine
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			chemistry_tech
+			explosives_tech
+		}
+	}
+	
+	nitroglycerine = {
+		
+		local_resources_factor = 0.05
+		category_front_line = {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = electronics_devices_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			chemistry_tech
+			explosives_tech
+		}
+	}
+	
+	combustion_theory = {
+	
+		naval_speed_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = electronics_devices_folder
+			position = { x = 6 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = combustion_study
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			chemistry_tech
+		}
+	}
+	
+	combustion_study = {
+	
+		navy_max_range_factor = 0.08
+		amphibious_invasion = 0.08
+		army_bonus_air_superiority_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1880
+		folder = {
+			name = electronics_devices_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1890.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1895.1.1"
+			}
+		}
+		
+		categories = {
+			chemistry_tech
+		}
+	}
+	
+	electromagnetism_theory = {
+	
+		research_time_factor = -0.02
+		
+		research_cost = 2.5
+		start_year = 1860
+		folder = {
+			name = electronics_devices_folder
+			position = { x = 8 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
 			}
 		}
 		
