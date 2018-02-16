@@ -42,4 +42,94 @@ technologies = {
 		}
 	}
 	
+	interchange_parts = {
+		
+		line_change_production_efficiency_factor = 0.1
+		
+		research_cost = 2
+		start_year = 1855
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = mechanical_production_0
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			industry
+		}
+	}
+	
+	mechanical_production_0 = {
+		
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1880.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			kinetic_devices_tech
+			industry
+		}
+	}
+	
 }
