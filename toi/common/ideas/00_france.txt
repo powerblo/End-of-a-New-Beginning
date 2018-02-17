@@ -150,6 +150,24 @@ ideas = {
 				political_power_cost = -0.15
 			}
 		}
+
+		FRA_idea_new_banks = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_new_banks
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 	political_advisor = {
 		FRA_advisor_victor_hugo = {

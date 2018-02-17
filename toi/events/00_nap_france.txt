@@ -86,6 +86,132 @@ country_event = { # Redrawing of the Cantons
   }
 }
 
+country_event = { # Expansion of the LGOC
+  id = nap_france.3
+  title = nap_france.3.t
+  desc = nap_france.3.d
+  picture = GFX_report_event_nap_france_lgoc
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = { # Why of course
+    name = nap_france.3.a
+    add_political_power = 50
+    add_opinion_modifier = {
+      target = FRA
+      modifier = fra_lgoc
+    }
+  }
+
+  option = { # We do not need french charriots
+    name = nap_france.3.b
+    add_political_power = -50
+  }
+}
+
+country_event = { # Orisini Letter
+  id = nap_france.4
+  title = nap_france.4.t
+  desc = nap_france.4.d
+  picture = GFX_report_event_nap_france_orsini_affair
+
+  is_triggered_only = yes
+
+  option = { # Nothing fishy about this letter !
+    name = nap_france.4.a
+  }
+}
+
+country_event = { # French supporting anti-Sardinian revolutionaries
+  id = nap_france.5
+  title = nap_france.5.t
+  desc = nap_france.5.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+
+  option = { # This is a serious offense !
+    name = nap_france.5.a
+    FRA = {
+      set_country_flag = fra_carbonari_supported
+    }
+    add_opinion_modifier = {
+      target = FRA
+      modifier = fra_carbonari_revolutionary_ita
+    }
+    add_political_power = -50
+  }
+}
+
+country_event = { # Carbonari are ready
+  id = nap_france.6
+  title = nap_france.6.t
+  desc = nap_france.6.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    has_country_flag = fra_carbonari_supported
+  }
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # They are waiting for our signal
+    name = nap_france.6.a
+    remove_country_flag = fra_carbonari_supported
+    set_country_flag = fra_carbonari_ready
+  }
+}
+
+country_event = { # The Carbonari Revolt
+  id = nap_france.7
+  title = nap_france.7.t
+  desc = nap_france.7.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+
+  option = { # Holy Carbonari Carbonara !
+    name = nap_france.7.a
+    CBI = {
+      transfer_state = 115
+      transfer_state = 156
+    }
+    FRA = {
+      remove_country_flag = fra_carbonari_ready
+      if = {
+        limit = {
+          has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+          target = CBI
+          autonomous_state = autonomy_imperial_protectorate
+          freedom_level = 0.1
+        }
+        else = {
+          puppet = CBI
+        }
+      }
+    }
+    CBI = {
+      set_politics = {
+        ruling_party = social_democracy
+      }
+      declare_war_on= {
+        target = PIE
+        type = annex_everything
+      }
+      declare_war_on= {
+        target = NSC
+        type = annex_everything
+      }
+    }
+  }
+}
+
 #----------------------------------------------------------------------------------------------
 # FLAVOR EVENTS - 1857 TO 1870
 #----------------------------------------------------------------------------------------------
@@ -1639,7 +1765,7 @@ country_event = { # Orisini Affair
   fire_only_once = yes
 
   trigger = {
-    date > 1858.14.1
+    date > 1858.1.14
   }
 
     mean_time_to_happen = {

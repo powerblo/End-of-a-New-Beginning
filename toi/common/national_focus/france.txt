@@ -176,6 +176,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_defend_alsace
 		}
+		completion_reward = {
+			remove_ideas = FRA_idea_amateur_tacticians
+		}
 		x = 2
 		y = 5
 
@@ -195,8 +198,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			remove_ideas = FRA_idea_authoritarian_empire
-			add_ideas = FRA_idea_liberal_empire
+			swap_ideas = {
+				remove_idea = FRA_idea_authoritarian_empire
+				add_idea = FRA_idea_liberal_empire
+			}
 			clr_country_flag = FRA_flag_liberal_empire
 		}
 		x = 8
@@ -289,6 +294,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_reform_empire
 		}
+		completion_reward = {
+			# WILL GIVE THE ABILITY TO ENACT THE "LOI OLLIVIER" DECISION THAT WILL REDUCE THE EFFECTS OF THE REPUBLICAN SPIRIT IDEA
+		}
 		x = 8
 		y = 5
 
@@ -314,6 +322,10 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_reform_empire
 		}
+		completion_reward = {
+			add_political_power = -50
+			remove_ideas = FRA_idea_censorships_press
+		}
 		x = 10
 		y = 4
 
@@ -324,6 +336,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_end_censorship
+		}
+		completion_reward = {
+			# WILL GIVE THE ABILITY TO ENACT THE "LOI DURUY" DECISION THAT WILL GIVE BONUSES TO RESEARCH
 		}
 		x = 10
 		y = 5
@@ -338,6 +353,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_loi_duruy
+		}
+		completion_reward = {
+			# WILL GIVE THE ABILITY TO ENACT THE "LOI NIEL" DECISION THAT WILL REDUCES THE EFFECT OF THE AMATEUR TACTICIANS IDEA
 		}
 		x = 8
 		y = 6
@@ -698,6 +716,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_profits_gold_rush
 		}
+		completion_reward = {
+			add_ideas = FRA_idea_new_banks
+		}
 		x = 21
 		y = 2
 
@@ -712,6 +733,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_continue_haussmann_renovations
 		}
+		completion_reward = {
+			# WILL GAIN MORE WAR SUPPORT/PEOPLE SUPPORT
+		}
 		x = 19
 		y = 3
 
@@ -722,6 +746,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_found_new_banks
+		}
+		completion_reward = {
+			# WILL GAIN MORE STABILITY
 		}
 		x = 21
 		y = 3
@@ -736,6 +763,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_rich_gets_richer
+		}
+		completion_reward = {
+			# WILL GAIN EVEN MORE WAR SUPPORT/PEOPLE SUPPORT
 		}
 		x = 20
 		y = 4
@@ -1181,6 +1211,26 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_european_neighbors
 		}
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fra_empire_paix
+				}
+			}
+			SPR = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fra_empire_paix
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fra_empire_paix
+				}
+			}
+		}
 		x = 50
 		y = 2
 
@@ -1295,6 +1345,9 @@ focus_tree = {
 		available = {
 			has_country_flag = fra_orsini_failure
 		}
+		completion_reward = {
+			FRA = { country_event = { id = nap_france.4 } }
+		}
 		x = 58
 		y = 1
 
@@ -1309,6 +1362,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_meeting_cavour
 		}
+		completion_reward = {
+			ITA = { country_event = { id = nap_france.5 } }
+		}
 		x = 56
 		y = 2
 
@@ -1319,6 +1375,12 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_arm_revolutionaries
+		}
+		available = {
+			has_country_flag = fra_carbonari_ready
+		}
+		completion_reward = {
+			ITA = { country_event = { id = nap_france.7 } }
 		}
 		x = 56
 		y = 3
@@ -1378,12 +1440,15 @@ focus_tree = {
 	focus = {
 		id = FRA_meeting_cavour
 		icon = GFX_goal_generic_major_alliance
-		cost = 10
+		cost = 1
 		prerequisite = {
 			focus = FRA_the_orsini_letter
 		}
 		mutually_exclusive = {
 			focus = FRA_arm_revolutionaries
+		}
+		available = {
+			has_country_flag = fra_meeting_cavour
 		}
 		x = 60
 		y = 2
@@ -1544,6 +1609,15 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_niel_plan
 		}
+		completion_reward = {
+			army_experience = 80
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
 		x = 4
 		y = 6
 
@@ -1612,6 +1686,12 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = FRA_deal_with_prussia
+		}
+		completion_reward = {
+			declare_war_on= {
+				target = PRS
+				type = annex_everything
+			}
 		}
 		x = 48
 		y = 7

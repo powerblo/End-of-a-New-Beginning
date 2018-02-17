@@ -103,6 +103,16 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.1
 		}
+		set_autonomy = {
+			target = BCO
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = VAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
 		else = {
 			puppet = RAJ
 			puppet = NEP
@@ -123,6 +133,9 @@
 			puppet = HYD
 			puppet = TCS
 			puppet = HBC
+			puppet = NVS
+			puppet = BCO
+			puppet = VAN
 		}
 	}
 
