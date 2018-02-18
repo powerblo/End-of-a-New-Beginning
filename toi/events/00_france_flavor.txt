@@ -166,3 +166,25 @@ news_event = { # Discovery of Vulcan
     name = nap_france_flavor.7.a
   }
 }
+
+news_event = { # Premiere Internationale
+  id = nap_france_flavor.8
+  title = nap_france_flavor.8.t
+  desc = nap_france_flavor.8.d
+
+  fire_only_once = yes
+
+  major = no
+
+  trigger = {
+    date > 1860.1.2
+  }
+
+  mean_time_to_happen = {
+    days = 2
+  }
+
+  option = {
+    name = nap_france_flavor.8.a
+  }
+}

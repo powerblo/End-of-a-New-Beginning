@@ -1,7 +1,7 @@
 ideologies = {
 
 	#Liberalist side of Democracy
-	economic_liberalism = {
+	centrism = {
 
 		types = {
 
@@ -30,7 +30,7 @@ ideologies = {
 			"FACTION_NAME_ECOLIB_5"
 		}
 
-		color = { 35 110 71 }
+		color = { 109 151 101 }
 
 		war_impact_on_world_tension = 0.25		#no major danger
 		faction_impact_on_world_tension = 0.1
@@ -81,7 +81,7 @@ ideologies = {
 			"FACTION_NAME_TRADCON_5"
 		}
 
-		color = { 28 73 144 }
+		color = { 64 89 137 }
 
 		war_impact_on_world_tension = 0.25		#no major danger
 		faction_impact_on_world_tension = 0.1
@@ -97,7 +97,7 @@ ideologies = {
 	}
 
 	#Docile version of socialism
-	social_democracy = {
+	social_egalitarianism = {
 
 		types = {
 			bernstein = {
@@ -121,7 +121,7 @@ ideologies = {
 			"FACTION_NAME_SOCDEM_5"
 		}
 
-		color = { 211 84 122 }
+		color = { 153 76 101 }
 
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -145,7 +145,7 @@ ideologies = {
 	}
 
 	#Radicalism
-	radical_socialism = {
+	collectivist_socialism = {
 
 		types = {
 			stalinism = {
@@ -155,9 +155,6 @@ ideologies = {
 			}
 
 			owensim = {
-			}
-
-			anarchism = {
 			}
 
 			religious_social = {
@@ -172,7 +169,7 @@ ideologies = {
 			"FACTION_NAME_RADSOC_5"
 		}
 
-		color = { 206 17 0 }
+		color = { 204 75 75 }
 
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -196,7 +193,7 @@ ideologies = {
 	}
 
 	#Out of radicalism, ideologies that are especially marxist or leninist
-	marxism_leninism = {
+	vanguard_communism = {
 
 		types = {
 
@@ -224,7 +221,7 @@ ideologies = {
 			"FACTION_NAME_MARXLEN_5"
 		}
 
-		color = { 102 8 0 }
+		color = { 96 35 35 }
 
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -248,7 +245,7 @@ ideologies = {
 	}
 
 	#All forms of traditional monarchies
-	despotic_autocracy = {
+	autocracy = {
 
 		types = {
 
@@ -276,7 +273,7 @@ ideologies = {
 			"FACTION_NAME_DESPAUTO_5"
 		}
 
-		color = { 85 41 141 }
+		color = { 118 85 130 }
 
 
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -308,7 +305,7 @@ ideologies = {
 	}
 
  	#Oligarchies with principally different ideas to despotism
-	parliamental_oligarchy = {
+	radical_democracy = {
 
 		types = {
 			oligarchism = {
@@ -332,7 +329,7 @@ ideologies = {
 			"FACTION_NAME_PARLOLIG_5"
 		}
 
-		color = { 119 90 0 }
+		color = { 159 166 181 }
 
 
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -364,7 +361,7 @@ ideologies = {
 	}
 
 	#
-	totalitarian_nationalism = {
+	chauvinist_populism = {
 
 		types = {
 
@@ -380,39 +377,6 @@ ideologies = {
 			cleric_fascism = {
 			}
 
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_TOTNAT_1"
-			"FACTION_NAME_TOTNAT_2"
-			"FACTION_NAME_TOTNAT_3"
-			"FACTION_NAME_TOTNAT_4"
-			"FACTION_NAME_TOTNAT_5"
-		}
-
-		color = { 40 31 31 }
-
-		war_impact_on_world_tension = 1.0			#evil!
-		faction_impact_on_world_tension = 1.0
-
-		rules = {
-			can_force_government = no
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-
-		modifiers = {
-			justify_war_goal_when_in_major_war_time = -0.80
-		}
-
-		ai_fascist = yes # uses the fascist AI behaviour
-
-	}
-
-	#Any totalitarian ideas without heavy ideological alignment (usually slightly left-wing)
-	rexism_falangism = {
-
-		types = {
 			rexism = {
 			}
 
@@ -435,14 +399,14 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_REXFAL_1"
-			"FACTION_NAME_REXFAL_2"
-			"FACTION_NAME_REXFAL_3"
-			"FACTION_NAME_REXFAL_4"
-			"FACTION_NAME_REXFAL_5"
+			"FACTION_NAME_TOTNAT_1"
+			"FACTION_NAME_TOTNAT_2"
+			"FACTION_NAME_TOTNAT_3"
+			"FACTION_NAME_TOTNAT_4"
+			"FACTION_NAME_TOTNAT_5"
 		}
 
-		color = { 78 76 58 }
+		color = { 76 66 63 }
 
 		war_impact_on_world_tension = 1.0			#evil!
 		faction_impact_on_world_tension = 1.0
@@ -461,8 +425,45 @@ ideologies = {
 
 	}
 
+	#Any totalitarian ideas without heavy ideological alignment (usually slightly left-wing)
+	anarchism = {
+
+		types = {
+			anarchism_sub = {
+
+			}
+
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_REXFAL_1"
+			"FACTION_NAME_REXFAL_2"
+			"FACTION_NAME_REXFAL_3"
+			"FACTION_NAME_REXFAL_4"
+			"FACTION_NAME_REXFAL_5"
+		}
+
+		color = { 255 0 0 }
+
+		war_impact_on_world_tension = 1.0			#evil!
+		faction_impact_on_world_tension = 1.0
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = no
+		}
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+
+	}
+
 	#Ideology entirely based on teachings of religion
-	theocracy = {
+	fundamentalism = {
 
 		types = {
 
@@ -488,7 +489,7 @@ ideologies = {
 			"FACTION_NAME_THEO_5"
 		}
 
-		color = { 219 213 186 }
+		color = { 175 166 117 }
 
 		war_impact_on_world_tension = 0.8			#religion!
 		faction_impact_on_world_tension = 0.8

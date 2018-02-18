@@ -1721,6 +1721,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_biarritz_meeting
 		}
+		available = {
+			has_country_flag = FRA_flag_spanish_succession_prussia
+		}
 		x = 49
 		y = 6
 
@@ -1731,6 +1734,12 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_free_trade_prussia
+		}
+		available = {
+			has_country_flag = FRA_flag_resolution_schleswig_war
+		}
+		completion_reward = {
+			FRA = { country_event = { id = nap_france.310 } }
 		}
 		x = 49
 		y = 5

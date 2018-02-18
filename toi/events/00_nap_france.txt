@@ -3,6 +3,7 @@
 ###########################
 
 add_namespace = nap_france
+add_namespace = third_rep_france
 
 #----------------------------------------------------------------------------------------------
 # FOCUS TREE EVENTS - 1857 TO 1870
@@ -14,14 +15,13 @@ country_event = { # Future of the Empire
   desc = nap_france.1.d
   picture = GFX_report_event_nap_france_tuilleries
 
-  fire_only_once = yes
   is_triggered_only = yes
 
   option = { # Authoritarian Empire
     name = nap_france.1.a
     add_political_power = -50
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.15
     }
     set_country_flag = FRA_flag_authoritarian_empire
@@ -31,7 +31,7 @@ country_event = { # Future of the Empire
     name = nap_france.1.b
     add_political_power = 50
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.05
     }
     add_popularity = { 
@@ -55,11 +55,11 @@ country_event = { # Redrawing of the Cantons
     name = nap_france.2.a
     add_political_power = -50
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.1
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = -0.05
     }
     add_popularity = { 
@@ -72,11 +72,11 @@ country_event = { # Redrawing of the Cantons
     name = nap_france.2.b
     add_political_power = 50
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = -0.05
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.05
     }
     add_popularity = { 
@@ -155,13 +155,15 @@ country_event = { # Carbonari are ready
     has_country_flag = fra_carbonari_supported
   }
 
+  fire_only_once = yes
+
   mean_time_to_happen = {
       days = 45
   }
 
   option = { # They are waiting for our signal
     name = nap_france.6.a
-    remove_country_flag = fra_carbonari_supported
+    clr_country_flag = fra_carbonari_supported
     set_country_flag = fra_carbonari_ready
   }
 }
@@ -181,7 +183,7 @@ country_event = { # The Carbonari Revolt
       transfer_state = 156
     }
     FRA = {
-      remove_country_flag = fra_carbonari_ready
+      clr_country_flag = fra_carbonari_ready
       if = {
         limit = {
           has_dlc = "Together for Victory"
@@ -198,7 +200,7 @@ country_event = { # The Carbonari Revolt
     }
     CBI = {
       set_politics = {
-        ruling_party = social_democracy
+        ruling_party = social_egalitarianism
       }
       declare_war_on= {
         target = PIE
@@ -209,6 +211,147 @@ country_event = { # The Carbonari Revolt
         type = annex_everything
       }
     }
+  }
+}
+
+country_event = { # Biarritz - Invitation to a metting
+  id = nap_france.8
+  title = nap_france.8.t
+  desc = nap_france.8.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    has_country_flag = fra_carbonari_supported
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # Accept
+    name = nap_france.8.a
+    FRA = { country_event = { id = nap_france.9 } }
+  }
+
+  option = { # Refuse
+    name = nap_france.8.b
+    add_political_power = -75
+  }
+}
+
+country_event = { # Biarritz - Prussia accepts
+  id = nap_france.9
+  title = nap_france.9.t
+  desc = nap_france.9.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    has_country_flag = fra_carbonari_supported
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # OK
+    name = nap_france.9.a
+    FRA = { country_event = { id = nap_france.10 days = 7 } }
+  }
+}
+
+country_event = { # Biarritz - Prussia accepts
+  id = nap_france.10
+  title = nap_france.10.t
+  desc = nap_france.10.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    has_country_flag = fra_carbonari_supported
+  }
+
+  immediate = {
+    PRS = { country_event = { id = nap_france.11 } }
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # OK
+    name = nap_france.10.a
+  }
+}
+
+country_event = { # Biarritz - Prussia accepts
+  id = nap_france.11
+  title = nap_france.11.t
+  desc = nap_france.11.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    has_country_flag = fra_carbonari_supported
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # OK
+    name = nap_france.11.a
+  }
+}
+
+country_event = { # Treaty of Turin
+  id = nap_france.12
+  title = nap_france.12.t
+  desc = nap_france.12.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # France will get his due
+    name = nap_france.12.a
+  }
+
+  option = { # Nah, we'll keep those
+    name = nap_france.12.a
+  }
+}
+
+country_event = { # Savoy Rebellion
+  id = nap_france.13
+  title = nap_france.13.t
+  desc = nap_france.13.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+      days = 45
+  }
+
+  option = { # They are gonne be crushed in a second
+    name = nap_france.13.a
+  }
+
+  option = { # Wait, I'm a Savoyard
+    name = nap_france.13.a
   }
 }
 
@@ -337,14 +480,69 @@ country_event = { # Manifeste des Soixante
 
   option = { # Socialism, in my Empire ?
     name = nap_france.104.a
-    remove_unit_leader = 10001
     add_popularity = { 
-      ideology = marxism_leninism
+      ideology = vanguard_communism
       popularity = 0.02
     }
     add_popularity = { 
-      ideology = radical_socialism
+      ideology = collectivist_socialism
       popularity = 0.08
+    }
+  }
+}
+
+country_event = { # Association internationale des travailleurs - France reaction
+  id = nap_france.105
+  title = nap_france.105.t
+  desc = nap_france.105.d
+
+  fire_only_once = yes
+
+  major = no
+
+  trigger = {
+    date > 1864.9.24
+    tag = FRA
+    has_global_flag = premiere_internationale
+  }
+
+  mean_time_to_happen = {
+    days = 4
+  }
+
+  immediate = {
+    news_event = { id = nap_france_flavor.8 }
+  }
+
+  option = { # That may be problematic
+    name = nap_france.105.a
+    add_popularity = { 
+      ideology = vanguard_communism
+      popularity = 0.02
+    }
+    add_popularity = { 
+      ideology = collectivist_socialism
+      popularity = 0.08
+    }
+  }
+
+  option = { # Crackdown on Socialists !
+    name = nap_france.105.b
+    trigger = {
+      has_completed_focus = FRA_keep_authoritarian_empire
+    }
+    custom_effect_tooltip = FRA_early_commune
+    add_popularity = { 
+      ideology = vanguard_communism
+      popularity = -0.05
+    }
+    add_popularity = { 
+      ideology = collectivist_socialism
+      popularity = -0.1
+    }
+    hidden_effect = {
+      country_event = third_rep_france.100
+      days = 20
     }
   }
 }
@@ -489,6 +687,9 @@ country_event = { # Treaty of Luxemburg - Deal
       FRA = {
         declare_war_on = { target = PRS type = annex_everything }
       }
+      clr_country_flag = treaty_lux_refused_annex
+      clr_country_flag = treaty_lux_refused_puppet
+      clr_country_flag = treaty_lux_refused_neutral
     }
 }
 
@@ -527,6 +728,9 @@ country_event = { # Treaty of Luxemburg - Deal - Annex - Accepted
         annex_country = { target = LUX }
         set_country_flag = treaty_lux_finished
       }
+      clr_country_flag = treaty_lux_refused_annex
+      clr_country_flag = treaty_lux_refused_puppet
+      clr_country_flag = treaty_lux_refused_neutral
     }
 }
 
@@ -582,6 +786,9 @@ country_event = { # Treaty of Luxemburg - Deal - Puppet - Accepted
         puppet = LUX
         set_country_flag = treaty_lux_finished
       }
+      clr_country_flag = treaty_lux_refused_annex
+      clr_country_flag = treaty_lux_refused_puppet
+      clr_country_flag = treaty_lux_refused_neutral
     }
 }
 
@@ -636,6 +843,9 @@ country_event = { # Treaty of Luxemburg - Deal - Neutral - Accepted
       FRA = {
         set_country_flag = treaty_lux_finished
       }
+      clr_country_flag = treaty_lux_refused_annex
+      clr_country_flag = treaty_lux_refused_puppet
+      clr_country_flag = treaty_lux_refused_neutral
     }
 }
 
@@ -1180,15 +1390,9 @@ country_event = { # France - Legislative Elections 1857
     name = nap_france.370.a
     if = {
       limit = {
-        has_completed_focus = FRA_conservative_empire
+        has_completed_focus = FRA_keep_authoritarian_empire
       }
       add_political_power = 75
-    }
-    if = {
-      limit = {
-        has_completed_focus = FRA_fair_empire
-      }
-      add_political_power = 25
     }
     if = {
       limit = {
@@ -1199,13 +1403,12 @@ country_event = { # France - Legislative Elections 1857
     if = {
       limit = {
         NOT = { has_completed_focus = FRA_keep_authoritarian_empire }
-        NOT = { has_completed_focus = FRA_fair_empire }
         NOT = { has_completed_focus = FRA_proclaim_liberal_empire }
       }
       add_political_power = 40
     }
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.05
     }
 
@@ -1216,26 +1419,19 @@ country_event = { # France - Legislative Elections 1857
     name = nap_france.370.b
     if = {
       limit = {
-        has_completed_focus = FRA_conservative_empire
+        has_completed_focus = FRA_keep_authoritarian_empire
       }
       add_political_power = -75
     }
     if = {
       limit = {
-        has_completed_focus = FRA_fair_empire
-      }
-      add_political_power = -10
-    }
-    if = {
-      limit = {
-        has_completed_focus = FRA_liberal_empire
+        has_completed_focus = FRA_proclaim_liberal_empire
       }
       add_political_power = 25
     }
     if = {
       limit = {
         NOT = { has_completed_focus = FRA_keep_authoritarian_empire }
-        NOT = { has_completed_focus = FRA_fair_empire }
         NOT = { has_completed_focus = FRA_proclaim_liberal_empire }
       }
       add_political_power = -25
@@ -1245,7 +1441,7 @@ country_event = { # France - Legislative Elections 1857
       popularity = 0.025 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.025
     }
 
@@ -1292,7 +1488,7 @@ country_event = { # France - Legislative Elections 1863
       add_political_power = -75
     }
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.125
     }
 
@@ -1325,7 +1521,7 @@ country_event = { # France - Legislative Elections 1863
       popularity = 0.05 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.05
     }
 
@@ -1342,7 +1538,7 @@ country_event = { # France - Legislative Elections 1869
   trigger = {
     tag = FRA
     date > 1869.5.1
-    has_government = despotic_autocracy
+    has_government = autocracy
   }
 
   mean_time_to_happen = {
@@ -1373,7 +1569,7 @@ country_event = { # France - Legislative Elections 1869
       add_political_power = -125
     }
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.2
     }
 
@@ -1406,7 +1602,7 @@ country_event = { # France - Legislative Elections 1869
       popularity = 0.1 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.1 
     }
 
@@ -1439,7 +1635,7 @@ country_event = { # General Amnesty
       popularity = 0.08 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.08 
     }
     add_political_power = 50
@@ -1458,7 +1654,7 @@ country_event = { # General Amnesty
       popularity = 0.02 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.02
     }
     add_political_power = -75
@@ -1514,7 +1710,7 @@ country_event = { # Republicans demands more liberties
   
   trigger = {
     tag = FRA
-    despotic_autocracy > 0.8
+    autocracy > 0.8
   }
 
   mean_time_to_happen = {
@@ -1531,7 +1727,7 @@ country_event = { # Republicans demands more liberties
       popularity = 0.1 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.1 
     }
     set_country_flag = fra_demanded_more_liberty
@@ -1545,7 +1741,7 @@ country_event = { # Republicans demands more liberties
       popularity = -0.1 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = -0.1 
     }
     set_country_flag = fra_demanded_more_liberty
@@ -1560,7 +1756,7 @@ country_event = { # Legitimist worries
   trigger = {
     tag = FRA
     OR = {
-      economic_liberalism > 0.1
+      centrism > 0.1
       traditional_conservatism > 0.1
     }
   }
@@ -1575,7 +1771,7 @@ country_event = { # Legitimist worries
     name = nap_france.381.a
     add_political_power = 20
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = 0.2 
     }
     hidden_effect = {
@@ -1590,7 +1786,7 @@ country_event = { # Legitimist worries
     name = nap_france.381.b
     add_political_power = -40
     add_popularity = { 
-      ideology = despotic_autocracy
+      ideology = autocracy
       popularity = -0.1 
     }
   }
@@ -1605,7 +1801,7 @@ country_event = { # Republican Uprising
 
   trigger = {
     tag = FRA
-    despotic_autocracy > 0.9
+    autocracy > 0.9
     has_country_flag = fra_demanded_more_liberty
   }
 
@@ -1623,7 +1819,7 @@ country_event = { # Republican Uprising
       popularity = -0.05 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = -0.05 
     }
     add_political_power = 100
@@ -1637,7 +1833,7 @@ country_event = { # Republican Uprising
       popularity = 0.1 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.1 
     }
     add_political_power = -100
@@ -1658,7 +1854,7 @@ country_event = { # Legitimist Uprising
   trigger = {
     tag = FRA
     OR = {
-      economic_liberalism > 0.25
+      centrism > 0.25
       traditional_conservatism > 0.25
     }
   }
@@ -1673,7 +1869,7 @@ country_event = { # Legitimist Uprising
       popularity = -0.05 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = -0.05 
     }
     add_political_power = 100
@@ -1687,7 +1883,7 @@ country_event = { # Legitimist Uprising
       popularity = 0.1 
     }
     add_popularity = { 
-      ideology = economic_liberalism
+      ideology = centrism
       popularity = 0.1 
     }
     add_political_power = -100
@@ -1789,7 +1985,6 @@ country_event = { # Orisini Affair
       }
       add_political_power = -200
       set_country_flag = fra_orsini_success
-      custom_effect_tooltip = FRA_orisini_branch
     }
     option = { # Emperor Alive
       name = nap_france.398.b
@@ -1834,4 +2029,203 @@ country_event = { # Death of Napoleon III
       }
       set_country_flag = fra_nap_iv
     }
+}
+
+#================================================================================================
+#================================================================================================
+#     EVENTS OF THE THIRD REPUBLIC
+#================================================================================================
+#================================================================================================
+
+#----------------------------------------------------------------------------------------------
+# PARIS COMMUNE EVENTS
+#----------------------------------------------------------------------------------------------
+
+country_event = { # Paris Commune rises up
+  id = third_rep_france.100
+  title = third_rep_france.100.t
+  desc = third_rep_france.100.d
+
+  is_triggered_only = yes
+
+  fire_only_once = yes
+
+  immediate = {
+    CPR = {
+      transfer_state = 814
+    }
+    declare_war_on= {
+      target = CPR
+      type = annex_everything
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.100.a
+  }
+
+  option = { # Proletariat of Paris, rise up !
+    name = third_rep_france.100.b
+    trigger = {
+      is_ai = no
+    }
+    CPR = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Marseille Commune rises up
+  id = third_rep_france.101
+  title = third_rep_france.101.t
+  desc = third_rep_france.101.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 22
+  }
+
+  immediate = {
+    OCC = {
+      transfer_state = 21
+      transfer_state = 22
+    }
+    declare_war_on= {
+      target = OCC
+      type = annex_everything
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.101.a
+  }
+
+  option = { # Proletariat of Marseille, rise up !
+    name = third_rep_france.101.b
+    trigger = {
+      is_ai = no
+    }
+    OCC = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Bordeaux Commune rises up
+  id = third_rep_france.102
+  title = third_rep_france.102.t
+  desc = third_rep_france.102.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 26
+  }
+
+  immediate = {
+    AQU = {
+      transfer_state = 19
+    }
+    declare_war_on= {
+      target = AQU
+      type = annex_everything
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.102.a
+  }
+
+  option = { # Proletariat of Bordeaux, rise up !
+    name = third_rep_france.102.b
+    trigger = {
+      is_ai = no
+    }
+    AQU = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Caen Commune rises up
+  id = third_rep_france.103
+  title = third_rep_france.103.t
+  desc = third_rep_france.103.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 18
+  }
+
+  immediate = {
+    NMD = {
+      transfer_state = 15
+    }
+    declare_war_on= {
+      target = NMD
+      type = annex_everything
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.103.a
+  }
+
+  option = { # Proletariat of Caen, rise up !
+    name = third_rep_france.103.b
+    trigger = {
+      is_ai = no
+    }
+    NMD = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Brest Commune rises up
+  id = third_rep_france.104
+  title = third_rep_france.104.t
+  desc = third_rep_france.104.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 20
+  }
+
+  immediate = {
+    BRI = {
+      transfer_state = 14
+    }
+    declare_war_on= {
+      target = BRI
+      type = annex_everything
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.104.a
+  }
+
+  option = { # Proletariat of Caen, rise up !
+    name = third_rep_france.104.b
+    trigger = {
+      is_ai = no
+    }
+    BRI = { change_tag_from = FRA }
+  }
 }

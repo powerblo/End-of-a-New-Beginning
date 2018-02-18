@@ -15,26 +15,26 @@ set_technology = {
 set_politics = {
 
 	parties = {
-		economic_liberalism = { 
+		centrism = { 
 			popularity = 10
 		}
 
-		totalitarian_nationalism = {
+		chauvinist_populism = {
 			popularity = 0
 			banned = yes
 		}
 		
-		marxism_leninism = {
+		vanguard_communism = {
 			popularity = 0
 			banned = yes #default is no
 		}
 		
-		despotic_autocracy = { 
+		autocracy = { 
 			popularity = 100
 		}
 	}
 	
-	ruling_party = despotic_autocracy
+	ruling_party = autocracy
 	last_election = "1935.2.8"
 	election_frequency = 48
 	elections_allowed = yes
