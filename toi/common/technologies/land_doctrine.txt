@@ -4,7 +4,7 @@ technologies = {
 		
 		army_org_Factor = 0.02
 		
-		research_cost = 5
+		research_cost = 4
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 16 y = 0 }
@@ -46,8 +46,10 @@ technologies = {
 	}
 	
 	doctrine_victorian_artillery = {
+	
+		army_artillery_attack_factor = 0.05
 		
-		research_cost = 8
+		research_cost = 6
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 4 y = 2 }
@@ -64,6 +66,8 @@ technologies = {
 	}
 	
 	doctrine_victorian_tradition = {
+	
+		army_morale_factor = 0.02
 	
 		xor = { doctrine_victorian_innovation } 
 		
@@ -84,8 +88,10 @@ technologies = {
 	}
 	
 	doctrine_victorian_industry = {
+	
+		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 8
+		research_cost = 6
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 20 y = 2 }
@@ -103,9 +109,11 @@ technologies = {
 	
 	doctrine_victorian_innovation = {
 	
+		experience_gain_army = 0.02
+	
 		xor = { doctrine_victorian_tradition } 
 		
-		research_cost = 8
+		research_cost = 6
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 28 y = 2 }
