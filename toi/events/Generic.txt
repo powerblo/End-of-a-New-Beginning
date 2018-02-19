@@ -120,3 +120,27 @@ country_event = {
 			name = generic.6.a
 		}
 }
+
+#Custom Music: Yes or no
+country_event = {
+		id = generic.7
+		title = generic.7.t
+		desc = generic.7.d
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = generic.7.a
+			ai_chance = { factor = 0 }
+			custom_effect_tooltip = eoanb_music_select_yes
+			hidden_effect = {
+				set_global_flag = is_eoanb_music_custom_true
+			}
+		}
+		
+		option = {
+			name = generic.7.b
+			ai_chance = { factor = 100 }
+			custom_effect_tooltip = eoanb_music_select_no
+		}
+}
