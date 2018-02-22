@@ -1,0 +1,56 @@
+﻿capital = 32
+
+set_politics = {
+    parties = {
+      centrism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 15
+      }
+      collectivist_socialism = {
+        popularity = 65
+      }
+      vanguard_communism = {
+        popularity = 20
+      }
+      autocracy = {
+        popularity = 0
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      anarchism = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = collectivist_socialism
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
+  name = "Claude-Désiré Barodet"
+  desc = "POLITICS_GEORGE_V_DESC"
+  picture = "Portrait_RHN_Claude_Desire_Barodet.dds"
+  expire = "1900.1.1"
+  ideology = leninism
+  traits = {
+
+  }
+}
