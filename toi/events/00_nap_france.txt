@@ -313,23 +313,15 @@ country_event = { # Biarritz - Prussia accepts
   }
 }
 
-country_event = { # Treaty of Turin
+country_event = { # Aftermath of the Orsini Tragedy
   id = nap_france.12
   title = nap_france.12.t
   desc = nap_france.12.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_nap_france_orsini_affair
 
   is_triggered_only = yes
 
-  mean_time_to_happen = {
-      days = 45
-  }
-
-  option = { # France will get his due
-    name = nap_france.12.a
-  }
-
-  option = { # Nah, we'll keep those
+  option = { # France is building itself
     name = nap_france.12.a
   }
 }
@@ -340,18 +332,64 @@ country_event = { # Savoy Rebellion
   desc = nap_france.13.d
   picture = GFX_report_event_nap_france_carbonari
 
-  is_triggered_only = yes
-
   mean_time_to_happen = {
       days = 45
   }
 
-  option = { # They are gonne be crushed in a second
+  trigger = {
+    tag = FRA
+    has_completed_focus = FRA_keep_authoritarian_empire
+    owns_state = 735
+    NOT = { has_country_flag = FRA_savoy_revolt }
+    date < 1868.1.1
+  }
+
+  immediate = {
+    SAV = {
+      transfer_state = 735
+      add_state_core = 735
+      load_oob = SAV_REVOLT
+    }
+    declare_war_on= {
+      target = SAV
+      type = annex_everything
+    }
+    SET_country_flag = FRA_savoy_revolt
+  }
+
+  option = { # They are gonna be crushed in a second
     name = nap_france.13.a
   }
 
   option = { # Wait, I'm a Savoyard
     name = nap_france.13.a
+    trigger = {
+      is_ai = no
+    }
+    SAV = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Savoy Independance
+  id = nap_france.13
+  title = nap_france.13.t
+  desc = nap_france.13.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    tag = FRA
+    country_exists = SAV
+  }
+
+  mean_time_to_happen = {
+      days = 120
+  }
+
+  option = { # We cannot fight anymore
+    name = nap_france.13.a
+    white_peace = {
+      tag = SAV
+    }
   }
 }
 
@@ -1102,30 +1140,23 @@ country_event = { # Buy Luxemburg - Prussia threathened
 # SAVOY NEGOTIATIONS
 #----------------------------------------------------------------------------------------------
 
-country_event = { # France - Ask for Savoy
+country_event = { # France - Treaty of Turin
   id = nap_france.340
   title = nap_france.340.t
   desc = nap_france.340.d
   is_triggered_only = yes
   picture = GFX_report_event_nap_france_savoy
 
-  option = { # Savoy and Alliance
-      name = nap_france.340.a 
-      ai_chance = { factor = 100 }
-      ITA = { 
+  option = { # Ask for our due
+    name = nap_france.340.a 
+    ai_chance = { factor = 100 }
+    PIE = { 
       country_event = { days = 1 id = nap_france.341 }
     }
-    }
-    option = { # Savoy
-      name = nap_france.340.b 
-      ai_chance = { factor = 0 }
-      ITA = { 
-      country_event = { days = 1 id = nap_france.342 }
-    }
-    }
+  }
 }
 
-country_event = { # Italy - Ask for Savoy and Alliance
+country_event = { # Italy - Treaty of Turin
   id = nap_france.341
   title = nap_france.341.t
   desc = nap_france.341.d
@@ -1133,82 +1164,62 @@ country_event = { # Italy - Ask for Savoy and Alliance
   picture = GFX_report_event_nap_france_savoy
 
   option = { # Accept
-      name = nap_france.341.a 
-      ai_chance = { factor = 100 }
-      FRA = { 
+    name = nap_france.341.a 
+    ai_chance = { factor = 95 }
+    FRA = { 
+      country_event = { days = 1 id = nap_france.342 }
+    }
+  }
+  option = { # Refuse
+    name = nap_france.341.b 
+    ai_chance = { factor = 5 }
+    FRA = { 
       country_event = { days = 1 id = nap_france.343 }
     }
-    }
-    option = { # Refuse
-      name = nap_france.341.b 
-      ai_chance = { factor = 0 }
-      FRA = { 
-      country_event = { days = 1 id = nap_france.345 }
-    }
-    }
+  }
 }
 
-country_event = { # Italy - Ask for Savoy
+country_event = { # France - Answer Yes - Treaty of Turin
   id = nap_france.342
   title = nap_france.342.t
   desc = nap_france.342.d
   is_triggered_only = yes
   picture = GFX_report_event_nap_france_savoy
 
-  option = { # Accept
-      name = nap_france.342.a 
-      ai_chance = { factor = 35 }
-      FRA = { 
-      country_event = { days = 1 id = nap_france.344 }
+  option = {
+    name = nap_france.342.a 
+    FRA = { 
+      transfer_state = 735 
+      transfer_state = 822
     }
-    }
-    option = { # Refuse
-      name = nap_france.342.b 
-      ai_chance = { factor = 65 }
-      FRA = { 
-      country_event = { days = 1 id = nap_france.345 }
-    }
-    }
+  }
 }
 
-country_event = { # France - Answer Yes - Savoy + Alliance
+country_event = { # France - Answer No - Treaty of Turin
   id = nap_france.343
   title = nap_france.343.t
   desc = nap_france.343.d
   is_triggered_only = yes
   picture = GFX_report_event_nap_france_savoy
 
-  option = {
-      name = nap_france.343.a 
-      FRA = { transfer_state = 735 }
-      create_faction = "French-Italian Alliance"
-      add_to_faction = ITA
+  option = { # It's treason then
+    name = nap_france.345.a 
+    ai_chance = { factor = 95 }
+    completion_reward = {
+      add_state_claim = 735
+      add_state_claim = 812
+      declare_war_on= { 
+        target = PIE
+        type = take_claimed_state 
+      }
     }
-}
+  }
 
-country_event = { # France - Answer Yes - Savoy
-  id = nap_france.344
-  title = nap_france.344.t
-  desc = nap_france.344.d
-  is_triggered_only = yes
-  picture = GFX_report_event_nap_france_savoy
-
-  option = {
-      name = nap_france.344.a 
-      FRA = { transfer_state = 735 }
-    }
-}
-
-country_event = { # France - Answer No
-  id = nap_france.345
-  title = nap_france.345.t
-  desc = nap_france.345.d
-  is_triggered_only = yes
-    picture = GFX_report_event_nap_france_savoy
-
-  option = {
-      name = nap_france.345.a 
-    }
+  option = { # Abandon our claims 
+    name = nap_france.345.a 
+    ai_chance = { factor = 5 }
+    add_political_power = -100
+  }
 }
 
 #----------------------------------------------------------------------------------------------
@@ -2053,6 +2064,8 @@ country_event = { # Paris Commune rises up
   immediate = {
     CPR = {
       transfer_state = 814
+      add_state_core = 814
+      load_oob = CPR_REVOLT
     }
     declare_war_on= {
       target = CPR
@@ -2093,10 +2106,10 @@ country_event = { # Marseille Commune rises up
     OCC = {
       transfer_state = 21
       transfer_state = 22
-    }
-    declare_war_on= {
-      target = OCC
-      type = annex_everything
+      add_state_core = 21
+      add_state_core = 22
+      load_oob = OCC_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
     }
   }
 
@@ -2132,10 +2145,9 @@ country_event = { # Bordeaux Commune rises up
   immediate = {
     AQU = {
       transfer_state = 19
-    }
-    declare_war_on= {
-      target = AQU
-      type = annex_everything
+      add_state_core = 19
+      load_oob = AQU_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
     }
   }
 
@@ -2171,10 +2183,9 @@ country_event = { # Caen Commune rises up
   immediate = {
     NMD = {
       transfer_state = 15
-    }
-    declare_war_on= {
-      target = NMD
-      type = annex_everything
+      add_state_core = 15
+      load_oob = NMD_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
     }
   }
 
@@ -2210,10 +2221,9 @@ country_event = { # Brest Commune rises up
   immediate = {
     BRI = {
       transfer_state = 14
-    }
-    declare_war_on= {
-      target = BRI
-      type = annex_everything
+      add_state_core = 14
+      load_oob = BRI_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
     }
   }
 

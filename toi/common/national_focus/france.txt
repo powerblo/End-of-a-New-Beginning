@@ -90,7 +90,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_redraw_cantons
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_gerrymandering
 		cost = 10
 		prerequisite = {
 			focus = FRA_keep_authoritarian_empire
@@ -317,7 +317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_end_censorship
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_newspapers
 		cost = 10
 		prerequisite = {
 			focus = FRA_reform_empire
@@ -363,7 +363,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_stop_gerrymendering
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_gerrymandering
 		cost = 10
 		prerequisite = {
 			focus = FRA_end_censorship
@@ -374,7 +374,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_stop_funding_patisans
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_stop_fund_partisans
 		cost = 10
 		prerequisite = {
 			focus = FRA_stop_gerrymendering
@@ -756,7 +756,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_increase_wages
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 10
 		prerequisite = {
 			focus = FRA_diminish_poverty
@@ -802,7 +802,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_expand_lgoc
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_expand_lgoc
 		cost = 10
 		prerequisite = {
 			focus = FRA_cobden_chevalier_treaty
@@ -813,7 +813,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_franco_monegasque_treaty
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_franco_monegasque_treaty
 		cost = 10
 		prerequisite = {
 			focus = FRA_foreign_assets
@@ -824,7 +824,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_chinese_indemnity
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 10
 		prerequisite = {
 			focus = FRA_foreign_assets
@@ -835,7 +835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_international_investments
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_international_investments
 		cost = 10
 		prerequisite = {
 			focus = FRA_profits_gold_rush
@@ -849,7 +849,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_american_continent
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_continent_north_america
 		cost = 10
 		prerequisite = {
 			focus = FRA_external_affairs
@@ -860,7 +860,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_american_civil_war
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_american_civil_war
 		cost = 10
 		prerequisite = {
 			focus = FRA_american_continent
@@ -879,6 +879,19 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_recognize_csa
 		}
+		available = {
+			OR = {
+				USA = {
+					has_offensive_war_with = CSA
+				}
+				CSA = {
+					has_offensive_war_with = USA
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
 		x = 28
 		y = 3
 
@@ -893,6 +906,17 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_neutral_stance_civil_war
 		}
+		available = {
+			USA = {
+				has_offensive_war_with = CSA
+			}
+		}
+		completion_reward = {
+			CSA = {
+				add_ideas = CSA_recognized_france
+			}
+			add_political_power = 50
+		}
 		x = 30
 		y = 3
 
@@ -903,6 +927,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_recognize_csa
+		}
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
 		}
 		x = 30
 		y = 4
@@ -915,13 +942,19 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_american_continent
 		}
+		completion_reward = {
+			create_wargoal = {
+				target = MEX
+				type = puppet_wargoal_focus
+			}
+		}
 		x = 35
 		y = 2
 
 	}
 	focus = {
 		id = FRA_mexico_british_spanish_help
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_deal_uk_spain
 		cost = 10
 		prerequisite = {
 			focus = FRA_mexican_intervention
@@ -957,7 +990,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_british_spanish_appeasement
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_deal_uk_spain
 		cost = 10
 		prerequisite = {
 			focus = FRA_mexico_british_spanish_help
@@ -1001,20 +1034,17 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_enforce_mexican_debt
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 10
 		prerequisite = {
 			focus = FRA_mexico_victory
-		}
-		prerequisite = {
-			focus = FRA_british_spanish_appeasement
 		}
 		x = 36
 		y = 6
 
 	}
 	focus = {
-		id = FRA_distribute silver
+		id = FRA_distribute_silver
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -1029,7 +1059,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_french_colonial_empire
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_colonial_empire_france
 		cost = 10
 		prerequisite = {
 			focus = FRA_external_affairs
@@ -1073,6 +1103,34 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_submit_kabyle
 		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 7132
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 1145
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 		x = 41
 		y = 3
 
@@ -1083,6 +1141,16 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_expand_algeria
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SAL
+			}
 		}
 		x = 40
 		y = 4
@@ -1122,25 +1190,17 @@ focus_tree = {
 
 	}
 	focus = {
-		id = FRA_bombard_da_nang
+		id = FRA_remove_grenouilly
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
 			focus = FRA_french_indochina
 		}
-		x = 44
-		y = 4
-
-	}
-	focus = {
-		id = FRA_remove_grenouilly
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = FRA_bombard_da_nang
+		completion_reward = {
+			remove_unit_leader = 10002
 		}
 		x = 44
-		y = 5
+		y = 4
 
 	}
 	focus = {
@@ -1150,8 +1210,15 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_remove_grenouilly
 		}
+		completion_reward
+			create_navy_leader = {
+  				name = "Théogène François Page"
+  				traits = { }
+ 				skill = 3
+			}
+		}
 		x = 44
-		y = 6
+		y = 5
 
 	}
 	focus = {
@@ -1165,7 +1232,7 @@ focus_tree = {
 			focus = FRA_capture_vietnam
 		}
 		x = 43
-		y = 7
+		y = 6
 
 	}
 	focus = {
@@ -1190,12 +1257,12 @@ focus_tree = {
 			focus = FRA_faith_over_territory
 		}
 		x = 45
-		y = 7
+		y = 6
 
 	}
 	focus = {
 		id = FRA_european_neighbors
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_continent_west_europe
 		cost = 10
 		prerequisite = {
 			focus = FRA_external_affairs
@@ -1359,6 +1426,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_the_orsini_letter
 		}
+		available = {
+			NOT = { has_country_flag = fra_meeting_cavour_flag }
+		}
 		mutually_exclusive = {
 			focus = FRA_meeting_cavour
 		}
@@ -1448,7 +1518,7 @@ focus_tree = {
 			focus = FRA_arm_revolutionaries
 		}
 		available = {
-			has_country_flag = fra_meeting_cavour
+			has_country_flag = fra_meeting_cavour_flag
 		}
 		x = 60
 		y = 2
@@ -1461,6 +1531,21 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_meeting_cavour
 		}
+		bypass = {
+			NOT = { 
+				country_exists = LVN
+			}
+		}
+		available = {
+			PIE = {
+				has_offensive_war_with = LVN
+			}
+		}
+		completion_reward = {
+			FRA = {
+				add_to_war = { targeted_alliance = PIE enemy = LVN }
+			}
+		}
 		x = 60
 		y = 3
 
@@ -1472,6 +1557,24 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_italian_campaign
 		}
+		bypass = {
+			NOT = { 
+				country_exists = MOD
+				country_exists = PRM
+			}
+		}
+		available = {
+			PIE = {
+				has_offensive_war_with = MOD
+				has_offensive_war_with = PRM
+			}
+		}
+		completion_reward = {
+			FRA = {
+				add_to_war = { targeted_alliance = PIE enemy = MOD }
+				add_to_war = { targeted_alliance = PIE enemy = PRM }
+			}
+		}
 		x = 58
 		y = 4
 
@@ -1482,6 +1585,21 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_italian_campaign
+		}
+		bypass = {
+			NOT = { 
+				country_exists = TUS
+			}
+		}
+		available = {
+			PIE = {
+				has_offensive_war_with = TUS
+			}
+		}
+		completion_reward = {
+			FRA = {
+				add_to_war = { targeted_alliance = PIE enemy = TUS }
+			}
 		}
 		x = 62
 		y = 4
@@ -1511,6 +1629,13 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_central_campaign
 		}
+		available = {
+			country_exists = ITA
+		}
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 50
+		}
 		x = 59
 		y = 5
 
@@ -1532,6 +1657,11 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_italy_united
+		}
+		completion_reward = {
+			country_event = {
+				id = nap_france.340
+			}
 		}
 		x = 59
 		y = 6
@@ -1559,6 +1689,14 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_protect_pope
 		}
+		available = {
+			PIE = {
+				has_offensive_war_with = PAP
+			}
+		}
+		completion_reward = {
+			add_to_war = { targeted_alliance = PIE enemy = PAP }
+		}
 		x = 63
 		y = 5
 
@@ -1575,6 +1713,9 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = fra_orsini_success
+		}
+		completion_reward = {
+			FRA = { country_event = { id = nap_france.12 } }
 		}
 		x = 68
 		y = 1
@@ -1629,6 +1770,19 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_deal_prussia
 		}
+		bypass = {
+			PRS = {
+				has_completed_focus = PRS_trade_france_focus
+			}
+		}
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fra_free_trade
+				}
+			}
+		}
 		x = 49
 		y = 4
 
@@ -1639,6 +1793,14 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_approach_uk
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fra_free_trade
+				}
+			}
 		}
 		x = 47
 		y = 4
@@ -1672,6 +1834,16 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_treaty_turin
+		}
+		available = {
+			PIE = {
+				has_offensive_war_with = NSC
+			}
+		}
+		completion_reward = {
+			FRA = {
+				add_to_war = { targeted_alliance = PIE enemy = NSC }
+			}
 		}
 		x = 59
 		y = 7
@@ -1813,7 +1985,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_fund_partisans
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_fund_partisans
 		cost = 10
 		prerequisite = {
 			focus = FRA_redraw_cantons
@@ -1845,12 +2017,12 @@ focus_tree = {
 			focus = FRA_capture_vietnam
 		}
 		x = 44
-		y = 8
+		y = 7
 
 	}
 	focus = {
 		id = FRA_crown_maximilian_ferdinand
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_crown_maximilian_austria
 		cost = 10
 		prerequisite = {
 			focus = FRA_mexico_ourselves

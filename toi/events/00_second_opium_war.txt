@@ -1,0 +1,181 @@
+add_namespace = second_opium_war
+
+#----------------------------------------------------------------------------------------------
+# TREATY OF TIANJIN - EVENT CHAIN
+#----------------------------------------------------------------------------------------------
+
+country_event = { # Negiotiate with the western powers ?
+  id = second_opium_war.1
+  title = second_opium_war.1.t
+  desc = second_opium_war.1.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = { # Autorize Negiotiations
+    name = second_opium_war.1.a
+    add_political_power = 25
+    FRA = {
+    	country_event = { id = second_opium_war.2 }
+    }
+    ENG = {
+    	country_event = { id = second_opium_war.2 }
+    }
+    RUS = {
+    	country_event = { id = second_opium_war.3 }
+    }
+    USA = {
+    	country_event = { id = second_opium_war.3 }
+    }
+  }
+
+  option = { # Fight until death !
+    name = second_opium_war.1.b
+    add_political_power = -500
+  }
+}
+
+country_event = { # Major country - initial response
+  id = second_opium_war.2
+  title = second_opium_war.2.t
+  desc = second_opium_war.2.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = { # We must put an end to this mess
+    name = second_opium_war.2.a
+    add_political_power = 25
+    set_country_flag = sow_accept_negiotiations
+    set_country_flag = sow_recceived_message
+  }
+}
+
+country_event = { # "Neutral" country - initial response
+  id = second_opium_war.3
+  title = second_opium_war.3.t
+  desc = second_opium_war.3.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = { # Why not also participate
+    name = second_opium_war.3.a
+    add_political_power = 25
+    set_country_flag = sow_accept_negiotiations
+    set_country_flag = sow_recceived_message
+  }
+}
+
+country_event = { # The terms of the Tianjin Treaty
+  id = second_opium_war.4
+  title = second_opium_war.4.t
+  desc = second_opium_war.4.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  trigger = {
+  	if = {
+	  	limit = {
+	  		ENG = {
+	  			is_ai = no
+	  		}
+	  	}
+	  	tag = ENG
+  	}
+  	if = {
+  	  limit = {
+  	  	ENG = {
+  	  		is_ai = yes
+  	  	}
+  	  }
+  	  tag = FRA
+  	}
+    FRA = {
+      has_country_flag = sow_recceived_message
+    }
+    ENG = {
+      has_country_flag = sow_recceived_message
+    }
+    RUS = {
+      has_country_flag = sow_recceived_message
+    }
+    USA = {
+      has_country_flag = sow_recceived_message
+    }
+  }
+
+  fire_only_one = yes
+
+  immediate = {
+  	FRA = {
+  		clr_country_flag = sow_recceived_message
+  	}
+  	ENG = {
+  		clr_country_flag = sow_recceived_message
+  	}
+  	USA = {
+  		clr_country_flag = sow_recceived_message
+  	}
+  	RUS = {
+  		clr_country_flag = sow_recceived_message
+  	}
+  }
+
+  option = { # Give the right to station Legations in Beijing, to navigate the Yangtze River and to open ports to european merchants 
+    name = second_opium_war.4.a
+    CHI = {
+      set_country_flag = sow_tianjin_1
+    }
+    add_political_power = 50
+    custom_tooltip = sow_tianjin_1_tooltip
+  }
+
+  option = { # Divert part of China's income into Indochina and the Raj, give total freedom of travel into the Chinese Sea
+    name = second_opium_war.4.b
+    CHI = {
+      set_country_flag = sow_tianjin_2
+    }
+    add_political_power = -100
+    custom_tooltip = sow_tianjin_2_tooltip
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin 1
+  id = second_opium_war.5
+  title = second_opium_war.5.t
+  desc = second_opium_war.5.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  trigger = {
+    CHI = {
+      has_country_flag = sow_tianjin_1
+    }
+  }
+
+  option = {
+    name = second_opium_war.5.a
+    add_political_power = 25
+    set_country_flag = sow_accept_negiotiations
+    set_country_flag = sow_recceived_message
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin 2
+  id = second_opium_war.5
+  title = second_opium_war.5.t
+  desc = second_opium_war.5.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  trigger = {
+    CHI = {
+      has_country_flag = sow_tianjin_2
+    }
+  }
+
+  option = {
+    name = second_opium_war.5.a
+    add_political_power = 25
+    set_country_flag = sow_accept_negiotiations
+    set_country_flag = sow_recceived_message
+  }
+}
