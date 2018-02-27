@@ -456,37 +456,6 @@ technologies = {
 		}
 	}
 	
-#	
-
-	bessemer_process = {
-		
-		industrial_capacity_factory = 0.1
-		
-		dependencies = {
-			tribaltech = 0
-		}
-		
-		path = {
-			leads_to_tech = tool_grade_metals 
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 3
-		start_year = 1856
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 0 }
-		}
-		
-		categories = {
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 20			
-		}
-	}
-	
 	tool_grade_metals = {
 	
 		production_factory_max_efficiency_factor = 0.05
@@ -513,57 +482,6 @@ technologies = {
 			factor = 20
 		}
 	}
-	
-	regenerative_furnace = {
-	
-		production_factory_max_efficiency_factor = 0.05
-		production_factory_efficiency_gain_factor = 0.05
-		
-		path = {
-			leads_to_tech = arc_furnace
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1.5
-		start_year = 1875
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 8 }
-		}
-		
-		categories = {
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 20
-		}
-	}
-	
-	arc_furnace = {
-	
-		production_factory_max_efficiency_factor = 0.05
-		production_factory_efficiency_gain_factor = 0.05
-		
-		research_cost = 1.5
-		start_year = 1885
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 12 }
-		}
-		
-		categories = {
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 20
-		}
-	}
-	
-#	
 	
 	construction1 = {
 		
