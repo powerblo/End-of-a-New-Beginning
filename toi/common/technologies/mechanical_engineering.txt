@@ -1,6 +1,6 @@
 technologies = {
 
-	railroad_research = {
+	iron_railways = {
 		
 		production_speed_infrastructure_factor = 0.05
 		
@@ -8,30 +8,14 @@ technologies = {
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = 0 }
+			position = { x = -2 y = -2 }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
@@ -46,10 +30,41 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		
 		research_cost = 2
-		start_year = 1855
+		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 2 }
+			position = { x = 20 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = corliss_steam_engine
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			industry
+		}
+	}
+	
+	corliss_steam_engine = {
+		
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 18 y = 0 }
 		}
 		
 		path = {
@@ -59,25 +74,9 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
@@ -94,39 +93,53 @@ technologies = {
 		industrial_capacity_dockyard = 0.05
 		
 		research_cost = 1.5
-		start_year = 1865
+		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 6 }
+			position = { x = 18 y = 2 }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1875.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1880.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
-			kinetic_devices_tech
+			industry
+		}
+	}
+	
+	manufactories = {
+		
+		global_building_slots_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 16 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = corliss_steam_engine
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
 			industry
 		}
 	}
