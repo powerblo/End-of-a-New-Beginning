@@ -2677,7 +2677,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1860"
+					text = "1855"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -2690,7 +2690,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1870"
+					text = "1860"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -2703,7 +2703,46 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
+					text = "1870"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "biochemistry_year5"
+					position = { x = 0 y = 1244 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
 					text = "1880"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "biochemistry_year6"
+					position = { x = 0 y = 1520 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1890"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "biochemistry_year7"
+					position = { x = 0 y = 1796 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1900"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -2713,6 +2752,22 @@ guiTypes = {
 			}
 
 			gridboxtype = {
+				name = "wohler_synthesis_tree"
+				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			
+			gridboxtype = {
+				name = "polymer_chemistry_tree"
+				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			
+			gridboxtype = {
 				name = "early_medicine_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
@@ -2721,7 +2776,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "early_vaccination_tree"
+				name = "food_preserving_icebox_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
@@ -2729,7 +2784,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "organic_chemistry_tree"
+				name = "early_artificial_fertilizer_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
@@ -2737,7 +2792,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "food_preserving_tree"
+				name = "pre_industrial_farms_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
@@ -2745,7 +2800,15 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "agriculture_engineer_tree"
+				name = "early_tractors_tree"
+				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			
+			gridboxtype = {
+				name = "mechanized_farming_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }

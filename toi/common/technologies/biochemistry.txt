@@ -1,4 +1,202 @@
 technologies = {
+
+	wohler_synthesis = {
+		
+		research_time_factor = -0.01
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = -2 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = organic_chemistry
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	organic_chemistry = {
+		
+		research_time_factor = -0.01
+		
+		research_cost = 1
+		start_year = 1855
+		folder = {
+			name = biochemistry_folder
+			position = { x = -2 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = chemical_structure_model
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	chemical_structure_model = {
+		
+		research_time_factor = -0.01
+		
+		research_cost = 1
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = -2 y = 8 }
+		}
+		
+		path = {
+			leads_to_tech = periodic_table
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	periodic_table = {
+		
+		research_time_factor = -0.01
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = biochemistry_folder
+			position = { x = -2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	polymer_chemistry = {
+		
+		consumer_goods_factor = -0.02
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 0 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = organic_chemistry
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = celluloid
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	celluloid = {
+		
+		local_resources_factor = 0.05
+		
+		research_cost = 1
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		path = {
+			leads_to_tech = polyethylene_synthesis
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	polyethylene_synthesis = {
+		
+		consumer_goods_factor = -0.02
+		
+		research_cost = 1
+		start_year = 1900
+		folder = {
+			name = biochemistry_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
 	
 	early_medicine = {
 		
@@ -8,7 +206,7 @@ technologies = {
 		start_year = 1850
 		folder = {
 			name = biochemistry_folder
-			position = { x = -2 y = 0 }
+			position = { x = 4 y = 0 }
 		}
 		
 		path = {
@@ -18,29 +216,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
+			biochemistry_tech
 			health_tech
 		}
 	}
@@ -53,7 +236,7 @@ technologies = {
 		start_year = 1855
 		folder = {
 			name = biochemistry_folder
-			position = { x = -2 y = 2 }
+			position = { x = 4 y = 4 }
 		}
 		
 		path = {
@@ -63,29 +246,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
+			biochemistry_tech
 			health_tech
 		}
 	}
@@ -98,92 +266,47 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = biochemistry_folder
-			position = { x = -2 y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1875.1.1"
-			}
-		}
-		
-		categories = {
-			health_tech
-		}
-	}
-	
-	early_vaccination = {
-		
-		army_morale_factor = 0.04
-		
-		research_cost = 1
-		start_year = 1850
-		folder = {
-			name = biochemistry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 4 y = 8 }
 		}
 		
 		path = {
-			leads_to_tech = hygiene
+			leads_to_tech = microbiology
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = pasteurization
 			research_cost_coeff = 1
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
+			biochemistry_tech
 			health_tech
 		}
 	}
 	
-	organic_chemistry = {
+	microbiology = {
 		
-		research_time_factor = -0.02
+		research_time_factor = -0.01
 		
-		research_cost = 1
-		start_year = 1850
+		research_cost = 1.5
+		start_year = 1870
 		folder = {
 			name = biochemistry_folder
-			position = { x = 2 y = 0 }
+			position = { x = 4 y = 12 }
+		}
+		
+		path = {
+			leads_to_tech = early_vaccination
+			research_cost_coeff = 1
 		}
 		
 		path = {
@@ -193,30 +316,40 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
-			chemistry_tech
+			biochemistry_tech
+			health_tech
+		}
+	}
+	
+	early_vaccination = {
+		
+		army_morale_factor = 0.04
+		
+		research_cost = 1
+		start_year = 1880
+		folder = {
+			name = biochemistry_folder
+			position = { x = 4 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+			health_tech
 		}
 	}
 	
@@ -226,88 +359,66 @@ technologies = {
 		supply_consumption_factor = -0.02
 		
 		research_cost = 2
-		start_year = 1880
+		start_year = 1885
 		folder = {
 			name = biochemistry_folder
-			position = { x = 2 y = 12 }
-		}
-		
-		dependencies = {
-			germ_theory = 1
+			position = { x = 2 y = 18 }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1885.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1890.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1895.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
+			biochemistry_tech
 			chemistry_tech
 		}
 	}
 	
-	agriculture_engineer = {
+	food_preserving_icebox = {
 		
-		global_building_slots_factor = 0.10
+		consumer_goods_factor = -0.05
 		
-		research_cost = 2
-		start_year = 1860
+		research_cost = 1.5
+		start_year = 1850
 		folder = {
 			name = biochemistry_folder
-			position = { x = 4 y = 4 }
+			position = { x = 8 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = food_canning
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = vapor_compression_refrigerator
+			research_cost_coeff = 1
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1875.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
 		categories = {
-			farming_tech
+			biochemistry_tech
+			chemistry_tech
 		}
 	}
 	
-	food_preserving = {
+	food_canning = {
 		
-		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.06
+		supply_consumption_factor = -0.04
+		army_morale_factor = 0.04
 		
 		research_cost = 1.5
 		start_year = 1850
@@ -317,76 +428,15 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = refrigeration
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = canned_food
+			leads_to_tech = pasteurization
 			research_cost_coeff = 1
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-		}
-		
-		categories = {
-			chemistry_tech
-		}
-	}
-	
-	refrigeration = {
-		
-		MONTHLY_POPULATION = 0.04
-		
-		research_cost = 2
-		start_year = 1860
-		folder = {
-			name = biochemistry_folder
-			position = { x = 6 y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1875.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
@@ -395,40 +445,467 @@ technologies = {
 		}
 	}
 	
-	canned_food = {
+	pasteurization = {
 		
-		production_factory_efficiency_gain_factor = 0.06
-		supply_consumption_factor = -0.04
+		MONTHLY_POPULATION = 0.012
+		consumer_goods_factor = 0.04
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 6 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	vapor_compression_refrigerator = {
+		
+		MONTHLY_POPULATION = 0.04
+		
+		research_cost = 2
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 8 y = 8 }
+		}
+		
+		path = {
+			leads_to_tech = absorption_refrigerator
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	absorption_refrigerator = {
+		
+		MONTHLY_POPULATION = 0.04
+		consumer_goods_factor = -0.02
+		
+		research_cost = 1.5
+		start_year = 1875
+		folder = {
+			name = biochemistry_folder
+			position = { x = 8 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	early_artificial_fertilizer = {
+		
+		MONTHLY_POPULATION = 0.02
+		consumer_goods_factor = -0.01
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 12 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = high_phosphate_fertilizer
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	high_phosphate_fertilizer = {
+		
+		MONTHLY_POPULATION = 0.04
+		production_speed_industrial_complex_factor = 0.02
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 12 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = agricultural_engineering
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = industrial_fertilizers
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = copper_salts_pesticides
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	industrial_fertilizers = {
+		
+		MONTHLY_POPULATION = 0.04
 		army_morale_factor = 0.04
+		consumer_goods_factor = 0.02
+		
+		research_cost = 1.5
+		start_year = 1870
+		folder = {
+			name = biochemistry_folder
+			position = { x = 12 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	copper_salts_pesticides = {
+		
+		MONTHLY_POPULATION = 0.02
+		attrition = -0.02
 		
 		research_cost = 1.5
 		start_year = 1855
 		folder = {
 			name = biochemistry_folder
-			position = { x = 8 y = 2 }
+			position = { x = 10 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = fungicides
+			research_cost_coeff = 1
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 1.5
-				is_major = yes
+				factor = 1
+				date > "1850.1.1"
 			}
-			
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	fungicides = {
+		
+		MONTHLY_POPULATION = 0.06
+		
+		research_cost = 1.5
+		start_year = 1865
+		folder = {
+			name = biochemistry_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
 			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
-			
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	early_tractors = {
+		
+		consumer_goods_factor = -0.04
+		MONTHLY_POPULATION = 0.02
+		
+		research_cost = 2
+		start_year = 1890
+		folder = {
+			name = biochemistry_folder
+			position = { x = 14 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
 			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
+				factor = 1
+				date > "1850.1.1"
 			}
-			
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	pre_industrial_farms = {
+		
+		global_building_slots_factor = 0.05
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 16 y = -2 }
+		}
+		
+		path = {
+			leads_to_tech = agricultural_engineering
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = cottage_industry_1
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
 			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	cottage_industry_1 = {
+		
+		global_building_slots_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industry_air_damage_factor = -0.05
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		path = {
+			leads_to_tech = cottage_industry_2
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	cottage_industry_2 = {
+		
+		global_building_slots_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industry_air_damage_factor = -0.05
+		
+		research_cost = 1.5
+		start_year = 1875
+		folder = {
+			name = biochemistry_folder
+			position = { x = 16 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	agricultural_engineering = {
+		
+		global_building_slots_factor = 0.10
+		
+		research_cost = 2
+		start_year = 1855
+		folder = {
+			name = biochemistry_folder
+			position = { x = 18 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = cottage_industry_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = manufactured_seed_drill
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	mechanized_farming = {
+		
+		global_building_slots_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.02
+		
+		research_cost = 1.5
+		start_year = 1850
+		folder = {
+			name = biochemistry_folder
+			position = { x = 22 y = 2 }
+		}
+		
+		path = {
+			leads_to_tech = agricultural_engineering
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = threshing_machine
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	threshing_machine = {
+		
+		MONTHLY_POPULATION = 0.02
+		consumer_goods_factor = -0.01
+		
+		research_cost = 1.5
+		start_year = 1855
+		folder = {
+			name = biochemistry_folder
+			position = { x = 22 y = 4 }
+		}
+		
+		path = {
+			leads_to_tech = manufactured_seed_drill
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+		}
+		
+		categories = {
+			biochemistry_tech
+		}
+	}
+	
+	manufactured_seed_drill = {
+		
+		production_speed_industrial_complex_factor = 0.08
+		MONTHLY_POPULATION = 0.02
+		
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = biochemistry_folder
+			position = { x = 20 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
 			}
 		}
 		
