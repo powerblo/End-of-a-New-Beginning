@@ -1,0 +1,66 @@
+add_namespace = prussia
+
+#Marriage of Prince Friedrich Wilhelm and Princess Victoria 
+country_event = {
+		id = prussia.1 
+		title = prussia.1.t
+		desc = prussia.1.d
+		picture = GFX_event_prussia_wedding
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1858.1.25
+		}
+		
+		option = {
+			name = prussia.1.a
+			ai_chance = { factor = 100 }
+			add_political_power = 30
+			ENG = { add_opinion_modifier = { target = PRS modifier = PRS_ENG_WEDDING } }
+			add_opinion_modifier = { target = ENG modifier = PRS_ENG_WEDDING }
+		}
+}
+
+#Museum für polnisches und slawisches Altertum (Posen) 
+country_event = {
+		id = prussia.2
+		title = prussia.2.t
+		desc = prussia.2.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1857.6.25
+		}
+		
+		option = {
+			name = prussia.2.a 
+			ai_chance = { factor = 100 }
+			add_political_power = 20
+		}
+}
+
+#Establishing König Brewery 
+country_event = {
+		id = prussia.3
+		title = prussia.3.t
+		desc = prussia.3.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1858.7.25
+		}
+		
+		option = {
+			name = prussia.3.a 
+			ai_chance = { factor = 100 }
+			add_political_power = 20
+		}
+} 
