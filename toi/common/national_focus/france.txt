@@ -27,7 +27,7 @@ focus_tree = {
 		id = FRA_external_affairs
 		icon = GFX_goal_anschluss
 		cost = 10
-		x = 44
+		x = 50
 		y = 0
 		completion_reward = {
 			add_political_power = 50
@@ -385,10 +385,18 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_french_railway_system
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_focus_railroad_development
 		cost = 10
 		prerequisite = {
 			focus = FRA_new_public_works
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = transport_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = transport_tech
+			}
 		}
 		x = 15
 		y = 1
@@ -734,7 +742,7 @@ focus_tree = {
 			focus = FRA_continue_haussmann_renovations
 		}
 		completion_reward = {
-			# WILL GAIN MORE WAR SUPPORT/PEOPLE SUPPORT
+			# WILL GAIN MORE WAR SUPPORT
 		}
 		x = 19
 		y = 3
@@ -791,7 +799,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_cobden_chevalier_treaty
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ally_ENG
 		cost = 10
 		prerequisite = {
 			focus = FRA_foreign_assets
@@ -1004,7 +1012,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_mexico_victory
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_victory_mexico
 		cost = 10
 		prerequisite = {
 			focus = FRA_british_spanish_appeasement
@@ -1019,7 +1027,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_mexico_failure
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_failure_mexico
 		cost = 10
 		prerequisite = {
 			focus = FRA_mexico_ourselves
@@ -1919,7 +1927,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_prepare_heir
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_heir_napoleon_iv
 		cost = 10
 		prerequisite = {
 			focus = FRA_secure_regency_empress
@@ -1930,7 +1938,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_close_relations_austria
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ally_AUS
 		cost = 10
 		prerequisite = {
 			focus = FRA_cut_ties_piedmont
