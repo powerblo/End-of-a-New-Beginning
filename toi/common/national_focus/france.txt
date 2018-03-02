@@ -45,7 +45,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_foreign_assets
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		x = 25
 		y = 0
@@ -945,7 +945,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_mexican_intervention
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_mexican_intervention
 		cost = 10
 		prerequisite = {
 			focus = FRA_american_continent
@@ -1212,7 +1212,7 @@ focus_tree = {
 	#}
 	focus = {
 		id = FRA_admiral_page_mission
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_admiral_page_mission
 		cost = 10
 		prerequisite = {
 			focus = FRA_french_indochina
@@ -1256,7 +1256,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_capture_vietnam
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_colonize_vietnam
 		cost = 10
 		prerequisite = {
 			focus = FRA_admiral_page_mission
@@ -1466,7 +1466,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_invade_southern_italy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_position_armies
 		cost = 10
 		prerequisite = {
 			focus = FRA_carbonari_italy
@@ -1477,7 +1477,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_create_puppet_italy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_carbonari_italy
 		cost = 10
 		prerequisite = {
 			focus = FRA_invade_southern_italy
@@ -1505,7 +1505,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_safer_charcoal_mines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_coal_mines
 		cost = 10
 		prerequisite = {
 			focus = FRA_create_puppet_italy
@@ -1535,13 +1535,16 @@ focus_tree = {
 	focus = {
 		id = FRA_italian_campaign
 		icon = GFX_focus_RAJ_lions_of_the_great_war
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = FRA_meeting_cavour
 		}
 		bypass = {
-			NOT = { 
-				country_exists = LVN
+			NOT = {
+				has_global_flag = FRA_PIE_OneCall
+			}
+			PIE = {
+				has_completed_focus = PIE_Core_Milan
 			}
 		}
 		available = {
@@ -1559,9 +1562,9 @@ focus_tree = {
 
 	}
 	focus = {
-		id = FRA_nothern_campaign
+		id = FRA_northern_campaign
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = FRA_italian_campaign
 		}
@@ -1590,7 +1593,7 @@ focus_tree = {
 	focus = {
 		id = FRA_central_campaign
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = FRA_italian_campaign
 		}
@@ -1632,7 +1635,7 @@ focus_tree = {
 		icon = GFX_goal_focus_form_italy
 		cost = 10
 		prerequisite = {
-			focus = FRA_nothern_campaign
+			focus = FRA_northern_campaign
 		}
 		prerequisite = {
 			focus = FRA_central_campaign
@@ -1661,7 +1664,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_treaty_turin
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_enact_law
 		cost = 10
 		prerequisite = {
 			focus = FRA_italy_united
@@ -1839,7 +1842,7 @@ focus_tree = {
 	focus = {
 		id = FRA_southern_campaign
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = FRA_treaty_turin
 		}
@@ -2004,7 +2007,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_boost_italian_mining_economy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construction2
 		cost = 10
 		prerequisite = {
 			focus = FRA_create_puppet_italy
@@ -2018,7 +2021,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_protectorate_cambodia
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_self_management
 		cost = 10
 		prerequisite = {
 			focus = FRA_faith_over_territory

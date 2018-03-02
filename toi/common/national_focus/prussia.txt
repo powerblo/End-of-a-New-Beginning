@@ -509,6 +509,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			FRA = {
+				has_completed_focus = FRA_free_trade_prussia
+			}
+		}
 		prerequisite = { focus = PRS_paris_declare_marlaw }
 		
 		completion_reward = {
