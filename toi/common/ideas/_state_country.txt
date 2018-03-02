@@ -314,7 +314,12 @@ ideas = {
 			}
 
 			modifier = {
-				
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.1
+				political_power_gain = -0.1
+				army_morale_factor = -0.05
+				consumer_goods_factor = -0.05
+				research_time_factor = -0.01
 			}
 
 			default = yes
@@ -341,7 +346,11 @@ ideas = {
 			}
 
 			modifier = {
-				
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.05
+				political_power_gain = -0.05
+				consumer_goods_factor = -0.02
+				research_time_factor = -0.02
 			}
 			
 			cancel_if_invalid = no
@@ -358,7 +367,8 @@ ideas = {
 			}
 
 			modifier = {
-				
+				army_morale_factor = 0.02
+				research_time_factor = -0.03
 			}
 
 			ai_will_do = {
@@ -380,7 +390,12 @@ ideas = {
 			ai_will_do = {
    				factor = 1
 				modifier = {
-					
+					production_factory_max_efficiency_factor = 0.05
+					production_speed_buildings_factor = 0.05
+					political_power_gain = 0.05
+					army_morale_factor = 0.05
+					consumer_goods_factor = 0.02
+					research_time_factor = -0.04
 				}
 			}
 			
@@ -413,7 +428,12 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.1
+				army_morale_factor = 0.075
+				consumer_goods_factor = 0.05
+				research_time_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -461,7 +481,9 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.05
+				unity_factor = -0.15
+				drift_defence_factor = -0.25
 			}
 			
 			cancel_if_invalid = no
@@ -478,7 +500,9 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.1
+				drift_defence_factor = -0.1
+				unity_factor = -0.2
 			}
 
 			ai_will_do = {
@@ -509,7 +533,7 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				
+				unity_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -533,7 +557,8 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				
+				unity_factor = -0.05
+				drift_defence_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -557,7 +582,7 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				
+				unity_factor = 0.05
 			}
 			
 			cancel_if_invalid = no

@@ -12,14 +12,14 @@ ideas = {
 		
 			modifier = {
 				consumer_goods_factor = 0.40
-				production_speed_industrial_complex_factor = -0.5
-				production_speed_arms_factory_factor = -0.5
-				conversion_cost_civ_to_mil_factor = 0.5
-				conversion_cost_mil_to_civ_factor = 0.5
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.6
+				conversion_cost_civ_to_mil_factor = 0.8
+				conversion_cost_mil_to_civ_factor = 0.8
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.5
+				lend_lease_tension = 0.25
+				send_volunteers_tension = 0.25
 				guarantee_tension = 0.75
 			}
 			
@@ -44,13 +44,13 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = -0.4
-				conversion_cost_civ_to_mil_factor= 0.4
-				conversion_cost_mil_to_civ_factor = 0.4
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				send_volunteers_tension = 0.20
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor= 0.7
+				conversion_cost_mil_to_civ_factor = 0.7
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.5
+				send_volunteers_tension = 0.25
 				guarantee_tension = 0.5
 			}
 			allowed_to_remove = {
@@ -71,10 +71,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.30
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = -0.35
+				conversion_cost_civ_to_mil_factor= 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
 			}
 			
 			default = yes
@@ -98,9 +99,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.25
-
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = -0.15
+				conversion_cost_civ_to_mil_factor= 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
 			}
 			
 			cancel_if_invalid = no
@@ -132,9 +135,12 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.20
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				conversion_cost_civ_to_mil_factor= 0.05
+				conversion_cost_mil_to_civ_factor = 0.05
+				research_time_factor = 0.05
+				political_power_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -176,9 +182,13 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.15
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				research_time_factor = 0.05
+				political_power_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -238,11 +248,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				conscription = -0.03
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = -0.6
 				production_speed_arms_factory_factor = 0.3
+				production_speed_buildings_factor = -0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
+				research_time_factor = 0.2
+				political_power_factor = -0.3
 			}
 			
 			cancel_if_invalid = no
@@ -259,11 +272,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.8
+				min_export = 0.75
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_same_ideology_factor = 0.75
+				opinion_gain_monthly_factor = 0.35
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
-				research_time_factor = -0.10
+				research_time_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -277,10 +293,13 @@ ideas = {
 			
 			modifier = {
 				min_export = 0.5
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				opinion_gain_monthly_factor = 0.25
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_time_factor = -0.05
+				research_time_factor = -0.02
 			}
 			
 			default = yes
@@ -319,6 +338,9 @@ ideas = {
 			
 			modifier = {
 				min_export = 0.25
+				improve_relations_maintain_cost_factor = -0.15
+				opinion_gain_monthly_same_ideology_factor = 0.35
+				opinion_gain_monthly_factor = 0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
@@ -365,6 +387,9 @@ ideas = {
 			
 			modifier = {
 				min_export = 0
+				improve_relations_maintain_cost_factor = 0.25
+				opinion_gain_monthly_same_ideology_factor = -0.25
+				opinion_gain_monthly_factor = -0.5
 			}
 			
 			on_add = {
@@ -399,7 +424,14 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				military_leader_cost_factor = -0.50
+				planning_speed = 0.3
+				army_org_Factor = 0.1
+				defence = 0.1
+				offence = 0.1
+				experience_gain_army = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -424,7 +456,14 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				military_leader_cost_factor = -0.3
+				planning_speed = 0.15
+				army_org_Factor = 0.08
+				defence = 0.075
+				offence = 0.075
+				experience_gain_army = 0.03
 			}
 			
 			cancel_if_invalid = no
@@ -441,7 +480,14 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.03
+				consumer_goods_factor = 0.03
+				military_leader_cost_factor = -0.15
+				planning_speed = 0.08
+				army_org_Factor = 0.04
+				defence = 0.04
+				offence = 0.04
+				experience_gain_army = 0.01
 			}
 
 			ai_will_do = {
@@ -474,7 +520,14 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				
+				political_power_factor = -0.02
+				consumer_goods_factor = 0.02
+				military_leader_cost_factor = -0.05
+				planning_speed = 0.04
+				army_org_Factor = 0.02
+				defence = 0.02
+				offence = 0.02
+				experience_gain_army = 0.005
 			}
 			
 			cancel_if_invalid = no
@@ -498,7 +551,12 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				
+				political_power_factor = -0.01
+				consumer_goods_factor = 0.01
+				military_leader_cost_factor = 0.1
+				planning_speed = 0.02
+				army_org_Factor = 0.02
+				experience_gain_army = 0.002
 			}
 			
 			cancel_if_invalid = no
@@ -517,7 +575,11 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.15
+				research_time_factor = -0.04
+				consumer_goods_factor = -0.04
+				unity_weekly = -0.002
+				drift_defence_factor = -0.4
 			}
 			
 			cancel_if_invalid = no
@@ -542,7 +604,11 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.1
+				research_time_factor = -0.02
+				consumer_goods_factor = -0.02
+				unity_weekly = -0.001
+				drift_defence_factor = -0.2
 			}
 			
 			cancel_if_invalid = no
@@ -559,7 +625,7 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.05
 			}
 
 			ai_will_do = {
@@ -592,7 +658,10 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.03
+				unity_weekly = 0.001
+				drift_defence_factor = 0.1
 			}
 			
 			cancel_if_invalid = no
@@ -616,7 +685,11 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				
+				political_power_factor = -0.1
+				research_time_factor = 0.02
+				consumer_goods_factor = 0.05
+				unity_weekly = 0.002
+				drift_defence_factor = 0.2
 			}
 			
 			cancel_if_invalid = no

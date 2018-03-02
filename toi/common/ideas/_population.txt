@@ -14,8 +14,9 @@ ideas = {
 			}
 
 			modifier = {
-				MONTHLY_POPULATION = 1
-				consumer_goods_factor = 0.1
+				MONTHLY_POPULATION = 0.3
+				consumer_goods_factor = 0.08
+				political_power_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -40,8 +41,9 @@ ideas = {
 			}
 
 			modifier = {
-				MONTHLY_POPULATION = 0.5
+				MONTHLY_POPULATION = 0.15
 				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -58,7 +60,7 @@ ideas = {
 			}
 
 			modifier = {
-				
+				MONTHLY_POPULATION = 0.05
 			}
 
 			ai_will_do = {
@@ -91,8 +93,9 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.5
+				MONTHLY_POPULATION = -0.15
 				consumer_goods_factor = -0.05
+				political_power_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -116,8 +119,9 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				MONTHLY_POPULATION = -1
-				consumer_goods_factor = -0.1
+				MONTHLY_POPULATION = -0.4
+				consumer_goods_factor = -0.08
+				political_power_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -138,7 +142,10 @@ ideas = {
 			}
 
 			modifier = {
-				
+				unity_factor = 0.05
+				consumer_goods_factor = -0.05
+				MONTHLY_POPULATION = -0.15
+				research_time_factor = 0.05
 			}
 
 			default = yes
@@ -165,7 +172,8 @@ ideas = {
 			}
 
 			modifier = {
-				
+				MONTHLY_POPULATION = -0.05
+				consumer_goods_factor = -0.02
 			}
 			
 			cancel_if_invalid = no
@@ -182,7 +190,10 @@ ideas = {
 			}
 
 			modifier = {
-				
+				unity_factor = -0.05
+				consumer_goods_factor = 0.02
+				MONTHLY_POPULATION = 0.2
+				research_time_factor = -0.02
 			}
 
 			ai_will_do = {
@@ -213,7 +224,8 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				
+				unity_factor = -0.15
+				MONTHLY_POPULATION = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -234,7 +246,10 @@ ideas = {
 			}
 
 			modifier = {
-				
+				unity_factor = -0.1
+				political_power_gain = -0.2
+				consumer_goods_factor = -0.08
+				MONTHLY_POPULATION = -0.12
 			}
 
 			default = yes
@@ -261,7 +276,10 @@ ideas = {
 			}
 
 			modifier = {
-				
+				unity_factor = -0.1
+				political_power_gain = -0.05
+				consumer_goods_factor = -0.12
+				MONTHLY_POPULATION = -0.06
 			}
 			
 			cancel_if_invalid = no
@@ -278,7 +296,9 @@ ideas = {
 			}
 
 			modifier = {
-				
+				unity_factor = -0.05
+				political_power_gain = -0.05
+				MONTHLY_POPULATION = -0.04
 			}
 
 			ai_will_do = {
@@ -309,8 +329,8 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.5
-				consumer_goods_factor = -0.05
+				unity_factor = -0.05
+				MONTHLY_POPULATION = -0.02
 			}
 			
 			cancel_if_invalid = no
@@ -334,8 +354,9 @@ ideas = {
 			level = 1
 			
 			modifier = {
-				MONTHLY_POPULATION = -1
-				consumer_goods_factor = -0.1
+				unity_factor = 0.05
+				consumer_goods_factor = 0.02
+				MONTHLY_POPULATION = 0.08
 			}
 			
 			cancel_if_invalid = no
@@ -356,7 +377,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.001
 			}
 			
 			cancel_if_invalid = no
@@ -383,7 +404,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.01
 			}
 			
 			default = yes
@@ -404,7 +425,10 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.025
+				political_power_gain = -0.1
+				conscription = 0.02
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
 			}
 
 			ai_will_do = {
@@ -460,9 +484,11 @@ ideas = {
 			level = 4
 			
 			modifier = {
-				conscription = 0.05
-				#industrial_capacity_factory = -0.1
-				#production_speed_buildings_factor = -0.1
+				political_power_gain = -0.2
+				conscription = 0.04
+				industrial_capacity_factory = -0.12
+				industrial_capacity_dockyard = -0.12
+				production_speed_buildings_factor = -0.05
 				training_time_factor = 0.1
 			}
 			
@@ -522,10 +548,11 @@ ideas = {
 			level = 3
 
 			modifier = {
-				conscription = 0.1
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				production_speed_buildings_factor = -0.1
+				political_power_gain = -0.3
+				conscription = 0.075
+				industrial_capacity_factory = -0.18
+				industrial_capacity_dockyard = -0.18
+				production_speed_buildings_factor = -0.08
 				training_time_factor = 0.2
 			}
 			
@@ -579,11 +606,11 @@ ideas = {
 			level = 2
 			
 			modifier = {
-				conscription = 0.2
+				political_power_gain = -0.4
+				conscription = 0.12
 				industrial_capacity_factory = -0.3
 				industrial_capacity_dockyard = -0.3
-				production_speed_buildings_factor = -0.3
-				#XP from reinforcement penalty (small)
+				production_speed_buildings_factor = -0.15
 				training_time_factor = 0.3
 			}
 			
@@ -630,10 +657,11 @@ ideas = {
 			level = 1
 
 			modifier = {
-				conscription = 0.25
-				industrial_capacity_factory = -0.4
-				industrial_capacity_dockyard = -0.4
-				production_speed_buildings_factor = -0.4
+				political_power_gain = -0.5
+				conscription = 0.18
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+				production_speed_buildings_factor = -0.35
 				training_time_factor = 0.5
 			}
 			
@@ -655,7 +683,12 @@ ideas = {
 			}
 
 			modifier = {
-				
+				drift_defence_factor = 0.2
+				political_power_gain = 0.1
+				political_advisor_cost_factor = 0.4
+				trade_laws_cost_factor = 0.4
+				mobilization_laws_cost_factor = 0.4
+				economy_cost_factor = 0.4
 			}
 
 			default = yes
@@ -682,7 +715,12 @@ ideas = {
 			}
 
 			modifier = {
-				
+				drift_defence_factor = 0.1
+				political_power_gain = 0.05
+				political_advisor_cost_factor = 0.15
+				trade_laws_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
 			}
 			
 			cancel_if_invalid = no
@@ -707,7 +745,10 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_advisor_cost_factor = 0.05
+				trade_laws_cost_factor = 0.05
+				mobilization_laws_cost_factor = 0.05
+				economy_cost_factor = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -724,7 +765,12 @@ ideas = {
 			}
 
 			modifier = {
-				
+				drift_defence_factor = -0.05
+				political_power_gain = -0.05
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.15
+				economy_cost_factor = -0.15
 			}
 
 			ai_will_do = {
@@ -748,7 +794,13 @@ ideas = {
 			}
 
 			modifier = {
-				
+				drift_defence_factor = -0.1
+				political_power_gain = -0.05
+				political_advisor_cost_factor = -0.3
+				trade_laws_cost_factor = -0.3
+				mobilization_laws_cost_factor = -0.3
+				economy_cost_factor = -0.3
+				unity_factor = 0.05
 			}
 
 			ai_will_do = {
