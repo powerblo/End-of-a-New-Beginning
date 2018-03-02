@@ -2099,7 +2099,7 @@ country_event = { # Marseille Commune rises up
   }
 
   mean_time_to_happen = {
-      days = 22
+      days = 7
   }
 
   immediate = {
@@ -2139,7 +2139,7 @@ country_event = { # Bordeaux Commune rises up
   }
 
   mean_time_to_happen = {
-      days = 26
+      days = 30
   }
 
   immediate = {
@@ -2177,7 +2177,7 @@ country_event = { # Caen Commune rises up
   }
 
   mean_time_to_happen = {
-      days = 18
+      days = 65
   }
 
   immediate = {
@@ -2215,7 +2215,7 @@ country_event = { # Brest Commune rises up
   }
 
   mean_time_to_happen = {
-      days = 20
+      days = 45
   }
 
   immediate = {
@@ -2237,5 +2237,84 @@ country_event = { # Brest Commune rises up
       is_ai = no
     }
     BRI = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Lyon Commune rises up
+  id = third_rep_france.105
+  title = third_rep_france.105.t
+  desc = third_rep_france.105.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 35
+  }
+
+  immediate = {
+    RHN = {
+      transfer_state = 20
+      add_state_core = 20
+      load_oob = RHN_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.105.a
+  }
+
+  option = { # Proletariat of Caen, rise up !
+    name = third_rep_france.105.b
+    trigger = {
+      is_ai = no
+    }
+    RHN = { change_tag_from = FRA }
+  }
+}
+
+country_event = { # Grenoble Commune rises up
+  id = third_rep_france.106
+  title = third_rep_france.106.t
+  desc = third_rep_france.106.d
+
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    country_exists = CPR
+  }
+
+  mean_time_to_happen = {
+      days = 30
+  }
+
+  immediate = {
+    SAV = {
+      transfer_state = 735
+      add_state_core = 735
+      set_politics = {
+        ruling_party = anarchism
+      }
+      load_oob = SAV_REVOLT
+      add_to_war = { targeted_alliance = CPR enemy = FRA }
+    }
+  }
+
+  option = { # Fight the Commune
+    name = third_rep_france.106.a
+  }
+
+  option = { # Proletariat of Grenoble, rise up !
+    name = third_rep_france.106.b
+    trigger = {
+      is_ai = no
+    }
+    SAV = { change_tag_from = FRA }
   }
 }

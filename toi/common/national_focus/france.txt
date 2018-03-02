@@ -1197,36 +1197,36 @@ focus_tree = {
 		y = 3
 
 	}
+	#focus = {
+	#	id = FRA_remove_grenouilly
+	#	icon = GFX_goal_unknown
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = FRA_french_indochina
+	#	}
+	#	completion_reward = {
+	#		remove_unit_leader = 10002
+	#	}
+	#	x = 44
+	#	y = 4
+	#}
 	focus = {
-		id = FRA_remove_grenouilly
+		id = FRA_admiral_page_mission
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
 			focus = FRA_french_indochina
 		}
 		completion_reward = {
-			remove_unit_leader = 10002
-		}
-		x = 44
-		y = 4
-
-	}
-	focus = {
-		id = FRA_admiral_page_mission
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = FRA_remove_grenouilly
-		}
-		completion_reward
 			create_navy_leader = {
-  				name = "Théogène François Page"
-  				traits = { }
- 				skill = 3
+	  			name = "Théogène François Page"
+	  			picture = "Portrait_FRA_Theogene_François_Page.dds"
+	  			traits = { }
+	  			skill = 3
 			}
 		}
 		x = 44
-		y = 5
+		y = 4
 
 	}
 	focus = {
@@ -1240,7 +1240,7 @@ focus_tree = {
 			focus = FRA_capture_vietnam
 		}
 		x = 43
-		y = 6
+		y = 5
 
 	}
 	focus = {
@@ -1265,7 +1265,7 @@ focus_tree = {
 			focus = FRA_faith_over_territory
 		}
 		x = 45
-		y = 6
+		y = 5
 
 	}
 	focus = {
@@ -2025,7 +2025,7 @@ focus_tree = {
 			focus = FRA_capture_vietnam
 		}
 		x = 44
-		y = 7
+		y = 6
 
 	}
 	focus = {
