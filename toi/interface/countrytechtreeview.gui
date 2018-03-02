@@ -2866,7 +2866,20 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "aviation_year2"
-					position = { x = 0 y = 278 }
+					position = { x = 0 y = 416 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1855"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "aviation_year3"
+					position = { x = 0 y = 692 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2878,8 +2891,8 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "aviation_year3"
-					position = { x = 0 y = 416 }
+					name = "aviation_year4"
+					position = { x = 0 y = 968 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2889,10 +2902,10 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
-
+				
 				instantTextBoxType = {
-					name = "aviation_year4"
-					position = { x = 0 y = 554 }
+					name = "aviation_year5"
+					position = { x = 0 y = 1244 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2902,11 +2915,37 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
+				
+				instantTextBoxType = {
+					name = "aviation_year6"
+					position = { x = 0 y = 1520 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1890"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "aviation_year7"
+					position = { x = 0 y = 1796 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1900"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
 
 			}
 
 			gridboxtype = {
-				name = "aviation_balloons_tree"
+				name = "mongolfiere_tree"
 				position = { x=100 y=140 }
 				size = { width = 800 height = 800 }
 				slotsize = { width=60 height= 60 }
@@ -2914,15 +2953,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "zeppelin_models_early_tree"
-				position = { x=100 y=140 }
-				size = { width = 800 height = 800 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-			
-			gridboxtype = {
-				name = "early_screw_propeller_tree"
+				name = "ornithopter_tree"
 				position = { x=100 y=140 }
 				size = { width = 800 height = 800 }
 				slotsize = { width=60 height= 60 }
