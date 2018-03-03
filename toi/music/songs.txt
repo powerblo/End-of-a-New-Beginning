@@ -320,3 +320,101 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "eoanb_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+	}
+}
+
+music = {
+	song = "ENG_british_grenadiers_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = ENG }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = ENG
+		}
+	}
+}
+
+music = {
+	song = "ENG_god_save_the_queen_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = ENG }
+		}
+		modifier = {
+			factor = 0
+			
+			has_government = collectivist_socialism
+			has_government = vanguard_communism
+			has_government = anarchism
+			has_government = fundamentalism
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = ENG
+		}
+	}
+}
+
+music = {
+	song = "FRA_marsellaise_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = FRA }
+		}
+		modifier = {
+			factor = 0
+			
+			has_government = chauvinist_populism
+			has_government = autocracy
+			has_government = fundamentalism
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = FRA
+		}
+	}
+}
