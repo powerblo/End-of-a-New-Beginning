@@ -1,0 +1,33 @@
+﻿add_namespace = random
+
+#Concerns about succession
+country_event = {
+		id = random.1
+		title = random.1.t
+		desc = random.1.d
+		picture = GFX_report_event_gathering_protest
+		
+		trigger = {
+			NOT = { has_idea = non_monarchical_system }
+			has_idea = no_heir
+			has_government = autocracy
+		}
+		
+		mean_time_to_happen = {
+			days = 600
+			modifier = {
+				factor = 0.75
+				has_idea = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.25
+				has_idea = constitutional_monarchy
+			}
+		}
+		
+		option = {
+			name = random.1.a
+			ai_chance = { factor = 100 }
+			add_political_power = -50
+		}
+}
