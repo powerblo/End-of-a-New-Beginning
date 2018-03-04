@@ -281,3 +281,118 @@ country_event = {
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = aviation_tech }
 		}
 }
+
+#People demand more rights
+country_event = {
+		id = random.9
+		title = random.9.t
+		desc = random.9.d
+		picture = GFX_report_event_gathering_protest
+		
+		trigger = {
+			has_idea = absolutism
+			autocracy < 0.9
+			has_national_unity < 60
+		}
+		
+		mean_time_to_happen = {
+			days = 1500
+			modifier = {
+				factor = 0.7
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.1
+				has_national_unity > 50
+			}
+			modifier = {
+				factor = 0.9
+				has_national_unity < 50
+			}
+			modifier = {
+				factor = 0.8
+				has_national_unity < 40
+			}
+		}
+		
+		option = {
+			name = random.9.a
+			ai_chance = { factor = 60 }
+			add_political_power = -250
+		}
+		
+		option = {
+			name = random.9.b
+			ai_chance = { factor = 40 }
+			add_political_power = -50
+			custom_effect_tooltip = random_event_9_b_tt
+			hidden_effect = {
+				swap_ideas = { remove_idea = absolutism add_idea = parliamentary_suffrage }
+			}
+		}
+}
+
+#Politicians question the current government
+country_event = {
+		id = random.10
+		title = random.10.t
+		desc = random.10.d
+		picture = GFX_report_event_generic_parliament
+		
+		trigger = {
+			NOT = { has_national_unity > 90 }
+			NOT = { has_idea = absolutism }
+			OR = {
+				has_idea = parliamentary_suffrage
+				has_idea = property_owners_suffrage
+				has_idea = universal_male_suffrage
+				has_idea = universal_suffrage
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 2400
+			modifier = {
+				factor = 0.8
+				has_national_unity < 60
+			}
+			modifier = {
+				factor = 0.8
+				has_national_unity < 40
+			}
+		}
+		
+		option = {
+			name = random.10.a
+			ai_chance = { factor = 100 }
+			add_timed_idea = { idea = eoanb_random_event_10_idea days = 365 }
+		}
+}
+
+#Inspiring War Speech (Victorian Age)
+country_event = {
+		id = random.11
+		title = random.11.t
+		desc = random.11.d
+		picture = GFX_report_event_chinese_soldiers_fighting
+		
+		trigger = {
+			has_war = yes
+			has_idea = victorian_era
+			has_national_unity < 85
+		}
+		
+		mean_time_to_happen = {
+			days = 800
+			modifier = {
+				factor = 0.8
+				surrender_progress < 0.5
+			}
+		}
+		
+		option = {
+			name = random.11.a
+			ai_chance = { factor = 100 }
+			add_timed_idea = { idea = eoanb_random_event_11_idea days = 180 }
+		}
+}
