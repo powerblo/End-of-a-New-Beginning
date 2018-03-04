@@ -418,3 +418,47 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "OTO_mehter_marsi_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = OTO }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = OTO
+		}
+	}
+}
+
+music = {
+	song = "OTO_mecidiye_marsi_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = OTO }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = OTO
+		}
+	}
+}
