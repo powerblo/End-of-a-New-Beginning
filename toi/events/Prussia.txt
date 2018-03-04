@@ -28,7 +28,7 @@ country_event = {
 		id = prussia.2
 		title = prussia.2.t
 		desc = prussia.2.d
-		picture = GFX_report_event_merchant_ship_01
+		picture = GFX_event_posen_museum
 		
 		fire_only_once = yes
 		
@@ -70,7 +70,7 @@ country_event = {
 		id = prussia.4
 		title = prussia.4.t
 		desc = prussia.4.d
-		picture = GFX_report_event_merchant_ship_01
+		picture = GFX_event_koelner_zoo
 		
 		fire_only_once = yes
 		
@@ -103,5 +103,85 @@ country_event = {
 			name = prussia.5.a 
 			ai_chance = { factor = 100 }
 			add_political_power = 10
+		}
+} 
+#Berliner Entomologische Zeitschrift
+country_event = {
+		id = prussia.6
+		title = prussia.6.t
+		desc = prussia.6.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1857.9.22
+		}
+		
+		option = {
+			name = prussia.6.a 
+			ai_chance = { factor = 100 }
+			add_political_power = 10
+		}
+} 
+#Katholischer Studentenverein Arminia Bonn
+country_event = {
+		id = prussia.7
+		title = prussia.7.t
+		desc = prussia.7.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1863.10.23
+		}
+		
+		option = {
+			name = prussia.7.a 
+			ai_chance = { factor = 100 }
+			add_political_power = 10
+		}
+} 
+#Death of Alexander von Humboldt 
+country_event = {
+		id = prussia.8
+		title = prussia.8.t
+		desc = prussia.8.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1859.5.6
+		}
+		
+		option = {
+			name = prussia.8.a 
+			ai_chance = { factor = 100 }
+			add_political_power = -10
+		}
+} 
+#
+country_event = {
+		id = prussia.9
+		title = prussia.9.t
+		desc = prussia.9.d
+		picture = GFX_report_event_merchant_ship_01
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PRS
+			date > 1867.2.6
+		}
+		
+		option = {
+			name = prussia.9.a 
+			ai_chance = { factor = 100 }
+			add_political_power = -20
 		}
 } 
