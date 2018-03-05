@@ -1,34 +1,69 @@
-﻿capital = 307
+﻿1857.1.1 = {
+  capital = 307
 
-oob = "VEN_1857"
+  oob = "VEN_1857"
 
-set_politics = {
+  set_convoys = 125
+  
+  set_research_slots = 2
+
+  add_ideas = {
+          #POLITICS
+      
+    hos_is_leader
+    pre_industrial_era
+    agrarian
+    non_monarchical_system
+    presidential_republic
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+
+    stagnation_growth
+    border_control
+    limited_conscription
+    slavery
+    universal_male_suffrage
+
+    constitution_adopted
+    limited_elections
+
+    priviledged_education
+    state_religion
+
+         #NATIONAL SPIRITS
+    
+  }
+
+  set_politics = {
     parties = {
-      centrism = {
-        popularity = 0
-      }
-      traditional_conservatism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
+      anarchism = {
         popularity = 0
       }
       vanguard_communism = {
         popularity = 0
       }
-      autocracy = {
-        popularity = 100
+      collectivist_socialism = {
+        popularity = 
+      }
+      social_egalitarianism = {
+        popularity = 15
+      }
+      centrism = {
+        popularity = 35
+      }
+      traditional_conservatism = {
+        popularity = 40
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 10
       }
       chauvinist_populism = {
         popularity = 0
       }
-      anarchism = {
+      autocracy = {
         popularity = 0
       }
       fundamentalism = {
@@ -36,20 +71,23 @@ set_politics = {
       }
     }
 
-	ruling_party = autocracy
-}
+    ruling_party = centrism
+  }
 
-create_country_leader = {
+  set_technology = {
+    infantry_weapons = 1
+    vic_army_cloth = 1
+    early_destroyer = 1
+  }
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
     name = "Jose Tadeo Monagas"
-    desc = "POLITICS_TEMP_DESC"
+    desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
     picture = "Portrait_VEN_Jose_Tadeo_Monagas.dds"
     expire = 1900.1.1
-    ideology = despotism
-}
-
-set_technology = {
-  infantry_weapons = 1
-  basic_cavalry = 1
-  gw_artillery = 1
-  vic_army_cloth = 1
+    ideology = conserv_liberal
+    traits = { }
+  }
 }
