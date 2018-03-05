@@ -1,29 +1,61 @@
-﻿capital = 335 #Jakarta
+﻿1857.1.1 = {
+  capital = 335
 
-OOB = "INS_1857"
+  oob = "INS_1857"
 
-set_research_slots = 2
-set_convoys = 25
+  set_convoys = 0
+  
+  set_research_slots = 2
 
-set_politics = {
-	parties = {
-      centrism = {
-        popularity = 0
-      }
-      traditional_conservatism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    pre_industrial_era
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+
+    stagnation_growth
+    border_control
+	limited_conscription
+    slavery
+    absolutism
+
+    no_constitution
+    no_elections
+
+    priviledged_education
+    state_religion
+
+         #NATIONAL SPIRITS
+	
+  }
+
+  set_politics = {
+    parties = {
+      anarchism = {
         popularity = 0
       }
       vanguard_communism = {
         popularity = 0
       }
-      autocracy = {
-        popularity = 100
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
       }
       radical_democracy = {
         popularity = 0
@@ -31,18 +63,26 @@ set_politics = {
       chauvinist_populism = {
         popularity = 0
       }
-      anarchism = {
-        popularity = 0
+      autocracy = {
+        popularity = 100
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	ruling_party = autocracy
-}
+	  ruling_party = autocracy
+  }
 
-create_country_leader = {
+  set_technology = {
+	infantry_weapons = 1
+	vic_army_cloth = 1
+	early_destroyer = 1
+  }
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
 	name = "Charles Ferdinand Pahud"
 	desc = ""
 	picture = "Portrait_INS_Charles_Ferdinand_Pahud.dds"
@@ -51,4 +91,5 @@ create_country_leader = {
 	traits = {
 		
 	}
+}
 }

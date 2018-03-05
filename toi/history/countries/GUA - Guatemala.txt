@@ -1,11 +1,11 @@
 ﻿1857.1.1 = {
-  capital = 818
+  capital = 313
 
-  oob = "Africa_1857"
+  oob = "GUA_1857"
 
   set_convoys = 0
   
-  set_research_slots = 1
+  set_research_slots = 2
 
   add_ideas = { 
     #POLITICS 
@@ -17,25 +17,23 @@
     absolute_monarchy
 
     civilian_economy
-    closed_economy
-    one_percent
-    very_low_taxes
+    limited_exports
+    two_percent
+    normal_taxes
 
     stagnation_growth
-    no_borders
-	volunteer_only
-    tribal_slavery
+    border_control
+	limited_conscription
+    slavery
     absolutism
 
     no_constitution
     no_elections
 
-    oral_tradition
+    priviledged_education
     state_religion
 
          #NATIONAL SPIRITS
-    
-	AF_T_small_kingdom
 	
   }
 
@@ -54,10 +52,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 20
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 80
       }
       radical_democracy = {
         popularity = 0
@@ -66,30 +64,29 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 0
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
-	tribaltech = 1
+	infantry_weapons = 1
+	vic_army_cloth = 1
+	early_destroyer = 1
   }
 
   # POLITICAL LEADERS
 
   create_country_leader = {
-  name = "Ahmad III ibn Abu Bakr"
-  desc = "POLITICS_GEORGE_V_DESC"
-  picture = "gfx/leaders/Africa/generic_leader_king_4.dds"
-  expire = "1900.1.1"
-  ideology = despotism
-  traits = {
-
-  }
+    name = "Rafael Carrera"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_GUA_Rafael_Carrera.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 }
