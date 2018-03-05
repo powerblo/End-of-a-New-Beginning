@@ -1,145 +1,81 @@
-﻿capital = 126
+﻿1857.1.1 = {
+  capital = 126
 
-	oob = "ENG_1857"
+  oob = "ENG_1857" 
 
-	add_ideas = ENG_Victoria
+  set_convoys = 200
+  
+  set_research_slots = 5
 
-	if = {
-		limit = {
-			has_dlc = "Together for Victory"
-		}
-		set_autonomy = {
-			target = NEP
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = HYD
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = KAS
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = KAR
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = BIK
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = REW
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = RAJ
-			autonomous_state = autonomy_colony
-			freedom_level = 0.35
-		}
-		set_autonomy = {
-			target = CAN
-			autonomous_state = autonomy_colony
-			freedom_level = 0.4
-		}
-		set_autonomy = {
-			target = NFL
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = BRK
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = NVS
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = AST
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = NZL
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = ION
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = NSW
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = TSM
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = SAS
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = HYD
-			autonomous_state = autonomy_princely_state
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = TCS
-			autonomous_state = autonomy_colony
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = BCO
-			autonomous_state = autonomy_colony
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = VAN
-			autonomous_state = autonomy_colony
-			freedom_level = 0.1
-		}
-		else = {
-			puppet = RAJ
-			puppet = NEP
-			puppet = HYD
-			puppet = KAS
-			puppet = KAR
-			puppet = BIK
-			puppet = REW
-			puppet = CAN
-			puppet = NFL
-			puppet = BRK
-			puppet = AST
-			puppet = NZL
-			puppet = ION
-			puppet = NSW
-			puppet = TSM
-			puppet = SAS
-			puppet = HYD
-			puppet = TCS
-			puppet = HBC
-			puppet = NVS
-			puppet = BCO
-			puppet = VAN
-		}
-	}
+  add_ideas = { 
+          #POLITICS
+    hos_is_leader
+    victorian_era
+    industrializing
+	has_heir
+    parliamentary_monarchy
 
-	#Whig/Liberal
+    civilian_economy
+    export_focus
+    three_percent
+    normal_taxes
+
+    stagnation_growth
+    border_control
+    limited_equality
+    volunteer_only
+    parliamentary_suffrage
+
+    constitution_adopted
+    limited_elections
+
+    open_schools
+    state_religion
+
+    #NATIONAL SPIRITS
+	
+	ENG_Victoria
+    
+  }
+
+  set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 65
+      }
+      traditional_conservatism = {
+        popularity = 35
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	  ruling_party = centrism
+  }
+  
+  #Whig/Liberal
 	create_country_leader = {
 		name = "Lord Palmerston"
 		picture = "Portrait_ENG_Lord_Palmerston.dds"
@@ -276,64 +212,33 @@
 	  skill = 3
 	}
 
-	set_technology = {
-		infantry_weapons = 1
-		rifle_equipment1 = 1
-		hand_revolvers = 1
-		socket_bayonet = 1
-		vic_army_cloth = 1
-		civil_army_cloth = 1
-		basic_cavalry = 1
-		horse_transport = 1
-		horse_artillery = 1
-		gw_artillery = 1
-		improved_smoothbore = 1
-		early_howitzer = 1
-		foureight_frigate = 1
-		early_destroyer = 1 transport = 1
-		fivesix_frigate = 1
-		early_balloon = 1
-		aviation_balloons = 1
-	}
-
-	set_politics = {
-	    parties = {
-	      centrism = {
-	        popularity = 66
-	      }
-	      traditional_conservatism = {
-	        popularity = 34
-	      }
-	      social_egalitarianism = {
-	        popularity = 0
-	      }
-	      collectivist_socialism = {
-	        popularity = 0
-	      }
-	      vanguard_communism = {
-	        popularity = 0
-	      }
-	      autocracy = {
-	        popularity = 0
-	      }
-	      radical_democracy = {
-	        popularity = 0
-	      }
-	      chauvinist_populism = {
-	        popularity = 0
-	      }
-	      anarchism = {
-	        popularity = 0
-	      }
-	      fundamentalism = {
-	        popularity = 0
-	      }
-	    }
-
-    	ruling_party = centrism
-	}
-
-if = {
+  set_technology = {
+	infantry_weapons = 1
+	vic_army_cloth = 1
+	early_destroyer = 1
+	gw_artillery = 1
+	iron_railways = 1
+	steam_engine = 1
+	manufactories = 1
+	hot_blast_furnaces = 1
+	food_preserving_icebox = 1
+	early_artificial_fertilizer = 1
+	electrical_engineering = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	mounted_infantry = 1
+	tech_support = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	mongolfiere = 1
+	ornithopter = 1
+	screw_propeller = 1
+  }
+  
+  if = {
 	limit = {
 		has_dlc = "Together for Victory"
 	}
@@ -362,8 +267,138 @@ if = {
 	}
 }
 
-set_research_slots = 4
-
-set_national_unity = 0.6
-
-set_convoys = 100
+if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = NEP
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = HYD
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAS
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = KAR
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = BIK
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = REW
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = RAJ
+			autonomous_state = autonomy_colony
+			freedom_level = 0.35
+		}
+		set_autonomy = {
+			target = CAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.4
+		}
+		set_autonomy = {
+			target = NFL
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = BRK
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NVS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = AST
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NZL
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = ION
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = NSW
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = TSM
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = SAS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = HYD
+			autonomous_state = autonomy_princely_state
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = TCS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = BCO
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = VAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		else = {
+			puppet = RAJ
+			puppet = NEP
+			puppet = HYD
+			puppet = KAS
+			puppet = KAR
+			puppet = BIK
+			puppet = REW
+			puppet = CAN
+			puppet = NFL
+			puppet = BRK
+			puppet = AST
+			puppet = NZL
+			puppet = ION
+			puppet = NSW
+			puppet = TSM
+			puppet = SAS
+			puppet = HYD
+			puppet = TCS
+			puppet = HBC
+			puppet = NVS
+			puppet = BCO
+			puppet = VAN
+		}
+	}
+}
