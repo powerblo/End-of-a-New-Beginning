@@ -396,3 +396,43 @@ country_event = {
 			add_timed_idea = { idea = eoanb_random_event_11_idea days = 180 }
 		}
 }
+
+#Capitalist funds new cotton farm (Victorian Era)
+country_event = {
+		id = random.12
+		title = random.12.t
+		desc = random.12.d
+		picture = GFX_report_event_ast_troops_landing
+		
+		trigger = {
+			OR = {
+				has_idea = industrializing
+				has_idea = agrarian
+			}
+			has_idea = victorian_era
+			NOT = {
+				has_government = collectivist_socialism 
+				has_government = vanguard_communism
+				has_government = anarchism
+			}
+			OR = {
+				centrism > 0.1
+				traditional_conservatism > 0.25
+				social_egalitarianism > 0.5
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 2000
+			modifier = {
+				factor = 0.9
+				centrism > 0.3
+			}
+		}
+		
+		option = {
+			name = random.12.a
+			ai_chance = { factor = 100 }
+			add_1_cotton_farm_random_state = yes
+		}
+}
