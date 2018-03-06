@@ -1,28 +1,74 @@
-﻿capital = 518
+﻿1857.1.1 = {
+  capital = 518
 
-oob = "TSM_1857"
+  oob = "TSM_1857"
 
-add_ideas = ENG_colonial_Victoria
+  set_convoys = 50
+  
+  set_research_slots = 2
 
-set_politics = {
+  add_ideas = { 
+          #POLITICS
+      
+    ENG_colonial_Victoria
+    victorian_era
+    agrarian
+    non_monarchical_system
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+
+    stagnation_growth
+    border_control
+    volunteer_only
+    limited_equality
+    absolutism
+
+    no_constitution
+    no_elections
+
+    privileged_education
+    state_religion
+
+         #NATIONAL SPIRITS
+    
+  }
+
+  ENG = {
+    if = {
+      limit = {
+        has_dlc = "Together for Victory"
+      }
+      set_autonomy = {
+        target = VIC
+        autonomous_state = autonomy_colony
+        freedom_level = 0.2
+      }
+    }
+  }
+
+  set_politics = {
     parties = {
-      centrism = {
-        popularity = 0
+      anarchism = {
+        popularity = 
       }
-      traditional_conservatism = {
-        popularity = 100
-      }
-      social_egalitarianism = {
+      vanguard_communism = {
         popularity = 0
       }
       collectivist_socialism = {
         popularity = 0
       }
-      vanguard_communism = {
+      social_egalitarianism = {
         popularity = 0
       }
-      autocracy = {
-        popularity = 0
+      centrism = {
+        popularity = 15
+      }
+      traditional_conservatism = {
+        popularity = 85
       }
       radical_democracy = {
         popularity = 0
@@ -30,7 +76,7 @@ set_politics = {
       chauvinist_populism = {
         popularity = 0
       }
-      anarchism = {
+      autocracy = {
         popularity = 0
       }
       fundamentalism = {
@@ -38,19 +84,21 @@ set_politics = {
       }
     }
 
-  ruling_party = traditional_conservatism
-}
+    ruling_party = traditional_conservatism
+  }
 
-set_technology = {
-  infantry_weapons = 1
-  basic_cavalry = 1
-  gw_artillery = 1
-  vic_army_cloth = 1
-}
+  set_technology = {
+    infantry_weapons = 1
+    vic_army_cloth = 1
+    early_destroyer = 1
+  }
 
-create_country_leader = {
+  # POLITICAL LEADERS
+
+  create_country_leader = {
     name = "William Champ"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_TSM_William_Champ.dds"
     ideology = conserv
+  }
 }
