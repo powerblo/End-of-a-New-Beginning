@@ -104,7 +104,7 @@ country_event = {
 		}
  }
  
-#Infrastructure develops due to Industrialization (Victorian Age)
+#Infrastructure develops due to Industrialization (Victorian Era)
 country_event = {
 		id = random.4
 		title = random.4.t
@@ -435,4 +435,45 @@ country_event = {
 			ai_chance = { factor = 100 }
 			add_1_cotton_farm_random_state = yes
 		}
+}
+
+#Comet sighted (Victorian Era)
+country_event = {
+		id = random.13
+		title = random.13.t
+		desc = random.13.d
+		picture = GFX_report_event_generic_riot
+		
+		trigger = {
+			has_idea = victorian_era
+		}
+		
+		mean_time_to_happen = {
+			days = 6000
+		}
+		
+		option = {
+			name = random.13.a
+			ai_chance = { factor = 25 }
+			add_political_power = -100
+		}
+		
+		option = {
+			name = random.13.b
+			ai_chance = { factor = 25 }
+			add_political_power = -100
+		}
+		
+		option = {
+			name = random.13.c
+			ai_chance = { factor = 25 }
+			add_political_power = -100
+		}
+		
+		option = {
+			name = random.13.e
+			ai_chance = { factor = 25 }
+			add_political_power = -100
+		}
+		
 }
