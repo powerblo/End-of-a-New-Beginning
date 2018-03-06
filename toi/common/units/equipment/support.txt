@@ -70,11 +70,13 @@ equipments = {
 		active = yes
 
 		reliability = 0.9
+		defense = 0.2
 
 		lend_lease_cost = 0.10
 
 		build_cost_ic = 0.2
 		resources = {
+			fabric = 1
 		}
 	}
 
@@ -82,30 +84,65 @@ equipments = {
 		archetype = uniform_equipment
 		active = yes
 		priority = 20
+		
+		defense = 0.2
+		
+		build_cost_ic = 0.2
+		resources = {
+			fabric = 1
+		}
 	}
 
 	uniform_equipment_1 = {
 		archetype = uniform_equipment
 		parent = uniform_equipment_0
 		priority = 20
+		
+		defense = 0.2
+		
+		build_cost_ic = 0.2
+		resources = {
+			fabric = 1
+		}
 	}
 
 	uniform_equipment_2 = {
 		archetype = uniform_equipment
 		parent = uniform_equipment_1
 		priority = 20
+		
+		defense = 0.25
+		
+		build_cost_ic = 0.25
+		resources = {
+			fabric = 2
+		}
 	}
 
 	uniform_equipment_3 = {
 		archetype = uniform_equipment
 		parent = uniform_equipment_2
 		priority = 20
+		
+		defense = 0.25
+		
+		build_cost_ic = 0.25
+		resources = {
+			fabric = 2
+		}
 	}
 
 	uniform_equipment_4 = {
 		archetype = uniform_equipment
 		parent = uniform_equipment_3
 		priority = 20
+		
+		defense = 0.3
+		
+		build_cost_ic = 0.25
+		resources = {
+			fabric = 2
+		}
 	}
 
 }
