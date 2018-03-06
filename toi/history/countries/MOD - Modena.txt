@@ -1,42 +1,62 @@
-﻿capital = 813
+﻿1857.1.1 = {
+  capital = 813
 
-OOB = "MOD_1857"
+  oob = "MOD_1857"
 
-set_technology = {
-infantry_weapons = 1
-rifle_equipment1 = 1
-rifle_equipment2 = 1
-hand_revolvers = 1
-socket_bayonet = 1
-vic_army_cloth = 1
-civil_army_cloth = 1
-basic_cavalry = 1
-horse_transport = 1
-horse_artillery = 1
-gw_artillery = 1
-foureight_frigate = 1
-fivesix_frigate = 1
-}
+  set_convoys = 0
+  
+  set_research_slots = 3
 
-set_politics = {
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    victorian_era
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+
+    stagnation_growth
+    border_control
+	volunteer_only
+    limited_equality
+    absolutism
+
+    no_constitution
+    no_elections
+
+    privileged_education
+    state_religion
+
+        #NATIONAL SPIRITS
+	
+  }
+
+
+  set_politics = {
     parties = {
-      centrism = {
-        popularity = 0
-      }
-      traditional_conservatism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
+      anarchism = {
         popularity = 0
       }
       vanguard_communism = {
         popularity = 0
       }
-      autocracy = {
-        popularity = 100
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
       }
       radical_democracy = {
         popularity = 0
@@ -44,16 +64,32 @@ set_politics = {
       chauvinist_populism = {
         popularity = 0
       }
-      anarchism = {
-        popularity = 0
+      autocracy = {
+        popularity = 100
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-    ruling_party = autocracy
-}
+	  ruling_party = autocracy
+  }
+
+  set_technology = {
+	infantry_weapons = 1
+	vic_army_cloth = 1
+	early_destroyer = 1
+	gw_artillery = 1
+	iron_railways = 1
+	steam_engine = 1
+	manufactories = 1
+	hot_blast_furnaces = 1
+	food_preserving_icebox = 1
+	early_artificial_fertilizer = 1
+	electrical_engineering = 1
+  }
+
+  # POLITICAL LEADERS
 
 create_country_leader = {
   name = "Francesco V"
@@ -64,4 +100,5 @@ create_country_leader = {
   traits = {
 
   }
+}
 }
