@@ -272,7 +272,7 @@ NCountry = {
 
 NProduction = {
 	MAX_EQUIPMENT_RESOURCES_NEED = 3, 	-- Max number of different strategic resources an equipment can be dependent on.
-	MAX_CIV_FACTORIES_PER_LINE = 25,	-- Max number of factories that can be assigned a single production line.
+	MAX_CIV_FACTORIES_PER_LINE = 15,	-- Max number of factories that can be assigned a single production line.
 	MAX_NAV_FACTORIES_PER_LINE = 15,
 	MAX_MIL_FACTORIES_PER_LINE = 150,
 	EFFICIENCY_LOSS_PER_UNUSED_DAY = 1,		-- Daily loss of efficiency for unused factory slots ( efficiency is tracked per factory slot in the production line )
