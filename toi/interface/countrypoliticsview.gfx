@@ -75,18 +75,38 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_autonomy_princely_state_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_princely_state_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_autonomy_imperial_protectorate_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_imperial_protectorate_icon.dds"
+		name = "GFX_autonomy_level_button"
+		textureFile = "gfx/interface/autonomy/autonomy_level_button.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_autonomy_level_button"
-		textureFile = "gfx/interface/autonomy/autonomy_level_button.dds"
+		name = "GFX_autonomy_reichskommissariat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichskommissariat_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_reichsprotectorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichsprotectorate_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_satellite_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_satellite.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_wtt_imperial_associate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_imperial_associate.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_wtt_imperial_subject_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_imperial_associate.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_wtt_imperial_protectorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_imperial_protectorate.dds"
 	}
 	
 	#-------------
@@ -201,11 +221,6 @@ spriteTypes = {
 		name = "GFX_idea_slot_political_advisor"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_idea_slot_empty"
-		textureFile = "gfx/interface/ideas/laws/idea_slot_empty.dds"
-	}
 
 	spriteType = {
 		name = "GFX_goal_entry_pp_bg"
@@ -306,7 +321,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_categories"
 		texturefile = "gfx/interface/idea_categories.dds"
-		noOfFrames = 10
+		noOfFrames = 6
 	}
 
 	spriteType = {
@@ -330,10 +345,25 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\pol_factions_strip.tga"
 		noOfFrames = 4
 	}
+
+	spriteType = {
+		name = "GFX_ideology_neutrality_group"
+		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ideology_communism_group"
+		texturefile = "gfx/interface/ideologies/communism_group.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_fascism_group"
-		texturefile = "gfx/interface/ideologies/fascistm_group.dds"
+		texturefile = "gfx/interface/ideologies/fascism_group.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_democratic_group"
+		texturefile = "gfx/interface/ideologies/democratic_group.dds"
 	}
 	
 	spriteType = {
@@ -399,6 +429,11 @@ spriteTypes = {
 		name = "GFX_pol_leader_frame"
 		textureFile = "gfx//interface//pol_leader_frame.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_event_leader_frame"
+		textureFile = "gfx//interface//event_leader_frame.dds"
+	}
 
 	spriteType = {
 		name = "GFX_pol_goal_bg"
@@ -431,6 +466,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_leader_unknown"
 		textureFile = "gfx/leaders/leader_unknown.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_leader_marshal_unknown"
+		textureFile = "gfx/leaders/leader_marshal_unknown.dds"
 		legacy_lazy_load = no
 	}
 
