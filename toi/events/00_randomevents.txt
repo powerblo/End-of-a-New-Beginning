@@ -353,11 +353,11 @@ country_event = {
 		mean_time_to_happen = {
 			days = 2400
 			modifier = {
-				factor = 0.8
+				factor = 0.9
 				has_stability < 60
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.9
 				has_stability < 40
 			}
 		}
@@ -365,7 +365,7 @@ country_event = {
 		option = {
 			name = random.10.a
 			ai_chance = { factor = 100 }
-			add_timed_idea = { idea = eoanb_random_event_10_idea days = 365 }
+			add_timed_idea = { idea = eoanb_random_event_10_idea days = 90 }
 		}
 }
 
