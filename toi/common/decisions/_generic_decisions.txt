@@ -1,5 +1,8 @@
+#Everything that has to do with advancing scientific research and the infrastructure required for it
+
 scientific_advancement_decisions = {
 	
+	#Advance to the Machine Era
 	eoanb_decision_advance_to_machine_era = {
 
 		icon = generic_political_discourse
@@ -47,7 +50,127 @@ scientific_advancement_decisions = {
 		}
 
 		ai_will_do = {
-			base = 100
+			base = 1000
+		}
+	}
+	
+	#Advance to the Oil Era
+	eoanb_decision_advance_to_oil_era = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				AND = {
+					date > 1900.1.1
+					num_of_factories > 35
+					has_tech = machine_tools_3
+					has_tech = bayer_process
+					has_tech = antibiotics
+					has_tech = polyphase_alternators
+				}
+				AND = {
+					date > 1905.1.1
+					num_of_factories > 15
+					has_tech = petrol_combustion_engine
+					has_tech = stainless_steel
+					has_tech = industrial_fertilizers
+					has_tech = alternators
+				}
+				AND = {
+					date > 1915.1.1
+					NOT = { has_idea = AF_T_unorganized_tribal_nation }
+					NOT = { has_idea = AF_T_organized_tribal_nation }
+					NOT = { has_idea = AF_T_small_kingdom }
+				}
+			}
+		}
+
+		visible = {
+			has_idea = machine_era
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_advance_era_oil
+			hidden_effect = {
+				swap_ideas = { remove_idea = machine_era add_idea = oil_era }	
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Pursue the Dream of Flight (Victorian Era)
+	eoanb_decision_pursue_dream_flight = {
+	
+		icon = generic_political_discourse
+
+		available = {
+			num_of_factories > 5
+		}
+
+		visible = {
+			has_idea = victorian_era
+			NOT = { has_tech = du_temple_monoplane }
+			NOT = { has_tech = tatin_aeroplane }
+			NOT = { has_tech = navigable_balloons }
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			air_experience = 25
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = aviation_tech }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+		
+	}
+	
+}
+
+#War Measures (these by default only show when at war, so adding an extra line in "visible = {}" is not necessary)
+
+war_measures = {
+
+	#Promote Austerity
+	eoanb_decision_war_austerity = {
+	
+		icon = generic_political_discourse
+
+		available = {
+			ROOT = { surrender_progress > 0.25 }
+		}
+
+		visible = {
+			NOT = { has_idea = pre_industrial_era }
+			NOT = { has_idea = post_digital_era }
+		}
+
+		fire_only_once = no
+		
+		days_remove = 180
+		
+		days_re_enable = 365
+
+		cost = 150
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	
