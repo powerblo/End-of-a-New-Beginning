@@ -1,4 +1,4 @@
-﻿add_namespace = second_opium_war
+add_namespace = second_opium_war
 
 #----------------------------------------------------------------------------------------------
 # TREATY OF TIANJIN - EVENT CHAIN
@@ -10,7 +10,14 @@ country_event = { # Negiotiate with the western powers ?
   desc = second_opium_war.1.d
   picture = GFX_report_event_second_opium_war_tianjin_treaty
 
-  is_triggered_only = yes
+  trigger = {
+    tag = CHI
+    CHI = {
+      NOT = {
+        has_full_control_of_state = 608
+      }
+    }
+  }
 
   option = { # Autorize Negiotiations
     name = second_opium_war.1.a

@@ -1,0 +1,32 @@
+﻿##### Division Templates #####
+
+division_template = {
+	name = "Régiments d'Infanterie"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {
+		name = "1er Régiment de Touraine"
+		location = 10309
+		division_template = "Régiments d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.87
+	}
+	division= {
+		name = "2nd Régiment de Touraine"
+		location = 10309
+		division_template = "Régiments d'Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.87
+
+	}
+}

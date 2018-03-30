@@ -37,6 +37,14 @@
 	
   }
 
+  SIA = {
+    set_autonomy = {
+      target = CAM
+      autonomous_state = autonomy_imperial_protectorate
+      freedom_level = 0.1
+    }
+  }
+
   set_politics = {
     parties = {
       anarchism = {
@@ -88,5 +96,5 @@
     picture = "Portrait_CMB_Ang_Duong.dds"
     expire = 1900.1.1
     ideology = despotism
-}
+  }
 }

@@ -16,7 +16,6 @@ ideas = {
 			modifier = {
 				autocracy_drift = 0.1
 				drift_defence_factor = 0.15
-				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
 		}
@@ -36,6 +35,65 @@ ideas = {
 			
 			modifier = {
 				autocracy_drift = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		FRA_idea_opposition_candidates_majority = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_opposition_candidates_majority
+			
+			modifier = {
+				autocracy_drift = -0.02
+				stability_factor = -0.05
+			}
+		}
+
+		FRA_idea_republican_candidates_majority = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_republican_candidates_majority
+			
+			modifier = {
+				centrism_drift = 0.03
+				traditional_conservatism_drift = 0.01
+				stability_factor = -0.03
+			}
+		}
+
+		FRA_idea_monarchist_candidates_majority = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_monarchist_candidates_majority
+			
+			modifier = {
+				traditional_conservatism_drift = 0.03
+				stability_factor = -0.05
 			}
 		}
 
@@ -53,9 +111,11 @@ ideas = {
 			picture = FRA_republican_spirit
 			
 			modifier = {
-				centrism_drift = 0.1
-				traditional_conservatism_drift = 0.1
+				centrism_drift = 0.05
+				traditional_conservatism_drift = 0.05
 				political_power_cost = 0.25
+				stability_factor = -0.1
+				war_support_factor = -0.1
 			}
 		}
 
@@ -112,6 +172,31 @@ ideas = {
 				traditional_conservatism_drift = 0.05
 				centrism_drift = 0.05
 				drift_defence_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+
+		FRA_idea_socialist_influence = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_socialist_influence
+			
+			modifier = {
+				social_egalitarianism_drift = 0.05
+				collectivist_socialism_drift = 0.01
+				anarchism_drift = 0.02
+				centrism_drift = 0.05
+				drift_defence_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.05
 			}
 		}
 
@@ -167,6 +252,237 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+
+		FRA_idea_sovereignty_monaco_recognized = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_sovereignty_monaco_recognized
+			
+			modifier = {
+				political_power_cost = -0.05
+			}
+		}
+
+		FRA_idea_republican_spirit_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_republican_spirit
+			
+			modifier = {
+				centrism_drift = 0.03
+				traditional_conservatism_drift = 0.02
+				political_power_cost = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		FRA_idea_defensive_tactics = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_defensive_tactics
+			
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				army_defence_factor = 0.15
+				army_core_defence_factor = 0.25
+			}
+		}
+
+		FRA_idea_niel_plan = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_niel_plan
+			
+			modifier = {
+				army_org_Factor = 0.1
+			}
+		}
+
+		FRA_idea_striker_demands = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				collectivist_socialism_drift = 0.01
+				social_egalitarianism_drift = 0.03
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		FRA_idea_amateur_tacticians_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_amateur_tacticians
+			
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.05
+			}
+		}
+
+		FRA_idea_loi_duruy = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_loi_duruy
+
+			modifier = {
+				research_time_factor = -0.03
+			}
+		}
+
+		FRA_idea_time_useful_reforms = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_time_useful_reforms
+
+			modifier = {
+				drift_defence_factor = -0.15
+			}
+		}
+
+		FRA_idea_international_inflow = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_international_inflow
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		FRA_idea_international_inflow_2 = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_international_inflow
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		FRA_idea_income_from_mexican_debt = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_income_from_mexican_debt
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		FRA_idea_mexican_silver = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_mexican_silver
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		FRA_idea_unstable_government = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_unstable_government
+
+			modifier = {
+				political_power_cost = 0.15
+				stability_factor = -0.15
+				drift_defence_factor = -0.15
+				war_support_factor = -0.35
 			}
 		}
 	}

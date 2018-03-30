@@ -7,6 +7,18 @@
   
   set_research_slots = 4
 
+  declare_war_on = {
+    target = CHI
+    type = annex_everything
+  }
+
+  FRA = {
+    add_to_war = { 
+    	targeted_alliance = ENG 
+    	enemy = CHI 
+    }
+  }
+
   add_ideas = { 
           #POLITICS
     hos_is_leader
@@ -96,7 +108,7 @@
 		name = "William Lovett"
 		picture = "Portrait_ENG_William_Lovett.dds"
 		expire = "1877.1.1"
-		ideology = anarchism_sub
+		ideology = anarchism
 		traits = {
 
 		}
@@ -143,97 +155,185 @@
 	}
 
 	create_corps_commander = {
-	  name = "Charles George Gordon"
-	  picture = "Portrait_ENG_Charles_George_Gordon.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "Charles George Gordon"
+		picture = "Portrait_ENG_Charles_George_Gordon.dds"
+		traits = { }
+		skill = 3	
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Colin Campbell"
+		picture = "Portrait_ENG_Colin_Campbell.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Garnet Wolseley"
+		picture = "Portrait_ENG_Garnet_Wolseley.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_corps_commander = {
-	  name = "Colin Campbell"
-	  picture = "Portrait_ENG_Colin_Campbell.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "George Brown"
+		picture = "Portrait_ENG_George_Brown.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Patrick Grant"
+		picture = "Portrait_ENG_Patrick_Grant.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_corps_commander = {
-	  name = "Garnet Wolseley"
-	  picture = "Portrait_ENG_Garnet_Wolseley.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "Richard Airey"
+		picture = "Portrait_ENG_Richard_Airey.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_corps_commander = {
-	  name = "George Brown"
-	  picture = "Portrait_ENG_George_Brown.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "Samuel Benjamin Auchmuty"
+		picture = "Portrait_ENG_Samuel_Benjamin_Auchmuty.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Prince George, Duke of Cambridge"
+		picture = "Portrait_ENG_Prince_George_Duke_of_Cambridge.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_corps_commander = {
-	  name = "Patrick Grant"
-	  picture = "Portrait_ENG_Patrick_Grant.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "James Brudenell"
+		picture = "Portrait_ENG_James_Brudenell.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Hugh Gough"
+		picture = "Portrait_ENG_Hugh_Gough.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_corps_commander = {
-	  name = "Richard Airey"
-	  picture = "Portrait_ENG_Richard_Airey.dds"
-	  traits = { }
-	  skill = 3
-	  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+		name = "Henry Havelock"
+		picture = "Portrait_ENG_Henry_Havelock.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "George Bingham"
+		picture = "Portrait_ENG_George_Bingham.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Robert Napier"
+		picture = "Portrait_ENG_Robert_Napier.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Sir Harry Smith"
+		picture = "Portrait_ENG_Sir_Harry_Smith.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
 	}
 
 	create_navy_leader = {
-	  name = "Edward Seymour"
-	  picture = "Portrait_ENG_Edward_Seymour.dds"
-	  traits = { }
-	  skill = 3
+		name = "Edward Seymour"
+		picture = "Portrait_ENG_Edward_Seymour.dds"
+		traits = { }
+		skill = 3
 	}
 
 	create_navy_leader = {
-	  name = "Francis Austen"
-	  picture = "Portrait_ENG_Francis_Austen.dds"
-	  traits = { }
-	  skill = 3
+		name = "Francis Austen"
+		picture = "Portrait_ENG_Francis_Austen.dds"
+		traits = { }
+		skill = 3
 	}
 
 	create_navy_leader = {
-	  name = "Harry Rawson"
-	  picture = "Portrait_ENG_Harry_Rawson.dds"
-	  traits = { }
-	  skill = 3
+		name = "Harry Rawson"
+		picture = "Portrait_ENG_Harry_Rawson.dds"
+		traits = { }
+		skill = 3
 	}
 
 	create_navy_leader = {
-	  name = "Sir William Parker"
-	  picture = "Portrait_ENG_William_Parker.dds"
-	  traits = { }
-	  skill = 3
+		name = "Sir William Parker"
+		picture = "Portrait_ENG_William_Parker.dds"
+		traits = { }
+		skill = 3
 	}
 
   set_technology = {

@@ -1,0 +1,276 @@
+political_actions = {
+  FRA_decision_enact_loi_ollivier = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_loi_ollivier
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_loi_ollivier
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      swap_ideas = {
+        add_idea = FRA_idea_republican_spirit_2
+        remove_idea = FRA_idea_republican_spirit
+      }
+    }
+
+    ai_will_do = {
+      base = 1000
+    }
+  }
+
+  FRA_decision_enact_loi_duruy = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_loi_duruy
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_loi_duruy
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_timed_idea = {
+        id = FRA_idea_loi_duruy
+        days = 180
+      }
+    }
+
+    ai_will_do = {
+      base = 1000
+    }
+  }
+
+  FRA_decision_enact_loi_niel = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_loi_niel
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_loi_niel
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      swap_ideas = {
+        add_idea = FRA_idea_amateur_tacticians_2
+        remove_idea = FRA_idea_amateur_tacticians
+      }
+    }
+
+    ai_will_do = {
+      base = 1000
+    }
+  }
+
+  FRA_decision_general_amnesty = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italy_united
+      has_completed_focus = FRA_proclaim_liberal_empire
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italy_united
+      has_completed_focus = FRA_proclaim_liberal_empire
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_popularity = {
+        ideology = autocracy
+        popularity = 0.1
+      }
+    }
+  }
+
+  FRA_decision_join_war_against_modena_parma = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = MOD
+          has_offensive_war_with = PRM
+        }
+        AND = {
+          MOD = {
+            has_offensive_war_with = PIE
+          }
+          PRM = {
+            has_offensive_war_with = PIE
+          }
+        }
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = MOD
+          has_offensive_war_with = PRM
+        }
+        AND = {
+          MOD = {
+            has_offensive_war_with = PIE
+          }
+          PRM = {
+            has_offensive_war_with = PIE
+          }
+        }
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_to_war = { targeted_alliance = PIE enemy = MOD }
+      add_to_war = { targeted_alliance = PIE enemy = PRM }
+    }
+
+    ai_will_do = {
+      base = 1000
+    }
+  }
+
+  FRA_decision_join_war_against_lombardy_venetio = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = LVN
+        }
+        LVN = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = LVN
+        }
+        LVN = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_to_war = { targeted_alliance = PIE enemy = LVN }
+    }
+  }
+
+  FRA_decision_join_war_against_tuscany = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = TUS
+        }
+        TUS = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = TUS
+        }
+        TUS = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_to_war = { targeted_alliance = PIE enemy = TUS }
+    }
+  }
+
+  FRA_decision_join_war_against_two_sicilies = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = NSC
+        }
+        NSC = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      OR = {
+        PIE = {
+          has_offensive_war_with = NSC
+        }
+        NSC = {
+          has_offensive_war_with = PIE
+        }
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      add_to_war = { targeted_alliance = PIE enemy = NSC }
+    }
+  }
+}
