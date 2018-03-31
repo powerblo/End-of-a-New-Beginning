@@ -1,0 +1,89 @@
+GER_unite_liberal = {
+	
+	#Unite Germany (Liberal)
+	eoanb_decision_GER_liberal_unite = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = eoanb_flag_is_germany_liberal_unity
+		}
+
+		visible = {
+			has_completed_focus = PRS_focus_nationalverein
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = GER_decision_tt_unite_liberal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
+
+GER_unite_bismarck = {
+	
+	#Unite Germany (Bismarck)
+	eoanb_decision_GER_bismarck_unite = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = eoanb_flag_is_germany_bismarck_unity
+		}
+
+		visible = {
+			has_completed_focus = PRS_focus_blut_und_eisen
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = GER_decision_tt_unite_bismarck
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
+
+GER_unite_socialist = {
+	
+	#Unite Germany (Socialist)
+	eoanb_decision_GER_socialist_unite = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = eoanb_flag_is_germany_socialist_unity
+		}
+
+		visible = {
+			has_completed_focus = PRS_focus_socialist_germany
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = GER_decision_tt_unite_socialist
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
