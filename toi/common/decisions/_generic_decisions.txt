@@ -175,3 +175,42 @@ war_measures = {
 	}
 	
 }
+
+#Economic Development of the Country
+
+economic_decisions = {
+	
+	#Expand Building Area
+	eoanb_decision_building_slot_victorian = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		visible = {
+			has_idea = victorian_era
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 180
+		
+		cost = 100
+		
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
