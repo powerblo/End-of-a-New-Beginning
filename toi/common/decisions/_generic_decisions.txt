@@ -174,4 +174,203 @@ war_measures = {
 		}
 	}
 	
+	#Inspire Troops
+	eoanb_decision_war_troops_inspire = {
+		
+		icon = generic_political_discourse 
+		
+		available = {
+			num_divisions > 5
+		}
+		
+		visible = {
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 14
+		
+		days_re_enable = 150
+		
+		cost = 50
+		
+		modifier = {
+			army_morale_factor = 0.05
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+		}
+		
+		remove_effect = {
+			army_experience = 5
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	#Mobilize Men (desperate)
+	eoanb_decision_war_mobilize_men = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			NOT = { has_idea = scraping_the_barrel }
+		}
+		
+		visible = {
+			ROOT = { surrender_progress > 0.5 }
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+			has_manpower < 5000
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365
+		
+		cost = 10
+		
+		complete_effect = {
+			add_manpower = 1000
+			add_war_support = -0.5
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
+
+#Economic Development of the Country
+
+economic_decisions = {
+	
+	#Expand Building Area
+	eoanb_decision_building_slot_victorian = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		visible = {
+			has_idea = victorian_era
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 180
+		
+		cost = 100
+		
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	#Promote the Shipbuilding Industry
+	eoanb_decision_promote_shipbuilding = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_navy_experience > 10
+		}
+		
+		visible = {
+			AND = {
+				num_of_naval_factories > 3
+				any_owned_state = { 
+					is_coastal = yes 
+				}
+			}
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 365
+		
+		days_re_enable = 1800
+		
+		cost = 200
+		
+		complete_effect = {
+			navy_experience = -10
+		}
+		
+		modifier = {
+			industrial_capacity_dockyard = 0.2
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
+
+#Internal Politics
+internal_politics_eoanb = {
+	
+	#Encourage Centrism
+	eoanb_decision_drift_centrism = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.6
+		}
+		
+		visible = {
+			centrism < 0.7
+			centrism > 0.1
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 180
+		
+		days_re_enable = 7300
+		
+		cost = 150
+		
+		modifier = {
+			centrism_drift = 0.03
+			stability_weekly = -0.001
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
 }
