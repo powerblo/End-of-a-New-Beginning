@@ -2114,4 +2114,31 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = PRS_unlock_germany
+		icon = GFX_focus_ger_reichskommisariats
+		x = 13
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_mil_supreme }
+		prerequisite = { focus = PRS_powerful_economy }
+		available = {
+			OR = {
+				has_completed_focus = PRS_focus_vdav
+				has_completed_focus = PRS_focus_adav
+				has_completed_focus = PRS_focus_liberal_kingdom
+				has_completed_focus = PRS_focus_prussian_republic
+				has_completed_focus = PRS_focus_new_candidate
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_focus_tt_german_ft
+		}
+	}
+	
 }
