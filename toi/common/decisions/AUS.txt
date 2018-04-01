@@ -1,0 +1,32 @@
+economic_decisions = {
+	
+	#Es ist mein Wille - Decree
+	eoanb_decision_AUS_mein_wille = {
+
+		icon = generic_political_discourse
+
+		available = {
+			AUS = { controls_state = 4 }
+			4 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+		}
+
+		visible = {
+			date > 1857.10.1
+			TAG = AUS
+			NOT = { date > 1859.1.1 }
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			4 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}

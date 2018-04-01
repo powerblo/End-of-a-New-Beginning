@@ -87,3 +87,41 @@ GER_unite_socialist = {
 	}
 	
 }
+
+economic_decisions = {
+
+	#Fund Coal Mining in Brandenburg
+	eoanb_decision_GER_brandenburg_coal = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			has_tech = machine_tools_1
+		}
+		
+		visible = {
+			PRS = { has_full_control_of_state = 64 }
+			NOT = { PRS = { has_resources_amount = { resource = coal amount > 10 state = 64 } } }
+			64 = { infrastructure > 5 }
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 730
+		
+		cost = 50
+		
+		complete_effect = {
+			add_resource = { type = coal amount = 2 state = 64 }
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
