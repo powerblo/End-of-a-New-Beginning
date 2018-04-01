@@ -183,5 +183,69 @@ country_event = {
 			name = prussia.9.a 
 			ai_chance = { factor = 100 }
 			add_political_power = -20
-		}
+	}
 } 
+
+#Hannover gets asked for access
+country_event = {
+	id = prussia.10
+	title = prussia.10.t
+	desc = prussia.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.10.a
+		ai_chance = { factor = 95 }
+		PRS = { country_event = { days = 1 id = prussia.11 } }
+	}
+	
+	option = {
+		name = prussia.10.b
+		ai_chance = { factor = 5 }
+		PRS = { country_event = { days = 1 id = prussia.12 } }
+	}
+}
+
+#Hannover says Yes
+country_event = {
+	id = prussia.11
+	title = prussia.11.t
+	desc = prussia.11.d
+	picture = GFX_report_event_generic_usa_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_PRS_event_han_access
+		hidden_effect = {
+			give_military_access = HAN
+		}
+	}
+}
+
+#Hannover says No
+country_event = {
+	id = prussia.12
+	title = prussia.12.t
+	desc = prussia.12.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.12.a
+		ai_chance = { factor = 85 }
+		add_political_power = -5
+	}
+	
+	option = {
+		name = prussia.12.b
+		ai_chance = { factor = 15 }
+		create_wargoal = { type = annex_everything target = HAN }
+		add_threat = 1
+	}
+}

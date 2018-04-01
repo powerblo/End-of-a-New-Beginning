@@ -1,0 +1,37 @@
+political_actions = {
+
+	#Ask Hannover for military access
+	eoanb_decision_PRS_ask_HAN_access = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.3
+		}
+
+		visible = {
+			TAG = PRS
+			country_exists = HAN
+			NOT = { HAN = { gives_military_access_to = PRS } }
+			NOT = { PRS = { has_military_access_to = HAN } }
+			OR = {
+				PRS = { owns_state = 57 }
+				PRS = { owns_state = 51 }
+				PRS = { owns_state = 42 }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 5
+
+		complete_effect = {
+			HAN = { country_event = { id = prussia.10 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
