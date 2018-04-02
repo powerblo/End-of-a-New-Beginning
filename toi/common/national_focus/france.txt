@@ -1316,13 +1316,19 @@ focus_tree = {
 			focus = FRA_expand_algeria
 		}
 		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = SIN
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = SAL
+			SNG = {
+				create_wargoal = {
+					type = annex_everything
+					target = SIN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SAL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BAO
+				}
 			}
 		}
 		x = 40
