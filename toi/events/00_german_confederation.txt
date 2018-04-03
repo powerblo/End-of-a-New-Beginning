@@ -1,0 +1,154 @@
+﻿add_namespace = gerconfed
+
+#Austria proposes Frankfurt Reforms
+country_event = {
+	id = gerconfed.1
+	title = gerconfed.1.t
+	desc = gerconfed.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	#Why not?
+	option = {
+		name = gerconfed.1.a
+		ai_chance = { 
+			factor = 35
+			modifier = {
+				factor = 1.2
+				AND = {
+					is_neighbor_of = AUS
+					AUS = { num_divisions > 10 }
+				}
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_event_gerconfed_1_yes
+		hidden_effect = {
+			add_to_temp_variable = { var = eoanb_var_votes_gerconfed_1_yes value = 1 tooltip = eoanb_tt_generic_variable }
+		}
+	}
+	
+	#Fuck off, thats an obvious power grab!
+	option = {
+		name = gerconfed.1.b
+		ai_chance = { 
+			factor = 65 
+			modifier = {
+				factor = 2
+				OR = {
+					TAG = PRS
+					TAG = HAN
+					TAG = MCK
+					TAG = OLD
+					TAG = BRE
+					TAG = HAM
+					TAG = LCK
+				}
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_event_gerconfed_1_no
+		hidden_effect = {
+			add_to_temp_variable = { var = eoanb_var_votes_gerconfed_1_no value = 1 tooltip = eoanb_tt_generic_variable }
+		}
+	}
+}
+
+#Counting the Votes for the Frankfurt Reforms
+country_event = {
+	id = gerconfed.2
+	title = gerconfed.2.t
+	desc = gerconfed.2.d
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	#Reform passes
+	option = {
+		name = gerconfed.2.a
+		trigger = {
+			check_variable = { eoanb_var_votes_gerconfed_1_yes > eoanb_var_votes_gerconfed_1_no }
+		}
+		AUS = { country_event = { days = 1 id = gerconfed.3 } }
+	}
+	
+	#Reform doesn't pass
+	option = {
+		name = gerconfed.2.b
+		trigger = {
+			check_variable = { eoanb_var_votes_gerconfed_1_yes < eoanb_var_votes_gerconfed_1_no }
+		}
+		AUS = { country_event = { days = 1 id = gerconfed.4 } }
+	}
+	
+	#Tie
+	option = {
+		name = gerconfed.2.c
+		trigger = {
+			check_variable = { eoanb_var_votes_gerconfed_1_yes = eoanb_var_votes_gerconfed_1_no }
+		}
+		AUS = { country_event = { days = 1 id = gerconfed.5 } }
+	}
+}
+
+#Frankfurt Reforms - Success
+country_event = {
+	id = gerconfed.3
+	title = gerconfed.3.t
+	desc = gerconfed.3.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gerconfed.3.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+		add_stability = 0.05
+		hidden_effect = {
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+		}
+	}
+}
+
+#Frankfurt Reforms - Failure
+country_event = {
+	id = gerconfed.4
+	title = gerconfed.4.t
+	desc = gerconfed.4.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gerconfed.4.a
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+		add_stability = -0.05
+		hidden_effect = {
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+		}
+	}
+}
+
+#Frankfurt Reforms - Tie
+country_event = {
+	id = gerconfed.5
+	title = gerconfed.5.t
+	desc = gerconfed.5.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gerconfed.5.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_gerconfed_5_c
+		hidden_effect = {
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+			clear_variable = eoanb_var_votes_gerconfed_1_no
+		}
+	}
+}

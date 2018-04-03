@@ -30,3 +30,47 @@ economic_decisions = {
 	}
 	
 }
+
+political_actions = {
+
+	#Frankfurter Reforms - German Confederation
+	eoanb_decision_AUS_gerconfed_frk = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			FRK = { has_idea = GER_general_idea_ger_confed }
+		}
+		
+		visible = {
+			TAG = AUS
+			date > 1863.9.1
+			has_idea = GER_general_idea_ger_confed
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decisions_aus_frk
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = GER_general_idea_ger_confed
+						NOT = { TAG = AUS }
+					}
+					country_event = { days = 1 id = gerconfed.1 }
+				}
+				AUS = { country_event = { days = 6 id = gerconfed.2 } }
+				set_temp_variable = { var = eoanb_var_votes_gerconfed_1_yes value = 0 }
+				set_temp_variable = { var = eoanb_var_votes_gerconfed_1_no value = 0 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}
