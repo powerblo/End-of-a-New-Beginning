@@ -1,0 +1,475 @@
+﻿add_namespace = secschwar
+
+#Denmark - Frederick VII dies
+country_event = {
+	id = secschwar.1
+	title = secschwar.1.t
+	desc = secschwar.1.d
+	picture = GFX_report_event_europe_funeral
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = DEN
+		date > 1863.11.10
+		has_idea = DEN_Frederick_VII
+	}
+	
+	option = {
+		name = secschwar.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_1
+		hidden_effect = {
+			swap_ideas = { remove_idea = DEN_Frederick_VII add_idea = hos_is_leader }
+			DEN = { country_event = { days = 5 id = secschwar.2 } }
+		}
+	}
+}
+
+#Denmark - a new king?
+country_event = {
+	id = secschwar.2
+	title = secschwar.2.t
+	desc = secschwar.2.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_2
+		hidden_effect = {
+			swap_ideas = { remove_idea = hos_is_leader add_idea = DEN_Christian_IX }
+			DEN = { country_event = { days = 5 id = secschwar.3 } }
+		}
+	}
+}
+
+#Denmark - The November Constitution
+country_event = {
+	id = secschwar.3
+	title = secschwar.3.t
+	desc = secschwar.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.3.a
+		ai_chance = { factor = 100 }
+		add_ideas = DEN_idea_november_constitution
+		hidden_effect = {
+			DEN = { country_event = { days = 10 id = secschwar.4 } }
+			PRS = { country_event = { days = 10 id = secschwar.4 } }
+			AUS = { country_event = { days = 10 id = secschwar.4 } }
+			DEN = { country_event = { days = 25 id = secschwar.5 } }
+		}
+	}
+	
+	option = {
+		name = secschwar.3.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.1
+		custom_effect_tooltip = eoanb_tt_event_secschwar_3
+	}
+}
+
+#Duke Frederick claims the Danish Throne
+country_event = {
+	id = secschwar.4
+	title = secschwar.4.t
+	desc = secschwar.4.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.4.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
+}
+
+#Saxony and Hannover move into Holstein
+country_event = {
+	id = secschwar.5
+	title = secschwar.5.t
+	desc = secschwar.5.d
+	picture = GFX_report_event_canada_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.5.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_5
+		hidden_effect = {
+			news_event = news.5
+			HLS = { transfer_state = 949 }
+			HAN = { give_military_access = HLS }
+			SAX = { give_military_access = HLS }
+			PRS = { country_event = { days = 3 id = secschwar.6 } }
+			SAX = { country_event = { days = 3 id = secschwar.6 } }
+			HAN = { country_event = { days = 3 id = secschwar.6 } }
+			OLD = { country_event = { days = 3 id = secschwar.6 } }
+			BRE = { country_event = { days = 3 id = secschwar.6 } }
+			HAM = { country_event = { days = 3 id = secschwar.6 } }
+			LCK = { country_event = { days = 3 id = secschwar.6 } }
+			MCK = { country_event = { days = 3 id = secschwar.6 } }
+			ENG = { country_event = { days = 5 id = secschwar.7 } }
+			RUS = { country_event = { days = 5 id = secschwar.7 } }
+			PRS = { country_event = { days = 10 id = secschwar.9 } }
+		}
+	}
+}
+
+#Beust proposes war
+country_event = {
+	id = secschwar.6
+	title = secschwar.6.t
+	desc = secschwar.6.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.6.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.1
+	}
+}
+
+#Deliver letters of objection?
+country_event = {
+	id = secschwar.7
+	title = secschwar.7.t
+	desc = secschwar.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.7.a
+		ai_chance = { factor = 80 }
+		add_political_power = -5
+		PRS = { country_event = { days = 1 id = secschwar.8 } }
+		AUS = { country_event = { days = 1 id = secschwar.8 } }
+	}
+	
+	option = {
+		name = secschwar.7.b
+		ai_chance = { factor = 20 }
+		add_political_power = 5
+	}
+}
+
+#Letters of objection
+country_event = {
+	id = secschwar.8
+	title = secschwar.8.t
+	desc = secschwar.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.8.a
+		ai_chance = { factor = 100 }
+		add_political_power = -20
+	}
+}
+
+#Prussia - issue ultimatum?
+country_event = {
+	id = secschwar.9
+	title = secschwar.9.t
+	desc = secschwar.9.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.9.a
+		ai_chance = { factor = 100 }
+		DEN = { country_event = { days = 1 id = secschwar.10 } }
+	}
+	
+	option = {
+		name = secschwar.9.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.1
+		add_political_power = -200
+	}
+}
+
+#Denmark gets Bismarcks Ultimatum
+country_event = {
+	id = secschwar.10
+	title = secschwar.10.t
+	desc = secschwar.10.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.10.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 100
+		hidden_effect = {
+			AUS = { country_event = { days = 1 id = secschwar.11 } }
+			PRS = { country_event = { days = 1 id = secschwar.12 } }
+		}
+	}
+	
+	option = {
+		name = secschwar.10.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.2
+		add_political_power = -200
+		remove_idea = DEN_idea_november_constitution
+	}
+}
+
+#Austria goes to war against Denmark
+country_event = {
+	id = secschwar.11
+	title = secschwar.11.t
+	desc = secschwar.11.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_11
+		hidden_effect = {
+			declare_war_on = { target = DEN type = annex_everything }
+			declare_war_on = { target = HLS type = annex_everything }
+			declare_war_on = { target = SCH type = annex_everything }
+			give_military_access = BAV
+			give_military_access = SAX
+			give_military_access = HAN
+			give_military_access = THU
+			give_military_access = HAM
+			give_military_access = HLS
+			give_military_access = LCK
+			give_military_access = MCK
+		}
+	}
+}
+
+#Prussia goes to war against Denmark
+country_event = {
+	id = secschwar.12
+	title = secschwar.12.t
+	desc = secschwar.12.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.12.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_12
+		hidden_effect = {
+			declare_war_on = { target = DEN type = annex_everything }
+			declare_war_on = { target = HLS type = annex_everything }
+			declare_war_on = { target = SCH type = annex_everything }
+			MCK = { declare_war_on = { target = HLS type = annex_everything } }
+			MCK = { declare_war_on = { target = DEN type = annex_everything } }
+			give_military_access = BAV
+			give_military_access = SAX
+			give_military_access = HAN
+			give_military_access = THU
+			give_military_access = HAM
+			give_military_access = HLS
+			give_military_access = LCK
+			give_military_access = MCK
+			set_global_flag = eoanb_flag_second_schleswig_war
+		}
+	}
+}
+
+#Russels Conference - Prussian Vote
+country_event = {
+	id = secschwar.13
+	title = secschwar.13.t
+	desc = secschwar.13.d
+	picture = GFX_report_event_generic_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		has_global_flag = eoanb_flag_second_schleswig_war
+		PRS = { has_war_with = DEN }
+		SCH = { surrender_progress > 0.8 }
+		DEN = { surrender_progress > 0.2 }
+	}
+	
+	option = {
+		name = secschwar.13.a
+		ai_chance = { factor = 90 }
+		AUS = { country_event = { days = 1 id = secschwar.14 } }
+	}
+	
+	option = {
+		name = secschwar.13.b
+		ai_chance = { factor = 10 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_13
+		hidden_effect = {
+			PRS = { country_event = { days = 1 id = secschwar.17 } }
+		}
+	}
+}
+
+#Russels Conference - Austrian Vote
+country_event = {
+	id = secschwar.14
+	title = secschwar.14.t
+	desc = secschwar.14.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.14.a
+		ai_chance = { factor = 90 }
+		DEN = { country_event = { days = 1 id = secschwar.15 } }
+	}
+	
+	option = {
+		name = secschwar.14.b
+		ai_chance = { factor = 10 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_14
+		hidden_effect = {
+			PRS = { country_event = { days = 1 id = secschwar.17 } }
+		}
+	}
+}
+
+#Russels Conference - Danish Vote
+country_event = {
+	id = secschwar.15
+	title = secschwar.15.t
+	desc = secschwar.15.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.15.a
+		ai_chance = { factor = 10 }
+		PRS = { country_event = { days = 1 id = secschwar.16 } }
+	}
+	
+	option = {
+		name = secschwar.15.b
+		ai_chance = { factor = 90 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_15
+		hidden_effect = {
+			PRS = { country_event = { days = 1 id = secschwar.17 } }
+		}
+	}
+}
+
+#Russels proposition passes
+country_event = {
+	id = secschwar.16
+	title = secschwar.16.t
+	desc = secschwar.16.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.16.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_16
+		hidden_effect = {
+			DEN = { white_peace = PRS }
+			DEN = { white_peace = AUS }
+			HLS = { white_peace = PRS }
+			HLS = { white_peace = AUS }
+			DEN = { white_peace = MCK }
+			HLS = { white_peace = MCK }
+			SCH = { white_peace = PRS }
+			SCH = { white_peace = MCK }
+			SCH = { white_peace = AUS }
+			DEN = { annex_country = { target = SCH } }
+			PRS = { puppet = HLS }
+			clr_global_flag = eoanb_flag_second_schleswig_war
+		}
+	}
+}
+
+#The Peace conference fails - Treaty of Vienna
+country_event = {
+	id = secschwar.17
+	title = secschwar.17.t
+	desc = secschwar.17.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.17.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_17
+		hidden_effect = {
+			DEN = { white_peace = PRS }
+			DEN = { white_peace = AUS }
+			HLS = { white_peace = PRS }
+			HLS = { white_peace = AUS }
+			DEN = { white_peace = MCK }
+			HLS = { white_peace = MCK }
+			SCH = { white_peace = PRS }
+			SCH = { white_peace = MCK }
+			SCH = { white_peace = AUS }
+			AUS = { puppet = HLS }
+			PRS = { puppet = SCH }
+			AUS = { country_event = { days = 10 id = secschwar.18 } }
+			PRS = { country_event = { days = 10 id = secschwar.19 } }
+			clr_global_flag = eoanb_flag_second_schleswig_war
+		}
+	}
+}
+
+#Gastein Convention - Austria
+country_event = {
+	id = secschwar.18
+	title = secschwar.18.t
+	desc = secschwar.18.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.18.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+
+#Gastein Convention - Prussia
+country_event = {
+	id = secschwar.19
+	title = secschwar.19.t
+	desc = secschwar.19.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secschwar.19.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_secschwar_19
+		hidden_effect = {
+			SCH = { annex_country = { target = HLS } }
+		}
+	}
+}
