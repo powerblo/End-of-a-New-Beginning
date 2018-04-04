@@ -222,7 +222,7 @@ country_event = {
 		trigger = {
 			has_stability > 50
 			OR = {
-				has_idea = priviledged_education
+				has_idea = privileged_education
 				has_idea = open_schools
 				has_idea = compulsory_education
 			}
@@ -236,7 +236,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.2
-				has_idea = priviledged_education
+				has_idea = privileged_education
 			}
 		}
 		
@@ -259,7 +259,7 @@ country_event = {
 			has_stability > 40
 			has_idea = victorian_era
 			OR = {
-				has_idea = priviledged_education
+				has_idea = privileged_education
 				has_idea = open_schools
 				has_idea = compulsory_education
 			}
@@ -476,4 +476,157 @@ country_event = {
 			add_political_power = -100
 		}
 		
+}
+
+#Industrialization attracts people to cities
+country_event = {
+	id = random.14
+	title = random.14.t
+	desc = random.14.d
+	picture = GFX_report_event_generic_factory
+	
+	trigger = {
+		has_idea = industrializing
+		OR = {
+			has_idea = victorian_era
+			has_idea = machine_era
+			has_idea = oil_era
+		}
+		NOT = { has_idea = tribal_slavery }
+		num_of_controlled_states > 3
+	}
+	
+	mean_time_to_happen = {
+		days = 1825
+		modifier = {
+			factor = 1.1
+			has_stability < 0.5
+		}
+		modifier = {
+			factor = 0.9
+			has_government = centrism
+		}
+	}
+	
+	option = {
+		name = random.14.a
+		ai_chance = { factor = 100 }
+		random_owned_controlled_state = { add_manpower = -1000 }
+		capital_scope = { add_manpower = 1000 }
+	}
+}
+
+#Dispute over Constitution
+country_event = {
+	id = random.15
+	title = random.15.t
+	desc = random.15.d
+	picture = GFX_report_event_generic_conference
+	
+	trigger = {
+		has_idea = constitution_adopted
+		NOT = { has_idea = absolutism } 
+		has_stability < 0.9
+	}
+	
+	mean_time_to_happen = {
+		days = 3650
+		modifier = {
+			factor = 0.9
+			has_stability < 0.6
+		}
+		modifier = {
+			factor = 0.9
+			has_stability < 0.3
+		}
+	}
+	
+	option = {
+		name = random.15.a
+		ai_chance = { factor = 40 }
+		add_stability = -0.01
+	}
+	
+	option = {
+		name = random.15.b
+		ai_chance = { factor = 60 }
+		add_political_power = -30
+		add_stability = 0.01
+	}
+}
+
+#Problems funding schools
+country_event = {
+	id = random.16
+	title = random.16.t
+	desc = random.16.d
+	picture = GFX_report_event_ast_parliament_house
+	
+	trigger = {
+		has_idea = open_schools
+		has_stability < 0.7
+		OR = {
+			has_idea = victorian_era 
+			has_idea = machine_era
+			has_idea = oil_era
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15000
+		modifier = {
+			factor = 0.8
+			has_stability < 0.35
+		}
+		modifier = {
+			factor = 0.4
+			has_stability < 0.2
+		}
+	}
+	
+	option = {
+		name = random.16.a
+		ai_chance = { factor = 70 }
+		add_political_power = -50
+	}
+	
+	option = {
+		name = random.16.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = eoanb_tt_event_random_16
+		hidden_effect = {
+			swap_ideas = { remove_idea = open_schools add_idea = privileged_education }
+		}
+	}
+}
+
+#High Taxes lead to Tax Evasion
+country_event = {
+	id = random.17
+	title = random.17.t
+	desc = random.17.d
+	picture = GFX_news_event_generic_read_write
+	
+	trigger = {
+		has_idea = high_taxes
+	}
+	
+	mean_time_to_happen = {
+		days = 8000
+	}
+	
+	option = {
+		name = random.17.a
+		ai_chance = { factor = 50 }
+		add_timed_idea = { idea = eoanb_random_event_17_idea days = 180 }
+	}
+	
+	option = {
+		name = random.17.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = eoanb_tt_event_random_17
+		hidden_effect = {
+			swap_ideas = { remove_idea = high_taxes add_idea = normal_taxes }
+		}
+	}
 }
