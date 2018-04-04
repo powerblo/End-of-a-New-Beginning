@@ -152,3 +152,34 @@ country_event = {
 		}
 	}
 }
+
+#Austria calls for a diet in Frankfurt
+country_event = {
+	id = gerconfed.6
+	title = gerconfed.6.t
+	desc = gerconfed.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gerconfed.6.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = eoanb_tt_event_gerconfed_6_a
+		hidden_effect = {
+			AUS = { add_political_power = 10 }
+		}
+	}
+	
+	option = {
+		name = gerconfed.6.b
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 4
+				TAG = PRS
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_event_gerconfed_6_b
+	}
+}
