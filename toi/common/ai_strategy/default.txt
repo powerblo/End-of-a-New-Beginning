@@ -298,42 +298,6 @@ slightly_naval_focused_nation = {
 	}
 }
 
-more_naval_focused_nation = {
-	enable = {
-		OR = {
-			tag = JAP
-			tag = USA
-			tag = ENG
-		}
-		date > "1941.1.1" #Delaying it by a couple of years
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = capital_ship
-		value = 2		 #1 to 2
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = submarine
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = screen_ship
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = convoy
-		value = 1
-	}
-}
-
-
 default_area_priority = {
 	enable = {
 		NOT = { original_tag = GER } NOT = { original_tag = FRA }
@@ -360,25 +324,25 @@ default_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = 75
+		value = 65
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = middle_east
-		value = 50
+		value = 40
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = africa
-		value = -90
+		value = -80
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = 300
+		value = 80
 	}
 	
 	ai_strategy = {
