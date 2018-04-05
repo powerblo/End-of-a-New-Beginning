@@ -467,3 +467,140 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "AUS_radetzky_march_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = AUS }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.75
+			
+			TAG = AUS
+		}
+	}
+}
+
+music = {
+	song = "PRS_yorkscher_marsch_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = PRS }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.75
+			
+			TAG = PRS
+		}
+	}
+}
+
+music = {
+	song = "RUS_imperial_anthem_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = RUS }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.5
+			
+			TAG = RUS
+		}
+	}
+}
+
+music = {
+	song = "SPR_el_turuta_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = SPR }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.5
+			
+			TAG = SPR
+		}
+	}
+}
+
+music = {
+	song = "USA_johnny_marching_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			date < 1861.1.1
+		}
+		modifier = {
+			factor = 1.25
+			
+			TAG = USA
+		}
+	}
+}
+
+music = {
+	song = "USA_stars_stripes_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.75
+			
+			TAG = USA
+		}
+	}
+}
