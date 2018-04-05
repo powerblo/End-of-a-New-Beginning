@@ -440,3 +440,235 @@ internal_politics_eoanb = {
 	}
 	
 }
+
+#Religious Matters
+eoanb_religious_affairs = {
+	
+	#Switch from Catholic to Protestant
+	eoanb_decision_generic_change_protestant = {
+		
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		visible = {
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+			}
+			has_idea = religion_catholic
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365000
+		
+		days_remove = 365
+		
+		cost = 250
+		
+		complete_effect = {	
+			add_stability = -0.05
+		}
+		
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+			drift_defence_factor = -0.25
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_protestant
+			hidden_effect = {
+				swap_ideas = { remove_idea = religion_catholic add_idea = religion_protestant }
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Switch from Protestant to Catholic
+	eoanb_decision_generic_change_catholic = {
+		
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		visible = {
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+			}
+			has_idea = religion_protestant
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365000
+		
+		days_remove = 365
+		
+		cost = 250
+		
+		complete_effect = {	
+			add_stability = -0.05
+		}
+		
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+			drift_defence_factor = -0.25
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_catholic
+			hidden_effect = {
+				swap_ideas = { remove_idea = religion_protestant add_idea = religion_catholic }
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Try to Secularize
+	eoanb_decision_generic_change_secular = {
+		
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		visible = {
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+			NOT = { has_idea = religion_secular }
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365000
+		
+		days_remove = 3650
+		
+		cost = 750
+		
+		complete_effect = {	
+			add_stability = -0.05
+		}
+		
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+			drift_defence_factor = -0.25
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_secular
+			hidden_effect = {
+				add_ideas = religion_secular
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Jihad - Sunni/Shia/Ibadi against Orthodox/Protestant/Catholic
+	eoanb_decision_generic_jiahd_against_christianity = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war_support < 0.5
+		}
+		
+		visible = {
+			OR =  {
+				has_idea = religion_sunni
+				has_idea = religion_shiite
+				has_idea = religion_ibadi
+			}
+			any_neighbor_country = {
+				OR = {
+					has_idea = religion_catholic
+					has_idea = religion_protestant
+					has_idea = religion_orthodox
+				}
+			}
+			has_stability > 0.3
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 1825
+		
+		days_remove = 90
+		
+		cost = 100
+		
+		complete_effect = {
+			create_wargoal = { type = jihad_wargoal target = FROM }
+		}
+		
+		modifier = {
+			targeted_modifier = { 
+				tag = FROM
+				attack_bonus_against = 0.1 
+			}
+			army_core_defence_factor = 0.1
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_generic_hold_animist_festival = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.05
+		}
+		
+		visible = {
+			has_idea = religion_animist
+			has_idea = pre_industrial_era
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365
+		
+		days_remove = 90
+		
+		cost = 50
+		
+		modifier = {
+			stability_factor = 0.05
+			army_morale_factor = 0.05
+			MONTHLY_POPULATION = 0.05
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
