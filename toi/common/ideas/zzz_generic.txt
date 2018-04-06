@@ -2,7 +2,7 @@ ideas = {
 
 	hidden_ideas = {
 
-		continuous_naval_production = {
+		eoanb_continuous_naval_production = {
 			allowed = {
 				always = no
 			}
@@ -15,6 +15,54 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		eoanb_continuous_training = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.1
+			}
+		}
+		
+		eoanb_continuous_construction = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		eoanb_continuous_stability = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
 			}
 		}
 

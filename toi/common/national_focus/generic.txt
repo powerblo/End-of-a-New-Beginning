@@ -1,3 +1,4 @@
+#Generic FT, Victorian Era, Autocratic Nation
 focus_tree = {
 	id = generic
 
@@ -230,6 +231,382 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = naval_equipment }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_new_roads
+		icon = GFX_goal_generic_construction2
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_new_roads_2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_new_roads }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_new_roads_3
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_new_roads_2 }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_cotton_farms
+		icon = GFX_goal_anschluss
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_new_roads_3 focus = generic_focus_build_mil_factory }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = cotton_farm
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = cotton_farm
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_coal_mine
+		icon = GFX_goal_generic_construction
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_cotton_farms }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = coal_mine
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = coal_mine
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = coal_mine
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_logging_camp
+		icon = GFX_goal_generic_construct_civilian
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_cotton_farms }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_improve_army
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = generic_focus_doctrines_1
+		icon = GFX_goal_generic_army_doctrines
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_improve_army }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_doctrines_2
+		icon = GFX_goal_generic_army_doctrines
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_doctrines_1 }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_new_weapons
+		icon = GFX_goal_generic_army_artillery
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_improve_army }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_intel_staff
+		icon = GFX_goal_generic_cavalry
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_new_weapons }
+		
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_intel days = 3650 }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_better_staff
+		icon = GFX_goal_generic_alliance
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_intel_staff focus = generic_focus_doctrines_2 }
+		
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_staff days = 3650 }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_support_corps
+		icon = GFX_goal_generic_national_unity
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_better_staff }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.3 uses = 1 category = artillery }
+			add_tech_bonus = { bonus = 0.3 uses = 1 category = support_tech }
 		}
 	}
 	
