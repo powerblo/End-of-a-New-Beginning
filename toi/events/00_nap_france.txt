@@ -220,16 +220,9 @@ country_event = { # Biarritz - Invitation to a meeting
   desc = nap_france.8.d
   picture = GFX_report_event_nap_france_carbonari
 
-  trigger = {
-    tag = FRA
-    has_country_flag = fra_carbonari_supported
-  }
+  is_triggered_only = yes
 
   fire_only_once = yes
-
-  mean_time_to_happen = {
-      days = 45
-  }
 
   option = { # Accept
     name = nap_france.8.a
@@ -248,16 +241,9 @@ country_event = { # Biarritz - Prussia accepts
   desc = nap_france.9.d
   picture = GFX_report_event_nap_france_carbonari
 
-  trigger = {
-    tag = FRA
-    has_country_flag = fra_carbonari_supported
-  }
+  is_triggered_only = yes
 
   fire_only_once = yes
-
-  mean_time_to_happen = {
-      days = 45
-  }
 
   option = { # OK
     name = nap_france.9.a
@@ -271,20 +257,13 @@ country_event = { # The Biarritz Meeting (French vision)
   desc = nap_france.10.d
   picture = GFX_report_event_nap_france_carbonari
 
-  trigger = {
-    tag = FRA
-    has_country_flag = fra_carbonari_supported
-  }
+  is_triggered_only = yes
 
   immediate = {
     PRS = { country_event = { id = nap_france.11 } }
   }
 
   fire_only_once = yes
-
-  mean_time_to_happen = {
-      days = 45
-  }
 
   option = { # OK
     name = nap_france.10.a
@@ -297,16 +276,7 @@ country_event = { # The Biarritz Meeting (Prussian vision)
   desc = nap_france.11.d
   picture = GFX_report_event_nap_france_carbonari
 
-  trigger = {
-    tag = FRA
-    has_country_flag = fra_carbonari_supported
-  }
-
-  fire_only_once = yes
-
-  mean_time_to_happen = {
-      days = 45
-  }
+  is_triggered_only = yes
 
   option = { # OK
     name = nap_france.11.a
@@ -1827,7 +1797,7 @@ country_event = { # Arrival of Maximilian-Ferdinand
   }
 
   option = {
-    name = nap_france.362.a The emperor has arrived!
+    name = nap_france.362.a #The emperor has arrived!
     ai_chance = { factor = 99 }
     random_country = {
       limit = {
@@ -2789,7 +2759,7 @@ country_event = { # Death of Napoleon III
         name = "Napoleon IV"
         picture = "Portrait_FRA_Napoleon_IV.dds"
         ideology = despotism
-    }
+      }
       hidden = {
           news_event = { days = 10 id = nap_france.399 }
       }
