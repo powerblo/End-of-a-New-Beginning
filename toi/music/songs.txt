@@ -344,6 +344,72 @@ music = {
 }
 
 music = {
+	song = "eoanb_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_idea = victorian_era }
+		}
+	}
+}
+
+music = {
+	song = "eoanb_peace_4"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_idea = victorian_era }
+		}
+	}
+}
+
+music = {
+	song = "eoanb_peace_5"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_idea = victorian_era }
+		}
+	}
+}
+
+music = {
 	song = "ENG_british_grenadiers_song"
 	
 	chance = {
