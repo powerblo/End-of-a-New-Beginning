@@ -1,9 +1,9 @@
 ﻿1857.1.1 = {
-  capital = 473
+  capital = 521
 
-  oob = "BCO_1857"
+  oob = "QNL_1857"
 
-  set_convoys = 10
+  set_convoys = 0
   
   set_research_slots = 2
 
@@ -11,7 +11,7 @@
     #POLITICS 
 		  
     hos_is_leader
-    victorian_era
+    pre_industrial_era
     agrarian
     no_heir
     absolute_monarchy
@@ -23,8 +23,8 @@
 
     stagnation_growth
     border_control
-	  volunteer_only
-    limited_equality
+	  limited_conscription
+    slavery
     absolutism
 
     no_constitution
@@ -32,10 +32,9 @@
 
     privileged_education
     state_religion
-	  religion_protestant
-    
+	  religion_catholic
          #NATIONAL SPIRITS
-    
+	
 	ENG_colonial_Victoria
 	
   }
@@ -58,7 +57,7 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 100
       }
       radical_democracy = {
         popularity = 0
@@ -67,38 +66,28 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 0
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
   	infantry_weapons = 1
   	vic_army_cloth = 1
   	early_destroyer = 1
-  	gw_artillery = 1
-  	iron_railways = 1
-  	steam_engine = 1
-  	manufactories = 1
-  	hot_blast_furnaces = 1
-  	food_preserving_icebox = 1
-  	early_artificial_fertilizer = 1
-  	electrical_engineering = 1
   }
 
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Sir James Douglas"
-    desc = "POLITICS_SIR_JAMES_DOUGLAS_DESC"
-    picture = "Portrait_VAN_James_Douglas"
-    expire = "2100.1.1"
-    ideology = despotism
-    traits = { }
+      name = "Robert Herbert"
+      desc = "POLITICS_TEMP_DESC"
+      picture = "Portrait_QNL_Robert_Herbert.dds"
+      ideology = conserv
   }
 }

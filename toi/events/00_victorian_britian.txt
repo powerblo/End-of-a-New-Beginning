@@ -95,6 +95,234 @@ country_event = {
 	}
 }
 
+#----------------------------------------------------------------------------------------------
+# EVENTS RELATED TO BRITISH ELECTIONS
+#----------------------------------------------------------------------------------------------
+
+country_event = { 	#The Health of Lord Derby
+	id = vbritian_election.1
+	title = vbritian_election.1.t	
+	desc = vbritian_election.1.d		
+	picture = GFX_report_event_saf_soldiers
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = ENG
+		date > 1868.2.1
+		NOT = { has_completed_focus = ENG_queens_intervention }
+	}
+
+	
+	option = { #Hope he will be ok
+		name = vbritian_election.1.a
+		hidden_effect = {
+			country_event = {
+				id = vbritian_election.2
+				days = 35
+			}
+		}
+	}
+}
+
+country_event = { 	#Lord Derby is retireing from the premiership
+	id = vbritian_election.2
+	title = vbritian_election.2.t	
+	desc = vbritian_election.2.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #We have to arrange a new election!
+		name = vbritian_election.2.a
+		create_country_leader = {
+			name = "Benjamin Disraeli"
+			picture = "Portrait_ENG_Benjamin_Disraeli.dds"
+			expire = "1870.2.19"
+			ideology = conserv
+		}
+		set_politics = {
+		    ruling_party = traditional_conservatism
+		}
+		hidden_effect = {
+			country_event = {
+				id = vbritian_election.1868
+				days = 235
+			}
+		}
+	}
+}
+
+country_event = { 	#Lord Palmerston propose a motion to extent the franchise
+	id = vbritian_election.3
+	title = vbritian_election.3.t	
+	desc = vbritian_election.3.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #Call to not support Palmerston
+		name = vbritian_election.3.a
+		add_political_power = 60
+		add_popularity = { 
+	      ideology = traditional_conservatism
+	      popularity = -0.05
+	    }
+	    hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_election.3
+		    	days = 15
+		    }			
+		}
+	}
+
+	option = { #Stay neutral on the matter
+		name = vbritian_election.3.a
+		add_political_power = 10
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_election.3
+		    	days = 15
+		    }			
+		}
+	}
+}
+
+country_event = { 	#Dissolution of the Parliament
+	id = vbritian_election.3
+	title = vbritian_election.3.t	
+	desc = vbritian_election.3.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #ELECTION PLEASE!
+		name = vbritian_election.3.a
+		hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_election.1859
+		    	days = 15
+		    }			
+		}
+	}
+}
+
+country_event = { 	#The Queens appoints the Earl Granville to form a government
+	id = vbritian_election.5
+	title = vbritian_election.5.t	
+	desc = vbritian_election.5.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = vbritian_election.5.a
+		create_country_leader = {
+			name = "Granville Leveson-Gower"
+			picture = "Portrait_ENG_Earl_Granville.dds"
+			expire = "1870.6.11"
+			ideology = conserv
+		}
+		set_politics = {
+		    ruling_party = traditional_conservatism
+		}
+	    hidden_effect = {			
+		    country_event = {
+		    	id = vbritian_election.5
+		    	days = 15
+		    }			
+		}
+	}
+}
+
+country_event = { 	#Meeting in Willis's Rooms
+	id = vbritian_election.6
+	title = vbritian_election.6.t	
+	desc = vbritian_election.6.d		
+	picture = GFX_report_event_saf_soldiers
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = ENG
+		date > 1859.6.9
+	}
+
+	
+	option = { #The Liberal Party is born
+		name = vbritian_election.6.a
+		add_popularity = { 
+	      ideology = centrism
+	      popularity = 0.1
+	    }
+		hidden_effect = {
+			country_event = {
+				id = vbritian_election.7
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { 	#Lord Derby steps down
+	id = vbritian_election.7
+	title = vbritian_election.7.t	
+	desc = vbritian_election.7.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #The Queen chose Lord Palmreston to replace him
+		name = vbritian_election.7.a
+		create_country_leader = {
+			name = "Lord Palmerston"
+			picture = "Portrait_ENG_Lord_Palmerston.dds"
+			expire = "1870.2.19"
+			ideology = market_liberal
+		}
+		set_politics = {
+		    ruling_party = centrism
+		}
+	}
+}
+
+country_event = { 	#General Election 1859
+	id = vbritian_election.1859
+	title = vbritian_election.1859.t	
+	desc = vbritian_election.1859.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #Disraeli
+		name = vbritian_election.1859.a	
+		
+		create_country_leader = {
+			name = "Edward Smith-Stanley"
+			picture = "Portrait_ENG_Edward_Smith_Stanley.dds"
+			expire = "1870.6.11"
+			ideology = conserv
+		}
+		set_politics = {
+		    ruling_party = traditional_conservatism
+		}
+	}
+
+	option = { #Lord Derby
+		name = vbritian_election.1859.b	
+		
+		create_country_leader = {
+			name = "Lord Palmerston"
+			picture = "Portrait_ENG_Lord_Palmerston.dds"
+			expire = "1870.2.19"
+			ideology = market_liberal
+		}
+		set_politics = {
+		    ruling_party = centrism
+		}
+	}
+}
+
 country_event = { 	#General Election 1865
 	id = vbritian_election.1865
 	title = vbritian_election.1865.t	
@@ -149,6 +377,43 @@ country_event = { 	#General Election 1865
 		}
 		set_politics = {
 		    ruling_party = centrism
+		}
+	}
+}
+
+country_event = { 	#General Election 1868
+	id = vbritian_election.1868
+	title = vbritian_election.1868.t	
+	desc = vbritian_election.1868.d		
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #Gladstone
+		name = vbritian_election.1868.a	
+		
+		create_country_leader = {
+			name = "William Gladstone"
+			picture = "Portrait_ENG_William_Gladstone.dds"
+			expire = "1870.6.11"
+			ideology = market_liberal
+		}
+		set_politics = {
+		    ruling_party = centrism
+		}
+	}
+
+	option = { #Disraeli
+		name = vbritian_election.1868.b	
+		
+		create_country_leader = {
+			name = "Benjamin Disraeli"
+			picture = "Portrait_ENG_Benjamin_Disraeli.dds"
+			expire = "1870.2.19"
+			ideology = conserv
+		}
+		set_politics = {
+		    ruling_party = traditional_conservatism
 		}
 	}
 }
