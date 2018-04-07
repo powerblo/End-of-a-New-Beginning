@@ -67,5 +67,33 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+		eoanb_idea_generic_focus_staff = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				max_planning = 0.1
+				army_org_Factor = 0.05
+			}
+		}
+		eoanb_idea_generic_focus_intel = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				decryption_factor = 0.1
+				encryption_factor = 0.1
+			}
+		}
 	}
 }

@@ -2,7 +2,7 @@ ideas = {
 
 	hidden_ideas = {
 
-		continuous_naval_production = {
+		eoanb_continuous_naval_production = {
 			allowed = {
 				always = no
 			}
@@ -14,12 +14,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_dockyard = 0.2
+				industrial_capacity_dockyard = 0.1
 			}
 		}
-
-
-		continuous_air_production = {
+		
+		eoanb_continuous_training = {
 			allowed = {
 				always = no
 			}
@@ -30,69 +29,43 @@ ideas = {
 
 			removal_cost = -1
 
-			equipment_bonus = {
-				fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				cv_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				jet_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				cv_CAS_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				CAS_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				nav_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				cv_nav_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				rocket_interceptor_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				jet_tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				jet_strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				heavy_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				guided_missile_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
+			modifier = {
+				training_time_factor = -0.1
 			}
 		}
+		
+		eoanb_continuous_construction = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		eoanb_continuous_stability = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
 	}
 
 	# Special ones that can be applied on other countries through focus system.
@@ -159,7 +132,7 @@ ideas = {
 
 		designer = yes
 
-		generic_tank_manufacturer = {
+		eoanb_generic_tank_manufacturer = {
 
 			picture = generic_tank_manufacturer_1
 
@@ -173,7 +146,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				armor = 0.10
+				armor = 0.05
 			}
 
 			traits = { tank_manufacturer }
@@ -184,7 +157,7 @@ ideas = {
 
 		designer = yes
 
-		generic_naval_manufacturer = {
+		eoanb_generic_naval_manufacturer = {
 
 			picture = generic_naval_manufacturer_1
 
@@ -198,7 +171,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.05
 			}
 
 			traits = { naval_manufacturer }
@@ -209,7 +182,7 @@ ideas = {
 
 		designer = yes
 
-		generic_light_aircraft_manufacturer = {
+		eoanb_generic_light_aircraft_manufacturer = {
 
 			picture = generic_air_manufacturer_1
 
@@ -223,82 +196,22 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.05
 			}
 
 			traits = { light_aircraft_manufacturer }
-		}
-
-		generic_medium_aircraft_manufacturer = {
-
-			picture = generic_air_manufacturer_3
-
-			allowed = {
-				NOT = {
-					has_available_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
-				}
-			}
-
-			cost = 150
-			removal_cost = 10
-
-			research_bonus = {
-				air_equipment = 0.10
-			}
-
-			traits = { medium_aircraft_manufacturer }
-		}
-
-		generic_heavy_aircraft_manufacturer = {
-
-			picture = generic_air_manufacturer_2
-
-			allowed = {
-				NOT = {
-					has_available_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
-				}
-			}
-
-			cost = 150
-			removal_cost = 10
-
-			research_bonus = {
-				air_equipment = 0.10
-			}
-
-			traits = { heavy_aircraft_manufacturer }
-		}
-
-		generic_naval_aircraft_manufacturer = {
-
-			picture = generic_naval_manufacturer_2
-
-			allowed = {
-				NOT = {
-					has_available_idea_with_traits = { idea = naval_aircraft_manufacturer limit = 1 }
-				}
-			}
-
-			cost = 150
-			removal_cost = 10
-
-			research_bonus = {
-				air_equipment = 0.10
-			}
-
-			traits = { naval_aircraft_manufacturer }
 		}
 	}
 
 	industrial_concern = {
 
-		generic_industrial_concern = {
+		eoanb_generic_mechanical_concern = {
 
 			picture = generic_industrial_concern_1
 
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
+					has_available_idea_with_traits = { idea = industrial_concern_1 limit = 1 }
 				}
 			}
 
@@ -306,19 +219,19 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				industry = 0.10
+				mechanical_engineering = 0.05
 			}
 
-			traits = { industrial_concern }
+			traits = { industrial_concern_1 }
 		}
 
-		generic_electronics_concern = {
+		eoanb_generic_process_concern = {
 
 			picture = generic_electronics_concern_1
 
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = electronics_concern limit = 1 }
+					has_available_idea_with_traits = { idea = electronics_concern_1 limit = 1 }
 				}
 			}
 
@@ -326,10 +239,50 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				electronics = 0.10
+				process_engineering = 0.05
 			}
 
-			traits = { electronics_concern }
+			traits = { electronics_concern_1 }
+		}
+		
+		eoanb_generic_biochemistry_concern = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = electronics_concern_2 limit = 1 }
+				}
+			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				biochemistry = 0.05
+			}
+
+			traits = { electronics_concern_2 }
+		}
+		
+		eoanb_generic_electronics_concern = {
+
+			picture = generic_electronics_concern_3
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = electronics_concern_3 limit = 1 }
+				}
+			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				electronics_devices = 0.05
+			}
+
+			traits = { electronics_concern_3 }
 		}
 	}
 
@@ -337,13 +290,13 @@ ideas = {
 
 		designer = yes
 
-		generic_infantry_equipment_manufacturer = {
+		eoanb_generic_infantry_equipment_manufacturer = {
 
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
+					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer_1 limit = 1 }
 				}
 			}
 
@@ -351,19 +304,19 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.05
 			}
 
-			traits = { infantry_equipment_manufacturer }
+			traits = { infantry_equipment_manufacturer_1 }
 		}
 
-		generic_artillery_manufacturer = {
+		eoanb_generic_artillery_manufacturer = {
 
 			picture = generic_artillery_manufacturer_2
 
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
+					has_available_idea_with_traits = { idea = artillery_manufacturer_1 limit = 1 }
 				}
 			}
 
@@ -371,10 +324,10 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.05
 			}
 
-			traits = { artillery_manufacturer }
+			traits = { artillery_manufacturer_1 }
 		}
 	}
 
@@ -384,11 +337,33 @@ ideas = {
 
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = captain_of_industry limit = 1 }
+					has_available_idea_with_traits = { idea = captain_of_industry_1 limit = 1 }
 				}
 			}
 
-			traits = { captain_of_industry }
+			traits = { captain_of_industry_1 }
+		}
+		
+		generic_fortification_engineer = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = fortification_engineer_1 limit = 1 }
+				}
+			}
+			
+			traits = { fortification_engineer_1 }
+		}
+
+		generic_war_industrialist = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = war_industrialist_1 limit = 1 }
+				}
+			}
+			
+			traits = { war_industrialist_1 }
 		}
 	}
 
