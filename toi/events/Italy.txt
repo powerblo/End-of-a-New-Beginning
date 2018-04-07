@@ -1,1 +1,42 @@
-﻿
+﻿add_namespace = ita
+
+#template
+
+country_event = {
+	id = ita.0
+	title = ita.0.t
+	desc = ita.0.d
+	picture = GFX_ITA_Rome
+
+	fire_only_once = yes
+
+	option = {
+		name = ita.0.a
+		ITA = {annex_country = { target = PAP } }
+		ITA = {set_capital = 751 }
+		
+	}
+	option = {
+		name = ita.0.b
+		ITA = {declare_war_on = { target = PAP type = annex_everything } }
+		}
+	}
+
+country_event = {
+	id = ita.1
+	title = ita.1.t
+	desc = ita.1.d
+	picture = GFX_ITA_Rome
+
+	fire_only_once = yes
+
+	option = {
+		name = ita.1.a
+		diplomatic_relation = { country = ITA relation = non_aggression_pact } 
+		
+		
+	}
+	option = {
+		name = ita.1.b
+		
+		}
