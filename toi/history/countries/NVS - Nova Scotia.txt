@@ -84,11 +84,38 @@
 
   # POLITICAL LEADERS
 
-create_country_leader = {
+  create_country_leader = {
     name = "Sir John Gaspard Le Marchant"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_NVS_John_Gaspard_Le_Marchant.dds"
     expire = 1861.12.31
     ideology = despotism
-}
+  }
+
+  create_country_leader = {
+    name = "Charles Tupper"
+    desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+    picture = "Portrait_NVS_Charles_Tupper.dds"
+    expire = "1865.1.1"
+    ideology = conserv
+    traits = { }
+  }
+
+  create_country_leader = {
+    name = "Joseph Howe"
+    desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+    picture = "Portrait_NVS_Joseph_Howe.dds"
+    expire = "1865.1.1"
+    ideology = reactionary
+    traits = { }
+  }
+
+  create_country_leader = {
+    name = "James Rogers"
+    desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+    picture = "Portrait_NVS_James_Rogers.dds"
+    expire = "1865.1.1"
+    ideology = christian
+    traits = { }
+  }
 }

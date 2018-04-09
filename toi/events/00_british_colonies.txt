@@ -1,3 +1,4 @@
+add_namespace = british_colonies_news
 add_namespace = british_canada
 add_namespace = british_columbia
 add_namespace = hbc
@@ -685,6 +686,275 @@ country_event = { #War on SAF
 	}
 }
 
+country_event = { # OFS - Boshoff Resigns !
+	id = boer_states.3
+	title = boer_states.3.t
+	desc = boer_states.3.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1859.9.6
+	}
+		
+	option = { # The Chairman of the Volksraad, Esaias Reynier Snijman, will serve as acting president for now
+		name = boer_states.3.a
+		create_country_leader = {
+			name = "Esaias Reynier Snijman"
+			picture = "Portrait_OFS_Esaias_Reynier_Snijman.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - The Presidency of Pretorius
+	id = boer_states.4
+	title = boer_states.4.t
+	desc = boer_states.4.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1860.2.8
+	}
+		
+	option = { # Isn't he the president of the South African Republic already ?
+		name = boer_states.4.a
+		create_country_leader = {
+			name = "Marthinus Wessel Pretorius"
+			picture = "Portrait_OFS_Marthinus_Wessel_Pretorius.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - Pretorius left the Orange Free State !
+	id = boer_states.5
+	title = boer_states.5.t
+	desc = boer_states.5.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1863.3.18
+	}
+		
+	option = { # The Government Secretary of the Volksraad, Joseph Allison, will serve as acting president for now
+		name = boer_states.5.a
+		create_country_leader = {
+			name = "Joseph Allison"
+			picture = "Portrait_OFS_Joseph_Allison.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - The Resignation of Pretorius was accepted by the Volksraad
+	id = boer_states.6
+	title = boer_states.6.t
+	desc = boer_states.6.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1863.6.17
+	}
+		
+	option = { # The Volksraad will take charge until a new acting president is chosen
+		name = boer_states.6.a
+		create_country_leader = {
+			name = "Volksraad"
+			picture = "Portrait_OFS_Volksraad.dds"
+			ideology = conserv
+		}
+		hidden_effect = {
+			country_event = {
+				id = boer_states.7
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # OFS - The Volksraad decides to give the seat to Jacobus Johannes Venter
+	id = boer_states.7
+	title = boer_states.7.t
+	desc = boer_states.7.d
+		
+	is_triggered_only = yes
+
+	fire_only_once = yes
+		
+	option = { # He becomes the acting president
+		name = boer_states.7.a
+		create_country_leader = {
+			name = "Jacobus Johannes Venter"
+			picture = "Portrait_OFS_Jacobus_Johannes_Venter.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - Johannes Henricus Brand is elected president
+	id = boer_states.8
+	title = boer_states.8.t
+	desc = boer_states.8.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1864.2.2
+	}
+		
+	option = { # Alright
+		name = boer_states.8.a
+		create_country_leader = {
+			name = "Johannes Henricus Brand"
+			picture = "Portrait_OFS_Johannes_Henricus_Brand.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Resignation of Pretorius
+	id = boer_states.9
+	title = boer_states.9.t
+	desc = boer_states.9.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1860.9.15
+	}
+		
+	option = { # Johannes Hermanus Grobler becomes the acting president
+		name = boer_states.9.a
+		create_country_leader = {
+			name = "Johannes Hermanus Grobler"
+			picture = "Portrait_TRV_Johannes_Hermanus_Grobler.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Stephanus Schoeman takes power !
+	id = boer_states.10
+	title = boer_states.10.t
+	desc = boer_states.10.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1860.12.6
+	}
+		
+	option = { # What a twist ?
+		name = boer_states.10.a
+		set_politics = {
+			ruling_party = radical_democracy
+		}
+		create_country_leader = {
+			name = "Stephanus Schoeman"
+			picture = "Portrait_TRV_Stephanus_Schoeman.dds"
+			ideology = reactionary
+		}
+	}
+}
+
+country_event = { # TRV - The Volksraad takes down Schoeman
+	id = boer_states.11
+	title = boer_states.11.t
+	desc = boer_states.11.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1862.4.17
+	}
+		
+	option = { # What a twist ?
+		name = boer_states.11.a
+		set_politics = {
+			ruling_party = traditional_conservatism
+		}
+		create_country_leader = {
+			name = "Willem Cornelis Janse van Rensburg"
+			picture = "Portrait_TRV_Willem_Cornelis_Janse_van_Rensburg.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - The Transvaal Civil War
+	id = boer_states.12
+	title = boer_states.12.t
+	desc = boer_states.12.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1862.10.9
+	}
+		
+	option = { # Schoeman, stahp !
+		name = boer_states.12.a
+		hidden_effect = {
+			start_civil_war = { ideology = radical_democracy size = 0.3 }
+			news_event = british_colonies_news.4
+		}
+	}
+}
+
+country_event = { # TRV - The Return of Pretorius
+	id = boer_states.13
+	title = boer_states.13.t
+	desc = boer_states.13.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1864.5.10
+	}
+		
+	option = { # Pretorius manages to be important in every Boer state at the same time
+		name = boer_states.13.a
+		create_country_leader = {
+			name = "Marthinus wessel Pretorius"
+			picture = "Portrait_TRV_Marthinus_Wessel_Pretorius.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Creation of the State President seat
+	id = boer_states.14
+	title = boer_states.14.t
+	desc = boer_states.14.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1864.5.10
+	}
+		
+	option = { # A stronger leader for a stronger state
+		name = boer_states.14.a
+		add_political_power = 50
+		add_stability = 0.2
+	}
+}
+
 #######################################################################
 
  ###  #   #  #### ##### ####   ###  #     #####  ###
@@ -757,5 +1027,63 @@ country_event = { # South Australia annexes the northern part of NSW
 		SAS = {
 			transfer_state = 520
 		}
+	}
+}
+
+#######################################################################
+
+#   # ##### #   #  ####
+##  # #     #   # #
+# # # ###   # # #  ###
+#  ## #     # # #     #
+#   # #####  # #  ####
+
+#######################################################################
+
+news_event = { # News : The Birth of the Canadian Confederacy
+	id = british_colonies_news.1
+	title = british_colonies_news.1.t
+	desc = british_colonies_news.1.d
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = british_colonies_news.1.a
+	}
+}
+
+news_event = { # News : British Columbia becomes a Colony
+	id = british_colonies_news.2
+	title = british_colonies_news.2.t
+	desc = british_colonies_news.2.d
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = british_colonies_news.2.a
+	}
+}
+
+news_event = { # News : War between the Orange Free State and the South African Republic
+	id = british_colonies_news.3
+	title = british_colonies_news.3.t
+	desc = british_colonies_news.3.d
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = british_colonies_news.3.a
+	}
+}
+
+news_event = { # News : The Transvaal Civil War
+	id = british_colonies_news.4
+	title = british_colonies_news.4.t
+	desc = british_colonies_news.4.d
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = british_colonies_news.4.a
 	}
 }
