@@ -1,0 +1,440 @@
+USA_grant_statehood = {
+
+	#Kansas
+	eoanb_descision_USA_state_kansas = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 383 }
+			383 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 383 }
+			383 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		383 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#New Mexico
+	eoanb_descision_USA_state_nmexico = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 376 }
+			376 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 376 }
+			376 = { state_population > 40000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		376 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Arizona
+	eoanb_descision_USA_state_arizona = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 377 }
+			377 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 377 }
+			377 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		377 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Nevada
+	eoanb_descision_USA_state_nevada = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 379 }
+			379 = { state_population > 40000 }
+			has_country_flag = USAUtah_War_Over
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 379 }
+			379 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		379 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Utah
+	eoanb_descision_USA_state_utah = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 380 }
+			380 = { state_population > 40000 }
+			has_country_flag = USAUtah_War_Over
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 380 }
+			380 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		380 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Wyoming
+	eoanb_descision_USA_state_wyoming = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 381 }
+			381 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 381 }
+			381 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		381 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Colorado
+	eoanb_descision_USA_state_colorado = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 382 }
+			382 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 382 }
+			382 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		382 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Nebraska
+	eoanb_descision_USA_state_nebraska = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 384 }
+			384 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 384 }
+			384 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		384 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Oregon
+	eoanb_descision_USA_state_oregon = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 385 }
+			385 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 385 }
+			385 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		385 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Washington
+	eoanb_descision_USA_state_washington = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 386 }
+			386 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 386 }
+			386 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		386 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Idaho
+	eoanb_descision_USA_state_idaho = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 387 }
+			387 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 387 }
+			387 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		387 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Montana
+	eoanb_descision_USA_state_montana = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 388 }
+			388 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 388 }
+			388 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		388 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#North Dakota
+	eoanb_descision_USA_state_ndakota = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 389 }
+			389 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 389 }
+			389 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		389 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#South Dakota
+	eoanb_descision_USA_state_sdakota = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 390 }
+			390 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 390 }
+			390 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		390 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Minnesota
+	eoanb_descision_USA_state_minnesota = {
+
+		icon = generic_political_discourse
+
+		available = {
+			USA = { controls_state = 391 }
+			391 = { state_population > 40000 }
+		}
+
+		visible = {
+			TAG = USA
+			USA = { controls_state = 391 }
+			391 = { state_population > 20000 }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		391 = { add_core_of = USA }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

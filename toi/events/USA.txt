@@ -1,5 +1,4 @@
 ﻿add_namespace = usa
-
 #Panic of 1857
 country_event = {
 		id = usa.1
@@ -16,12 +15,11 @@ country_event = {
 		
 		option = {
 				name = usa.1.a
-				add_timed_idea = { idea = USA_1857Panic days = 240 }
+				hidden_effect = { USA = { set_country_flag = USAPanic_Of_1857 } }
+				add_ideas = USA_1857Panic
 				hidden_effect = { USA = { country_event = { days = 14 id = usa.2 } } }
 		}
 }
-
-#SS Central America crashes
 country_event = {
 		id = usa.2
 		title = usa.2.t
@@ -33,5 +31,903 @@ country_event = {
 		option = {
 				name = usa.2.a
 				add_political_power = -100
+		}
+}
+#Pre-Civil War Events
+country_event = {
+		id = usa.3
+		title = usa.3.t
+		desc = usa.3.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1857.7.1
+		}
+
+		mean_time_to_happen = {
+			days = 4
+		}
+		
+		option = {
+				name = usa.3.a
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.b
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.c
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.e
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_1 } }
+			}
+}
+#Uncle Tom
+country_event = {
+		id = usa.4
+		title = usa.4.t
+		desc = usa.4.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 250
+		}
+		
+		option = {
+				name = usa.4.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_2 } }
+		}
+		option = {
+				name = usa.4.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.4.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.4.e
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+}
+#Dred Scott
+country_event = {
+		id = usa.5
+		title = usa.5.t
+		desc = usa.5.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 500
+		}
+		
+		option = {
+				name = usa.5.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.5.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.5.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_3 } }
+		}
+		option = {
+				name = usa.5.d
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+}
+#Bleeding Kansas
+country_event = {
+		id = usa.6
+		title = usa.6.t
+		desc = usa.6.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1858.5.19
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.6.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -50
+		}
+		option = {
+				name = usa.6.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_4 } }
+		}
+		option = {
+				name = usa.6.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -50
+		}
+		option = {
+				name = usa.6.e
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -50
+		}
+}
+#Raid on Harper Ferry
+country_event = {
+		id = usa.7
+		title = usa.7.t
+		desc = usa.7.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1859.8.18
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.7.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.7.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.7.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_5 } }
+		}
+		option = {
+				name = usa.7.e
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+}
+#John Brown Executed
+country_event = {
+		id = usa.8
+		title = usa.8.t
+		desc = usa.8.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1859.12.2
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.8.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_6 } }
+		}
+		option = {
+				name = usa.8.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.8.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.8.e
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+}
+#Fugitive Slave Act
+country_event = {
+		id = usa.9
+		title = usa.9.t
+		desc = usa.9.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 600
+		}
+		
+		option = {
+				name = usa.9.a
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.9.b
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_7 } }
+		}
+		option = {
+				name = usa.9.c
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.9.e
+				ai_chance = {
+					factor = 25
+				}
+				add_political_power = -25
+		}
+}
+#Election of 1860
+country_event = {
+		id = usa.10
+		title = usa.10.t
+		desc = usa.10.d
+		picture = GFX_report_event_election_vote
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1860.9.6
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+				name = usa.10.a
+				ai_chance = {
+					factor = 75
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_2
+					add_idea = american_slavery_3
+				}
+				hidden_effect = { USA = { country_event = { days = 105 id = acw.1 } } }
+				hidden_effect = { news_event = { id = usa_news.3 } }
+				hidden_effect = { USA = { country_event = { days = 178 id = usa.11 } } }
+				hidden_effect = { USA = { set_country_flag = USA_LincolnElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 01_ACW_tt
+		}
+		option = {
+				name = usa.10.b
+				ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                    	is_historical_focus_on = yes
+                	}
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_2
+					add_idea = american_slavery_3
+				}
+				hidden_effect = { USA = { country_event = { days = 105 id = acw.0 } } }
+				hidden_effect = { news_event = { id = usa_news.4 } }
+				hidden_effect = { USA = { country_event = { days = 178 id = usa.11 } } }
+				hidden_effect = { USA = { set_country_flag = USA_BreckinridgeElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 02_ACW_tt
+		}
+		option = {
+				name = usa.10.c
+				ai_chance = {
+					factor = 15
+					modifier = {
+                    	factor = 0
+                    	is_historical_focus_on = yes
+                	}
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_2
+					add_idea = american_slavery_3
+				}
+				if = {
+					NOT = {
+						has_country_flag = USA_Civil_War_Avoid_Attempt_1
+						has_country_flag = USA_Civil_War_Avoid_Attempt_2
+						has_country_flag = USA_Civil_War_Avoid_Attempt_3
+						has_country_flag = USA_Civil_War_Avoid_Attempt_4
+						has_country_flag = USA_Civil_War_Avoid_Attempt_5
+						has_country_flag = USA_Civil_War_Avoid_Attempt_6
+						has_country_flag = USA_Civil_War_Avoid_Attempt_7
+					}
+					hidden_effect = { USA = { country_event = { days = 105 id = acw.1 } } }
+					hidden_effect = { USA = { country_event = { days = 178 id = usa.12 } } }
+				}
+				if = {
+					limit = {
+						has_country_flag = USA_Civil_War_Avoid_Attempt_1
+						has_country_flag = USA_Civil_War_Avoid_Attempt_2
+						has_country_flag = USA_Civil_War_Avoid_Attempt_3
+						has_country_flag = USA_Civil_War_Avoid_Attempt_4
+						has_country_flag = USA_Civil_War_Avoid_Attempt_5
+						has_country_flag = USA_Civil_War_Avoid_Attempt_6
+						has_country_flag = USA_Civil_War_Avoid_Attempt_7
+					}
+					hidden_effect = { USA = { country_event = { days = 15 id = usa.15 } } }
+					hidden_effect = { USA = { country_event = { days = 178 id = usa.12 } } }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_2 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_3 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_4 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_5 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_6 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_7 }
+				}
+				hidden_effect = { news_event = { id = usa_news.5 } }
+				hidden_effect = { USA = { set_country_flag = USA_DouglasElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 07_ACW_tt
+		}
+}
+#Lincoln Inaugerated
+country_event = {
+		id = usa.11
+		title = usa.11.t
+		desc = usa.11.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.11.a
+				create_country_leader = {
+					name = "Abraham Lincoln"
+					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+					picture = "Portrait_USA_Abraham_Lincoln.dds"
+					expire = "1886.5.2"
+					ideology = conserv_liberal
+					traits = {
+				}
+				set_politics = {
+					ruling_party = centrism
+				}
+			}
+			hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
+		}
+}
+#Stephen Inaugerated
+country_event = {
+		id = usa.12
+		title = usa.12.t
+		desc = usa.12.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.12.a
+				create_country_leader = {
+    				name = "Stephen A. Douglas"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Stephen_Douglas.dds"
+    				expire = "1947.1.1"
+    				ideology = conserv_liberal
+  				}
+  				set_politics = {
+					ruling_party = centrism
+				}
+				hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
+		}
+}
+#Call Up to Arms
+country_event = {
+		id = usa.14
+		title = usa.14.t
+		desc = usa.14.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.14.a
+			load_oob = USA_CIVIL_WAR
+		}
+}
+#Plead for Peace
+country_event = {
+		id = usa.15
+		title = usa.15.t
+		desc = usa.15.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.15.a
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.b
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.c
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.16 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.e
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Plan for Peace
+country_event = {
+		id = usa.16
+		title = usa.16.t
+		desc = usa.16.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.16.a
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.b
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.c
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.e
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.17 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Vote for Peace
+country_event = {
+		id = usa.17
+		title = usa.17.t
+		desc = usa.17.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.17.a
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.b
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.c
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.18 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.e
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Peace!
+country_event = {
+		id = usa.18
+		title = usa.18.t
+		desc = usa.18.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.18.a
+				ai_chance = {
+					factor = 100
+				}
+				remove_ideas = american_slavery_3
+				add_political_power = 250
+				add_ideas = USA_Civil_War_Avoided
+				set_global_flag = ACW_Civil_War_Avoided
+		}
+}
+#Failure!
+country_event = {
+		id = usa.19
+		title = usa.19.t
+		desc = usa.19.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.19.a
+				ai_chance = {
+					factor = 100
+				}
+				hidden_effect = { USA = { country_event = { days = 10 id = acw.1 } } }
+		}
+}
+#News Events
+
+add_namespace = usa_news
+#Lincoln-Douglas debate
+news_event = {
+		id = usa_news.1
+		title = usa_news.1.t
+		desc = usa_news.1.d
+		picture = GFX_news_event_lincoln_douglas
+
+		fire_only_once = yes
+
+		major = no
+		
+		trigger = {
+			TAG = USA
+			date > 1858.10.20
+		}
+
+		mean_time_to_happen = {
+        	days = 2
+    	}
+
+		option = {
+				name = usa_news.1.a
+		}
+}
+#1860 Campaigning
+news_event = {
+		id = usa_news.2
+		title = usa_news.2.t
+		desc = usa_news.2.d
+		picture = GFX_news_event_1860_campaigning
+
+		fire_only_once = yes
+
+		major = no
+		
+		trigger = {
+			TAG = USA
+			date > 1860.5.18
+		}
+
+		mean_time_to_happen = {
+        	days = 2
+    	}
+
+		option = {
+				name = usa_news.2.a
+		}
+}
+#1860 Election - Lincoln
+news_event = {
+		id = usa_news.3
+		title = usa_news.3.t
+		desc = usa_news.3.d
+
+		picture = GFX_news_event_lincoln_elected
+
+		fire_only_once = yes
+
+		major = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = {
+        	days = 2
+    	}
+
+		option = {
+				name = usa_news.3.a
+		}
+}
+#1860 Election - Breckinridge
+news_event = {
+		id = usa_news.4
+		title = usa_news.4.t
+		desc = usa_news.4.d
+
+		picture = GFX_news_event_breckenridge_elected
+
+		fire_only_once = yes
+
+		major = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = {
+        	days = 2
+    	}
+
+		option = {
+				name = usa_news.4.a
+		}
+}
+#1860 Election - Douglas
+news_event = {
+		id = usa_news.5
+		title = usa_news.5.t
+		desc = usa_news.5.d
+
+		picture = GFX_news_event_douglas_elected
+
+		fire_only_once = yes
+
+		major = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = {
+    	    days = 2
+    	}
+
+		option = {
+				name = usa_news.5.a
+		}
+}
+#South Carolina Independent
+news_event = {
+		id = usa_news.6
+		title = usa_news.6.t
+		desc = usa_news.6.d
+
+		picture = GFX_news_event_south_carolina
+
+		fire_only_once = yes
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { TAG = USA }
+				NOT = { TAG = CSA }
+			}
+				name = usa_news.6.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.6.b
+		}
+		option = {
+			trigger = {
+				TAG = CSA
+			}
+			name = usa_news.6.c
+		}
+}
+#Northern Coup
+news_event = {
+		id = usa_news.7
+		title = usa_news.7.t
+		desc = usa_news.7.d
+
+		picture = GFX_news_event_south_carolina
+
+		fire_only_once = yes
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { TAG = USA }
+				NOT = { TAG = CSA }
+			}
+				name = usa_news.7.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.7.b
+		}
+		option = {
+			trigger = {
+				TAG = CSA
+			}
+			name = usa_news.7.c
+		}
+}
+#Civil War Avoided
+news_event = {
+		id = usa_news.8
+		title = usa_news.8.t
+		desc = usa_news.8.d
+		picture = GFX_news_event_acw_avoided
+
+		fire_only_once = yes
+
+		major = no
+		
+		is_triggered_only = yes
+
+		mean_time_to_happen = {
+        	days = 2
+    	}
+
+		option = {
+				name = usa_news.8.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.8.b
 		}
 }

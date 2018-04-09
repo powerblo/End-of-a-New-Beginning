@@ -670,3 +670,127 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "USA_battle_hymn_of_the_republic_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			has_government = chauvinist_populism
+			has_government = autocracy
+		}
+		modifier = {
+			factor = 2
+
+			TAG = USA
+		}
+		modifier = {
+			factor = 3
+			
+			TAG = USA
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "USA_union_dixie_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+
+			TAG = USA
+		}
+		modifier = {
+			factor = 3
+			
+			TAG = USA
+			has_war_with = CSA
+		}
+	}
+}
+
+music = {
+	song = "USA_battle_cry_of_freedom_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+			
+			has_government = chauvinist_populism
+			has_government = autocracy
+		}
+		modifier = {
+			factor = 2
+
+			TAG = USA
+		}
+		modifier = {
+			factor = 3
+			
+			TAG = USA
+			has_war_with = CSA
+		}
+	}
+}
+
+music = {
+	song = "USA_well_fight_for_uncle_sam_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = USA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+
+			TAG = USA
+		}
+		modifier = {
+			factor = 3
+			
+			TAG = USA
+			has_war_with = CSA
+		}
+	}
+}

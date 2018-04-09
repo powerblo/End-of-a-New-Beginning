@@ -1,5 +1,108 @@
 ideas = {
 	country = {
+		american_slavery_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		american_slavery_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		american_slavery_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_UtahWar = {
+			allowed = {
+				TAG = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				political_power_gain = -0.1
+				}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_Buchanan_Corruption = {
+			allowed = {
+				TAG = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_spy_coup
+			
+			modifier = {
+				political_power_gain = -0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				}
+		}
+	}
+}
+ideas = {
+	country = {
 		USA_1857Panic = {
 			allowed = {
 				TAG = USA
@@ -13,6 +116,410 @@ ideas = {
 				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.1
 				production_factory_efficiency_gain_factor = -0.5
+				}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_first_recoveries_1 = {
+			allowed = {
+				TAG = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_first_recoveries_2 = {
+			allowed = {
+				TAG = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Avoided = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.02
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Anaconda_Plan = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_yarrow_ship_builders
+			
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.4
+				spotting_chance = 0.2
+				convoy_escort_efficiency = 0.2
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Revenue_Act_Of_1861 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_generic_pp_unity_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Army_Competency = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_incompetent_officers
+			
+			modifier = {
+				army_org_Factor = -0.1
+				army_defence_factor = -0.25
+				army_attack_factor = -0.25
+				army_speed_factor = -0.1
+				planning_speed = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Cons = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Facto = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preperation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				land_reinforce_rate = 0.1
+				add_war_support = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Indust_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preperation
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_Civil_War_Indust_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preperation
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+	USA_Civil_War = {
+			
+			allowed = {
+				TAG = USA
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = sumter_civil_war_idea
+			
+			modifier = {
+				stability_factor = 0.5
+				war_support_factor = 0.5
+				MONTHLY_POPULATION = -0.15
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_attack_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				offence = 0.05
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_attack_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				offence = 0.1
+				army_speed_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_attack_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				offence = 0.1
+				army_speed_factor = 0.1
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+				land_reinforce_rate = 0.25
+				army_morale_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_defend_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				defence = 0.05
+				max_planning = 0.05
+				max_dig_in = 0.5
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_defend_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				defence = 0.1
+				max_planning = 0.1
+				max_dig_in = 1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		civil_war_defend_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				defence = 0.1
+				max_planning = 0.1
+				max_dig_in = 1
+				conscription_factor = 0.1
+				planning_speed = 0.1
+				recon_factor = 0.05
 			}
 		}
 	}

@@ -235,6 +235,28 @@ ideas = {
 	discriminatory_laws = { 
 		law = yes
 
+		usa_slavery_law = {
+				
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			level = 6
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.15
+				consumer_goods_factor = -0.06
+				MONTHLY_POPULATION = -0.08
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+
 		tribal_slavery = {
 						
 			cost = 150
