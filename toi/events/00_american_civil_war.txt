@@ -138,13 +138,15 @@ country_event = {
             type = annex_everything
         }
         hidden_effect = { set_global_flag = ACWAmerican_Civil_War }
-        hidden_effect = { news_event = { id = acw_news.1 } }
         hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }
         hidden_effect = { USA = { country_event = { days = 5 id = usa.14 } } }
         hidden_effect = { CSA = { country_event = { days = 5 id = csa.13 } } }
         hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
         hidden_effect = { USA = { country_event = { days = 3 id = acw.7 } } }
         hidden_effect = { USA = { country_event = { days = 1 id = acw.6 } } }
+        hidden_effect = {
+            news_event = { hours = 6 id = acw_news.1 } 
+        }
     }
 }
 country_event = {
@@ -276,15 +278,9 @@ news_event = {
 
         picture = GFX_news_event_fort_sumter
 
-        fire_only_once = yes
-
         major = yes
 
         is_triggered_only = yes
-
-        mean_time_to_happen = {
-            days = 2
-        }
 
         option = {
             trigger = {
@@ -482,8 +478,6 @@ news_event = {
         desc = acw_news.6.d
         picture = GFX_news_event_appomattox_acw
 
-        fire_only_once = yes
-
         major = yes
 
         is_triggered_only = yes
@@ -508,8 +502,6 @@ news_event = {
         desc = acw_news.7.d
 
         picture = GFX_news_event_chicago_surrender_acw
-
-        fire_only_once = yes
 
         major = yes
 

@@ -46,10 +46,6 @@ country_event = {
 			TAG = USA
 			date > 1857.7.1
 		}
-
-		mean_time_to_happen = {
-			days = 4
-		}
 		
 		option = {
 				name = usa.3.a
@@ -157,8 +153,6 @@ country_event = {
 		picture = GFX_report_event_desertion_poster
 
 		fire_only_once = yes
-		
-		is_triggered_only = yes
 
 		trigger = {
 			TAG = USA
@@ -395,10 +389,6 @@ country_event = {
 			TAG = USA
 			date > 1860.9.6
 		}
-
-		mean_time_to_happen = {
-			days = 2
-		}
 		
 		option = {
 				name = usa.10.a
@@ -509,9 +499,6 @@ country_event = {
 					ideology = conserv_liberal
 					traits = {
 				}
-				set_politics = {
-					ruling_party = centrism
-				}
 			}
 			hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
 		}
@@ -536,9 +523,6 @@ country_event = {
     				expire = "1947.1.1"
     				ideology = conserv_liberal
   				}
-  				set_politics = {
-					ruling_party = centrism
-				}
 				hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
 		}
 }
@@ -739,8 +723,8 @@ news_event = {
 		}
 
 		mean_time_to_happen = {
-        	days = 2
-    	}
+			days = 2
+		}
 
 		option = {
 				name = usa_news.1.a
@@ -763,8 +747,8 @@ news_event = {
 		}
 
 		mean_time_to_happen = {
-        	days = 2
-    	}
+			days = 2
+		}
 
 		option = {
 				name = usa_news.2.a
@@ -778,15 +762,9 @@ news_event = {
 
 		picture = GFX_news_event_lincoln_elected
 
-		fire_only_once = yes
-
 		major = yes
 
 		is_triggered_only = yes
-
-		mean_time_to_happen = {
-        	days = 2
-    	}
 
 		option = {
 				name = usa_news.3.a
@@ -800,15 +778,9 @@ news_event = {
 
 		picture = GFX_news_event_breckenridge_elected
 
-		fire_only_once = yes
-
 		major = yes
 
 		is_triggered_only = yes
-
-		mean_time_to_happen = {
-        	days = 2
-    	}
 
 		option = {
 				name = usa_news.4.a
@@ -822,15 +794,9 @@ news_event = {
 
 		picture = GFX_news_event_douglas_elected
 
-		fire_only_once = yes
-
 		major = yes
 
 		is_triggered_only = yes
-
-		mean_time_to_happen = {
-    	    days = 2
-    	}
 
 		option = {
 				name = usa_news.5.a
@@ -843,8 +809,6 @@ news_event = {
 		desc = usa_news.6.d
 
 		picture = GFX_news_event_south_carolina
-
-		fire_only_once = yes
 
 		major = yes
 
@@ -878,8 +842,6 @@ news_event = {
 
 		picture = GFX_news_event_south_carolina
 
-		fire_only_once = yes
-
 		major = yes
 
 		is_triggered_only = yes
@@ -911,15 +873,9 @@ news_event = {
 		desc = usa_news.8.d
 		picture = GFX_news_event_acw_avoided
 
-		fire_only_once = yes
-
 		major = no
 		
 		is_triggered_only = yes
-
-		mean_time_to_happen = {
-        	days = 2
-    	}
 
 		option = {
 				name = usa_news.8.a
