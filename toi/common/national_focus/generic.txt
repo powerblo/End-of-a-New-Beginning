@@ -1,4 +1,4 @@
-#Generic FT, Victorian Era, Autocratic Nation
+#Generic FT, Victorian Era
 focus_tree = {
 	id = generic
 
@@ -607,6 +607,150 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = artillery }
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = support_tech }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_navy
+		icon = GFX_goal_generic_navy_battleship
+		x = 13
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	
+	focus = {
+		id = generic_focus_naval_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		prerequisite = { focus = generic_focus_navy }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { 
+						building = dockyard
+						size > 0 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_naval_innovation
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_navy }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.3 uses = 2 category = naval_equipment }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_fleet_infrastructure
+		icon = GFX_goal_generic_navy_cruiser
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_naval_innovation }
+		
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_fleet_infra days = 3650 }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_naval_dockyards_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		prerequisite = { focus = generic_focus_naval_dockyards }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { 
+						building = dockyard
+						size > 0 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_victorian_air_corps
+		icon = GFX_goal_generic_build_airforce
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = balloon_designs
+		}
+		prerequisite = { focus = generic_focus_naval_dockyards_2 focus = generic_focus_fleet_infrastructure }
+		prerequisite = { focus = generic_focus_better_staff }
+		
+		completion_reward = {
+			air_experience = 25
 		}
 	}
 	
