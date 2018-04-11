@@ -2,10 +2,12 @@
 state={
 	id=20
 	name="STATE_20" # Rhone
-	manpower = 2973200
+	manpower = 1867000
 	resources={
-		steel=128
-		aluminium=72
+		steel = 24
+		aluminium = 16
+		wood = 4
+		coal = 4
 	}
 
 	state_category = city
@@ -16,18 +18,11 @@ state={
 			6613 10
 		}
 		buildings = {
-			infrastructure = 7
+			infrastructure = 4
 			arms_factory = 1
-			industrial_complex = 2
-			
+			industrial_complex = 1
 		}
 		add_core_of = FRA
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 3
-			}
-		}
 	}
 
 	provinces={
