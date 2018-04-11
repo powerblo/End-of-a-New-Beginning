@@ -1,0 +1,55 @@
+ITA_Culture_category_decisions = {
+	
+	ITA_decision_invest_in_opera = {
+
+		icon = ita_culture
+
+		available = {
+			has_war = no
+		}
+		visible = {
+			always = yes
+		}
+		remove_trigger = {
+			has_war = yes
+		}
+		modifier = {
+			stability_weekly = 0.005
+			political_power_gain = 0.5
+		}
+
+		days_remove = 90
+		days_re_enable = 250
+
+		cost = 100
+
+		}
+	ITA_decision_spread_new_songs = {
+
+		icon = ita_culture
+
+		available = {
+			has_war = no
+		}
+		visible = {
+			always = yes
+		}
+		remove_trigger = {
+			has_war = yes
+		}
+		modifier = {
+			stability_weekly = 0.005
+			political_power_gain = 0.4
+		}
+		complete_effect = {
+			every_neighbor_country = { add_opinion_modifier = { target = PREV modifier = italian_music_popular } }	
+			}
+
+		days_remove = 45
+		days_re_enable = 300
+
+		cost = 100
+
+		}
+
+	}
