@@ -831,4 +831,75 @@ foreign_politics = {
 		}
 	}
 	
+	#Rename New York to New Amsterdam
+	eoanb_decision_generic_rename_new_amsterdam = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+		}
+		
+		visible = {
+			OR = {
+				AND = {
+					HOL = { owns_state = 954 }
+					TAG = HOL
+				}
+				AND = {
+					USA = { owns_state = 954 }
+					USA = { is_subject_of = HOL }
+					TAG = HOL
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			set_province_name = { id = 3878 name = "New Amsterdam" }
+			hidden_effect = {
+				set_global_flag = eoanb_flag_new_york_renamed_new_amsterdam
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Rename New Amsterdam to New York
+	eoanb_decision_generic_rename_new_york = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+		}
+		
+		visible = {
+			USA = { is_subject = no }
+			USA = { owns_state = 954 }
+			has_global_flag = eoanb_flag_new_york_renamed_new_amsterdam
+			TAG = USA
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			set_province_name = { id = 3878 name = "New York" }
+			hidden_effect = {
+				clr_global_flag = eoanb_flag_new_york_renamed_new_amsterdam
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }
