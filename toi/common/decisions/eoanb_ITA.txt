@@ -57,6 +57,7 @@ ITA_Culture_category_decisions = {
 
 		available = {
 			has_war = no
+			ITA = { has_completed_focus = ITA_Poor_Man's_Food } 
 		}
 		visible = {
 			always = yes
@@ -65,8 +66,7 @@ ITA_Culture_category_decisions = {
 			has_war = yes
 		}
 		modifier = {
-			stability_weekly = 0.0020
-			political_power_gain = 0.2
+   			production_speed_farm_factor = 0.2
 			consumer_goods_factor = -0.05
 		}
 		complete_effect = {
