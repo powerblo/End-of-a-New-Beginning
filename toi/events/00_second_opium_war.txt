@@ -149,19 +149,13 @@ country_event = { # The terms of the Tianjin Treaty
   }
 }
 
-country_event = { # Convention of Peking - Tianjin 1
+country_event = { # Convention of Peking - Tianjin 1 - NEEDS TO BE FIXED, THIS DOES NOT WORK PROPERLY
   id = second_opium_war.5
   title = second_opium_war.5.t
   desc = second_opium_war.5.d
   picture = GFX_report_event_second_opium_war_tianjin_treaty
 
-  trigger = {
-    CHI = {
-      has_country_flag = sow_tianjin_1
-    }
-  }
-  
-  fire_only_one = yes
+  is_triggered_only = yes
 
   option = {
     name = second_opium_war.5.a
@@ -171,22 +165,16 @@ country_event = { # Convention of Peking - Tianjin 1
   }
 }
 
-country_event = { # Convention of Peking - Tianjin 2
-  id = second_opium_war.5
-  title = second_opium_war.5.t
-  desc = second_opium_war.5.d
+country_event = { # Convention of Peking - Tianjin 2 - NEEDS TO BE FIXED, THIS DOES NOT WORK PROPERLY
+  id = second_opium_war.6
+  title = second_opium_war.6.t
+  desc = second_opium_war.6.d
   picture = GFX_report_event_second_opium_war_tianjin_treaty
 
-  trigger = {
-    CHI = {
-      has_country_flag = sow_tianjin_2
-    }
-  }
-
-  fire_only_one = yes
+  is_triggered_only = yes
 
   option = {
-    name = second_opium_war.5.a
+    name = second_opium_war.6.a
     add_political_power = 25
     set_country_flag = sow_accept_negiotiations
     set_country_flag = sow_recceived_message
