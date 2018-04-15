@@ -1,4 +1,5 @@
 ﻿add_namespace = second_opium_war
+add_namespace = second_opium_war_news
 
 #----------------------------------------------------------------------------------------------
 # TREATY OF TIANJIN - EVENT CHAIN
@@ -134,6 +135,7 @@ country_event = { # The terms of the Tianjin Treaty
     name = second_opium_war.4.a
     CHI = {
       set_country_flag = sow_tianjin_1
+      country_event = { id = second_opium_war.5 }
     }
     add_political_power = 50
     custom_tooltip = sow_tianjin_1_tooltip
@@ -141,15 +143,19 @@ country_event = { # The terms of the Tianjin Treaty
 
   option = { # Divert part of China's income into Indochina and the Raj, give total freedom of travel into the Chinese Sea
     name = second_opium_war.4.b
+    trigger = {
+      has_war_support > 0.55
+    }
     CHI = {
       set_country_flag = sow_tianjin_2
+      country_event = { id = second_opium_war.6 }
     }
     add_political_power = -100
     custom_tooltip = sow_tianjin_2_tooltip
   }
 }
 
-country_event = { # Convention of Peking - Tianjin 1 - NEEDS TO BE FIXED, THIS DOES NOT WORK PROPERLY
+country_event = { # Convention of Peking - Tianjin Treaty 1 - Chinese Answer
   id = second_opium_war.5
   title = second_opium_war.5.t
   desc = second_opium_war.5.d
@@ -159,13 +165,16 @@ country_event = { # Convention of Peking - Tianjin 1 - NEEDS TO BE FIXED, THIS D
 
   option = {
     name = second_opium_war.5.a
-    add_political_power = 25
-    set_country_flag = sow_accept_negiotiations
-    set_country_flag = sow_recceived_message
+    add_political_power = -25
+  }
+
+  option = {
+    name = second_opium_war.5.b
+    add_political_power = -100
   }
 }
 
-country_event = { # Convention of Peking - Tianjin 2 - NEEDS TO BE FIXED, THIS DOES NOT WORK PROPERLY
+country_event = { # Convention of Peking - Tianjin Treaty 2 - Chinese Answer
   id = second_opium_war.6
   title = second_opium_war.6.t
   desc = second_opium_war.6.d
@@ -175,8 +184,221 @@ country_event = { # Convention of Peking - Tianjin 2 - NEEDS TO BE FIXED, THIS D
 
   option = {
     name = second_opium_war.6.a
+    add_political_power = -25
+  }
+
+  option = {
+    name = second_opium_war.6.b
+    add_political_power = -100
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin Treaty 1 - Treaty Accepted
+  id = second_opium_war.7
+  title = second_opium_war.7.t
+  desc = second_opium_war.7.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war.7.a
+    white_peace = {
+      tag = FRA
+    }
+    white_peace = {
+      tag = ENG
+    }
+    add_ideas = CHI_idea_european_legations
+    add_ideas = CHI_idea_european_merchant_presence
+    hidden_effect = { 
+      news_event = { id = second_opium_war_news.1 } 
+    }
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin Treaty 1 - Treaty Refused
+  id = second_opium_war.8
+  title = second_opium_war.8.t
+  desc = second_opium_war.8.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war.8.a
     add_political_power = 25
-    set_country_flag = sow_accept_negiotiations
-    set_country_flag = sow_recceived_message
+    add_political_power = -25
+    add_war_support = -5
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin Treaty 2 - Treaty Accepted
+  id = second_opium_war.9
+  title = second_opium_war.9.t
+  desc = second_opium_war.9.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war.9.a
+    white_peace = {
+      tag = FRA
+    }
+    white_peace = {
+      tag = ENG
+    }
+    add_ideas = CHI_idea_colonial_economic_drain
+    add_ideas = CHI_idea_european_merchant_hegemony
+    hidden_effect = { 
+      news_event = { id = second_opium_war_news.2 } 
+    }
+  }
+}
+
+country_event = { # Convention of Peking - Tianjin Treaty 2 - Treaty Refused
+  id = second_opium_war.10
+  title = second_opium_war.10.t
+  desc = second_opium_war.10.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war.10.a
+    add_political_power = -50
+    add_war_support = -10
+  }
+}
+
+country_event = { # Chinese Profits in the Raj
+  id = second_opium_war.11
+  title = second_opium_war.11.t
+  desc = second_opium_war.11.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  trigger = {
+    date < 1890.1.1
+    tag = RAJ
+    CHI = {
+      has_idea = CHI_idea_colonial_economic_drain
+    }
+    RAJ = {
+      NOT = {
+        has_idea = RAJ_idea_chinese_income
+      }
+    }
+  }
+
+  option = {
+    name = second_opium_war.11.a
+    add_ideas = RAJ_idea_chinese_income
+  }
+}
+
+country_event = { # Chinese Profits in Indochina
+  id = second_opium_war.12
+  title = second_opium_war.12.t
+  desc = second_opium_war.12.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  trigger = {
+    date < 1890.1.1
+    tag = VIN
+    CHI = {
+      has_idea = CHI_idea_colonial_economic_drain
+    }
+    VIN = {
+      is_puppet = yes
+      NOT = {
+        has_idea = VIN_idea_chinese_income
+      }
+    }
+  }
+
+  option = {
+    name = second_opium_war.12.a
+    add_ideas = VIN_idea_chinese_income
+  }
+}
+
+#=========================================================
+
+news_event = { # The End of the Second Opium War - Tianjin Treaty 1
+  id = second_opium_war_news.1
+  title = second_opium_war_news.1.t
+  desc = second_opium_war_news.1.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war_news.1.a
+    trigger = {
+      NOT = {
+        OR = {
+          tag = CHI
+          tag = ENG
+          tag = FRA
+        }
+      }
+    }
+  }
+
+  option = {
+    name = second_opium_war_news.1.b
+    trigger = {
+      tag = CHI
+    }
+  }
+
+  option = {
+    name = second_opium_war_news.1.c
+    trigger = {
+      OR = {
+        tag = ENG
+        tag = FRA
+      }
+    }
+  }
+}
+
+news_event = { # The End of the Second Opium War - Tianjin Treaty 2
+  id = second_opium_war_news.2
+  title = second_opium_war_news.2.t
+  desc = second_opium_war_news.2.d
+  picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+  is_triggered_only = yes
+
+  option = {
+    name = second_opium_war_news.2.a
+    trigger = {
+      NOT = {
+        OR = {
+          tag = CHI
+          tag = ENG
+          tag = FRA
+        }
+      }
+    }
+  }
+
+  option = {
+    name = second_opium_war_news.2.b
+    trigger = {
+      tag = CHI
+    }
+  }
+
+  option = {
+    name = second_opium_war_news.2.c
+    trigger = {
+      OR = {
+        tag = ENG
+        tag = FRA
+      }
+    }
   }
 }
