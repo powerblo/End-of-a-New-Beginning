@@ -703,6 +703,32 @@ country_event = {
 				hidden_effect = { USA = { country_event = { days = 10 id = acw.1 } } }
 		}
 }
+#Oil Creek Pennsylvania
+country_event = {
+		id = usa.20
+		title = usa.20.t
+		desc = usa.20.d
+		picture = GFX_report_event_desertion_poster
+
+		fire_only_once = yes
+		
+		trigger = {
+			owns_state = 360
+			controls_state = 360
+			date > 1859.8.27
+		}
+		
+		option = {
+			name = usa.20.a
+			360 = {
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+			}
+			hidden_effect = { news_event = { id = usa_news.9 } }
+		}
+}
 #News Events
 
 add_namespace = usa_news
@@ -878,12 +904,43 @@ news_event = {
 		is_triggered_only = yes
 
 		option = {
-				name = usa_news.8.a
+			trigger = {
+				NOT = { 
+					TAG = USA 
+				}
+			}
+			name = usa_news.8.a
 		}
 		option = {
 			trigger = {
 				TAG = USA
 			}
 			name = usa_news.8.b
+		}
+}
+#Drake Well
+news_event = {
+		id = usa_news.9
+		title = usa_news.9.t
+		desc = usa_news.9.d
+		picture = GFX_news_event_drake_well
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA 
+				}
+			}
+			name = usa_news.9.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.9.b
 		}
 }
