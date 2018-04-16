@@ -2,8 +2,13 @@
 state={
 	id=127
 	name="STATE_127" # Sussex
-	manpower = 3193383
+	manpower = 2107633
 	state_category = large_city
+
+	resources = {
+		wood = 40
+		steel = 15
+	}
 
 	history={
 		owner = ENG
@@ -12,7 +17,7 @@ state={
 		victory_points = { 11446 3 }
 		victory_points = { 13070 3 }
 		buildings = {
-			infrastructure = 8
+			infrastructure = 4
 			arms_factory = 1
 			industrial_complex = 1
 			dockyard = 2
@@ -20,18 +25,11 @@ state={
 			#radar_station = 1
 			
 			3501 = {
-				naval_base = 6
-				coastal_bunker = 3
+				naval_base = 3
+				coastal_bunker = 1
 			}
 			9458 = {
 				naval_base = 10
-			}
-		}
-		add_core_of = ENG
-		1939.1.1 = {
-			buildings = {
-				dockyard = 3
-				industrial_complex = 2
 			}
 		}
 	}
