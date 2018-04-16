@@ -88,3 +88,27 @@ news_event = {
 		name = news.5.a
 	}
 }
+#Count of Cavour assasinated
+news_event = {
+	id = news.6
+	title = news.6.t
+	desc = news.6.d
+	picture = GFX_news_event_ITA_Carvour_Death
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = news.6.b
+		trigger = { TAG = ITA }
+	}
+}
