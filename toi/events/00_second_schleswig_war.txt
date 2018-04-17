@@ -59,6 +59,7 @@ country_event = {
 		name = secschwar.3.a
 		ai_chance = { factor = 100 }
 		add_ideas = DEN_idea_november_constitution
+		DEN = { transfer_state = 58 }
 		hidden_effect = {
 			DEN = { country_event = { days = 10 id = secschwar.4 } }
 			PRS = { country_event = { days = 10 id = secschwar.4 } }
@@ -249,7 +250,6 @@ country_event = {
 		hidden_effect = {
 			declare_war_on = { target = DEN type = annex_everything }
 			declare_war_on = { target = HLS type = annex_everything }
-			declare_war_on = { target = SCH type = annex_everything }
 			give_military_access = BAV
 			give_military_access = SAX
 			give_military_access = HAN
@@ -278,7 +278,6 @@ country_event = {
 		hidden_effect = {
 			declare_war_on = { target = DEN type = annex_everything }
 			declare_war_on = { target = HLS type = annex_everything }
-			declare_war_on = { target = SCH type = annex_everything }
 			MCK = { declare_war_on = { target = HLS type = annex_everything } }
 			MCK = { declare_war_on = { target = DEN type = annex_everything } }
 			give_military_access = BAV
@@ -397,10 +396,6 @@ country_event = {
 			HLS = { white_peace = AUS }
 			DEN = { white_peace = MCK }
 			HLS = { white_peace = MCK }
-			SCH = { white_peace = PRS }
-			SCH = { white_peace = MCK }
-			SCH = { white_peace = AUS }
-			DEN = { annex_country = { target = SCH } }
 			PRS = { puppet = HLS }
 			clr_global_flag = eoanb_flag_second_schleswig_war
 		}
@@ -427,9 +422,7 @@ country_event = {
 			HLS = { white_peace = AUS }
 			DEN = { white_peace = MCK }
 			HLS = { white_peace = MCK }
-			SCH = { white_peace = PRS }
-			SCH = { white_peace = MCK }
-			SCH = { white_peace = AUS }
+			DEN = { release = HLS }
 			AUS = { puppet = HLS }
 			PRS = { puppet = SCH }
 			AUS = { country_event = { days = 10 id = secschwar.18 } }
