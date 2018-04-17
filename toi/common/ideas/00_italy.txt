@@ -10,16 +10,13 @@ ideas = {
 			}
 		}
 	}
-}
+
 hidden_ideas = {
       ITA_Piedmontese = {
            modifier = {
                 conscription = -0.01 # Not all Italians are fit for the army 
-                research_bonus = {
-           			economics_tech = -0.05
-     			 }
-
-
-           }
-      }
- }
+                research_time_factor = -0.05
+           	}
+      	}
+	}
+}
