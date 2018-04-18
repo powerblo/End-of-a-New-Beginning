@@ -1,3 +1,80 @@
+form_italy_category = {
+	form_italy = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				tag = PIE
+				tag = MOD
+				tag = PRM
+				tag = PAP
+				tag = NSC
+				tag = TUS
+			}
+			NOT = { country_exists = ITA }
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				tag = PIE
+				tag = MOD
+				tag = PRM
+				tag = PAP
+				tag = NSC
+				tag = TUS
+			}
+			NOT = { country_exists = ITA }
+			has_full_control_of_state = 158
+			has_full_control_of_state = 159
+			has_full_control_of_state = 808
+			has_full_control_of_state = 813
+			has_full_control_of_state = 162
+			has_full_control_of_state = 161
+			has_full_control_of_state = 157
+			has_full_control_of_state = 812
+			has_full_control_of_state = 117
+			has_full_control_of_state = 156
+			has_full_control_of_state = 115
+			has_full_control_of_state = 114
+		}
+
+		visible = {
+			OR = {
+				tag = PIE
+				tag = MOD
+				tag = PRM
+				tag = PAP
+				tag = NSC
+				tag = TUS
+			}
+			NOT = { country_exists = ITA }
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = FROM
+				}
+				ITA = {
+					transfer_state = PREV
+				}
+			}
+			ITA = { change_tag_from = FROM }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
 ITA_Culture_category_decisions = {
 	
 	ITA_decision_invest_in_opera = {
