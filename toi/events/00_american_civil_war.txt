@@ -117,7 +117,7 @@ country_event = {
         ai_chance = {
                 factor = 100
             }
-        custom_effect_tooltip = 05_ACW_tt
+        custom_effect_tooltip = 04_ACW_tt
         hidden_effect = { CSA = { country_event = { days = 1 id = acw.4 } } }
     }
 }
@@ -144,9 +144,7 @@ country_event = {
         hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
         hidden_effect = { USA = { country_event = { days = 3 id = acw.7 } } }
         hidden_effect = { USA = { country_event = { days = 1 id = acw.6 } } }
-        hidden_effect = {
-            news_event = { hours = 6 id = acw_news.1 } 
-        }
+        hidden_effect = { news_event = { id = acw_news.1 } }
     }
 }
 country_event = {
@@ -160,11 +158,11 @@ country_event = {
     is_triggered_only = yes
     
     option = {
-      name = acw.5.a
-      add_political_power = -25
-      army_experience = -20
-      add_ideas = USA_Civil_War_Army_Competency
-  }
+        name = acw.5.a
+        add_political_power = -25
+        army_experience = -20
+        add_ideas = USA_Civil_War_Army_Competency
+    }
 }
 
 country_event = {
@@ -213,7 +211,10 @@ country_event = {
             tag = USA
         }
         name = acw.7.a
+        custom_effect_tooltip = 06_ACW_tt
         hidden_effect = { white_peace = CSA }
+        hidden_effect = { white_peace = ENG }
+        hidden_effect = { white_peace = FRA }
         hidden_effect = { annex_country { target = CSA } }
         set_global_flag = USAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
@@ -225,6 +226,7 @@ country_event = {
             tag = CSA
         }
         name = acw.7.b
+        custom_effect_tooltip = 06_ACW_tt
     }
 }
 country_event = {
@@ -254,6 +256,7 @@ country_event = {
             tag = USA
         }
         name = acw.8.a
+        custom_effect_tooltip = 07_ACW_tt
         set_country_flag = USABroken_Eagle
     }
     option = {
@@ -262,10 +265,276 @@ country_event = {
         }
         hidden_effect = { news_event = { id = acw_news.7 } }
         name = acw.8.b
+        custom_effect_tooltip = 07_ACW_tt
         hidden_effect = { white_peace = USA }
+        hidden_effect = { ENG = { white_peace = USA } }
+        hidden_effect = { FRA = { white_peace = USA } }
         set_global_flag = CSAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
-  }
+    }
+}
+#Trent Affair
+country_event = {
+    id = acw.9
+    title = acw.9.t
+    desc = acw.9.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    trigger = {
+        date > 1861.11.8
+        tag = USA
+        USA = {
+            has_war_with = CSA
+        }
+    }
+    
+    option = {
+        name = acw.9.a
+        custom_effect_tooltip = 08_ACW_tt
+        hidden_effect = { CSA = { country_event = { days = 2 id = acw.10 } } }
+    }
+    option = {
+        name = acw.9.b
+        custom_effect_tooltip = 09_ACW_tt
+        FRA = {
+            add_opinion_modifier = {
+                target = CSA
+                modifier = trent_affair_never_happened
+            }
+        }
+        ENG = {
+            add_opinion_modifier = {
+                target = CSA
+                modifier = trent_affair_never_happened
+            }
+        }
+    }
+}
+#Trent Affair - CSA Reaction
+country_event = {
+    id = acw.10
+    title = acw.10.t
+    desc = acw.10.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.10.a
+        custom_effect_tooltip = 08_ACW_tt
+        hidden_effect = { news_event = { id = acw_news.8 } }
+        hidden_effect = { ENG = { country_event = { days = 10 id = acw.11 } } }
+    }
+}
+#Trent Affair - ENG
+country_event = {
+    id = acw.11
+    title = acw.11.t
+    desc = acw.11.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.11.a
+        set_global_flag = Trent_Affair_ENG_Yes
+        hidden_effect = { USA = { country_event = { days = 10 id = acw.12 } } }
+        custom_effect_tooltip = 10_ACW_tt
+    }
+    option = {
+        name = acw.11.b
+        hidden_effect = { USA = { country_event = { days = 10 id = acw.12 } } }
+        custom_effect_tooltip = 11_ACW_tt
+    }
+}
+#Trent Affair - USA
+country_event = {
+    id = acw.12
+    title = acw.12.t
+    desc = {
+        text = acw.12.d
+        trigger = { has_global_flag = Trent_Affair_ENG_Yes}
+    }
+    desc = {
+        text = acw.12.d_no
+        trigger = { NOT = { has_global_flag = Trent_Affair_ENG_Yes } }
+    }
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        trigger = {
+            NOT = {
+                has_global_flag = Trent_Affair_ENG_Yes
+            }
+        }
+        name = acw.12.a
+        hidden_effect = { news_event = { id = acw_news.9 } }
+        custom_effect_tooltip = 11_ACW_tt
+    }
+    option = {
+        trigger = {
+            has_global_flag = Trent_Affair_ENG_Yes
+        }
+        name = acw.12.b
+        set_global_flag = Trent_Affair_USA_Firm
+        hidden_effect = { ENG = { country_event = { days = 10 id = acw.13 } } }
+        custom_effect_tooltip = 10_ACW_tt
+    }
+    option = {
+        trigger = {
+            has_global_flag = Trent_Affair_ENG_Yes
+        }
+        name = acw.12.c
+        clr_global_flag = Trent_Affair_ENG_Yes
+        hidden_effect = { ENG = { country_event = { days = 10 id = acw.13 } } }
+        hidden_effect = { news_event = { id = acw_news.9 } }
+        custom_effect_tooltip = 11_ACW_tt
+    }
+}
+#Trent Affair - ENG 2
+country_event = {
+    id = acw.13
+    title = acw.13.t
+    desc = {
+        text = acw.13.d
+        trigger = { has_global_flag = Trent_Affair_USA_Firm }
+    }
+    desc = {
+        text = acw.13.d_no
+        trigger = { NOT = { has_global_flag = Trent_Affair_USA_Firm } }
+    }
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        trigger = {
+            NOT = {
+                has_global_flag = Trent_Affair_USA_Firm
+            }
+        }
+        name = acw.13.a
+        custom_effect_tooltip = 11_ACW_tt
+        hidden_effect = { news_event = { id = acw_news.9 } }
+    }
+    option = {
+        trigger = {
+            has_global_flag = Trent_Affair_USA_Firm
+        }
+        name = acw.13.b
+        hidden_effect = { FRA = { country_event = { days = 2 id = acw.14 } } }
+        custom_effect_tooltip = 10_ACW_tt
+    }
+    option = {
+        trigger = {
+            has_global_flag = Trent_Affair_USA_Firm
+        }
+        name = acw.13.c
+        custom_effect_tooltip = 11_ACW_tt
+        hidden_effect = { news_event = { id = acw_news.9 } }
+    }
+}
+#Trent Affair - FRA
+country_event = {
+    id = acw.14
+    title = acw.14.t
+    desc = acw.14.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.14.a
+        hidden_effect = { ENG = { country_event = { days = 2 id = acw.15 } } }
+        custom_effect_tooltip = 11_ACW_tt
+    }
+    option = {
+        name = acw.14.b
+        hidden_effect = { ENG = { country_event = { days = 2 id = acw.15 } } }
+        set_global_flag = Trent_Affair_FRA_Yes
+        custom_effect_tooltip = 10_ACW_tt
+    }
+}
+#Trent Affair - ENG - War
+country_event = {
+    id = acw.15
+    title = acw.15.t
+    desc = {
+        text = acw.15.d
+        trigger = { has_global_flag = Trent_Affair_FRA_Yes }
+    }
+    desc = {
+        text = acw.15.d_a
+        trigger = { NOT = { has_global_flag = Trent_Affair_FRA_Yes } }
+    }
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        trigger = {
+            has_global_flag = Trent_Affair_FRA_Yes
+        }
+        name = acw.15.a
+        hidden_effect = { ENG = { country_event = { days = 2 id = acw.15 } } }
+        ENG = {
+            add_to_war = {
+                targeted_alliance = CSA
+                enemy = USA
+            }
+        }
+        FRA = {
+            add_to_war = {
+                targeted_alliance = CSA
+                enemy = USA
+            }
+        }
+        hidden_effect = { news_event = { id = acw_news.10 } }
+        custom_effect_tooltip = 12_ACW_tt
+    }
+    option = {
+        trigger = {
+            NOT = {
+                has_global_flag = Trent_Affair_FRA_Yes
+            }
+        }
+        name = acw.15.b
+        hidden_effect = { news_event = { id = acw_news.9 } }
+        custom_effect_tooltip = 11_ACW_tt
+    }
+    option = {
+        trigger = {
+            NOT = {
+                has_global_flag = Trent_Affair_FRA_Yes
+            }
+        }
+        name = acw.15.c
+        add_war_support = -0.2
+        add_stability = -0.2
+        add_political_power = -100
+        hidden_effect = { news_event = { id = acw_news.10 } }
+        ENG = {
+            add_to_war = {
+                targeted_alliance = CSA
+                enemy = USA
+            }
+        }
+        custom_effect_tooltip = 13_ACW_tt
+    }
 }
 #News Events
 
@@ -495,7 +764,7 @@ news_event = {
             name = acw_news.6.b
         }
 }
-#Appottomax Surrender
+#Chicago Surrender
 news_event = {
         id = acw_news.7
         title = acw_news.7.t
@@ -525,5 +794,143 @@ news_event = {
                 TAG = CSA 
             }
             name = acw_news.7.c
+        }
+}
+#Trent Affair
+news_event = {
+        id = acw_news.8
+        title = acw_news.8.t
+        desc = acw_news.8.d
+
+        picture = GFX_news_event_trent_affair
+
+        major = yes
+
+        is_triggered_only = yes
+
+        option = {
+            trigger = {
+                NOT = { TAG = USA }
+                NOT = { TAG = CSA }
+            }
+                name = acw_news.8.a
+        }
+        option = {
+            trigger = {
+                TAG = USA
+            }
+            name = acw_news.8.b
+        }
+        option = {
+            trigger = {
+                TAG = CSA 
+            }
+            name = acw_news.8.c
+        }
+        option = {
+            trigger = {
+                OR = { 
+                    TAG = FRA
+                    TAG = ENG
+                } 
+            }
+            name = acw_news.8.e
+        }
+}
+#Trent Affair Calm
+news_event = {
+        id = acw_news.9
+        title = acw_news.9.t
+        desc = {
+            text = acw_news.9.d
+            trigger = { NOT = { has_global_flag = Trent_Affair_ENG_Yes } }
+        }
+        desc = {
+            text = acw_news.9.d_a
+            trigger = { NOT = { has_global_flag = Trent_Affair_USA_Firm } }
+        }
+        desc = {
+            text = acw_news.9.d_b
+            trigger = { has_global_flag = Trent_Affair_USA_Firm }
+        }
+
+        picture = GFX_news_event_trent_affair_calm
+
+        major = yes
+
+        is_triggered_only = yes
+
+        option = {
+            trigger = {
+                NOT = { TAG = USA }
+                NOT = { TAG = CSA }
+            }
+                name = acw_news.9.a
+        }
+        option = {
+            trigger = {
+                TAG = USA
+            }
+            name = acw_news.9.b
+        }
+        option = {
+            trigger = {
+                TAG = CSA 
+            }
+            name = acw_news.9.c
+        }
+}
+#Trent Affair Escalation
+news_event = {
+        id = acw_news.10
+        title = acw_news.10.t
+        desc = {
+            text = acw_news.10.d
+            trigger = { has_global_flag = Trent_Affair_FRA_Yes }
+        }
+        desc =  {
+            text = acw_news.10.d_a
+            trigger = { NOT = { has_global_flag = Trent_Affair_FRA_Yes } }
+        }
+
+        picture = GFX_news_event_trent_affair_escalation
+
+        major = yes
+
+        is_triggered_only = yes
+
+        option = {
+            trigger = {
+                NOT = { TAG = USA }
+                NOT = { TAG = CSA }
+                NOT = { TAG = ENG }
+                NOT = { TAG = FRA }
+            }
+                name = acw_news.10.a
+        }
+        option = {
+            trigger = {
+                TAG = USA
+            }
+            name = acw_news.10.b
+        }
+        option = {
+            trigger = {
+                TAG = CSA 
+            }
+            name = acw_news.10.c
+        }
+        option = {
+            trigger = {
+                TAG = ENG
+            }
+            name = acw_news.10.e
+        }
+        option = {
+            trigger = {
+                has_global_flag = Trent_Affair_FRA_Yes
+                TAG = FRA
+            }
+            name = acw_news.10.f
         }
 }
