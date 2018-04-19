@@ -37,6 +37,7 @@ country_event = {
 	option = {
 		name = ita.1.a
 		diplomatic_relation = { country = ITA relation = non_aggression_pact } 
+		add_to_war = { targeted_alliance = ITA enemy = AUS } 
 		
 		
 	}
@@ -44,3 +45,79 @@ country_event = {
 		name = ita.1.b
 		
 		}
+	}	
+
+country_event = {
+	id = ita.2
+	title = ita.2.t
+	desc = ita.2.d
+	picture = GFX_ITA_Negociate
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.2.a
+		add_to_faction = ITA 
+		
+	}
+	option = {
+		name = ita.2.b
+		custom_effect_tooltip = austria_ally_italy
+		ITA = {country_event = { days = 1 id = ita.3 }}
+		}
+	}
+country_event = {
+	id = ita.3
+	title = ita.3.t
+	desc = ita.3.d
+	picture = GFX_ITA_War_Event
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.3.a # Peace with Austria
+		white_peace = AUS
+		
+		
+	}
+	option = {
+		name = ita.3.b #Offer Austrians a deal
+		AUS = {country_event = { days = 1 id = ita.4 } }
+
+
+		}
+	option = {
+		name = ita.3.c #Fight Austrians on our own side
+		
+		}
+
+
+
+	}
+country_event = {
+	id = ita.4
+	title = ita.4.t
+	desc = ita.4.d
+	picture = GFX_ITA_Negociate
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.4.a  #Italy would be nice ally
+		add_to_faction = ITA 
+		
+	}
+	option = {
+		name = ita.4.b #Italy sucks they will die
+
+		}
+	}
+
+
+
