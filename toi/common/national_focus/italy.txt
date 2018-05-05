@@ -1,6 +1,6 @@
 focus_tree = {
 	id = italy
-	continuous_focus_position = {x = 2100 y = 1750}
+	continuous_focus_position = {x = 3100 y = 500}
 	country = {
 		factor = 0
 		modifier = {
@@ -16,106 +16,18 @@ focus_tree = {
 		x = 8
 		y = 0
 
-		completion_reward =	{
-			PAP = {country_event = { days = 1 id = ita.0 } }
-		}
-
 	}
 	focus = {
 		id = ITA_Agriculture_Revival
 		icon = GFX_focus_ITA_Farms
 		cost = 10.00
-		mutually_exclusive = {
-			focus = ITA_Industrialization
-		}
-		x = 26
-		y = 1
-
-		
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = farm
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = farm
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = farm
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		
-
-	}
-	focus = {
-		id = ITA_Industrialization
-		icon = GFX_focus_ITA_Industry
-		cost = 10.00
-		mutually_exclusive = {
-			focus = ITA_Agriculture_Revival
-		}
-		x = 19
-		y = 1
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		
+		x = 18
+		y = 0
 
 	}
 	focus = {
 		id = ITA_Cavour's_Promise
-		icon = GFX_goal_focus_support_liberalism
+		icon = GFX_focus_support_liberalism
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Move_Capital_to_Rome
@@ -125,11 +37,6 @@ focus_tree = {
 		}
 		x = 5
 		y = 1
-
-		completion_reward = {
-
-			add_popularity = { ideology = centrism popularity = 0.1 }
-		}
 
 	}
 	focus = {
@@ -142,12 +49,6 @@ focus_tree = {
 		x = 5
 		y = 2
 
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05 
-
-		}
-
 	}
 	focus = {
 		id = ITA_Work_with_the_South
@@ -158,10 +59,6 @@ focus_tree = {
 		}
 		x = 3
 		y = 3
-
-		completion_reward = {
-			add_political_power = 50
-		}
 
 	}
 	focus = {
@@ -174,11 +71,6 @@ focus_tree = {
 		x = 5
 		y = 3
 
-		completion_reward = {
-			add_popularity = { ideology = centrism popularity = 0.05 } 
-			set_politics = { ruling_party = centrism elections_allowed = no } 
-		}
-
 	}
 	focus = {
 		id = ITA_Restrict_the_Monarch
@@ -189,12 +81,6 @@ focus_tree = {
 		}
 		x = 5
 		y = 4
-
-		completion_reward = {
-			add_popularity = { ideology = autocracy popularity = -0.05 }
-
-			
-		}
 
 	}
 	focus = {
@@ -210,11 +96,6 @@ focus_tree = {
 		x = 11
 		y = 1
 
-		completion_reward = {
-			add_ideas = ITA_Emmanuel_II
-
-			}
-
 	}
 	focus = {
 		id = ITA_Piedmontese_Italy
@@ -225,11 +106,6 @@ focus_tree = {
 		}
 		x = 11
 		y = 2
-
-		completion_reward = {
-		   hidden_effect = {add_ideas = ITA_Piedmontese}	
-			
-		 }
 
 	}
 	focus = {
@@ -242,14 +118,6 @@ focus_tree = {
 		x = 11
 		y = 3
 
-		completion_reward = {
-			add_stability = -0.05 
-			set_politics = { ruling_party = autocracy elections_allowed = no } 
-		}
-
-
-
-
 	}
 	focus = {
 		id = ITA_Cavour's_Death
@@ -260,12 +128,6 @@ focus_tree = {
 		}
 		x = 11
 		y = 4
-
-		completion_reward = {
-			add_stability = -0.05
-			
-			
-		}
 
 	}
 	focus = {
@@ -279,12 +141,6 @@ focus_tree = {
 		x = 8
 		y = 5
 
-		completion_reward = {
-			add_war_support = 0.1
-			add_stability = 0.05
-			add_political_power = 50 
-		}
-
 	}
 	focus = {
 		id = ITA_Neutrality
@@ -296,15 +152,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_Prussian_Deal
 		}
-		available = {
-			PRS = { has_war_with = AUS }
-			} 
 		x = 5
 		y = 6
-
-		completion_reward = {
-
-		}
 
 	}
 	focus = {
@@ -317,16 +166,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_Neutrality
 		}
-		available = {
-			PRS = { has_war_with = AUS }
-			} 
 		x = 11
 		y = 6
-
-		completion_reward = {
-			PRS = {country_event = { days = 1 id = ita.1 } }
-		}
-
 
 	}
 	focus = {
@@ -396,36 +237,14 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ITA_Hydropower
-		icon = GFX_focus_ITA_Hydropower
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Industrialization
-		}
-		x = 20
-		y = 2
-
-	}
-	focus = {
-		id = ITA_Alpine_Foothills
-		icon = GFX_focus_ITA_Hydropower
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Hydropower
-		}
-		x = 20
-		y = 3
-
-	}
-	focus = {
 		id = ITA_Tomatoes
-		icon = GFX_goal_focus_tomato_farming
+		icon = GFX_focus_tomato_farming
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 25
-		y = 2
+		x = 17
+		y = 1
 
 	}
 	focus = {
@@ -435,8 +254,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Tomatoes
 		}
-		x = 25
-		y = 3
+		x = 17
+		y = 2
 
 	}
 	focus = {
@@ -446,8 +265,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Even_Better_Pasta
 		}
-		x = 25
-		y = 4
+		x = 17
+		y = 3
 
 	}
 	focus = {
@@ -457,19 +276,19 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Poor_Man's_Food
 		}
-		x = 25
-		y = 5
+		x = 17
+		y = 4
 
 	}
 	focus = {
 		id = ITA_Rethink_Land_Policies
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_focus_enact_law
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 27
-		y = 2
+		x = 19
+		y = 1
 
 	}
 	focus = {
@@ -479,8 +298,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Rethink_Land_Policies
 		}
-		x = 27
-		y = 3
+		x = 19
+		y = 2
 
 	}
 	focus = {
@@ -490,8 +309,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Remove_Fuedal_Sytems
 		}
-		x = 27
-		y = 4
+		x = 19
+		y = 3
 
 	}
 	focus = {
@@ -501,8 +320,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Po_Valley_Modernization
 		}
-		x = 27
-		y = 5
+		x = 19
+		y = 4
 
 	}
 	focus = {
@@ -515,8 +334,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Prevent_Emigration
 		}
-		x = 26
-		y = 6
+		x = 18
+		y = 5
 
 	}
 	focus = {
@@ -527,14 +346,14 @@ focus_tree = {
 			focus = ITA_Spread_Moderning_Farming
 		}
 		mutually_exclusive = {
-			focus = ITA_Move_to_Industrialization
+			focus = ITA_Industrialization
 		}
-		x = 24
-		y = 7
+		x = 15
+		y = 6
 
 	}
 	focus = {
-		id = ITA_Move_to_Industrialization
+		id = ITA_Industrialization
 		icon = GFX_focus_ITA_Industry
 		cost = 10.00
 		prerequisite = {
@@ -543,19 +362,74 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_Embrace_Backwards_Economy
 		}
-		x = 28
-		y = 7
+		x = 24
+		y = 6
 
 	}
 	focus = {
-		id = ITA_Give_Peasents_Jobs
-		icon = GFX_goal_generic_construct_civ_factory
+		id = ITA_Southern_Revival
+		icon = GFX_focus_ITA_Industry
 		cost = 10.00
 		prerequisite = {
-			focus = ITA_Move_to_Industrialization
+			focus = ITA_Industrialization
 		}
-		x = 27
+		x = 24
 		y = 8
+
+	}
+	focus = {
+		id = ITA_Mining_Operations 
+		icon = GFX_focus_industrial_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Southern_Revival
+		}
+		x = 21
+		y = 9
+
+	}
+	focus = {
+		id = ITA_Railroads
+		icon = GFX_focus_railroad_development
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Southern_Revival
+		}
+		x = 23
+		y = 9
+
+	}
+	focus = {
+		id = ITA_Militarize_Merchant_Navy
+		icon = GFX_focus_ITA_Merchant_Fleet
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Southern_Revival
+		}
+		x = 25
+		y = 9
+
+	}
+	focus = {
+		id = ITA_Expand_Trade
+		icon = GFX_focus_ITA_Ships
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Militarize_Merchant_Navy
+		}
+		x = 25
+		y = 10
+
+	}
+	focus = {
+		id = ITA_A_True_Pier_of_Europe
+		icon = GFX_focus_continent_west_europe
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Expand_Trade
+		}
+		x = 25
+		y = 11
 
 	}
 	focus = {
@@ -582,7 +456,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Negociate_For_Italian_Lands
-		icon = GFX_goal_focus_ally_AUS
+		icon = GFX_focus_ally_AUS
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Neutrality
@@ -593,7 +467,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Venetia_Deal
-		icon = GFX_goal_focus_ally_AUS
+		icon = GFX_focus_ally_AUS
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Negociate_For_Italian_Lands
@@ -604,7 +478,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Trieste_Deal
-		icon = GFX_goal_focus_ally_AUS
+		icon = GFX_focus_ally_AUS
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Negociate_For_Italian_Lands
@@ -614,40 +488,14 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ITA_Southern_Revival
-		icon = GFX_focus_ITA_Industry
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Southern_Rebellion
-			focus = ITA_Civilized_South
-		}
-		prerequisite = {
-			focus = ITA_Industrialization
-		}
-		x = 19
-		y = 6
-
-	}
-	focus = {
-		id = ITA_Mining_Operations 
-		icon = GFX_goal_focus_industrial_revolution
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Southern_Revival
-		}
-		x = 16
-		y = 7
-
-	}
-	focus = {
 		id = ITA_Charcoal_Mines
-		icon = GFX_goal_focus_coal_mines
+		icon = GFX_focus_coal_mines
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Mining_Operations 
 		}
-		x = 16
-		y = 8
+		x = 21
+		y = 10
 
 	}
 	focus = {
@@ -657,8 +505,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Charcoal_Mines
 		}
-		x = 16
-		y = 9
+		x = 21
+		y = 11
 
 	}
 	focus = {
@@ -677,19 +525,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_A_True_Pier_of_Europe
 		}
-		x = 19
-		y = 10
-
-	}
-	focus = {
-		id = ITA_Railroads
-		icon = GFX_goal_focus_railroad_development
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Southern_Revival
-		}
-		x = 18
-		y = 7
+		x = 24
+		y = 12
 
 	}
 	focus = {
@@ -699,8 +536,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Railroads
 		}
-		x = 18
-		y = 8
+		x = 23
+		y = 10
 
 	}
 	focus = {
@@ -764,7 +601,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_French_Enemy
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_focus_imperialism
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_More_Than_Defensive
@@ -841,41 +678,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_River_Channels
 		}
-		x = 18
-		y = 9
-
-	}
-	focus = {
-		id = ITA_Militarize_Merchant_Navy
-		icon = GFX_focus_ITA_Merchant_Fleet
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Southern_Revival
-		}
-		x = 20
-		y = 7
-
-	}
-	focus = {
-		id = ITA_Expand_Trade
-		icon = GFX_focus_ITA_Ships
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Militarize_Merchant_Navy
-		}
-		x = 20
-		y = 8
-
-	}
-	focus = {
-		id = ITA_A_True_Pier_of_Europe
-		icon = GFX_goal_focus_continent_west_europe
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Expand_Trade
-		}
-		x = 20
-		y = 9
+		x = 23
+		y = 11
 
 	}
 	focus = {
@@ -885,8 +689,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Southern_Revival
 		}
-		x = 22
-		y = 7
+		x = 27
+		y = 9
 
 	}
 	focus = {
@@ -896,8 +700,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Send_Iron_Workers
 		}
-		x = 22
-		y = 8
+		x = 27
+		y = 10
 
 	}
 	focus = {
@@ -907,8 +711,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Address_Illiteracy
 		}
-		x = 22
-		y = 9
+		x = 27
+		y = 11
 
 	}
 	focus = {
@@ -918,8 +722,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Marble_Buildings
 		}
-		x = 19
-		y = 11
+		x = 24
+		y = 13
 
 	}
 	focus = {
@@ -935,7 +739,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Support_Jewish_Schools
-		icon = GFX_focus_ITA_Schoolw3s
+		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Tunisian_Italians
@@ -957,7 +761,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Decrease_French_Influence
-		icon = GFX_goal_focus_ally_FRA
+		icon = GFX_focus_ally_FRA
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Join_the_Triple_Control
@@ -1012,7 +816,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Treaty_of_Bardo
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_focus_enact_law
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Support_Italian_Prime_Minister
@@ -1051,14 +855,36 @@ focus_tree = {
 
 	}
 	focus = {
+		id = ITA_Hydropower
+		icon = GFX_focus_ITA_Hydropower
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Industrialization
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = ITA_Alpine_Foothills
+		icon = GFX_focus_ITA_Hydropower
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Hydropower
+		}
+		x = 27
+		y = 8
+
+	}
+	focus = {
 		id = ITA_Farmers_Mentality
 		icon = GFX_focus_ITA_Farms
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Embrace_Backwards_Economy
 		}
-		x = 24
-		y = 8
+		x = 15
+		y = 7
 
 	}
 	focus = {
@@ -1068,8 +894,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Farmers_Mentality
 		}
-		x = 24
-		y = 9
+		x = 15
+		y = 8
 
 	}
 	focus = {
@@ -1079,8 +905,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Export_Surplus_Food
 		}
-		x = 24
-		y = 10
+		x = 15
+		y = 9
 
 	}
 	focus = {
@@ -1090,19 +916,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Cultural_Importance
 		}
-		x = 24
-		y = 11
-
-	}
-	focus = {
-		id = ITA_Iron_Works
-		icon = GFX_focus_generic_steel
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Move_to_Industrialization
-		}
-		x = 29
-		y = 8
+		x = 15
+		y = 10
 
 	}
 	focus = {
@@ -1119,7 +934,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Influence_Tunisia
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_SAF_colonialist_crusade
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Support_Jewish_Schools
