@@ -5,3 +5,21 @@ USA_grant_statehood = {
 		tag = USA
 	}
 }
+USA_reconstruction_social = {
+	icon = sov_great_patriotic_war
+
+	available = {
+		tag = USA
+		has_country_flag = USABroken_Eagle
+		NOT = { has_country_flag = USA_Reconstruction_Ended }
+	}
+}
+USA_reconstruction_monarch = {
+	icon = generic_monarchism
+
+	available = {
+		tag = USA
+		has_country_flag = USABroken_Eagle
+		NOT = { has_country_flag = USA_Reconstruction_Ended }
+	}
+}

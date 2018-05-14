@@ -10,36 +10,40 @@ country_event = {
     is_triggered_only = yes
     
     option = {
-      name = acw.1.a
-      ai_chance = {
+        name = acw.1.a
+        ai_chance = {
                 factor = 100
             }
-      add_political_power = -50
-      hidden_effect = { news_event = { id = usa_news.7 } }
-      hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
-      add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-      CSA = {
-        transfer_state = 364
-        364 = {
-            add_core_of = CSA
-        }  
+        add_political_power = -50
+        hidden_effect = { news_event = { id = usa_news.7 } }
+        hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
+        add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+        remove_state_core = 364
+        add_state_claim = 364
+        CSA = {
+            transfer_state = 364
+            364 = {
+                add_core_of = CSA
+            }  
         }
     }
     option = {
-      name = acw.1.b
-      trigger = { is_ai = no }
-      add_political_power = -50
-      hidden_effect = { news_event = { id = usa_news.7 } }
-      hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
-      add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-      CSA = {
-        transfer_state = 364
-        364 = {
-            add_core_of = CSA
-        }  
-        change_tag_from = USA
+        name = acw.1.b
+        trigger = { is_ai = no }
+        add_political_power = -50
+        hidden_effect = { news_event = { id = usa_news.7 } }
+        hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
+        add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+        remove_state_core = 364
+        add_state_claim = 364
+        CSA = {
+            transfer_state = 364
+            364 = {
+                add_core_of = CSA
+            }  
+            change_tag_from = USA
+            }
         }
-    }
 }
 country_event = {
     id = acw.1
@@ -52,36 +56,40 @@ country_event = {
     is_triggered_only = yes
     
     option = {
-      name = acw.1.a
-      ai_chance = {
+        name = acw.1.a
+        ai_chance = {
                 factor = 100
             }
-      add_political_power = -50
-      hidden_effect = { news_event = { id = usa_news.6 } }
-      hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
-      add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-      CSA = {
-        transfer_state = 364
-        364 = {
-            add_core_of = CSA
-        }  
-    }
+        add_political_power = -50
+        hidden_effect = { news_event = { id = usa_news.6 } }
+        hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
+        add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+        remove_state_core = 364
+        add_state_claim = 364
+        CSA = {
+            transfer_state = 364
+            364 = {
+                add_core_of = CSA
+            }  
+        }
   }
     option = {
-      name = acw.1.b
-      trigger = { is_ai = no }
-      add_political_power = -50
-      hidden_effect = { news_event = { id = usa_news.6 } }
-      hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
-      add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-      CSA = {
-        transfer_state = 364
-        364 = {
-            add_core_of = CSA
-        }  
-        change_tag_from = USA
+        name = acw.1.b
+        trigger = { is_ai = no }
+        add_political_power = -50
+        hidden_effect = { news_event = { id = usa_news.6 } }
+        hidden_effect = { USA = { country_event = { days = 10 id = csa.1 } } }
+        add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+        remove_state_core = 364
+        add_state_claim = 364
+        CSA = {
+            transfer_state = 364
+            364 = {
+                add_core_of = CSA
+            }  
+            change_tag_from = USA
+            }
         }
-    }
 }
 country_event = {
     id = acw.2
@@ -180,7 +188,6 @@ country_event = {
         add_political_power = 300
         add_ideas = USA_Civil_War
         USA = { remove_ideas = american_slavery_3 }
-        hidden_effect = { CSA = { country_event = { days = 1 id = acw.6 } } }
     }
 }
 
@@ -219,7 +226,10 @@ country_event = {
         set_global_flag = USAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
         set_country_flag = USASoaring_Eagle
+        add_ideas = USA_recovery
         hidden_effect = { news_event = { id = acw_news.6 } }
+        set_stability = 0.6
+        set_war_support = 0.5
     }
     option = {
         trigger = {
@@ -227,6 +237,8 @@ country_event = {
         }
         name = acw.7.b
         custom_effect_tooltip = 06_ACW_tt
+        set_stability = 0.1
+        set_war_support = 0.1
     }
 }
 country_event = {
@@ -258,6 +270,7 @@ country_event = {
         name = acw.8.a
         custom_effect_tooltip = 07_ACW_tt
         set_country_flag = USABroken_Eagle
+        add_ideas = USA_recovery
     }
     option = {
         trigger = {
@@ -269,8 +282,11 @@ country_event = {
         hidden_effect = { white_peace = USA }
         hidden_effect = { ENG = { white_peace = USA } }
         hidden_effect = { FRA = { white_peace = USA } }
+        set_truce = { target = USA days = 400 }
         set_global_flag = CSAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
+        set_stability = 0.8
+        set_war_support = 0.6
     }
 }
 #Trent Affair

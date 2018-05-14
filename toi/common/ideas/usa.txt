@@ -66,6 +66,28 @@ ideas = {
 }
 ideas = {
 	country = {
+		american_slavery_4 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
 		USA_UtahWar = {
 			allowed = {
 				TAG = USA
@@ -158,7 +180,7 @@ ideas = {
 }
 ideas = {
 	country = {
-	USA_Civil_War_Avoided = {
+	USA_thirty_year_plan_1 = {
 			
 			allowed = {
 				TAG = USA
@@ -170,13 +192,63 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_morale_bonus
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = 0.00
+				MONTHLY_POPULATION = 0.00
+				political_power_gain = 0.00
+				consumer_goods_factor = 0.00
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_thirty_year_plan_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
 			
 			modifier = {
 				stability_factor = 0.05
-				MONTHLY_POPULATION = 0.02
+				MONTHLY_POPULATION = 0.03
 				political_power_gain = 0.05
 				consumer_goods_factor = 0.02
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+	USA_thirty_year_plan_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.1
+				MONTHLY_POPULATION = 0.06
+				political_power_gain = 0.1
+				consumer_goods_factor = 0.04
 			}
 		}
 	}
@@ -195,7 +267,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_yarrow_ship_builders
+			picture = idea_yarrow_ship_builders
 			
 			modifier = {
 				convoy_raiding_efficiency_factor = 0.4
@@ -219,7 +291,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_pp_unity_bonus
+			picture = idea_generic_pp_unity_bonus
 			
 			modifier = {
 				consumer_goods_factor = -0.1
@@ -243,7 +315,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_chi_incompetent_officers
+			picture = idea_chi_incompetent_officers
 			
 			modifier = {
 				army_org_Factor = -0.1
@@ -272,7 +344,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				conscription = 0.05
+				conscription = 0.03
 			}
 		}
 	}
@@ -520,6 +592,583 @@ ideas = {
 				conscription_factor = 0.1
 				planning_speed = 0.1
 				recon_factor = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_plea_for_order_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_plea_for_order_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				drift_defence_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_plea_for_order_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				drift_defence_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_seize_plantations = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_martial_law_civil_war = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.1
+				military_leader_cost_factor = -0.20
+				enemy_partisan_effect = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_freedman_bureau = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_black_wages = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_recovery = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				MONTHLY_POPULATION = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				local_resources_factor = -0.1
+				conscription = -0.01
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_civil_war_political_reform_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				improve_relations_maintain_cost_factor = -0.25
+				drift_defence_factor = -0.1
+				enemy_partisan_effect = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_civil_war_political_reform_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = -0.15
+				improve_relations_maintain_cost_factor = -0.25
+				drift_defence_factor = -0.25
+				enemy_partisan_effect = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_civil_war_political_reform_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.1
+				improve_relations_maintain_cost_factor = -0.5
+				drift_defence_factor = -0.1
+				enemy_partisan_effect = -0.2
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_industrializing_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_industrializing_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_industrializing_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_politics_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = -0.05
+				drift_defence_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_politics_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = -0.1
+				drift_defence_factor = -0.2
+				stability_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_politics_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_culture_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_culture_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_culture_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_southern_wages = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_trade = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				min_export = 0.1
+				trade_opinion_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_south_state_ideology = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = -0.1
+				drift_defence_factor = 0.1
+			}
+		}
+	}
+}
+ideas = {
+	country = {
+		USA_assimilation_programs = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				drift_defence_factor = 0.1
+				min_export = 0.1
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 	}
