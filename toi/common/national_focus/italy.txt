@@ -16,6 +16,10 @@ focus_tree = {
 		x = 8
 		y = 0
 
+		completion_reward =	{
+			PAP = {country_event = { days = 1 id = ita.0 } }
+		}
+
 	}
 	focus = {
 		id = ITA_Agriculture_Revival
@@ -23,6 +27,39 @@ focus_tree = {
 		cost = 10.00
 		x = 18
 		y = 0
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = farm
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = farm
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -68,6 +105,11 @@ focus_tree = {
 		x = 5
 		y = 1
 
+		completion_reward = {
+
+			add_popularity = { ideology = centrism popularity = 0.1 }
+		}
+
 	}
 	focus = {
 		id = ITA_Local_Government
@@ -78,6 +120,12 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05 
+
+		}
 
 	}
 	focus = {
@@ -90,6 +138,10 @@ focus_tree = {
 		x = 3
 		y = 3
 
+		completion_reward = {
+			add_political_power = 50
+		}
+
 	}
 	focus = {
 		id = ITA_Camillo_Benso
@@ -101,6 +153,11 @@ focus_tree = {
 		x = 5
 		y = 3
 
+		completion_reward = {
+			add_popularity = { ideology = centrism popularity = 0.05 } 
+			set_politics = { ruling_party = centrism elections_allowed = no } 
+		}
+
 	}
 	focus = {
 		id = ITA_Restrict_the_Monarch
@@ -111,6 +168,12 @@ focus_tree = {
 		}
 		x = 5
 		y = 4
+
+		completion_reward = {
+			add_popularity = { ideology = autocracy popularity = -0.05 }
+
+			
+		}
 
 	}
 	focus = {
@@ -126,6 +189,11 @@ focus_tree = {
 		x = 11
 		y = 1
 
+		completion_reward = {
+			add_ideas = ITA_Emmanuel_II
+
+			}
+
 	}
 	focus = {
 		id = ITA_Piedmontese_Italy
@@ -136,6 +204,11 @@ focus_tree = {
 		}
 		x = 11
 		y = 2
+
+		completion_reward = {
+		   hidden_effect = {add_ideas = ITA_Piedmontese}	
+				
+		 }
 
 	}
 	focus = {
@@ -148,6 +221,11 @@ focus_tree = {
 		x = 11
 		y = 3
 
+		completion_reward = {
+			add_stability = -0.05 
+			set_politics = { ruling_party = autocracy elections_allowed = no } 
+		}
+
 	}
 	focus = {
 		id = ITA_Cavour's_Death
@@ -158,6 +236,11 @@ focus_tree = {
 		}
 		x = 11
 		y = 4
+
+		completion_reward = {
+			add_stability = -0.05
+				
+		}
 
 	}
 	focus = {
@@ -170,6 +253,12 @@ focus_tree = {
 		}
 		x = 8
 		y = 5
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.05
+			add_political_power = 50 
+		}
 
 	}
 	focus = {
@@ -185,6 +274,14 @@ focus_tree = {
 		x = 5
 		y = 6
 
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.045
+			add_war_support = -0.025
+			diplomatic_relation = { country = AUS relation = non_aggression_pact }
+
+		}
+
 	}
 	focus = {
 		id = ITA_Prussian_Deal
@@ -198,6 +295,10 @@ focus_tree = {
 		}
 		x = 11
 		y = 6
+
+		completion_reward = {
+			PRS = {country_event = { days = 1 id = ita.1 } }
+		}
 
 	}
 	focus = {
@@ -243,6 +344,10 @@ focus_tree = {
 		x = 13
 		y = 3
 
+		completion_reward = {
+			add_ideas = ITA_Southern_Debates
+
+		}
 	}
 	focus = {
 		id = ITA_Strict_Rule_for_the_South
@@ -253,6 +358,11 @@ focus_tree = {
 		}
 		x = 13
 		y = 4
+
+		completion_reward = {
+			add_ideas = ITA_Strict_Southern_Rule
+
+		}
 
 	}
 	focus = {
@@ -1009,6 +1119,39 @@ focus_tree = {
 		}
 		x = 18
 		y = 8
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
