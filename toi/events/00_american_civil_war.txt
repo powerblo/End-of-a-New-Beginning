@@ -305,6 +305,8 @@ country_event = {
             has_war_with = CSA
         }
     }
+
+    mean_time_to_happen = { days = -1 }
     
     option = {
         name = acw.9.a
@@ -377,7 +379,7 @@ country_event = {
         trigger = { has_global_flag = Trent_Affair_ENG_Yes}
     }
     desc = {
-        text = acw.12.d_no
+        text = acw.12.d_a
         trigger = { NOT = { has_global_flag = Trent_Affair_ENG_Yes } }
     }
     picture = GFX_report_event_german_reichstag_gathering
