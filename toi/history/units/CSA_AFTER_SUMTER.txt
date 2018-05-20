@@ -1,169 +1,141 @@
-﻿units = {
+﻿division_template = {
+  name = "Confederate Regimental"
+  is_locked = yes
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+	line_infantry = { x = 0 y = 1}
+	line_infantry = { x = 0 y = 2}
+	line_infantry = { x = 1 y = 0}
+	line_infantry = { x = 1 y = 1}
+	line_infantry = { x = 1 y = 2}
+  }
+}
+
+units = {
 	division= {	
-		name = "9th National Guard"
+		name = "1st Confederate Regimental"
 		location = 788
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "10th National Guard"
+		name = "2nd Confederate Regimental"
 		location = 1132
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "11th National Guard"
+		name = "3rd Confederate Regimental"
 		location = 12384
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "12th National Guard"
+		name = "4th Confederate Regimental"
 		location = 12489
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "13th National Guard"
+		name = "5th Confederate Regimental"
 		location = 12501
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "14th National Guard"
+		name = "6th Confederate Regimental"
 		location = 7138
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "15th National Guard"
+		name = "7th Confederate Regimental"
 		location = 788
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "16th National Guard"
+		name = "8th Confederate Regimental"
 		location = 1132
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "17th National Guard"
+		name = "9th Confederate Regimental"
 		location = 12384
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "18th National Guard"
+		name = "10th Confederate Regimental"
 		location = 12489
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "19th National Guard"
+		name = "11th Confederate Regimental"
 		location = 12501
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "20th National Guard"
+		name = "12th Confederate Regimental"
 		location = 7138
-		division_template = "National Guard"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "5th Infantry Regiment"
+		name = "13th Confederate Regimental"
 		location = 788
-		division_template = "Infantry Regiment"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
 	division= {	
-		name = "6th Infantry Regiment"
+		name = "14th Confederate Regimental"
 		location = 7138
-		division_template = "Infantry Regiment"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
 	division= {	
-		name = "7th Infantry Regiment"
+		name = "15th Confederate Regimental"
 		location = 788
-		division_template = "Infantry Regiment"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
 	division= {	
-		name = "8th Infantry Regiment"
+		name = "16th Confederate Regimental"
 		location = 7138
-		division_template = "Infantry Regiment"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
 	division= {	
-		name = "9th Infantry Regiment"
+		name = "17th Confederate Regimental"
 		location = 1132
-		division_template = "Infantry Regiment"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
 	division= {	
-		name = "10th Infantry Regiment"
+		name = "18th Confederate Regimental"
 		location = 7552
-		division_template = "Infantry Regiment"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division= {	
-		name = "11th Infantry Regiment"
-		location = 7552
-		division_template = "Infantry Regiment"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division= {	
-		name = "12th Infantry Regiment"
-		location = 1132
-		division_template = "Infantry Regiment"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "3rd Infantry Regiment with Support"
-		location = 7552
-		division_template = "Infantry Regiment with Support"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "4th Infantry Regiment with Support"
-		location = 3960
-		division_template = "Infantry Regiment with Support"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "5th Infantry Regiment with Support"
-		location = 3960
-		division_template = "Infantry Regiment with Support"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "6th Infantry Regiment with Support"
-		location = 7552
-		division_template = "Infantry Regiment with Support"
+		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
