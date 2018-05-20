@@ -1,20 +1,20 @@
 state= {
 	id=606
 	name="STATE_606" # Anhui
-	manpower = 23265400
+	manpower = 11265400
 
 	state_category = city
 
 	resources={
-		steel=16
+		steel=4
+		wood=4
 	}
 
 	history= {
 		owner = TAI
 		add_core_of = CHI
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
+			infrastructure = 2
 		}
 		victory_points = {
 			7222 1
@@ -31,21 +31,6 @@ state= {
 			set_province_controller = 10079
 			set_province_controller = 11916
 			set_province_controller = 12036			
-		}
-		
-		1938.10.25 = {
-			controller = JAP
-			CHI = {
-				set_province_controller = 1125
-				set_province_controller = 7104
-				set_province_controller = 12019
-			}
-			buildings = {
-				industrial_complex = 3
-				infrastructure = 6
-				
-				arms_factory = 1
-			}
 		}
 	}
 
