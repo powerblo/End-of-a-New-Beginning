@@ -437,6 +437,81 @@ USA_grant_statehood = {
 		}
 	}
 }
+#American Civil War
+USA_american_civil_war_descision = {
+
+	#Surrender
+	eoanb_descision_USA_ACW_surrender = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = ACWAmerican_Civil_War
+			has_war_with = CSA
+			OR = {
+				USA = { surrender_progress > 0.2 }
+				date > 1863.7.4
+			}
+		}
+
+		visible = {
+			has_global_flag = ACWAmerican_Civil_War
+			has_war_with = CSA
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			country_event = { id = acw.16 }
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 5
+                has_war_support < 0.6
+            }
+            modifier = {
+                factor = 10
+                has_war_support < 0.4
+            }
+            modifier = {
+                factor = 20
+                has_war_support < 0.3
+            }
+            modifier = {
+                factor = 30
+                has_war_support < 0.2
+            }
+            modifier = {
+                factor = 40
+                has_war_support < 0.15
+            }
+            modifier = {
+                factor = 60
+                has_war_support < 0.1
+            }
+            modifier = {
+                factor = 80
+                has_war_support < 0.05
+            }
+            modifier = {
+                factor = 100
+                has_war_support < 0.01
+            }
+            modifier = {
+                factor = 0
+                CSA = { surrender_progress > 0.1 }
+            }
+		}
+	}
+}
 #Socialism
 USA_reconstruction_social = {
 	#Start
@@ -489,7 +564,6 @@ USA_reconstruction_social = {
 		}
 	}
 
-
 		visible = {
 			TAG = USA
 			has_country_flag = USABroken_Eagle
@@ -506,13 +580,138 @@ USA_reconstruction_social = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 10
 			modifier = {
         	    factor = 0
             	is_historical_focus_on = yes
            	}
+           	modifier = {
+        	    factor = 30
+        	    OR = {
+					OR = {
+						ENG = { has_government = social_egalitarianism }
+						ENG = { has_government = collectivist_socialism }
+						ENG = { has_government = vanguard_communism }
+						}
+					OR = {
+						FRA = { has_government = social_egalitarianism }
+						FRA = { has_government = collectivist_socialism }
+						FRA = { has_government = vanguard_communism }
+					}
+				}
+           	}
+           	modifier = {
+        	    factor = 75
+        	    AND = {
+					OR = {
+						ENG = { has_government = social_egalitarianism }
+						ENG = { has_government = collectivist_socialism }
+						ENG = { has_government = vanguard_communism }
+						}
+					OR = {
+						FRA = { has_government = social_egalitarianism }
+						FRA = { has_government = collectivist_socialism }
+						FRA = { has_government = vanguard_communism }
+						}
+					}
+           		}
+			}
 		}
-	}
+	eoanb_descision_USA_social_spread_egal = {
+    	visible = {
+        	has_country_flag = USA_loss_social
+        	NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_social
+        }
+        modifier = {
+        	social_egalitarianism_drift = 0.01
+			stability_weekly = -0.001
+        }
+        fire_only_once = no
+        days_remove = 350
+        days_re_enable = 10
+
+        ai_will_do = {
+			base = 1
+		}
+    }
+    eoanb_descision_USA_social_spread_collect = {
+    	visible = {
+        	has_country_flag = USA_loss_social
+        	NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_social
+        }
+        modifier = {
+        	collectivist_socialism_drift = 0.01
+			stability_weekly = -0.001
+        }
+        fire_only_once = no
+        days_remove = 350
+        days_re_enable = 10
+
+        ai_will_do = {
+			base = 1
+		}
+    }
+    eoanb_descision_USA_social_spread_commune = {
+    	visible = {
+        	has_country_flag = USA_loss_social
+        	NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_social
+        }
+        modifier = {
+        	vanguard_communism_drift = 0.01
+			stability_weekly = -0.001
+        }
+        fire_only_once = no
+        days_remove = 350
+        days_re_enable = 10
+
+        ai_will_do = {
+			base = 1
+		}
+    }
+    eoanb_descision_USA_social_end = {
+    	visible = {
+    		has_country_flag = USA_loss_social
+    		NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_social
+        	OR = {
+        		social_egalitarianism > 0.5
+        		vanguard_communism > 0.5
+        		collectivist_socialism > 0.5
+        		AND = {
+        			social_egalitarianism > 0.16
+        			vanguard_communism > 0.16
+        			collectivist_socialism > 0.16
+        		}
+        	}
+        }
+        fire_only_once = yes
+
+        complete_effect = {
+        	custom_effect_tooltip = 14_USA_tt
+			hidden_effect = { country_event = { id = usa.34 } }
+			set_country_flag = USA_Reconstruction_Ended
+			hidden_effect = { remove_ideas = USA_recovery }
+        }
+
+        ai_will_do = {
+			base = 60
+		}
+    }
 }
 #Monarchism
 USA_reconstruction_monarch = {
@@ -563,11 +762,76 @@ USA_reconstruction_monarch = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 8
 			modifier = {
         	    factor = 0
             	is_historical_focus_on = yes
            	}
+           	modifier = {
+        	    factor = 30
+				OR = {
+					ENG = { has_government = autocracy }
+					MEX = { has_government = autocracy }
+				}
+				OR = {
+					ENG = { has_government = autocracy }
+					MEX = { has_government = autocracy }
+				}
+			}
+           	modifier = {
+        	    factor = 60
+        	    AND = {
+					ENG = { has_government = autocracy }
+					MEX = { has_government = autocracy }
+				}
+           	}
 		}
 	}
+	eoanb_descision_USA_monarch_spread = {
+    	visible = {
+        	has_country_flag = USA_loss_monarch
+        	NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_monarch
+        	autocracy > 0.5
+        }
+        modifier = {
+        	autocracy_drift = 0.01
+			stability_weekly = -0.001
+        }
+        fire_only_once = no
+        days_remove = 350
+        days_re_enable = 10
+
+        ai_will_do = {
+			base = 1
+		}
+    }
+    eoanb_descision_USA_monarch_end = {
+    	visible = {
+    		has_country_flag = USA_loss_monarch
+    		NOT = { has_country_flag = USA_Reconstruction_Ended }
+    	}
+        cost = 50
+        available = {
+        	has_country_flag = USA_loss_monarch
+        	OR = {
+        		autocracy > 0.5
+        	}
+        }
+        fire_only_once = yes
+
+        complete_effect = {
+			hidden_effect = { country_event = { id = usa.35 } }
+			set_country_flag = USA_Reconstruction_Ended
+			custom_effect_tooltip = 15_USA_tt
+			hidden_effect = { remove_ideas = USA_recovery }
+        }
+
+        ai_will_do = {
+			base = 60
+		}
+    }
 }

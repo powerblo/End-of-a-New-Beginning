@@ -7,8 +7,6 @@ country_event = {
 		desc = csa.1.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		fire_only_once = yes
-		
 		is_triggered_only = yes
 		
 		option = {
@@ -44,8 +42,6 @@ country_event = {
 		title = csa.2.t
 		desc = csa.2.d
 		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
 		
 		is_triggered_only = yes
 
@@ -83,8 +79,6 @@ country_event = {
 		desc = csa.3.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		fire_only_once = yes
-		
 		is_triggered_only = yes
 		
 		option = {
@@ -120,8 +114,6 @@ country_event = {
 		title = csa.4.t
 		desc = csa.4.d
 		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
 		
 		is_triggered_only = yes
 		
@@ -159,8 +151,6 @@ country_event = {
 		desc = csa.5.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		fire_only_once = yes
-		
 		is_triggered_only = yes
 		
 		option = {
@@ -197,8 +187,6 @@ country_event = {
 		desc = csa.6.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		fire_only_once = yes
-		
 		is_triggered_only = yes
 		
 		option = {
@@ -217,9 +205,9 @@ country_event = {
         		}
         	remove_state_core = 375
         	add_state_claim = 375
-        	hidden_effect = { USA = { country_event = { days = 64 id = csa.7 } } }
         	hidden_effect = { CSA = { country_event = { id = csa.6 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+			hidden_effect = { CSA = { country_event = { days = 5 id = csa.7 } } }
 		}
 		option = {
 			trigger = {
@@ -228,7 +216,7 @@ country_event = {
 			name = csa.6.b
 		}
 }
-#Virginia
+#Refusal of Access
 country_event = {
 		id = csa.7
 		title = csa.7.t
@@ -240,37 +228,23 @@ country_event = {
 		is_triggered_only = yes
 		
 		option = {
-			trigger = {
-				tag = USA
-			}
-			CSA = {
-        			transfer_state = 362
-        			362 = {
-            			add_core_of = CSA
-        			}  
-        		}
-        	remove_state_core = 362
-        	add_state_claim = 362
-			name = csa.1.a
-			hidden_effect = { USA = { country_event = { days = 1 id = csa.8 } } }
-			hidden_effect = { CSA = { country_event = { id = csa.7 } } }
-			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-		}
-		option = {
-			trigger = {
-				tag = CSA
-			}
-			name = csa.7.b
+			name = csa.7.a
+			363 = { set_demilitarized_zone = yes }
+			362 = { set_demilitarized_zone = yes }
+			368 = { set_demilitarized_zone = yes }
+			372 = { set_demilitarized_zone = yes }
+			369 = { set_demilitarized_zone = yes }
+			373 = { set_demilitarized_zone = yes }
+			374 = { set_demilitarized_zone = yes }
+			746 = { set_demilitarized_zone = yes }
 		}
 }
-#Arkansas
+#Post-War States
 country_event = {
 		id = csa.8
 		title = csa.8.t
 		desc = csa.8.d
 		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
 		
 		is_triggered_only = yes
 		
@@ -278,18 +252,34 @@ country_event = {
 			trigger = {
 				tag = USA
 			}
-			name = csa.1.a
-			CSA = {
-        			transfer_state = 372
-        			372 = {
-            			add_core_of = CSA
-        			}  
-        		}
+			CSA = { transfer_state = 362 }
+        	remove_state_core = 362
+        	add_state_claim = 362
+        	362 = { add_core_of = CSA }
+        	CSA = { transfer_state = 372 }
         	remove_state_core = 372
         	add_state_claim = 372
-			hidden_effect = { USA = { country_event = { days = 1 id = csa.9 } } }
+        	372 = { add_core_of = CSA }
+        	CSA = { transfer_state = 368 }
+        	remove_state_core = 368
+        	add_state_claim = 368
+        	368 = { add_core_of = CSA }
+        	CSA = { transfer_state = 363 }
+        	remove_state_core = 363
+        	add_state_claim = 363
+        	363 = { add_core_of = CSA }
+        	if = {
+        		limit = {
+        			USA = { has_country_flag = USA_BreckinridgeElected }
+        		}
+        		CSA = { transfer_state = 369 }
+        		remove_state_core = 369
+        		add_state_claim = 369
+        		add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
+        	}
+			name = csa.1.a
 			hidden_effect = { CSA = { country_event = { id = csa.8 } } }
-			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
+			add_popularity = { ideology = traditional_conservatism popularity = -0.20 }
 		}
 		option = {
 			trigger = {
@@ -298,119 +288,11 @@ country_event = {
 			name = csa.8.b
 		}
 }
-#Tennessee
+#Initial Militia Rise
 country_event = {
 		id = csa.9
 		title = csa.9.t
 		desc = csa.9.d
-		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
-		
-		is_triggered_only = yes
-
-		option = {
-			trigger = {
-				tag = USA
-			}
-			name = csa.1.a
-			CSA = {
-        			transfer_state = 368
-        			368 = {
-            			add_core_of = CSA
-        			}  
-        		}
-        	remove_state_core = 368
-        	add_state_claim = 368
-			hidden_effect = { USA = { country_event = { days = 1 id = csa.10 } } }
-			hidden_effect = { CSA = { country_event = { id = csa.9 } } }
-			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
-		}
-		option = {
-			trigger = {
-				tag = CSA
-			}
-			name = csa.9.b
-		}
-}
-#North Carolina
-country_event = {
-		id = csa.10
-		title = csa.10.t
-		desc = csa.10.d
-		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
-		
-		is_triggered_only = yes
-		
-		option = {
-			trigger = {
-				tag = USA
-			}
-			name = csa.1.a
-			CSA = {
-        			transfer_state = 363
-        			363 = {
-            			add_core_of = CSA
-        			}  
-        		}
-        	remove_state_core = 363
-        	add_state_claim = 363
-			limit = {
-					if = {
-						USA = { has_country_flag = USA_BreckinridgeElected }
-					}
-					hidden_effect = { USA = { country_event = { days = 1 id = csa.11 } } }
-				}
-			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
-			hidden_effect = { CSA = { country_event = { id = csa.10 } } }
-		}
-		option = {
-			trigger = {
-				tag = CSA
-			}
-			name = csa.10.b
-		}
-}
-#Kentucky (ONLY IF BRECKINRIDGE WAS ELECTED)
-country_event = {
-		id = csa.11
-		title = csa.11.t
-		desc = csa.11.d
-		picture = GFX_report_event_german_reichstag_gathering
-		
-		fire_only_once = yes
-		
-		is_triggered_only = yes
-		
-		option = {
-			trigger = {
-				tag = USA
-			}
-			name = csa.1.a
-			CSA = {
-        			transfer_state = 369
-        			369 = {
-            			add_core_of = CSA
-        			}  
-        		}
-        	remove_state_core = 369
-        	add_state_claim = 369
-        	hidden_effect = { CSA = { country_event = { id = csa.11 } } }
-		}
-		option = {
-			trigger = {
-				tag = CSA
-			}
-			name = csa.11.b
-		}
-}
-#Initial Militia Rise
-country_event = {
-		id = csa.12
-		title = csa.12.t
-		desc = csa.12.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
 		fire_only_once = yes
@@ -433,9 +315,9 @@ country_event = {
 }
 #Sumter Militia
 country_event = {
-		id = csa.13
-		title = csa.12.t
-		desc = csa.12.d
+		id = csa.10
+		title = csa.10.t
+		desc = csa.10.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
 		fire_only_once = yes
@@ -443,7 +325,7 @@ country_event = {
 		is_triggered_only = yes
 		
 		option = {
-			name = csa.12.a
+			name = csa.9.a
 			load_oob = CSA_AFTER_SUMTER
        	}
 }

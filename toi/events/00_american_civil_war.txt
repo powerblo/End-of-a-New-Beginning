@@ -20,12 +20,8 @@ country_event = {
         add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
         remove_state_core = 364
         add_state_claim = 364
-        CSA = {
-            transfer_state = 364
-            364 = {
-                add_core_of = CSA
-            }  
-        }
+        CSA = { transfer_state = 364 }
+        364 = { add_core_of = CSA }
     }
     option = {
         name = acw.1.b
@@ -36,11 +32,9 @@ country_event = {
         add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
         remove_state_core = 364
         add_state_claim = 364
+        CSA = { transfer_state = 364 }
+        364 = { add_core_of = CSA }
         CSA = {
-            transfer_state = 364
-            364 = {
-                add_core_of = CSA
-            }  
             change_tag_from = USA
             }
         }
@@ -66,12 +60,8 @@ country_event = {
         add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
         remove_state_core = 364
         add_state_claim = 364
-        CSA = {
-            transfer_state = 364
-            364 = {
-                add_core_of = CSA
-            }  
-        }
+        CSA = { transfer_state = 364 }
+        364 = { add_core_of = CSA }
   }
     option = {
         name = acw.1.b
@@ -82,11 +72,9 @@ country_event = {
         add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
         remove_state_core = 364
         add_state_claim = 364
-        CSA = {
-            transfer_state = 364
-            364 = {
-                add_core_of = CSA
-            }  
+        CSA = { transfer_state = 364 }
+        364 = { add_core_of = CSA }
+        CSA = {  
             change_tag_from = USA
             }
         }
@@ -127,6 +115,7 @@ country_event = {
             }
         custom_effect_tooltip = 04_ACW_tt
         hidden_effect = { CSA = { country_event = { days = 1 id = acw.4 } } }
+        hidden_effect = { USA = { country_event = { days = 1 id = csa.8 } } }
     }
 }
 country_event = {
@@ -148,11 +137,16 @@ country_event = {
         hidden_effect = { set_global_flag = ACWAmerican_Civil_War }
         hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }
         hidden_effect = { USA = { country_event = { days = 5 id = usa.14 } } }
-        hidden_effect = { CSA = { country_event = { days = 5 id = csa.13 } } }
+        hidden_effect = { CSA = { country_event = { days = 2 id = csa.10 } } }
         hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
         hidden_effect = { USA = { country_event = { days = 3 id = acw.7 } } }
-        hidden_effect = { USA = { country_event = { days = 1 id = acw.6 } } }
+        hidden_effect = { USA = { country_event = { id = acw.6 } } }
+        hidden_effect = { CSA = { country_event = { id = acw.6 } } }
+        hidden_effect = { USA = { country_event = { days = 1 id = csa.7 } } }
         hidden_effect = { news_event = { id = acw_news.1 } }
+        add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 5000 }
+        add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 5000 }
+        add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
     }
 }
 country_event = {
@@ -160,7 +154,7 @@ country_event = {
     title = acw.5.t
     desc = acw.5.d
     picture = GFX_report_event_german_reichstag_gathering
-    
+
     fire_only_once = yes
     
     is_triggered_only = yes
@@ -179,15 +173,20 @@ country_event = {
     desc = acw.6.d
     picture = GFX_report_event_german_reichstag_gathering
 
-    fire_only_once = yes
-
     is_triggered_only = yes
 
     option = {
         name = acw.6.a
         add_political_power = 300
         add_ideas = USA_Civil_War
-        USA = { remove_ideas = american_slavery_3 }
+        if = {
+            limit = {
+                tag = USA
+            }
+            USA = { remove_ideas = american_slavery_3 }
+        }
+        add_war_support = 0.8
+        add_stability = 0.8
     }
 }
 
@@ -200,10 +199,7 @@ country_event = {
     fire_only_once = yes
     
     trigger = {
-        OR = {
-            TAG = USA
-            TAG = CSA
-        }
+        TAG = USA
         USA = { has_war_with = CSA }
         has_global_flag = ACWAmerican_Civil_War
         CSA = { surrender_progress > 0.8 }
@@ -228,6 +224,8 @@ country_event = {
         set_country_flag = USASoaring_Eagle
         add_ideas = USA_recovery
         hidden_effect = { news_event = { id = acw_news.6 } }
+        hidden_effect = { CSA = { country_event = { id = acw.7 } } }
+        delete_unit_template_and_units = { division_template = "Union Regimental" }
         set_stability = 0.6
         set_war_support = 0.5
     }
@@ -237,8 +235,9 @@ country_event = {
         }
         name = acw.7.b
         custom_effect_tooltip = 06_ACW_tt
-        set_stability = 0.1
-        set_war_support = 0.1
+        delete_unit_template_and_units = { division_template = "Confederate Regimental" }
+        set_stability = 0
+        set_war_support = 0
     }
 }
 country_event = {
@@ -250,10 +249,7 @@ country_event = {
     fire_only_once = yes
     
     trigger = {
-        OR = {
-            TAG = USA
-            TAG = CSA
-        }
+        TAG = CSA
         USA = { has_war_with = CSA }
         has_global_flag = ACWAmerican_Civil_War
         USA = { surrender_progress > 0.7 }
@@ -271,6 +267,7 @@ country_event = {
         custom_effect_tooltip = 07_ACW_tt
         set_country_flag = USABroken_Eagle
         add_ideas = USA_recovery
+        delete_unit_template_and_units = { division_template = "Union Regimental" }
     }
     option = {
         trigger = {
@@ -282,9 +279,22 @@ country_event = {
         hidden_effect = { white_peace = USA }
         hidden_effect = { ENG = { white_peace = USA } }
         hidden_effect = { FRA = { white_peace = USA } }
+        CSA = { transfer_state = 376 }
+        CSA = { transfer_state = 377 }
+        CSA = { transfer_state = 374 }
+        CSA = { transfer_state = 373 }
+        CSA = { transfer_state = 746 }
+        if = {
+            limit = {
+                USA = { owns_state = 369 }
+            }
+            CSA = { transfer_state = 369 }
+        }
         set_truce = { target = USA days = 400 }
+        hidden_effect = { USA = { country_event = { id = acw.8 } } }
         set_global_flag = CSAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
+        delete_unit_template_and_units = { division_template = "Confederate Regimental" }
         set_stability = 0.8
         set_war_support = 0.6
     }
@@ -553,6 +563,3197 @@ country_event = {
             }
         }
         custom_effect_tooltip = 13_ACW_tt
+    }
+}
+#Surrender - USA
+country_event = {
+    id = acw.16
+    title = acw.16.t
+    desc = acw.16.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.16.a
+    }
+    option = {
+        name = acw.16.b
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0
+                USA = { surrender_progress < 0.25 }
+            }
+        }
+        hidden_effect = { CSA = { set_country_flag = USA_peace_1 } }
+        CSA = { country_event = acw.17 }
+    }
+    option = {
+        name = acw.16.c
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 100
+                USA = { surrender_progress < 0.5 }
+                USA = { surrender_progress > 0.25 }
+            }
+        }
+        hidden_effect = { CSA = { set_country_flag = USA_peace_2 } }
+        CSA = { country_event = acw.17 }
+    }
+    option = {
+        name = acw.16.e
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 100
+                USA = { surrender_progress > 0.5 }
+            }
+        }
+        hidden_effect = { CSA = { set_country_flag = USA_peace_3 } }
+        CSA = { country_event = acw.17 }
+    }
+}
+#Surrender - Confederates
+country_event = {
+    id = acw.17
+    title = acw.17.t
+    desc = {
+        text = acw.17.d
+        trigger = { has_country_flag = USA_peace_1 } 
+    }
+    desc = {
+        text = acw.17.d_a
+        trigger = { has_country_flag = USA_peace_2 } 
+    }
+    desc = {
+        text = acw.17.d_b
+        trigger = { has_country_flag = USA_peace_3 } 
+    }
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.17.a
+    }
+    option = {
+        name = acw.17.b
+        ai_chance = {
+            factor = 90
+        }
+        trigger = {
+            has_country_flag = USA_peace_1
+        }
+        CSA = { white_peace = USA }
+        hidden_effect = { ENG = { white_peace = USA } }
+        hidden_effect = { FRA = { white_peace = USA } }
+        set_truce = { target = USA days = 400 }
+        USA = { set_country_flag = USABroken_Eagle }
+        USA = { add_ideas = USA_recovery }
+        set_global_flag = CSAWins_Civil_War
+        clr_global_flag = ACWAmerican_Civil_War
+        set_global_flag = USA_peace_1
+        USA = { clr_country_flag = USA_peace_1 }
+    }
+    option = {
+        name = acw.17.c
+        ai_chance = {
+            factor = 90
+        }
+        trigger = {
+            has_country_flag = USA_peace_2
+        }
+        CSA = { white_peace = USA }
+        hidden_effect = { ENG = { white_peace = USA } }
+        hidden_effect = { FRA = { white_peace = USA } }
+        CSA = { transfer_state = 374 }
+        set_truce = { target = USA days = 400 }
+        USA = { set_country_flag = USABroken_Eagle }
+        USA = { add_ideas = USA_recovery }
+        set_global_flag = CSAWins_Civil_War
+        clr_global_flag = ACWAmerican_Civil_War
+        set_global_flag = USA_peace_1
+        USA = { clr_country_flag = USA_peace_1 }
+    }
+    option = {
+        name = acw.17.e
+        ai_chance = {
+            factor = 90
+        }
+        trigger = {
+            has_country_flag = USA_peace_3
+        }
+        CSA = { white_peace = USA }
+        hidden_effect = { ENG = { white_peace = USA } }
+        hidden_effect = { FRA = { white_peace = USA } }
+        CSA = { transfer_state = 376 }
+        CSA = { transfer_state = 377 }
+        CSA = { transfer_state = 374 }
+        set_truce = { target = USA days = 400 }
+        USA = { set_country_flag = USABroken_Eagle }
+        USA = { add_ideas = USA_recovery }
+        set_global_flag = CSAWins_Civil_War
+        clr_global_flag = ACWAmerican_Civil_War
+        set_global_flag = USA_peace_1
+        USA = { clr_country_flag = USA_peace_1 }
+    }
+}
+#Historical Battles#
+#First Battle of Bull Run
+country_event = {
+    id = acw.18
+    title = acw.18.t
+    desc = acw.18.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    trigger = {
+        tag = USA
+        USA = { has_war_with = CSA }
+        date > 1861.7.21
+        NOT = { has_global_flag = ACW_First_Bull_Run }
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.18.a
+        USA = { load_oob = USA_BULL_RUN }
+        CSA = { country_event = { id = acw.18 } }
+    }
+    option = {
+        trigger = {
+            tag = CSA
+        }
+        name = acw.18.b
+        set_global_flag = ACW_First_Bull_Run
+        CSA = { load_oob = CSA_BULL_RUN }
+        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+    }
+}
+#Battle of Antietam
+country_event = {
+    id = acw.19
+    title = acw.19.t
+    desc = acw.19.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        USA = { has_war_with = CSA }
+        date > 1862.9.17
+        NOT = { has_global_flag = ACW_Antietam }
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.18.a
+        USA = { load_oob = USA_ANTIETAM }
+        CSA = { country_event = { id = acw.19 } }
+    }
+    option = {
+        trigger = {
+            tag = CSA
+        }
+        name = acw.18.b
+        set_global_flag = ACW_Antietam
+        CSA = { load_oob = CSA_ANTIETAM }
+        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+    }
+}
+#Battle of Gettysburg
+country_event = {
+    id = acw.20
+    title = acw.20.t
+    desc = acw.20.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        USA = { has_war_with = CSA }
+        date > 1863.7.1
+        NOT = { has_global_flag = ACW_Gettysburg }
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.18.a
+        USA = { load_oob = USA_GETTYSBURG }
+        CSA = { country_event = { id = acw.20 } }
+    }
+    option = {
+        trigger = {
+            tag = CSA
+        }
+        name = acw.18.b
+        set_global_flag = ACW_Gettysburg
+        CSA = { load_oob = CSA_GETTYSBURG }
+        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+    }
+}
+#Battle of Chancellorsville
+country_event = {
+    id = acw.21
+    title = acw.21.t
+    desc = acw.21.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        USA = { has_war_with = CSA }
+        date > 1863.4.30
+        NOT = { has_global_flag = ACW_Chancellorsville }
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.18.a
+        USA = { load_oob = USA_CHANCELLORSVILLE }
+        CSA = { country_event = { id = acw.21 } }
+    }
+    option = {
+        trigger = {
+            tag = CSA
+        }
+        name = acw.18.b
+        set_global_flag = ACW_Chancellorsville
+        CSA = { load_oob = CSA_CHANCELLORSVILLE }
+        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+    }
+}
+#Second Battle of Bull Run
+country_event = {
+    id = acw.22
+    title = acw.22.t
+    desc = acw.22.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
+    
+    trigger = {
+        tag = USA
+        USA = { has_war_with = CSA }
+        date > 1862.8.28
+        NOT = { has_global_flag = ACW_Second_Bull_Run }
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.18.a
+        USA = { load_oob = USA_BULL_RUN }
+        CSA = { country_event = { id = acw.18 } }
+    }
+    option = {
+        trigger = {
+            tag = CSA
+        }
+        name = acw.18.b
+        set_global_flag = ACW_Second_Bull_Run
+        CSA = { load_oob = CSA_BULL_RUN }
+        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+    }
+}
+country_event = {
+    id = acw.23
+    title = acw.23.t
+    desc = acw.23.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.23.a
+        trigger = {
+            tag = USA
+        }
+        delete_unit_template_and_units = { division_template = "Union Battle Regiment" }
+        CSA = { country_event = { id = acw.23 } }
+    }
+    option = {
+        name = acw.23.b
+        trigger = {
+            tag = CSA
+        }
+        delete_unit_template_and_units = { division_template = "Confederate Battle Regimental" }
+    }
+}
+#State Occupations Events #
+#Ohio
+country_event = {
+    id = acw.100
+    title = acw.100.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        261 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        tag = CSA
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    fire_only_once = yes
+
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 261 size < 2 }
+                NOT = { divisions_in_state = { state = 261 size > 2 } }
+            }
+            261 = { damage_building = { type = infrastructure damage = 0.3 } }
+            261 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 261 size < 6 }
+                NOT = { divisions_in_state = { state = 261 size > 10 } }
+                NOT = { divisions_in_state = { state = 261 size < 2 } }
+            }
+            261 = { damage_building = { type = infrastructure damage = 0.5 } }
+            261 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            261 = { remove_building = { type = infrastructure level = 2 } }
+            261 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 261 size < 10 }
+                NOT = { divisions_in_state = { state = 261 size > 10 } }
+                NOT = { divisions_in_state = { state = 261 size < 6 } }
+            }
+            261 = { damage_building = { type = infrastructure damage = 0.7 } }
+            261 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            261 = { damage_building = { type = arms_factory damage = 0.3 } }
+            261 = { remove_building = { type = infrastructure level = 3 } }
+            261 = { remove_building = { type = industrial_complex level = 2 } }
+            261 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 261 size > 10 }
+            }
+            261 = { damage_building = { type = infrastructure damage = 0.9 } }
+            261 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            261 = { damage_building = { type = arms_factory damage = 0.5 } }
+            261 = { remove_building = { type = infrastructure level = 4 } }
+            261 = { remove_building = { type = industrial_complex level = 3 } }
+            261 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+
+country_event = {
+    id = acw.101
+    title = acw.101.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        357 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 357 size < 2 }
+                NOT = { divisions_in_state = { state = 357 size > 2 } }
+            }
+            357 = { damage_building = { type = infrastructure damage = 0.3 } }
+            357 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 357 size < 6 }
+                NOT = { divisions_in_state = { state = 357 size > 10 } }
+                NOT = { divisions_in_state = { state = 357 size < 2 } }
+            }
+            357 = { damage_building = { type = infrastructure damage = 0.5 } }
+            357 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            357 = { remove_building = { type = infrastructure level = 2 } }
+            357 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 357 size < 10 }
+                NOT = { divisions_in_state = { state = 357 size > 10 } }
+                NOT = { divisions_in_state = { state = 357 size < 6 } }
+            }
+            357 = { damage_building = { type = infrastructure damage = 0.7 } }
+            357 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            357 = { damage_building = { type = arms_factory damage = 0.3 } }
+            357 = { remove_building = { type = infrastructure level = 3 } }
+            357 = { remove_building = { type = industrial_complex level = 2 } }
+            357 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 357 size > 10 }
+            }
+            357 = { damage_building = { type = infrastructure damage = 0.9 } }
+            357 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            357 = { damage_building = { type = arms_factory damage = 0.5 } }
+            357 = { remove_building = { type = infrastructure level = 4 } }
+            357 = { remove_building = { type = industrial_complex level = 3 } }
+            357 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#New York State
+country_event = {
+    id = acw.102
+    title = acw.102.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        358 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 358 size < 2 }
+                NOT = { divisions_in_state = { state = 358 size > 2 } }
+            }
+            358 = { damage_building = { type = infrastructure damage = 0.3 } }
+            358 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 358 size < 6 }
+                NOT = { divisions_in_state = { state = 358 size > 10 } }
+                NOT = { divisions_in_state = { state = 358 size < 2 } }
+            }
+            358 = { damage_building = { type = infrastructure damage = 0.5 } }
+            358 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            358 = { remove_building = { type = infrastructure level = 2 } }
+            358 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 358 size < 10 }
+                NOT = { divisions_in_state = { state = 358 size > 10 } }
+                NOT = { divisions_in_state = { state = 358 size < 6 } }
+            }
+            358 = { damage_building = { type = infrastructure damage = 0.7 } }
+            358 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            358 = { damage_building = { type = arms_factory damage = 0.3 } }
+            358 = { remove_building = { type = infrastructure level = 3 } }
+            358 = { remove_building = { type = industrial_complex level = 2 } }
+            358 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 358 size > 10 }
+            }
+            358 = { damage_building = { type = infrastructure damage = 0.9 } }
+            358 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            358 = { damage_building = { type = arms_factory damage = 0.5 } }
+            358 = { remove_building = { type = infrastructure level = 4 } }
+            358 = { remove_building = { type = industrial_complex level = 3 } }
+            358 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#New Jersey
+country_event = {
+    id = acw.103
+    title = acw.103.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        359 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 359 size < 2 }
+                NOT = { divisions_in_state = { state = 359 size > 2 } }
+            }
+            359 = { damage_building = { type = infrastructure damage = 0.3 } }
+            359 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 359 size < 6 }
+                NOT = { divisions_in_state = { state = 359 size > 10 } }
+                NOT = { divisions_in_state = { state = 359 size < 2 } }
+            }
+            359 = { damage_building = { type = infrastructure damage = 0.5 } }
+            359 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            359 = { remove_building = { type = infrastructure level = 2 } }
+            359 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 359 size < 10 }
+                NOT = { divisions_in_state = { state = 359 size > 10 } }
+                NOT = { divisions_in_state = { state = 359 size < 6 } }
+            }
+            359 = { damage_building = { type = infrastructure damage = 0.7 } }
+            359 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            359 = { damage_building = { type = arms_factory damage = 0.3 } }
+            359 = { remove_building = { type = infrastructure level = 3 } }
+            359 = { remove_building = { type = industrial_complex level = 2 } }
+            359 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 359 size > 10 }
+            }
+            359 = { damage_building = { type = infrastructure damage = 0.9 } }
+            359 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            359 = { damage_building = { type = arms_factory damage = 0.5 } }
+            359 = { remove_building = { type = infrastructure level = 4 } }
+            359 = { remove_building = { type = industrial_complex level = 3 } }
+            359 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Pennsylvania
+country_event = {
+    id = acw.104
+    title = acw.104.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        360 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 360 size < 2 }
+                NOT = { divisions_in_state = { state = 360 size > 2 } }
+            }
+            360 = { damage_building = { type = infrastructure damage = 0.3 } }
+            360 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 360 size < 6 }
+                NOT = { divisions_in_state = { state = 360 size > 10 } }
+                NOT = { divisions_in_state = { state = 360 size < 2 } }
+            }
+            360 = { damage_building = { type = infrastructure damage = 0.5 } }
+            360 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            360 = { remove_building = { type = infrastructure level = 2 } }
+            360 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 360 size < 10 }
+                NOT = { divisions_in_state = { state = 360 size > 10 } }
+                NOT = { divisions_in_state = { state = 360 size < 6 } }
+            }
+            360 = { damage_building = { type = infrastructure damage = 0.7 } }
+            360 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            360 = { damage_building = { type = arms_factory damage = 0.3 } }
+            360 = { remove_building = { type = infrastructure level = 3 } }
+            360 = { remove_building = { type = industrial_complex level = 2 } }
+            360 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 360 size > 10 }
+            }
+            360 = { damage_building = { type = infrastructure damage = 0.9 } }
+            360 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            360 = { damage_building = { type = arms_factory damage = 0.5 } }
+            360 = { remove_building = { type = infrastructure level = 4 } }
+            360 = { remove_building = { type = industrial_complex level = 3 } }
+            360 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Maryland
+country_event = {
+    id = acw.105
+    title = acw.105.t
+    desc = acw.101.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        361 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.101.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 361 size < 2 }
+                NOT = { divisions_in_state = { state = 361 size > 2 } }
+            }
+            361 = { damage_building = { type = infrastructure damage = 0.3 } }
+            361 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+            set_global_flag = USA_ACW_capital_captured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 361 size < 6 }
+                NOT = { divisions_in_state = { state = 361 size > 10 } }
+                NOT = { divisions_in_state = { state = 361 size < 2 } }
+            }
+            361 = { damage_building = { type = infrastructure damage = 0.5 } }
+            361 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            361 = { remove_building = { type = infrastructure level = 2 } }
+            361 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+            set_global_flag = USA_ACW_capital_captured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 361 size < 10 }
+                NOT = { divisions_in_state = { state = 361 size > 10 } }
+                NOT = { divisions_in_state = { state = 361 size < 6 } }
+            }
+            361 = { damage_building = { type = infrastructure damage = 0.7 } }
+            361 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            361 = { damage_building = { type = arms_factory damage = 0.3 } }
+            361 = { remove_building = { type = infrastructure level = 3 } }
+            361 = { remove_building = { type = industrial_complex level = 2 } }
+            361 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+            set_global_flag = USA_ACW_capital_captured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 361 size > 10 }
+            }
+            361 = { damage_building = { type = infrastructure damage = 0.9 } }
+            361 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            361 = { damage_building = { type = arms_factory damage = 0.5 } }
+            361 = { remove_building = { type = infrastructure level = 4 } }
+            361 = { remove_building = { type = industrial_complex level = 3 } }
+            361 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+            set_global_flag = USA_ACW_capital_captured
+        }
+    }
+}
+#Kentucy (if Union State)
+country_event = {
+    id = acw.106
+    title = acw.106.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        369 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 2 }
+                NOT = { divisions_in_state = { state = 369 size > 2 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 6 }
+                NOT = { divisions_in_state = { state = 369 size > 10 } }
+                NOT = { divisions_in_state = { state = 369 size < 2 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.5 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 2 } }
+            369 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 10 }
+                NOT = { divisions_in_state = { state = 369 size > 10 } }
+                NOT = { divisions_in_state = { state = 369 size < 6 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.7 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            369 = { damage_building = { type = arms_factory damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 3 } }
+            369 = { remove_building = { type = industrial_complex level = 2 } }
+            369 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size > 10 }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.9 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            369 = { damage_building = { type = arms_factory damage = 0.5 } }
+            369 = { remove_building = { type = infrastructure level = 4 } }
+            369 = { remove_building = { type = industrial_complex level = 3 } }
+            369 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Missouri
+country_event = {
+    id = acw.107
+    title = acw.107.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        373 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 373 size < 2 }
+                NOT = { divisions_in_state = { state = 373 size > 2 } }
+            }
+            373 = { damage_building = { type = infrastructure damage = 0.3 } }
+            373 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 373 size < 6 }
+                NOT = { divisions_in_state = { state = 373 size > 10 } }
+                NOT = { divisions_in_state = { state = 373 size < 2 } }
+            }
+            373 = { damage_building = { type = infrastructure damage = 0.5 } }
+            373 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            373 = { remove_building = { type = infrastructure level = 2 } }
+            373 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 373 size < 10 }
+                NOT = { divisions_in_state = { state = 373 size > 10 } }
+                NOT = { divisions_in_state = { state = 373 size < 6 } }
+            }
+            373 = { damage_building = { type = infrastructure damage = 0.7 } }
+            373 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            373 = { damage_building = { type = arms_factory damage = 0.3 } }
+            373 = { remove_building = { type = infrastructure level = 3 } }
+            373 = { remove_building = { type = industrial_complex level = 2 } }
+            373 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 373 size > 10 }
+            }
+            373 = { damage_building = { type = infrastructure damage = 0.9 } }
+            373 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            373 = { damage_building = { type = arms_factory damage = 0.5 } }
+            373 = { remove_building = { type = infrastructure level = 4 } }
+            373 = { remove_building = { type = industrial_complex level = 3 } }
+            373 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#California
+country_event = {
+    id = acw.108
+    title = acw.108.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        378 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 378 size < 2 }
+                NOT = { divisions_in_state = { state = 378 size > 2 } }
+            }
+            378 = { damage_building = { type = infrastructure damage = 0.3 } }
+            378 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 378 size < 6 }
+                NOT = { divisions_in_state = { state = 378 size > 10 } }
+                NOT = { divisions_in_state = { state = 378 size < 2 } }
+            }
+            378 = { damage_building = { type = infrastructure damage = 0.5 } }
+            378 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            378 = { remove_building = { type = infrastructure level = 2 } }
+            378 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 378 size < 10 }
+                NOT = { divisions_in_state = { state = 378 size > 10 } }
+                NOT = { divisions_in_state = { state = 378 size < 6 } }
+            }
+            378 = { damage_building = { type = infrastructure damage = 0.7 } }
+            378 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            378 = { damage_building = { type = arms_factory damage = 0.3 } }
+            378 = { remove_building = { type = infrastructure level = 3 } }
+            378 = { remove_building = { type = industrial_complex level = 2 } }
+            378 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 378 size > 10 }
+            }
+            378 = { damage_building = { type = infrastructure damage = 0.9 } }
+            378 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            378 = { damage_building = { type = arms_factory damage = 0.5 } }
+            378 = { remove_building = { type = infrastructure level = 4 } }
+            378 = { remove_building = { type = industrial_complex level = 3 } }
+            378 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Kansas
+country_event = {
+    id = acw.109
+    title = acw.109.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        383 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 383 size < 2 }
+                NOT = { divisions_in_state = { state = 383 size > 2 } }
+            }
+            383 = { damage_building = { type = infrastructure damage = 0.3 } }
+            383 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 383 size < 6 }
+                NOT = { divisions_in_state = { state = 383 size > 10 } }
+                NOT = { divisions_in_state = { state = 383 size < 2 } }
+            }
+            383 = { damage_building = { type = infrastructure damage = 0.5 } }
+            383 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            383 = { remove_building = { type = infrastructure level = 2 } }
+            383 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 383 size < 10 }
+                NOT = { divisions_in_state = { state = 383 size > 10 } }
+                NOT = { divisions_in_state = { state = 383 size < 6 } }
+            }
+            383 = { damage_building = { type = infrastructure damage = 0.7 } }
+            383 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            383 = { damage_building = { type = arms_factory damage = 0.3 } }
+            383 = { remove_building = { type = infrastructure level = 3 } }
+            383 = { remove_building = { type = industrial_complex level = 2 } }
+            383 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 383 size > 10 }
+            }
+            383 = { damage_building = { type = infrastructure damage = 0.9 } }
+            383 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            383 = { damage_building = { type = arms_factory damage = 0.5 } }
+            383 = { remove_building = { type = infrastructure level = 4 } }
+            383 = { remove_building = { type = industrial_complex level = 3 } }
+            383 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Minnesota
+country_event = {
+    id = acw.110
+    title = acw.110.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        391 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 391 size < 2 }
+                NOT = { divisions_in_state = { state = 391 size > 2 } }
+            }
+            391 = { damage_building = { type = infrastructure damage = 0.3 } }
+            391 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 391 size < 6 }
+                NOT = { divisions_in_state = { state = 391 size > 10 } }
+                NOT = { divisions_in_state = { state = 391 size < 2 } }
+            }
+            391 = { damage_building = { type = infrastructure damage = 0.5 } }
+            391 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            391 = { remove_building = { type = infrastructure level = 2 } }
+            391 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 391 size < 10 }
+                NOT = { divisions_in_state = { state = 391 size > 10 } }
+                NOT = { divisions_in_state = { state = 391 size < 6 } }
+            }
+            391 = { damage_building = { type = infrastructure damage = 0.7 } }
+            391 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            391 = { damage_building = { type = arms_factory damage = 0.3 } }
+            391 = { remove_building = { type = infrastructure level = 3 } }
+            391 = { remove_building = { type = industrial_complex level = 2 } }
+            391 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 391 size > 10 }
+            }
+            391 = { damage_building = { type = infrastructure damage = 0.9 } }
+            391 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            391 = { damage_building = { type = arms_factory damage = 0.5 } }
+            391 = { remove_building = { type = infrastructure level = 4 } }
+            391 = { remove_building = { type = industrial_complex level = 3 } }
+            391 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Iowa
+country_event = {
+    id = acw.111
+    title = acw.111.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        392 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 392 size < 2 }
+                NOT = { divisions_in_state = { state = 392 size > 2 } }
+            }
+            392 = { damage_building = { type = infrastructure damage = 0.3 } }
+            392 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 392 size < 6 }
+                NOT = { divisions_in_state = { state = 392 size > 10 } }
+                NOT = { divisions_in_state = { state = 392 size < 2 } }
+            }
+            392 = { damage_building = { type = infrastructure damage = 0.5 } }
+            392 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            392 = { remove_building = { type = infrastructure level = 2 } }
+            392 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 392 size < 10 }
+                NOT = { divisions_in_state = { state = 392 size > 10 } }
+                NOT = { divisions_in_state = { state = 392 size < 6 } }
+            }
+            392 = { damage_building = { type = infrastructure damage = 0.7 } }
+            392 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            392 = { damage_building = { type = arms_factory damage = 0.3 } }
+            392 = { remove_building = { type = infrastructure level = 3 } }
+            392 = { remove_building = { type = industrial_complex level = 2 } }
+            392 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 392 size > 10 }
+            }
+            392 = { damage_building = { type = infrastructure damage = 0.9 } }
+            392 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            392 = { damage_building = { type = arms_factory damage = 0.5 } }
+            392 = { remove_building = { type = infrastructure level = 4 } }
+            392 = { remove_building = { type = industrial_complex level = 3 } }
+            392 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Michigan
+country_event = {
+    id = acw.112
+    title = acw.112.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        393 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 393 size < 2 }
+                NOT = { divisions_in_state = { state = 393 size > 2 } }
+            }
+            393 = { damage_building = { type = infrastructure damage = 0.3 } }
+            393 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 393 size < 6 }
+                NOT = { divisions_in_state = { state = 393 size > 10 } }
+                NOT = { divisions_in_state = { state = 393 size < 2 } }
+            }
+            393 = { damage_building = { type = infrastructure damage = 0.5 } }
+            393 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            393 = { remove_building = { type = infrastructure level = 2 } }
+            393 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 393 size < 10 }
+                NOT = { divisions_in_state = { state = 393 size > 10 } }
+                NOT = { divisions_in_state = { state = 393 size < 6 } }
+            }
+            393 = { damage_building = { type = infrastructure damage = 0.7 } }
+            393 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            393 = { damage_building = { type = arms_factory damage = 0.3 } }
+            393 = { remove_building = { type = infrastructure level = 3 } }
+            393 = { remove_building = { type = industrial_complex level = 2 } }
+            393 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 393 size > 10 }
+            }
+            393 = { damage_building = { type = infrastructure damage = 0.9 } }
+            393 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            393 = { damage_building = { type = arms_factory damage = 0.5 } }
+            393 = { remove_building = { type = infrastructure level = 4 } }
+            393 = { remove_building = { type = industrial_complex level = 3 } }
+            393 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Wisconsin
+country_event = {
+    id = acw.113
+    title = acw.113.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        394 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 394 size < 2 }
+                NOT = { divisions_in_state = { state = 394 size > 2 } }
+            }
+            394 = { damage_building = { type = infrastructure damage = 0.3 } }
+            394 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 394 size < 6 }
+                NOT = { divisions_in_state = { state = 394 size > 10 } }
+                NOT = { divisions_in_state = { state = 394 size < 2 } }
+            }
+            394 = { damage_building = { type = infrastructure damage = 0.5 } }
+            394 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            394 = { remove_building = { type = infrastructure level = 2 } }
+            394 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 394 size < 10 }
+                NOT = { divisions_in_state = { state = 394 size > 10 } }
+                NOT = { divisions_in_state = { state = 394 size < 6 } }
+            }
+            394 = { damage_building = { type = infrastructure damage = 0.7 } }
+            394 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            394 = { damage_building = { type = arms_factory damage = 0.3 } }
+            394 = { remove_building = { type = infrastructure level = 3 } }
+            394 = { remove_building = { type = industrial_complex level = 2 } }
+            394 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 394 size > 10 }
+            }
+            394 = { damage_building = { type = infrastructure damage = 0.9 } }
+            394 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            394 = { damage_building = { type = arms_factory damage = 0.5 } }
+            394 = { remove_building = { type = infrastructure level = 4 } }
+            394 = { remove_building = { type = industrial_complex level = 3 } }
+            394 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Illinois
+country_event = {
+    id = acw.114
+    title = acw.114.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        395 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 395 size < 2 }
+                NOT = { divisions_in_state = { state = 395 size > 2 } }
+            }
+            395 = { damage_building = { type = infrastructure damage = 0.3 } }
+            395 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 395 size < 6 }
+                NOT = { divisions_in_state = { state = 395 size > 10 } }
+                NOT = { divisions_in_state = { state = 395 size < 2 } }
+            }
+            395 = { damage_building = { type = infrastructure damage = 0.5 } }
+            395 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            395 = { remove_building = { type = infrastructure level = 2 } }
+            395 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 395 size < 10 }
+                NOT = { divisions_in_state = { state = 395 size > 10 } }
+                NOT = { divisions_in_state = { state = 395 size < 6 } }
+            }
+            395 = { damage_building = { type = infrastructure damage = 0.7 } }
+            395 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            395 = { damage_building = { type = arms_factory damage = 0.3 } }
+            395 = { remove_building = { type = infrastructure level = 3 } }
+            395 = { remove_building = { type = industrial_complex level = 2 } }
+            395 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 395 size > 10 }
+            }
+            395 = { damage_building = { type = infrastructure damage = 0.9 } }
+            395 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            395 = { damage_building = { type = arms_factory damage = 0.5 } }
+            395 = { remove_building = { type = infrastructure level = 4 } }
+            395 = { remove_building = { type = industrial_complex level = 3 } }
+            395 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Indiana
+country_event = {
+    id = acw.115
+    title = acw.115.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        396 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 396 size < 2 }
+                NOT = { divisions_in_state = { state = 396 size > 2 } }
+            }
+            396 = { damage_building = { type = infrastructure damage = 0.3 } }
+            396 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 396 size < 6 }
+                NOT = { divisions_in_state = { state = 396 size > 10 } }
+                NOT = { divisions_in_state = { state = 396 size < 2 } }
+            }
+            396 = { damage_building = { type = infrastructure damage = 0.5 } }
+            396 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            396 = { remove_building = { type = infrastructure level = 2 } }
+            396 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 396 size < 10 }
+                NOT = { divisions_in_state = { state = 396 size > 10 } }
+                NOT = { divisions_in_state = { state = 396 size < 6 } }
+            }
+            396 = { damage_building = { type = infrastructure damage = 0.7 } }
+            396 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            396 = { damage_building = { type = arms_factory damage = 0.3 } }
+            396 = { remove_building = { type = infrastructure level = 3 } }
+            396 = { remove_building = { type = industrial_complex level = 2 } }
+            396 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 396 size > 10 }
+            }
+            396 = { damage_building = { type = infrastructure damage = 0.9 } }
+            396 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            396 = { damage_building = { type = arms_factory damage = 0.5 } }
+            396 = { remove_building = { type = infrastructure level = 4 } }
+            396 = { remove_building = { type = industrial_complex level = 3 } }
+            396 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#West Virginia
+country_event = {
+    id = acw.116
+    title = acw.116.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        746 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 746 size < 2 }
+                NOT = { divisions_in_state = { state = 746 size > 2 } }
+            }
+            746 = { damage_building = { type = infrastructure damage = 0.3 } }
+            746 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 746 size < 6 }
+                NOT = { divisions_in_state = { state = 746 size > 10 } }
+                NOT = { divisions_in_state = { state = 746 size < 2 } }
+            }
+            746 = { damage_building = { type = infrastructure damage = 0.5 } }
+            746 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            746 = { remove_building = { type = infrastructure level = 2 } }
+            746 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 746 size < 10 }
+                NOT = { divisions_in_state = { state = 746 size > 10 } }
+                NOT = { divisions_in_state = { state = 746 size < 6 } }
+            }
+            746 = { damage_building = { type = infrastructure damage = 0.7 } }
+            746 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            746 = { damage_building = { type = arms_factory damage = 0.3 } }
+            746 = { remove_building = { type = infrastructure level = 3 } }
+            746 = { remove_building = { type = industrial_complex level = 2 } }
+            746 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 746 size > 10 }
+            }
+            746 = { damage_building = { type = infrastructure damage = 0.9 } }
+            746 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            746 = { damage_building = { type = arms_factory damage = 0.5 } }
+            746 = { remove_building = { type = infrastructure level = 4 } }
+            746 = { remove_building = { type = industrial_complex level = 3 } }
+            746 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#New York City
+country_event = {
+    id = acw.117
+    title = acw.117.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        954 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 954 size < 2 }
+                NOT = { divisions_in_state = { state = 954 size > 2 } }
+            }
+            954 = { damage_building = { type = infrastructure damage = 0.3 } }
+            954 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 954 size < 6 }
+                NOT = { divisions_in_state = { state = 954 size > 10 } }
+                NOT = { divisions_in_state = { state = 954 size < 2 } }
+            }
+            954 = { damage_building = { type = infrastructure damage = 0.5 } }
+            954 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            954 = { remove_building = { type = infrastructure level = 2 } }
+            954 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 954 size < 10 }
+                NOT = { divisions_in_state = { state = 954 size > 10 } }
+                NOT = { divisions_in_state = { state = 954 size < 6 } }
+            }
+            954 = { damage_building = { type = infrastructure damage = 0.7 } }
+            954 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            954 = { damage_building = { type = arms_factory damage = 0.3 } }
+            954 = { remove_building = { type = infrastructure level = 3 } }
+            954 = { remove_building = { type = industrial_complex level = 2 } }
+            954 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 954 size > 10 }
+            }
+            954 = { damage_building = { type = infrastructure damage = 0.9 } }
+            954 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            954 = { damage_building = { type = arms_factory damage = 0.5 } }
+            954 = { remove_building = { type = infrastructure level = 4 } }
+            954 = { remove_building = { type = industrial_complex level = 3 } }
+            954 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Conneticut
+country_event = {
+    id = acw.118
+    title = acw.118.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        958 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 958 size < 2 }
+                NOT = { divisions_in_state = { state = 958 size > 2 } }
+            }
+            958 = { damage_building = { type = infrastructure damage = 0.3 } }
+            958 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 958 size < 6 }
+                NOT = { divisions_in_state = { state = 958 size > 10 } }
+                NOT = { divisions_in_state = { state = 958 size < 2 } }
+            }
+            958 = { damage_building = { type = infrastructure damage = 0.5 } }
+            958 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            958 = { remove_building = { type = infrastructure level = 2 } }
+            958 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 958 size < 10 }
+                NOT = { divisions_in_state = { state = 958 size > 10 } }
+                NOT = { divisions_in_state = { state = 958 size < 6 } }
+            }
+            958 = { damage_building = { type = infrastructure damage = 0.7 } }
+            958 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            958 = { damage_building = { type = arms_factory damage = 0.3 } }
+            958 = { remove_building = { type = infrastructure level = 3 } }
+            958 = { remove_building = { type = industrial_complex level = 2 } }
+            958 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 958 size > 10 }
+            }
+            958 = { damage_building = { type = infrastructure damage = 0.9 } }
+            958 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            958 = { damage_building = { type = arms_factory damage = 0.5 } }
+            958 = { remove_building = { type = infrastructure level = 4 } }
+            958 = { remove_building = { type = industrial_complex level = 3 } }
+            958 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Vermont
+country_event = {
+    id = acw.119
+    title = acw.119.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        959 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 959 size < 2 }
+                NOT = { divisions_in_state = { state = 959 size > 2 } }
+            }
+            959 = { damage_building = { type = infrastructure damage = 0.3 } }
+            959 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 959 size < 6 }
+                NOT = { divisions_in_state = { state = 959 size > 10 } }
+                NOT = { divisions_in_state = { state = 959 size < 2 } }
+            }
+            959 = { damage_building = { type = infrastructure damage = 0.5 } }
+            959 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            959 = { remove_building = { type = infrastructure level = 2 } }
+            959 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 959 size < 10 }
+                NOT = { divisions_in_state = { state = 959 size > 10 } }
+                NOT = { divisions_in_state = { state = 959 size < 6 } }
+            }
+            959 = { damage_building = { type = infrastructure damage = 0.7 } }
+            959 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            959 = { damage_building = { type = arms_factory damage = 0.3 } }
+            959 = { remove_building = { type = infrastructure level = 3 } }
+            959 = { remove_building = { type = industrial_complex level = 2 } }
+            959 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 959 size > 10 }
+            }
+            959 = { damage_building = { type = infrastructure damage = 0.9 } }
+            959 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            959 = { damage_building = { type = arms_factory damage = 0.5 } }
+            959 = { remove_building = { type = infrastructure level = 4 } }
+            959 = { remove_building = { type = industrial_complex level = 3 } }
+            959 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Maine
+country_event = {
+    id = acw.120
+    title = acw.120.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = CSA
+        961 = {
+            is_owned_by = USA
+            OR = {
+                is_controlled_by = CSA
+                is_controlled_by = ENG
+                is_controlled_by = FRA
+            }
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.121 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 961 size < 2 }
+                NOT = { divisions_in_state = { state = 961 size > 2 } }
+            }
+            961 = { damage_building = { type = infrastructure damage = 0.3 } }
+            961 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 961 size < 6 }
+                NOT = { divisions_in_state = { state = 961 size > 10 } }
+                NOT = { divisions_in_state = { state = 961 size < 2 } }
+            }
+            961 = { damage_building = { type = infrastructure damage = 0.5 } }
+            961 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            961 = { remove_building = { type = infrastructure level = 2 } }
+            961 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 961 size < 10 }
+                NOT = { divisions_in_state = { state = 961 size > 10 } }
+                NOT = { divisions_in_state = { state = 961 size < 6 } }
+            }
+            961 = { damage_building = { type = infrastructure damage = 0.7 } }
+            961 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            961 = { damage_building = { type = arms_factory damage = 0.3 } }
+            961 = { remove_building = { type = infrastructure level = 3 } }
+            961 = { remove_building = { type = industrial_complex level = 2 } }
+            961 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 961 size > 10 }
+            }
+            961 = { damage_building = { type = infrastructure damage = 0.9 } }
+            961 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            961 = { damage_building = { type = arms_factory damage = 0.5 } }
+            961 = { remove_building = { type = infrastructure level = 4 } }
+            961 = { remove_building = { type = industrial_complex level = 3 } }
+            961 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+country_event = {
+    id = acw.121
+    title = acw.121.t
+    desc = acw.121.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.102.a
+        USA = { add_war_support = -0.1 }
+    }
+    option = {
+        name = acw.102.b
+        trigger = {
+            has_global_flag = USA_ACW_capital_captured
+        }
+        USA = { add_war_support = -0.15 }
+        USA = { add_stability = -0.1 }
+        clr_global_flag = USA_ACW_capital_captured
+    }
+}
+country_event = {
+    id = acw.122
+    title = acw.122.t
+    desc = acw.122.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = acw.103.a
+        USA = { add_war_support = 0.1 }
+    }
+    option = {
+        name = acw.103.b
+        trigger = {
+            has_global_flag = CSA_ACW_fortsumter_recaptured
+        }
+        USA = { add_war_support = 0.15 }
+        USA = { add_stability = 0.1 }
+        clr_global_flag = CSA_ACW_fortsumter_recaptured
+    }
+}
+#Virginia
+country_event = {
+    id = acw.123
+    title = acw.123.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        362 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 362 size < 2 }
+                NOT = { divisions_in_state = { state = 362 size > 2 } }
+            }
+            362 = { damage_building = { type = infrastructure damage = 0.3 } }
+            362 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 362 size < 6 }
+                NOT = { divisions_in_state = { state = 362 size > 10 } }
+                NOT = { divisions_in_state = { state = 362 size < 2 } }
+            }
+            362 = { damage_building = { type = infrastructure damage = 0.5 } }
+            362 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            362 = { remove_building = { type = infrastructure level = 2 } }
+            362 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 362 size < 10 }
+                NOT = { divisions_in_state = { state = 362 size > 10 } }
+                NOT = { divisions_in_state = { state = 362 size < 6 } }
+            }
+            362 = { damage_building = { type = infrastructure damage = 0.7 } }
+            362 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            362 = { damage_building = { type = arms_factory damage = 0.3 } }
+            362 = { remove_building = { type = infrastructure level = 3 } }
+            362 = { remove_building = { type = industrial_complex level = 2 } }
+            362 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 362 size > 10 }
+            }
+            362 = { damage_building = { type = infrastructure damage = 0.9 } }
+            362 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            362 = { damage_building = { type = arms_factory damage = 0.5 } }
+            362 = { remove_building = { type = infrastructure level = 4 } }
+            362 = { remove_building = { type = industrial_complex level = 3 } }
+            362 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#North Carolina
+country_event = {
+    id = acw.124
+    title = acw.124.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        363 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 363 size < 2 }
+                NOT = { divisions_in_state = { state = 363 size > 2 } }
+            }
+            363 = { damage_building = { type = infrastructure damage = 0.3 } }
+            363 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 363 size < 6 }
+                NOT = { divisions_in_state = { state = 363 size > 10 } }
+                NOT = { divisions_in_state = { state = 363 size < 2 } }
+            }
+            363 = { damage_building = { type = infrastructure damage = 0.5 } }
+            363 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            363 = { remove_building = { type = infrastructure level = 2 } }
+            363 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 363 size < 10 }
+                NOT = { divisions_in_state = { state = 363 size > 10 } }
+                NOT = { divisions_in_state = { state = 363 size < 6 } }
+            }
+            363 = { damage_building = { type = infrastructure damage = 0.7 } }
+            363 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            363 = { damage_building = { type = arms_factory damage = 0.3 } }
+            363 = { remove_building = { type = infrastructure level = 3 } }
+            363 = { remove_building = { type = industrial_complex level = 2 } }
+            363 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 363 size > 10 }
+            }
+            363 = { damage_building = { type = infrastructure damage = 0.9 } }
+            363 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            363 = { damage_building = { type = arms_factory damage = 0.5 } }
+            363 = { remove_building = { type = infrastructure level = 4 } }
+            363 = { remove_building = { type = industrial_complex level = 3 } }
+            363 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#South Carolina
+country_event = {
+    id = acw.125
+    title = acw.125.t
+    desc = acw.102.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        364 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 364 size < 2 }
+                NOT = { divisions_in_state = { state = 364 size > 2 } }
+            }
+            364 = { damage_building = { type = infrastructure damage = 0.3 } }
+            364 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+            set_global_flag = CSA_ACW_fortsumter_recaptured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 364 size < 6 }
+                NOT = { divisions_in_state = { state = 364 size > 10 } }
+                NOT = { divisions_in_state = { state = 364 size < 2 } }
+            }
+            364 = { damage_building = { type = infrastructure damage = 0.5 } }
+            364 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            364 = { remove_building = { type = infrastructure level = 2 } }
+            364 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+            set_global_flag = CSA_ACW_fortsumter_recaptured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 364 size < 10 }
+                NOT = { divisions_in_state = { state = 364 size > 10 } }
+                NOT = { divisions_in_state = { state = 364 size < 6 } }
+            }
+            364 = { damage_building = { type = infrastructure damage = 0.7 } }
+            364 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            364 = { damage_building = { type = arms_factory damage = 0.3 } }
+            364 = { remove_building = { type = infrastructure level = 3 } }
+            364 = { remove_building = { type = industrial_complex level = 2 } }
+            364 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+            set_global_flag = CSA_ACW_fortsumter_recaptured
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 364 size > 10 }
+            }
+            364 = { damage_building = { type = infrastructure damage = 0.9 } }
+            364 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            364 = { damage_building = { type = arms_factory damage = 0.5 } }
+            364 = { remove_building = { type = infrastructure level = 4 } }
+            364 = { remove_building = { type = industrial_complex level = 3 } }
+            364 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+            set_global_flag = CSA_ACW_fortsumter_recaptured
+        }
+    }
+}
+#Georgia
+country_event = {
+    id = acw.126
+    title = acw.126.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        365 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 365 size < 2 }
+                NOT = { divisions_in_state = { state = 365 size > 2 } }
+            }
+            365 = { damage_building = { type = infrastructure damage = 0.3 } }
+            365 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 365 size < 6 }
+                NOT = { divisions_in_state = { state = 365 size > 10 } }
+                NOT = { divisions_in_state = { state = 365 size < 2 } }
+            }
+            365 = { damage_building = { type = infrastructure damage = 0.5 } }
+            365 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            365 = { remove_building = { type = infrastructure level = 2 } }
+            365 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 365 size < 10 }
+                NOT = { divisions_in_state = { state = 365 size > 10 } }
+                NOT = { divisions_in_state = { state = 365 size < 6 } }
+            }
+            365 = { damage_building = { type = infrastructure damage = 0.7 } }
+            365 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            365 = { damage_building = { type = arms_factory damage = 0.3 } }
+            365 = { remove_building = { type = infrastructure level = 3 } }
+            365 = { remove_building = { type = industrial_complex level = 2 } }
+            365 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 365 size > 10 }
+            }
+            365 = { damage_building = { type = infrastructure damage = 0.9 } }
+            365 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            365 = { damage_building = { type = arms_factory damage = 0.5 } }
+            365 = { remove_building = { type = infrastructure level = 4 } }
+            365 = { remove_building = { type = industrial_complex level = 3 } }
+            365 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Flordia
+country_event = {
+    id = acw.127
+    title = acw.1XX.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        366 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 366 size < 2 }
+                NOT = { divisions_in_state = { state = 366 size > 2 } }
+            }
+            366 = { damage_building = { type = infrastructure damage = 0.3 } }
+            366 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 366 size < 6 }
+                NOT = { divisions_in_state = { state = 366 size > 10 } }
+                NOT = { divisions_in_state = { state = 366 size < 2 } }
+            }
+            366 = { damage_building = { type = infrastructure damage = 0.5 } }
+            366 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            366 = { remove_building = { type = infrastructure level = 2 } }
+            366 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 366 size < 10 }
+                NOT = { divisions_in_state = { state = 366 size > 10 } }
+                NOT = { divisions_in_state = { state = 366 size < 6 } }
+            }
+            366 = { damage_building = { type = infrastructure damage = 0.7 } }
+            366 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            366 = { damage_building = { type = arms_factory damage = 0.3 } }
+            366 = { remove_building = { type = infrastructure level = 3 } }
+            366 = { remove_building = { type = industrial_complex level = 2 } }
+            366 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 366 size > 10 }
+            }
+            366 = { damage_building = { type = infrastructure damage = 0.9 } }
+            366 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            366 = { damage_building = { type = arms_factory damage = 0.5 } }
+            366 = { remove_building = { type = infrastructure level = 4 } }
+            366 = { remove_building = { type = industrial_complex level = 3 } }
+            366 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Alabama
+country_event = {
+    id = acw.128
+    title = acw.128.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        367 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 367 size < 2 }
+                NOT = { divisions_in_state = { state = 367 size > 2 } }
+            }
+            367 = { damage_building = { type = infrastructure damage = 0.3 } }
+            367 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 367 size < 6 }
+                NOT = { divisions_in_state = { state = 367 size > 10 } }
+                NOT = { divisions_in_state = { state = 367 size < 2 } }
+            }
+            367 = { damage_building = { type = infrastructure damage = 0.5 } }
+            367 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            367 = { remove_building = { type = infrastructure level = 2 } }
+            367 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 367 size < 10 }
+                NOT = { divisions_in_state = { state = 367 size > 10 } }
+                NOT = { divisions_in_state = { state = 367 size < 6 } }
+            }
+            367 = { damage_building = { type = infrastructure damage = 0.7 } }
+            367 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            367 = { damage_building = { type = arms_factory damage = 0.3 } }
+            367 = { remove_building = { type = infrastructure level = 3 } }
+            367 = { remove_building = { type = industrial_complex level = 2 } }
+            367 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 367 size > 10 }
+            }
+            367 = { damage_building = { type = infrastructure damage = 0.9 } }
+            367 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            367 = { damage_building = { type = arms_factory damage = 0.5 } }
+            367 = { remove_building = { type = infrastructure level = 4 } }
+            367 = { remove_building = { type = industrial_complex level = 3 } }
+            367 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Tennessee
+country_event = {
+    id = acw.129
+    title = acw.129.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        368 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 368 size < 2 }
+                NOT = { divisions_in_state = { state = 368 size > 2 } }
+            }
+            368 = { damage_building = { type = infrastructure damage = 0.3 } }
+            368 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 368 size < 6 }
+                NOT = { divisions_in_state = { state = 368 size > 10 } }
+                NOT = { divisions_in_state = { state = 368 size < 2 } }
+            }
+            368 = { damage_building = { type = infrastructure damage = 0.5 } }
+            368 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            368 = { remove_building = { type = infrastructure level = 2 } }
+            368 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 368 size < 10 }
+                NOT = { divisions_in_state = { state = 368 size > 10 } }
+                NOT = { divisions_in_state = { state = 368 size < 6 } }
+            }
+            368 = { damage_building = { type = infrastructure damage = 0.7 } }
+            368 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            368 = { damage_building = { type = arms_factory damage = 0.3 } }
+            368 = { remove_building = { type = infrastructure level = 3 } }
+            368 = { remove_building = { type = industrial_complex level = 2 } }
+            368 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 368 size > 10 }
+            }
+            368 = { damage_building = { type = infrastructure damage = 0.9 } }
+            368 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            368 = { damage_building = { type = arms_factory damage = 0.5 } }
+            368 = { remove_building = { type = infrastructure level = 4 } }
+            368 = { remove_building = { type = industrial_complex level = 3 } }
+            368 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Kentucky (If Kentucky joins Confederacy)
+country_event = {
+    id = acw.130
+    title = acw.130.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        369 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 2 }
+                NOT = { divisions_in_state = { state = 369 size > 2 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 6 }
+                NOT = { divisions_in_state = { state = 369 size > 10 } }
+                NOT = { divisions_in_state = { state = 369 size < 2 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.5 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 2 } }
+            369 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size < 10 }
+                NOT = { divisions_in_state = { state = 369 size > 10 } }
+                NOT = { divisions_in_state = { state = 369 size < 6 } }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.7 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            369 = { damage_building = { type = arms_factory damage = 0.3 } }
+            369 = { remove_building = { type = infrastructure level = 3 } }
+            369 = { remove_building = { type = industrial_complex level = 2 } }
+            369 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 369 size > 10 }
+            }
+            369 = { damage_building = { type = infrastructure damage = 0.9 } }
+            369 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            369 = { damage_building = { type = arms_factory damage = 0.5 } }
+            369 = { remove_building = { type = infrastructure level = 4 } }
+            369 = { remove_building = { type = industrial_complex level = 3 } }
+            369 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Mississippi
+country_event = {
+    id = acw.131
+    title = acw.131.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        370 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 370 size < 2 }
+                NOT = { divisions_in_state = { state = 370 size > 2 } }
+            }
+            370 = { damage_building = { type = infrastructure damage = 0.3 } }
+            370 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 370 size < 6 }
+                NOT = { divisions_in_state = { state = 370 size > 10 } }
+                NOT = { divisions_in_state = { state = 370 size < 2 } }
+            }
+            370 = { damage_building = { type = infrastructure damage = 0.5 } }
+            370 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            370 = { remove_building = { type = infrastructure level = 2 } }
+            370 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 370 size < 10 }
+                NOT = { divisions_in_state = { state = 370 size > 10 } }
+                NOT = { divisions_in_state = { state = 370 size < 6 } }
+            }
+            370 = { damage_building = { type = infrastructure damage = 0.7 } }
+            370 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            370 = { damage_building = { type = arms_factory damage = 0.3 } }
+            370 = { remove_building = { type = infrastructure level = 3 } }
+            370 = { remove_building = { type = industrial_complex level = 2 } }
+            370 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 370 size > 10 }
+            }
+            370 = { damage_building = { type = infrastructure damage = 0.9 } }
+            370 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            370 = { damage_building = { type = arms_factory damage = 0.5 } }
+            370 = { remove_building = { type = infrastructure level = 4 } }
+            370 = { remove_building = { type = industrial_complex level = 3 } }
+            370 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Louisiana
+country_event = {
+    id = acw.132
+    title = acw.132.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        371 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 371 size < 2 }
+                NOT = { divisions_in_state = { state = 371 size > 2 } }
+            }
+            371 = { damage_building = { type = infrastructure damage = 0.3 } }
+            371 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 371 size < 6 }
+                NOT = { divisions_in_state = { state = 371 size > 10 } }
+                NOT = { divisions_in_state = { state = 371 size < 2 } }
+            }
+            371 = { damage_building = { type = infrastructure damage = 0.5 } }
+            371 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            371 = { remove_building = { type = infrastructure level = 2 } }
+            371 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 371 size < 10 }
+                NOT = { divisions_in_state = { state = 371 size > 10 } }
+                NOT = { divisions_in_state = { state = 371 size < 6 } }
+            }
+            371 = { damage_building = { type = infrastructure damage = 0.7 } }
+            371 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            371 = { damage_building = { type = arms_factory damage = 0.3 } }
+            371 = { remove_building = { type = infrastructure level = 3 } }
+            371 = { remove_building = { type = industrial_complex level = 2 } }
+            371 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 371 size > 10 }
+            }
+            371 = { damage_building = { type = infrastructure damage = 0.9 } }
+            371 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            371 = { damage_building = { type = arms_factory damage = 0.5 } }
+            371 = { remove_building = { type = infrastructure level = 4 } }
+            371 = { remove_building = { type = industrial_complex level = 3 } }
+            371 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Arkansas
+country_event = {
+    id = acw.133
+    title = acw.133.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        372 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 372 size < 2 }
+                NOT = { divisions_in_state = { state = 372 size > 2 } }
+            }
+            372 = { damage_building = { type = infrastructure damage = 0.3 } }
+            372 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 372 size < 6 }
+                NOT = { divisions_in_state = { state = 372 size > 10 } }
+                NOT = { divisions_in_state = { state = 372 size < 2 } }
+            }
+            372 = { damage_building = { type = infrastructure damage = 0.5 } }
+            372 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            372 = { remove_building = { type = infrastructure level = 2 } }
+            372 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 372 size < 10 }
+                NOT = { divisions_in_state = { state = 372 size > 10 } }
+                NOT = { divisions_in_state = { state = 372 size < 6 } }
+            }
+            372 = { damage_building = { type = infrastructure damage = 0.7 } }
+            372 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            372 = { damage_building = { type = arms_factory damage = 0.3 } }
+            372 = { remove_building = { type = infrastructure level = 3 } }
+            372 = { remove_building = { type = industrial_complex level = 2 } }
+            372 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 372 size > 10 }
+            }
+            372 = { damage_building = { type = infrastructure damage = 0.9 } }
+            372 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            372 = { damage_building = { type = arms_factory damage = 0.5 } }
+            372 = { remove_building = { type = infrastructure level = 4 } }
+            372 = { remove_building = { type = industrial_complex level = 3 } }
+            372 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
+    }
+}
+#Texas
+country_event = {
+    id = acw.134
+    title = acw.134.t
+    desc = acw.100.d
+    picture = GFX_report_event_german_reichstag_gathering
+    
+    trigger = {
+        tag = USA
+        375 = {
+            is_owned_by = CSA
+            is_controlled_by = USA
+        }
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.100.a
+        hidden_effect = { USA = { country_event = { id = acw.122 } } }
+        if = {
+            limit = {
+                divisions_in_state = { state = 375 size < 2 }
+                NOT = { divisions_in_state = { state = 375 size > 2 } }
+            }
+            375 = { damage_building = { type = infrastructure damage = 0.3 } }
+            375 = { remove_building = { type = infrastructure level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 50 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 375 size < 6 }
+                NOT = { divisions_in_state = { state = 375 size > 10 } }
+                NOT = { divisions_in_state = { state = 375 size < 2 } }
+            }
+            375 = { damage_building = { type = infrastructure damage = 0.5 } }
+            375 = { damage_building = { type = industrial_complex damage = 0.3 } }
+            375 = { remove_building = { type = infrastructure level = 2 } }
+            375 = { remove_building = { type = industrial_complex level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 100 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 375 size < 10 }
+                NOT = { divisions_in_state = { state = 375 size > 10 } }
+                NOT = { divisions_in_state = { state = 375 size < 6 } }
+            }
+            375 = { damage_building = { type = infrastructure damage = 0.7 } }
+            375 = { damage_building = { type = industrial_complex damage = 0.5 } }
+            375 = { damage_building = { type = arms_factory damage = 0.3 } }
+            375 = { remove_building = { type = infrastructure level = 3 } }
+            375 = { remove_building = { type = industrial_complex level = 2 } }
+            375 = { remove_building = { type = arms_factory level = 1 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 250 }
+        }
+        if = {
+            limit = {
+                divisions_in_state = { state = 375 size > 10 }
+            }
+            375 = { damage_building = { type = infrastructure damage = 0.9 } }
+            375 = { damage_building = { type = industrial_complex damage = 0.7 } }
+            375 = { damage_building = { type = arms_factory damage = 0.5 } }
+            375 = { remove_building = { type = infrastructure level = 4 } }
+            375 = { remove_building = { type = industrial_complex level = 3 } }
+            375 = { remove_building = { type = arms_factory level = 2 } }
+            add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 500 }
+        }
     }
 }
 #News Events
@@ -951,5 +4152,48 @@ news_event = {
                 TAG = FRA
             }
             name = acw_news.10.f
+        }
+}
+#Surrender - Peace
+news_event = {
+        id = acw_news.11
+        title = acw_news.11.t
+        desc = {
+            text = acw_news.11.d
+            trigger = { has_global_flag = USA_peace_1 }
+        }
+        desc = {
+            text = acw_news.11.d_a
+            trigger = { has_global_flag = USA_peace_2 }
+        }
+        desc = {
+            text = acw_news.11.d_b
+            trigger = { has_global_flag = USA_peace_3 }
+        }
+
+        picture = GFX_news_event_chicago_surrender_acw
+
+        major = yes
+
+        is_triggered_only = yes
+
+        option = {
+            trigger = {
+                NOT = { TAG = USA }
+                NOT = { TAG = CSA }
+            }
+                name = acw_news.11.a
+        }
+        option = {
+            trigger = {
+                TAG = USA
+            }
+            name = acw_news.11.b
+        }
+        option = {
+            trigger = {
+                TAG = CSA 
+            }
+            name = acw_news.11.c
         }
 }

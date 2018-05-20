@@ -23,3 +23,12 @@ USA_reconstruction_monarch = {
 		NOT = { has_country_flag = USA_Reconstruction_Ended }
 	}
 }
+USA_american_civil_war_descision = {
+	icon = power_struggle
+
+	available = {
+		tag = USA
+		has_global_flag = ACWAmerican_Civil_War
+		has_war_with = CSA
+	}
+}
