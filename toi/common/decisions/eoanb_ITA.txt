@@ -39,6 +39,7 @@ form_italy_category = {
 			has_full_control_of_state = 156
 			has_full_control_of_state = 115
 			has_full_control_of_state = 114
+			has_completed_focus = PIE_Form_Italy
 		}
 
 		visible = {
@@ -51,52 +52,54 @@ form_italy_category = {
 				tag = TUS
 			}
 			NOT = { country_exists = ITA }
+			NOT = { date > 1857.1.1 }
+			#The Code above temporarily blocks the decision from existing until we figure out the unification properly
 		}
 
 		complete_effect = {
-			ITA = { 
-				annex_country = {
-					target = PIE
-					transfer_troops = yes
-				} 
-				158 = {
-					add_core_of = ITA
-				}
-				159 = {
-					add_core_of = ITA
-				}
-				808 = {
-					add_core_of = ITA
-				}
-				813 = {
-					add_core_of = ITA
-				}
-				162 = {
-					add_core_of = ITA
-				}
-				161 = {
-					add_core_of = ITA
-				}
-				157 = {
-					add_core_of = ITA
-				}
-				812 = {
-					add_core_of = ITA
-				}
-				117 = {
-					add_core_of = ITA
-				}
-				156 = {
-					add_core_of = ITA
-				}
-				115 = {
-					add_core_of = ITA
-				}
-				114 = {
-					add_core_of = ITA
-				}
-				change_tag_from = FROM
-			}
+			#ITA = { 
+			#	annex_country = {
+			#		target = PIE
+			#		transfer_troops = yes
+			#	} 
+			#	158 = {
+			#		add_core_of = ITA
+			#	}
+			#	159 = {
+			#		add_core_of = ITA
+			#	}
+			#	808 = {
+			#		add_core_of = ITA
+			#	}
+			#	813 = {
+			#		add_core_of = ITA
+			#	}
+			#	162 = {
+			#		add_core_of = ITA
+			#	}
+			#	161 = {
+			#		add_core_of = ITA
+			#	}
+			#	157 = {
+			#		add_core_of = ITA
+			#	}
+			#	812 = {
+			#		add_core_of = ITA
+			#	}
+			#	117 = {
+			#		add_core_of = ITA
+			#	}
+			#	156 = {
+			#		add_core_of = ITA
+			#	}
+			#	115 = {
+			#		add_core_of = ITA
+			#	}
+			#	114 = {
+			#		add_core_of = ITA
+			#	}
+			#	change_tag_from = FROM
+			#}
 		}
 
 		ai_will_do = {
@@ -186,6 +189,48 @@ ITA_Culture_category_decisions = {
 
 		cost = 100
 
-		}
-
 	}
+
+}
+
+ITA_decisions_category_formables = {
+	
+	eoanb_decision_ITA_formed_by_PIE = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			PIE = { has_completed_focus = PIE_Form_Italy }
+			PIE = { controls_state = 158 }
+			PIE = { controls_state = 159 }
+			PIE = { controls_state = 162 }
+			PIE = { controls_state = 117 }
+		}
+		
+		visible = {
+			TAG = PIE
+			NOT = { country_exists = ITA }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PIE_forms_ITA
+			hidden_effect = {
+				set_cosmetic_tag = PIE_focus_ITA
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = PIE
+			}
+		}
+		
+	}
+	
+}
