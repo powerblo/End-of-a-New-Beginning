@@ -14,7 +14,7 @@
     victorian_era
     agrarian
     no_heir
-    absolute_monarchy
+    parliamentary_monarchy
 
     civilian_economy
     limited_exports
@@ -23,7 +23,7 @@
 
     stagnation_growth
     border_control
-	volunteer_only
+	  volunteer_only
     limited_equality
     absolutism
 
@@ -32,11 +32,14 @@
 
     privileged_education
     state_religion
-	religion_catholic
+	  religion_catholic
          #NATIONAL SPIRITS
     
-	BEL_Leopold_I
-	BEL_flemish_tensions
+	  BEL_Leopold_I
+	  BEL_idea_flemish_tensions
+    BEL_idea_industrial_revolution
+    BEL_idea_treaty_of_london
+    BEL_idea_catholic_liberal_dichotomy
 	
   }
 
@@ -142,7 +145,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    name = "Leopold I"
+    name = "Léopold I"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_BEL_Leopold_I.dds"
     expire = 1870.11.9

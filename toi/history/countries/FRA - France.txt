@@ -31,13 +31,18 @@
 
     open_schools
     state_religion
-	religion_catholic
+	  religion_catholic
                     #NATIONAL SPIRITS
     FRA_idea_authoritarian_empire
     FRA_idea_republican_spirit
     FRA_idea_official_candidates_majority
     FRA_idea_censorships_press
     FRA_idea_amateur_tacticians
+  }
+
+  add_timed_idea = { 
+    idea = FRA_idea_aftermath_crimean_war 
+    days = 730 
   }
 
   if = {
@@ -110,11 +115,11 @@
   	gw_artillery = 1
   	improved_smoothbore = 1
   	early_howitzer = 1
-  	tech_naval_1830_frigate = 1
-  	tech_naval_1812_frigate = 1 
-	tech_naval_1812_troops = 1
-  	tech_naval_1855_frigate = 1
-  	early_balloon = 1
+  	foureight_frigate = 1
+  	tech_naval_1830_frigate = 1 
+    tech_naval_1812_frigate = 1  
+    tech_naval_1812_troops = 1 
+    tech_naval_1855_frigate = 1 
   }
 
   create_country_leader = {

@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		ENG_ideas_profits_australian_gold_rush = {
+		ENG_idea_profits_australian_gold_rush = {
 			allowed = {
 				always = no
 			}
@@ -15,6 +15,461 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.1
+			}
+		}
+
+		ENG_idea_british_industrial_revolution = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_british_industrial_revolution
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		ENG_idea_poor_worker_conditions = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+				political_power_factor = -0.2
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		ENG_idea_poorer_worker_conditions = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+				political_power_factor = -0.2
+				stability_weekly = 0.02
+				industrial_capacity_factory = 0.2
+			}
+		}
+
+		ENG_idea_better_worker_conditions = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		ENG_idea_sun_never_sets = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+				navy_max_range_factor = 0.25
+			}
+		}
+
+		ENG_idea_aftermath_orsini_affair = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_aftermath_orsini_affair
+			
+			modifier = {
+				political_power_factor = -0.45
+			}
+		}
+
+		ENG_idea_deregulated_coal_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_deregulated_coal_industry
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		ENG_idea_regulated_coal_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_regulated_coal_industry
+			
+			modifier = {
+				local_resources_factor = -0.05
+			}
+		}
+
+		ENG_idea_the_mourning_queen = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_the_mourning_queen
+			
+			modifier = {
+				
+			}
+		}
+
+		ENG_idea_dilke_political_reforms_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_dilke_political_reforms
+			
+			modifier = {
+				social_egalitarianism_drift = 0.05
+			}
+		}
+
+		ENG_idea_dilke_political_reforms_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_dilke_political_reforms
+			
+			modifier = {
+				social_egalitarianism_drift = 0.15
+			}
+		}
+
+		ENG_idea_dilke_administrative_reforms_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_dilke_administrative_reforms
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+
+		ENG_idea_dilke_administrative_reforms_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_dilke_administrative_reforms
+			
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+
+		ENG_idea_indian_colonial_federation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_indian_colonial_federation
+			
+			modifier = {
+				political_power_gain = -0.15
+			}
+		}
+
+		ENG_idea_raj_british_investments = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_raj_british_investments
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		ENG_idea_home_guards = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_home_guards
+			
+			modifier = {
+			}
+		}
+
+		ENG_idea_royal_navy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_royal_navy
+			
+			modifier = {
+			}
+		}
+
+		ENG_idea_international_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_international_trade
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		ENG_idea_british_oversight = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_british_oversight
+			
+			modifier = {
+			}
+		}
+
+		ENG_idea_profits_atlantic_slave_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_profits_atlantic_slave_trade
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.25
+			}
+		}
+
+		ENG_idea_british_csa_slave_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_british_csa_slave_trade
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		ENG_idea_caribbean_sea_trading = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_british_csa_slave_trade
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		ENG_idea_royal_charter_storm_fast = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_royal_charter_storm
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+
+		ENG_idea_royal_charter_storm_slow = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_royal_charter_storm
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+
+		ENG_idea_aftermath_crimean_war = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_royal_charter_storm
+			
+			modifier = {
+				war_support_factor = -0.25
 			}
 		}
 	}

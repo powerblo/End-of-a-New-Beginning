@@ -47,7 +47,15 @@
     #NATIONAL SPIRITS
 	
 	ENG_Victoria
+	ENG_idea_sun_never_sets
+	ENG_idea_british_industrial_revolution
+	ENG_idea_poor_worker_conditions
     
+  }
+
+  add_timed_idea = { 
+    idea = ENG_idea_aftermath_crimean_war 
+    days = 730 
   }
 
   set_politics = {
@@ -108,7 +116,7 @@
 		name = "William Lovett"
 		picture = "Portrait_ENG_William_Lovett.dds"
 		expire = "1877.1.1"
-		ideology = anarchism_sub
+		ideology = anarchism
 		traits = {
 
 		}
@@ -169,6 +177,7 @@
 		name = "Colin Campbell"
 		picture = "Portrait_ENG_Colin_Campbell.dds"
 		traits = { }
+		id = 18570000
 		skill = 3
 		attack_skill = 1
 		defense_skill = 1
@@ -287,61 +296,6 @@
 	create_corps_commander = {
         name = "Prince George Duke of Cambridge"
   		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-		create_corps_commander = {
-        name = "James Brudenell, 7th Earl of Cardigan"
-  		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-		create_corps_commander = {
-        name = "Hugh Gough, 1st Viscount Gough"
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-			create_corps_commander = {
-        name = "Henry Havelock"
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-			create_corps_commander = {
-        name = "George Bingham, 3rd Earl of Lucan"
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-			create_corps_commander = {
-        name = "Robert Napier, 1st Baron Napier of Magdala"
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-			create_corps_commander = {
-        name = "Sir Harry Smith, 1st Baronet"
   		traits = { }
   		skill = 2
   		attack_skill = 1
