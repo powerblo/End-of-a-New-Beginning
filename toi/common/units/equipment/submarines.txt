@@ -1,7 +1,7 @@
 equipments = {
 
 submarine = {
-  year = 1870
+  year = 1863
 
   is_archetype = yes
   is_buildable = no
@@ -11,25 +11,25 @@ submarine = {
   interface_category = interface_category_other_ships
 
   ap_attack = 0
-  attack = 0 # Their main weapon is torpedo_attack.
-  fire_range = 6
-  torpedo_attack = 10
+  attack = 0
+  fire_range = 3
+  torpedo_attack = 1
 
-  anti_air_attack = 0.5
+  anti_air_attack = 0
 
   armor_value = 0
-  evasion = 25
+  evasion = 10
 
-  surface_detection = 30
+  surface_detection = 10
   sub_detection = 0
-  surface_visibility = 10
-  sub_visibility = 30
-  naval_speed = 14
+  surface_visibility = 2
+  sub_visibility = 40
+  naval_speed = 5
   reliability = 0.60
 
-  naval_range = 2500
+  naval_range = 300
 
-  max_strength = 10
+  max_strength = 1
 
   port_capacity_usage = 0.5
 
@@ -42,8 +42,8 @@ submarine = {
   manpower = 200
 }
 
-  seventy_torpedo = {
-    year = 1870
+  equipment_1863_submarine = {
+    year = 1863
     archetype = submarine
 
     priority = 20
@@ -51,5 +51,42 @@ submarine = {
       submarine
     }
   }
+  
+  equipment_1873_submarine = {
+	year = 1873
+
+	archetype = submarine
+	parent = equipment_1863_submarine
+	priority = 40
+	
+	ap_attack = 0
+	attack = 0
+	fire_range = 4
+	torpedo_attack = 4
+	
+	anti_air_attack = 0
+	
+	armor_value = 0
+	evasion = 12
+	
+	surface_detection = 14
+	surface_visibility = 2
+	sub_visibility = 30
+	naval_speed = 7
+	reliability = 0.7
+
+	naval_range = 500
+	
+	max_strength = 3
+	
+	build_cost_ic = 1700
+	resources = {
+		coal = 1
+		steel = 2
+	}
+	type = { 
+		submarine
+	}		
+	}
 
 }
