@@ -2,9 +2,9 @@
 state={
 	id=18
 	name="STATE_18"
-	manpower = 786000
-	
-	state_category = city
+	resources={
+		wood=2.000
+	}
 
 	history={
 		owner = FRA
@@ -22,15 +22,16 @@ state={
 		}
 		buildings = {
 			infrastructure = 4
+
 		}
 		add_core_of = FRA
-	}
-	
-	resources = {
-		wood = 2
+
 	}
 
 	provinces={
-		551 3533 3546 3560 5291 6531 6545 9472 9490 9505 11732 13011 
+		551 3533 3546 3560 6531 6545 9472 9490 9505 11732 13011 
 	}
+	manpower=786000
+	buildings_max_level_factor=1.000
+	state_category=city
 }

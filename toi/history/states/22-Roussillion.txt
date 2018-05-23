@@ -1,16 +1,11 @@
 
 state={
 	id=22
-	name="STATE_22" # Languedoc
-	manpower = 1016192
-	
-	
-	state_category = town
-	
+	name="STATE_22"
 	resources={
-		steel=27
-		aluminium=20
-		wood=15
+		steel=27.000
+		aluminium=16.000
+		wood=10.000
 	}
 
 	history={
@@ -21,11 +16,16 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+
 		}
 		add_core_of = FRA
+
 	}
 
 	provinces={
-		752 760 3751 6770 6960 6962 9723 9898 11709 11711 11877 
+		760 3946 6770 6915 6917 6931 6960 9853 9898 11711 11877 
 	}
+	manpower=751672
+	buildings_max_level_factor=1.000
+	state_category=town
 }
