@@ -53,7 +53,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = democratic
+			has_government = centrism
 		}		
 	}	
 }
@@ -66,7 +66,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = democratic
+			has_government = centrism
 		}		
 	}	
 }
@@ -79,7 +79,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -92,7 +92,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -131,7 +131,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -144,7 +144,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -157,7 +157,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -170,7 +170,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = fascism
+			has_government = autocracy
 		}		
 	}	
 }
@@ -183,7 +183,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = democratic
+			has_government = centrism
 		}		
 	}	
 }
@@ -196,7 +196,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = democratic
+			has_government = centrism
 		}		
 	}	
 }
@@ -209,7 +209,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -222,7 +222,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -235,7 +235,7 @@ music = {
 			factor = 2
 
 			has_war = no
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -249,7 +249,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -262,7 +262,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -275,7 +275,7 @@ music = {
 			factor = 2
 
 			has_war = yes
-			has_government = communism
+			has_government = vanguard_communism
 		}		
 	}	
 }
@@ -357,11 +357,19 @@ music = {
 			
 			NOT = { has_global_flag = is_eoanb_music_custom_true }
 		}
-		#modifier = {
-		#	factor = 0
-		#	
-		#	NOT = { has_idea = victorian_era }
-		#}
+		modifier = {
+			factor = 0
+		
+			NOT = { 
+				OR = {
+					has_idea = pre_industrial_era
+					has_idea = victorian_era 
+					has_idea = machine_era
+					has_idea = oil_era
+					has_idea = aviation_era
+				}
+			}
+		}
 	}
 }
 
@@ -379,11 +387,19 @@ music = {
 			
 			NOT = { has_global_flag = is_eoanb_music_custom_true }
 		}
-		#modifier = {
-		#	factor = 0
-		#	
-		#	NOT = { has_idea = victorian_era }
-		#}
+		modifier = {
+			factor = 0
+		
+			NOT = { 
+				OR = {
+					has_idea = pre_industrial_era
+					has_idea = victorian_era 
+					has_idea = machine_era
+					has_idea = oil_era
+					has_idea = aviation_era
+				}
+			}
+		}
 	}
 }
 
@@ -401,11 +417,19 @@ music = {
 			
 			NOT = { has_global_flag = is_eoanb_music_custom_true }
 		}
-		#modifier = {
-		#	factor = 0
-		#	
-		#	NOT = { has_idea = victorian_era }
-		#}
+		modifier = {
+			factor = 0
+		
+			NOT = { 
+				OR = {
+					has_idea = pre_industrial_era
+					has_idea = victorian_era 
+					has_idea = machine_era
+					has_idea = oil_era
+					has_idea = aviation_era
+				}
+			}
+		}
 	}
 }
 

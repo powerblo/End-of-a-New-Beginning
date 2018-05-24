@@ -375,10 +375,6 @@ country_event = { # Franco-Monegasque Treaty
 
   is_triggered_only = yes
 
-  mean_time_to_happen = {
-      days = 120
-  }
-
   option = { # As small as it is, Monaco will be a great partner!
     name = nap_france.15.a
     add_political_power = 25
@@ -392,10 +388,6 @@ country_event = { # Cobden-Chevalier Treaty
   picture = GFX_report_event_nap_france_carbonari
 
   is_triggered_only = yes
-
-  mean_time_to_happen = {
-      days = 120
-  }
 
   option = { # It's a deal
     name = nap_france.16.a
@@ -427,10 +419,6 @@ country_event = { # Cobden-Chevalier Treaty - France Notification - Yes
 
   is_triggered_only = yes
 
-  mean_time_to_happen = {
-      days = 120
-  }
-
   option = { # Fantastique !
     name = nap_france.17.a
     add_political_power = 50
@@ -445,10 +433,6 @@ country_event = { # Cobden-Chevalier Treaty - France Notification - No
 
   is_triggered_only = yes
 
-  mean_time_to_happen = {
-      days = 120
-  }
-
   option = { # Too bad
     name = nap_france.18.a
     add_political_power = -15
@@ -462,10 +446,6 @@ country_event = { # Reaction to the American Civil War
   picture = GFX_report_event_nap_france_carbonari
 
   is_triggered_only = yes
-
-  mean_time_to_happen = {
-      days = 120
-  }
 
   option = { # Neutral Stance
     name = nap_france.19.a
@@ -562,7 +542,7 @@ country_event = { # Creation of the Compagnie universelle du canal maritime de S
   option = { # Invest
     name = nap_france.101.a
     add_political_power = 50
-    add_ideas = FRA_suez_investments
+    #add_ideas = FRA_suez_investments
   }
 
   option = { # No
@@ -1053,7 +1033,7 @@ country_event = { # Prussian Conditions
       }
     }
     set_country_flag = fra_prs_war_defeat
-    add_ideas = FRA_unstable_government
+    #add_ideas = FRA_unstable_government
     }
     option = {
       name = nap_france.303.b # Refuse
@@ -1332,6 +1312,8 @@ country_event = { # Treaty of Luxemburg - Victory
       controls_state = 64
     }
   }
+  
+  fire_only_once = yes
 
   option = { # France fully annex Luxemburg
       name = nap_france.320.a
@@ -1618,14 +1600,12 @@ country_event = { # France - Answer No - Treaty of Turin
   option = { # It's treason then
     name = nap_france.345.a 
     ai_chance = { factor = 95 }
-    completion_reward = {
       add_state_claim = 735
       add_state_claim = 812
       declare_war_on= { 
         target = PIE
         type = take_claimed_state 
       }
-    }
   }
 
   option = { # Abandon our claims 
@@ -1749,17 +1729,8 @@ country_event = { # Capture of Mexico City
   fire_only_once = yes
 
   trigger = {
-    OR = {
-      random_country = {
-        limit = {
-          original_tag = MEX
-          NOT = { tag = MEX }
-        }
-        controls_state = 277
-      }
-      FRA = {
-        controls_state = 277
-      }
+    FRA = {
+		controls_state = 277
     }
   }
 
@@ -1778,17 +1749,8 @@ country_event = { # Arrival of Maximilian-Ferdinand
   fire_only_once = yes
 
   trigger = {
-    OR = {
-      random_country = {
-        limit = {
-          original_tag = MEX
-          NOT = { tag = MEX }
-        }
-        controls_state = 277
-      }
-      FRA = {
-        controls_state = 277
-      }
+    FRA = {
+		controls_state = 277
     }
   }
 
@@ -2538,17 +2500,17 @@ country_event = { # Republican Uprising
   
   is_triggered_only = yes
 
-  trigger = {
-    tag = FRA
-    autocracy > 0.9
-    has_country_flag = fra_demanded_more_liberty
-  }
+  #trigger = {
+  # tag = FRA
+  #  autocracy > 0.9
+  #  has_country_flag = fra_demanded_more_liberty
+  #}
 
-  mean_time_to_happen = {
-    days = 300
-  }
+  #mean_time_to_happen = {
+  #  days = 300
+  #}
 
-  fire_only_once = yes
+  #fire_only_once = yes
 
   option = { # Send the Army
     name = nap_france.382.a
@@ -2586,19 +2548,19 @@ country_event = { # Legitimist Uprising
   
   is_triggered_only = yes
 
-  mean_time_to_happen = {
-    days = 300
-  }
+  #mean_time_to_happen = {
+  #  days = 300
+  #}
 
-  trigger = {
-    tag = FRA
-    OR = {
-      centrism > 0.25
-      traditional_conservatism > 0.25
-    }
-  }
+  #trigger = {
+  #  tag = FRA
+  #  OR = {
+  #    centrism > 0.25
+  #    traditional_conservatism > 0.25
+  #  }
+  #}
 
-  fire_only_once = yes
+  #fire_only_once = yes
 
   option = { # Send the Army
     name = nap_france.383.a
@@ -2760,7 +2722,7 @@ country_event = { # Death of Napoleon III
         picture = "Portrait_FRA_Napoleon_IV.dds"
         ideology = despotism
       }
-      hidden = {
+      hidden_effect = {
           news_event = { days = 10 id = nap_france.399 }
       }
       set_country_flag = fra_nap_iv

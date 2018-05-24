@@ -904,7 +904,7 @@ focus_tree = {
 			global_every_army_leader = { 
 				limit = { 
 					OWNER = { tag = ENG } 
-					id = 18570000
+					#id = 18570000
 				} 
 				set_nationality = RAJ 
 			}
@@ -1321,9 +1321,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_great_game
 		}
-		mutually_exclusive = {
-			focus = ENG_second_anglo_persian_war
-		}
+		#mutually_exclusive = {
+		#	focus = ENG_second_anglo_persian_war
+		#}
 		x = 44
 		y = 3
 		completion_reward = {

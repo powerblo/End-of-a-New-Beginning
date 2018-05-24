@@ -20,7 +20,7 @@ country_event = { # Negiotiate with the western powers ?
     }
   }
 
-  fire_only_one = yes
+  fire_only_once = yes
 
   option = { # Autorize Negiotiations
     name = second_opium_war.1.a
@@ -138,7 +138,7 @@ country_event = { # The terms of the Tianjin Treaty
       country_event = { id = second_opium_war.5 }
     }
     add_political_power = 50
-    custom_tooltip = sow_tianjin_1_tooltip
+    custom_effect_tooltip = sow_tianjin_1_tooltip
   }
 
   option = { # Divert part of China's income into Indochina and the Raj, give total freedom of travel into the Chinese Sea
@@ -151,7 +151,7 @@ country_event = { # The terms of the Tianjin Treaty
       country_event = { id = second_opium_war.6 }
     }
     add_political_power = -100
-    custom_tooltip = sow_tianjin_2_tooltip
+    custom_effect_tooltip = sow_tianjin_2_tooltip
   }
 }
 
@@ -290,6 +290,8 @@ country_event = { # Chinese Profits in the Raj
       }
     }
   }
+  
+  fire_only_once = yes
 
   option = {
     name = second_opium_war.11.a
@@ -316,6 +318,8 @@ country_event = { # Chinese Profits in Indochina
       }
     }
   }
+  
+  fire_only_once = yes
 
   option = {
     name = second_opium_war.12.a

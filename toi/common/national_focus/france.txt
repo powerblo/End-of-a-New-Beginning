@@ -573,7 +573,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = tech_naval_1861_frigate _bonus
+				name = tech_naval_1861_frigate_bonus
 				bonus = 0.5
 				uses = 1
 				technology = tech_naval_1861_frigate 
@@ -592,12 +592,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			29 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -605,12 +599,6 @@ focus_tree = {
 				}
 			}
 			15 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -618,12 +606,6 @@ focus_tree = {
 				}
 			}
 			18 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -717,17 +699,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						region = 19
-						region = 20
-					}					
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -736,17 +707,6 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						region = 19
-						region = 20
-					}					
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -999,7 +959,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			CSA = {
-				add_ideas = CSA_recognized_france
 				add_opinion_modifier = {
 					target = FRA
 					modifier = fra_recognition_csa
@@ -1145,27 +1104,23 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_mexico_victory
 		}
-		available = {
-			has_idea = FRA_mexican_disaster
-		}
+		#available = {
+		#	has_idea = FRA_mexican_disaster
+		#}
 		completion_reward = {
 			add_political_power = -50
 			add_stability = -0.1
-			remove_ideas = FRA_mexican_disaster
+			#remove_ideas = FRA_mexican_disaster
 			FRA = {
 		        white_peace = {
 		        	tag = MEX
 		        }
 		    }
-		    random_country = {
-		    	limit = {
-		    		original_tag = MEX
-		    		tag = MEX
-		    	}
-		    	MEX = {
-		    		annex = PREV
-		    	}
-		    }
+		    #random_country = {
+		    #	MEX = {
+		    #		annex = PREV
+		    #	}
+		    #}
 		}
 		x = 34
 		y = 5

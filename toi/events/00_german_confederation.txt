@@ -212,22 +212,18 @@ country_event = {
 		add_political_power = 10
 		custom_effect_tooltip = eoanb_tt_event_gerconfed_7_yes
 		hidden_effect = {
-			add_opinion_modifier = { 
-				target = all_country = {
-					limit = {
-						has_idea = GER_general_idea_ger_confed
-					}
-				}
-				modifier = eoanb_om_gerconfed_7
-			}
-			reverse_add_opinion_modifier = { 
-				target = all_country = {
-					limit = {
-						has_idea = GER_general_idea_ger_confed
-					}
-				}
-				modifier = eoanb_om_gerconfed_7
-			}
+			#all_country = {
+			#	limit = {
+			#		has_idea = GER_general_idea_ger_confed
+			#	}
+			#	add_opinion_modifier = { target = PREV modifier = eoanb_om_gerconfed_7 }
+			#}
+			#all_country = {
+			#	limit = {
+			#		has_idea = GER_general_idea_ger_confed
+			#	}
+			#	reverse_add_opinion_modifier = { target = PREV modifier = eoanb_om_gerconfed_7 }
+			#}
 			country_event = { days = 3 id = gerconfed.14 }
 		}
 	}
