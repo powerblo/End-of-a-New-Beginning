@@ -661,14 +661,15 @@ music = {
 			NOT = { has_global_flag = is_eoanb_music_custom_true }
 		}
 		modifier = {
-			factor = 0
-			
-			date < 1861.1.1
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1
 			
 			TAG = USA
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = USA
+			has_war_with = CSA
 		}
 	}
 }
