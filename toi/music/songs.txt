@@ -818,3 +818,33 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "eoanb_peace_6"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+		
+			NOT = { 
+				OR = {
+					has_idea = pre_industrial_era
+					has_idea = victorian_era 
+					has_idea = machine_era
+					has_idea = oil_era
+					has_idea = aviation_era
+				}
+			}
+		}
+	}
+}
