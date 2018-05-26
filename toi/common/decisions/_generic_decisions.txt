@@ -926,6 +926,75 @@ foreign_politics = {
 		}
 	}
 	
+	#Rename Königsberg to Kaliningrad
+	eoanb_decision_generic_rename_kaliningrad = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+		}
+		
+		visible = {
+			TAG = RUS
+			RUS = { owns_state = 1001 }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			set_province_name = { id = 6332 name = "Kaliningrad" }
+			1001 = { set_state_name = "Kaliningrad" }
+			hidden_effect = {
+				set_global_flag = eoanb_flag_konigsberg_renamed_kaliningrad
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Rename Kaliningrad to Königsberg
+	eoanb_decision_generic_rename_konigsberg = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+		}
+		
+		visible = {
+			has_global_flag = eoanb_flag_konigsberg_renamed_kaliningrad
+			OR = {
+				TAG = PRS
+				TAG = GER
+			}
+			OR = {
+				PRS = { owns_state = 1001 }
+				GER = { owns_state = 1001 }
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			set_province_name = { id = 6332 name = "Königsberg" }
+			1001 = { set_state_name = "Königsberg" }
+			hidden_effect = {
+				clr_global_flag = eoanb_flag_konigsberg_renamed_kaliningrad
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }
 
 tribal_decisions_eoanb = {
