@@ -222,5 +222,19 @@ ideas = {
 				experience_gain_army = 0.01
 			}
 		}
+		AF_T_great_harvest = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+				MONTHLY_POPULATION = 0.08
+			}
+		}
 	}
 }

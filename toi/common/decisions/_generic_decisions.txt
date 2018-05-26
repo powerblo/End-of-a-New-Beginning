@@ -501,6 +501,7 @@ internal_politics_eoanb = {
 		
 		visible = {
 			OR = {
+				has_idea = pre_industrial_era
 				has_idea = victorian_era
 				has_idea = machine_era
 				has_idea = oil_era
@@ -922,6 +923,41 @@ foreign_politics = {
 		
 		ai_will_do = {
 			base = 1000
+		}
+	}
+	
+}
+
+tribal_decisions_eoanb = {
+	
+	eoanb_decision_generic_recruit_tribal_warriors = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			NOT = { has_idea = disarmed_nation }
+		}
+		
+		visible = {
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 180
+		
+		cost = 25
+		
+		complete_effect = {
+			add_manpower = 20
+		}
+		
+		ai_will_do = {
+			base = 1
 		}
 	}
 	
