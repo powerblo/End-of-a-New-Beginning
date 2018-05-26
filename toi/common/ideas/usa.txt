@@ -15,7 +15,6 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				stability_factor = -0.05
 			}
 		}
 	}
@@ -37,7 +36,7 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				stability_factor = -0.1
+				stability_factor = -0.2
 			}
 		}
 	}
@@ -59,7 +58,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			
 			modifier = {
-				stability_factor = -0.25
+				stability_factor = -0.4
 			}
 		}
 	}
@@ -98,8 +97,9 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-				political_power_gain = -0.1
-				}
+				political_power_factor = -0.15
+				war_support_factor = -0.1
+			}
 		}
 	}
 }
@@ -115,7 +115,7 @@ ideas = {
 			picture = generic_spy_coup
 			
 			modifier = {
-				political_power_gain = -0.05
+				political_power_factor = -0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_speed_buildings_factor = -0.1
 				industrial_capacity_factory = -0.1
@@ -135,7 +135,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				industrial_capacity_factory = -0.1
 				production_factory_efficiency_gain_factor = -0.5
 				}
@@ -174,6 +174,7 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
+				consumer_goods_factor = -0.05
 				}
 		}
 	}
@@ -319,10 +320,6 @@ ideas = {
 			
 			modifier = {
 				army_org_Factor = -0.1
-				army_defence_factor = -0.20
-				army_attack_factor = -0.20
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
 				army_speed_factor = -0.1
 				planning_speed = -0.1
 			}
