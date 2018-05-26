@@ -1334,10 +1334,10 @@ country_event = { # The Government of India Act
 			add_stability = 0.25
 		}
 		hidden_effect = {
-			news_event = {
-				id = vbritain_news.1
-				days = 1
-			}
+			#news_event = {
+			#	id = vbritain_news.1
+			#	days = 1
+			#}
 		}
 	}
 }
@@ -2283,19 +2283,19 @@ country_event = { 	#Fights in the streets of London
 	}
 }
 
-news_event = { #The British Raj
-	id = vbritain_news.1
-	title = vbritain_news.1.t
-	desc = vbritain_news.1.d
-
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = vbritain_news.1.a
-	}
-}
+#news_event = { #The British Raj
+#	id = vbritain_news.1
+#	title = vbritain_news.1.t
+#	desc = vbritain_news.1.d
+#
+#	major = yes
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = vbritain_news.1.a
+#	}
+#}
 
 news_event = { #The British civil war
 	id = vbritain_news.10

@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+	CSA_Civil_War_Scout_Dependency = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_army_corruption
+			
+			modifier = {
+				army_core_attack_factor = 0.30
+				army_core_defence_factor = 0.30
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		}
+	}
+}
