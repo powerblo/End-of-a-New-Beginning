@@ -501,16 +501,8 @@ country_event = {
 		is_triggered_only = yes
 		
 		option = {
-				name = usa.11.a
-				create_country_leader = {
-					name = "Abraham Lincoln"
-					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-					picture = "Portrait_USA_Abraham_Lincoln.dds"
-					expire = "1886.5.2"
-					ideology = conserv_liberal
-					traits = {
-				}
-			}
+			name = usa.11.a
+			set_politics = { ruling_party = centrism }
 			hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
 		}
 }
@@ -527,6 +519,9 @@ country_event = {
 		
 		option = {
 				name = usa.12.a
+				set_politics = { ruling_party = centrism }
+				set_party_name = { ideology = centrism long_name = USA_northern_democrats name = USA_northern_democrats }
+				set_party_name = { ideology = traditional_conservatism long_name = USA_southern_democrats name = USA_southern_democrats }
 				create_country_leader = {
     				name = "Stephen A. Douglas"
     				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -1280,6 +1275,7 @@ country_event = {
                     	has_war_support < 0.25
                 	}
 				}
+			set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
 			set_country_flag = USA_Douglas1864
 
 		}
@@ -1321,6 +1317,7 @@ country_event = {
                 	}
 				}
 			set_country_flag = USA_McClellanElected
+			set_party_name = { ideology = traditional_conservatism long_name = USA_copperhead_democrats name = USA_copperhead_democrats }
 			hidden_effect = { USA = { country_event = { days = 175 id = usa.37 } } }
 		}
 }
@@ -1337,6 +1334,7 @@ country_event = {
 		
 		option = {
 				name = usa.37.a
+				set_politics = { ruling_party = traditional_conservatism }
 				create_country_leader = {
     				name = "George B. McClellan"
     				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -1387,6 +1385,7 @@ country_event = {
                     	is_historical_focus_on = yes
                 	}
             }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
 		}
 		option = {
 			name = usa.38.b
@@ -1396,6 +1395,8 @@ country_event = {
 			ai_chance = {
 					factor = 50
             }
+            set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
 		}
 		option = {
 			name = usa.38.c
@@ -1406,6 +1407,8 @@ country_event = {
                 	is_historical_focus_on = yes
                 }
             }
+            set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
             set_country_flag = USA_SeymourElected
             hidden_effect = { USA = { country_event = { days = 175 id = usa.39 } } }
 		}
@@ -1423,10 +1426,11 @@ country_event = {
 		
 		option = {
 				name = usa.39.a
+				set_politics = { ruling_party = traditional_conservatism }
 				create_country_leader = {
-    				name = "Thomas H. Seymour"
+    				name = "George H. Pendleton"
     				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    				picture = ""
+    				picture = "Portrait_USA_George_Pendleton.dds"
     				expire = "1947.1.1"
     				ideology = federal
   				}
