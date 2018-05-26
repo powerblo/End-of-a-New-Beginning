@@ -119,7 +119,13 @@ ideas = {
 			picture = GFX_idea_atheistic_state
 			
 			available = {
-				
+				NOT = {
+					OR = {
+						has_idea = AF_T_unorganized_tribal_nation
+						has_idea = AF_T_organized_tribal_nation
+						has_idea = AF_T_small_kingdom
+					}
+				}
 			}
 
 			modifier = {
@@ -141,7 +147,13 @@ ideas = {
 			picture = GFX_idea_secular_state
 			
 			available = {
-				
+				NOT = {
+					OR = {
+						has_idea = AF_T_unorganized_tribal_nation
+						has_idea = AF_T_organized_tribal_nation
+						has_idea = AF_T_small_kingdom
+					}
+				}
 			}
 
 			ai_will_do = {
@@ -169,7 +181,13 @@ ideas = {
 			picture = GFX_idea_state_religion
 
 			available = {
-				
+				NOT = {
+					OR = {
+						has_idea = AF_T_unorganized_tribal_nation
+						has_idea = AF_T_organized_tribal_nation
+						has_idea = AF_T_small_kingdom
+					}
+				}
 			}
 
 			modifier = {
@@ -192,7 +210,13 @@ ideas = {
 		theocratic_state = {
 			
 			available = {
-				
+				NOT = {
+					OR = {
+						has_idea = AF_T_unorganized_tribal_nation
+						has_idea = AF_T_organized_tribal_nation
+						has_idea = AF_T_small_kingdom
+					}
+				}
 			}
 
 			ai_will_do = {

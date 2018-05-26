@@ -1,0 +1,85 @@
+﻿add_namespace = africa
+
+#Religious Influence from Neighbor Country
+country_event = {
+	id = africa.1
+	title = africa.1.t
+	desc = africa.1.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.1.a
+		ai_chance = { factor = 50 }
+		add_political_power = -150
+	}
+	
+	option = {
+		name = africa.1.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.05
+	}
+}
+
+#Unorganized Tribal State picks Religious Denomination
+country_event = {
+	id = africa.2
+	title = africa.2.t
+	desc = africa.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.2.a
+		ai_chance = { factor = 50 }
+		add_political_power = 50
+		custom_effect_tooltip = eoanb_tt_event_africa_2_a
+		hidden_effect = {
+			swap_ideas = { remove_idea = religion_animist add_idea = religion_sunni }
+		}
+	}
+	
+	option = {
+		name = africa.2.b
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		custom_effect_tooltip = eoanb_tt_event_africa_2_b
+		hidden_effect = {
+			swap_ideas = { remove_idea = religion_animist add_idea = religion_coptic }
+		}
+	}
+	
+	option = {
+		name = africa.2.c
+		ai_chance = { factor = 20 }
+		add_political_power = -25
+		custom_effect_tooltip = eoanb_tt_event_africa_2_c
+	}
+}
+
+#Unorganized Tribal State establishes Borders
+country_event = {
+	id = africa.3
+	title = africa.3.t
+	desc = africa.3.d
+	picture = GFX_report_event_chinese_soldiers_mountain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.3.a
+		ai_chance = { factor = 70 }
+		add_political_power = -25
+		swap_ideas = { remove_idea = no_borders add_idea = open_borders }
+	}
+	
+	option = {
+		name = africa.3.b
+		ai_chance = { factor = 30 }
+		add_political_power = -100
+		swap_ideas = { remove_idea = no_borders add_idea = closed_borders }
+	}
+	
+}
