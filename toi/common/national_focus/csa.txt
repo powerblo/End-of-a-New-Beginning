@@ -1,0 +1,546 @@
+focus_tree = {
+	id = csa
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CSA
+		}
+	}
+	default = no
+	focus = {
+		id = CSA_proclaim_confederacy
+		icon = GFX_goal_focus_confederate_collaboration
+		cost = 10
+		x = 5
+		y = 0
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CSA_civil_war_sumter
+		icon = GFX_goal_focus_american_civil_war
+		cost = 10
+		prerequisite = {
+			focus = CSA_proclaim_confederacy
+		}
+		available = {
+			has_country_flag = CSA_fort_sumter
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = CSA_civil_war_to_arms
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_sumter
+		}
+		available = {
+			has_country_flag = CSAAmerican_Civil_War
+		}
+		bypass = {
+			has_country_flag = CSAAmerican_Civil_War
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = 01_CSA_War
+		}
+	}
+	focus = {
+		id = CSA_civil_war_military
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_to_arms
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			army_experience = 10
+			add_command_power = 10
+		}
+	}
+	focus = {
+		id = CSA_civil_war_research
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_military
+		}
+		x = 1
+		y = 4
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+	focus = {
+		id = CSA_military_john_porter
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_military
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = frigate_tech }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_industry
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_to_arms
+		}
+		x = 5
+		y = 3
+		completion_reward = {
+			add_timed_idea = { idea = CSA_Civil_War_Industry1 days = 140 }
+		}
+	}
+	focus = {
+		id = CSA_industry_war
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_industry
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_docks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = {
+			focus = CSA_industry_war
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_timed_idea = { idea = CSA_Civil_War_Industry2 days = 140 }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_civilian
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_docks
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_rails
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_docks
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_tradition
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_civilian
+		}
+		prerequisite = {
+			focus = CSA_civil_war_rails
+		}
+		x = 5
+		y = 7
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_might
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_tradition
+		}
+		x = 5
+		y = 8
+		completion_reward = {
+			add_timed_idea = { idea = CSA_Civil_War_Industry3 days = 365 }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_capital
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_to_arms
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			set_capital = 362
+		}
+	}
+	focus = {
+		id = CSA_civil_war_support
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_capital
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = CSA_civil_war_britain
+		icon = GFX_goal_focus_ally_ENG
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_support
+		}
+		x = 7
+		y = 5
+		completion_reward = {
+			ENG = { add_opinion_modifier = { target = CSA modifier = CSA_collaboration } }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_france
+		icon = GFX_goal_focus_ally_FRA
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_support
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+			FRA = { add_opinion_modifier = { target = CSA modifier = CSA_collaboration } }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_invite
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_britain
+		}
+		prerequisite = {
+			focus = CSA_civil_war_france
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			if = {
+				limit = {
+					ENG = { NOT = { has_war_with = USA } }
+				}
+				ENG = { country_event = { id = acw.24 } }
+			}
+			if = {
+				limit = {
+					FRA = { NOT = { has_war_with = USA } }
+				}
+				FRA = { country_event = { id = acw.24 } }
+			}
+			if = {
+				limit = {
+					PRS = { exists = yes }
+				}
+				PRS = { country_event = { id = acw.24 } }
+			} 
+			if = {
+				limit = {
+					GER = { exists = yes }
+				}
+				GER = { country_event = { id = acw.24 } }
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_downplay
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_invite
+		}
+		x = 7
+		y = 7
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CSA_civil_war_volunteers
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_invite
+		}
+		x = 9
+		y = 7
+		completion_reward = {
+			add_manpower = 5000
+		}
+	}
+	focus = {
+		id = CSA_civil_war_plead
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_downplay
+		}
+		prerequisite = {
+			focus = CSA_civil_war_volunteers
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_manpower = 5000
+		}
+	}
+	focus = {
+		id = CSA_civil_war_recruit
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_research
+		}
+		x = 1
+		y = 5
+		completion_reward = {
+			add_ideas = { CSA_Civil_War_Conscription }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_css_virginia
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = CSA_military_john_porter
+		}
+		x = 3
+		y = 5
+		available = {
+			has_tech = tech_naval_1861_frigate
+		}
+		completion_reward = {
+			custom_effect_tooltip = 01_CSA_CSS_Virginia
+			hidden_effect = { load_oob = CSA_CSS_VIRGINIA }
+		}
+	}
+	focus = {
+		id = CSA_civil_war_scouting
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_recruit
+		}
+		prerequisite = {
+			focus = CSA_civil_war_css_virginia
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = CSA_civil_war_scouting_yes
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_scouting
+		}
+		mutually_exclusive = {
+			focus = CSA_civil_war_scouting_no
+		}
+		x = 1
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CSA_Civil_War_Scout_Dependency
+				add_idea = CSA_Civil_War_Scout_Dependency2
+			}
+		}
+	}
+	focus = {
+		id = CSA_civil_war_scouting_no
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_scouting
+		}
+		mutually_exclusive = {
+			focus = CSA_civil_war_scouting_yes
+		}
+		x = 3
+		y = 7
+		completion_reward = {
+			remove_ideas = CSA_Civil_War_Scout_Dependency
+		}
+	}
+	focus = {
+		id = CSA_military_total_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_scouting_no
+			focus = CSA_civil_war_scouting_yes
+		}
+		x = 2
+		y = 8
+		completion_reward = {
+			add_ideas = CSA_Civil_War_Total_War
+		}
+	}
+	focus = {
+		id = CSA_civil_war_victory
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = CSA_military_total_war
+		}
+		prerequisite = {
+			focus = CSA_civil_war_might
+		}
+		prerequisite = {
+			focus = CSA_civil_war_plead
+		}
+		mutually_exclusive = {
+			focus = CSA_civil_war_defeat
+		}
+		available = {
+			has_country_flag = CSAIndependence_Won
+		}
+		bypass = {
+			has_country_flag = CSAIndependence_Won
+		}
+		x = 2
+		y = 9
+		completion_reward = {
+			custom_effect_tooltip = 01_CSA_War_Result
+			custom_effect_tooltip = 01_CSA_EndUpdate
+		}
+	}
+	focus = {
+		id = CSA_civil_war_defeat
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = CSA_civil_war_plead
+		}
+		prerequisite = {
+			focus = CSA_civil_war_might
+		}
+		prerequisite = {
+			focus = CSA_military_total_war
+		}
+		mutually_exclusive = {
+			focus = CSA_civil_war_victory
+		}
+		available = {
+			has_country_flag = CSAIndependence_Loss
+		}
+		bypass = {
+			has_country_flag = CSAIndependence_Loss
+		}
+		x = 8
+		y = 9
+		completion_reward = {
+			custom_effect_tooltip = 02_CSA_War_Result
+			custom_effect_tooltip = 01_CSA_EndUpdate
+		}
+	}
+}
