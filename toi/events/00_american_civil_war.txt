@@ -220,6 +220,7 @@ country_event = {
         clr_global_flag = ACWAmerican_Civil_War
         set_country_flag = USASoaring_Eagle
         add_ideas = USA_recovery
+        remove_ideas = USA_Civil_War
         hidden_effect = { news_event = { id = acw_news.6 } }
         hidden_effect = { CSA = { country_event = { id = acw.7 } } }
         delete_unit_template_and_units = { division_template = "Union Regimental" }
@@ -233,6 +234,8 @@ country_event = {
         name = acw.7.b
         custom_effect_tooltip = 06_ACW_tt
         delete_unit_template_and_units = { division_template = "Confederate Regimental" }
+        remove_ideas = USA_Civil_War
+        remove_ideas = CSA_Civil_War_Scout_Dependency
         set_stability = 0
         set_war_support = 0
     }
@@ -263,6 +266,7 @@ country_event = {
         name = acw.8.a
         custom_effect_tooltip = 07_ACW_tt
         set_country_flag = USABroken_Eagle
+        remove_ideas = USA_Civil_War
         add_ideas = USA_recovery
         delete_unit_template_and_units = { division_template = "Union Regimental" }
     }
@@ -273,6 +277,8 @@ country_event = {
         hidden_effect = { news_event = { id = acw_news.7 } }
         name = acw.8.b
         custom_effect_tooltip = 07_ACW_tt
+        remove_ideas = USA_Civil_War
+        remove_ideas = CSA_Civil_War_Scout_Dependency
         hidden_effect = { white_peace = USA }
         hidden_effect = { ENG = { white_peace = USA } }
         hidden_effect = { FRA = { white_peace = USA } }
@@ -747,6 +753,8 @@ country_event = {
     desc = acw.19.d
     picture = GFX_report_event_german_reichstag_gathering
     
+    fire_only_once = yes
+
     trigger = {
         tag = USA
         USA = { has_war_with = CSA }
@@ -782,6 +790,8 @@ country_event = {
     title = acw.20.t
     desc = acw.20.d
     picture = GFX_report_event_german_reichstag_gathering
+    
+    fire_only_once = yes
     
     trigger = {
         tag = USA
@@ -819,6 +829,8 @@ country_event = {
     desc = acw.21.d
     picture = GFX_report_event_german_reichstag_gathering
     
+    fire_only_once = yes
+
     trigger = {
         tag = USA
         USA = { has_war_with = CSA }
