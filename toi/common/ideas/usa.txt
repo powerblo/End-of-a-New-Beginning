@@ -1172,3 +1172,251 @@ ideas = {
 		}
 	}
 }
+
+### Ministers ###
+ideas = {
+	political_advisor = {
+		USA_william_h_seward = {
+			
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		USA_salmon_p_chase = {
+			
+			picture = generic_political_advisor_europe_5
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		USA_hugh_mcculloch = {
+			
+			picture = generic_political_advisor_europe_6
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		USA_william_p_fessenden = {
+			
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { war_industrialist_1 }
+		}
+
+		USA_donald_nelson = {
+			
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { armaments_organizer }
+		}
+	}
+	army_chief = {
+		
+	
+		ulysses_grant = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		george_mcclellan = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		william_sherman = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		thomas_jackson = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				NOT = { has_country_flag = USA_officers_leave_acw }
+			}
+
+			
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		robert_e_lee = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				NOT = { has_country_flag = USA_officers_leave_acw }
+			}
+
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	navy_chief = {
+	
+		john_ericsson = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { navy_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		stephen_mallory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				NOT = { has_country_flag = USA_officers_leave_acw }
+			}
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	high_command = {
+		winfield_scott = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		henry_halleck = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		george_h_thomas = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		john_b_hood = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				NOT = { has_country_flag = USA_officers_leave_acw }
+			}
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+}
