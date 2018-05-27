@@ -1175,6 +1175,193 @@ ideas = {
 
 ### Ministers ###
 ideas = {
+	tank_manufacturer = { 
+	
+		designer = yes
+	
+		usa_armored_train = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		union_balloon_corps = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	naval_manufacturer = { 
+	
+		designer = yes
+		
+		continental_iron_works = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		boston_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		spencer_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer_1 }
+			
+			modifier = {
+			}
+		}
+		
+		whitworth_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer_1 }
+			
+			modifier = {
+			}
+		}
+	}
+	industrial_concern = {
+
+		mechanical_engineers = {
+
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				mechanical_engineering = 0.05
+			}
+
+			traits = { industrial_concern_1 }
+		}
+
+		engineering_corps = {
+
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				process_engineering = 0.05
+			}
+
+			traits = { electronics_concern_1 }
+		}
+		
+		biochemist_union = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				biochemistry = 0.05
+			}
+
+			traits = { electronics_concern_2 }
+		}
+		
+		electronics_unit = {
+
+			picture = generic_electronics_concern_3
+
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				electronics_devices = 0.05
+			}
+
+			traits = { electronics_concern_3 }
+		}
+	}
 	political_advisor = {
 		USA_william_h_seward = {
 			
@@ -1196,6 +1383,17 @@ ideas = {
 			}
 			
 			traits = { compassionate_gentleman }
+		}
+
+		USA_edwin_stanton = {
+			
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { ideological_crusader }
 		}
 
 		USA_hugh_mcculloch = {
@@ -1222,13 +1420,23 @@ ideas = {
 
 		USA_donald_nelson = {
 			
-			picture = generic_political_advisor_europe_3
+			picture = generic_political_advisor_europe_2
 			
 			allowed = {
 				original_tag = USA
 			}
 			
 			traits = { armaments_organizer }
+		}
+		USA_simon_cameron = {
+			
+			picture = generic_political_advisor_europe_6
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { railroad_tycoon }
 		}
 	}
 	army_chief = {
@@ -1317,6 +1525,23 @@ ideas = {
 				factor = 1
 			}
 		}	
+	}
+	air_chief = {
+			
+		thaddeus_s_c_lowe = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 	}
 	navy_chief = {
 	
@@ -1418,5 +1643,63 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}		
+		}
+	}
+	theorist = {
+		ulysses_grant_theory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			research_bonus = {
+				doctrine_victorian_artillery_tech = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		william_sherman_theory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			research_bonus = {
+				doctrine_victorian_innovative_tech = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		john_ericsson_theory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+			
+		}
+		thaddeus_s_c_lowe_theory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+			
+		}
+	}
 }
