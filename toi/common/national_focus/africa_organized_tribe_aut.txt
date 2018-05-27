@@ -59,7 +59,9 @@ focus_tree = {
 		cost = 20
 		x = 13
 		y = 0
-
+		completion_reward = {
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = AF_O_K_militia_training
@@ -67,7 +69,9 @@ focus_tree = {
 		cost = 20
 		x = 30
 		y = 0
-
+		completion_reward = {
+			army_experience = 10
+		}
 	}
 	focus = {
 		id = AF_O_K_trading_nation
@@ -81,7 +85,9 @@ focus_tree = {
 		}
 		x = 4
 		y = 1
-
+		completion_reward = {
+			add_ideas = AF_T_idea_trading_nation
+		}
 	}
 	focus = {
 		id = AF_O_K_open_international_relations
@@ -92,7 +98,9 @@ focus_tree = {
 		}
 		x = 2
 		y = 2
-
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = AF_O_K_open_trading_post
@@ -103,7 +111,9 @@ focus_tree = {
 		}
 		x = 4
 		y = 2
-
+		completion_reward = {
+			swap_ideas = { remove_idea = AF_T_idea_trading_nation add_idea = AF_T_idea_trading_nation_2 }
+		}
 	}
 	focus = {
 		id = AF_O_K_portugal_merchants
@@ -120,7 +130,10 @@ focus_tree = {
 		}
 		x = 0
 		y = 3
-
+		completion_reward = {
+			add_opinion_modifier = { target = POR modifier = eoanb_om_africa_trade_focus }
+			reverse_add_opinion_modifier = { target = POR modifier = eoanb_om_africa_trade_focus }
+		}
 	}
 	focus = {
 		id = AF_O_K_french_merchants
@@ -138,7 +151,10 @@ focus_tree = {
 		}
 		x = 4
 		y = 3
-
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
+		}
 	}
 	focus = {
 		id = AF_O_K_exploit_interior
@@ -150,7 +166,11 @@ focus_tree = {
 		}
 		x = 2
 		y = 4
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = wood amount = 2 }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_french_administrators
@@ -161,7 +181,10 @@ focus_tree = {
 		}
 		x = 4
 		y = 4
-
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = AF_O_K_ressource_exploitation
@@ -175,7 +198,9 @@ focus_tree = {
 		}
 		x = 3
 		y = 5
-
+		completion_reward = {
+			add_ideas = AF_T_idea_resource_exploit
+		}
 	}
 	focus = {
 		id = AF_O_K_british_merchants
@@ -192,7 +217,10 @@ focus_tree = {
 		}
 		x = 8
 		y = 3
-
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_trade_focus }
+			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_trade_focus }
+		}
 	}
 	focus = {
 		id = AF_O_K_learn_language
@@ -204,7 +232,12 @@ focus_tree = {
 		}
 		x = 6
 		y = 4
-
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_language_focus }
+			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_language_focus }
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_language_focus }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_language_focus }
+		}
 	}
 	focus = {
 		id = AF_O_K_british_military
@@ -215,7 +248,10 @@ focus_tree = {
 		}
 		x = 8
 		y = 4
-
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+		}
 	}
 	focus = {
 		id = AF_O_K_british_companies
@@ -229,7 +265,9 @@ focus_tree = {
 		}
 		x = 7
 		y = 5
-
+		completion_reward = {
+			custom_effect_tooltip = eoanb_af_t_tt_focus_british_companies
+		}
 	}
 	focus = {
 		id = AF_O_K_british_military_expertise
@@ -240,7 +278,11 @@ focus_tree = {
 		}
 		x = 7
 		y = 6
-
+		completion_reward = {
+			add_manpower = 500
+			add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 500 producer = ENG }
+			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 500 producer = ENG }
+		}
 	}
 	focus = {
 		id = AF_O_K_create_political_caste
@@ -251,7 +293,15 @@ focus_tree = {
 		}
 		x = 13
 		y = 2
-
+		available = {
+			has_country_flag = eoanb_flag_focus_africa_org_caste
+		}
+		completion_reward = {
+			add_political_power = 150
+			hidden_effect = {
+				clr_country_flag = eoanb_flag_focus_africa_org_caste
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_create_nobility
@@ -262,7 +312,9 @@ focus_tree = {
 		}
 		x = 10
 		y = 3
-
+		completion_reward = {
+			custom_effect_tooltip = eoanb_af_t_tt_focus_create_nobility
+		}
 	}
 	focus = {
 		id = AF_O_K_specialized_workforce
@@ -273,7 +325,9 @@ focus_tree = {
 		}
 		x = 10
 		y = 4
-
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = industry }
+		}
 	}
 	focus = {
 		id = AF_O_K_western_oriented
@@ -287,7 +341,10 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
-
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = -0.04
+		}
 	}
 	focus = {
 		id = AF_O_K_distribute_bibles
@@ -298,7 +355,9 @@ focus_tree = {
 		}
 		x = 10
 		y = 6
-
+		completion_reward = {
+			country_event = { days = 1 id = africa.7 }
+		}
 	}
 	focus = {
 		id = AF_O_K_nascent_economy
@@ -309,7 +368,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 3
-
+		completion_reward = {
+			swap_ideas = { remove_idea = AF_T_organized_tribal_nation add_idea = AF_T_organized_tribal_nation_2 }
+		}
 	}
 	focus = {
 		id = AF_O_K_develop_slave_market
@@ -320,7 +381,9 @@ focus_tree = {
 		}
 		x = 12
 		y = 4
-
+		completion_reward = {
+			add_timed_idea = { idea = AF_T_idea_slaves_developed days = 365 }
+		}
 	}
 	focus = {
 		id = AF_O_K_organize_work
@@ -331,7 +394,9 @@ focus_tree = {
 		}
 		x = 14
 		y = 4
-
+		completion_reward = {
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = AF_O_K_small_farms
@@ -345,7 +410,38 @@ focus_tree = {
 		}
 		x = 13
 		y = 5
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_noble_feodalism
@@ -356,7 +452,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 6
-
+		completion_reward = {
+			swap_ideas = { remove_idea = AF_T_organized_tribal_nation_2 add_idea = AF_T_organized_tribal_nation_3 }
+		}
 	}
 	focus = {
 		id = AF_O_K_define_culture
@@ -367,7 +465,10 @@ focus_tree = {
 		}
 		x = 16
 		y = 3
-
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.01
+		}
 	}
 	focus = {
 		id = AF_O_K_our_capital
@@ -378,7 +479,9 @@ focus_tree = {
 		}
 		x = 16
 		y = 4
-
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = AF_O_K_focus_our_culture
@@ -392,7 +495,10 @@ focus_tree = {
 		}
 		x = 16
 		y = 5
-
+		completion_reward = {
+			add_stability = -0.02
+			add_war_support = 0.04
+		}
 	}
 	focus = {
 		id = AF_O_K_sacred_text_language
@@ -403,7 +509,9 @@ focus_tree = {
 		}
 		x = 16
 		y = 6
-
+		completion_reward = {
+			add_ideas = AF_T_idea_sacred_texts
+		}
 	}
 	focus = {
 		id = AF_O_K_regional_influence
@@ -418,7 +526,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 7
-
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+		}
 	}
 	focus = {
 		id = AF_O_K_isolated_nation
@@ -432,7 +542,9 @@ focus_tree = {
 		}
 		x = 22
 		y = 1
-
+		completion_reward = {
+			add_ideas = closed_borders
+		}
 	}
 	focus = {
 		id = AF_O_K_neighbor_diplomacy
@@ -443,7 +555,9 @@ focus_tree = {
 		}
 		x = 22
 		y = 2
-
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = AF_O_K_menacing_presence
@@ -457,7 +571,9 @@ focus_tree = {
 		}
 		x = 20
 		y = 3
-
+		completion_reward = {
+			add_ideas = AF_T_idea_isolation_aggressive
+		}
 	}
 	focus = {
 		id = AF_O_K_high_grade_swords
@@ -468,7 +584,9 @@ focus_tree = {
 		}
 		x = 18
 		y = 4
-
+		completion_reward = {
+			add_equipment_to_stockpile = { type = tribal_weapons_0 amount = 1000 }
+		}
 	}
 	focus = {
 		id = AF_O_K_peaceful_development
@@ -482,7 +600,9 @@ focus_tree = {
 		}
 		x = 24
 		y = 3
-
+		completion_reward = {
+			add_ideas = AF_T_idea_isolation_peaceful
+		}
 	}
 	focus = {
 		id = AF_O_K_prospect_land
@@ -497,7 +617,35 @@ focus_tree = {
 		}
 		x = 22
 		y = 4
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_develop_towns
@@ -508,7 +656,10 @@ focus_tree = {
 		}
 		x = 24
 		y = 4
-
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = AF_O_K_peaceful_treaties
@@ -522,7 +673,12 @@ focus_tree = {
 		}
 		x = 23
 		y = 5
-
+		completion_reward = {
+			every_neighbor_country = {
+				add_opinion_modifier = { modifier = eoanb_om_africa_peace_focus }
+				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_peace_focus }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_limited_trade
@@ -533,7 +689,9 @@ focus_tree = {
 		}
 		x = 26
 		y = 4
-
+		completion_reward = {
+			add_ideas = limited_exports
+		}
 	}
 	focus = {
 		id = AF_O_K_search_precious_materials
@@ -544,7 +702,11 @@ focus_tree = {
 		}
 		x = 26
 		y = 5
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = steel amount = 1 }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_divide_lands_between_nobles
@@ -558,7 +720,10 @@ focus_tree = {
 		}
 		x = 24
 		y = 6
-
+		completion_reward = {
+			add_war_support = 0.02
+			add_manpower = 500
+		}
 	}
 	focus = {
 		id = AF_O_K_help_outside
@@ -572,7 +737,28 @@ focus_tree = {
 		}
 		x = 29
 		y = 1
-
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			every_neighbor_country =  {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+							has_idea = AF_T_organized_tribal_nation
+							has_idea = AF_T_organized_tribal_nation_2
+							has_idea = AF_T_organized_tribal_nation_3
+							has_idea = AF_T_small_kingdom
+						}
+					}
+				}
+				add_political_power = 25
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_from_spears_rifles
@@ -583,7 +769,10 @@ focus_tree = {
 		}
 		x = 29
 		y = 2
-
+		completion_reward = {
+			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 50 }
+			add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 50 }
+		}
 	}
 	focus = {
 		id = AF_O_K_crude_ports
@@ -594,7 +783,9 @@ focus_tree = {
 		}
 		x = 0
 		y = 4
-
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
+		}
 	}
 	focus = {
 		id = AF_O_K_early_infrastructure
@@ -608,7 +799,35 @@ focus_tree = {
 		}
 		x = 1
 		y = 5
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_galvanize_country
@@ -622,7 +841,10 @@ focus_tree = {
 		}
 		x = 31
 		y = 1
-
+		completion_reward = {
+			add_manpower = 1000
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = AF_O_K_expansion_territory
@@ -634,7 +856,9 @@ focus_tree = {
 		}
 		x = 30
 		y = 3
-
+		completion_reward = {
+			custom_effect_tooltip = eoanb_af_t_tt_focus_expand_territory
+		}
 	}
 	focus = {
 		id = AF_O_K_everywhere_sun_shines
@@ -651,7 +875,13 @@ focus_tree = {
 		}
 		x = 31
 		y = 4
-
+		completion_reward = {
+			add_war_support = 0.05
+			every_neighbor_country = {
+				add_opinion_modifier = { modifier = eoanb_om_africa_expansion_wild_focus }
+				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_expansion_wild_focus }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_careful_expansion
@@ -668,7 +898,13 @@ focus_tree = {
 		}
 		x = 29
 		y = 4
-
+		completion_reward = {
+			add_war_support = 0.02
+			every_neighbor_country = {
+				add_opinion_modifier = { modifier = eoanb_om_africa_expansion_mild_focus }
+				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_expansion_mild_focus }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_military_culture
@@ -679,7 +915,9 @@ focus_tree = {
 		}
 		x = 31
 		y = 2
-
+		completion_reward = {
+			add_ideas = AF_T_idea_military_culture
+		}
 	}
 	focus = {
 		id = AF_O_K_the_french_sphere
@@ -694,7 +932,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = AF_O_K_learn_language
-
+		completion_reward = {
+			add_political_power = 100
+			FRA = { add_political_power = 100 }
+		}
 	}
 	focus = {
 		id = AF_O_K_portugese_trading_expertise
@@ -705,7 +946,9 @@ focus_tree = {
 		}
 		x = 1
 		y = 6
-
+		completion_reward = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 20 producer = POR }
+		}
 	}
 	focus = {
 		id = AF_O_K_invite_foreign_investors
@@ -719,7 +962,12 @@ focus_tree = {
 		}
 		x = 4
 		y = 7
-
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.02
+			add_war_support = -0.02
+			custom_effect_tooltip = eoanb_af_t_tt_focus_invite_investors
+		}
 	}
 	focus = {
 		id = AF_O_K_western_kingdom
@@ -736,7 +984,12 @@ focus_tree = {
 		}
 		x = 9
 		y = 8
-
+		completion_reward = {
+			custom_effect_tooltip = eoanb_af_t_tt_small_kingdom_western
+			hidden_effect = {
+				swap_ideas = { remove_idea = AF_T_organized_tribal_nation_3 add_idea = AF_T_small_kingdom }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_grand_kingdom
@@ -753,7 +1006,12 @@ focus_tree = {
 		}
 		x = 17
 		y = 8
-
+		completion_reward = {
+			custom_effect_tooltip = eoanb_af_t_tt_small_kingdom_grand
+			hidden_effect = {
+				swap_ideas = { remove_idea = AF_T_organized_tribal_nation_3 add_idea = AF_T_small_kingdom }
+			}
+		}
 	}
 	focus = {
 		id = AF_O_K_protect_towns
@@ -764,7 +1022,9 @@ focus_tree = {
 		}
 		x = 20
 		y = 4
-
+		completion_reward = {
+			swap_ideas = { remove_idea = AF_T_idea_isolation_aggressive add_idea = AF_T_idea_isolation_aggressive_2 }
+		}
 	}
 	focus = {
 		id = AF_O_K_barracks
@@ -778,7 +1038,9 @@ focus_tree = {
 		}
 		x = 21
 		y = 5
-
+		completion_reward = {
+			swap_ideas = { remove_idea = AF_T_idea_isolation_aggressive_2 add_idea = AF_T_idea_isolation_aggressive_3 }
+		}
 	}
 	focus = {
 		id = AF_O_K_systematic_conscription
@@ -789,7 +1051,9 @@ focus_tree = {
 		}
 		x = 18
 		y = 5
-
+		completion_reward = {
+			add_manpower = 2000
+		}
 	}
 	focus = {
 		id = AF_O_K_early_tactics
@@ -803,7 +1067,9 @@ focus_tree = {
 		}
 		x = 20
 		y = 6
-
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+		}
 	}
 	focus = {
 		id = AF_O_K_solidify_caste_system
@@ -820,6 +1086,9 @@ focus_tree = {
 		}
 		x = 22
 		y = 7
-
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 50
+		}
 	}
 }

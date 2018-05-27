@@ -451,8 +451,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
+		available = {
+			has_country_flag = eoanb_flag_focus_africa_unorg_people
+		}
 		completion_reward = {
 			swap_ideas = { remove_idea = AF_T_unorganized_tribal_nation_3 add_idea = AF_T_unorganized_tribal_nation_4 }
+			hidden_effect = {
+				clr_country_flag = eoanb_flag_focus_africa_unorg_people
+			}
 		}
 	}
 	focus = {
