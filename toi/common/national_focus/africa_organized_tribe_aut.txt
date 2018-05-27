@@ -543,7 +543,10 @@ focus_tree = {
 		x = 22
 		y = 1
 		completion_reward = {
-			add_ideas = closed_borders
+			custom_effect_tooltip = eoanb_af_t_tt_focus_isolate_nation
+			hidden_effect = {
+				add_ideas = closed_borders
+			}
 		}
 	}
 	focus = {
@@ -674,10 +677,7 @@ focus_tree = {
 		x = 23
 		y = 5
 		completion_reward = {
-			every_neighbor_country = {
-				add_opinion_modifier = { modifier = eoanb_om_africa_peace_focus }
-				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_peace_focus }
-			}
+			custom_effect_tooltip = eoanb_af_t_tt_focus_peaceful_treaties
 		}
 	}
 	focus = {
@@ -877,10 +877,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_war_support = 0.05
-			every_neighbor_country = {
-				add_opinion_modifier = { modifier = eoanb_om_africa_expansion_wild_focus }
-				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_expansion_wild_focus }
-			}
+			custom_effect_tooltip = eoanb_af_t_tt_focus_expand_bigly
 		}
 	}
 	focus = {
@@ -900,10 +897,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_war_support = 0.02
-			every_neighbor_country = {
-				add_opinion_modifier = { modifier = eoanb_om_africa_expansion_mild_focus }
-				reverse_add_opinion_modifier = { modifier = eoanb_om_africa_expansion_mild_focus }
-			}
+			custom_effect_tooltip = eoanb_af_t_tt_focus_expand_small
 		}
 	}
 	focus = {

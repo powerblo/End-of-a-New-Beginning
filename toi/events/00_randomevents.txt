@@ -630,3 +630,256 @@ country_event = {
 		}
 	}
 }
+
+#Country is at Peace with Total Economic Mobilization
+country_event = {
+	id = random.18
+	title = random.18.t
+	desc = random.18.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_war = no
+		has_idea = tot_economic_mobilisation
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+		modifier = {
+			factor = 0.9
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 0.9
+			has_stability < 0.25
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.7
+		}
+	}
+	
+	option = {
+		name = random.18.a
+		ai_chance = { factor = 90 }
+		swap_ideas = { remove_idea = tot_economic_mobilisation add_idea = civilian_economy }
+	}
+	
+	option = {
+		name = random.18.b
+		ai_chance = { factor = 10 }
+		add_political_power = -200
+		add_stability = -0.05
+		custom_effect_tooltip = eoanb_tt_event_random_18_b
+	}
+	
+}
+
+#Country is at Peace with War Economy
+country_event = {
+	id = random.19
+	title = random.19.t
+	desc = random.19.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_war = no
+		has_idea = war_economy
+	}
+	
+	mean_time_to_happen = {
+		days = 120
+		modifier = {
+			factor = 0.9
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 0.9
+			has_stability < 0.25
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.7
+		}
+	}
+	
+	option = {
+		name = random.19.a
+		ai_chance = { factor = 90 }
+		swap_ideas = { remove_idea = war_economy add_idea = civilian_economy }
+	}
+	
+	option = {
+		name = random.19.b
+		ai_chance = { factor = 10 }
+		add_political_power = -80
+		add_stability = -0.03
+		custom_effect_tooltip = eoanb_tt_event_random_19_b
+	}
+	
+}
+
+#Country is at Peace with Partial Mobilization
+country_event = {
+	id = random.20
+	title = random.20.t
+	desc = random.20.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_war = no
+		has_idea = partial_economic_mobilisation
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+		modifier = {
+			factor = 0.9
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 0.9
+			has_stability < 0.25
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.7
+		}
+	}
+	
+	option = {
+		name = random.20.a
+		ai_chance = { factor = 85 }
+		swap_ideas = { remove_idea = partial_economic_mobilisation add_idea = civilian_economy }
+	}
+	
+	option = {
+		name = random.20.b
+		ai_chance = { factor = 15 }
+		add_political_power = -20
+		add_stability = -0.02
+		custom_effect_tooltip = eoanb_tt_event_random_20_b
+	}
+	
+}
+
+#Country is at Peace with Early Mobilization
+country_event = {
+	id = random.21
+	title = random.21.t
+	desc = random.21.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		NOT = { TAG = PRS }
+		has_war = no
+		has_idea = low_economic_mobilisation
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+		modifier = {
+			factor = 0.9
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 0.9
+			has_stability < 0.25
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.1
+			has_stability > 0.7
+		}
+	}
+	
+	option = {
+		name = random.21.a
+		ai_chance = { factor = 80 }
+		swap_ideas = { remove_idea = low_economic_mobilisation add_idea = civilian_economy }
+	}
+	
+	option = {
+		name = random.21.b
+		ai_chance = { factor = 20 }
+		add_political_power = -10
+		add_stability = -0.01
+		custom_effect_tooltip = eoanb_tt_event_random_21_b
+	}
+	
+}
+
+#Country is at Peace with Civilian Economy
+country_event = {
+	id = random.22
+	title = random.22.t
+	desc = random.22.d
+	picture = GFX_report_event_generic_military_parade
+	
+	trigger = {
+		has_war = no
+		has_idea = civilian_economy
+	}
+	
+	mean_time_to_happen = {
+		days = 3650
+		modifier = {
+			factor = 0.95
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.55
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.6
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.65
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.7
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.75
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.8
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.85
+		}
+		modifier = {
+			factor = 0.95
+			has_stability > 0.9
+		}
+	}
+	
+	option = {
+		name = random.22.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = { idea = eoanb_random_event_22_idea days = 90 }
+	}
+	
+}
