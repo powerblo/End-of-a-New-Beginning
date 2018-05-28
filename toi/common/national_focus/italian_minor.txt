@@ -1,0 +1,560 @@
+focus_tree = {
+	id = italian_minor
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = PRM
+				tag = MOD
+				tag = TUS
+				tag = NSC
+			}
+		}
+	}
+	focus = {
+		id = ITA_minor_Seek_for_identity
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 0
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Demand_Romagna_Marche
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 13
+		y = 5
+		prerequisite = {
+			focus = ITA_minor_One_Nation
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Keep_The_Status_Quo
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Seek_for_identity
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Traditional_values
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Keep_The_Status_Quo
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Catholic_devotion
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Traditional_values
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Local_Dialects
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Traditional_values
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Keep_The_Same_Goverment
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Keep_The_Status_Quo
+		}
+		x = 4
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Repress_Republicans
+		icon = GFX_focus_rom_parties_end
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Keep_The_Same_Goverment
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Procution_for_Peace
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Keep_The_Status_Quo
+		}
+		x = 6
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Small_Community
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Procution_for_Peace
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Sympathize_With_the_Piedmontese
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Local_Dialects
+		}
+		prerequisite = {
+			focus = ITA_minor_Repress_Republicans
+		}
+		prerequisite = {
+			focus = ITA_minor_Small_Community
+		}
+		mutually_exclusive = {
+			focus = ITA_minor_Stand_Up_agast_Savoy
+		}
+		x = 2
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Stand_Up_agast_Savoy
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Small_Community
+		}
+		prerequisite = {
+			focus = ITA_minor_Repress_Republicans
+		}
+		prerequisite = {
+			focus = ITA_minor_Local_Dialects
+		}
+		mutually_exclusive = {
+			focus = ITA_minor_Sympathize_With_the_Piedmontese
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Call_Everyone_To_Arms
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Stand_Up_agast_Savoy
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Prepare_for_war
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Stand_Up_agast_Savoy
+		}
+		x = 7
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Protect_The_Capital
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Prepare_for_war
+		}
+		x = 7
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Hire_Skilled_Generals
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Call_Everyone_To_Arms
+		}
+		x = 5
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Fight_Alone
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Protect_The_Capital
+		}
+		prerequisite = {
+			focus = ITA_minor_Hire_Skilled_Generals
+		}
+		mutually_exclusive = {
+			focus = ITA_minor_Ask_For_Austrian_Volunteers
+		}
+		x = 7
+		y = 7
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Il_Sogno_Italiano
+		icon = GFX_focus_generic_italy_first
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Seek_for_identity
+		}
+		x = 15
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Promote_Dante
+		icon = GFX_goal_focus_enact_law
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Il_Sogno_Italiano
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_One_Italiano
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Promote_Dante
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_A_Goverment_of_Change
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Il_Sogno_Italiano
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Italian_Identity
+		icon = GFX_goal_focus_crown_maximilian_austria
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_A_Goverment_of_Change
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Art_Galleries
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Catholic_devotion
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Celebrate_National_Monuments
+		icon = GFX_focus_jap_manchurian_project
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Art_Galleries
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Let_The_People_Take_Position
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Sympathize_With_the_Piedmontese
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Let_Them_Fight_With_Savoy
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Let_The_People_Take_Position
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Ask_For_Austrian_Volunteers
+		icon = GFX_goal_focus_ally_AUS
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Protect_The_Capital
+		}
+		prerequisite = {
+			focus = ITA_minor_Hire_Skilled_Generals
+		}
+		mutually_exclusive = {
+			focus = ITA_minor_Fight_Alone
+		}
+		x = 5
+		y = 7
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_No_more_piedmont
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Let_Them_Fight_With_Savoy
+			focus = ITA_minor_Ask_For_Austrian_Volunteers
+			focus = ITA_minor_Fight_Alone
+		}
+		x = 5
+		y = 8
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_One_Nation
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_One_Italiano
+		}
+		prerequisite = {
+			focus = ITA_minor_Italian_Identity
+		}
+		prerequisite = {
+			focus = ITA_minor_Strong_Militia
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Denounce_Austrian_Dominande
+		icon = GFX_goal_focus_conspiracy_murder_act
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Il_Sogno_Italiano
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_Strong_Militia
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_Denounce_Austrian_Dominande
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_War_Is_A_Fast_Path
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10
+		prerequisite = {
+			focus = ITA_minor_One_Nation
+		}
+		x = 15
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_gain_parma
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		x = 11
+		y = 5
+		prerequisite = {
+			focus = ITA_minor_One_Nation
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_gain_modena
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 17
+		y = 5
+		prerequisite = {
+			focus = ITA_minor_One_Nation
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_gain_tuscany
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		x = 19
+		y = 5
+		prerequisite = {
+			focus = ITA_minor_One_Nation
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_kill_sardinia
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 7
+		prerequisite = {
+			focus = ITA_minor_War_Is_A_Fast_Path
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_kill_sicily
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 7
+		prerequisite = {
+			focus = ITA_minor_War_Is_A_Fast_Path
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_victory_gained
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		x = 15
+		y = 8
+		prerequisite = {
+			focus = ITA_minor_kill_sardinia
+		}
+		prerequisite = {
+			focus = ITA_minor_kill_sicily
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ITA_minor_forming_italy
+		icon = GFX_goal_focus_form_italy
+		cost = 10
+		x = 15
+		y = 9
+		prerequisite = {
+			focus = ITA_minor_victory_gained
+		}
+		completion_reward = {
+			
+		}
+	}
+}
