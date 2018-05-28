@@ -331,6 +331,38 @@ leader_traits = {
 		}
 	}
 	
+	eoanb_trait_pol_author = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.05
+		drift_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_road_expert = {
+		sprite = 10
+		random = yes
+		production_speed_infrastructure_factor = 0.1
+		production_speed_buildings_factor = 0.025
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_work_minister = {
+		sprite = 10
+		random = yes
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	rocket_scientist = {
 		random = no
 		sprite = 14
@@ -731,11 +763,42 @@ leader_traits = {
 	
 	naval_manufacturer = {
 		random = no
-		#generic
 		
 		equipment_bonus = {
 			screen_ship = {
 				naval_speed = 0.05 build_cost_ic = -0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_naval_manufacturer_light = {
+		random = no
+		
+		equipment_bonus = {
+			screen_ship = {
+				naval_range = 0.25
+				sub_detection = 0.05 
+				naval_speed = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_naval_manufacturer_heavy = {
+		random = no
+		
+		equipment_bonus = {
+			capital_ship = {
+				armor_value = 0.1
+				attack = 0.1
+				naval_range = 0.1
 			}
 		}
 		
@@ -1302,6 +1365,26 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 6
+		}
+	}
+	
+	eoanb_trait_inf_defence_1 = { 
+		sprite = 6
+		army_infantry_defence_factor = 0.1
+		dig_in_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	
+	eoanb_trait_cav_general_2 = { 
+		sprite = 6
+		cavalry_attack_factor = 0.1
+		cavalry_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 4
 		}
 	}
 	

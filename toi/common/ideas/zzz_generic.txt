@@ -83,6 +83,22 @@ ideas = {
 				ai_focus_aggressive_factor = -0.5
 			}
 		}
+		#Between those ### are debug ideas to fix bugs
+		###
+		MAN_banditry = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				
+			}
+		}
+		###
 		AI_Defensive = {
 			allowed = {
 				always = yes
@@ -177,6 +193,44 @@ ideas = {
 			}
 
 			traits = { naval_manufacturer }
+		}
+		eoanb_light_ships_manufacturer = {
+			
+			picture = generic_naval_manufacturer_2
+			
+			allowed = {
+				NOT = {
+					TAG = USA
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+			
+			traits = { eoanb_naval_manufacturer_light }
+		}
+		eoanb_heavy_ships_manufacturer = {
+			
+			picture = generic_naval_manufacturer_3
+			
+			allowed = {
+				NOT = {
+					TAG = USA
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+			
+			traits = { eoanb_naval_manufacturer_heavy }
 		}
 	}
 
@@ -377,6 +431,42 @@ ideas = {
 			
 			traits = { war_industrialist_1 }
 		}
+		
+		eoanb_generic_political_author = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = eoanb_trait_pol_author limit = 1 }
+				}
+				NOT = { tag = USA }
+			}
+			
+			traits = { eoanb_trait_pol_author }
+		}
+		
+		eoanb_generic_road_expert = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = eoanb_trait_road_expert limit = 1 }
+				}
+				NOT = { tag = USA }
+			}
+			
+			traits = { eoanb_trait_road_expert }
+		}
+		
+		eoanb_generic_hardworking_minister = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = eoanb_trait_work_minister limit = 1 }
+				}
+				NOT = { tag = USA }
+			}
+			
+			traits = { eoanb_trait_work_minister }
+		}
 	}
 
 	army_chief = {
@@ -484,6 +574,30 @@ ideas = {
 			}
 
 			traits = { air_air_combat_training_2 }
+		}
+		
+		eoanb_generic_army_infantry_defence = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = eoanb_trait_inf_defence_1 limit = 1 }
+				}
+				NOT = { tag = USA }
+			}
+
+			traits = { eoanb_trait_inf_defence_1 }
+		}
+		
+		eoanb_generic_army_cavalry_officer = {
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = eoanb_trait_cav_general_2 limit = 1 }
+				}
+				NOT = { tag = USA }
+			}
+
+			traits = { eoanb_trait_cav_general_2 }
 		}
 	}
 
