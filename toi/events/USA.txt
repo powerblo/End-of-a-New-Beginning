@@ -390,7 +390,7 @@ country_event = {
 			date > 1860.9.6
 		}
 
-		mean_time_to_happen = { days = -1 }
+		mean_time_to_happen = { days = 2 }
 		
 		option = {
 				name = usa.10.a
@@ -503,7 +503,7 @@ country_event = {
 			date > 1861.3.4
 		}
 
-		mean_time_to_happen = { days = -1 }
+		mean_time_to_happen = { days = 2 }
 		
 		option = {
 			name = usa.11.a
@@ -526,7 +526,7 @@ country_event = {
 			date > 1861.3.4
 		}
 
-		mean_time_to_happen = { days = -1 }
+		mean_time_to_happen = { days = 2 }
 		
 		option = {
 				name = usa.12.a
@@ -737,6 +737,8 @@ country_event = {
 			controls_state = 360
 			date > 1857.8.27
 		}
+
+		mean_time_to_happen = { days = 2 }
 		
 		option = {
 			name = usa.20.a
@@ -1447,6 +1449,112 @@ country_event = {
   				}
 		}
 }
+#Alaska Purchase
+country_event = {
+		id = usa.40
+		title = usa.40.t
+		desc = usa.40.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+
+		trigger = {
+			date > 1867.3.28
+			tag = USA
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+			name = usa.40.a
+			ai_chance = {
+					factor = 90
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+			RUS = { country_event = { id = usa.41 hours = 1 } }
+		}
+		option = {
+			name = usa.40.b
+			add_political_power = -25
+			ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+		}
+}
+#Alaska Russia
+country_event = {
+		id = usa.41
+		title = usa.41.t
+		desc = usa.41.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.41.a
+			USA = { country_event = { id = usa.42 hours = 1 } }
+			RUS = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			set_global_flag = USAAlaska_Purchased
+			ai_chance = {
+					factor = 90
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+		}
+		option = {
+			name = usa.41.b
+			add_political_power = -25
+			USA = { country_event = { id = usa.42 hours = 1 } }
+			ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+		}
+}
+#Alaska Result
+country_event = {
+		id = usa.42
+		title = usa.42.t
+		desc = {
+			text = usa.42.d
+			trigger = { has_global_flag = USAAlaska_Purchased }
+		}
+		desc = {
+			text = usa.42.d_a
+			trigger = { NOT { has_global_flag = USAAlaska_Purchased } }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			trigger = {
+				has_global_flag = USAAlaska_Purchased
+			}
+			name = usa.42.a
+			USA = { add_timed_idea = { idea = USA_alaska_purchase_usa days = 365 } }
+			USA = { transfer_state = 463 }
+			news_event = { id = usa_news.17 }
+		}
+		option = {
+			trigger = {
+				NOT = { has_global_flag = USAAlaska_Purchased }
+			}
+			name = usa.42.b
+		}
+}
 
 #News Events
 
@@ -1868,5 +1976,37 @@ news_event = {
 
 		option = {
 				name = usa_news.16.a
+		}
+}
+#Alaska Purchase
+news_event = {
+		id = usa_news.17
+		title = usa_news.17.t
+		desc = usa_news.17.d
+
+		picture = GFX_news_event_usa_alaska
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.17.a
+		}
+		option = {
+			trigger = {
+				tag = RUS
+			}
+			name = usa_news.17.b
+		}
+		option = {
+			trigger = {
+				NOT = { tag = USA }
+				NOT = { tag = RUS }
+			}
+			name = usa_news.17.c
 		}
 }
