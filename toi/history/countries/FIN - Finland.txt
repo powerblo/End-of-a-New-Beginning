@@ -37,6 +37,22 @@
 	
   }
 
+  RUS = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = FIN
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  else = {
+    puppet = FIN
+  }
+  }
+}
+
   set_politics = {
     parties = {
       anarchism = {
@@ -73,22 +89,6 @@
 
 	  ruling_party = autocracy
   }
-  
-  RUS = {
-  if = {
-    limit = {
-      has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-      target = FIN
-      autonomous_state = autonomy_dominion
-      freedom_level = 0.2
-    }
-	else = {
-		puppet = FIN
-	}
-  }
-}
 
   set_technology = {
 	infantry_weapons = 1
