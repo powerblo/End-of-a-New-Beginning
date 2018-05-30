@@ -2257,6 +2257,10 @@ country_event = { 	#Fights in the streets of London
 	picture = GFX_report_event_saf_soldiers					
 	
 	is_triggered_only = yes
+
+	immediate = {
+		start_civil_war = { ideology = anarchism size = 0.3 }
+	}
 	
 	option = { #People of London, rise up against the oppressor !
 		name = vbritain_civil_war.5.a	
@@ -2266,7 +2270,42 @@ country_event = { 	#Fights in the streets of London
 		}
 
 		hidden_effect = {
-			complete_national_focus = ENG_the_chartist_revival
+			ENG = {
+				complete_national_focus = ENG_counter_the_revolution
+			}
+			random_country = {
+				limit = {
+					original_tag = ENG
+					NOT = { tag = ENG }
+				}
+				complete_national_focus = ENG_the_chartist_revival
+				change_tag_from = ENG
+				add_ideas = { 
+				    hos_is_leader
+				    victorian_era
+				    industrialized
+					non_monarchical_system
+				    revolutionary_government
+
+				    civilian_economy
+				    export_focus
+				    three_percent
+				    normal_taxes
+
+				    stagnation_growth
+				    border_control
+				    limited_equality
+				    volunteer_only
+				    parliamentary_suffrage
+
+				    constitution_adopted
+				    limited_elections
+
+				    open_schools
+				    secular_state
+					religion_protestant
+				  }
+			}
 		}
 	}
 
@@ -2278,7 +2317,16 @@ country_event = { 	#Fights in the streets of London
 		}
 
 		hidden_effect = {
-		    complete_national_focus = ENG_counter_the_revolution
+		    ENG = {
+		    	complete_national_focus = ENG_counter_the_revolution
+		    }
+		    random_country = {
+				limit = {
+					original_tag = ENG
+					NOT = { tag = ENG }
+				}
+				complete_national_focus = ENG_the_chartist_revival
+			}
 		}
 	}
 }
