@@ -12,13 +12,23 @@ country_event = {
 
 	option = {
 		name = ita.0.a
-		ITA = {annex_country = { target = PAP } }
+		ITA = { 
+		    transfer_state = 2
+			add_state_core = 2
+			transfer_state = 751
+			add_state_core = 751
+			}
 		ITA = {set_capital = 751 }
 		
 	}
 	option = {
 		name = ita.0.b
-		ITA = {declare_war_on = { target = PAP type = annex_everything } }
+		ITA = {
+		    declare_war_on = { target = PAP type = annex_everything }
+            add_state_core = 2
+			add_state_core = 751
+			add_state_core = 785
+			}
 		}
 	}
 
