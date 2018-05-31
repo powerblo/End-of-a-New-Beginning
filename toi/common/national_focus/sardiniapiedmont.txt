@@ -246,7 +246,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PIE_Garibaldi }
 		mutually_exclusive = { focus = PIE_Fight_Sicily }
-		available = { NOT = { NSC = { centrism > 0.5 } } }
+		available = { NOT = { NSC = { centrism < 0.5 } } }
 		
 		completion_reward = {
 			puppet = NSC
