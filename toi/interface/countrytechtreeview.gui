@@ -3153,7 +3153,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "humanities_year1"
-					position = { x = 0 y = 140 }
+					position = { x = 0 y = 26 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3166,7 +3166,20 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "humanities_year2"
-					position = { x = 0 y = 416 }
+					position = { x = 0 y = 266 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1855"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "humanities_year3"
+					position = { x = 0 y = 510 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3178,25 +3191,12 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "humanities_year3"
-					position = { x = 0 y = 692 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "1870"
-					maxWidth = 130
-					maxHeight = 32
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
 					name = "humanities_year4"
-					position = { x = 0 y = 968 }
+					position = { x = 0 y = 652 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1880"
+					text = "1865"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3206,7 +3206,7 @@ guiTypes = {
 			}
 
 			gridboxtype = {
-				name = "early_hospitals_tree"
+				name = "tech_humanities_mercantilism_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
@@ -3214,15 +3214,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "shift_work_tree"
-				position = { x=50 y=172 }
-				size = { width = 680 height = 800 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-			
-			gridboxtype = {
-				name = "mass_transit_early_tree"
+				name = "tech_humanities_industrial_society_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }

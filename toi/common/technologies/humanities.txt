@@ -1,14 +1,471 @@
 technologies = {
 
-	early_hospitals = {
+	tech_humanities_mercantilism = {
 		
+		production_speed_arms_factory_factor = 0.05
+		local_resources_factor = 0.05
+		
+		path = {
+			leads_to_tech = tech_humanities_capitalism
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_saint_simonianism
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_social_stratification
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = -2 y = -2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_capitalism = {
+		
+		production_speed_industrial_complex_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		drift_defence_factor = -0.1
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_saint_simonianism = {
+		
+		industrial_capacity_factory = 0.02
+		political_power_factor = 0.04
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_social_stratification = {
+		
+		stability_factor = 0.02
+		political_advisor_cost_factor = -0.1
+		
+		path = {
+			leads_to_tech = tech_humanities_workers_rights
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = shift_work
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_workers_rights = {
+		
+		industrial_capacity_factory = -0.02
+		industrial_capacity_dockyard -0.02
+		local_resources_factor = -0.02
+		production_speed_buildings_factor = -0.02
+		economic_mobilization_cost_factor = -0.2
 		MONTHLY_POPULATION = 0.02
+		
+		path = {
+			leads_to_tech = tech_humanities_trade_unions
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_trade_unions = {
+		
+		production_factory_efficiency_gain_factor  = -0.05
+		drift_defence_factor = -0.05
+		trade_laws_cost_factor = -0.2
+		
+		research_cost = 1
+		start_year = 1860
+		folder = {
+			name = humanities_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_industrial_society = {
+		
+		political_power_gain = 0.1
+		MONTHLY_POPULATION = 0.06
+		
+		path = {
+			leads_to_tech = tech_humanities_social_stratification
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_saint_simonianism
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_public_works
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 2 y = -2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_public_works = {
+		
+		production_speed_buildings_factor = 0.05
+		political_power_factor = -0.02
+		
+		path = {
+			leads_to_tech = mass_transit_early
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_sewage_system
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = early_hospitals
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1850
+		folder = {
+			name = humanities_folder
+			position = { x = 12 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_sewage_system = {
+		
+		MONTHLY_POPULATION = 0.04
+		consumer_goods_factor = -0.02
+		
+		research_cost = 1
+		start_year = 1855
+		folder = {
+			name = humanities_folder
+			position = { x = 12 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_roadworks = {
+		
+		production_speed_infrastructure_factor = 0.1
+		army_speed_factor = 0.05
+		
+		path = {
+			leads_to_tech = tech_humanities_asphalt_roads
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1855
+		folder = {
+			name = humanities_folder
+			position = { x = 8 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_metropolitan = {
+		
+		consumer_goods_factor = 0.01
+		production_factory_efficiency_gain_factor = 0.04
+		line_change_production_efficiency_factor = 0.02
+		
+		research_cost = 1
+		start_year = 1860
+		folder = {
+			name = humanities_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+	
+	tech_humanities_asphalt_roads = {
+		
+		global_building_slots_factor = 0.05
+		production_speed_infrastructure_factor = 0.05
+		mobilization_speed = 0.1
 		
 		research_cost = 1
 		start_year = 1865
 		folder = {
 			name = humanities_folder
-			position = { x = -2 y = 6 }
+			position = { x = 8 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+	
+		}
+		
+		categories = {
+			humanities_tech
+		}
+	}
+
+	early_hospitals = {
+		
+		MONTHLY_POPULATION = 0.04
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = humanities_folder
+			position = { x = 14 y = 8 }
 		}
 		
 		dependencies = {
@@ -54,7 +511,7 @@ technologies = {
 		start_year = 1855
 		folder = {
 			name = humanities_folder
-			position = { x = 0 y = 2 }
+			position = { x = 2 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -93,11 +550,21 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		local_resources_factor = -0.05
 		
+		path = {
+			leads_to_tech = tech_humanities_roadworks
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_humanities_metropolitan
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1.5
 		start_year = 1850
 		folder = {
 			name = humanities_folder
-			position = { x = 2 y = 0 }
+			position = { x = 10 y = 2 }
 		}
 		
 		ai_will_do = {
