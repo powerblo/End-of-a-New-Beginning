@@ -825,7 +825,7 @@ country_event = { # TRV - Resignation of Pretorius
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1860.9.15
 	}
 		
@@ -847,7 +847,7 @@ country_event = { # TRV - Stephanus Schoeman takes power !
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1860.12.6
 	}
 		
@@ -872,7 +872,7 @@ country_event = { # TRV - The Volksraad takes down Schoeman
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1862.4.17
 	}
 		
@@ -897,7 +897,7 @@ country_event = { # TRV - The Transvaal Civil War
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1862.10.9
 	}
 		
@@ -918,14 +918,14 @@ country_event = { # TRV - The Return of Pretorius
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1864.5.10
 	}
 		
 	option = { # Pretorius manages to be important in every Boer state at the same time
 		name = boer_states.13.a
 		create_country_leader = {
-			name = "Marthinus wessel Pretorius"
+			name = "Marthinus Wessel Pretorius"
 			picture = "Portrait_TRV_Marthinus_Wessel_Pretorius.dds"
 			ideology = conserv
 		}
@@ -940,7 +940,7 @@ country_event = { # TRV - Creation of the State President seat
 	fire_only_once = yes
 		
 	trigger = {
-		TAG = OFS
+		TAG = TRV
 		date > 1864.5.10
 	}
 		
