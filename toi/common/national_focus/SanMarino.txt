@@ -20,9 +20,11 @@ focus_tree = {
 		}
 		x = 17
 		y = 0
-	completion_reward = {
-		ITA = { give_guarantee = SNM }
-	}
+
+		completion_reward = {
+			ITA = { give_guarantee = SNM }
+		}
+
 
 
 	}
@@ -67,6 +69,10 @@ focus_tree = {
 		x = 20
 		y = 1
 
+		completion_reward = {
+			add_ideas = SNM_Oldest_Republic 
+		}
+
 	}
 	focus = {
 		id = SNM_Leges_Statutae_Republicae_Sancti_Marini
@@ -79,7 +85,10 @@ focus_tree = {
 		x = 22
 		y = 1
 
-		completion_reward = { add_political_power = 50 }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = SNM_Leges_Statutae_Republicae_Sancti_Marini
+		}
 
 	}
 	focus = {
@@ -95,6 +104,11 @@ focus_tree = {
 		x = 21
 		y = 2
 
+		completion_reward = {
+			add_political_power = 60
+			add_manpower = 1000
+		}
+
 	}
 	focus = {
 		id = SNM_Econominc_Recovery 
@@ -105,6 +119,11 @@ focus_tree = {
 		}
 		x = 21
 		y = 3
+
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = work_tech } 
+
+		}
 
 	}
 	focus = {
@@ -117,6 +136,10 @@ focus_tree = {
 		x = 20
 		y = 4
 
+		completion_reward = {
+			787 = { add_building_construction = { type = bunker province = 13299 level = 2 instant_build = yes } } 
+		}
+
 	}
 	focus = {
 		id = SNM_Put_Refugees_to_Work
@@ -128,6 +151,10 @@ focus_tree = {
 		x = 22
 		y = 4
 
+		completion_reward = {
+			787 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex province = 13299 level = 2 instant_build = yes } } 
+		}
+
 	}
 	focus = {
 		id = SNM_Captains_Regent
@@ -138,6 +165,10 @@ focus_tree = {
 		}
 		x = 19
 		y = 2
+
+		completion_reward = {
+			add_political_power = 50
+		}
 		
 
 	}
@@ -154,6 +185,11 @@ focus_tree = {
 		x = 21
 		y = 5
 
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = mechanical_engineering_tech }
+			add_ideas = SNM_Industry_Focus
+		}
+
 	}
 	focus = {
 		id = SNM_Democratic_Values
@@ -164,6 +200,10 @@ focus_tree = {
 		}
 		x = 19
 		y = 3
+
+		completion_reward = {
+			add_political_power = 50
+		}
 
 	}
 	focus = {

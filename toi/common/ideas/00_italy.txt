@@ -34,6 +34,46 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		SNM_Oldest_Republic = {
+
+			#picture = 
+			
+			modifier = {
+				stability_weekly = 0.01 
+				war_support_factor = -0.10
+				research_time_factor = -0.05
+				conscription = -0.05
+			}
+		}
+	}
+	country = {
+		SNM_Leges_Statutae_Republicae_Sancti_Marini = {
+
+			#picture = 
+			
+			modifier = {
+				stability_weekly = 0.01 
+				centrism_drift =  0.10
+				
+			}
+		}
+	}
+	country = {
+		SNM_Industry_Focus = {
+
+			#picture = 
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				
+				production_factory_efficiency_gain_factor = 0.05  
+				
+			}
+		}
+	}
+
+
 
 hidden_ideas = {
       ITA_Piedmontese = {
@@ -44,3 +84,4 @@ hidden_ideas = {
       	}
 	}
 }
+
