@@ -726,6 +726,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_victory_second_opium_war
 		}
+		available = {
+			always = no
+		}
 		x = 20
 		y = 6
 		available = {
@@ -742,26 +745,29 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_second_opium_war_lost
 		}
+		available = {
+			always = no
+		}
 		x = 22
 		y = 6
 		available = {
 			has_country_flag = sow_europeans_won
 		}
 	}
-	focus = {
-		id = ENG_burn_summer_palaces
-		icon = GFX_goal_focus_burn_summer_palace
-		cost = 10
-		prerequisite = {
-			focus = ENG_victory_second_opium_war
-		}
-		x = 22
-		y = 7
-		completion_reward = {
-			add_political_power = -50
-			add_war_support = 0.1
-		}
-	}
+	#focus = {
+	#	id = ENG_burn_summer_palaces
+	#	icon = GFX_goal_focus_burn_summer_palace
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = ENG_victory_second_opium_war
+	#	}
+	#	x = 22
+	#	y = 7
+	#	completion_reward = {
+	#		
+
+	#	}
+	#}
 	focus = {
 		id = ENG_question_eic
 		icon = GFX_goal_focus_question_eic
