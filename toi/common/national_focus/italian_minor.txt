@@ -2,15 +2,15 @@ focus_tree = {
 	id = italian_minor
 	country = {
 		factor = 0
-		#modifier = {
-		#	add = 10
-		#	OR = {
-		#		tag = PRM
-		#		tag = MOD
-		#		tag = TUS
-		#		tag = NSC
-		#	}
-		#}
+		modifier = {
+			add = 10
+			OR = {
+				tag = PRM
+				tag = MOD
+				tag = TUS
+				tag = NSC
+			}
+		}
 	}
 	focus = {
 		id = ITA_minor_Seek_for_identity
@@ -19,7 +19,7 @@ focus_tree = {
 		x = 8
 		y = 0
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -31,8 +31,18 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_One_Nation
 		}
+		bypass = {
+			owns_state = 161
+			PAP = {
+				exists = no
+				NOT = {
+					owns_state = 161
+					owns_state = 157
+				}
+			}
+		}
 		completion_reward = {
-			
+			country_event = { days = 1 id = italy_minor.6 }
 		}
 	}
 	focus = {
@@ -48,7 +58,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		completion_reward = {
-			
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -61,7 +71,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		completion_reward = {
-			
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -74,7 +84,13 @@ focus_tree = {
 		x = 0
 		y = 3
 		completion_reward = {
-			
+			PAP = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = ITA_minor_Catholic_Devotion
+				}
+			}
+			add_ideas = ITA_minor_Catholic_Devotion1
 		}
 	}
 	focus = {
@@ -87,7 +103,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		completion_reward = {
-			
+			add_ideas = ITA_minor_trade_output
 		}
 	}
 	focus = {
@@ -100,7 +116,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Same_Government
 		}
 	}
 	focus = {
@@ -113,7 +129,7 @@ focus_tree = {
 		x = 4
 		y = 3
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Repress_Republicans1
 		}
 	}
 	focus = {
@@ -125,8 +141,57 @@ focus_tree = {
 		}
 		x = 6
 		y = 2
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}	
+		}
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -139,7 +204,7 @@ focus_tree = {
 		x = 6
 		y = 3
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Small_Community1
 		}
 	}
 	focus = {
@@ -161,7 +226,12 @@ focus_tree = {
 		x = 2
 		y = 4
 		completion_reward = {
-			
+			PIE = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_minor_Sympathize_Piedmontese1
+				}
+			}
 		}
 	}
 	focus = {
@@ -183,7 +253,12 @@ focus_tree = {
 		x = 6
 		y = 4
 		completion_reward = {
-			
+			PIE = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_minor_Stand_Up_Piedmontese
+				}
+			}
 		}
 	}
 	focus = {
@@ -196,7 +271,7 @@ focus_tree = {
 		x = 5
 		y = 5
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Call_to_Arms
 		}
 	}
 	focus = {
@@ -208,8 +283,58 @@ focus_tree = {
 		}
 		x = 7
 		y = 5
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -222,7 +347,14 @@ focus_tree = {
 		x = 7
 		y = 6
 		completion_reward = {
-			
+			capital_scope = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+
+			}
 		}
 	}
 	focus = {
@@ -235,7 +367,7 @@ focus_tree = {
 		x = 5
 		y = 6
 		completion_reward = {
-			
+			army_experience = 150
 		}
 	}
 	focus = {
@@ -254,7 +386,7 @@ focus_tree = {
 		x = 7
 		y = 7
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -269,8 +401,11 @@ focus_tree = {
 		}
 		x = 15
 		y = 1
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
-			
+			add_political_power = 30
 		}
 	}
 	focus = {
@@ -283,7 +418,51 @@ focus_tree = {
 		x = 13
 		y = 2
 		completion_reward = {
-			
+			custom_effect_tooltip = ITA_minor_Dante_Promoted1
+			hidden_effect = {
+				MOD ={
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				PRM = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				PAP = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				NSC = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				PIE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				LVN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+				TUS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Dante_Promoted
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -296,7 +475,7 @@ focus_tree = {
 		x = 13
 		y = 3
 		completion_reward = {
-			
+			add_ideas = ITA_minor_One_Italy
 		}
 	}
 	focus = {
@@ -309,7 +488,8 @@ focus_tree = {
 		x = 15
 		y = 2
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Government_of_Change
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -322,7 +502,7 @@ focus_tree = {
 		x = 15
 		y = 3
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -335,7 +515,262 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Art_Galleries1
+			custom_effect_tooltip = ITA_minor_Art_Galleries2
+			hidden_effect = {
+				PRS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				FRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				PIE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				RUS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				TUR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SWE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				FIN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				ROM = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				BOS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SER = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SWI = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				NSC = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				PAP = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SNM = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				PRM = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				TUS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				BAV = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				WUR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				AUS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				BEL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				HOL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				THU = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				LVN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				HAM = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SAX = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				HAN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				BRE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				OLD = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				BAD = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				HES = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SCH = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				MCK = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				FRK = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				SPR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				MNT = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				MOL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				GRE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				POR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				LUX = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				LCK = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+				MOD = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ITA_minor_Art_Galleries
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -348,7 +783,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -361,7 +796,8 @@ focus_tree = {
 		x = 2
 		y = 5
 		completion_reward = {
-			
+			add_political_power = 50
+			add_war_support = -0.1
 		}
 	}
 	focus = {
@@ -374,7 +810,7 @@ focus_tree = {
 		x = 2
 		y = 7
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Fight_with_Savoy
 		}
 	}
 	focus = {
@@ -393,7 +829,13 @@ focus_tree = {
 		x = 5
 		y = 7
 		completion_reward = {
-			
+			AUS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_minor_Ask_Austrian_Volunteers
+				}
+			}
+			country_event = { days = 1 id = italy_minor.1 }
 		}
 	}
 	focus = {
@@ -407,8 +849,18 @@ focus_tree = {
 		}
 		x = 5
 		y = 8
+		available = {
+			PIE = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			add_stability = 0.05
+			remove_ideas = ITA_minor_Fight_with_Savoy
+			custom_effect_tooltip = ITA_minor_piedmont_not_threat
+			hidden_effect = {
+				load_focus_tree = generic
+			}
 		}
 	}
 	focus = {
@@ -427,7 +879,28 @@ focus_tree = {
 		x = 15
 		y = 4
 		completion_reward = {
-			
+			add_state_core = 162
+			add_state_core = 115
+			add_state_core = 114
+			add_state_core = 2
+			add_state_core = 735
+			add_state_core = 158
+			add_state_core = 808
+			add_state_core = 813
+			add_state_core = 982
+			add_state_core = 160
+			add_state_core = 159
+			add_state_core = 785
+			add_state_core = 751
+			add_state_core = 161
+			add_state_core = 157
+			add_state_core = 997
+			add_state_core = 812
+			add_state_core = 156
+			add_state_core = 117
+			add_state_core = 981
+			add_state_core = 822
+			add_state_core = 787
 		}
 	}
 	focus = {
@@ -440,7 +913,12 @@ focus_tree = {
 		x = 17
 		y = 2
 		completion_reward = {
-			
+			AUS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_minor_Denounced
+				}
+			}
 		}
 	}
 	focus = {
@@ -452,8 +930,58 @@ focus_tree = {
 		}
 		x = 17
 		y = 3
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Strong_Militia1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -466,7 +994,7 @@ focus_tree = {
 		x = 15
 		y = 6
 		completion_reward = {
-			
+			add_ideas = ITA_minor_Fast_Path_of_War
 		}
 	}
 	focus = {
@@ -478,8 +1006,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_One_Nation
 		}
+		bypass = {
+			owns_state = 808
+			PRM = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			declare_war_on = { target = PRM type = annex_everything }
 		}
 	}
 	focus = {
@@ -491,8 +1025,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_One_Nation
 		}
+		bypass = {
+			owns_state = 813
+			MOD = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			declare_war_on = { target = MOD type = annex_everything }
 		}
 	}
 	focus = {
@@ -504,8 +1044,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_One_Nation
 		}
+		bypass = {
+			owns_state = 162
+			TUS = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			declare_war_on = { target = TUS type = annex_everything }
 		}
 	}
 	focus = {
@@ -517,8 +1063,13 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_War_Is_A_Fast_Path
 		}
+		bypass = {
+			PIE = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			declare_war_on = { target = PIE type = annex_everything }
 		}
 	}
 	focus = {
@@ -530,8 +1081,18 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_War_Is_A_Fast_Path
 		}
+		bypass = {
+			owns_state = 997
+			owns_state = 812
+			owns_state = 156
+			owns_state = 117
+			owns_state = 115
+			NSC = {
+				exists = no
+			}
+		}
 		completion_reward = {
-			
+			declare_war_on = { target = NSC type = annex_everything }
 		}
 	}
 	focus = {
@@ -546,8 +1107,12 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_minor_kill_sicily
 		}
+		available = {
+			owns_state = 158
+		}
 		completion_reward = {
-			
+			add_political_power = 50
+			remove_ideas = ITA_minor_Fast_Path_of_War
 		}
 	}
 	focus = {
@@ -560,7 +1125,11 @@ focus_tree = {
 			focus = ITA_minor_victory_gained
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = ITA_minor_form_italy
+			hidden_effect = {
+				load_focus_tree = italy_focus
+				set_cosmetic_tag = PIE_focus_ITA
+			}
 		}
 	}
 }
