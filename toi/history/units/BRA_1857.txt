@@ -1,89 +1,284 @@
 ﻿division_template = {
-  name = "South American Infantry"
+  name = "Line Infantry Regiment"
 
   regiments = {
-    light_infantry = { x = 0 y = 0}
-	light_infantry = { x = 0 y = 1}
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 1}
+		line_infantry = { x = 0 y = 2}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 1 y = 1}
+		line_infantry = { x = 1 y = 2}
   }
+}
+
+
+division_template = {
+	name = "Cavalry Regiment"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 1}
+		light_cavalry = { x = 0 y = 2}
+	}
 }
 
 units = {
 		division= {
-			name = "1st South American Infantry"
-			location = 10980
-			division_template = "South American Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "2nd South American Infantry"
-			location = 10980
-			division_template = "South American Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "3rd South American Infantry"
+			name = "1st Bahia National Guard"
 			location = 10946
-			division_template = "South American Infantry"
+			division_template = "Line Infantry Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "4th South American Infantry"
+			name = "2nd Bahia National Guard"
+			location = 10945
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Rio de Janeiro Elite"
+			location = 10980
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Rio de Janeiro Elite"
+			location = 10980
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+	    division= {
+			name = "Rio de Janeiro Elite"
+			location = 10980
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Pernambuco National Guard"
 			location = 5168
-			division_template = "South American Infantry"
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+	   division= {
+			name = "2nd Pernambuco National Guard"
+			location = 5168
+			division_template = "Line Infantry Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "5th South American Infantry"
+			name = "1st Ceará National Guard"
 			location = 5107
-			division_template = "South American Infantry"
+			division_template = "Line Infantry Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "6th South American Infantry"
+			name = "2nd Ceará National Guard"
+			location = 5107
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Mato Grosso Border Patrol"
 			location = 8224
-			division_template = "South American Infantry"
+			division_template = "Cavalry Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "7th South American Infantry"
-			location = 4604
-			division_template = "South American Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "8th South American Infantry"
-			location = 7581
-			division_template = "South American Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "9th South American Infantry"
-			location = 7581
-			division_template = "South American Infantry"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "10th South American Infantry"
+			name = "2nd Mato Grosso Border Patrol"
 			location = 8224
-			division_template = "South American Infantry"
+			division_template = "Cavalry Regiment"
 			start_experience_factor = 0.1
 		}
 		
+		division= {
+			name = "3rd Mato Grosso Border Patrol"
+			location = 8224
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "4th Mato Grosso Border Patrol"
+			location = 5200
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+	   division= {
+			name = "5th Mato Grosso Border Patrol"
+			location = 8189
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "1st Southern Border Patrol"
+			location = 4604
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+	  division= {
+			name = "2nd Southern Border Patrol"
+			location = 4604
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+	     
+		division= {
+			name = "3rd Southern Border Patrol"
+			location = 7638
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "4th Southern Border Patrol"
+			location = 4575
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+	  division= {
+			name = "5th Southern Border Patrol"
+			location = 1585
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+	     
+		division= {
+			name = "1st Porto Alegre Reserve"
+			location = 10447
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "2nd Porto Alegre Reserve"
+			location = 10447
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+	  division= {
+			name = "3rd Porto Alegre Reserve"
+			location = 10447
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+	     
+		division= {
+			name = "Santa Catarina National Guard"
+			location = 10405
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+     
+	 division= {
+			name = "1st Amazonas Border Patrol"
+			location = 1979
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+     	 division= {
+			name = "2nd Amazonas Border Patrol"
+			location = 1979
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+	 division= {
+			name = "3rd Amazonas Border Patrol"
+			location = 1979
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}
+	 division= {
+			name = "4th Amazonas Border Patrol"
+			location = 1979
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+		}  		
+		 
+		}
 		navy = {				
-			name = "Brazilian Fleet"			
+			name = "Rio de Janeiro Fleet"			
 			base = 10980
 			location = 10980
-			ship = { name = "Don Alfonso" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Amazonas" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Dom Pedro II" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Reclife" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Jeguitinhonha" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Beribe" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Ipiranga" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Dom Pedro" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Dona Francisca" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Uniao" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Caliope" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
-			ship = { name = "Amalia" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Don Alfonso" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Amazonas" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Dom Pedro II" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Recife" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Jeguitinhonha" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Beribe" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Ipiranga" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Dom Pedro" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Dona Francisca" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "União" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Caliope" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Amalia" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Colombo" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Salvador da Pátria" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Imperador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Veracruz" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
 		}
-}
+		
+		navy = {				
+			name = "Santos Fleet"			
+			base = 5112
+			location = 5112
+			ship = { name = "Santos do Mar" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Transatlântico" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Águia" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Vitória" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "São Paulo" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Ipitanga" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Ilhota" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Ilha" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Imbátivel" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Dominador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Protegido Tamandaré" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Parnaíba" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Pará" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Pátria Amada" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Galeota" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Mearim" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+		}
+		
+		navy = {				
+			name = "Salvador Fleet"			
+			base = 10946
+			location = 10946
+			ship = { name = "Libertador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Jauá" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Lauro de Freitas" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Princesa do Sertão" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Juazeiro" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Petrolina" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Sergipano" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Sertanejo" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Divindade" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Olinda" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Tamandaraíba" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Esquadra" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Riachuelo" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Barroso" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Corveta" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Anicota" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+		}
+		
+		
+		navy = {				
+			name = "Amazonas Reserve Fleet"			
+			base = 12853
+			location = 12853
+			ship = { name = "Belém" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Manaus" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Desbravador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Dona Maria" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Araguari" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Juazeiro do Norte" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Floresta" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Equador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "Protegido Equador" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+			ship = { name = "São Jorge" definition = frigate equipment = { equipment_1830_frigate = { amount = 1 owner = BRA } } }
+		}
