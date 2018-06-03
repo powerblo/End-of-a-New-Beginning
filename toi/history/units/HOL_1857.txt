@@ -1,5 +1,5 @@
-division_template = {
-  name = "Nederlandse Grenadiers"
+﻿division_template = {
+  name = "Dutch Grenadiers"
 
   regiments = {
     light_infantry = { x = 0 y = 0}
@@ -9,7 +9,7 @@ division_template = {
 }
 
 division_template = {
-  name = "Nederlandse infanterie regiment"
+  name = "Dutch Line Infantry"
 
   regiments = {
     line_infantry = { x = 0 y = 0}
@@ -22,28 +22,28 @@ division_template = {
 units = {
 		#Capital
 		division= {
-			name = "1st infanterie regiment "
+			name = "1st Line Infantry"
 			location = 391
-			division_template = "Nederlandse infanterie regiment"
+			division_template = "Dutch Line Infantry"
 			start_experience_factor = 0.2
 		}
 		#Scattered Divisions
 		division= {
-			name = "2nt infanterie regiment"
+			name = "2nd Line Infantry"
 			location = 6496
-			division_template = "Nederlandse infanterie regiment"
+			division_template = "Dutch Line Infantry"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "1st Nederlandse Grenadiers"
+			name = "1st Dutch Grenadiers"
 			location = 3211
-			division_template = "Nederlandse Grenadiers"
+			division_template = "Dutch Grenadiers"
 			start_experience_factor = 0.3
 		}
 		division= {
-			name = "3st infanterie regiment"
+			name = "3rd Line Infantry"
 			location = 12828
-			division_template = "Nederlandse infanterie regiment"
+			division_template = "Dutch Line Infantry"
 			start_experience_factor = 0.2
 			start_equipment_factor = 0.9
 		}

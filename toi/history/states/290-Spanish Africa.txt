@@ -1,26 +1,29 @@
+
 state={
 	id=290
 	name="STATE_290"
-	manpower=376000
+	manpower = 376000
+	
+	
+	state_category = rural
+	
 	resources={
-		steel=4.000
+		steel=4
 	}
-	state_category=rural
 
 	history={
 		owner = MOR
-
+		victory_points = {
+			9945 5 
+		}
 		buildings = {
 			infrastructure = 1
+			cotton_farm = 1
 		}
-		add_core_of = MOR
-
+	add_core_of = MOR
 	}
 
-	provinces = {
-		4199 7215  10113 12087 
+	provinces={
+		4199 7215 10113 12087 
 	}
-	
-	
-	buildings_max_level_factor=1.000
 }
