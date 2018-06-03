@@ -1,0 +1,166 @@
+ideas = {
+
+	country = {
+		land_and_liberty = { # мусор 
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = trotskyite_plot
+			
+			modifier = {
+				anarchism_drift = 0.04
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		peoples_will = { # F Саня 2 рест ин пепси
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = trotskyite_plot_purged
+			
+			modifier = {
+				anarchism_drift = 0.01
+			}
+        }
+	}
+	
+	country = {
+		black_redestribution = { # плевать на них вообще как-то
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = ast_abandon_the_westminster_system_communism
+			
+			modifier = {
+				anarchism_drift = 0.01
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+
+	country = {
+		raaf_success = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				anarchism_drift = -0.1
+			}
+			modify_timed_idea = {
+                idea = raaf_success
+                days = 10
+            }	
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		raaf_failure = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				anarchism_drift = 0.05
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		raaf_success2 = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				anarchism_drift = -0.2
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		raaf_failure2 = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_communism_drift_bonus
+		
+			modifier = {
+				anarchism_drift = 0.1
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		raaf_success3 = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				anarchism_drift = -0.3
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+	
+	country = {
+		raaf_failure3 = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				anarchism_drift = 0.1
+			}
+			allowed = {
+				always = no # Triggered via event
+			}
+        }
+	}
+}
+
