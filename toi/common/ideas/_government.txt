@@ -104,6 +104,34 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
+		
+		limited_constitution = {
+					
+			cost = 450
+			removal_cost = -1
+			level = 1
+
+			picture = GFX_idea_limited_constitution
+
+			available = {
+				
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+				drift_defence_factor = 0.03
+			}
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
 	}
 
 	elections = { 
