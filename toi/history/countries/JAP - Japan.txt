@@ -1,4 +1,4 @@
-﻿1857.1.1 = {
+1857.1.1 = {
   capital = 282
 
   oob = "JAP_1857"
@@ -58,20 +58,20 @@
         popularity = 0
       }
       radical_democracy = {
-        popularity = 100
+        popularity = 0
       }
       chauvinist_populism = {
-        popularity = 0
+        popularity = 70
       }
       autocracy = {
-        popularity = 0
+        popularity = 30
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = radical_democracy
+	  ruling_party = chauvinist_populism
   }
 
   set_technology = {
@@ -87,8 +87,16 @@
     name = "Emperor Komei"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Komei.dds"
-    expire = 1900.1.1
+    expire = 1867.1.30
     ideology = despotism
+}
+
+create_country_leader = {
+    name = "Itagaki Taisuke"
+    desc = "POLITICS_TEMP_DESC"
+    picture = ""
+    expire = 1900.1.1
+    ideology = market_social
 }
 
 create_country_leader = {
@@ -96,6 +104,20 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Tokugawa_Iesada.dds"
     expire = 1900.1.1
-    ideology = military_junta
+    ideology = military_goverment
 }
+
+create_corps_commander = {
+    name = "Prince Komatsu Akihito"
+    picture = ""
+    traits = { 
+      infantry_leader
+    }
+    skill = 3
+    attack_skill = 3
+      defense_skill = 1
+      planning_skill = 2
+      logistics_skill = 2
+  }
+
 }
