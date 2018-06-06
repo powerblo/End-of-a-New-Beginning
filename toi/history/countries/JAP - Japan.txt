@@ -87,8 +87,16 @@
     name = "Emperor Komei"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Komei.dds"
-    expire = 1900.1.1
+    expire = 1867.1.30
     ideology = despotism
+}
+
+create_country_leader = {
+    name = "Itagaki Taisuke"
+    desc = "POLITICS_TEMP_DESC"
+    picture = ""
+    expire = 1900.1.1
+    ideology = social_egalitarianism
 }
 
 create_country_leader = {
@@ -98,4 +106,18 @@ create_country_leader = {
     expire = 1900.1.1
     ideology = military_goverment
 }
+
+create_corps_commander = {
+    name = "Prince Komatsu Akihito"
+    picture = ""
+    traits = { 
+      infantry_leader
+    }
+    skill = 3
+    attack_skill = 3
+      defense_skill = 1
+      planning_skill = 2
+      logistics_skill = 2
+  }
+
 }
