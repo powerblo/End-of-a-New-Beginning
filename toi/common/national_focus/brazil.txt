@@ -12,9 +12,70 @@ focus_tree = {
 		id = BRA_the_rise_of_the_empire
 		icon = brazil
 		cost = 10
-		x = 5
+		x = 20
 		y = 0
 		completion_reward = {
 			add_political_power =50
 		}
+	}
+	
+	focus = {
+		id = BRA_solve_internal_issues
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		x = 5
+		y = 1
+		prerequisite = {
+		focus = BRA_the_rise_of_the_empire
+		}
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = BRA_the_slave_trade_issue
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 3
+		y = 2
+		prerequisite = {
+		focus = BRA_solve_internal_issues
+		}
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = BRA_interstate_slave_trade
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 3
+		y = 2
+		prerequisite = {
+		focus = BRA_solve_internal_issues
+		}
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 20
+		}
+	}
+	#if you checked this code, you gay.
+	focus = {
+		id = BRA_lazy_to_finish_this
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 3
+		y = 2
+		prerequisite = {
+		focus = BRA_solve_internal_issues
+		}
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 20
+		}
+	}
+	
 	}
