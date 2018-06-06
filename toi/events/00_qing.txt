@@ -1,0 +1,32 @@
+﻿add_namespace = opium_war
+country_event = {
+    id = opium_war.1 
+    title = opium_war.1 
+    desc = opium_war.1 
+    
+    picture = GFX_report_event_election_vote
+
+    trigger = {
+        tag = CHI
+        CHI = { has_war_with = ENG }
+    }
+
+    mean_time_to_happen = {
+            days = 2
+        }
+
+    hidden = no 
+
+    fire_only_once = yes 
+
+    immediate = {
+        news_event = { id = opium_war.1 days = 1 }
+    }
+
+    option = { # This is an example of an option that has a function
+        name = opium_war.1.b 
+        add_political_power = -200
+        white_peace = ENG
+        white_peace = FRA
+    }
+}
