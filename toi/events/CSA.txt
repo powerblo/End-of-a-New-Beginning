@@ -330,3 +330,36 @@ country_event = {
 			add_ideas = CSA_Civil_War_Scout_Dependency
        	}
 }
+#Flag Referendum
+country_event = {
+		id = csa.11
+		title = csa.11.t
+		desc = csa.11.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = CSA
+		}
+
+		mean_time_to_happen = {
+			days = 20
+		}
+		
+		option = {
+			name = csa.11.a
+			hidden_effect = { set_cosmetic_tag = CSA_stars_and_bars }
+       	}
+       	option = {
+			name = csa.11.b
+			hidden_effect = { set_cosmetic_tag = CSA_battle_flag }
+       	}
+       	option = {
+			name = csa.11.c
+			hidden_effect = { set_cosmetic_tag = CSA_blood_stained_banner }
+       	}
+       	option = {
+			name = csa.11.e
+       	}
+}
