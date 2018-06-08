@@ -77,6 +77,36 @@ ideas = {
 			training_time_factor = 0.1
 			}
 		}
+		
+	BRA_italian_workforce = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+            production_factory_max_efficiency_factor = 0.1
+			line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+	BRA_southern_economic_boom = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = ITA_minor_trade_output
+			
+			modifier = {
+            consumer_goods_factor = -0.02
+			industrial_capacity_factory = 0.05
+			}
+		}		
 	
 	}
 	

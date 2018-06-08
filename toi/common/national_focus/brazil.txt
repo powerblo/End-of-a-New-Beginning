@@ -16,14 +16,15 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			add_political_power =50
-		}
+			add_ideas = BRA_italian_workforce
+			}
 	}
 	
 	focus = {
 		id = BRA_solve_internal_issues
 		icon = GFX_goal_generic_major_alliance
 		cost = 10
-		x = 5
+		x = 10
 		y = 1
 		prerequisite = {
 		focus = BRA_the_rise_of_the_empire
@@ -38,7 +39,7 @@ focus_tree = {
 		id = BRA_the_slave_trade_issue
 		icon = GFX_goal_generic_trade
 		cost = 10
-		x = 3
+		x = 5
 		y = 2
 		prerequisite = {
 		focus = BRA_solve_internal_issues
@@ -49,33 +50,411 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_interstate_slave_trade
-		icon = GFX_goal_generic_trade
+		id = BRA_start_interstate_slave_trade
+		icon = placeholder
 		cost = 10
-		x = 3
-		y = 2
+		x = 9
+		y = 3
+		mutually_exclusive = {
+		focus = BRA_support_european_immigration
+		}
 		prerequisite = {
-		focus = BRA_solve_internal_issues
+		focus = BRA_the_slave_trade_issue
 		}
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 20
+			add_stability = -0.02
+			add_political_power = 30
 		}
 	}
-	#if you checked this code, you gay.
+	
 	focus = {
-		id = BRA_lazy_to_finish_this
-		icon = GFX_goal_generic_trade
+		id = BRA_support_european_immigration
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 3
-		y = 2
+		y = 3
+		mutually_exclusive = {
+		focus = BRA_start_interstate_slave_trade
+		}
 		prerequisite = {
-		focus = BRA_solve_internal_issues
+		focus = BRA_the_slave_trade_issue
 		}
 		completion_reward = {
 			add_stability = 0.01
+			add_political_power = -20
+		}
+	}
+	
+	focus = {
+		id = BRA_italian_immigration
+		icon = GFX_goal_focus_form_italy
+		cost = 10
+		x = 2
+		y = 4
+		mutually_exclusive = {
+		focus = BRA_start_interstate_slave_trade
+		}
+		prerequisite = {
+		focus = BRA_support_european_immigration
+		}
+		completion_reward = {
 			add_political_power = 20
 		}
 	}
 	
+	
+	focus = {
+		id = BRA_southern_italian_communities
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		x = 2
+		y = 5
+
+		prerequisite = {
+		focus = BRA_support_european_immigration
+		}
+		completion_reward = {
+		502 = {
+		add_manpower = 10000
+		}
+		503 = {
+		add_manpower = 8000
+		}
+		1036 = {
+		add_manpower = 9000 
+		}
+		}
 	}
+	
+	focus = {
+		id = BRA_italian_workforce_for_sao_paulo
+		icon = GFX_focus_ITA_Farms
+		cost = 10
+		x = 2
+		y = 6
+
+		prerequisite = {
+		focus = BRA_southern_italian_communities
+		}
+		completion_reward = {
+		501 = {
+		add_manpower = 10000
+		}
+		add_ideas = BRA_italian_workforce
+		}
+	}
+	
+	focus = {
+		id = BRA_german_immigration
+		icon = GFX_goal_focus_landwehr
+		cost = 10
+		x = 4
+		y = 4
+
+		prerequisite = {
+		focus = BRA_support_european_immigration
+		}
+		completion_reward = {
+		add_political_power = 5
+		}
+	}
+	
+	focus = {
+		id = BRA_southern_german_communities
+		icon = GFX_focus_ITA_Prussia
+		cost = 10
+		x = 4
+		y = 5
+
+		prerequisite = {
+		focus = BRA_german_immigration
+		}
+		completion_reward = {
+		502 = {
+		add_manpower = 10000
+		}
+		503 = {
+		add_manpower = 8000
+		}
+		1036 = {
+		add_manpower = 9000 
+		}
+		}
+	}
+	
+	focus = {
+		id = BRA_develop_the_south
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		x = 4
+		y = 6
+
+		prerequisite = {
+		focus = BRA_southern_german_communities
+		}
+		completion_reward = {
+		502 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		503 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		1036 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+	}
+	}
+	focus = {
+		id = BRA_southern_economic_innovation
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 3
+		y = 7
+
+		prerequisite = {
+		focus = BRA_develop_the_south
+		}
+		prerequisite = {
+		focus = BRA_italian_workforce_for_sao_paulo
+		}
+		completion_reward = {
+		502 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_timed_idea = { idea = BRA_southern_economic_boom days = 80 }		
+		}
+	}
+	
+	focus = {
+		id = BRA_support_paid_labor
+		icon = GFX_goal_focus_the_workers
+		cost = 10
+		x = 3
+		y = 8
+
+		prerequisite = {
+		focus = BRA_develop_the_south
+		}
+		prerequisite = {
+		focus = BRA_italian_workforce_for_sao_paulo
+		}
+		completion_reward = {
+		remove_ideas = BRA_transatlantic
+        add_political_power = 55
+        add_stability = 0.01		
+		}
+	}
+	
+	focus = {
+		id = BRA_send_slaves_to_the_amazon
+		icon = GFX_focus_ITA_North_and_South
+		cost = 10
+		x = 8
+		y = 4
+
+		prerequisite = {
+		focus = BRA_start_interstate_slave_trade
+		}
+		completion_reward = {
+		499 = {
+		add_manpower = -10000
+		}
+		495 = {
+		add_manpower = 10000
+		}	
+		}
+	}
+	
+	focus = {
+		id = BRA_wood_extraction
+		icon = GFX_goal_generic_production
+		cost = 10
+		x = 8
+		y = 5
+
+		prerequisite = {
+		focus = BRA_send_slaves_to_the_amazon
+		}
+		completion_reward = {
+		495 = {
+		add_resource = {
+		type = wood
+		amount = 15
+		}
+		}
+	}
+	}
+	
+	focus = {
+		id = BRA_settle_the_amazon
+		icon = GFX_focus_ITA_Hydropower
+		cost = 10
+		x = 8
+		y = 6
+
+		prerequisite = {
+		focus = BRA_wood_extraction
+		}
+		completion_reward = {
+		495 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		}
+	}
+	
+	focus = {
+		id = BRA_send_slaves_to_the_west
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 10
+		y = 4
+
+		prerequisite = {
+		focus = BRA_start_interstate_slave_trade
+		}
+		completion_reward = {
+		499 = {
+		add_manpower = -10000
+		}
+		1038 = {
+		add_manpower = 4000
+		}
+		505 = {
+		add_manpower = 3000
+		}
+		280 = {
+		add_manpower = 3000
+		}
+		}
+	}
+	
+	focus = {
+		id = BRA_coal_and_steel_mining_in_the_west
+		icon = GFX_goal_focus_coal_mines
+		cost = 10
+		x = 10
+		y = 5
+
+		prerequisite = {
+		focus = BRA_send_slaves_to_the_west
+		}
+		completion_reward = {
+		1036 = {
+		add_resource = {
+		type = steel
+		amount = 10
+		}
+		}
+		505 = {
+		add_resource = {
+		type = steel
+		amount = 10
+		}
+		add_building_construction = {
+					type = coal_mine
+					level = 3
+					instant_build = yes
+				}
+		}
+		280 = {
+	add_resource = {
+       type = steel 
+		amount = 10
+		}
+		add_building_construction = {
+					type = coal_mine
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		}
+	}
+	
+	focus = {
+		id = BRA_develop_minas_gerais
+		icon = GFX_focus_generic_steel
+		cost = 10
+		x = 10
+		y = 6
+
+		prerequisite = {
+		focus = BRA_coal_and_steel_mining_in_the_west
+		}
+		completion_reward = {
+		1036 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		
+		}
+	}
+	
+    focus = {
+		id = BRA_farms_in_goias
+		icon = GFX_focus_ITA_Wheat
+		cost = 10
+		x = 9
+		y = 7
+
+		prerequisite = {
+		focus = BRA_develop_minas_gerais
+		}
+		prerequisite = {
+		focus = BRA_settle_the_amazon
+		}
+		completion_reward = {
+		1036 = {
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		}
+	}
+	
+	focus = {
+		id = BRA_restore_the_slavery_economy
+		icon = GFX_goal_focus_increase_wages
+		cost = 10
+		x = 9
+		y = 8
+
+		prerequisite = {
+		focus = BRA_farms_in_goias
+		}
+
+		completion_reward = {
+		remove_ideas = BRA_transatlantic
+		}
+	}
+	
+	
+	}
+
+	
