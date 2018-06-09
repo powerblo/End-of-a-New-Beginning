@@ -515,6 +515,35 @@ music = {
 }
 
 music = {
+	song = "FRA_victory_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = FRA }
+		}
+		modifier = {
+			factor = 0
+			
+			has_government = chauvinist_populism
+			has_government = autocracy
+			has_government = fundamentalism
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+			
+			TAG = FRA
+		}
+	}
+}
+
+music = {
 	song = "OTO_mehter_marsi_song"
 	
 	chance = {
