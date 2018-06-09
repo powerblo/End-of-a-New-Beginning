@@ -1,7 +1,7 @@
 state= {
 	id=606
 	name="STATE_606" # Anhui
-	manpower = 6612526
+	manpower = 11265400
 
 	state_category = city
 
@@ -11,21 +11,30 @@ state= {
 	}
 
 	history= {
-		owner = CHI
+		owner = TAI
 		add_core_of = CHI
-		add_core_of = TAI
 		buildings = {
 			infrastructure = 2
-			arms_factory = 1
 		}
 		victory_points = {
 			7222 1
 		}
 		
-		
+		CHI = {
+			set_province_controller = 4079
+			set_province_controller = 4158
+			set_province_controller = 7094
+			set_province_controller = 7222
+			set_province_controller = 9937
+			set_province_controller = 10040	
+			set_province_controller = 10064
+			set_province_controller = 10079
+			set_province_controller = 11916
+			set_province_controller = 12036			
+		}
 	}
 
 	provinces={
-		7222 7094 12036 10064 4158 9937 10079 10040 4079 11916
+		1083 1099 1125 1146 1171 4079 4105 4158 4173 4203 7035 7094 7104 7222 9937 10008 10017 10040 10044 10064 10079 11916 11937 11994 12019 12036 12061
 	}
 }
