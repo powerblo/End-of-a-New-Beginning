@@ -1,10 +1,11 @@
 ﻿1857.1.1 = {
-  capital = 613
+  capital = 1056
 
   oob = "TAI_1857"
 
   set_convoys = 0
-  
+  set_stability = 0.55
+  set_war_support = 0.40
   set_research_slots = 2
 
   declare_war_on = {
@@ -18,7 +19,7 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
+    non_monarchical_system
     absolute_monarchy
 
     civilian_economy
@@ -28,8 +29,8 @@
 
     stagnation_growth
     border_control
-    limited_conscription
-    slavery
+    extensive_conscription
+    limited_equality
     absolutism
 
     no_constitution
@@ -93,6 +94,9 @@
     picture = "Portrait_TAI_Hong_Xiuquan.dds"
     expire = 1891.12.31
     ideology = other
+    traits = {
+      stout_defender
+    }
   }
 
   # GENERALS
