@@ -58,7 +58,7 @@ ideas = {
 			modifier = {
             stability_weekly = 0.01
             political_power_gain = 0.2
-			research_time_factor = -0.10
+			research_time_factor = -0.05
 			}
 		}
 		
@@ -106,8 +106,63 @@ ideas = {
             consumer_goods_factor = -0.02
 			industrial_capacity_factory = 0.05
 			}
-		}		
+		}
+
+	BRA_railway_connections = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = state_country_tech_era_machine_era
+			
+			modifier = {
+            consumer_goods_factor = -0.01
+			production_factory_max_efficiency_factor = 0.01
+			local_resources_factor = 0.05
+			}
+		}
 	
+	BRA_new_trade = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = ITA_minor_trade_output
+			
+			modifier = {
+            trade_opinion_factor = 0.1
+			}
+		}
+
+	BRA_anglo_brazilian_research_treaty = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_compulsory_education
+			
+			modifier = {
+            research_time_factor = -0.05
+			}
 	}
-	
-	}
+
+	BRA_franco_brazilian_economic_treaty = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+            consumer_goods_factor = -0.02
+			}
+	}		
+}
