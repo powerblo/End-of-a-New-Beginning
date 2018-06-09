@@ -1,0 +1,52 @@
+﻿add_namespace = aus
+
+country_event = {
+	id = aus.1
+	title = aus.1.t
+	desc = aus.1.d
+	picture = GFX_report_event_british_belfast
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = AUS
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = aus.1.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 5
+
+	}
+}
+country_event = {
+	id = aus.2
+	title = aus.2.t
+	desc = aus.2.d
+	picture = GFX_report_event_british_belfast
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = AUS
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = aus.2.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 5
+
+	}
+}

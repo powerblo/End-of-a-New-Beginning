@@ -1,0 +1,727 @@
+focus_tree = {
+	id = 'aus_empire_focus'
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+	
+	default = no
+
+# Maintaining the Empire
+
+	focus = { 
+		id = AUS_maintaining_empire
+		icon = GFX_focus_austrianempire_map_1857
+		x = 10
+		y = 0
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+
+			country_event = {
+				id = aus.1
+			}
+
+			add_political_power = 5
+
+		}
+	}
+# Securing Our Italian Possessions 
+
+	focus = { 
+		id = AUS_securing_italian_possessions
+		icon = GFX_focus_lombardy_venetia_map_1857
+		x = 1
+		y = 1
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_maintaining_empire }
+
+		completion_reward = {
+			country_event = {
+				id = aus.2
+			}
+		}
+	}
+
+# The Southern Railway 
+
+	focus = { 
+		id = AUS_southern_railway
+		icon = GFX_goal_focus_railroad_development
+		x = 0
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_securing_italian_possessions }
+
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			982 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+ # Local Garrisons
+
+	focus = { 
+		id = AUS_italian_garrisons
+		icon = GFX_focus_lombardy_venetia_map_1857
+		x = 2
+		y = 2
+		cost = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_securing_italian_possessions }
+
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = bunker
+					province = 3780
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 773
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11568
+					level = 1
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = bunker
+					province = 11584
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3604
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+# The Verdello-Dalmine Station 
+
+	focus = { 
+		id = AUS_verdello_dalmine_station
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 0
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_southern_railway }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Bolzano Railway Station 
+
+	focus = { 
+		id = AUS_bolzano_railway_station
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_southern_railway }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Reinforcing Austria Proper  
+
+	focus = { 
+		id = AUS_reinforcing_austria_proper
+		icon = GFX_focus_austria_map_1857
+		x = 5
+		y = 1
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_maintaining_empire }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Ring Road 
+
+	focus = { 
+		id = AUS_ring_road_construction
+		icon = GFX_goal_generic_construct_civilian
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_reinforcing_austria_proper }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Worgl Hauptbahnhof Station
+
+	focus = { 
+		id = AUS_worgl_hauptbahnhof_station
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_reinforcing_austria_proper }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Divaca and Sezana Lines
+
+	focus = { 
+		id = AUS_divaca_sezana_lines
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Empress Elisabeth Railway 
+
+	focus = { 
+		id = AUS_empress_elisabeth_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Developing the Hungarian Interior  
+
+	focus = { 
+		id = AUS_developing_hungarian_interior
+		icon = GFX_focus_hungary_map_1857 
+		x = 10
+		y = 1
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_maintaining_empire }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Croatian National Theatre  
+
+	focus = { 
+		id = AUS_croatian_national_theatre
+		icon = GFX_goal_tfv_smiling_buddha 
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_developing_hungarian_interior }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Budapest Business School  
+
+	focus = { 
+		id = AUS_budapest_business_school
+		icon = GFX_focus_generic_military_academy 
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_developing_hungarian_interior }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The National Theatre of Miskolc  
+
+	focus = { 
+		id = AUS_national_theatre_miskolc
+		icon = GFX_focus_rom_parties_end 
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_developing_hungarian_interior }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Zemun Gymnasium  
+
+	focus = { 
+		id = AUS_zemun_gymnasium
+		icon = GFX_goal_tfv_smiling_buddha 
+		x = 8
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_croatian_national_theatre }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Budapest-Kelenfold Station  
+
+	focus = { 
+		id = AUS_budapest_kelenfold_station
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_budapest_business_school }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Continue to Fund The Arts in Hungary  
+
+	focus = { 
+		id = AUS_fund_hungarian_arts
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_national_theatre_miskolc }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Ensuring Bohemian Content  
+
+	focus = { 
+		id = AUS_ensuring_bohemian_content
+		icon = GFX_focus_bohemia_map_1857 
+		x = 15
+		y = 1
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_maintaining_empire }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Settlement of Karolinka  
+
+	focus = { 
+		id = AUS_settlement_karolinka
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_ensuring_bohemian_content }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Invest in the Small Businesses 
+
+	focus = { 
+		id = AUS_invest_small_business
+		icon = GFX_goal_generic_intelligence_exchange 
+		x = 16
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_ensuring_bohemian_content }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Czech National Movements
+
+	focus = { 
+		id = AUS_czech_national_movements
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Improve the Railways to Prague
+
+	focus = { 
+		id = AUS_improve_railways_prague
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 16
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Keeping Galicia in Line 
+
+	focus = { 
+		id = AUS_keeping_galicia_line
+		icon = GFX_focus_galicia_map_1857
+		x = 19
+		y = 1
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_maintaining_empire }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Polonize the Local Administrations 
+
+	focus = { 
+		id = AUS_polonize_local_administrations_galicia
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = 18
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_keeping_galicia_line }
+
+		mutually_exclusive = { focus = AUS_keep_german_administration_galicia }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Keep the German Administration
+
+	focus = { 
+		id = AUS_keep_german_administration_galicia
+		icon = GFX_goal_generic_intelligence_exchange 
+		x = 20
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_keeping_galicia_line }
+
+		mutually_exclusive = { focus = AUS_polonize_local_administrations_galicia }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Restrictions on Jewish Communities
+
+	focus = { 
+		id = AUS_restrictions_jewish_communites
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		x = 18
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# The Galician Railway of Archduke Charles Louis
+
+	focus = { 
+		id = AUS_galician_railway_beginning
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 20
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+# Let the Investors Take Control
+
+	focus = { 
+		id = AUS_let_investors_take_control
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = AUS_verdello_dalmine_station
+		}
+		prerequisite = { 
+			focus = AUS_bolzano_railway_station
+		}
+		prerequisite = { 
+			focus = AUS_divaca_sezana_lines
+		}
+		prerequisite = { 
+			focus = AUS_empress_elisabeth_railway
+		}
+		prerequisite = { 
+			focus = AUS_budapest_kelenfold_station
+		}
+		prerequisite = { 
+			focus = AUS_improve_railways_prague
+		}
+		prerequisite = { 
+			focus = AUS_galician_railway_beginning
+		}
+
+		completion_reward = {
+			country_event = {
+				id = aus.1
+			} 
+		}
+	}
+
+}
