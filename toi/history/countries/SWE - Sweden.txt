@@ -44,16 +44,16 @@
         popularity = 0
       }
       vanguard_communism = {
-        popularity = 0
+        popularity = 5
       }
       collectivist_socialism = {
-        popularity = 0
+        popularity = 1
       }
       social_egalitarianism = {
-        popularity = 0
+        popularity = 20
       }
       centrism = {
-        popularity = 0
+        popularity = 44
       }
       traditional_conservatism = {
         popularity = 0
@@ -65,14 +65,14 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 30
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = centrism
   }
   
   set_technology = {
@@ -98,6 +98,17 @@ create_country_leader = {
     picture = "Portrait_SWE_Oscar_I.dds"
     expire = 1900.1.1
     ideology = despotism
+}
+
+create_country_leader = {
+  name = "Claës_Günther"
+  desc = "POLITICS_TEMP_DESC"
+  picture = "Portail_SWE_Claës_Günther.dds"
+  expire = "1965.1.1"
+  ideology = conserv_liberal
+  traits = {
+    #
+  }
 }
 
 }
