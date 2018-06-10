@@ -7,10 +7,7 @@ scripted_gui = {
 		
 		visible = {
             has_usa_congress = yes
-			OR = {
-				check_variable = { show_usa_congress_powers > 0.0 }
-				is_ai = YES
-			}
+			check_variable = { show_usa_congress_powers > 0.0 }
 		}
 		
 		effects = {
