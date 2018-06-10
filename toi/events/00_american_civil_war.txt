@@ -313,6 +313,7 @@ country_event = {
             }
             AND = {
                 has_global_flag = ACWAmerican_Civil_War
+                USA = { NOT = { has_war_with = CSA } }
                 CSA = { exists = yes }
             }
         }
