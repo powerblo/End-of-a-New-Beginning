@@ -115,7 +115,7 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = { NOT = { AUS = { control_state = 39 control_state = 736 control_state = 969 } } }
+		bypass = { NOT = { AUS = { controls_state = 39 controls_state = 736 controls_state = 969 } } }
 	}
 
  # Local Garrisons
@@ -181,14 +181,14 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = { PIE = { control_state = 160 } }
+		bypass = { PIE = { controls_state = 160 } }
 	}
 
-# The Southern Railway Extensions
+# The Southern Railway Extension
 
 	focus = { 
 		id = AUS_southern_railway_extension
-		icon = GFX_goal_generic_construct_infrastructure 
+		icon = GFX_focus_railroad_development_addon
 		x = 0
 		y = 3
 		cost = 4
@@ -299,7 +299,7 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = { NOT = { LVN = { controls_state = 160 } } AND = { NOT = { AUS = { control_state = 39 } } } }
+		bypass = { NOT = { LVN = { controls_state = 160 } } AND = { NOT = { AUS = { controls_state = 39 } } } }
 	}
 
 # Reinforcing Austria Proper  
@@ -384,7 +384,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -410,7 +410,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -446,7 +446,7 @@ focus_tree = {
 
 	focus = { 
 		id = AUS_croatian_national_theatre
-		icon = GFX_goal_tfv_smiling_buddha 
+		icon = GFX_focus_theatre_production
 		x = 8
 		y = 2
 		cost = 4
@@ -524,7 +524,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_croatian_national_theatre }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -550,7 +550,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_budapest_business_school }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -564,7 +564,7 @@ focus_tree = {
 
 	focus = { 
 		id = AUS_fund_hungarian_arts
-		icon = GFX_goal_generic_construct_infrastructure 
+		icon = GFX_focus_fund_art_programs
 		x = 12
 		y = 3
 		cost = 4
@@ -576,7 +576,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_national_theatre_miskolc }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -668,7 +668,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -694,7 +694,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -778,7 +778,7 @@ focus_tree = {
 
 	focus = { 
 		id = AUS_restrictions_jewish_communites
-		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		icon = GFX_focus_jewish_restrictions
 		x = 18
 		y = 3
 		cost = 4
@@ -790,7 +790,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -816,7 +816,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
 
     	available = {
-       		date > 1858.01.01
+       		date > 1858.05.01
   		}
 
 		completion_reward = {
@@ -862,7 +862,7 @@ focus_tree = {
 		}
 
     	available = {
-       		date > 1858.01.01
+       		date > 1859.01.01
 
   		}
 
