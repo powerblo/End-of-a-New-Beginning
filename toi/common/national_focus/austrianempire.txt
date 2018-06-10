@@ -319,7 +319,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = {
-				id = aus.1
+				id = aus.3
 			} 
 		}
 	}
@@ -339,10 +339,28 @@ focus_tree = {
 
 		prerequisite = { focus = AUS_reinforcing_austria_proper }
 
+		available {
+			has_active_mission = eoanb_decision_AUS_mein_wille
+		}
+
 		completion_reward = {
 			country_event = {
-				id = aus.1
-			} 
+				id = aus.4
+			}	
+			39 = {
+				custom_effect_tooltip = AUS_ring_road_focus
+				hidden_effect = {
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+				}
+				
+			}
+		}
+		bypass = {
+			date > 1861.01.01
 		}
 	}
 

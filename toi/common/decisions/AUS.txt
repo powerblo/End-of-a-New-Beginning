@@ -18,14 +18,16 @@ economic_decisions = {
 
 		fire_only_once = yes
 
+		days_remove = 730
+
 		cost = 25
 
 		complete_effect = {
-			956 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			956 = { remove_building  = { type = infrastructure level = 3 instant_build = yes } }
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 1000
 		}
 	}
 	
