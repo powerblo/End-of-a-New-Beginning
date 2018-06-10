@@ -19,7 +19,7 @@ focus_tree = {
 		icon = GFX_focus_austrianempire_map_1857
 		x = 10
 		y = 0
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -42,7 +42,7 @@ focus_tree = {
 		icon = GFX_focus_lombardy_venetia_map_1857
 		x = 1
 		y = 1
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -50,11 +50,13 @@ focus_tree = {
 
 		prerequisite = { focus = AUS_maintaining_empire }
 
+		available = { LVN = { owns_state = 160 } }
 		completion_reward = {
 			country_event = {
 				id = aus.2
 			}
 		}
+		bypass = { PIE = { controls_state = 160 } }
 	}
 
 # The Southern Railway 
@@ -64,7 +66,7 @@ focus_tree = {
 		icon = GFX_goal_focus_railroad_development
 		x = 0
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -73,28 +75,47 @@ focus_tree = {
 		prerequisite = { focus = AUS_securing_italian_possessions }
 
 		completion_reward = {
-			159 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			39 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
-			982 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			736 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
-			160 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			969 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
 		}
+		bypass = { NOT = { AUS = { control_state = 39 control_state = 736 control_state = 969 } } }
 	}
 
  # Local Garrisons
@@ -104,7 +125,7 @@ focus_tree = {
 		icon = GFX_focus_lombardy_venetia_map_1857
 		x = 2
 		y = 2
-		cost = 2
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -114,50 +135,63 @@ focus_tree = {
 
 		completion_reward = {
 			159 = {
-				add_building_construction = {
-					type = bunker
-					province = 3780
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					province = 773
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					province = 11568
-					level = 1
-					instant_build = yes
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_forts_159_1857
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							province = 3780
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 773
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 11568
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
 			160 = {
-				add_building_construction = {
-					type = bunker
-					province = 11584
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					province = 3604
-					level = 1
-					instant_build = yes
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_forts_160_1857
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							province = 11584
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 3604
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
 		}
+		bypass = { PIE = { control_state = 160 } }
 	}
 
-# The Verdello-Dalmine Station 
+# The Southern Railway Extensions
 
 	focus = { 
-		id = AUS_verdello_dalmine_station
+		id = AUS_southern_railway_extension
 		icon = GFX_goal_generic_construct_infrastructure 
 		x = 0
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -166,20 +200,57 @@ focus_tree = {
 		prerequisite = { focus = AUS_southern_railway }
 
 		completion_reward = {
-			country_event = {
-				id = aus.1
-			} 
+			159 = {
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			982 = {
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			160 = {
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
 		}
+		bypass = { PIE = { controls_state = 160 } }
 	}
 
-# The Bolzano Railway Station 
+# The Treviglio-Bergamo Railway
 
 	focus = { 
-		id = AUS_bolzano_railway_station
+		id = AUS_treviglio_bergamo_railway
 		icon = GFX_goal_generic_construct_infrastructure 
 		x = 2
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -188,10 +259,47 @@ focus_tree = {
 		prerequisite = { focus = AUS_southern_railway }
 
 		completion_reward = {
-			country_event = {
-				id = aus.1
-			} 
+			39 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			982 = {
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			159 = {
+				if = {
+					limit = { is_controlled_by = LVN }
+					custom_effect_tooltip = AUS_1_infrastructure
+					hidden_effect = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
 		}
+		bypass = { NOT = { LVN = { controls_state = 160 } } AND = { NOT = { AUS = { control_state = 39 } } } }
 	}
 
 # Reinforcing Austria Proper  
@@ -201,7 +309,7 @@ focus_tree = {
 		icon = GFX_focus_austria_map_1857
 		x = 5
 		y = 1
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -223,7 +331,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		x = 4
 		y = 2
-		cost = 10
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -245,7 +353,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 6
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -267,13 +375,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -289,13 +401,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 6
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_worgl_hauptbahnhof_station focus = AUS_ring_road_construction }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -311,7 +427,7 @@ focus_tree = {
 		icon = GFX_focus_hungary_map_1857 
 		x = 10
 		y = 1
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -333,7 +449,7 @@ focus_tree = {
 		icon = GFX_goal_tfv_smiling_buddha 
 		x = 8
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -355,7 +471,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy 
 		x = 10
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -377,7 +493,7 @@ focus_tree = {
 		icon = GFX_focus_rom_parties_end 
 		x = 12
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -399,13 +515,17 @@ focus_tree = {
 		icon = GFX_goal_tfv_smiling_buddha 
 		x = 8
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_croatian_national_theatre }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -421,13 +541,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure 
 		x = 10
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_budapest_business_school }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -443,13 +567,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure 
 		x = 12
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_national_theatre_miskolc }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -465,7 +593,7 @@ focus_tree = {
 		icon = GFX_focus_bohemia_map_1857 
 		x = 15
 		y = 1
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -487,7 +615,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory 
 		x = 14
 		y = 2
-		cost = 10
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -509,7 +637,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange 
 		x = 16
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -531,13 +659,17 @@ focus_tree = {
 		icon = GFX_focus_RAJ_clamp_down_on_corruption
 		x = 14
 		y = 3
-		cost = 10
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -553,13 +685,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 16
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_settlement_karolinka focus = AUS_invest_small_business }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -575,7 +711,7 @@ focus_tree = {
 		icon = GFX_focus_galicia_map_1857
 		x = 19
 		y = 1
-		cost = 1
+		cost = 2
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -597,7 +733,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory 
 		x = 18
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -621,7 +757,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange 
 		x = 20
 		y = 2
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -645,13 +781,17 @@ focus_tree = {
 		icon = GFX_focus_RAJ_clamp_down_on_corruption
 		x = 18
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -667,13 +807,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 20
 		y = 3
-		cost = 5
+		cost = 4
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { focus = AUS_polonize_local_administrations_galicia focus = AUS_keep_german_administration_galicia }
+
+    	available = {
+       		date > 1858.01.01
+  		}
 
 		completion_reward = {
 			country_event = {
@@ -689,17 +833,17 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 10
 		y = 4
-		cost = 10
+		cost = 8
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { 
-			focus = AUS_verdello_dalmine_station
+			focus = AUS_treviglio_bergamo_railway
 		}
 		prerequisite = { 
-			focus = AUS_bolzano_railway_station
+			focus = AUS_southern_railway_extension
 		}
 		prerequisite = { 
 			focus = AUS_divaca_sezana_lines
@@ -716,6 +860,11 @@ focus_tree = {
 		prerequisite = { 
 			focus = AUS_galician_railway_beginning
 		}
+
+    	available = {
+       		date > 1858.01.01
+
+  		}
 
 		completion_reward = {
 			country_event = {
