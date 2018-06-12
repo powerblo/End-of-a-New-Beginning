@@ -1,0 +1,21 @@
+﻿add_namespace = system
+
+#Init Event
+#This event will mainly be used to assign events, flags, etc. at the start of the game, especially triggering events at the correct date
+#Since the Game starts on May 10, 1857, assume your calculations for triggered events from there (e.g. days = 5 will trigger on May 15)
+country_event = {
+	id = system.1
+	title = system.1.t
+	desc = system.1.d
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = system.1.a
+		ai_chance = { factor = 100 }
+		#Add effects below
+	}
+	
+}
