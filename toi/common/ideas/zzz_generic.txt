@@ -402,7 +402,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = captain_of_industry_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 
 			traits = { captain_of_industry_1 }
@@ -414,7 +414,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = fortification_engineer_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 			
 			traits = { fortification_engineer_1 }
@@ -426,7 +426,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = war_industrialist_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 			
 			traits = { war_industrialist_1 }
@@ -438,7 +438,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_pol_author limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 			
 			traits = { eoanb_trait_pol_author }
@@ -450,7 +450,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_road_expert limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 			
 			traits = { eoanb_trait_road_expert }
@@ -462,7 +462,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_work_minister limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 			
 			traits = { eoanb_trait_work_minister }
