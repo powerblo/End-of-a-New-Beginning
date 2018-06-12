@@ -185,7 +185,7 @@ scripted_gui = {
 			}
 
 			usa_congress_power_dem_push_click = {
-				add_idea = { idea = usa_congress_dem_decentral }
+				add_ideas = usa_congress_dem_decentral
 				subtract_from_variable = { usa_congress = 100 }
 				add_to_variable = { usa_congress_faction = 6 }
 			}
@@ -285,7 +285,7 @@ scripted_gui = {
 				check_variable = { usa_congress_faction < 0.99 }
 				social_egalitarianism > 0.49
 				NOT = { has_idea = full_equality }
-				NOT = { has_idea = american_slavery }
+				NOT = { has_idea = usa_slavery_law }
 			}
 
 			#Democratic

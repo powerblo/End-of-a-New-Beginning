@@ -18,12 +18,15 @@ economic_decisions = {
 
 		fire_only_once = yes
 
-		days_remove = 730
+		days_remove = 90
 
 		cost = 25
 
 		complete_effect = {
-			956 = { remove_building  = { type = infrastructure level = 3 instant_build = yes } }
+			956 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			hidden_effect = {
+				set_country_flag = eoanb_flag_AUS_completed_mein_wille
+			}
 		}
 
 		ai_will_do = {
