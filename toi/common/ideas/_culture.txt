@@ -119,14 +119,22 @@ ideas = {
 			picture = GFX_idea_atheistic_state
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
+				}
+				NOT = {
+					has_government = fundamentalism
 				}
 			}
 
@@ -149,14 +157,22 @@ ideas = {
 			picture = GFX_idea_secular_state
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
+				}
+				NOT = {
+					has_government = fundamentalism
 				}
 			}
 
@@ -185,13 +201,18 @@ ideas = {
 			picture = GFX_idea_state_religion
 
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
 				}
 			}
@@ -216,15 +237,24 @@ ideas = {
 		theocratic_state = {
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
 				}
+				NOT = {
+					has_idea = religion_secular
+				}
+				has_government = fundamentalism
 			}
 
 			ai_will_do = {

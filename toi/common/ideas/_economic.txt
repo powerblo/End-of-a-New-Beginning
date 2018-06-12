@@ -9,6 +9,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+			level = 1
 		
 			modifier = {
 				consumer_goods_factor = 0.65
@@ -38,6 +39,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+			level = 2
 			
 			modifier = {
 				consumer_goods_factor = 0.5
@@ -59,9 +61,13 @@ ideas = {
 		
 		civilian_economy = {
 			
+			available = {
+				always = yes
+			}
 		
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 3
 			
 			modifier = {
 				consumer_goods_factor = 0.45
@@ -81,15 +87,15 @@ ideas = {
 			
 			available = {
 				OR = {
-					has_government = autocracy
-					has_government = vanguard_communism
 					has_war = yes
 					threat > 0.05
+					has_war_support > 0.5
 				}	
 			}
 			
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 4
 			
 			modifier = {
 				consumer_goods_factor = 0.4
@@ -117,15 +123,15 @@ ideas = {
 			
 			available = {
 				OR = {
-					has_government = autocracy
-					has_government = vanguard_communism
 					has_war = yes
-					threat > 0.15
-				}
+					threat > 0.2
+					has_war_support > 0.65
+				}	
 			}
 
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 5
 			
 			modifier = {
 				consumer_goods_factor = 0.35
@@ -154,25 +160,16 @@ ideas = {
 			
 			
 			available = {
-				threat > 0.15
+				threat > 0.25
+				has_war = yes
 				OR = {
-					has_government = autocracy
-					has_government = vanguard_communism
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.4
-							}
-						}
-					}
-				}	
+					has_war_support > 0.9
+				}
 			}
 		
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 6
 			
 			modifier = {
 				consumer_goods_factor = 0.3
@@ -203,13 +200,8 @@ ideas = {
 			
 			available = {
 				has_war = yes
-				threat > 0.2
-				any_enemy_country = {
-					ic_ratio = { 
-						tag = ROOT 
-						ratio > 0.5
-					}
-				}
+				threat > 0.5
+				has_war_support > 0.75
 			}
 
 			ai_will_do = {
@@ -238,8 +230,9 @@ ideas = {
 				}				
    			}
 			
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 7
 			
 			modifier = {
 				consumer_goods_factor = 0.25
@@ -303,14 +296,6 @@ ideas = {
 		
 		limited_exports = {
 			
-			
-			available = {
-				OR = {
-					has_idea = partial_economic_mobilisation
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
-				}
-			}
 		
 			cost = 300
 			removal_cost = -1
@@ -346,9 +331,9 @@ ideas = {
 			
 			available = {
 				has_war = yes
-				OR = {
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
+				has_idea = tot_economic_mobilisation
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_closed_economy		
 				}
 			}
 			
@@ -391,7 +376,10 @@ ideas = {
 			level = 5
 			
 			available = {
-				
+				OR = {
+					TAG = PRS
+					has_war_support > 0.6
+				}
 			}
 
 			modifier = {
@@ -415,7 +403,7 @@ ideas = {
 			level = 4
 			
 			available = {
-				
+				always = yes
 			}
 
 			ai_will_do = {
@@ -447,7 +435,7 @@ ideas = {
 			level = 3
 
 			available = {
-				
+				always = yes
 			}
 
 			modifier = {
@@ -476,7 +464,7 @@ ideas = {
 		two_percent = {
 			
 			available = {
-				
+				always = yes
 			}
 
 			ai_will_do = {
@@ -507,7 +495,9 @@ ideas = {
 		one_percent = {
 			
 			available = {
-				
+				NOT = {
+					TAG = PRS
+				}
 			}
 
 			ai_will_do = {
@@ -542,18 +532,19 @@ ideas = {
 			level = 5
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
-					NOT = { has_completed_focus = AF_O_K_create_nobility }
 				}
 			}
 
@@ -575,18 +566,19 @@ ideas = {
 			level = 4
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
-					NOT = { has_completed_focus = AF_O_K_create_nobility }
 				}
 			}
 
@@ -616,18 +608,19 @@ ideas = {
 			level = 3
 
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
-					NOT = { has_completed_focus = AF_O_K_create_nobility }
 				}
 			}
 
@@ -650,18 +643,19 @@ ideas = {
 		low_taxes = {
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
-					NOT = { has_completed_focus = AF_O_K_create_nobility }
 				}
 			}
 
@@ -689,16 +683,19 @@ ideas = {
 		very_low_taxes = {
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
 					}
-					NOT = { has_completed_focus = AF_O_K_create_nobility }
 				}
 			}
 
