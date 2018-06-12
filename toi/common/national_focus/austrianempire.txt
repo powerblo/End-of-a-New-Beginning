@@ -340,7 +340,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_reinforcing_austria_proper }
 
 		available {
-			has_active_mission = eoanb_decision_AUS_mein_wille
+			has_country_flag = eoanb_flag_AUS_completed_mein_wille
 		}
 
 		completion_reward = {
@@ -352,11 +352,14 @@ focus_tree = {
 				hidden_effect = {
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 1
 						instant_build = yes
 					}
 				}
 				
+			}
+			hidden_effect = {
+				clr_country_flag = eoanb_flag_AUS_completed_mein_wille
 			}
 		}
 		bypass = {
