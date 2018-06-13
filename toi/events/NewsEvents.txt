@@ -112,3 +112,35 @@ news_event = {
 		trigger = { TAG = ITA }
 	}
 }
+
+#Eruption of Seven Weeks War
+news_event = {
+	id = news.7
+	title = news.7.t
+	desc = news.7.d
+	picture = GFX_news_event_military_planning
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.7.a
+	}
+}
+
+#German Confederation dissolved
+news_event = {
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_worker_protests
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.8.a
+	}
+}

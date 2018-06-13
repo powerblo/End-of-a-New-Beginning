@@ -40,13 +40,23 @@ political_actions = {
 		icon = generic_political_discourse
 		
 		available = {
-			has_stability > 0.3
+			has_stability > 0.25
+			has_idea = GER_general_idea_ger_confed
 		}
 		
 		visible = {
-			TAG = PRS
-			has_idea = GER_general_idea_ger_confed
-			NOT = { has_global_flag = eoanb_flag_austro_prussian_war_schleswig }
+			OR = {
+				AND = {
+					TAG = PRS
+					has_country_flag = eoanb_flag_won_2_schleswig_war
+					date > 1866.1.1
+				}
+				AND = {
+					TAG = PRS
+					NOT = { has_country_flag = eoanb_flag_won_2_schleswig_war }
+					date > 1871.6.1
+				}
+			}
 		}
 		
 		fire_only_once = yes
@@ -54,7 +64,11 @@ political_actions = {
 		cost = 25
 		
 		complete_effect = {
-			#Blank for now, will be added with 7 Weeks War Update
+			custom_effect_tooltip = eoanb_tt_decision_prussian_reforms_1
+			PRS = { country_event = { days = 1 id = sevenweekswar.1 } }
+			hidden_effect = {
+				set_country_flag = eoanb_flag_PRS_made_reforms
+			}
 		}
 		
 		ai_will_do = {
