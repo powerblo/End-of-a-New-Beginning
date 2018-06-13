@@ -60,6 +60,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_ideas = DEN_idea_november_constitution
 		DEN = { transfer_state = 58 }
+		DEN = { transfer_state = 1032 }
 		hidden_effect = {
 			DEN = { country_event = { days = 10 id = secschwar.4 } }
 			PRS = { country_event = { days = 10 id = secschwar.4 } }
@@ -107,8 +108,8 @@ country_event = {
 		custom_effect_tooltip = eoanb_tt_event_secschwar_5
 		hidden_effect = {
 			news_event = news.5
-			DEN = { puppet = HLS }
 			HLS = { transfer_state = 949 }
+			DEN = { puppet = HLS }
 			HAN = { give_military_access = HLS }
 			SAX = { give_military_access = HLS }
 			PRS = { country_event = { days = 3 id = secschwar.6 } }
