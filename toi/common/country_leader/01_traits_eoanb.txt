@@ -113,7 +113,7 @@ leader_traits = {
 	political_independent = {
 		sprite = 10
 		random = yes
-		drift_defence_factor = 0.5
+		drift_defence_factor = 0.25
 
 		ai_will_do = {
 			factor = 1
@@ -259,8 +259,9 @@ leader_traits = {
 	oil_magnate = {
 		sprite = 10
 		random = yes
-		drift_defence_factor = 0.5
-		consumer_goods_factor = -0.05
+		
+		consumer_goods_factor = -0.02
+		production_oil_factor = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -270,6 +271,7 @@ leader_traits = {
 	clever_buisnessman = {
 		sprite = 10
 		random = yes
+		
 		consumer_goods_factor = -0.05
 
 		ai_will_do = {
@@ -280,6 +282,7 @@ leader_traits = {
 	railroad_tycoon = {
 		sprite = 10
 		random = yes
+		
 		production_speed_infrastructure_factor = 0.1
 
 		ai_will_do = {
@@ -290,7 +293,8 @@ leader_traits = {
 	influencial_writer = {
 		sprite = 10
 		random = yes
-		political_power_factor = 0.15
+		
+		political_power_factor = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -300,6 +304,7 @@ leader_traits = {
 	innovative_engineer = {
 		sprite = 10
 		random = yes
+		
 		research_time_factor = -0.02
 
 		ai_will_do = {
@@ -310,6 +315,7 @@ leader_traits = {
 	ingenious_scientist = {
 		sprite = 10
 		random = yes
+		
 		research_time_factor = -0.03
 
 		ai_will_do = {
@@ -320,9 +326,9 @@ leader_traits = {
 	efficient_administrator = {
 		sprite = 10
 		random = yes
+		
 		political_power_factor = 0.05
 		stability_factor = 0.02
-		#PP cost for advisor -5%
 
 		ai_will_do = {
 			factor = 1
@@ -332,6 +338,7 @@ leader_traits = {
 	industrial_promoter = {
 		sprite = 10
 		random = yes
+		
 		production_speed_industrial_complex_factor = 0.05
 
 		ai_will_do = {
@@ -342,6 +349,7 @@ leader_traits = {
 	great_urbanizer = {
 		sprite = 10
 		random = yes
+		
 		production_speed_infrastructure_factor = 0.05
 		production_speed_industrial_complex_factor = 0.05
 
@@ -353,6 +361,7 @@ leader_traits = {
 	controversial_figure = {
 		sprite = 10
 		random = yes
+		
 		political_power_factor = 0.05
 		stability_factor = -0.05
 
@@ -364,6 +373,7 @@ leader_traits = {
 	determined_expansionist = {
 		sprite = 10
 		random = yes
+		
 		justify_war_goal_time = -0.1
 		war_support_factor = 0.05
 
@@ -375,6 +385,7 @@ leader_traits = {
 	war_veteran = {
 		sprite = 10
 		random = yes
+		
 		training_time_factor = -0.1
 		war_support_factor = 0.02
 
@@ -386,6 +397,7 @@ leader_traits = {
 	friend_of_capitalism = {
 		sprite = 10
 		random = yes
+		
 		consumer_goods_factor = -0.1
 		political_power_factor = -0.15
 
@@ -397,6 +409,7 @@ leader_traits = {
 	working_class_figurehead = {
 		sprite = 10
 		random = yes
+		
 		political_power_factor = 0.1
 		stability_factor = 0.1
 
@@ -410,6 +423,7 @@ leader_traits = {
 	hos_trait_partially_paralyzed = {
 		sprite = 10
 		random = no
+		
 		stability_factor = -0.08
 
 		ai_will_do = {
@@ -420,8 +434,155 @@ leader_traits = {
 	hos_trait_colonial_monarch = {
 		sprite = 10
 		random = no
+		
 		political_power_factor = -0.3
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# COUNTRY LEADER TRAITS
+	
+	eoanb_trait_weak_claim = {
+		sprite = 10
+		random = no
+		
+		political_power_factor = -0.2
+		stability_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_medium_claim = {
+		sprite = 10
+		random = no
+		
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_strong_claim = {
+		sprite = 10
+		random = no
+		
+		political_power_factor = 0.05
+		stability_factor = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_military_leader = {
+		sprite = 10
+		random = yes
+		
+		army_morale_factor = 0.05
+		experience_gain_army_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_experienced_diplomat = {
+		sprite = 10
+		random = yes
+		
+		opinion_gain_monthly_factor = 0.25
+		improve_relations_maintain_cost_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_efficient_administrator = {
+		sprite = 10
+		random = no
+		
+		political_power_factor = 0.05
+		mobilization_speed = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_warmonger = {
+		sprite = 10
+		random = yes
+		
+		justify_war_goal_time = -0.1
+		production_speed_arms_factory_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_industrial_investor = {
+		sprite = 10
+		random = yes
+		
+		production_speed_buildings_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_patriotic_orator = {
+		sprite = 10
+		random = yes
+		
+		drift_defence_factor = 0.1
+		army_core_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# POLITICAL ADVISOR TRAITS
+	
+	eoanb_trait_rural_developer_specialist = {
+		sprite = 10
+		random = no
+		
+		MONTHLY_POPULATION = 0.04
+		production_speed_industrial_complex_factor = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_rural_developer_expert = {
+		sprite = 10
+		random = no
+		
+		MONTHLY_POPULATION = 0.06
+		production_speed_industrial_complex_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	eoanb_trait_rural_developer_genius = {
+		sprite = 10
+		random = no
+		
+		MONTHLY_POPULATION = 0.08
+		production_speed_industrial_complex_factor = 0.08
+		
 		ai_will_do = {
 			factor = 1
 		}
