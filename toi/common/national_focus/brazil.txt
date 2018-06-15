@@ -1029,7 +1029,140 @@ focus = {
 	
 	}
 	
+	}
 	
+	
+	focus = {
+		id = BRA_discuss_our_politics
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		x = 35
+		y = 1
+
+		prerequisite = {
+		focus = BRA_the_rise_of_the_empire
+		}
+	
+
+	completion_reward = {
+    add_political_power = 45
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_prepare_the_cabinet
+		icon = GFX_goal_focus_the_elite
+		cost = 10
+		x = 35
+		y = 2
+
+		prerequisite = {
+		focus = BRA_discuss_our_politics
+		}
+	
+
+	completion_reward = {
+    add_political_power = 30
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_reorganize_the_parliament
+		icon = GFX_focus_ITA_local_gov
+		cost = 10
+		x = 35
+		y = 3
+
+		prerequisite = {
+		focus = BRA_prepare_the_cabinet
+		}
+	
+
+	completion_reward = {
+    add_political_power = 15
+	country_event = brazil.5
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_hold_the_elections
+		icon = GFX_goal_focus_elections
+		cost = 10
+		x = 35
+		y = 4
+
+		prerequisite = {
+		focus = BRA_reorganize_the_parliament
+		}
+	   available = {
+	   date > 1858.01.01
+       }
+
+	completion_reward = {
+    add_political_power = 10
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_elect_a_progressive_minister
+		icon = GFX_goal_focus_support_social_egalitarianism
+		cost = 10
+		x = 35
+		y = 5
+
+		prerequisite = {
+		focus = BRA_hold_the_elections
+		}
+	   
+	   mutually_exclusive = {
+	   focus = BRA_elect_a_liberal_minister
+	   focus = BRA_elect_a_conservative_minister
+	   }
+
+	completion_reward = {
+    add_political_power = 10
+	swap_ideas = {
+	add_idea = BRA_zacaria_de_gois
+	remove_idea = BRA_marques_de_olinda
+    }
+	}
+	
+	}
+	
+	
+	focus = {
+		id = BRA_elect_a_conservative_minister
+		icon = GFX_goal_focus_support_conservatism
+		cost = 10
+		x = 40
+		y = 5
+       
+	   
+	   available = {
+	   has_country_flag = BRA_conservative
+	   }
+		prerequisite = {
+		focus = BRA_hold_the_elections
+		}
+	   
+	   mutually_exclusive = {
+	   focus = BRA_elect_a_liberal_minister
+	   focus = BRA_elect_a_progressive_minister
+	   }
+
+	completion_reward = {
+    add_political_power = 10
+	swap_ideas = {
+	add_idea = BRA_marques_de_monte_alegre
+	remove_idea = BRA_marques_de_olinda
+    }
+	}
+	
+	}
 	
 	}
 

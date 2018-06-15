@@ -71,3 +71,25 @@ country_event = {
     name = brazil.4.a
    add_political_power = -50
  }
+ }
+ 
+ country_event = { 
+  id = brazil.5
+  title = brazil.5.t
+  desc = brazil.5.d
+  picture = report_event_nap_france_switzerland
+
+  is_triggered_only = yes
+
+  option = { #  Empire
+    name = brazil.5.a
+   add_political_power = 10
+   set_country_flag = BRA_liberal
+ }
+option = { #  Empire
+    name = brazil.5.b
+   add_political_power = -5
+   set_country_flag = BRA_conservative
+ }
+ }
+ 
