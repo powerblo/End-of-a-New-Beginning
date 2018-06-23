@@ -15,6 +15,20 @@ ideas = {
 			}
 		}
 		
+	BRA_parliament2 = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = parliamentary_republic
+			
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		
 	BRA_transatlantic = {
 			allowed = {
 				TAG = BRA
@@ -204,11 +218,12 @@ ideas = {
 			picture = placeholder
 			
 			modifier = {
-            political_power_factor = 0.01
+            political_power_factor = 0.02
+			stability_factor = -0.01
 			}
 	}
 
-	BRA_marques_de_monte_alegre = {
+	BRA_vinsconde_de_sinimbu = {
 			allowed = {
 				TAG = BRA
 			}
@@ -218,8 +233,39 @@ ideas = {
 			picture = placeholder
 			
 			modifier = {
-            political_power_factor = 0.02
-			add
+            stability_factor = 0.02
+			political_power_factor = -0.01
 			}
-	}	
+	}
+
+
+	BRA_european_infrastructure = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = state_country_industrialization_industrializing
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+
+	BRA_ready_for_war = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = state_country_industrialization_industrializing
+			
+			modifier = {
+				army_core_attack_factor = 0.02
+				army_core_defence_factor = 0.01
+				training_time_army_factor = -0.02
+			}
+		}			
 }
