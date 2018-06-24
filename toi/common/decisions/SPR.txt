@@ -71,13 +71,12 @@ SPR_Patronage = {
 	}
 		complete_effect = {
 			add_stability = 0.04
-			add_opinion_modifier = {
-			target = ENG
-			modifier = 25
+			ENG = {
+				add_opinion_modifier = { target = ROOT modifier = influential_writer }
 			}
-			add_opinion_modifier = {
-			target = ENG
-			modifier = 25
+
+			USA = {
+				add_opinion_modifier = { target = ROOT modifier = influential_writer }
 			}
 		}
 		fire_only_once = yes
