@@ -262,3 +262,165 @@ country_event = {
  }
 
  }
+ 
+ country_event = { 
+  id = brazil.16
+  title = brazil.16.t
+  desc = brazil.16.d
+  picture = report_event_sepoy2
+
+  is_triggered_only = yes
+
+  option = { #  Empire
+    name = brazil.16.a
+ 
+ }
+
+ }
+ 
+  
+ country_event = { 
+  id = brazil.17
+  title = brazil.17.t
+  desc = brazil.17.d
+  picture = report_event_sepoy2
+
+  is_triggered_only = yes
+
+  option = { #  Empire
+    name = brazil.17.a
+ 
+ }
+
+ }
+ 
+  country_event = { 
+  id = brazil.18
+  title = brazil.18.t
+  desc = brazil.18.d
+  picture = report_event_sepoy2
+
+  is_triggered_only = yes
+  hidden = yes
+  
+  trigger = {
+  owns_state = 300
+  }
+  option = { #  Empire
+    name = brazil.18.a
+	300 = { set_state_name = "Cisplatine" }
+ }
+
+ }
+ 
+   country_event = { 
+  id = brazil.19
+  title = brazil.19.t
+  desc = brazil.18.d
+  picture = report_event_sepoy2
+
+  is_triggered_only = yes
+  hidden = yes
+  
+ 
+  option = {
+    name = brazil.19.a
+	trigger = { 
+	original_tag = ENG
+	}
+	BRA = { transfer_state = 687 }
+ }
+ 
+ option = {
+    name = brazil.19.b
+	trigger = { 
+	original_tag = ENG
+	}
+	BRA = { country_event = brazil.20 }
+ }
+ 
+  option = {
+    name = brazil.19.c
+	trigger = { 
+	original_tag = FRA
+	}
+   BRA = { transfer_state = 310 }
+ }
+ 
+   option = {
+    name = brazil.19.d
+	trigger = { 
+	original_tag = FRA
+	}
+   
+ }
+ 
+   option = {
+    name = brazil.19.e
+	trigger = { 
+	original_tag = HOL
+	}
+	BRA = { transfer_state = 309 }
+ }
+ 
+    option = {
+    name = brazil.19.f
+	trigger = { 
+	original_tag = HOL
+	}
+	BRA = { country_event = brazil.20 }
+ }
+
+
+ }
+ 
+   country_event = { 
+  id = brazil.20
+  title = brazil.20.t
+  desc = brazil.20.d
+
+  is_triggered_only = yes
+  
+ 
+  option = { #  Empire
+    name = brazil.20.a
+	create_wargoal = {
+    type = take_core_state
+    target = FROM
+	}
+
+ }
+
+ }
+ 
+    country_event = { 
+  id = brazil.21
+  title = brazil.21.t
+  desc = brazil.21.d
+
+  is_triggered_only = yes
+  trigger = { owns_state = 310 }
+  hidden = yes
+ 
+  option = { #  Empire
+    name = brazil.21.a
+	310 = { set_state_name = "Caiena" }
+ }
+
+ }
+ 
+   country_event = { 
+  id = brazil.22
+  title = brazil.22.t
+  desc = brazil.22.d
+
+  is_triggered_only = yes
+  trigger = { owns_state = 687 }
+  hidden = yes
+ 
+  option = { #  Empire
+    name = brazil.22.a
+	687 = { set_state_name = "Guiana" }
+ }
+
+ }

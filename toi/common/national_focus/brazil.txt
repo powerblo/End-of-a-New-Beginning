@@ -1994,14 +1994,368 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
    create_wargoal = {
-    type = puppet_wargoal_focus
+    type = take_core_state
     target = URG
 }
 	 }
 	}
 	
-	
+	focus = {
+		id = BRA_parana_river_claims
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		x = 58
+		y = 17
+        
+		prerequisite = {
+		focus = BRA_crush_the_weak
+		}
+		
+		
+	completion_reward = {
+       add_state_core = 301
+	PAR = { country_event = brazil.16 }
 	}
+	 }
+	 
+	focus = {
+		id = BRA_conquer_paraguay
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		x = 58
+		y = 18
+        
+		prerequisite = {
+		focus = BRA_parana_river_claims
+		}
+		
+		
+	completion_reward = {
+       create_wargoal = {
+    type = take_core_state
+    target = PAR
+}
+	}
+	 }
+	 
+	focus = {
+		id = BRA_our_greatest_foe
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		x = 52
+		y = 16
+        
+		prerequisite = {
+		focus = BRA_platine_claims
+		}
+		
+		
+	completion_reward = {
+ add_war_support = 0.01
+ }
+	}
+
+	
+    focus = {
+		id = BRA_claim_brazilian_natural_borders
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10
+		x = 52
+		y = 17
+        
+		prerequisite = {
+		focus = BRA_our_greatest_foe
+		}
+		
+		
+	completion_reward = {
+        add_state_core = 1058
+	ARG = { country_event = brazil.17 }
+ }
+	}
+	
+	focus = {
+		id = BRA_shatter_the_confederation
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		x = 52
+		y = 18
+        
+		prerequisite = {
+		focus = BRA_claim_brazilian_natural_borders
+		}
+		
+		
+	completion_reward = {
+    create_wargoal = {
+    type = take_core_state
+    target = ARG
+}
+ }
+	}
+	
+    focus = {
+		id = BRA_expand_our_influence
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		x = 53
+		y = 19
+        
+		prerequisite = {
+		focus = BRA_shatter_the_confederation
+		}
+	    prerequisite = {
+		focus = BRA_the_second_cisplatine_war
+		}
+		
+		
+	completion_reward = {
+    create_wargoal = {
+    type = puppet_wargoal_focus
+    target = BUE
+}
+ }
+	}
+	
+	focus = {
+		id = BRA_northern_claims
+		icon = GFX_goal_focus_gerrymandering
+		cost = 10
+		x = 48
+		y = 15
+        
+		prerequisite = {
+		focus = BRA_prepare_for_war
+		}
+		
+		
+	completion_reward = {
+  add_political_power = 15
+}
+}
+
+focus = {
+		id = BRA_reclaim_the_portuguese_guyana
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10
+		x = 50
+		y = 16
+        
+		prerequisite = {
+		focus = BRA_northern_claims
+		}
+		
+		
+	completion_reward = {
+  add_state_core = 310
+  add_political_power = 35
+}
+}
+
+focus = {
+		id = BRA_claim_the_dutch_guyana
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		x = 48
+		y = 16
+        
+		prerequisite = {
+		focus = BRA_northern_claims
+		}
+		
+		
+	completion_reward = {
+  add_state_core = 309
+  add_political_power = -15
+}
+}
+
+
+
+focus = {
+		id = BRA_america_for_the_americans_doctrine
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 49
+		y = 17
+        
+		prerequisite = {
+		focus = BRA_claim_the_dutch_guyana
+		}
+		prerequisite = {
+		focus = BRA_reclaim_the_portuguese_guyana
+		}
+		
+		
+	completion_reward = {
+  add_political_power = 25
+  add_war_support = 0.03
+}
+}
+
+focus = {
+		id = BRA_claim_the_british_guyana
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10
+		x = 49
+		y = 18
+        
+		prerequisite = {
+		focus = BRA_america_for_the_americans_doctrine
+		}
+		
+		
+	completion_reward = {
+   add_state_core = 687
+  add_political_power = -15
+}
+}
+
+focus = {
+		id = BRA_challenge_european_imperialism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 49
+		y = 19
+        
+		prerequisite = {
+		focus = BRA_claim_the_british_guyana
+		}
+		
+		
+	completion_reward = {
+   ENG = { country_event = brazil.19 }
+   HOL = { country_event = brazil.19 }
+   FRA = { country_event = brazil.19 }
+}
+}
+
+focus = {
+		id = BRA_settle_bolivian_amazon
+		icon = GFX_focus_ITA_North_and_South
+		cost = 10
+		x = 46
+		y = 16
+        
+		prerequisite = {
+		focus = BRA_northern_claims
+		}
+		
+		
+	completion_reward = {
+   753 = { add_manpower = 10000 } 
+}
+}
+
+focus = {
+		id = BRA_claim_the_bolivian_amazon
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10
+		x = 46
+		y = 17
+        
+		prerequisite = {
+		focus = BRA_settle_bolivian_amazon
+		}
+		
+		
+	completion_reward = {
+   add_state_core = 753
+   add_political_power = -15
+}
+}
+
+focus = {
+		id = BRA_surprise_attack_bolivia
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		x = 46
+		y = 18
+        
+		prerequisite = {
+		focus = BRA_claim_the_bolivian_amazon
+		}
+		
+		
+	completion_reward = {
+    create_wargoal = {
+    type = take_core_state
+    target = BOL
+}
+}
+}
+
+focus = {
+		id = BRA_fortify_the_colombian_border
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		x = 46
+		y = 19
+        
+		prerequisite = {
+		focus = BRA_surprise_attack_bolivia
+		}
+		
+		
+	completion_reward = {
+    495 = { add_building_construction = { type = bunker province = 13083 level = 1 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 12919 level = 1 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 5083 level = 1 instant_build = yes } }
+}
+}
+
+
+focus = {
+		id = BRA_learn_from_british_expeditions
+		icon = GFX_goal_tfv_saf_secure_interests_in_africa
+		cost = 10
+		x = 47
+		y = 20
+        
+		prerequisite = {
+		focus = BRA_fortify_the_colombian_border
+		}
+		prerequisite = {
+		focus = BRA_challenge_european_imperialism
+		}
+		
+		
+	completion_reward = {
+   army_experience = 60
+   add_political_power = 100
+}
+}
+
+focus = {
+		id = BRA_our_own_colonial_expeditions
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		x = 47
+		y = 21
+        
+		prerequisite = {
+		focus = BRA_learn_from_british_expeditions
+		}
+		
+		
+	completion_reward = {
+      create_wargoal = {
+    type = annex_everything
+    target = MNH
+}
+      create_wargoal = {
+    type = annex_everything
+    target = KAB
+}
+}
+}
+	
+	
+}
+	
+	
+	
+
 	
 	
 	
