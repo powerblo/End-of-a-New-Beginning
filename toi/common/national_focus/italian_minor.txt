@@ -1007,6 +1007,7 @@ focus_tree = {
 
 		available = {
 			NOT = { original_tag = PRM }
+			country_exists = PRM
 		}
 		prerequisite = {
 			focus = ITA_minor_One_Nation
@@ -1029,6 +1030,7 @@ focus_tree = {
 		y = 5
 		available = {
 			NOT = { original_tag = MOD }
+			country_exists = MOD
 		}
 		prerequisite = {
 			focus = ITA_minor_One_Nation
@@ -1051,6 +1053,7 @@ focus_tree = {
 		y = 5
 		available = {
 			NOT = { original_tag = TUS }
+			country_exists = TUS
 		}
 		prerequisite = {
 			focus = ITA_minor_One_Nation
@@ -1071,6 +1074,9 @@ focus_tree = {
 		cost = 10
 		x = 13
 		y = 7
+		available = {
+			country_exists = PIE
+		}
 		prerequisite = {
 			focus = ITA_minor_War_Is_A_Fast_Path
 		}
@@ -1091,6 +1097,7 @@ focus_tree = {
 		y = 7
 		available = {
 			NOT = { original_tag = NSC }
+			country_exists = NSC
 		}
 		prerequisite = {
 			focus = ITA_minor_War_Is_A_Fast_Path
