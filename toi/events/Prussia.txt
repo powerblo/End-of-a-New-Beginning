@@ -249,3 +249,33 @@ country_event = {
 		add_threat = 1
 	}
 }
+
+#End of Neuchatel Crisis
+country_event = {
+    id = prussia.13
+	title = prussia.13.t
+	desc = prussia.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    TAG = PRS
+		date > 1857.5.26
+	}
+	
+	option = {
+	    name = prussia.13.a
+		ai_chance = { factor = 100 }
+		PRS = {
+		    remove_opinion_modifier = {
+		        target = SWI
+			    modifier = eoanb_om_PRS_SWI_neuchatel_crisis
+		    }
+		    add_opinion_modifier = {
+		        target = SWI
+			    modifier = eoanb_om_PRS_SWI_neuchatel_crisis_resolved
+		    }
+	    }
+	}
+}
