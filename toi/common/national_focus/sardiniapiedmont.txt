@@ -24,16 +24,45 @@ focus_tree = {
 
 	}
 	focus = {
+		id = PIE_Political_Structure_Planning_FT
+		icon = GFX_goal_unknown
+		cost = 10.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = PIE_Plombieres_Meeting
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = PIE_Accept_Confederation
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = PIE_Political_Structure_Planning_FT
+		}
+		mutually_exclusive = {
+			focus = PIE_Maintain_Control
+		}
+		x = 9
+		y = 4
+
+		completion_reward = {
+			custom_effect_tooltip = PIE_Work_In_Progress
+			
+	}
+}
+	focus = {
 		id = PIE_Napoleon3_Help
 		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = PIE_Risorgimento
 		}
-		mutually_exclusive = {
-			focus = PIE_GoAlone
-		}
-		x = 8
+		x = 10
 		y = 1
 			available_if_capitulated = no
 			ai_will_do = {
@@ -50,14 +79,58 @@ focus_tree = {
 
 	}
 	focus = {
-		id = PIE_Start_Border_Operations
-		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 20.00
+		id = PIE_Plombieres_Meeting
+		icon = GFX_goal_unknown
+		cost = 10.00
 		prerequisite = {
 			focus = PIE_Napoleon3_Help
 		}
+		available = {
+			always = no
+		}
 		x = 10
 		y = 2
+
+
+
+	}
+	focus = {
+		id = PIE_Casus_Belli_ft
+		icon = GFX_goal_unknown
+		cost = 10.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = PIE_Plombieres_Meeting
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = PIE_Maintain_Control
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = PIE_Political_Structure_Planning_FT
+		}
+		mutually_exclusive = {
+			focus = PIE_Accept_Confederation
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = PIE_Start_Border_Operations
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 2.00
+		prerequisite = {
+			focus = PIE_Casus_Belli_ft
+		}
+		x = 5
+		y = 4
 
 		completion_reward = {
 			army_experience = 10
@@ -66,206 +139,44 @@ focus_tree = {
 
 	}
 	focus = {
+		id = PIE_Military_Plan_FT
+		icon = GFX_goal_unknown
+		cost = 10.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = PIE_Plombieres_Meeting
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
 		id = PIE_French_Aid
 		icon = GFX_focus_generic_little_entente
-		cost = 20.00
+		cost = 2.00
 		prerequisite = {
-			focus = PIE_Start_Border_Operations
+			focus = PIE_Military_Plan_FT
 		}
-		x = 10
-		y = 3
+		x = 14
+		y = 4
 
 		completion_reward = {
 			hidden_effect = {load_oob = "PIE_FRANCEAID"} 
 			custom_effect_tooltip = french_aid
 			}
-		
-
-	}
-	focus = {
-		id = PIE_Second_Independence_War
-		icon = GFX_goal_generic_special_forces
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_French_Aid
-		}
-		x = 10
-		y = 4
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					custom_effect_tooltip = PIE_LVN_War
-					declare_war_on = {
-							target = LVN
-							type = annex_everything
-						}
-				}
-
-	}
-	focus = {
-		id = PIE_Core_Milan
-		icon = GFX_goal_generic_political_pressure
-		cost = 20.00
-		prerequisite = {
-			focus = PIE_Second_Independence_War
-		}
-		x = 10
-		y = 5
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					PIE = {
-							controls_state = 159
-						}
-				}
-			completion_reward = {
-					add_state_core = 159
-					add_state_core = 982
-				}
-
-	}
-	focus = {
-		id = PIE_Center_Italy
-		icon = GFX_goal_demand_sudetenland
-		cost = 1.00
-		prerequisite = {
-			focus = PIE_Core_Milan
-		}
-		x = 8
-		y = 6
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-
-}
-
-	}
-	focus = {
-		id = PIE_Central_Plebiscito
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Center_Italy
-			focus = PIE_Napoleon3_Help
-		}
-		x = 6
-		y = 7
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 3
-				}
-			available = {
-					has_global_flag = FRA_supports_PIE_risorgimento
-				}
-			available = {
-					NOT = {
-							PIE = {
-									has_completed_focus = PIE_Force_Central_Unity
-								}
-						}
-				}
-			completion_reward = {
-					puppet = TUS
-				}
-
-	}
-	focus = {
-		id = PIE_Adriatic_Italy
-		icon = GFX_goal_demand_sudetenland
-		cost = 1.00
-		prerequisite = {
-			focus = PIE_Core_Milan
-		}
-		x = 10
-		y = 6
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-
-}
-
-	}
-	focus = {
-		id = PIE_Bologna_ICP
-		icon = GFX_goal_demand_sudetenland
-		cost = 20.00
-		prerequisite = {
-			focus = PIE_Adriatic_Italy
-		}
-		x = 10
-		y = 7
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					TUS = {
-							transfer_state = 161
-						}
-				}
-
-	}
-	focus = {
-		id = PIE_Demand_Marche
-		icon = GFX_goal_generic_major_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Bologna_ICP
-		}
-		x = 10
-		y = 8
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			bypass = {
-					157 = {
-							is_controlled_by = PIE
-						}
-				}
-			completion_reward = {
-					PIE = {
-							transfer_state = 157
-						}
-					add_state_core = 157
-				}
-
-	}
-	focus = {
-		id = PIE_Core_Adriatic
-		icon = GFX_goal_generic_national_unity
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Demand_Marche
-		}
-		x = 10
-		y = 9
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-
-}
 
 	}
 	focus = {
 		id = PIE_Recruit_Nationalists
 		icon = GFX_focus_generic_military_academy
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
-			focus = PIE_Start_Border_Operations
+			focus = PIE_Military_Plan_FT
 		}
-		x = 12
-		y = 3
+		x = 16
+		y = 4
 
 		completion_reward = {
 			hidden_effect = {load_oob = "PIE_Nationalists"}
@@ -274,292 +185,105 @@ focus_tree = {
 
 	}
 	focus = {
-		id = PIE_South_Italy
-		icon = GFX_goal_demand_sudetenland
+		id = PIE_The_War_Starts
+		icon = GFX_goal_unknown
+		cost = 10.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = PIE_Accept_Confederation
+			focus = PIE_Maintain_Control
+		}
+		prerequisite = {
+			focus = PIE_Start_Border_Operations
+		}
+		prerequisite = {
+			focus = PIE_French_Aid
+		}
+		prerequisite = {
+			focus = PIE_Recruit_Nationalists
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = PIE_Annex_Central_Italian_States
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PIE_The_War_Ends
+		}
+		x = 10
+		y = 8
+
+		completion_reward = {
+			custom_effect_tooltip = PIE_Annex_Central_Italian_States
+		}
+
+	}
+	focus = {
+		id = PIE_Coring_New_States
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PIE_Annex_Central_Italian_States
+		}
+		x = 10
+		y = 9
+
+
+
+	}
+	focus = {
+		id = PIE_The_War_Ends
+		icon = GFX_goal_unknown
+		cost = 10.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = PIE_French_Army_Arrives
+		}
+		prerequisite = {
+			focus = PIE_Occupy_Central_Italy
+		}
+		x = 10
+		y = 7
+
+	}
+	focus = {
+		id = PIE_French_Army_Arrives
+		icon = GFX_goal_unknown
 		cost = 1.00
 		prerequisite = {
-			focus = PIE_Core_Milan
+			focus = PIE_The_War_Starts
 		}
-		x = 14
+		x = 7
 		y = 6
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
 
-}
+		completion_reward = {
+			custom_effect_tooltip = PIE_French_Army_Arrives
+			hidden_effect = { load_oob = PIE_French_Army }
+		}
 
 	}
 	focus = {
-		id = PIE_Annex_Sicily
-		icon = GFX_goal_generic_dangerous_deal
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_South_Italy
-		}
-		mutually_exclusive = {
-			focus = PIE_Fight_Sicily
-		}
-		x = 12
-		y = 7
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 0
-				}
-			available = {
-					NSC = {
-							centrism > 0.5
-						}
-				}
-			completion_reward = {
-					puppet = NSC
-				}
-
-	}
-	focus = {
-		id = PIE_Consolidate_Position
-		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Annex_Sicily
-		}
-		mutually_exclusive = {
-			focus = PIE_Fight_Sicily
-		}
-		x = 12
-		y = 8
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-
-}
-
-	}
-	focus = {
-		id = PIE_Fight_Sicily
-		icon = GFX_focus_generic_military_mission
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_South_Italy
-		}
-		mutually_exclusive = {
-			focus = PIE_Annex_Sicily
-			focus = PIE_Consolidate_Position
-		}
-		x = 14
-		y = 7
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 3
-				}
-			completion_reward = {
-					declare_war_on = {
-							target = NSC
-							type = annex_everything
-						}
-					hidden_effect = {
-							NSC = {
-									country_event = {
-											days = 10
-											id = sardinia.7
-										}
-								}
-						}
-					hidden_effect = {
-							PIE = {
-									country_event = {
-											days = 10
-											id = sardinia.8
-										}
-								}
-						}
-				}
-
-	}
-	focus = {
-		id = PIE_Victory_Sicily
-		icon = GFX_goal_generic_demand_territory
+		id = PIE_Occupy_Central_Italy
+		icon = GFX_goal_unknown
 		cost = 1.00
 		prerequisite = {
-			focus = PIE_Fight_Sicily
-			focus = PIE_Annex_Sicily
+			focus = PIE_The_War_Starts
 		}
-		x = 14
-		y = 8
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					NOT = {
-							PIE = {
-									has_war_with = NSC
-								}
-						}
-				}
-			completion_reward = {
-					annex_country = {
-							target = NSC
-						}
-					add_political_power = 100
-				}
+		x = 13
+		y = 6
 
-	}
-	focus = {
-		id = PIE_Core_Sicily
-		icon = GFX_goal_generic_national_unity
-		cost = 20.00
-		prerequisite = {
-			focus = PIE_Victory_Sicily
-			focus = PIE_Consolidate_Position
+		completion_reward = {
+			country_event = {
+				id = sardinia.28
+			}
 		}
-		x = 12
-		y = 9
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					add_state_core = 115
-					add_state_core = 117
-					add_state_core = 156
-					add_state_core = 812
-				}
-
-	}
-	focus = {
-		id = PIE_GoAlone
-		icon = GFX_goal_generic_wolf_pack
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Risorgimento
-		}
-		mutually_exclusive = {
-			focus = PIE_Napoleon3_Help
-		}
-		x = 15
-		y = 1
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					add_stability = 0.05
-				}
-
-	}
-	focus = {
-		id = PIE_Force_Central_Unity
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Center_Italy
-		}
-		mutually_exclusive = {
-			focus = PIE_Expand_Centre
-		}
-		x = 8
-		y = 7
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					NOT = {
-							PIE = {
-									has_completed_focus = PIE_Central_Plebiscito
-								}
-						}
-				}
-			completion_reward = {
-					declare_war_on = {
-							target = TUS
-							type = annex_everything
-						}
-					declare_war_on = {
-							target = PRM
-							type = annex_everything
-						}
-					declare_war_on = {
-							target = MOD
-							type = annex_everything
-						}
-				}
-
-	}
-	focus = {
-		id = PIE_Victory_Tuscany
-		icon = GFX_goal_generic_military_deal
-		cost = 1.00
-		prerequisite = {
-			focus = PIE_Force_Central_Unity
-		}
-		x = 8
-		y = 8
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-
-}
-
-	}
-	focus = {
-		id = PIE_Expand_Centre
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Central_Plebiscito
-		}
-		mutually_exclusive = {
-			focus = PIE_Force_Central_Unity
-		}
-		x = 6
-		y = 8
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					TUS = {
-							annex_country = {
-									target = MOD
-								}
-						}
-					TUS = {
-							annex_country = {
-									target = PRM
-								}
-						}
-				}
-
-	}
-	focus = {
-		id = PIE_Unify_Center
-		icon = GFX_goal_anschluss
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Expand_Centre
-			focus = PIE_Victory_Tuscany
-		}
-		x = 8
-		y = 9
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			completion_reward = {
-					annex_country = {
-							target = TUS
-						}
-					add_state_core = 162
-					add_state_core = 808
-					add_state_core = 813
-				}
 
 	}
 	focus = {
@@ -567,27 +291,71 @@ focus_tree = {
 		icon = GFX_goal_focus_form_italy
 		cost = 10.00
 		prerequisite = {
+			focus = PIE_Core_Central_Italy
+		}
+		prerequisite = {
+			focus = PIE_Core_Lombardy
+		}
+		prerequisite = {
 			focus = PIE_Core_Sicily
-			focus = PIE_Core_Adriatic
-			focus = PIE_Unify_Center
+		}
+		x = 10
+		y = 11
+
+	}
+	focus = {
+		id = PIE_Core_Central_Italy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PIE_Coring_New_States
+		}
+		x = 7
+		y = 10
+
+		completion_reward = {
+			add_state_core = 808
+			add_state_core = 813
+			add_state_core = 162
+			add_state_core = 161
+			add_state_core = 157
+
+		}
+
+	}
+	focus = {
+		id = PIE_Core_Lombardy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PIE_Coring_New_States
 		}
 		x = 10
 		y = 10
-			available_if_capitulated = no
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					PIE = {
-							has_completed_focus = PIE_Core_Sicily
-						}
-					PIE = {
-							has_completed_focus = PIE_Unify_Center
-						}
-				}
-			completion_reward = {
-					add_stability = 0.05
-				}
+
+		completion_reward = {
+			add_state_core = 159
+			add_state_core = 982
+		}
+
+	}
+	focus = {
+		id = PIE_Core_Sicily
+		icon = GFX_goal_focus_form_italy
+		cost = 10.00
+		prerequisite = {
+			focus = PIE_Coring_New_States
+		}
+		x = 13
+		y = 10
+
+		completion_reward = {
+			add_state_core = 812
+			add_state_core = 117
+			add_state_core = 997
+			add_state_core = 156
+			add_state_core = 115
+		}
 
 	}
 }

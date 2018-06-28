@@ -61,12 +61,13 @@ country_event = {
 		
 		trigger = {
 			TAG = PIE
-			PIE = { has_completed_focus = PIE_Second_Independence_War }
-			date > 1857.6.1
+			controls_state = 159
+			
 		}
 		
 		option = {
 				name = sardinia.4.a
+				hidden_effect = { complete_national_focus = PIE_The_War_Ends }
 				PIE = { 
 				    transfer_state = 159
                     transfer_state = 982 
@@ -77,6 +78,7 @@ country_event = {
 					white_peace = AUS
 					news_event = news.1
 					clr_global_flag = FRA_PIE_OneCall
+
 				}
 		}
 }
@@ -172,3 +174,419 @@ country_event = {
 
 		}
 }
+#Plombieres Agreement Start
+country_event = {
+		id = sardinia.10
+		title = sardinia.10.t
+		desc = sardinia.10.d
+		
+		is_triggered_only = yes
+
+		trigger = {
+			date > 1858.7.20
+		}
+		
+		option = {
+				name = sardinia.10.a
+				country_event = {
+					id = sardinia.12
+					days = 1
+				}
+		}
+}
+#Plombieres Agreement Casus belli
+country_event = {
+		id = sardinia.12
+		title = sardinia.12.t
+		desc = sardinia.12.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.12.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+		option = {
+				name = sardinia.12.b
+				custom_effect_tooltip = PIE_trade_treaty
+				hidden_effect = {
+					country_event = {
+						id = sardinia.13
+						days = 1
+					}
+				}
+				#France will refuse
+
+		}
+		option = {
+				name = sardinia.12.c
+				custom_effect_tooltip = PIE_bologna_garrison
+				hidden_effect = {
+					country_event = {
+						id = sardinia.14
+						days = 1
+					}
+				}
+				#France will refuse
+		}
+}
+#Casus Belli Refusal 
+country_event = {
+		id = sardinia.13
+		title = sardinia.13.t
+		desc = sardinia.13.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.12.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+		option = {
+				name = sardinia.12.c
+				custom_effect_tooltip = PIE_bologna_garrison
+				hidden_effect = {
+					country_event = {
+						id = sardinia.15
+						days = 1
+					}
+				}
+				#France will refuse
+		}
+
+}
+#Casus belli refusal
+country_event = {
+		id = sardinia.15
+		title = sardinia.15.t
+		desc = sardinia.15.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.12.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+
+
+}
+country_event = {
+		id = sardinia.16
+		title = sardinia.16.t
+		desc = sardinia.16.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.16.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+
+}
+country_event = {
+		id = sardinia.14
+		title = sardinia.14.t
+		desc = sardinia.14.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.12.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+		option = {
+				name = sardinia.12.b
+				custom_effect_tooltip = PIE_trade_treaty
+				hidden_effect = {
+					country_event = {
+						id = sardinia.17
+						days = 1
+					}
+				}
+				#France will refuse
+
+		}
+}
+country_event = {
+		id = sardinia.17
+		title = sardinia.17.t
+		desc = sardinia.17.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.12.a
+				custom_effect_tooltip = PIE_casus_belli_francis_modena
+				hidden_effect = { complete_national_focus = PIE_Casus_Belli_ft }
+				hidden_effect = { set_country_flag = casus_belli_modena }
+				hidden_effect = { country_event = {
+									id = sardinia.18
+									days = 1
+									}
+			}
+				#France's proposal, should be the final plan
+		}
+
+}
+#political structure for Italy, this is where the fun starts
+country_event = {
+		id = sardinia.18
+		title = sardinia.18.t
+		desc = sardinia.18.d
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = sardinia.18.a
+				custom_effect_tooltip = PIE_political_structure
+				hidden_effect = { complete_national_focus = PIE_Political_Structure_Planning_FT }
+				hidden_effect = { set_country_flag = political_structure_sardinia }
+				hidden_effect = { country_event = {
+										id = sardinia.20
+										days = 1
+								}
+				}
+				#France's proposal, should be the final plan
+		}
+		option = {
+				name = sardinia.18.b
+				custom_effect_tooltip = PIE_political_structure_sicily
+				hidden_effect = { country_event = {
+										id = sardinia.19
+										days = 1
+								}
+				}
+				#Sardinia's proposal, can be the final plan should France agree
+		}
+
+}
+#Leads to Confederation of Italy
+country_event = {
+		id = sardinia.19
+		title = sardinia.19.t
+		desc = sardinia.19.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.19.a
+				custom_effect_tooltip = PIE_political_structure_confederation_sicily
+				hidden_effect = { set_country_flag = italian_confederation }
+				hidden_effect = { country_event = {
+										id = sardinia.20
+										days = 1
+								}
+				}
+				hidden_effect = { complete_national_focus = PIE_Political_Structure_Planning_FT }
+
+		}
+
+}
+#Military Plan
+country_event = {
+		id = sardinia.20
+		title = sardinia.20.t
+		desc = sardinia.20.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.20.a
+				custom_effect_tooltip = PIE_military_plan
+				hidden_effect = { country_event = {
+										id = sardinia.21
+										days = 1
+
+					}
+				}
+		}
+
+}
+#military Plan Options
+country_event = {
+		id = sardinia.21
+		title = sardinia.21.t
+		desc = sardinia.21.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.21.a
+				custom_effect_tooltip = PIE_military_plan_french
+				hidden_effect = { complete_national_focus = PIE_Military_Plan_FT }
+				hidden_effect = { set_country_flag = military_plan_france }
+				hidden_effect = { country_event = {
+										id = sardinia.22
+										days = 1
+								}
+				}
+
+		}
+		option = {
+				name = sardinia.21.b
+				custom_effect_tooltip = PIE_military_plan_piedmont
+				hidden_effect = { country_event = {
+										id = sardinia.23
+										days = 1
+								}
+				}
+
+		}
+		#France Refuse
+
+
+}
+country_event = {
+		id = sardinia.23
+		title = sardinia.23.t
+		desc = sardinia.23.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.23.a
+				custom_effect_tooltip = PIE_military_plan_french
+				hidden_effect = { complete_national_focus = PIE_Military_Plan_FT }
+				hidden_effect = { set_country_flag = military_plan_france }
+				hidden_effect = { country_event = {
+										id = sardinia.22
+										days = 1
+								}
+				}
+
+		}
+
+
+}
+#Marriage between Prince Joseph Charles Paul Bonaparte and Princess Ludovica Teresa Maria Clotilde
+country_event = {
+		id = sardinia.22
+		title = sardinia.22.t
+		desc = sardinia.22.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.22.a
+				custom_effect_tooltip = PIE_marriage_france
+				hidden_effect = { country_event = {
+										id = sardinia.26
+										days = 1
+								}
+				}
+
+		}
+
+
+}
+#Meeting Concludes 
+country_event = {
+		id = sardinia.26
+		title = sardinia.26.t
+		desc = sardinia.26.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.26.a
+		}
+
+
+#The Start of the War
+}
+country_event = {
+		id = sardinia.27
+		title = sardinia.27.t
+		desc = sardinia.27.d
+
+		fire_only_once = yes
+
+		trigger = {
+			date > 1859.4.24
+			has_completed_focus = PIE_Recruit_Nationalists
+			has_completed_focus = PIE_French_Aid
+			has_completed_focus = PIE_Start_Border_Operations
+
+		}
+
+		option = {
+				name = sardinia.27.a
+				custom_effect_tooltip = PIE_LVN_War
+				hidden_effect = { complete_national_focus = PIE_The_War_Starts }
+					declare_war_on = {
+							target = LVN
+							type = annex_everything
+						}
+
+		}
+
+
+}
+country_event = {
+		id = sardinia.28
+		title = sardinia.28.t
+		desc = sardinia.28.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.28.a
+				hidden_effect = { annex_country = {
+					target = TUS
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = MOD
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = PRM
+					transfer_troops = yes
+				}
+				transfer_state = 161
+				transfer_state = 157
+		}
+	}
+}
+
+
