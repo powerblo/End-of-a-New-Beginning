@@ -2941,6 +2941,19 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
+					name = "electronics_devices_hydropower"
+					position = { x = 845 y = 600 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = { x = 0 y = 0}
+					text = "ELEC_DEVICES_TITLE_HYDROPOWER"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
 					name = "electronics_devices_subtitle_explosives"
 					position = { x = 2010 y = -40 }
 					textureFile = ""
@@ -3110,6 +3123,13 @@ guiTypes = {
 			gridboxtype = {
 				name = "alexanderson_alternator_tree"
 				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "hydropower_tree"
+				position = { x=-180 y=250 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
