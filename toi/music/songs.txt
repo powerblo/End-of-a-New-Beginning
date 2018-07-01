@@ -610,6 +610,28 @@ music = {
 }
 
 music = {
+	song = "BRA_anthem"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = BRA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 1.75
+			
+			TAG = BRA
+		}
+	}
+}
+
+music = {
 	song = "PRS_yorkscher_marsch_song"
 	
 	chance = {

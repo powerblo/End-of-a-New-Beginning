@@ -876,7 +876,7 @@ focus = {
 		id = BRA_improve_our_universities
 		icon = GFX_focus_ITA_Schools
 		cost = 10
-		x = 20
+		x = 21
 		y = 10
 
 		prerequisite = {
@@ -945,7 +945,7 @@ focus = {
 		id = BRA_stabilize_the_banks
 		icon = GFX_goal_focus_banks
 		cost = 10
-		x = 28
+		x = 27
 		y = 10
 
 		prerequisite = {
@@ -2014,6 +2014,14 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
        add_state_core = 301
+	   add_state_core = 1062
+	   add_state_core = 1064
+	   add_state_core = 1065
+	   add_state_core = 1071
+	   add_state_core = 1069
+	   add_state_core = 1070
+	   add_state_core = 1067
+	   add_state_core = 1068
 	PAR = { country_event = brazil.16 }
 	}
 	 }
@@ -2349,6 +2357,112 @@ focus = {
 }
 }
 }
+
+focus = {
+		id = BRA_change_and_reformation
+		icon = GFX_goal_focus_reform_administration
+		cost = 10
+		x = 30
+		y = 6
+
+		prerequisite = {
+		focus = BRA_elect_a_liberal_minister
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 40
+	add_stability = -0.01
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_popularize_democracy
+		icon = popularize
+		cost = 10
+		x = 30
+		y = 7
+
+		prerequisite = {
+		focus = BRA_change_and_reformation
+		}
+	   
+	   
+
+	completion_reward = {
+        add_political_power = -35
+	add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.1
+			}
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_question_our_parliamentary_system
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 30
+		y = 8
+
+		prerequisite = {
+		focus = BRA_popularize_democracy
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = -105
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_question_the_emperors_power
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10
+		x = 30
+		y = 9
+
+		prerequisite = {
+		focus = BRA_question_our_parliamentary_system
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 70
+	country_event = brazil.23
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_a_deal_with_the_emperor
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 2
+		x = 30
+		y = 10
+
+		prerequisite = {
+		focus = BRA_question_the_emperors_power
+		}
+		
+		available = {
+		has_country_flag = brazil_emperor_allowed
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 210
+	
+	}
+	
+	}
 	
 	
 }
