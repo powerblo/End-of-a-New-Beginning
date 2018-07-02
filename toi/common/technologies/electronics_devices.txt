@@ -1479,13 +1479,18 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 
 		 allow = {
-           	tag = ITA
-           	tag = NOR
+		 	OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}
+           	
         }
 
         allow_branch = {
-            tag = ITA
-            tag = NOR
+        	OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}
         }
 
         path = {
@@ -1527,13 +1532,17 @@ technologies = {
 		global_building_slots_factor = 0.10
 
 		 allow = {
-           	tag = ITA
-           	tag = NOR
+           OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}
         }
 
         allow_branch = {
-            tag = ITA
-            tag = NOR
+           OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}
         }
 
 
@@ -1589,18 +1598,18 @@ technologies = {
 		global_building_slots_factor = 0.05
 
 	allow = {
-		OR = {
-			tag = ITA
-           	tag = NOR
-
-		}
-           	
+			OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}    	
 
        }
 
         allow_branch = {
-            tag = ITA
-            tag = NOR
+           OR = {
+		 		tag = ITA
+           		tag = NOR
+		 	}
         }
 
 
@@ -1633,7 +1642,7 @@ technologies = {
 			}
 		}
 
-		 allow = {
+		allow = {
            	tag = NOR
         }
 
