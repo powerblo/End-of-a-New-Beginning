@@ -9,6 +9,10 @@ GER_unite_liberal = {
 			has_global_flag = eoanb_flag_is_germany_liberal_unity
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
+			OR = {
+				has_completed_focus = PRS_focus_liberal_kingdom
+				has_completed_focus = PRS_focus_prussian_republic
+			}
 		}
 
 		visible = {
@@ -41,6 +45,10 @@ GER_unite_bismarck = {
 			has_global_flag = eoanb_flag_is_germany_bismarck_unity
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
+			OR = {
+				has_completed_focus = PRS_focus_bismarck_cabinet
+				has_completed_focus = PRS_focus_realpolitik
+			}
 		}
 
 		visible = {
@@ -73,6 +81,10 @@ GER_unite_socialist = {
 			has_global_flag = eoanb_flag_is_germany_socialist_unity
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
+			OR = {
+				has_completed_focus = PRS_focus_adav
+				has_completed_focus = PRS_focus_vdav
+			}
 		}
 
 		visible = {
