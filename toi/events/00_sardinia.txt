@@ -179,6 +179,7 @@ country_event = {
 		id = sardinia.10
 		title = sardinia.10.t
 		desc = sardinia.10.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 
@@ -392,6 +393,7 @@ country_event = {
 		option = {
 				name = sardinia.18.b
 				custom_effect_tooltip = PIE_political_structure_sicily
+				hidden_effect = { complete_national_focus = PIE_Political_Structure_Planning_FT }
 				hidden_effect = { country_event = {
 										id = sardinia.19
 										days = 1

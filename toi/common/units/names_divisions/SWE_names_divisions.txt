@@ -1,1 +1,216 @@
-﻿
+﻿SWE_INF_01 = 
+{
+	name = "Infantry Regiments"
+
+	for_countries = { SWE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SWE_INF_01 }
+
+	fallback_name = "Majestätens %s. Infanteriregemente"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Östergötlands Infanteriregemente" }
+		2 = { "Hälsinglands Regemente" }
+		3 = { "Ångermanlands Regemente" }
+		4 = { "Hallands Infanteriregemente" }
+		5 = { "Skaraborgs Regemente" }
+		6 = { "Södermanlands Regemente" }
+		7 = { "Södra Skånska Infanteriregementet" }
+		8 = { "Älvsborg Regemente" }
+		9 = { "Närkes Regemente" }
+		10 = { "Värmlands Regemente" }
+		11 = { "Västmanlands Regemente" }
+		12 = { "Norrbottens Regemente" }
+		13 = { "Blekinge Infanteriregemente" }
+		14 = { "Jämtlands Regemente" }
+		15 = { "Kalmar Regemente" }	
+		16 = { "Härjedalens Regemente" }	
+		17 = { "Jönköpings Regemente" }	
+		18 = { "Spenska Regementet" }	
+		19 = { "Gotlands Infanteriregemente" }	
+		20 = { "Jägerhornska regementet" }	
+		21 = { "Kronobergs Regemente" }			
+		22 = { "Upplands Andra Infanteriregemente" }	
+		23 = { "Södertäljes Infanteriregemente" }
+		24 = { "Gävles Regemente" }		
+		25 = { "Sollentunas Regemente" }
+		26 = { "Helsingborgs Regemente" }
+		27 = { "Lapplands Infanteriregemente" }	
+		28 = { "Gästrikslands Regemente" }	
+		29 = { "Karlskrona Infanteribrigad" }	
+		30 = { "Eskiltunas Infanteribrigad" }	
+		31 = { "Närkes Andra Regemente" }	
+		32 = { "Andra Dalregementet" }
+		33 = { "Andra Småländska Regementet" }	
+		34 = { "Hälsinglands Andra Regemente" }
+		35 = { "Majestätens Första Värvade Regemente „Magnus VII“" }
+		36 = { "Majestätens Andra Värvade Regemente „Karl XI“" }
+		37 = { "Majestätens Tredje Värvade Regemente „Rikissa“" }
+		38 = { "Majestätens Fjärde Värvade Regemente „Månsdotter“" }
+		39 = { "Majestätens Femte Värvade Regemente „Filippa av England“" }
+		40 = { "Majestätens Sjätte Värvade Regemente „Karl den Tolfte“" }
+		41 = { "Majestätens Sjunde Värvade Regemente „Prinsessan Lovisa“" }
+		42 = { "Majestätens Första Frivilliga Regemente „Sofia Wilhelmina“" }
+		43 = { "Majestätens Nionde Värvade Regemente „Karl den Tionde“" }	
+		44 = { "Majestätens Tionde Värvade Regemente „Johan den Tredje“" }		
+	}
+}
+
+SWE_CAV_01 = 
+{
+	name = "Cavalry Regiments"
+
+	for_countries = { SWE }
+
+	can_use = { always = yes }
+
+	division_types = { "light_cavalry" }
+
+	fallback_name = "Majestätens %s. Kavalleriregemente"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Upplands Ståndsdragonregemente" }
+		2 = { "Skånska Kavalleriregementet" }
+		3 = { "Adelsfanan" }
+		4 = { "Livgardet till häst" }
+		5 = { "Örebros Lätta Dragonregemente" }
+		6 = { "Cederströmska Husarregementet" }
+		7 = { "Svea Husarregemente" }
+		8 = { "Smålands Kavalleriregemente" }
+		9 = { "Riksänkedrottningens livregemente till häst" }
+		10 = { "Kronprinsens Husarregemente" }
+		11 = { "Konungens värvade Husarregemente" }	
+		12 = { "Hallands Kavalleriregemente" }	
+		13 = { "Drabantkårens Kyrassiärbrigad" }
+		14 = { "Västgöta Regemente till Häst" }
+		15 = { "Prinsessans Husarkår" }		
+		16 = { "Svealands Kyrassiärkår" }		
+		17 = { "Älvsborg Kavalleriregemente" }
+		18 = { "Norrköpings Dragonkår" }
+		19 = { "Mörnerska husarregementet" }
+		20 = { "Jönköpings Kavalleriregemente" }	
+		21 = { "Livgardets Kyrassiärregemente" }
+		22 = { "Livgarde Skavadronen" }
+		23 = { "Ångermanlands Kavalleriregemente" }
+		24 = { "Dalregementets Kavalleriavdelning" }
+		25 = { "Kung Karl XIIs Kavallerikår" }
+		26 = { "Första Kungliga Kavallerikåren „Erik XIV“" }
+		27 = { "Första Kungliga Husarkåren „Drottning Kristina“" }
+		28 = { "Andra Kungliga Kavalleriregementet „Hedvig Elenora“" }
+		29 = { "Tredje Kungliga Kavallerikåren „Karl XIV Johan“" }	
+		30 = { "Första Kungliga Dragonkåren „Gustavus Vasa“" }	
+		31 = { "Fjärde Kungliga Kavallerikåren „Gustav Adolf den Store“" }	
+		32 = { "Andra Kungliga Husarkåren „Birger Jarl“" }
+		33 = { "Andra Kungliga Dragonkåren „Gustav III“" }
+	}
+}
+
+SWE_MOT_01 = 
+{
+	name = "Light Infantry Regiments"
+
+	for_countries = { SWE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" } #Light Infantry Tag?
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SWE_INF_01 }
+
+	fallback_name = "Majestätens %s. Jägarkår"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Jämtlands Fältjägarkår" }
+		2 = { "Västerbottens Fältjägarkår" }
+		3 = { "Norrlands Fältjägarregemente" }
+		4 = { "Dalarnas Fätjägarregemente" }
+		5 = { "Götalands Jägarregemente" }
+		6 = { "Svealands Fätjägarkår" }
+		7 = { "Värmlands Fätjägarregemente" }
+		8 = { "Smålands Jägarregemente" }
+		9 = { "Ångermanlands Fältjägarkår" }
+		10 = { "Blekinges Fätjägarregemente" }
+		11 = { "Upplands Jägarregemente" }
+		12 = { "Härjedalens Jägarbrigad" }
+		13 = { "Västmanlands Fältjägarkår" }
+		14 = { "Gästrikslands Fätjägarkår" }
+		15 = { "Gotlands Jägarbrigad" }
+		16 = { "Majestätens Värvade Jägarkår" }
+	}
+}
+
+SWE_MEC_01 = 
+{
+	name = "Guard Regiments"
+
+	for_countries = { SWE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%s. Kungliga Grenadjärregementet"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Svea Livgarde" }
+		2 = { "Första Livgrenadjärsregementet" }
+		3 = { "Andra Livgränadjärsregementet" }
+		4 = { "Andra Livgardet" }
+		5 = { "Drabantkårens Grenadjärregemente" }
+		6 = { "Livregementets Grenadjärer" }
+		7 = { "Göta Livgarde" }
+		8 = { "Svea Livgardets Andra Brigad" }
+		9 = { "Änkedrottningens Livregemente till fot" }
+		10 = { "Drottningens Livregemente till fot" }
+	}
+}
+
+SWE_MAR_01 = 
+{
+	name = "Marine Regiments"
+
+	for_countries = { SWE }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	fallback_name = "Majestätens %s. Marinregemente"
+
+	ordered =
+	{
+		1 = { "Hallands Första Marinregemente" }
+		2 = { "Majestätens Andra Marinregemente" }
+		3 = { "Majestätens Tredje Marinregemente" }	
+		4 = { "Majestätens Fjärde Marinregemente" }
+		5 = { "Majestätens Femte Marinregemente" }
+		6 = { "Majestätens Sexte Marinregemente" }
+		7 = { "Majestätens Sjunde Marinregemente" }
+		8 = { "Majestätens Åttonde Marinregemente" }
+		9 = { "Majestätens Nionde Marinregemente" }
+		10 = { "Majestätens Tionde Marinregemente" }
+		11 = { "Majestätens Elfte Marinregemente" }
+		12 = { "Majestätens Tolvte Marinregemente" }
+		13 = { "Majestätens Trettonde Marinregemente" }		
+		14 = { "Majestätens Fjortonde Marinregemente" }		
+	}
+}
+

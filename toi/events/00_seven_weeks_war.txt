@@ -274,7 +274,10 @@ country_event = {
 	option = {
 		name = sevenweekswar.10.a
 		ai_chance = { factor = 100 }
-		ROOT = { add_to_faction = faction_prussian_allies }
+		custom_effect_tooltip = eoanb_tt_PRS_can_call
+		hidden_effect = {
+			set_country_flag = eoanb_flag_PRS_ally_sww
+		}
 	}
 	
 	option = {
@@ -342,7 +345,10 @@ country_event = {
 	option = {
 		name = sevenweekswar.13.a
 		ai_chance = { factor = 100 }
-		ROOT = { add_to_faction = faction_austrian_allies }
+		custom_effect_tooltip = eoanb_tt_AUS_can_call
+		hidden_effect = {
+			set_country_flag = eoanb_flag_AUS_ally_sww
+		}
 	}
 	
 	option = {
@@ -504,7 +510,7 @@ country_event = {
 			add_opinion_modifier = { target = PRS modifier = embargo } 
 		}
 		hidden_effect = {
-			PRS = { country_event = { days = 5 id = sevenweekswar.21 } }
+			PRS = { country_event = { days = 5 id = sevenweekswar.23 } }
 		}
 	}
 	
@@ -612,10 +618,22 @@ country_event = {
 	option = {
 		name = sevenweekswar.24.a
 		ai_chance = { factor = 100 }
-		add_to_faction = faction_austrian_allies
+		AUS = { add_to_war = { targeted_alliance = SAX enemy = PRS } }
 		hidden_effect = {
 			news_event = news.7
 			set_global_flag = eoanb_flag_seven_weeks_war_ongoing
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_PRS_ally_sww
+				}
+				country_event = { id = sevenweekswar.30 }
+			}
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				country_event = { id = sevenweekswar.31 }
+			}
 		}
 	}
 	
@@ -821,6 +839,46 @@ country_event = {
 			PRS = { annex_country = { target = THU transfer_troops = no } }
 			PRS = { annex_country = { target = HES transfer_troops = no } }
 			PRS = { annex_country = { target = FRK transfer_troops = no } }
+		}
+	}
+	
+}
+
+#Called to arms into the Seven Weeks War by Prussia
+country_event = {
+	id = sevenweekswar.30
+	title = sevenweekswar.30.t
+	desc = sevenweekswar.30.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sevenweekswar.30.a
+		ai_chance = { factor = 100 }
+		add_to_war = { targeted_alliance = PRS enemy = AUS }
+		hidden_effect = {
+			clr_country_flag = eoanb_flag_PRS_ally_sww
+		}
+	}
+	
+}
+
+#Called to arms into the Seven Weeks War by Austria
+country_event = {
+	id = sevenweekswar.31
+	title = sevenweekswar.31.t
+	desc = sevenweekswar.31.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sevenweekswar.31.a
+		ai_chance = { factor = 100 }
+		add_to_war = { targeted_alliance = AUS enemy = PRS }
+		hidden_effect = {
+			clr_country_flag = eoanb_flag_AUS_ally_sww
 		}
 	}
 	

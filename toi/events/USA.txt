@@ -1,4 +1,20 @@
 ﻿add_namespace = usa
+#Intro
+country_event = {
+		id = usa.0
+		title = usa.0.t
+		desc = usa.0.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.0.a
+			add_political_power = -5
+		}
+}
 #Panic of 1857
 country_event = {
 		id = usa.1
@@ -1560,6 +1576,31 @@ country_event = {
 				NOT = { has_global_flag = USAAlaska_Purchased }
 			}
 			name = usa.42.b
+		}
+}
+#Norton xd
+country_event = {
+		id = usa.43
+		title = usa.43.t
+		desc = usa.43.d
+		picture = GFX_report_event_royal_visit
+		
+		trigger = {
+			tag = USA
+			date > 1859.6.6
+		}
+
+		mean_time_to_happen = {
+			days = 45
+		}
+		
+		option = {
+			name = usa.43.a
+			add_political_power = -5
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
 		}
 }
 ##Reconstruction Era##

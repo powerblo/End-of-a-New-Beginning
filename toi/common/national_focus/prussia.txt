@@ -1022,7 +1022,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_army_autonomy }
 		
 		completion_reward = {
-			add_political_power = 120
+			custom_effect_tooltip = eoanb_tt_PRS_focus_unlock_law_milspendage
 		}
 	}
 	
@@ -1135,10 +1135,10 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_1858_elections }
-		available = { PIE = { has_war_with = AUS } }
-		bypass = {
-			PIE = { owns_state = 159 }
-		}
+		#available = { PIE = { has_war_with = AUS } }
+		#bypass = {
+		#	PIE = { owns_state = 159 }
+		#}
 		
 		completion_reward = {
 			army_experience = 20

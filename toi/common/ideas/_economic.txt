@@ -369,6 +369,35 @@ ideas = {
 	}
 
 	military_spendage = {
+		#The effects of 10% for half the cost. Achievable by focus.
+		prussian_military_spendage = {
+		
+			allowed = {
+				TAG = PRS
+			}
+			
+			available = {
+				has_completed_focus = PRS_mil_supreme
+			}
+			
+			cost = 450
+			removal_cost = -1
+			level = 6
+
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				military_leader_cost_factor = -0.50
+				planning_speed = 0.3
+				army_org_Factor = 0.1
+				defence = 0.1
+				offence = 0.1
+				experience_gain_army = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	
 		ten_percent = {
 						
 			cost = 450
