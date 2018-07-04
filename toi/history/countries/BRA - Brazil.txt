@@ -40,6 +40,7 @@
 	   BRA_golden_prosperity
      BRA_national_guard
 	 BRA_marques_de_olinda
+	 BRA_massive_industrial_loans
   }
    
    set_technology = {
@@ -115,6 +116,17 @@
   picture = "Portrait_BRA_Pedro_II.dds"
   expire = "1965.1.1"
   ideology = despotism
+  traits = {
+    #
+  }
+}
+
+  create_country_leader = {
+  name = "Visconde de Sinimbu"
+  desc = "POLITICS_SINIMBU_DESC"
+  picture = "Portrait_BRA_Visconde_de_Sinimbu.dds"
+  expire = "1965.1.1"
+  ideology = liberal_social
   traits = {
     #
   }

@@ -11,6 +11,15 @@
   }
 }
 
+division_template = {
+  name = "National Guard"
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 0}
+  }
+  }
+  
+
 
 division_template = {
 	name = "Cavalry Regiment"
@@ -24,180 +33,54 @@ division_template = {
 
 units = {
 		division= {
-			name = "1st Bahia National Guard"
+			name = "1st Nordeste National Guard"
 			location = 10946
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "2nd Bahia National Guard"
-			location = 10945
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "Rio de Janeiro Elite"
-			location = 10980
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "Rio de Janeiro Elite"
-			location = 10980
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-	    division= {
-			name = "Rio de Janeiro Elite"
-			location = 10980
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "1st Pernambuco National Guard"
-			location = 5168
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-	   division= {
-			name = "2nd Pernambuco National Guard"
-			location = 5168
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "1st Ceará National Guard"
-			location = 5107
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "2nd Ceará National Guard"
-			location = 5107
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "1st Mato Grosso Border Patrol"
-			location = 2181
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "2nd Mato Grosso Border Patrol"
-			location = 2181
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		
-		division= {
-			name = "3rd Mato Grosso Border Patrol"
-			location = 2181
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		
-		division= {
-			name = "4th Mato Grosso Border Patrol"
-			location = 10959
-			division_template = "Cavalry Regiment"
+			division_template = "National Guard"
 			start_experience_factor = 0.1
 		}
 		
 	   division= {
-			name = "5th Mato Grosso Border Patrol"
-			location = 8189
+			name = "2nd Nordeste National Guard"
+			location = 10946
+			division_template = "National Guard"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "Rio de Janeiro Elite"
+			location = 10980
 			division_template = "Cavalry Regiment"
 			start_experience_factor = 0.1
 		}
 		
 		division= {
+			name = "Mato Grosso Border Patrol"
+			location = 2181
+			division_template = "Cavalry Regiment"
+			start_experience_factor = 0.1
+		}
+		
+		
+	  division= {
 			name = "1st Southern Border Patrol"
 			location = 4604
 			division_template = "Cavalry Regiment"
 			start_experience_factor = 0.1
 		}
-		
-	  division= {
-			name = "2nd Southern Border Patrol"
-			location = 4604
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
 	     
 		division= {
-			name = "3rd Southern Border Patrol"
+			name = "2nd Southern Border Patrol"
 			location = 7638
 			division_template = "Cavalry Regiment"
 			start_experience_factor = 0.1
-		}
-		
-		division= {
-			name = "4th Southern Border Patrol"
-			location = 4575
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-		
-	  division= {
-			name = "5th Southern Border Patrol"
-			location = 1585
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
-	     
-		division= {
-			name = "1st Porto Alegre Reserve"
-			location = 10447
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		
-		division= {
-			name = "2nd Porto Alegre Reserve"
-			location = 10447
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-		
-	  division= {
-			name = "3rd Porto Alegre Reserve"
-			location = 10447
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-	     
-		division= {
-			name = "Santa Catarina National Guard"
-			location = 10405
-			division_template = "Cavalry Regiment"
-			start_experience_factor = 0.1
-		}
+		}  
      
-	 division= {
+	    division= {
 			name = "1st Amazonas Border Patrol"
 			location = 1979
 			division_template = "Line Infantry Regiment"
 			start_experience_factor = 0.1
 		}
-     	 division= {
-			name = "2nd Amazonas Border Patrol"
-			location = 1979
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-	 division= {
-			name = "3rd Amazonas Border Patrol"
-			location = 1979
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}
-	 division= {
-			name = "4th Amazonas Border Patrol"
-			location = 1979
-			division_template = "Line Infantry Regiment"
-			start_experience_factor = 0.1
-		}  		
 		 
 		navy = {				
 			name = "Rio de Janeiro Fleet"			

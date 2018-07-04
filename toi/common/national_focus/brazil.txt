@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = BRA_the_rise_of_the_empire
-		icon = brazil
+		icon = GFX_goal_focus_brazil
 		cost = 10
 		x = 20
 		y = 0
@@ -50,10 +50,14 @@ focus_tree = {
 	
 	focus = {
 		id = BRA_start_interstate_slave_trade
-		icon = brazil_slaves
+		icon = GFX_goal_focus_brazil_slaves_shine
 		cost = 10
 		x = 9
 		y = 3
+		
+		available = {
+		has_idea = usa_slavery_law
+		}
 		mutually_exclusive = {
 		focus = BRA_support_european_immigration
 		}
@@ -455,7 +459,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BRA_the_coffee_boom
-		icon = coffee
+		icon = GFX_goal_focus_coffee
 		cost = 5
 		x = 18
 		y = 2
@@ -786,6 +790,24 @@ focus = {
 
 		completion_reward = {
 	    add_political_power = 35
+		
+		}
+	}
+	
+		focus = {
+		id = BRA_prevent_massive_loans
+		icon = GFX_goal_focus_banks2
+		cost = 10
+		x = 20
+		y = 6
+
+		prerequisite = {
+		focus = BRA_rio_de_janeiro_coffee_elites
+		}
+
+		completion_reward = {
+	    add_political_power = -75
+		remove_ideas = BRA_massive_industrial_loans
 		
 		}
 	}
@@ -1797,7 +1819,7 @@ USA = { country_event =  brazil.7  }
 	
 	focus = {
 		id = BRA_declare_south_american_ambition
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ambition
 		cost = 10
 		x = 50
 		y = 9
@@ -2380,7 +2402,7 @@ focus = {
 	
 	focus = {
 		id = BRA_popularize_democracy
-		icon = popularize
+		icon = GFX_goal_focus_popularize
 		cost = 10
 		x = 30
 		y = 7
@@ -2424,7 +2446,7 @@ focus = {
 		id = BRA_question_the_emperors_power
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		cost = 10
-		x = 30
+		x = 32
 		y = 9
 
 		prerequisite = {
@@ -2436,6 +2458,10 @@ focus = {
 	completion_reward = {
     add_political_power = 70
 	country_event = brazil.23
+		add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.15
+			}
 	}
 	
 	}
@@ -2454,15 +2480,439 @@ focus = {
 		available = {
 		has_country_flag = brazil_emperor_allowed
 		}
+		
+		mutually_exclusive = {
+		focus = BRA_power_to_the_commons
+		}
 	   
 	   
 
 	completion_reward = {
     add_political_power = 210
-	
+	swap_ideas = {
+	add_idea = BRA_parliament3
+	remove_idea = BRA_parliament
+	}
 	}
 	
 	}
+	
+   focus = {
+		id = BRA_power_to_the_commons
+		icon = GFX_focus_rom_abdicate
+		cost = 2
+		x = 34
+		y = 10
+
+		prerequisite = {
+		focus = BRA_question_the_emperors_power
+		}
+		
+		available = {
+		has_country_flag = brazil_emperor_retired
+		}
+		
+	  mutually_exclusive = {
+		focus = BRA_a_deal_with_the_emperor
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 100
+	remove_ideas = BRA_parliament
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_fight_the_elites
+		icon = GFX_goal_fight_the_elite
+		cost = 10
+		x = 34
+		y = 11
+
+		prerequisite = {
+		focus = BRA_power_to_the_commons
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 50
+	unlock_decision_tooltip = BRA_decision_weaken_the_elites
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_laws_for_abolition
+		icon = GFX_goal_focus_enact_law
+		cost = 10
+		x = 34
+		y = 12
+
+		prerequisite = {
+		focus = BRA_fight_the_elites
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = -80
+	swap_ideas = {
+	remove_idea = usa_slavery_law
+	add_idea = limited_equality
+    }
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_weaken_the_church
+		icon = GFX_goal_focus_disestablish_church_ireland
+		cost = 10
+		x = 36
+		y = 13
+
+		prerequisite = {
+		focus = BRA_laws_for_abolition
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 35
+	swap_ideas = {
+	remove_idea = state_religion
+	add_idea = secular_state
+    }
+	}
+	
+	}
+	
+   focus = {
+		id = BRA_liberalize_the_suffrage
+		icon = GFX_goal_focus_liberal_empire
+		cost = 10
+		x = 34
+		y = 13
+
+		prerequisite = {
+		focus = BRA_laws_for_abolition
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 35
+	swap_ideas = {
+	remove_idea = property_owners_suffrage
+	add_idea = universal_suffrage
+    }
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_education_reforms
+		icon = GFX_AUS_focus_private_schools
+		cost = 10
+		x = 32
+		y = 13
+
+		prerequisite = {
+		focus = BRA_laws_for_abolition
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 100
+	swap_ideas = {
+	remove_idea = privileged_education
+	add_idea = compulsory_education
+    }
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_a_new_constitution
+		icon = GFX_goal_focus_decentralisation_power
+		cost = 10
+		x = 34
+		y = 14
+
+		prerequisite = {
+		focus = BRA_education_reforms
+		}
+		
+		prerequisite = {
+		focus = BRA_liberalize_the_suffrage
+		}
+		
+	  prerequisite = {
+		focus = BRA_weaken_the_church
+		}
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 100
+	swap_ideas = {
+	remove_idea = limited_constitution
+	add_idea = constitution_adopted
+    }
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_rethink_the_elections
+		icon = GFX_goal_focus_revolutionary_council
+		cost = 10
+		x = 34
+		y = 15
+
+		prerequisite = {
+		focus = BRA_a_new_constitution
+		}
+		
+		
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 100
+	swap_ideas = {
+	remove_idea = limited_elections
+	add_idea = free_elections
+    }
+	}
+	
+	}
+	
+    focus = {
+		id = BRA_strenghten_the_parliament
+		icon = GFX_AUS_focus_credit_anstalt
+		cost = 10
+		x = 34
+		y = 16
+
+		prerequisite = {
+		focus = BRA_rethink_the_elections
+		}
+		
+		
+	   
+	   
+
+	completion_reward = {
+    add_stability = 0.01
+	add_political_power = 35
+	add_war_support = 0.01
+		add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.15
+			}
+	}
+    }
+	
+	focus = {
+		id = BRA_rethink_the_economy
+		icon = GFX_AUS_focus_civ_economy
+		cost = 10
+		x = 34
+		y = 17
+
+		prerequisite = {
+		focus = BRA_strenghten_the_parliament
+		}
+		
+		
+	   
+	   
+
+	completion_reward = {
+    add_ideas = BRA_reformed_economy
+	}
+    }
+	
+	
+	
+	focus = {
+		id = BRA_propose_the_slavery_act
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		x = 31
+		y = 11
+
+		prerequisite = {
+		focus = BRA_a_deal_with_the_emperor
+		}
+		
+		
+	   
+	   
+
+	completion_reward = {
+    add_political_power = 55
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_reforms_on_the_economy
+		icon = GFX_goal_focus_international_investments
+		cost = 10
+		x = 29
+		y = 11
+
+		prerequisite = {
+		focus = BRA_a_deal_with_the_emperor
+		}
+		
+	
+	completion_reward = {
+    add_stability = 0.01
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_limited_abolition
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		x = 30
+		y = 12
+
+		prerequisite = {
+		focus = BRA_propose_the_slavery_act
+		}
+		prerequisite = {
+		focus = BRA_reforms_on_the_economy
+		}
+		
+	
+	completion_reward = {
+    swap_ideas = {
+	remove_idea = usa_slavery_law
+	add_idea = segregation
+    }
+	add_political_power = -150
+	}
+	
+	}
+	
+
+	
+	focus = {
+		id = BRA_educate_the_masses
+		icon = GFX_AUS_focus_public_schools
+		cost = 10
+		x = 30
+		y = 13
+
+		prerequisite = {
+		focus = BRA_limited_abolition
+		}
+		
+	
+	completion_reward = {
+    swap_ideas = {
+	remove_idea = privileged_education
+	add_idea = open_schools
+    }
+	add_political_power = 15
+	}
+	
+	}
+	
+	focus = {
+		id = BRA_advancements_on_science
+		icon = GFX_focus_research2
+		cost = 10
+		x = 30
+		y = 14
+
+		prerequisite = {
+		focus = BRA_educate_the_masses
+		}
+		
+	
+	completion_reward = {
+	add_political_power = 100
+    add_ideas = POR_Research
+   }
+	
+	}
+	
+	focus = {
+		id = BRA_invite_prussian_intellectuals
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		cost = 5
+		x = 31
+		y = 15
+
+		prerequisite = {
+		focus = BRA_advancements_on_science
+		}
+		
+	
+	completion_reward = {
+	add_political_power = 35
+   }
+	
+	}
+	
+	focus = {
+		id = BRA_invite_french_intellectuals
+		icon = GFX_goal_focus_invite_french_diplomats
+		cost = 5
+		x = 29
+		y = 15
+
+		prerequisite = {
+		focus = BRA_advancements_on_science
+		}
+		
+	
+	completion_reward = {
+	add_political_power = 35
+   }
+	
+	}
+	
+	focus = {
+		id = BRA_research_on_electrical_engineering
+		icon = GFX_goal_focus_telegraph_lines
+		cost = 10
+		x = 30
+		y = 16
+
+		prerequisite = {
+		focus = BRA_invite_french_intellectuals
+		}
+	   prerequisite = {
+		focus = BRA_invite_prussian_intellectuals
+		}
+		
+	
+	completion_reward = {
+	add_tech_bonus = {
+    bonus = 0.6
+    uses = 3
+    category = electronics_devices_tech
+    }
+   }
+	
+	}
+	
+	
+	
+	
+
 	
 	
 }

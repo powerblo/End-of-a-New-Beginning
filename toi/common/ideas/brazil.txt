@@ -283,4 +283,33 @@ ideas = {
 				training_time_army_factor = -0.02
 			}
 		}			
+		
+	BRA_reformed_economy = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = state_country_industrialization_industrializing
+			
+			modifier = {
+			consumer_goods_factor = -0.09
+            trade_opinion_factor = 0.1			
+			}
+		}
+
+	BRA_massive_industrial_loans = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+			consumer_goods_factor = 0.04
+			}
+		}		
 }

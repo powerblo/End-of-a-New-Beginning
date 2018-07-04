@@ -424,3 +424,40 @@ country_event = {
  }
 
  }
+ 
+  country_event = { 
+  id = brazil.23
+  title = brazil.23.t
+  desc = brazil.23.d
+
+  is_triggered_only = yes
+
+  option = { #  Empire
+    name = brazil.23.a
+   add_political_power = 10
+   set_country_flag = brazil_emperor_allowed
+ }
+option = { #  Empire
+    name = brazil.23.b
+   add_political_power = -5
+   set_country_flag = brazil_emperor_retired
+    swap_ideas = {
+   add_idea = BRA_Pedro_II
+   remove_idea = hos_is_leader
+ }
+swap_ideas = {
+   add_idea = parliamentary_monarchy
+   remove_idea = constitutional_monarchy
+ }
+ retire_country_leader = yes
+ add_popularity = {
+    ideology = social_egalitarianism
+    popularity = 0.25
+}
+set_politics = {
+ruling_party =  social_egalitarianism
+}
+remove_ideas = BRA_vinsconde_de_sinimbu
+   }
+ }
+ 
