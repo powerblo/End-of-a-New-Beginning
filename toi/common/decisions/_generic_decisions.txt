@@ -2,6 +2,73 @@
 
 scientific_advancement_decisions = {
 	
+	#Advance to the Victorian Era
+	eoanb_decision_advance_to_victorian_era = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				AND = {
+					date > 1850.1.1
+					num_of_factories > 10
+					has_tech = steam_locomotive
+					has_tech = cast_iron_industrialization
+					has_tech = organic_chemistry
+					has_tech = early_dynamo_generator
+				}
+				AND = {
+					date > 1860.1.1
+					num_of_factories > 5
+					has_tech = steam_engine
+					has_tech = industrial_blast_furnace
+					has_tech = food_preserving_icebox
+					has_tech = electrical_engineering
+				}
+				AND = {
+					date > 1875.1.1
+					custom_trigger_tooltip = {
+						tooltip = eoanb_trigger_tt_law_african_all
+					}
+					hidden_trigger = {
+						NOT = {
+							OR = {
+								has_idea = AF_T_unorganized_tribal_nation
+								has_idea = AF_T_unorganized_tribal_nation_2
+								has_idea = AF_T_unorganized_tribal_nation_3
+								has_idea = AF_T_unorganized_tribal_nation_4
+								has_idea = AF_T_unorganized_tribal_nation_5
+								has_idea = AF_T_organized_tribal_nation
+								has_idea = AF_T_organized_tribal_nation_2
+								has_idea = AF_T_organized_tribal_nation_3
+								has_idea = AF_T_small_kingdom
+							}
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_idea = pre_industrial_era
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_advance_era_victorian
+			hidden_effect = {
+				swap_ideas = { remove_idea = pre_industrial_era add_idea = victorian_era }	
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 	#Advance to the Machine Era
 	eoanb_decision_advance_to_machine_era = {
 
@@ -27,9 +94,24 @@ scientific_advancement_decisions = {
 				}
 				AND = {
 					date > 1900.1.1
-					NOT = { has_idea = AF_T_unorganized_tribal_nation }
-					NOT = { has_idea = AF_T_organized_tribal_nation }
-					NOT = { has_idea = AF_T_small_kingdom }
+					custom_trigger_tooltip = {
+						tooltip = eoanb_trigger_tt_law_african_all
+					}
+					hidden_trigger = {
+						NOT = {
+							OR = {
+								has_idea = AF_T_unorganized_tribal_nation
+								has_idea = AF_T_unorganized_tribal_nation_2
+								has_idea = AF_T_unorganized_tribal_nation_3
+								has_idea = AF_T_unorganized_tribal_nation_4
+								has_idea = AF_T_unorganized_tribal_nation_5
+								has_idea = AF_T_organized_tribal_nation
+								has_idea = AF_T_organized_tribal_nation_2
+								has_idea = AF_T_organized_tribal_nation_3
+								has_idea = AF_T_small_kingdom
+							}
+						}
+					}
 				}
 			}
 		}
@@ -78,10 +160,25 @@ scientific_advancement_decisions = {
 					has_tech = alternators
 				}
 				AND = {
-					date > 1915.1.1
-					NOT = { has_idea = AF_T_unorganized_tribal_nation }
-					NOT = { has_idea = AF_T_organized_tribal_nation }
-					NOT = { has_idea = AF_T_small_kingdom }
+					date > 1925.1.1
+					custom_trigger_tooltip = {
+						tooltip = eoanb_trigger_tt_law_african_all
+					}
+					hidden_trigger = {
+						NOT = {
+							OR = {
+								has_idea = AF_T_unorganized_tribal_nation
+								has_idea = AF_T_unorganized_tribal_nation_2
+								has_idea = AF_T_unorganized_tribal_nation_3
+								has_idea = AF_T_unorganized_tribal_nation_4
+								has_idea = AF_T_unorganized_tribal_nation_5
+								has_idea = AF_T_organized_tribal_nation
+								has_idea = AF_T_organized_tribal_nation_2
+								has_idea = AF_T_organized_tribal_nation_3
+								has_idea = AF_T_small_kingdom
+							}
+						}
+					}
 				}
 			}
 		}
@@ -554,6 +651,82 @@ internal_politics_eoanb = {
 		
 		ai_will_do = {
 			base = 1
+		}
+	}
+	
+	#Abolish the Hereditary System
+	eoanb_decision_generic_abolish_heir_system = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = { has_idea = non_monarchical_system }
+			NOT = {
+				OR = {
+					has_idea = absolutism
+					has_idea = absolute_monarchy
+					has_idea = constitutional_monarchy
+					has_idea = parliamentary_monarchy
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_switch_no_heir
+			hidden_effect = {
+				add_ideas = non_monarchical_system
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#(Re-)introduce the Hereditary System
+	eoanb_decision_generic_reintroduce_heir_system = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			has_idea = non_monarchical_system
+			OR = {
+				has_idea = absolutism
+				has_idea = absolute_monarchy
+				has_idea = constitutional_monarchy
+				has_idea = parliamentary_monarchy
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 365
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_switch_yes_heir
+			hidden_effect = {
+				add_ideas = no_heir
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
 		}
 	}
 	

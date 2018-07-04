@@ -1,0 +1,76 @@
+﻿add_namespace = tech
+
+#Switch to Victorian Army from Traditional
+country_event = {
+	id = tech.1
+	title = tech.1.t
+	desc = tech.1.d
+	picture = GFX_report_event_manchukuo_army_2
+	
+	trigger = {
+		has_tech = land_doctrine_victorian
+		has_idea = law_pre_industrial_army
+		OR = {
+			has_idea = victorian_era
+			has_idea = machine_era
+			has_idea = oil_era
+			has_idea = aviation_era
+			has_idea = modern_era
+			has_idea = atomic_era
+			has_idea = information_era
+			has_idea = digital_era
+			has_idea = post_digital_era
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+	}
+	
+	option = {
+		name = tech.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_tech_1
+		hidden_effect = {
+			swap_ideas = { add_idea = law_victorian_army remove_idea = law_pre_industrial_army }
+		}
+	}
+	
+}
+
+#Switch to Industrial Army from Victorian
+country_event = {
+	id = tech.2
+	title = tech.2.t
+	desc = tech.2.d
+	picture = GFX_report_event_lithuania_army
+	
+	trigger = {
+		has_tech = land_doctrine_machine
+		has_idea = law_victorian_army
+		OR = {
+			has_idea = machine_era
+			has_idea = oil_era
+			has_idea = aviation_era
+			has_idea = modern_era
+			has_idea = atomic_era
+			has_idea = information_era
+			has_idea = digital_era
+			has_idea = post_digital_era
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+	}
+	
+	option = {
+		name = tech.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_tech_2
+		hidden_effect = {
+			swap_ideas = { add_idea = law_trench_infantry remove_idea = law_victorian_army }
+		}
+	}
+	
+}
