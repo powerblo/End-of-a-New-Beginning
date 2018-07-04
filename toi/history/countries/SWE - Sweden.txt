@@ -14,28 +14,28 @@
     victorian_era
 	law_victorian_army
     agrarian
-    no_heir
-    absolute_monarchy
+    has_heir
+    parliamentary_monarchy
 
     civilian_economy
-    limited_exports
-    two_percent
+    export_focus
+    three_percent
     normal_taxes
 
     stagnation_growth
     border_control
-	limited_conscription
+	extensive_conscription
     limited_equality
-    absolutism
+    property_owners_suffrage
 
-    no_constitution
-    no_elections
+    constitution_adopted
+    free_elections
 
     privileged_education
     state_religion
 	religion_protestant
         #NATIONAL SPIRITS
-	
+	SWE_Finnish_Defeat
   }
 
 
@@ -45,19 +45,19 @@
         popularity = 0
       }
       vanguard_communism = {
-        popularity = 5
+        popularity = 0
       }
       collectivist_socialism = {
         popularity = 1
       }
       social_egalitarianism = {
-        popularity = 20
+        popularity = 7
       }
       centrism = {
-        popularity = 44
+        popularity = 37
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 42
       }
       radical_democracy = {
         popularity = 0
@@ -66,7 +66,7 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 30
+        popularity = 2
       }
       fundamentalism = {
         popularity = 0
@@ -118,9 +118,14 @@ create_country_leader = {
   picture = "Portait_SWE_Claes_Gunther.dds"
   expire = "1965.1.1"
   ideology = conserv_liberal
-  traits = {
-    #
-  }
-}
-
+ }
+  
+create_country_leader = {
+    name = "Axel Adlercreutz"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portait_SWE_Axel_Adlercreutz.dds"
+    expire = 1880.1.1
+    ideology = market_liberal
+ }
+	}
 }
