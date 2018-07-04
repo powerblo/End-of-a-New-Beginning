@@ -110,7 +110,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PIE_Maintain_Control
-		icon = GFX_goal_unknown
+		icon = GFX_focus_PIE_Maintain_Control
 		cost = 2.00
 		prerequisite = {
 			focus = PIE_Political_Structure_Planning_FT
@@ -223,22 +223,10 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = PIE_Coring_New_States
-		icon = GFX_focus_PIE_Coring
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Annex_Central_Italian_States
-		}
-		x = 10
-		y = 9
 
-
-
-	}
 	focus = {
 		id = PIE_The_War_Ends
-		icon = GFX_goal_unknown
+		icon = GFX_focus_PIE_War_Ends
 		cost = 10.00
 		available = {
 			always = no
@@ -271,7 +259,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PIE_Occupy_Central_Italy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_PIE_Maintain_Control
 		cost = 1.00
 		prerequisite = {
 			focus = PIE_The_War_Starts
@@ -291,71 +279,12 @@ focus_tree = {
 		icon = GFX_goal_focus_form_italy
 		cost = 10.00
 		prerequisite = {
-			focus = PIE_Core_Central_Italy
-		}
-		prerequisite = {
-			focus = PIE_Core_Lombardy
-		}
-		prerequisite = {
-			focus = PIE_Core_Sicily
+			focus = PIE_Annex_Central_Italian_States
 		}
 		x = 10
-		y = 11
+		y = 9
+
 
 	}
-	focus = {
-		id = PIE_Core_Central_Italy
-		icon = GFX_focus_PIE_Coring
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Coring_New_States
-		}
-		x = 7
-		y = 10
-
-		completion_reward = {
-			add_state_core = 808
-			add_state_core = 813
-			add_state_core = 162
-			add_state_core = 161
-			add_state_core = 157
-
-		}
-
-	}
-	focus = {
-		id = PIE_Core_Lombardy
-		icon = GFX_focus_PIE_Coring
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Coring_New_States
-		}
-		x = 10
-		y = 10
-
-		completion_reward = {
-			add_state_core = 159
-			add_state_core = 982
-		}
-
-	}
-	focus = {
-		id = PIE_Core_Sicily
-		icon = GFX_focus_PIE_Coring
-		cost = 10.00
-		prerequisite = {
-			focus = PIE_Coring_New_States
-		}
-		x = 13
-		y = 10
-
-		completion_reward = {
-			add_state_core = 812
-			add_state_core = 117
-			add_state_core = 997
-			add_state_core = 156
-			add_state_core = 115
-		}
-
-	}
+	
 }
