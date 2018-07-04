@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "usa_congress_container"
-		position = { x = 1325 y = 4 }
+		position = { x = 888 y = 5 }
 		
 		iconType ={
 			name ="usa_congress_bg"
@@ -32,13 +32,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "usa_congress_opener"
-		position = { x = 1400 y = 2 }
-		
-		iconType = {
-			name ="usa_congress_opener_icon"
-			spriteType = "GFX_add_goal_button"
-			position = { x= 0 y = 0 }
-		}
+		position = { x = 946 y = 0 }
 
 		buttonType ={
 			name ="usa_congress_opener"
@@ -46,14 +40,13 @@ guiTypes = {
 			position = { x=7 y=5 }
 			shortcut = "ctrl+k"
 		}
-
 	}
 
 	containerWindowType = {
 		name = "usa_congress_country_powers_container"
-		position = { x=450 y=175 }
-		size = { width=1100 height=1000 }
-
+		position = { x=-550 y=-350 }
+		size = { width=1100 height=700 }
+		orientation = CENTER
 		fade_time = 300
 		fade_type = linear
 		moveable = no
@@ -65,6 +58,7 @@ guiTypes = {
 			name = "Background"
 			spriteType = "GFX_browser_bg"
 		}
+		clipping = yes
 
 		instantTextboxType = {
 			name = "usa_congress_powers_headline"
