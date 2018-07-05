@@ -4,12 +4,12 @@
   oob = "SWE_1857"
 
   set_convoys = 0
-  
+
   set_research_slots = 3
 
-  add_ideas = { 
-    #POLITICS 
-		  
+  add_ideas = {
+    #POLITICS
+
     hos_is_leader
     victorian_era
 	law_victorian_army
@@ -36,6 +36,7 @@
 	religion_protestant
         #NATIONAL SPIRITS
 	SWE_Finnish_Defeat
+	SWE_Oscar_I
   }
 
 
@@ -75,7 +76,7 @@
 
 	  ruling_party = centrism
   }
-  
+
   set_technology = {
 	infantry_weapons = 1
 	vic_army_cloth = 1
@@ -119,7 +120,7 @@ create_country_leader = {
   expire = "1965.1.1"
   ideology = market_liberal
  }
-  
+
 create_country_leader = {
     name = "Axel Adlercreutz"
     desc = "POLITICS_TEMP_DESC"
@@ -127,5 +128,48 @@ create_country_leader = {
     expire = 1880.1.1
     ideology = conserv
  }
-	}
-}
+ create_corps_commander = {
+     name = "Gustaf Rudolf Abelin"
+     picture = "Gustaf_Rudolf_Abelin.dds"
+     traits = { organizer career_officer }
+     skill = 5
+     attack_skill = 3
+     defense_skill = 2
+     planning_skill = 2
+     logistics_skill = 3
+   }
+
+ create_field_marshal = {
+     name = "Jakob Essen Hamilton"
+     picture = "Jakob_Essen_Hamilton.dds"
+     traits = { inspirational_leader cavalry_officer }
+     skill = 4
+     attack_skill = 2
+     defense_skill = 3
+     planning_skill = 3
+     logistics_skill = 3
+   }
+
+   create_navy_leader = {
+     name = "Salomon Mauritz von Krusenstierna"
+     picture = "Salomon_Mauritz_von_Krusenstierna.dds"
+     traits = { superior_tactician }
+     skill = 4
+   }
+ create_corps_commander = {
+     name = "Johan af Kleen"
+     picture = "Johan_af_Kleen.dds"
+     traits = { trait_engineer }
+     skill = 4
+     attack_skill = 3
+     defense_skill = 2
+     planning_skill = 2
+     logistics_skill = 3
+   }
+   create_navy_leader = {
+     name = "Axel Adlersparre"
+     picture = "Axel_Adlersparre.dds"
+     traits = {  }
+     skill = 3
+   }
+ }
