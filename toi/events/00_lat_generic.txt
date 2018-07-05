@@ -12,114 +12,116 @@ country_event = {
 		name = lat_generic.1.a
 		ai_chance = { factor = 50 }
 		set_politics = { ruling_party = traditional_conservatism elections_allowed = yes election_frequency = 36 }
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = absolute_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = constitutional_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = semi_presidential_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_state
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = revolutionary_government
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = free_city
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = military_junta
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = anarchy
+		custom_effect_tooltip = LAT_generic_presidential_republic
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = absolute_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = constitutional_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = semi_presidential_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_state
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = revolutionary_government
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = free_city
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = military_junta
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = anarchy
+			}
 		}
 	}
 	option = {
 		name = lat_generic.1.b
 		ai_chance = { factor = 50 }
 		set_politics = { ruling_party = chauvinist_populism elections_allowed = no }
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = absolute_monarchy
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = constitutional_monarchy
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = parliamentary_monarchy
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = parliamentary_republic
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = semi_presidential_republic
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = socialist_republic
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = socialist_state
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = revolutionary_government
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = presidential_republic
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = free_city
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = military_junta
-		}
-		swap_ideas = {
-			add_idea = totalitarian_dictatorship
-			remove_idea = anarchy
+		custom_effect_tooltip = LAT_generic_totalitarian_dictatorship
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = absolute_monarchy
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = constitutional_monarchy
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = parliamentary_monarchy
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = parliamentary_republic
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = semi_presidential_republic
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = socialist_republic
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = socialist_state
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = revolutionary_government
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = presidential_republic
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = free_city
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = military_junta
+			}
+			swap_ideas = {
+				add_idea = totalitarian_dictatorship
+				remove_idea = anarchy
+			}
 		}
 	}
 }
@@ -135,171 +137,180 @@ country_event = {
 		name = lat_generic.2.a
 		ai_chance = { factor = 34 }
 		set_politics = { ruling_party = traditional_conservatism elections_allowed = yes election_frequency = 36 }
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = absolute_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = constitutional_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = semi_presidential_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_state
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = revolutionary_government
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = free_city
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = military_junta
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = anarchy
+		custom_effect_tooltip = LAT_generic_presidential_republic
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = absolute_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = constitutional_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = semi_presidential_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_state
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = revolutionary_government
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = free_city
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = military_junta
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = anarchy
+			}
 		}
 	}
 	option = {
 		name = lat_generic.2.b
 		ai_chance = { factor = 33 }
 		set_politics = { ruling_party = centrism elections_allowed = yes election_frequency = 36 }
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = absolute_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = constitutional_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = semi_presidential_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_state
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = revolutionary_government
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = free_city
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = military_junta
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = anarchy
+		custom_effect_tooltip = LAT_generic_presidential_republic
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = absolute_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = constitutional_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = semi_presidential_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_state
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = revolutionary_government
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = free_city
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = military_junta
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = anarchy
+			}
 		}
 	}
 	option = {
 		name = lat_generic.2.c
 		ai_chance = { factor = 33 }
 		set_politics = { ruling_party = radical_democracy elections_allowed = yes election_frequency = 36 }
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = absolute_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = constitutional_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_monarchy
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = parliamentary_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = semi_presidential_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_republic
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = socialist_state
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = revolutionary_government
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = totalitarian_dictatorship
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = free_city
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = military_junta
-		}
-		swap_ideas = {
-			add_idea = presidential_republic
-			remove_idea = anarchy
+		custom_effect_tooltip = LAT_generic_presidential_republic
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = absolute_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = constitutional_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_monarchy
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = parliamentary_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = semi_presidential_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_republic
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = socialist_state
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = revolutionary_government
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = totalitarian_dictatorship
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = free_city
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = military_junta
+			}
+			swap_ideas = {
+				add_idea = presidential_republic
+				remove_idea = anarchy
+			}
 		}
 	}
 }
