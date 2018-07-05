@@ -185,6 +185,7 @@ country_event = {
 
 		trigger = {
 			date > 1858.7.20
+			tag = PIE
 		}
 		
 		option = {
@@ -549,6 +550,7 @@ country_event = {
 			has_completed_focus = PIE_Recruit_Nationalists
 			has_completed_focus = PIE_French_Aid
 			has_completed_focus = PIE_Start_Border_Operations
+			tag = PIE
 
 		}
 
@@ -591,5 +593,30 @@ country_event = {
 		}
 	}
 }
+country_event = {
+		id = sardinia.29
+		title = sardinia.29.t
+		desc = sardinia.29.d
 
+		trigger = {
+			date > 1860.5.14
+			tag = PIE
+		}
+
+		fire_only_once = yes
+
+		option = {
+				name = sardinia.29.a
+				hidden_effect = {
+				transfer_state = 115
+				transfer_state = 156
+				declare_war_on = {
+    				target = NSC
+    				type = annex_everything
+			}
+				load_oob = { PIE_Expedition_Thousand  }
+				complete_national_focus = PIE_Garibali_Sicily_Expedition
+		}
+	}
+}
 

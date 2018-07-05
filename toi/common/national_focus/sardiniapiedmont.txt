@@ -240,6 +240,21 @@ focus_tree = {
 		x = 8
 		y = 7
 
+		completion_reward = {
+			custom_effect_tooltip = pie_austrian_war_ends
+			hidden_effect = { delete_unit_template_and_units = {
+   							 division_template = "French Infantry"} 
+   							 delete_unit_template_and_units = {
+   							 division_template = "French Howitzers"} 
+   							 delete_unit_template_and_units = {
+   							 division_template = "Italian Nationalists"} 
+   							 delete_unit_template_and_units = {
+   							 division_template = "Tuscan Infantry"}
+   							 delete_unit_template_and_units = {
+   							 division_template = "Italian Infantry"}   
+   			}
+		}
+
 	}
 	focus = {
 		id = PIE_French_Army_Arrives
@@ -253,7 +268,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = PIE_French_Army_Arrives
-			hidden_effect = { load_oob = PIE_French_Army }
+			hidden_effect = { load_oob = PIE_French_Army_Full }
 		}
 
 	}
@@ -275,14 +290,38 @@ focus_tree = {
 
 	}
 	focus = {
+		id = PIE_Garibali_Sicily_Expedition 
+		icon = GFX_goal_focus_form_italy
+		cost = 1.00
+		prerequisite = {
+			focus = PIE_Annex_Central_Italian_States
+		}
+		available = {
+			always = no
+		}
+		x = 8
+		y = 10
+
+		completion_reward = {
+			custom_effect_tooltip = pie_expedition_thousand_ft
+			hidden_effect = { delete_unit_template_and_units = {
+   							 division_template = "Italian Nationalists"} 
+
+			}
+		}
+
+
+
+	}
+	focus = {
 		id = PIE_Form_Italy
 		icon = GFX_goal_focus_form_italy
 		cost = 10.00
 		prerequisite = {
-			focus = PIE_Annex_Central_Italian_States
+			focus = PIE_Garibali_Sicily_Expedition
 		}
 		x = 8
-		y = 9
+		y = 12
 
 
 	}
