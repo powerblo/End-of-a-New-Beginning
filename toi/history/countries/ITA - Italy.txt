@@ -15,7 +15,6 @@
 		  
     hos_is_leader
     victorian_era
-	law_victorian_army
     agrarian
     no_heir
     absolute_monarchy
@@ -57,10 +56,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 50
+        popularity = 25
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 25
       }
       radical_democracy = {
         popularity = 0
@@ -124,6 +123,17 @@ create_country_leader = {
   traits = {
     #
   }
+}
+create_country_leader = {
+  name = "Giuseppe Mazzini"
+  desc = "POLITICS_GIUSEPPE_MAZZINI_DESC"
+  picture = "Portrait_ITA_Giuseppe_Mazzini.dds"
+  expire = "1965.1.1"
+  ideology = conserv
+  traits = {
+    #
+  }
+
 }
 create_corps_commander = {
   name = "Giuseppe Garibaldi"
