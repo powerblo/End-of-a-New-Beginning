@@ -1229,7 +1229,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_focus_1862_elections }
 		mutually_exclusive = { focus = PRS_focus_new_candidate }
-		available = { has_completed_focus = PRS_focus_new_era }
+		available = { 
+			has_completed_focus = PRS_focus_new_era
+			has_completed_focus = PRS_focus_constitutional_crisis
+			has_completed_focus = PRS_focus_dissolve_parliament
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_king_abdicate
@@ -1251,7 +1255,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_focus_1862_elections }
 		mutually_exclusive = { focus = PRS_focus_king_abdicate } 
-		available = { has_completed_focus = PRS_focus_new_era }
+		available = { 
+			has_completed_focus = PRS_focus_new_era
+			has_completed_focus = PRS_focus_constitutional_crisis
+			has_completed_focus = PRS_focus_dissolve_parliament
+		}
 		
 		completion_reward = {
 			retire_country_leader = yes
