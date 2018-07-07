@@ -279,3 +279,70 @@ country_event = {
 	    }
 	}
 }
+
+#Scheibert comes back prematurely
+country_event = {
+    id = prussia.14
+	title = prussia.14.t
+	desc = prussia.14.d
+	picture = GFX_report_event_generic_battle
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = scheibert_sent
+		OR = {
+		    has_global_flag = USAWins_Civil_War
+			has_global_flag = CSAWins_Civil_War
+		}
+	}
+	
+	option = {
+	    name = prussia.14.a
+		ai_chance = { factor = 100 }
+		PRS = {
+		    add_tech_bonus = {
+			    bonus = 0.5
+				category = land_doctrine
+				uses = 2
+			}
+			hidden_effect = {
+			    clr_country_flag = scheibert_sent
+			}
+		}
+	}
+	
+}
+
+#Scheibert comes back
+country_event = {
+    id = prussia.15
+	title = prussia.15.t
+	desc = prussia.15.d
+	picture = GFX_report_event_generic_battle
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    has_country_flag = scheibert_sent
+		has_global_flag = ACWAmerican_Civil_War
+	}
+	
+	option = {
+	    name = prussia.15.a
+		ai_chance = { factor = 100 }
+		PRS = {
+		    add_tech_bonus = {
+			    bonus = 0.5
+				category = land_doctrine
+				uses = 1
+			}
+			hidden_effect = {
+			    clr_country_flag = scheibert_sent
+			}
+		}
+	}
+	
+}
