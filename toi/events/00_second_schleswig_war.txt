@@ -272,6 +272,7 @@ country_event = {
 			declare_war_on = { target = DEN type = annex_everything }
 			MCK = { add_to_war = { targeted_alliance = PRS enemy = DEN } }
 			MCK = { give_military_access = PRS }
+			PRS = { give_military_access = MCK }
 			set_global_flag = eoanb_flag_second_schleswig_war
 		}
 	}
