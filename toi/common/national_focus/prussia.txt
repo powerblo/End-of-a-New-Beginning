@@ -84,7 +84,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PRS_alsace_zoll
+		id = PRS_expand_zollparlament
 		icon = GFX_goal_demand_sudetenland
 		x = 1
 		y = 4
@@ -99,6 +99,23 @@ focus_tree = {
 			swap_ideas = { remove_idea = PRS_Zollverein_2 add_idea = PRS_Zollverein_3 }
 		}
 	}
+	
+	#focus = {
+	#	id = PRS_alsace_zoll
+	#	icon = GFX_goal_demand_sudetenland
+	#	x = 1
+	#	y = 4
+	#	cost = 10
+	#	available_if_capitulated = no
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = { focus = PRS_norswe_zoll }
+	#	
+	#	completion_reward = {
+	#		swap_ideas = { remove_idea = PRS_Zollverein_2 add_idea = PRS_Zollverein_3 }
+	#	}
+	#}
 	
 	focus = {
 		id = PRS_state_rail_0
@@ -622,7 +639,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_krupp_arty }
 		prerequisite = { focus = PRS_silesian_steel }
 		prerequisite = { focus = PRS_westphalia_rail }
-		prerequisite = { focus = PRS_alsace_zoll }
+		prerequisite = { focus = PRS_expand_zollparlament }
 		
 		completion_reward = {
 			add_research_slot = 1
