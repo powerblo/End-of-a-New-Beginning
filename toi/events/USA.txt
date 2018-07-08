@@ -1102,7 +1102,7 @@ country_event = {
 			add_political_power = -10
 		}
 	}
-#Question the Republic
+#Comstock Rush
 country_event = {
 		id = usa.32
 		title = usa.32.t
@@ -1113,16 +1113,10 @@ country_event = {
 		
 		option = {
 			name = usa.32.a
-			custom_effect_tooltip = 10_USA_tt
-			set_country_flag = USA_loss_firm
-		}
-		option = {
-			name = usa.32.b
-			custom_effect_tooltip = 11_USA_tt
-			set_country_flag = USA_loss_rethink
+
 		}
 	}
-#Rethink the Republic
+#
 country_event = {
 		id = usa.33
 		title = usa.33.t
@@ -1133,23 +1127,11 @@ country_event = {
 		
 		option = {
 			name = usa.33.a
-			set_country_flag = USA_loss_social
-			add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
-			add_popularity = { ideology = collectivist_socialism popularity = 0.01 }
-			add_popularity = { ideology = vanguard_communism popularity = 0.01 }
-			add_popularity = { ideology = autocracy popularity = 0.05 }
-			add_popularity = { ideology = fundamentalism popularity = 0.02 }
-			add_popularity = { ideology = radical_democracy popularity = 0.02 }
+			
 		}
 		option = {
 			name = usa.33.b
-			set_country_flag = USA_loss_monarch
-			add_popularity = { ideology = autocracy popularity = 0.02 }
-			add_popularity = { ideology = fundamentalism popularity = 0.01 }
-			add_popularity = { ideology = radical_democracy popularity = 0.01 }
-			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
-			add_popularity = { ideology = collectivist_socialism popularity = 0.02 }
-			add_popularity = { ideology = vanguard_communism popularity = 0.02 }
+			
 		}
 	}
 #Socialist Revolution
@@ -1593,6 +1575,8 @@ country_event = {
 		mean_time_to_happen = {
 			days = 45
 		}
+
+		fire_only_once = yes
 		
 		option = {
 			name = usa.43.a
