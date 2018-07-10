@@ -1102,7 +1102,7 @@ country_event = {
 			add_political_power = -10
 		}
 	}
-#Comstock Rush
+#Utah Annexation
 country_event = {
 		id = usa.32
 		title = usa.32.t
@@ -1113,7 +1113,9 @@ country_event = {
 		
 		option = {
 			name = usa.32.a
-
+			annex_country = {
+				target = UTA
+			}
 		}
 	}
 #

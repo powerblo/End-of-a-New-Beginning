@@ -1,0 +1,167 @@
+focus_tree = {
+id = 'focustree'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = UTA
+}
+}
+default = no
+#Custom focuses start here
+#Focus for Zion 
+		focus = { 
+		id = zion 
+		icon = GFX_goal_generic_position_armies 
+		ai_will_do = { factor = 0 } 
+ x =4 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Federal Appointments 
+		focus = { 
+		id = federalappointments 
+		icon = GFX_goal_generic_forceful_treaty 
+		ai_will_do = { factor = 0 } 
+ x =3 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = zion} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for End of the Reformation 
+		focus = { 
+		id = endofthereformation 
+		icon = GFX_focus_generic_support_the_left_right 
+		ai_will_do = { factor = 0 } 
+ x =5 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = zion} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Alfred Cumming 
+		focus = { 
+		id = alfredcumming 
+		icon = GFX_goal_generic_improve_relations 
+		ai_will_do = { factor = 0 } 
+ x =3 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = federalappointments} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for The Utah Expedition 
+		focus = { 
+		id = theutahexpedition 
+		icon = GFX_goal_generic_small_arms 
+		ai_will_do = { factor = 0 } 
+ x =3 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = alfredcumming} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Evacuation Orders 
+		focus = { 
+		id = evacuationorders 
+		icon = GFX_goal_generic_attack_allies 
+		ai_will_do = { factor = 0 } 
+ x =3 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = theutahexpedition} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Return of the Navuoo 
+		focus = { 
+		id = returnofthenavuoo 
+		icon = GFX_goal_generic_military_sphere 
+		ai_will_do = { factor = 0 } 
+ x =2 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = evacuationorders} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Native Reconciliation 
+		focus = { 
+		id = nativereconciliation 
+		icon = GFX_goal_generic_national_unity 
+		ai_will_do = { factor = 0 } 
+ x =4 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = evacuationorders} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Defense of Utah 
+		focus = { 
+		id = defenseofutah 
+		icon = GFX_goal_generic_fortify_city 
+		ai_will_do = { factor = 0 } 
+ x =2 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = returnofthenavuoo} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Martial Law 
+		focus = { 
+		id = martiallaw 
+		icon = GFX_goal_continuous_def_against_influence 
+		ai_will_do = { factor = 0 } 
+ x =4 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = nativereconciliation} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Fight 
+		focus = { 
+		id = fight 
+		icon = GFX_goal_generic_territory_or_war 
+		ai_will_do = { factor = 0 } 
+ x =1 
+ y =7 
+ mutually_exclusive = { focus = flight} 
+ prerequisite = { focus = defenseofutah} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for Flight 
+		focus = { 
+		id = flight 
+		icon = GFX_goal_generic_alliance 
+		ai_will_do = { factor = 0 } 
+ x =5 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = martiallaw} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for North 
+		focus = { 
+		id = north 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0 } 
+ x =4 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = flight} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#Focus for South 
+		focus = { 
+		id = south 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0 } 
+ x =6 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = flight} 
+ cost = 1  
+  available_if_capitulated = yes  
+ }#End of focuses 
+}

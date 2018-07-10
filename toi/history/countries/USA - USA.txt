@@ -113,6 +113,19 @@
   give_guarantee = ARG
   give_guarantee = URG
 
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = UTA
+      autonomous_state = autonomy_colony
+    }
+    else = {
+      puppet = UTA
+    }
+  }
+
   # POLITICAL LEADERS
 
   create_country_leader = {
