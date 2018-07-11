@@ -1,0 +1,27 @@
+﻿add_namespace = Greecefocus
+
+country_event = {
+	id = Greecefocus.1
+	title = Greecefocus.1.t
+	desc = Greecefocus.1.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1862.1.1
+		has_ideas = GRE_Otto_I 
+	}
+	
+	option = {
+		name = Greecefocus.1.a
+		ai_chance = { factor = 100 }
+		swap_ideas = { remove_idea = GRE_Otto_I  add_idea = GRE_George_I  }
+
+		
+		hidden_effect = {
+			complete_national_focus = GRE_overthrowourking
+		}
+	}
+}

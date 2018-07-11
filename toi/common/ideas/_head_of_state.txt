@@ -133,10 +133,26 @@ ideas = {
 			picture = GRE_Otto_I
 			
 			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		GRE_George_I = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
 				stability_factor = 0.1
 			}
 		}
-
 		# HOL
 		HOL_William_III = {
 			allowed = {
