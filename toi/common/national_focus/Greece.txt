@@ -10,11 +10,10 @@ focus_tree = {
 #Focus for Megali Idea
 focus = { 
 id = GRE_megaliidea
-x = 3
-y = 6
+x = 2
+y = 2
 cost = 10
-available_if_capitulated = yes 
-prerequisite = { focus = GRE_openupthepoliticalsphere focus = GRE_fulldemocracy } 
+available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
@@ -26,29 +25,11 @@ ai_will_do = {
  
  }
  } 
+ 
 
-#Focus to Claim Roman Glory
+#Focus for Search for a new King
 focus = { 
-id = GRE_claimromanglory
-x = 6
-y = 6
-cost = 10
-available_if_capitulated = yes 
-prerequisite = { focus = GRE_absolutemonarchy } 
-ai_will_do = { 
- factor = 0
- } 
- completion_reward = {
- add_state_claim = 751
- add_stability = 0.1
- add_warsupport = 0.1
- add_popularity = { ideology = autocracy popularity = 0.1 }
- }
- } 
-
-#Focus for Open up the Political Sphere
-focus = { 
-id = GRE_openupthepoliticalsphere
+id = GRE_searchforking
 icon = GFX_goal_intelligence_exchange
 x = 4
 y = 5
@@ -58,41 +39,13 @@ prerequisite = { focus = GRE_overthrowourking }
 ai_will_do = { 
  factor = 1
  } 
-completion_reward = {add_political_power = 150}
+completion_reward = {swap_ideas = { remove_idea = GRE_Regency add_idea = GRE_George_I }
+	annex_country = { target = ION transfer_troops = yes }
+ }
  } 
+ 
 
-#Focus for Absolute Monarchy
-focus = { 
-id = GRE_absolutemonarchy
-icon = GFX_goal_tfv_can_compromise_with_quebec
-x = 6
-y = 5
-available_if_capitulated = yes 
-cost = 10
-prerequisite = { focus = GRE_blamedemocracy } 
-ai_will_do = { 
- factor = 1
- } 
-		
-		completion_reward = {
-			swap_ideas = { remove_idea = parliamentary_monarchy add_idea = absolute_monarchy }
-		add_political_power = -150
-		add_stability = 0.1
-		}
- } 
 
-#Focus for Blame Democracy
-focus = { 
-id = GRE_blamedemocracy
-icon = GFX_focus_rom_royal_dictatorship
-x = 6
-y = 4
-cost = 10
-available_if_capitulated = yes 
-prerequisite = { focus = GRE_internalbreakdown } 
-mutually_exclusive = { focus = GRE_overthrowourking } 
-completion_reward = {add_popularity = { ideology = autocracy popularity = 0.25 }}
- } 
 
 #Focus for Overthrow our King
 focus = { 
@@ -101,13 +54,11 @@ icon = GFX_focus_rom_handle_king
 x = 4
 y = 4
 cost = 10
-available = {always = no}
-mutually_exclusive = { focus = GRE_blamedemocracy } 		
+available = {always = no}		
 prerequisite = { focus = GRE_internalbreakdown } 
 ai_will_do = { 
  factor = 1
  } 
-completion_reward = {add_stability = 0.2}
  } 
 
 #Focus for Internal Breakdown
@@ -172,8 +123,7 @@ x = 4
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = GRE_puppetgovernment } 
-mutually_exclusive = { focus = GRE_givingmorerights }
+prerequisite = { focus = GRE_puppetgovernment }
 ai_will_do = { 
  factor = 1
  } 
@@ -185,72 +135,32 @@ add_popularity = { ideology = traditional_conservatism popularity = 0.3 }
 
  } 
 
-#Focus for Giving more Rights
-focus = { 
-id = GRE_givingmorerights
-icon = GFX_goal_national_unity
-x = 2
-y = 2
-cost = 10
-available_if_capitulated = yes 
-prerequisite = { focus = GRE_puppetgovernment } 
-mutually_exclusive = { focus = GRE_securingpower } 
-completion_reward = {
-swap_ideas = { remove_idea = privileged_education add_idea = open_schools }
-}
- } 
+ 
 
-#Focus for Full Democracy
-focus = { 
-id = GRE_fulldemocracy
-icon = GFX_goal_support_democracy
-x = 2
-y = 3
-cost = 15
-available_if_capitulated = yes 
-prerequisite = { focus = GRE_givingmorerights } 
-completion_reward = {
-swap_ideas = { remove_idea = limited_constitution add_idea = constitution_adopted }
-}
- } 
+ 
 
 #Focus for Protector of all Greeks.
 focus = { 
 id = GRE_protectorofallgreeks
 icon = GFX_goal_occypy_states_ongoing_war
-x = 5
-y = 7
+x = 0
+y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = GRE_megaliidea focus = GRE_claimromanglory } 
+prerequisite = { focus = GRE_megaliidea} 
 ai_will_do = { 
  factor = 1
  } 
 completion_reward = {add_state_core = 339
 					 add_state_core = 354
 				     add_stability = 0.1
-					 add_warsupport = 0.1
+					 add_war_support = 0.1
 					 
 					 }
  } 
 
 
-#Focus for A New Rome
-focus = { 
-id = GRE_anewrome
-x = 6
-y = 8
-cost = 10
-available = {
-			owns_state = 957}
-available_if_capitulated = no 
-prerequisite = { focus = GRE_claimromanglory } 
-ai_will_do = { 
- factor = 0
- } 
- completion_reward = {set_province_name = { id = 9833 name = "Nova Roma"}
- } 
-}
+
 #Focus for Fast Replacement
 focus = { 
 id = GRE_fastreplacement
@@ -314,6 +224,7 @@ y = 2
 cost = 10
 available_if_capitulated = yes 
 prerequisite = { focus = GRE_economy } 
+mutually_exclusive = { focus = GRE_industrialize }  
 ai_will_do = { 
  factor = 1
  } 
@@ -459,20 +370,37 @@ completion_reward = {swap_ideas = { remove_idea = agrarian add_idea = industrial
 focus = { 
 id = GRE_anewconstantinople
 icon = GFX_goal_anschluss
-x = 8
-y = 9
-cost = 15
-prerequisite = { focus = GRE_modernstate focus = GRE_megaliidea } 
+x = 2
+y = 3
+cost = 10
+prerequisite = { focus = GRE_megaliidea } 
 available = {
-			owns_state = 957}
+			owns_state = 957
+			}
 available_if_capitulated = no 
 ai_will_do = { 
  factor = 0
  } 
- completion_reward = {set_province_name = { id = 9833 name = "Constantinople"}
- } 
+ completion_reward = {set_province_name = { id = 9833 name = "Constantinople"}} 
  } 
 
+ 
+#Focus for Renaming stuff
+focus = { 
+id = GRE_newnames
+icon = GFX_goal_anschluss
+x = 2
+y = 4
+cost = 15
+prerequisite = { focus = GRE_anewconstantinople } 
+available = {
+			owns_state = 347}
+available_if_capitulated = no 
+ai_will_do = { 
+ factor = 0
+ } 
+ completion_reward = { 347 = {set_state_name = "smyrna"}} 
+ }
 #Focus for Army Reform
 focus = { 
 id = GRE_armyreform
@@ -485,9 +413,7 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
-		}
- } 
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }}} 
 
 #Focus for Learning new Ways
 focus = { 
@@ -517,7 +443,8 @@ x = 4
 y = 9
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = GRE_wineexportofeurope and focus = GRE_protectorofallgreeks } 
+prerequisite = { focus = GRE_wineexportofeurope } 
+prerequisite = { focus = GRE_searchforking } 
 ai_will_do = { 
  factor = 1
  } 
@@ -551,7 +478,8 @@ x = 14
 y = 5
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = GRE_looktothebritish focus = GRE_armsindustry } 
+prerequisite = { focus = GRE_looktothebritish } 
+prerequisite = { focus = GRE_armsindustry } 
 ai_will_do = { 
  factor = 1
  } 
