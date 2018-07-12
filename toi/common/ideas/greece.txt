@@ -10,7 +10,7 @@ ideas = {
 			picture = placeholder
 			
 			modifier = {
-				stability = 0.1
+				add_stability = 0.1
 				consumer_goods_factor = -0.05
 			}
 		}
@@ -18,7 +18,7 @@ ideas = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = placeholder
-			modifier = { factory_output = 0.1 }
+			modifier = { industrial_capacity_factory = 0.1 }
 			}
 	
 	GRE_Populationboom = {
@@ -32,24 +32,24 @@ ideas = {
 	allowed = { always = yes }
 			removal_cost = -1
 			picture = placeholder
-			modifier = { construction_speed = 0.1 
-						 factory_output = 0.2
+			modifier = { production_speed_buildings_factor = 0.1
+						 industrial_capacity_factory = 0.25
 			}
 			}
-	Greek_Army ={
+	GRE_Greek_Army ={
 	allowed = { always = yes }
 			removal_cost = -1
 			picture = placeholder
-			modifier = { division_organization = 0.1
-			division_attack_on_core_territory = 0.1
-			division_defense_on_core_territory = 0.1
+			modifier = { army_org_Factor = 0.1
+			training_time_factor = -0.1
+			conscription = 0.1
 			}
 			}
 	GRE_grandarmy = {
 	allowed = { always = yes }
 			removal_cost = -1
 			picture = placeholder
-			modifier = { conscription_bonus = 0.05 }
+			modifier = { conscription = 0.05 }
 			
 			}
 	
