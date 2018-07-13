@@ -11,16 +11,36 @@ country_event = {
 	trigger = {
 		TAG = GRE
 		date > 1862.1.1
+	    has_country_flag = internalbreakdown
 	}
 	
 	option = {
 		name = Greecefocus.1.a
 		ai_chance = { factor = 100 }
-		swap_ideas = { remove_idea = GRE_Otto_I  add_idea = GRE_Regency  }
-
+		swap_ideas = { remove_idea = GRE_Otto_I  add_idea = GRE_Regency }
 		
 		hidden_effect = {
 			complete_national_focus = GRE_overthrowourking
 		}
+	}
+}
+
+country_event = {
+	id = Greecefocus.2
+	title = Greecefocus.2.t
+	desc = Greecefocus.2.d
+	picture = placeholder
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1867.1.1
+	}
+	
+	option = {
+		name = Greecefocus.2.a
+		ai_chance = { factor = 100 }
+        add_opinion_modifier = { target = RUS modifier = GRE_GEORGE_I_Marriage }
 	}
 }

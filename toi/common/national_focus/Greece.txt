@@ -22,7 +22,14 @@ ai_will_do = {
 	add_state_core = 957
     add_state_claim = 340
 	add_state_claim = 347
- 
+	add_state_core = 187
+    add_state_core = 183
+    add_state_claim = 342
+	add_state_claim = 356
+	add_state_claim = 355
+	add_state_claim = 963
+	add_state_claim = 964
+	add_state_claim = 1023
  }
  } 
  
@@ -33,7 +40,7 @@ id = GRE_searchforking
 icon = GFX_goal_intelligence_exchange
 x = 4
 y = 5
-cost = 5
+cost = 20
 available_if_capitulated = yes 
 prerequisite = { focus = GRE_overthrowourking } 
 ai_will_do = { 
@@ -41,12 +48,125 @@ ai_will_do = {
  } 
 completion_reward = {swap_ideas = { remove_idea = GRE_Regency add_idea = GRE_George_I }
 	annex_country = { target = ION transfer_troops = yes }
+    add_opinion_modifier = { target = ENG modifier = GRE_GEORGE_I }
+	add_opinion_modifier = { target = RUS modifier = GRE_GEORGE_I }
+	add_opinion_modifier = { target = FRA modifier = GRE_GEORGE_I }	
+    swap_ideas = { remove_idea = weak_heir add_idea = no_heir }
+	swap_ideas = { remove_idea = dethroned_heir add_idea = no_heir }
  }
  } 
  
-
-
-
+#Focus for King of Hellenes
+focus = { 
+id = GRE_kingofhellenes
+x = 4
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.1 
+ add_popularity = {ideology = autocracy popularity = 0.05}
+ }
+ }
+#Focus for King toured around the Peloponnese
+focus = { 
+id = GRE_tourpeloponnese
+x = 4
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_kingofhellenes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.1
+ add_political_power = -100
+ }
+ }
+#Focus for Rebuild 40 year old Building
+focus = { 
+id = GRE_updating40yearbuilding
+x = 2
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.05
+ 47 = {
+    if = {
+        limit = { is_controlled_by = GRE }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+ }
+ }
+ 
+ #Focus for Fire unpopular Advisors
+focus = { 
+id = GRE_fireunpopularadvisors
+x = 2
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_updating40yearbuilding } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_popularity = {ideology = autocracy popularity = 0.05}
+ add_political_power = -50
+ }
+ }
+ 
+ #Focus for King adopts new constitution
+focus = { 
+id = GRE_adoptnewconstitution
+x = 4
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_tourpeloponnese } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ swap_ideas = { remove_idea = limited_constitution add_idea = constitution_adopted }
+ swap_ideas = { remove_idea = parliamentary_suffrage add_idea = universal_male_suffrage }
+ 
+ }
+ }
+ 
+ 
+ #Focus for King divides Government
+focus = { 
+id = GRE_dividegovernment
+x = 4
+y = 9
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_adoptnewconstitution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = -0.1
+ add_popularity = {ideology = autocracy popularity = 0.1}
+ add_political_power = 50
+ }
+ }
 #Focus for Overthrow our King
 focus = { 
 id = GRE_overthrowourking
@@ -75,6 +195,7 @@ ai_will_do = {
  } 
 completion_reward = { 
 add_stability = -0.1
+hidden_effect = {set_country_flag = internalbreakdown} 
  } 
 
  } 
@@ -92,6 +213,8 @@ ai_will_do = {
  } 
 completion_reward = { 
 add_stability = -0.15
+retire_country_leader = yes 
+ 
  } 
 
  } 
@@ -394,12 +517,12 @@ y = 4
 cost = 15
 prerequisite = { focus = GRE_anewconstantinople } 
 available = {
-			owns_state = 347}
+			owns_state = 339}
 available_if_capitulated = no 
 ai_will_do = { 
  factor = 0
  } 
- completion_reward = { 347 = {set_state_name = "smyrna"}} 
+ completion_reward = { 339 = {set_state_name = "smyrna"}} 
  }
 #Focus for Army Reform
 focus = { 
@@ -439,8 +562,8 @@ add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 focus = { 
 id = GRE_agreekarmy
 icon = GFX_goal_small_arms
-x = 4
-y = 9
+x = 9
+y = 7
 cost = 10
 available_if_capitulated = yes 
 prerequisite = { focus = GRE_wineexportofeurope } 
