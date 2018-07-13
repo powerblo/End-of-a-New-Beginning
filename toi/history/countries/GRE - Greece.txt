@@ -5,7 +5,7 @@
 
   set_convoys = 10
   
-  set_research_slots = 3
+  set_research_slots = 2
 
   add_ideas = { 
     #POLITICS 
@@ -14,8 +14,8 @@
     victorian_era
 	law_victorian_army
     agrarian
-    no_heir
-    absolute_monarchy
+    weak_heir
+    parliamentary_monarchy
 
     civilian_economy
     limited_exports
@@ -26,16 +26,15 @@
     border_control
 	volunteer_only
     limited_equality
-    absolutism
+    parliamentary_suffrage
 
-    no_constitution
+    limited_constitution
     no_elections
 
     privileged_education
     state_religion
 	religion_orthodox
         #NATIONAL SPIRITS
-	
   }
 
   set_politics = {
@@ -47,16 +46,16 @@
         popularity = 0
       }
       collectivist_socialism = {
-        popularity = 0
+        popularity = 30
       }
       social_egalitarianism = {
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 50
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 10
       }
       radical_democracy = {
         popularity = 0
@@ -65,14 +64,14 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 10
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = centrism
   }
 
   set_technology = {
@@ -93,10 +92,17 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "Otto I"
+    name = "Dimitrios Voulgaris"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_GRE_Otto_I.dds"
-    expire = 1862.8.3
+    picture = "Portrait_GRE_Dimitrios_Voulgaris.dds"
+    expire = 1877.10.01
+    ideology = market_liberal
+}
+create_country_leader = {
+    name = "Athanasios Miaoulis"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_GRE_Athanasios_miaoulis.dds"
+    expire = 1867.7.6
     ideology = despotism
 }
 
@@ -113,16 +119,7 @@ create_field_marshal = {
 	logistics_skill = 1
 }
 
-create_corps_commander = {
-  name = "Otto I"
-  picture = "Portrait_GRE_Otto_I.dds"
-  traits = { }
-  skill = 2
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+
 
 create_corps_commander = {
   name = "Kitsos Tzavelas"

@@ -4,12 +4,12 @@
   oob = "NOR_1857"
 
   set_convoys = 0
-  
+
   set_research_slots = 3
 
-  add_ideas = { 
-    #POLITICS 
-		  
+  add_ideas = {
+    #POLITICS
+
     hos_is_leader
     victorian_era
 	law_victorian_army
@@ -35,7 +35,7 @@
     state_religion
 	religion_protestant
         #NATIONAL SPIRITS
-	
+
   }
 
 
@@ -54,7 +54,7 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 100
       }
       traditional_conservatism = {
         popularity = 0
@@ -66,14 +66,14 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 0
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = centrism
   }
 
   set_technology = {
@@ -93,11 +93,11 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "Leader"
+    name = "Frederik Gottschalk Haxthausen Due"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
-    ideology = despotism
+    picture = "Portrait_NOR_Frederik_Gottschalk_Haxthausen_Due"
+    expire = 1872.09.10
+    ideology = market_liberal
 }
 
 }

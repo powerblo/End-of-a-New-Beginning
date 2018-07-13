@@ -872,6 +872,34 @@ music = {
 }
 
 music = {
+	song = "CSA_dixie_song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			
+			NOT = { TAG = CSA }
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 2
+
+			TAG = CSA
+		}
+		modifier = {
+			factor = 3
+			
+			TAG = CSA
+			has_war_with = USAR
+		}
+	}
+}
+
+music = {
 	song = "eoanb_peace_6"
 	
 	chance = {

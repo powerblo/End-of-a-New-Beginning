@@ -1,0 +1,57 @@
+ideas = {
+	country = {
+	Gre_Agriculture = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = placeholder
+			
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+	GRE_increase_agri_output = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			modifier = { industrial_capacity_factory = 0.1 }
+			}
+	
+	GRE_Populationboom = {
+	
+	allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			modifier = { monthly_population = 0.5 }
+			}
+	GRE_Agri_revolution = {
+	allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			modifier = { production_speed_buildings_factor = 0.1
+						 industrial_capacity_factory = 0.25
+			}
+			}
+	GRE_Greek_Army ={
+	allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			modifier = { army_org_Factor = 0.1
+			training_time_factor = -0.1
+			conscription = 0.1
+			}
+			}
+	GRE_grandarmy = {
+	allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			modifier = { conscription = 0.05 }
+			
+			}
+	
+	
+	}
