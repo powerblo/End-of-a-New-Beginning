@@ -10,6 +10,8 @@ focus_tree = {
 #Focus for Megali Idea
 focus = { 
 id = GRE_megaliidea
+text = GRE_megaliidea
+
 x = 2
 y = 2
 cost = 10
@@ -37,6 +39,8 @@ ai_will_do = {
 #Focus for Search for a new King
 focus = { 
 id = GRE_searchforking
+text = GRE_searchforking
+
 icon = GFX_goal_intelligence_exchange
 x = 4
 y = 5
@@ -59,6 +63,8 @@ completion_reward = {swap_ideas = { remove_idea = GRE_Regency add_idea = GRE_Geo
 #Focus for King of Hellenes
 focus = { 
 id = GRE_kingofhellenes
+text = GRE_kingofhellenes
+
 x = 4
 y = 6
 cost = 10
@@ -75,6 +81,8 @@ completion_reward = {
 #Focus for King toured around the Peloponnese
 focus = { 
 id = GRE_tourpeloponnese
+text = GRE_tourpeloponnese
+
 x = 4
 y = 7
 cost = 5
@@ -86,11 +94,14 @@ ai_will_do = {
 completion_reward = {	
  add_stability = 0.1
  add_political_power = -100
+ country_event = { id = Greecefocus.3 }
  }
  }
 #Focus for Rebuild 40 year old Building
 focus = { 
 id = GRE_updating40yearbuilding
+text = GRE_updating40yearbuilding
+
 x = 2
 y = 6
 cost = 10
@@ -117,6 +128,8 @@ completion_reward = {
  #Focus for Fire unpopular Advisors
 focus = { 
 id = GRE_fireunpopularadvisors
+text = GRE_fireunpopularadvisors
+
 x = 2
 y = 7
 cost = 10
@@ -134,6 +147,8 @@ completion_reward = {
  #Focus for King adopts new constitution
 focus = { 
 id = GRE_adoptnewconstitution
+text = GRE_adoptnewconstitution
+
 x = 4
 y = 8
 cost = 10
@@ -153,6 +168,8 @@ completion_reward = {
  #Focus for King divides Government
 focus = { 
 id = GRE_dividegovernment
+text = GRE_dividegovernment
+
 x = 4
 y = 9
 cost = 10
@@ -170,6 +187,8 @@ completion_reward = {
 #Focus for Overthrow our King
 focus = { 
 id = GRE_overthrowourking
+text = GRE_overthrowourking
+
 icon = GFX_focus_rom_handle_king
 x = 4
 y = 4
@@ -184,6 +203,8 @@ ai_will_do = {
 #Focus for Internal Breakdown
 focus = { 
 id = GRE_internalbreakdown
+text = GRE_internalbreakdown
+
 icon = GFX_goal_tfv_can_forced_quebec_conscription
 x = 4
 y = 3
@@ -203,6 +224,8 @@ hidden_effect = {set_country_flag = internalbreakdown}
 #Focus for Dimitrios Voulgaris resigns
 focus = { 
 id = GRE_dimitriosvoulgarisresigns
+text = GRE_dimitriosvoulgarisresigns
+
 icon = GFX_goal_unknown
 x = 6
 y = 0
@@ -222,6 +245,8 @@ retire_country_leader = yes
 #Focus for Puppet Government
 focus = { 
 id = GRE_puppetgovernment
+text = GRE_puppetgovernment
+
 icon = GFX_goal_tripartite_pact
 x = 3
 y = 1
@@ -241,6 +266,8 @@ set_politics = { ruling_party = autocracy }
 #Focus for Securing Power
 focus = { 
 id = GRE_securingpower
+text = GRE_securingpower
+
 icon = GFX_goal_tfv_sever_ties_with_uk
 x = 4
 y = 2
@@ -265,6 +292,8 @@ add_popularity = { ideology = traditional_conservatism popularity = 0.3 }
 #Focus for Protector of all Greeks.
 focus = { 
 id = GRE_protectorofallgreeks
+text = GRE_protectorofallgreeks
+
 icon = GFX_goal_occypy_states_ongoing_war
 x = 0
 y = 4
@@ -287,6 +316,8 @@ completion_reward = {add_state_core = 339
 #Focus for Fast Replacement
 focus = { 
 id = GRE_fastreplacement
+text = GRE_fastreplacement
+
 icon = GFX_goal_tfv_tech_sharing
 x = 12
 y = 3
@@ -305,6 +336,8 @@ add_research_slot = 1
 #Focus for Cotton Farms
 focus = { 
 id = GRE_cottonfarms
+text = GRE_cottonfarms
+
 icon = GFX_goal_construct_civilian
 x = 10
 y = 4
@@ -323,6 +356,8 @@ ai_will_do = {
 #Focus for Heavy Industry
 focus = { 
 id = GRE_heavyindustry
+text = GRE_heavyindustry
+
 icon = GFX_goal_continuous_naval_production
 x = 12
 y = 4
@@ -341,6 +376,8 @@ completion_reward = {
 #Focus for Agricultural Industry
 focus = { 
 id = GRE_agriculturalindustry
+text = GRE_agriculturalindustry
+
 icon = GFX_goal_construction2
 x = 8
 y = 2
@@ -357,6 +394,8 @@ ai_will_do = {
 #Focus for Economy
 focus = { 
 id = GRE_economy
+text = GRE_economy
+
 icon = GFX_goal_production2
 x = 9
 y = 1
@@ -372,6 +411,8 @@ ai_will_do = {
 #Focus for Increase Agricultural Output
 focus = { 
 id = GRE_increaseagriculturaloutput
+text = GRE_increaseagriculturaloutput
+
 icon = GFX_goal_continuous_non_factory_construct
 x = 8
 y = 3
@@ -387,6 +428,8 @@ ai_will_do = {
 #Focus for Arms Industry
 focus = { 
 id = GRE_armsindustry
+text = GRE_armsindustry
+
 icon = GFX_goal_construct_mil_factory
 x = 12
 y = 5
@@ -401,6 +444,8 @@ random_owned_controlled_state = { add_building_construction = { type = arms_fact
 #Focus for Modern State
 focus = { 
 id = GRE_modernstate
+text = GRE_modernstate
+
 icon = GFX_goal_construction
 x = 12
 y = 6
@@ -416,6 +461,8 @@ completion_reward = {swap_ideas = { remove_idea = industrializing add_idea = ind
 #Focus for Population Boom
 focus = { 
 id = GRE_populationboom
+text = GRE_populationboom
+
 icon = GFX_focus_military_academy
 x = 8
 y = 4
@@ -431,6 +478,8 @@ ai_will_do = {
 #Focus for Logging
 focus = { 
 id = GRE_logging
+text = GRE_logging
+
 icon = GFX_focus_steel
 x = 10
 y = 5
@@ -446,6 +495,8 @@ ai_will_do = {
 #Focus for Agricultural Revolution
 focus = { 
 id = GRE_agriculturalrevolution
+text = GRE_agriculturalrevolution
+
 icon = GFX_goal_continuous_naval_production
 x = 8
 y = 5
@@ -461,6 +512,8 @@ ai_will_do = {
 #Focus for Wine Export of Europe
 focus = { 
 id = GRE_wineexportofeurope
+text = GRE_wineexportofeurope
+
 icon = GFX_focus_yug_pan_slavic_congress
 x = 9
 y = 6
@@ -476,6 +529,8 @@ completion_reward = {random_owned_controlled_state = { add_building_construction
 #Focus for Industrialize
 focus = { 
 id = GRE_industrialize
+text = GRE_industrialize
+
 icon = GFX_goal_construct_civ_factory
 x = 12
 y = 2
@@ -484,7 +539,7 @@ available_if_capitulated = yes
 prerequisite = { focus = GRE_economy } 
 mutually_exclusive = { focus = GRE_agriculturalindustry } 
 ai_will_do = { 
- factor = 1
+ factor = 0
  } 
 completion_reward = {swap_ideas = { remove_idea = agrarian add_idea = industrializing }}
  } 
@@ -492,6 +547,8 @@ completion_reward = {swap_ideas = { remove_idea = agrarian add_idea = industrial
 #Focus for A New Constantinople
 focus = { 
 id = GRE_anewconstantinople
+text = GRE_anewconstantinople
+
 icon = GFX_goal_anschluss
 x = 2
 y = 3
@@ -511,6 +568,8 @@ ai_will_do = {
 #Focus for Renaming stuff
 focus = { 
 id = GRE_newnames
+text = GRE_newnames
+
 icon = GFX_goal_anschluss
 x = 2
 y = 4
@@ -527,6 +586,8 @@ ai_will_do = {
 #Focus for Army Reform
 focus = { 
 id = GRE_armyreform
+text = GRE_armyreform
+
 icon = GFX_goal_rhineland
 x = 16
 y = 1
@@ -541,6 +602,8 @@ completion_reward = {
 #Focus for Learning new Ways
 focus = { 
 id = GRE_learningnewways
+text = GRE_learningnewways
+
 icon = GFX_goal_intelligence_exchange
 x = 16
 y = 2
@@ -561,6 +624,8 @@ add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 #Focus for A Greek Army
 focus = { 
 id = GRE_agreekarmy
+text = GRE_agreekarmy
+
 icon = GFX_goal_small_arms
 x = 9
 y = 7
@@ -577,6 +642,8 @@ ai_will_do = {
 #Focus for Look to the British
 focus = { 
 id = GRE_looktothebritish
+text = GRE_looktothebritish
+
 icon = GFX_goal_navy_battleship
 x = 14
 y = 3
@@ -596,6 +663,8 @@ completion_reward = {add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_eq
 #Focus for Military-Industrial Complex
 focus = { 
 id = GRE_militaryindustrialcomplex
+text = GRE_militaryindustrialcomplex
+
 icon = GFX_goal_build_tank
 x = 14
 y = 5
@@ -616,6 +685,8 @@ completion_reward = {random_owned_controlled_state = { add_building_construction
 #Focus for Prussian Style Army
 focus = { 
 id = GRE_prussianstylearmy
+text = GRE_prussianstylearmy
+
 icon = GFX_focus_ger_revive_kaiserreich
 x = 14
 y = 6
@@ -630,6 +701,8 @@ completion_reward = {swap_ideas = { remove_idea = law_victorian_army add_idea = 
 #Focus for Look to the French?
 focus = { 
 id = GRE_looktothefrench
+text = GRE_looktothefrench
+
 x = 16
 y = 3
 cost = 10
@@ -646,6 +719,8 @@ ai_will_do = {
 #Focus for Look to the Russians?
 focus = { 
 id = GRE_looktotherussian
+text = GRE_looktotherussian
+
 x = 18
 y = 3
 cost = 10
