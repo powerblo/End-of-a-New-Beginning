@@ -83,15 +83,14 @@ country_event = {
 	id = Greecefocus.5
 	title = Greecefocus.5.t
 	desc = Greecefocus.5.d
-
-	trigger = {date > 1858.22.3}
-	mean_time_to_happen = {days = 1}
+    fire_only_once = yes
 	hidden = yes
-    is_triggered_only = yes
+    mean_time_to_happen = { days = 1 }
+	trigger = {tag= GRE}
     immediate = {
 		hidden_effect = {
 			GRE = {
-				news_event = { id = Greecefocus.4 days = 1 }
+				news_event = { id = Greecefocus.4 days = 325 }
 			}
 		}
 	}
