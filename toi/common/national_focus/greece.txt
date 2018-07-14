@@ -1,0 +1,739 @@
+focus_tree = { 
+		id = Greek_kingdom
+		country = { 
+			factor = 0 
+			modifier = { 
+					add = 10 
+					tag = GRE 
+					} 
+		} 
+#Focus for Megali Idea
+focus = { 
+id = GRE_megaliidea
+text = GRE_megaliidea
+
+x = 2
+y = 2
+cost = 10
+available_if_capitulated = yes
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+	add_state_core = 341
+	add_state_core = 957
+    add_state_claim = 340
+	add_state_claim = 347
+	add_state_core = 187
+    add_state_core = 183
+    add_state_claim = 342
+	add_state_claim = 356
+	add_state_claim = 355
+	add_state_claim = 963
+	add_state_claim = 964
+	add_state_claim = 1023
+ }
+ } 
+ 
+
+#Focus for Search for a new King
+focus = { 
+id = GRE_searchforking
+text = GRE_searchforking
+
+icon = GFX_goal_intelligence_exchange
+x = 4
+y = 5
+cost = 20
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_overthrowourking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {swap_ideas = { remove_idea = GRE_Regency add_idea = GRE_George_I }
+	annex_country = { target = ION transfer_troops = yes }
+    add_opinion_modifier = { target = ENG modifier = GRE_GEORGE_I }
+	add_opinion_modifier = { target = RUS modifier = GRE_GEORGE_I }
+	add_opinion_modifier = { target = FRA modifier = GRE_GEORGE_I }	
+    swap_ideas = { remove_idea = weak_heir add_idea = no_heir }
+	swap_ideas = { remove_idea = dethroned_heir add_idea = no_heir }
+ }
+ } 
+ 
+#Focus for King of Hellenes
+focus = { 
+id = GRE_kingofhellenes
+text = GRE_kingofhellenes
+
+x = 4
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.1 
+ add_popularity = {ideology = autocracy popularity = 0.05}
+ }
+ }
+#Focus for King toured around the Peloponnese
+focus = { 
+id = GRE_tourpeloponnese
+text = GRE_tourpeloponnese
+
+x = 4
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_kingofhellenes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.1
+ add_political_power = -100
+ country_event = { id = Greecefocus.3 }
+ }
+ }
+#Focus for Rebuild 40 year old Building
+focus = { 
+id = GRE_updating40yearbuilding
+text = GRE_updating40yearbuilding
+
+x = 2
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = 0.05
+ 47 = {
+    if = {
+        limit = { is_controlled_by = GRE }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+ }
+ }
+ 
+ #Focus for Fire unpopular Advisors
+focus = { 
+id = GRE_fireunpopularadvisors
+text = GRE_fireunpopularadvisors
+
+x = 2
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_updating40yearbuilding } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_popularity = {ideology = autocracy popularity = 0.05}
+ add_political_power = -50
+ }
+ }
+ 
+ #Focus for King adopts new constitution
+focus = { 
+id = GRE_adoptnewconstitution
+text = GRE_adoptnewconstitution
+
+x = 4
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_tourpeloponnese } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ swap_ideas = { remove_idea = limited_constitution add_idea = constitution_adopted }
+ swap_ideas = { remove_idea = parliamentary_suffrage add_idea = universal_male_suffrage }
+ 
+ }
+ }
+ 
+ 
+ #Focus for King divides Government
+focus = { 
+id = GRE_dividegovernment
+text = GRE_dividegovernment
+
+x = 4
+y = 9
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_adoptnewconstitution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ add_stability = -0.1
+ add_popularity = {ideology = autocracy popularity = 0.1}
+ add_political_power = 50
+ }
+ }
+#Focus for Overthrow our King
+focus = { 
+id = GRE_overthrowourking
+text = GRE_overthrowourking
+
+icon = GFX_focus_rom_handle_king
+x = 4
+y = 4
+cost = 10
+available = {always = no}		
+prerequisite = { focus = GRE_internalbreakdown } 
+ai_will_do = { 
+ factor = 1
+ } 
+ } 
+
+#Focus for Internal Breakdown
+focus = { 
+id = GRE_internalbreakdown
+text = GRE_internalbreakdown
+
+icon = GFX_goal_tfv_can_forced_quebec_conscription
+x = 4
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_securingpower } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability = -0.1
+hidden_effect = {set_country_flag = internalbreakdown} 
+ } 
+
+ } 
+
+#Focus for Dimitrios Voulgaris resigns
+focus = { 
+id = GRE_dimitriosvoulgarisresigns
+text = GRE_dimitriosvoulgarisresigns
+
+icon = GFX_goal_unknown
+x = 6
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability = -0.15
+retire_country_leader = yes 
+ 
+ } 
+
+ } 
+
+#Focus for Puppet Government
+focus = { 
+id = GRE_puppetgovernment
+text = GRE_puppetgovernment
+
+icon = GFX_goal_tripartite_pact
+x = 3
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_dimitriosvoulgarisresigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 150
+set_politics = { ruling_party = autocracy } 
+ } 
+	
+ } 
+
+#Focus for Securing Power
+focus = { 
+id = GRE_securingpower
+text = GRE_securingpower
+
+icon = GFX_goal_tfv_sever_ties_with_uk
+x = 4
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_puppetgovernment }
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity = { ideology = autocracy popularity = 0.1 }
+add_popularity = { ideology = centrism popularity = -0.2 } 
+add_popularity = { ideology = traditional_conservatism popularity = 0.3 } 
+ } 
+
+ } 
+
+ 
+
+ 
+
+#Focus for Protector of all Greeks.
+focus = { 
+id = GRE_protectorofallgreeks
+text = GRE_protectorofallgreeks
+
+icon = GFX_goal_occypy_states_ongoing_war
+x = 0
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_megaliidea} 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {add_state_core = 339
+					 add_state_core = 354
+				     add_stability = 0.1
+					 add_war_support = 0.1
+					 
+					 }
+ } 
+
+
+
+#Focus for Fast Replacement
+focus = { 
+id = GRE_fastreplacement
+text = GRE_fastreplacement
+
+icon = GFX_goal_tfv_tech_sharing
+x = 12
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_industrialize } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_research_slot = 1
+ } 
+
+ } 
+
+#Focus for Cotton Farms
+focus = { 
+id = GRE_cottonfarms
+text = GRE_cottonfarms
+
+icon = GFX_goal_construct_civilian
+x = 10
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_increaseagriculturaloutput } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+ 
+ random_owned_controlled_state = { add_building_construction = { type = cotton_farm level = 1 instant_build = yes } }
+ }
+ } 
+
+#Focus for Heavy Industry
+focus = { 
+id = GRE_heavyindustry
+text = GRE_heavyindustry
+
+icon = GFX_goal_continuous_naval_production
+x = 12
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_fastreplacement } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 
+ random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+ }
+ } 
+
+#Focus for Agricultural Industry
+focus = { 
+id = GRE_agriculturalindustry
+text = GRE_agriculturalindustry
+
+icon = GFX_goal_construction2
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_economy } 
+mutually_exclusive = { focus = GRE_industrialize }  
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = { add_ideas = Gre_Agriculture }
+ } 
+
+#Focus for Economy
+focus = { 
+id = GRE_economy
+text = GRE_economy
+
+icon = GFX_goal_production2
+x = 9
+y = 1
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_dimitriosvoulgarisresigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Increase Agricultural Output
+focus = { 
+id = GRE_increaseagriculturaloutput
+text = GRE_increaseagriculturaloutput
+
+icon = GFX_goal_continuous_non_factory_construct
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_agriculturalindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {add_ideas = GRE_increase_agri_output}
+ } 
+
+#Focus for Arms Industry
+focus = { 
+id = GRE_armsindustry
+text = GRE_armsindustry
+
+icon = GFX_goal_construct_mil_factory
+x = 12
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_heavyindustry } 
+completion_reward = {
+random_owned_controlled_state = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+}
+ } 
+
+#Focus for Modern State
+focus = { 
+id = GRE_modernstate
+text = GRE_modernstate
+
+icon = GFX_goal_construction
+x = 12
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_armsindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {swap_ideas = { remove_idea = industrializing add_idea = industrialized }}
+ } 
+
+#Focus for Population Boom
+focus = { 
+id = GRE_populationboom
+text = GRE_populationboom
+
+icon = GFX_focus_military_academy
+x = 8
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_increaseagriculturaloutput } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = { add_ideas = GRE_Populationboom }
+ } 
+
+#Focus for Logging
+focus = { 
+id = GRE_logging
+text = GRE_logging
+
+icon = GFX_focus_steel
+x = 10
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_cottonfarms } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {random_owned_controlled_state = { add_building_construction = { type = logging_camp level = 1 instant_build = yes } }}
+ } 
+
+#Focus for Agricultural Revolution
+focus = { 
+id = GRE_agriculturalrevolution
+text = GRE_agriculturalrevolution
+
+icon = GFX_goal_continuous_naval_production
+x = 8
+y = 5
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_populationboom } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {add_ideas = GRE_Agri_revolution}
+ } 
+
+#Focus for Wine Export of Europe
+focus = { 
+id = GRE_wineexportofeurope
+text = GRE_wineexportofeurope
+
+icon = GFX_focus_yug_pan_slavic_congress
+x = 9
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_logging focus = GRE_agriculturalrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }}
+ } 
+
+#Focus for Industrialize
+focus = { 
+id = GRE_industrialize
+text = GRE_industrialize
+
+icon = GFX_goal_construct_civ_factory
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_economy } 
+mutually_exclusive = { focus = GRE_agriculturalindustry } 
+ai_will_do = { 
+ factor = 0
+ } 
+completion_reward = {swap_ideas = { remove_idea = agrarian add_idea = industrializing }}
+ } 
+
+#Focus for A New Constantinople
+focus = { 
+id = GRE_anewconstantinople
+text = GRE_anewconstantinople
+
+icon = GFX_goal_anschluss
+x = 2
+y = 3
+cost = 10
+prerequisite = { focus = GRE_megaliidea } 
+available = {
+			owns_state = 957
+			}
+available_if_capitulated = no 
+ai_will_do = { 
+ factor = 0
+ } 
+ completion_reward = {set_province_name = { id = 9833 name = "Constantinople"}} 
+ } 
+
+ 
+#Focus for Renaming stuff
+focus = { 
+id = GRE_newnames
+text = GRE_newnames
+
+icon = GFX_goal_anschluss
+x = 2
+y = 4
+cost = 15
+prerequisite = { focus = GRE_anewconstantinople } 
+available = {
+			owns_state = 339}
+available_if_capitulated = no 
+ai_will_do = { 
+ factor = 0
+ } 
+ completion_reward = { 339 = {set_state_name = "smyrna"}} 
+ }
+#Focus for Army Reform
+focus = { 
+id = GRE_armyreform
+text = GRE_armyreform
+
+icon = GFX_goal_rhineland
+x = 16
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }}} 
+
+#Focus for Learning new Ways
+focus = { 
+id = GRE_learningnewways
+text = GRE_learningnewways
+
+icon = GFX_goal_intelligence_exchange
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_armyreform } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_research_slot = 1
+add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+
+ } 
+
+ } 
+
+#Focus for A Greek Army
+focus = { 
+id = GRE_agreekarmy
+text = GRE_agreekarmy
+
+icon = GFX_goal_small_arms
+x = 9
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_wineexportofeurope } 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = { add_ideas = GRE_Greek_Army}
+ } 
+
+#Focus for Look to the British
+focus = { 
+id = GRE_looktothebritish
+text = GRE_looktothebritish
+
+icon = GFX_goal_navy_battleship
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = {focus = GRE_looktothefrench}
+mutually_exclusive = {focus = GRE_looktotherussian}
+prerequisite = { focus = GRE_learningnewways } 
+ai_will_do = { 
+ factor = 0
+ } 
+completion_reward = {add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }}
+ } 
+
+ 
+
+#Focus for Military-Industrial Complex
+focus = { 
+id = GRE_militaryindustrialcomplex
+text = GRE_militaryindustrialcomplex
+
+icon = GFX_goal_build_tank
+x = 14
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_looktothebritish } 
+prerequisite = { focus = GRE_armsindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+					 random_owned_controlled_state = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+}
+ 
+ } 
+
+
+#Focus for Prussian Style Army
+focus = { 
+id = GRE_prussianstylearmy
+text = GRE_prussianstylearmy
+
+icon = GFX_focus_ger_revive_kaiserreich
+x = 14
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_militaryindustrialcomplex } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {swap_ideas = { remove_idea = law_victorian_army add_idea = law_victorian_army_prussia }}
+ } 
+#Focus for Look to the French?
+focus = { 
+id = GRE_looktothefrench
+text = GRE_looktothefrench
+
+x = 16
+y = 3
+cost = 10
+mutually_exclusive = {focus = GRE_looktothebritish}
+mutually_exclusive = {focus = GRE_looktotherussian}
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_learningnewways } 
+ai_will_do = { 
+ factor = 0
+ } 
+			
+ }
+ 
+#Focus for Look to the Russians?
+focus = { 
+id = GRE_looktotherussian
+text = GRE_looktotherussian
+
+x = 18
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_learningnewways } 
+mutually_exclusive = {focus = GRE_looktothebritish}
+mutually_exclusive = {focus = GRE_looktothefrench}
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {add_ideas = GRE_grandarmy}
+ }
+ 
+
+
+ }

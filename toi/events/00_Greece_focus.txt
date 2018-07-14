@@ -1,0 +1,97 @@
+﻿add_namespace = Greecefocus
+
+country_event = {
+	id = Greecefocus.1
+	title = Greecefocus.1.t
+	desc = Greecefocus.1.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1862.1.1
+	    has_country_flag = internalbreakdown
+	}
+	
+	option = {
+		name = Greecefocus.1.a
+		ai_chance = { factor = 100 }
+		swap_ideas = { remove_idea = GRE_Otto_I  add_idea = GRE_Regency }
+		
+		hidden_effect = {
+			complete_national_focus = GRE_overthrowourking
+		}
+	}
+}
+
+country_event = {
+	id = Greecefocus.2
+	title = Greecefocus.2.t
+	desc = Greecefocus.2.d
+	picture = placeholder
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1867.1.1
+	}
+	
+	option = {
+		name = Greecefocus.2.a
+		ai_chance = { factor = 100 }
+        add_opinion_modifier = { target = RUS modifier = GRE_GEORGE_I_Marriage }
+	}
+}
+country_event = {
+	id = Greecefocus.3
+	title = Greecefocus.3.t
+	desc = Greecefocus.3.d
+	picture = placeholder
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Greecefocus.3.a
+		ai_chance = { factor = 100 }
+        add_political_power = 35
+		add_stability = 0.01
+	}
+}
+
+news_event = {
+	id = Greecefocus.4
+	title = Greecefocus.4.t
+	desc = Greecefocus.4.d
+
+	is_triggered_only = yes
+	immediate= {hidden_effect = {
+			GRE = {
+				news_event = { id = Greecefocus.4 days = 360 }
+			}
+		}
+	}
+	option = {
+		name = Greecefocus.4.a
+		add_political_power = 25
+		
+	}
+}
+country_event = {
+	id = Greecefocus.5
+	title = Greecefocus.5.t
+	desc = Greecefocus.5.d
+    fire_only_once = yes
+	hidden = yes
+    mean_time_to_happen = { days = 1 }
+	trigger = {tag= GRE}
+    immediate = {
+		hidden_effect = {
+			GRE = {
+				news_event = { id = Greecefocus.4 days = 325 }
+			}
+		}
+	}
+}
