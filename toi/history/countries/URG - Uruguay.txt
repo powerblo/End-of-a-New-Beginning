@@ -33,7 +33,7 @@ create_country_leader = {
     stagnation_growth
     border_control
     limited_conscription
-    slavery
+    limited_equality
     universal_male_suffrage
 
     constitution_adopted
@@ -72,13 +72,13 @@ create_country_leader = {
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 15
+        popularity = 30
       }
       centrism = {
         popularity = 45
       }
       traditional_conservatism = {
-        popularity = 35
+        popularity = 20
       }
       radical_democracy = {
         popularity = 5
@@ -112,8 +112,19 @@ create_country_leader = {
     expire = 1900.1.1
     ideology = conserv_liberal
     traits = { }
-  }
+
 }
+
+  create_country_leader = {
+    name = "Venancio Flores"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_URG_Venancio_Flores.dds"
+    expire = 1900.1.1
+    ideology = liberal_social
+    traits = { }
+  }
+
+
 
 create_corps_commander = {
   name = "Enrique Castro"
@@ -146,4 +157,5 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
+}
 }
