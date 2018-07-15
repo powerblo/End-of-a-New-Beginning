@@ -78,6 +78,27 @@ completion_reward = {
  add_popularity = {ideology = autocracy popularity = 0.05}
  }
  }
+
+ #Focus for Do Something about the Literacy rate
+focus = { 
+id = GRE_dosomethingabouttheliteracy
+text = GRE_dosomethingabouttheliteracy
+
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_searchforking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {	
+ swap_ideas = { remove_idea = Privileged_Education add_idea = Open_schools }
+ }
+ }
+ 
+ 
+ 
 #Focus for King toured around the Peloponnese
 focus = { 
 id = GRE_tourpeloponnese
@@ -734,6 +755,20 @@ ai_will_do = {
 completion_reward = {add_ideas = GRE_grandarmy}
  }
  
+#Focus for Restore Trust in the Army?
+focus = { 
+id = GRE_Restoretrustinthearmy
+text = GRE_Restoretrustinthearmy
 
+x = 16
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = GRE_looktothebritish focus = GRE_looktothefrench focus = GRE_looktotherussian } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = { remove_ideas = GRE_Crimeanwar }			
+ }
 
  }
