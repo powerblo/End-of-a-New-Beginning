@@ -11,24 +11,26 @@
     #POLITICS 
 		  
     hos_is_leader
-    pre_industrial_era
+    Victorian_era
+	law_victorian_army
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
     two_percent
     normal_taxes
 
-    stagnation_growth
+    encouraged_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+	property_owners_suffrage
+    segregation    
 
-    no_constitution
-    no_elections
+
+    constitution_adopted
+    limited_elections
 
     privileged_education
     state_religion
@@ -52,11 +54,9 @@
         popularity = 0
       }
       centrism = {
-        popularity = 20
-      }
+        popularity = 60      }
       traditional_conservatism = {
-        popularity = 80
-      }
+        popularity = 40      }
       radical_democracy = {
         popularity = 0
       }
@@ -71,8 +71,7 @@
       }
     }
 
-	  ruling_party = traditional_conservatism
-  }
+	  ruling_party = centrism  }
 
   set_technology = {
 	infantry_weapons = 1
@@ -85,8 +84,8 @@
   create_country_leader = {
     name = "Stephen Allen Benson"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Stephen_Allen_Benson.dds"
-    expire = 1900.1.1
-    ideology = conserv
+    picture = "Portrait_LIB_Stephen_Allen_Benson.dds"
+    expire = 1865.1.1
+    ideology = market_liberal
 }
 }
