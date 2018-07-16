@@ -1,21 +1,20 @@
 state={
 	id=924
-	name="STATE_924"
-
+	name="STATE_924" 
+	manpower = 52343
+	
 	state_category = rural
+
 	history={
-		buildings = {
-			8217 = {
-				naval_base = 2
-			}
-		}
 		owner = BOL
+		buildings = {
+			infrastructure = 1
+		    8217 = {naval_base = 1}
+		}
 		add_core_of = BOL
 	}
 
 	provinces={
-		8217 8231 
+		8231 13627 8217 13631 13625 13628 13629 5146 13630 13632 12994 13634 13633 5171 13635
 	}
-	manpower=52343
-	buildings_max_level_factor=1.000
 }
