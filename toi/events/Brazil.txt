@@ -461,3 +461,57 @@ remove_ideas = BRA_vinsconde_de_sinimbu
    }
  }
  
+    country_event = { 
+  id = brazil.24
+  title = brazil.24.t
+  desc = brazil.24.d
+
+  is_triggered_only = yes
+ 
+ 
+  option = { #  Empire
+    name = brazil.24.a
+	add_political_power = 35
+	 add_popularity = {
+    ideology = social_egalitarianism
+    popularity = 0.05
+}
+add_war_support = 0.05
+ }
+
+ }
+ 
+  country_event = { 
+  id = brazil.25
+  title = brazil.25.t
+  desc = brazil.25.d
+  picture = GFX_report_event_amazonas
+
+  is_triggered_only = yes
+ 
+ 
+  option = { #  Empire
+    name = brazil.25.a
+	trigger = { original_tag = BRA }
+	add_political_power = 35
+	declare_war_on = {
+    target = URG
+    type = topple_government
+}
+}
+  option = { #  Empire
+    name = brazil.25.b
+	trigger = { original_tag = URG }
+	add_political_power = -25
+	add_stability = -0.5
+}
+
+  option = { #  Empire
+    name = brazil.25.c
+	trigger = { NOT = { original_tag = URG } NOT = { original_tag = BRA } }
+}
+ }
+
+ 
+ 
+ 
