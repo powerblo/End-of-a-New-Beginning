@@ -864,10 +864,24 @@ country_event = {
 		option = {
 			name = usa.25.b
 			add_political_power = -10
+			if = {
+				limit = {
+					NOT = { has_global_flag = Davis_Flees }
+				}
+				hidden_effect = { USA = { country_event = { id = usa.47 days = 20 } } }
+			}
+			set_country_flag = USA_Confederate_Investigation
 		}
 		option = {
 			name = usa.25.c
 			add_political_power = -25
+			if = {
+				limit = {
+					NOT = { has_global_flag = Davis_Flees }
+				}
+				hidden_effect = { USA = { country_event = { id = usa.47 days = 10 } } }
+			}
+			set_country_flag = USA_Confederate_Investigation
 		}
 }
 #Pig War haha take that hogthra
@@ -912,24 +926,7 @@ country_event = {
 		desc = usa.27.d
 		picture = GFX_report_event_generic_sign_treaty3
 
-		trigger = {
-			OR = {
-				TAG = USA
-				TAG = ENG
-			}
-			USA = { owns_state = 386 }
-			OR = {
-				VAN = { owns_state = 740 }
-				BCO = { owns_state = 740 }
-				CAN = { owns_state = 740 }
-			}
-			NOT = {
-				USA = { has_war_with = ENG }
-			}
-			date > 1871.10.20
-		}
-
-		fire_only_once = yes
+		is_triggered_only = yes
 
 		option = {
 			trigger = {
@@ -1462,15 +1459,7 @@ country_event = {
 		desc = usa.40.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		fire_only_once = yes
-
-		trigger = {
-			date > 1867.3.28
-			tag = USA
-			463 = { is_owned_by = RUS }
-		}
-
-		mean_time_to_happen = { days = 2 }
+		is_triggered_only = yes
 		
 		option = {
 			name = usa.40.a
@@ -1482,17 +1471,6 @@ country_event = {
                 }
             }
 			RUS = { country_event = { id = usa.41 hours = 1 } }
-		}
-		option = {
-			name = usa.40.b
-			add_political_power = -25
-			ai_chance = {
-					factor = 10
-					modifier = {
-                    	factor = 0
-                	is_historical_focus_on = yes
-                }
-            }
 		}
 }
 #Alaska Russia
@@ -1613,24 +1591,31 @@ country_event = {
 				has_country_flag = USASoaring_Eagle
 			}
 			name = usa.44.a
+			set_country_flag = USAReconstruction_Gentlest
 		}
 		option = {
 			trigger = {
 				has_country_flag = USASoaring_Eagle
 			}
 			name = usa.44.b
+			set_country_flag = USAReconstruction_Gentle
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
 		}
 		option = {
 			trigger = {
 				has_country_flag = USASoaring_Eagle
 			}
 			name = usa.44.c
+			set_country_flag = USAReconstruction_Harsh
+			add_popularity = { ideology = social_egalitarianism popularity = 0.025 }
 		}
 		option = {
 			trigger = {
 				has_country_flag = USASoaring_Eagle
 			}
 			name = usa.44.e
+			set_country_flag = USAReconstruction_Harshest
+			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
 		}
 }
 #Lincoln Assassination
@@ -1642,11 +1627,17 @@ country_event = {
 		
 		trigger = {
 			TAG = USA
-				AND = {
-					has_country_flag = USASoaring_Eagle
-					has_country_flag = USA_Lincoln1864
+			AND = {
+				has_country_flag = USASoaring_Eagle
+				has_country_leader = {
+					name = "Abraham Lincoln"
+					ruling_only = yes
 				}
-			date > 1865.4.14
+			}
+		}
+
+		mean_time_to_happen = {
+			days = 4
 		}
 
 		fire_only_once = yes
@@ -1664,6 +1655,7 @@ country_event = {
     				ideology = federal
   				}
 			}
+			add_stability = -0.2
 			set_global_flag = Lincoln_Assassinated
 			set_country_flag = Lincoln_Assassinated
 		}
@@ -1675,6 +1667,760 @@ country_event = {
 			set_country_flag = Lincoln_Survived
 		}
 }
+#Lincoln Assassination Investigations
+country_event = {
+		id = usa.46
+		title = usa.46.t
+		desc = usa.46.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = Lincoln_Assassinated
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 3
+    	}
+		
+		option = {
+			name = usa.46.a
+			add_political_power = -50
+			add_stability = 0.05
+		}
+		option = {
+			name = usa.46.b
+			add_political_power = -5
+		}
+}
+#Jefferson Davis captured
+country_event = {
+		id = usa.47
+		title = usa.47.t
+		desc = usa.47.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.47.a
+			add_political_power = 25
+			set_country_flag = Davis_Captured
+		}
+}
+#Jefferson Davis flees the Union
+country_event = {
+		id = usa.48
+		title = usa.48.t
+		desc = usa.48.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			NOT = { has_country_flag = USA_Confederate_Investigation }
+			NOT = { has_country_flag = Davis_Captured }
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 140
+    	}
+		
+		option = {
+			name = usa.48.a
+			add_political_power = -50
+			set_global_flag = Davis_Flees
+		}
+}
+#Davis flees to Brazil
+country_event = {
+		id = usa.49
+		title = usa.49.t
+		desc = usa.49.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = BRA
+			has_global_flag = Davis_Flees
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 7
+    	}
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_Brazil
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			FRA = { country_event = { id = usa.50 days = 10 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = BRA_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis flees to France
+country_event = {
+		id = usa.50
+		title = usa.50.t
+		desc = usa.50.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_France
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			ENG = { country_event = { id = usa.51 days = 3 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = FRA_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis flees to UK
+country_event = {
+		id = usa.51
+		title = usa.51.t
+		desc = usa.51.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_UK
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			USA = { country_event = { id = usa.52 days = 4 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = ENG_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis found and captured after escape
+country_event = {
+		id = usa.52
+		title = usa.52.t
+		desc = usa.52.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.52.a
+			clr_global_flag = Davis_Flees
+			add_political_power = 50
+			USA = { country_event = { id = usa.55 days = 30 } }
+		}
+}
+#Davis returned
+country_event = {
+		id = usa.53
+		title = usa.53.t
+		desc = {
+			text = usa.53.d_brazil
+			trigger = { has_country_flag = BRA_Davis_Returned }
+		}
+		desc = {
+			text = usa.53.d_france
+			trigger = { has_country_flag = FRA_Davis_Returned }
+		}
+		desc = {
+			text = usa.53.d_uk
+			trigger = { has_country_flag = ENG_Davis_Returned }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.53.a
+			add_political_power = 10
+			USA = { country_event = { id = usa.55 days = 30 } }
+		}
+}
+#Davis given sancturary
+country_event = {
+		id = usa.54
+		title = usa.54.t
+		desc = {
+			text = usa.54.d_brazil
+			trigger = { has_global_flag = Davis_Flees_Brazil }
+		}
+		desc = {
+			text = usa.54.d_france
+			trigger = { has_global_flag = Davis_Flees_France }
+		}
+		desc = {
+			text = usa.54.d_uk
+			trigger = { has_global_flag = Davis_Flees_UK }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.54.a
+			clr_global_flag = Davis_Flees
+			add_political_power = -50
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+}
+#What to do with Davis
+country_event = {
+		id = usa.55
+		title = usa.55.t
+		desc = usa.55.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			trigger = {
+				NOT = { has_country_flag = USAReconstruction_Harsh }
+				NOT = { has_country_flag = USAReconstruction_Harshest }
+			}
+			name = usa.55.a
+			add_political_power = 25
+			add_popularity = { ideology = social_egalitarianism popularity = -0.01 }
+		}
+		option = {
+			trigger = {
+				NOT = { has_country_flag = USAReconstruction_Gentle }
+				NOT = { has_country_flag = USAReconstruction_Gentlest }
+			}
+			name = usa.55.b
+			add_political_power = -25
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+		option = {
+			trigger = {
+				NOT = { has_country_flag = USAReconstruction_Harshest }
+				NOT = { has_country_flag = USAReconstruction_Gentlest }
+			}
+			name = usa.55.c
+		}
+}
+#Convince Lincoln to Egalitarianism
+country_event = {
+		id = usa.56
+		title = usa.56.t
+		desc = usa.56.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_country_flag = Lincoln_Survived
+		}
+
+		mean_time_to_happen = {
+			days = 45
+		}
+		
+		option = {
+			name = usa.56.a
+			add_political_power = 25
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+		option = {
+			trigger = {
+				NOT = { has_country_flag = USAReconstruction_Gentlest }
+			}
+			name = usa.56.b
+			add_political_power = -100
+			add_stability = -0.1
+			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
+			create_country_leader = {
+    				name = "Abraham Lincoln"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Abraham_Lincoln.dds"
+    				expire = "1947.1.1"
+    				ideology = liberal_social
+  				}
+  			set_politics = { ruling_party = social_egalitarianism }
+  			set_country_flag = USA_Radical_Lincoln
+		}
+}
+#Full Equality Reconstruction
+country_event = {
+		id = usa.57
+		title = usa.57.t
+		desc = usa.57.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			NOT = { has_country_flag = USA_Reconstruction_Ended }
+			has_country_flag = USASoaring_Eagle
+			OR = {
+				AND = {
+					has_government = social_egalitarianism
+					social_egalitarianism > 0.5
+				}
+				social_egalitarianism > 0.7
+			}
+			NOT = { has_idea = full_equality }
+		}
+
+		mean_time_to_happen = {
+			days = 15
+		}
+		
+		option = {
+			name = usa.57.a
+			add_political_power = -50
+			add_popularity = { ideology = social_egalitarianism popularity = -0.1 }
+		}
+		option = {
+			name = usa.57.b
+			add_political_power = -100
+			add_stability = -0.2
+			add_popularity = { ideology = social_egalitarianism popularity = -0.1 }
+			if = {
+				limit = {
+					has_idea = usa_slavery_law
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = usa_slavery_law
+				}
+			}
+			if = {
+				limit = {
+					has_idea = tribal_slavery
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = tribal_slavery
+				}
+			}
+			if = {
+				limit = {
+					has_idea = slavery
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = slavery
+				}
+			}
+			if = {
+				limit = {
+					has_idea = racial_laws
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = racial_laws
+				}
+			}
+			if = {
+				limit = {
+					has_idea = segregation
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = segregation
+				}
+			}
+			if = {
+				limit = {
+					has_idea = limited_equality
+				}
+				swap_ideas = {
+					add_idea = full_equality
+					remove_idea = limited_equality
+				}
+			}
+		}
+}
+#Liberia Emigration
+country_event = {
+		id = usa.58
+		title = usa.58.t
+		desc = usa.58.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			NOT = { has_country_flag = USA_Reconstruction_Ended }
+			has_country_flag = USASoaring_Eagle
+			NOT = { has_idea = full_equality }
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 75
+		}
+		
+		option = {
+			name = usa.58.a
+			add_political_power = -10
+			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
+			set_global_flag = USA_Liberia_No_Intervention
+			add_timed_idea = { idea = USA_liberia_emigration_1 days = 1000 }
+			366 = {
+				add_manpower = -1000
+			}
+			365 = {
+				add_manpower = -1000
+			}
+			364 = {
+				add_manpower = -1000
+			}
+			363 = {
+				add_manpower = -1000
+			}
+			364 = {
+				add_manpower = -2000
+			}
+			367 = {
+				add_manpower = -1000
+			}
+			370 = {
+				add_manpower = -1000
+			}
+			371 = {
+				add_manpower = -1000
+			}
+			372 = {
+				add_manpower = -1000
+			}
+			375 = {
+				add_manpower = -1000
+			}
+			368 = {
+				add_manpower = -1000
+			}
+			373 = {
+				add_manpower = -500
+			}
+			369 = {
+				add_manpower = -500
+			}
+			361 = {
+				add_manpower = -500
+			}
+		}
+		option = {
+			name = usa.58.b
+			add_political_power = -25
+			trigger = {
+				NOT = { has_government = social_egalitarianism }
+			}
+			366 = {
+				add_manpower = -5000
+			}
+			365 = {
+				add_manpower = -5000
+			}
+			364 = {
+				add_manpower = -5000
+			}
+			363 = {
+				add_manpower = -5000
+			}
+			364 = {
+				add_manpower = -10000
+			}
+			367 = {
+				add_manpower = -5000
+			}
+			370 = {
+				add_manpower = -5000
+			}
+			371 = {
+				add_manpower = -5000
+			}
+			372 = {
+				add_manpower = -5000
+			}
+			375 = {
+				add_manpower = -5000
+			}
+			368 = {
+				add_manpower = -5000
+			}
+			373 = {
+				add_manpower = -2500
+			}
+			369 = {
+				add_manpower = -2500
+			}
+			361 = {
+				add_manpower = -2500
+			}
+			set_global_flag = USA_Liberia_Encouraged
+			add_timed_idea = { idea = USA_liberia_emigration_2 days = 1000 }
+		}
+		option = {
+			name = usa.58.c
+			trigger = {
+				NOT = { has_government = social_egalitarianism }
+			}
+			add_political_power = -50
+			366 = {
+				add_manpower = -10000
+			}
+			365 = {
+				add_manpower = -10000
+			}
+			364 = {
+				add_manpower = -10000
+			}
+			363 = {
+				add_manpower = -10000
+			}
+			364 = {
+				add_manpower = -20000
+			}
+			367 = {
+				add_manpower = -10000
+			}
+			370 = {
+				add_manpower = -10000
+			}
+			371 = {
+				add_manpower = -10000
+			}
+			372 = {
+				add_manpower = -10000
+			}
+			375 = {
+				add_manpower = -10000
+			}
+			368 = {
+				add_manpower = -10000
+			}
+			373 = {
+				add_manpower = -5000
+			}
+			369 = {
+				add_manpower = -5000
+			}
+			361 = {
+				add_manpower = -5000
+			}
+			add_popularity = { ideology = social_egalitarianism popularity = -0.05 }
+			set_global_flag = USA_Liberia_Mandatory
+			add_timed_idea = { idea = USA_liberia_emigration_3 days = 1000 }
+		}
+}
+#Liberia Immigration
+country_event = {
+		id = usa.59
+		title = usa.59.t
+		desc = usa.59.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.59.a
+			add_political_power = -10
+			trigger = { has_global_flag = USA_Liberia_No_Intervention }
+			298 = {
+				add_manpower = 13000
+			}
+			add_timed_idea = { idea = Liberia_immigration_1 days = 1000 }
+		}
+		option = {
+			name = usa.59.b
+			add_political_power = -50
+			trigger = { has_global_flag = USA_Liberia_Encouraged }
+			298 = {
+				add_manpower = 65000
+			}
+			add_timed_idea = { idea = Liberia_immigration_2 days = 1000 }
+		}
+		option = {
+			name = usa.59.c
+			trigger = { has_global_flag = USA_Liberia_Mandatory }
+			add_political_power = -100
+			298 = {
+				add_manpower = 130000
+			}
+			add_timed_idea = { idea = Liberia_immigration_3 days = 1000 }
+		}
+}
+#Granted Support
+country_event = {
+		id = usa.60
+		title = usa.60.t
+		desc = usa.60.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.60.a
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 3000
+    			producer = USA
+			}
+			add_equipment_to_stockpile = {
+    			type = uniform_equipment
+    			amount = 3000
+    			producer = USA
+			}
+			add_manpower = 5000
+		}
+}
+#Mend Relations - UK
+country_event = {
+		id = usa.61
+		title = usa.61.t
+		desc = usa.61.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.61.a
+			ENG = { set_country_flag = USA_Mend_Relations }
+			ENG = { country_event = { id = usa.62 } }
+		}
+		option = {
+			name = usa.61.b
+			trigger = {
+				NOT = {
+					has_war_with = ENG
+					is_in_faction = yes
+					ENG = { is_in_faction = yes }
+				}
+			}
+			ENG = { set_country_flag = USA_Mend_Alliance }
+			ENG = { country_event = { id = usa.62 } }
+		}
+}
+#Mend Relations - UK Response
+country_event = {
+		id = usa.62
+		title = usa.62.t
+		desc = {
+			text = usa.62.d
+			trigger = { has_country_flag = USA_Mend_Relations }
+		}
+		desc = {
+			text = usa.62.d_ally
+			trigger = { has_country_flag = USA_Mend_Alliance }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.62.a
+			trigger = { has_country_flag = USA_Mend_Relations }
+		}
+		option = {
+			name = usa.62.a
+			trigger = { 
+				AND = {
+					has_country_flag = USA_Mend_Alliance 
+					is_ai = no
+				}
+			}
+			ENG = { create_faction = "Anglosphere" }
+			add_to_faction = USA
+		}
+		option = {
+			ai_will_do = {
+				factor = 40
+				modifier = {
+					add = 60
+					has_opinion = {
+						tag = USA
+						value = 50
+					}
+				}
+			}
+			name = usa.62.a
+			trigger = { 
+				AND = {
+					has_country_flag = USA_Mend_Alliance
+					is_ai = yes 
+				}
+			}
+			USA = { create_faction = "Anglosphere" }
+			USA = { add_to_faction = ENG }
+		}
+		option = {
+			ai_will_do = {
+				factor = 50
+				modifier = {
+					add = 50
+					has_opinion = {
+						tag = USA
+						value = 0
+					}
+				}
+			}
+			name = usa.62.b
+		}
+}
+
 
 #News Events
 

@@ -99,6 +99,23 @@ focus_tree = {
 
 	}
 	focus = {
+		id = USA_foreign_diplomacy
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		available = {
+			OR = {
+				has_country_flag = USASoaring_Eagle
+				has_country_flag = USABroken_Eagle
+				has_country_flag = USA_Civil_War_Avoided
+			}
+		}
+		x = 24
+		y = 13
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
 		id = USA_defend_washington
 		icon = GFX_goal_generic_fortify_city
 		cost = 1.00
@@ -1057,7 +1074,9 @@ focus_tree = {
 					date > 1858.4.1
 				}
 			completion_reward = {
-					country_event = { id = usa.32 }
+					country_event = {
+							id = usa.32
+						}
 					remove_ideas = USA_UtahWar
 					hidden_effect = {
 							set_country_flag = USAUtah_War_Over
@@ -1644,6 +1663,58 @@ focus_tree = {
 						}
 				}
 
+	}
+	focus = {
+		id = USA_diplomacy_monroe
+		icon = GFX_goal_focus_continent_north_america
+		cost = 10.00
+		prerequisite = {
+			focus = USA_foreign_diplomacy
+		}
+		x = 27
+		y = 14
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = USA_diplomacy_mexico
+		icon = GFX_goal_focus_mexican_intervention
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_monroe
+		}
+		x = 25
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = MEX
+    			modifier = usa_improved_relations
+			}
+			MEX = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_culture
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_mexico
+		}
+		x = 25
+		y = 16
+		completion_reward = {
+			diplomatic_relation = {
+				country = MEX
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
 	}
 	focus = {
 		id = USA_win_persecute_confederates
@@ -3096,6 +3167,13 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_win_rebuild_flordia
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 39
+				date > 1873.7.4
+			}
+		}
 		x = 29
 		y = 8
 			completion_reward = {
@@ -3271,9 +3349,9 @@ focus_tree = {
 		}
 		x = 30
 		y = 9
-			completion_reward = {
-					add_state_core = 368
-				}
+		completion_reward = {
+				add_state_core = 368
+			}
 
 	}
 	focus = {
@@ -3454,12 +3532,16 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_loss_cooperate_push
 		}
-		available = {
-			NOT = { has_country_flag = USA_loss_social }
-			NOT = { has_country_flag = USA_loss_monarch }
-		}
 		x = 23
 		y = 11
+			available = {
+					NOT = {
+							has_country_flag = USA_loss_social
+						}
+					NOT = {
+							has_country_flag = USA_loss_monarch
+						}
+				}
 			completion_reward = {
 					add_popularity = {
 							ideology = centrism
@@ -3475,12 +3557,16 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_loss_cooperate_push
 		}
-		available = {
-			NOT = { has_country_flag = USA_loss_social }
-			NOT = { has_country_flag = USA_loss_monarch }
-		}
 		x = 19
 		y = 11
+			available = {
+					NOT = {
+							has_country_flag = USA_loss_social
+						}
+					NOT = {
+							has_country_flag = USA_loss_monarch
+						}
+				}
 			completion_reward = {
 					add_popularity = {
 							ideology = centrism
@@ -3499,12 +3585,16 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_loss_firm_republican
 		}
-		available = {
-			NOT = { has_country_flag = USA_loss_social }
-			NOT = { has_country_flag = USA_loss_monarch }
-		}
 		x = 21
 		y = 12
+			available = {
+					NOT = {
+							has_country_flag = USA_loss_social
+						}
+					NOT = {
+							has_country_flag = USA_loss_monarch
+						}
+				}
 			completion_reward = {
 					custom_effect_tooltip = 12_USA_tt
 					custom_effect_tooltip = 16_USA_tt
@@ -3591,9 +3681,10 @@ focus_tree = {
 		}
 		x = 18
 		y = 9
-		completion_reward = {
-			add_political_power = 50
-		}
+			completion_reward = {
+					add_political_power = 50
+				}
+
 	}
 	focus = {
 		id = USA_loss_democrats_plant
@@ -3604,42 +3695,47 @@ focus_tree = {
 		}
 		x = 20
 		y = 9
-		completion_reward = {
-			361 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = cotton_farm
-						level = 1
-						instant_build = yes
-					}
+			completion_reward = {
+					361 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = cotton_farm
+									level = 1
+									instant_build = yes
+								}
+						}
+					if = {
+							limit = {
+									USA = {
+											owns_state = 373
+										}
+								}
+							373 = {
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = cotton_farm
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					if = {
+							limit = {
+									USA = {
+											owns_state = 369
+										}
+								}
+							369 = {
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = cotton_farm
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
 				}
-			if = {
-				limit = {
-					USA = { owns_state = 373 }
-				}
-				373 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = cotton_farm
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					USA = { owns_state = 369 }
-				}
-				369 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = cotton_farm
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
+
 	}
 	focus = {
 		id = USA_loss_cooperate_push
@@ -3657,16 +3753,21 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_loss_republicans_urban
 		}
-		available = {
-			NOT = { has_country_flag = USA_loss_social }
-			NOT = { has_country_flag = USA_loss_monarch }
-		}
 		x = 21
 		y = 10
-		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.05
-		}
+			available = {
+					NOT = {
+							has_country_flag = USA_loss_social
+						}
+					NOT = {
+							has_country_flag = USA_loss_monarch
+						}
+				}
+			completion_reward = {
+					add_political_power = 25
+					add_stability = 0.05
+				}
+
 	}
 	focus = {
 		id = USA_loss_republicans_rights
@@ -3677,9 +3778,10 @@ focus_tree = {
 		}
 		x = 22
 		y = 9
-		completion_reward = {
-			add_political_power = 50
-		}
+			completion_reward = {
+					add_political_power = 50
+				}
+
 	}
 	focus = {
 		id = USA_loss_republicans_urban
@@ -3690,23 +3792,409 @@ focus_tree = {
 		}
 		x = 24
 		y = 9
+			completion_reward = {
+					395 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					261 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = cotton_farm
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = USA_diplomacy_europe
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 10.00
+		prerequisite = {
+			focus = USA_foreign_diplomacy
+		}
+		x = 21
+		y = 14
 		completion_reward = {
-			395 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-						level = 1
-						instant_build = yes
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = USA_diplomacy_uk
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_europe
+		}
+		x = 21
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ENG
+    			modifier = usa_improved_relations
+			}
+			ENG = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_pig_war
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_uk
+		}
+		available = {
+			USA = { owns_state = 386 }
+			OR = {
+				VAN = { owns_state = 740 }
+				BCO = { owns_state = 740 }
+				CAN = { owns_state = 740 }
+				ENG = { owns_state = 740 }
+			}
+			NOT = {
+				USA = { has_war_with = ENG }
+			}
+		}
+		x = 21
+		y = 16
+		completion_reward = {
+			country_event = { id = usa.27 }
+			ENG = { country_event = { id = usa.27 } }
+		}
+	}
+	focus = {
+		id = USA_diplomacy_russia
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_europe
+		}
+		x = 19
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = RUS
+    			modifier = usa_improved_relations
+			}
+			RUS = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_alaska
+		icon = GFX_goal_focus_increase_wages
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_russia
+		}
+		available = {
+			463 = { is_owned_by = RUS }
+		}
+		x = 19
+		y = 16
+		completion_reward = {
+			country_event = { id = usa.40 }
+		}
+	}
+	focus = {
+		id = USA_diplomacy_france
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_europe
+		}
+		x = 23
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = FRA
+    			modifier = usa_improved_relations
+			}
+			FRA = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_ideals
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_france
+		}
+		x = 23
+		y = 16
+		completion_reward = {
+			diplomatic_relation = {
+				country = FRA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_brazil
+		icon = GFX_goal_focus_brazil
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_monroe
+		}
+		x = 27
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = BRA
+    			modifier = usa_improved_relations
+			}
+			BRA = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_argentina
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_monroe
+		}
+		x = 29
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ARG
+    			modifier = usa_improved_relations
+			}
+			ARG = {
+				add_opinion_modifier = {
+    				target = USA
+    				modifier = usa_improved_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_liberals
+		icon = GFX_goal_focus_victory_mexico
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_culture
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_conservatives
+		}
+		x = 25
+		y = 17
+		completion_reward = {
+			MEX = { country_event = { id = usa.60 } }
+		}
+	}
+	focus = {
+		id = USA_diplomacy_conservatives
+		icon = GFX_goal_focus_crown_maximilian_austria
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_ideals
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_liberals
+		}
+		x = 23
+		y = 17
+		completion_reward = {
+			FRA = { country_event = { id = usa.60 } }
+		}
+	}
+	focus = {
+		id = USA_diplomacy_visit
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_brazil
+		}
+		x = 27
+		y = 16
+		completion_reward = {
+			custom_effect_tooltip = USA_Brazil_trade
+			hidden_effect = {
+				add_opinion_modifier = {
+    				target = BRA
+    				modifier = usa_brazil_trade
+				}
+				BRA = {
+					add_opinion_modifier = {
+    					target = USA
+    					modifier = usa_brazil_trade
 					}
 				}
-			261 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = cotton_farm
-						level = 1
-						instant_build = yes
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_support
+		icon = GFX_goal_focus_fund_partisans
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_argentina
+		}
+		x = 29
+		y = 16
+		completion_reward = {
+			ARG = {
+				random_owned_state = {
+					add_building_construction = {
+    					type = arms_factory
+    					level = 1
+    					instant_build = yes
 					}
+					add_extra_state_shared_building_slots = 1
 				}
+				random_owned_state = {
+					add_building_construction = {
+    					type = industrial_complex
+    					level = 1
+    					instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				capital_scope = {
+					add_building_construction = {
+    					type = infrastructure
+    					level = 1
+    					instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_pick_brazil
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_visit
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_pick_argentina
+		}
+		x = 27
+		y = 17
+		completion_reward = {
+			diplomatic_relation = {
+				country = BRA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_pick_argentina
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_support
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_pick_brazil
+		}
+		x = 29
+		y = 17
+		completion_reward = {
+			diplomatic_relation = {
+				country = ARG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_mend
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_pig_war
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_counter
+		}
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					has_war_with = RUS
+					has_war_together_with = ENG
+					is_historical_focus_on = yes
+				}
+			}
+		}
+		x = 21
+		y = 17
+		completion_reward = {
+			country_event = { id = usa.61 }
+		}
+	}
+	focus = {
+		id = USA_diplomacy_counter
+		icon = GFX_goal_focus_the_great_game
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_alaska
+		}
+		mutually_exclusive = {
+			focus = USA_diplomacy_mend
+		}
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = RUS
+					is_historical_focus_on = yes
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					has_war_with = ENG
+					has_war_together_with = RUS
+				}
+			}
+		}
+		x = 19
+		y = 17
+		completion_reward = {
+			diplomatic_relation = {
+				country = RUS
+				relation = non_aggression_pact
+				active = yes
+			}
 		}
 	}
 }
