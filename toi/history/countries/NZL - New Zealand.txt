@@ -1,19 +1,24 @@
 ﻿1857.1.1 = {
-  capital = 284
+  capital = 1080
 
   oob = "NZL_1857"
 
   set_convoys = 0
   
   set_research_slots = 2
+  
+	set_country_flag = nzl_maori_agatate_in_taranaki
+	set_country_flag = nzl_maori_agatate_in_waikato
+	set_country_flag = nzl_maori_agatate_in_bay_of_plenty
 
+  set_stability = 0.20
   add_ideas = { 
     #POLITICS 
 		  
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
+    non_monarchical_system
     absolute_monarchy
 
     civilian_economy
@@ -24,7 +29,7 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    racial_laws
     absolutism
 
     no_constitution
@@ -36,7 +41,7 @@
          #NATIONAL SPIRITS
 	
 	ENG_colonial_Victoria
-	
+	nzl_pink_white_terraces
   }
 
   set_politics = {
@@ -88,7 +93,27 @@ create_country_leader = {
     name = "Thomas Gore Browne"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_NZL_Thomas Gore Browne.dds"
-    expire = 1900.1.1
+    expire = 1861.06.01
     ideology = despotism
 }
+}
+1861.06.01={
+	create_country_leader = {
+		name = "George Edward Grey"
+		desc = "POLITICS_TEMP_DESC"
+		picture = "Portrait_NZL_George Edward Grey.dds"
+		expire = 1900.1.1
+		ideology = despotism
+	}
+	create_corps_commander = {
+		name = "Duncan A. Cameron"
+		picture = "Portrait_NZL_Duncan A Cameron.dds"
+		traits = { war_hero }
+		skill = 4
+
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
 }
