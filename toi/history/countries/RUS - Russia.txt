@@ -10,7 +10,7 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    RUS_Alexander_II
     victorian_era
 	law_victorian_army
     agrarian
@@ -39,7 +39,7 @@
   }
 
 
-  set_politics = {
+set_politics = {
     parties = {
       anarchism = {
         popularity = 0
@@ -51,13 +51,13 @@
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 0
+        popularity = 2
       }
       centrism = {
-        popularity = 0
+        popularity = 4.4
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 8.6
       }
       radical_democracy = {
         popularity = 0
@@ -66,7 +66,7 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 85
       }
       fundamentalism = {
         popularity = 0
@@ -99,9 +99,9 @@ declare_war_on= {
   # POLITICAL LEADERS
 
 create_country_leader = {
-  name = "Alexander II"
-  desc = "POLITICS_ALEXANDER_II_DESC"
-  picture = "Portrait_RUS_Alexander_II.dds"
+  name = "Karl Nesselrode"
+  desc = "POLITICS_KARL_NESSELRODE_DESC"
+  picture = "Portrait_RUS_Karl_Nesselrode.dds"
   expire = "1900.1.1"
   ideology = despotism
   traits = {
