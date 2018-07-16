@@ -2373,6 +2373,11 @@ country_event = {
 		option = {
 			name = usa.62.a
 			trigger = { has_country_flag = USA_Mend_Relations }
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
 		}
 		option = {
 			name = usa.62.a
