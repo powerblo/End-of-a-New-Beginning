@@ -1176,7 +1176,6 @@ country_event = { # Sepoy - Capitulate
 		tag = SRS
 		OR = {
 			surrender_progress > 0.6
-			NOT = { has_full_control_of_state = 608 }
 		}
 	}
 
