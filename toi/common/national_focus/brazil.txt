@@ -253,7 +253,10 @@ focus_tree = {
 		y = 8
 
 		prerequisite = {
-		focus = BRA_southern_economic_innovation
+		focus = BRA_develop_the_south
+		}
+		prerequisite = {
+		focus = BRA_italian_workforce_for_sao_paulo
 		}
 		completion_reward = {
 		remove_ideas = BRA_transatlantic
@@ -1356,13 +1359,13 @@ focus = {
     FRA = {
       add_opinion_modifier = {
         target = BRA
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
     BRA = {
       add_opinion_modifier = {
         target = FRA
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
 	}
@@ -1385,13 +1388,13 @@ focus = {
     ENG = {
       add_opinion_modifier = {
         target = BRA
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
     BRA = {
       add_opinion_modifier = {
         target = ENG
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
 	}
@@ -1414,13 +1417,13 @@ focus = {
     AUS = {
       add_opinion_modifier = {
         target = BRA
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
     BRA = {
       add_opinion_modifier = {
         target = AUS
-        modifier = offered_support 
+        modifier = ita_diplomacy_focus
       }
     }
 	}
@@ -1868,7 +1871,7 @@ USA = { country_event =  brazil.7  }
 	}
 	
 	focus = {
-		id = BRA_ensure_free_slaves_freedom
+		id = BRA_pass_the_slavery_referenduum
 		icon = GFX_focus_generic_concessions
 		cost = 10
 		x = 51
@@ -1880,8 +1883,11 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-    add_political_power = 45
-	add_stability = 0.01
+    add_political_power = -20
+   swap_ideas = {
+	remove_idea = usa_slavery_law
+	add_idea = racial_laws
+    }
 	}
 	}
 	
@@ -1917,7 +1923,7 @@ USA = { country_event =  brazil.7  }
 		focus = BRA_expand_the_suffrage
 		}
 		prerequisite = {
-		focus = BRA_ensure_free_slaves_freedom
+		focus = BRA_pass_the_slavery_referenduum
 		}
 		
 		
@@ -1927,7 +1933,7 @@ USA = { country_event =  brazil.7  }
 	}
 	
 	focus = {
-		id = BRA_conscript_free_slaves
+		id = BRA_conscript_the_former_slaves
 		icon = GFX_goal_rhineland
 		cost = 10
 		x = 50
@@ -1952,7 +1958,7 @@ USA = { country_event =  brazil.7  }
 		y = 14
         
 		prerequisite = {
-		focus = BRA_conscript_free_slaves
+		focus = BRA_conscript_the_former_slaves
 		}
 		
 		
@@ -2009,15 +2015,7 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-    add_state_core = 1077
-	add_state_core = 1079
-	add_state_core = 1078
-	add_state_core = 1084
-	add_state_core = 1081
-	add_state_core = 1082
-	add_state_core = 1083
-	add_state_core = 1080
-	add_state_core = 300
+    add_state_core = 300
 	URG = { country_event = brazil.15 }
 	 }
 	}
@@ -2888,209 +2886,12 @@ focus = {
 	}
 	
 	
-    focus = {
-		id = BRA_uruguayan_intervention
-		icon = GFX_goal_focus_uruguay
-		cost = 3
-		x = 60
-		y = 0
-     
-    available = {
-	date > 1863.10.10
-	NOT = { has_idea = BRA_marques_de_monte_alegre  }
-	NOT = { has_idea = BRA_marques_de_olinda }
-	}
-	completion_reward = {
-    add_war_support = 0.01
-	add_political_power = -5
-	}
-	}
-	
-	focus = {
-		id = BRA_support_brazilians_living_in_uruguay
-		icon = GFX_goal_continuous_increase_nu
-		cost = 5
-		x = 60
-		y = 1
-     
-    prerequisite = {
-	focus = BRA_uruguayan_intervention
-	}
-	completion_reward = {
-    URG = { 
-	add_stability = -0.01
-	}
-	add_political_power = 35
-	}
-	}
-	
-	focus = {
-		id = BRA_condemn_the_uruguayan_paraguayan_alliance
-		icon = GFX_goal_demand_sudetenland
-		cost = 5
-		x = 62
-		y = 1
-     
-    prerequisite = {
-	focus = BRA_uruguayan_intervention
-	}
-	completion_reward = {
-    add_political_power = 55
-		ARG = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = offered_support 
-				}
-			}
-	    PAR = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = protest_action_strong
-				}
-			}
-
-	    URG = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = protest_action_strong
-				}
-			}			
-	}
-	}
-	
-	focus = {
-		id = BRA_support_brazilian_lords_in_uruguay
-		icon = GFX_focus_ITA_Wheat
-		cost = 5
-		x = 58
-		y = 1
-     
-    prerequisite = {
-	focus = BRA_uruguayan_intervention
-	}
-	completion_reward = {
-    add_political_power = -25
-	
-
-	    URG = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = protest_action_light
-				}
-	add_political_power = -120		
-			}			
-	}
-	}
-	
-	
-	focus = {
-		id = BRA_challenge_the_blanco_government
-		icon = GFX_focus_PIE_Casus_Belli
-		cost = 2
-		x = 60
-		y = 2
-     
-    prerequisite = {
-	focus = BRA_support_brazilians_living_in_uruguay
-	}
-	prerequisite = {
-	focus = BRA_support_brazilian_lords_in_uruguay
-	}
-	prerequisite = {
-	focus = BRA_condemn_the_uruguayan_paraguayan_alliance
-	}
-	completion_reward = {
-    add_political_power = 35
-	add_war_support = 0.01
-
-	    URG = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = protest_action_light
-				}
-	country_event = brazil.24
-			}			
-	}
-	}
-	
-	focus = {
-		id = BRA_justify_our_interests_in_the_platine_region
-		icon = GFX_AUS_focus_docks_1
-		cost = 1
-		x = 62
-		y = 3
-     
-    prerequisite = {
-	focus = BRA_challenge_the_blanco_government
-	} 
-	completion_reward = {
-    add_war_support = 0.01
-			}			
-	}
-	
-	
-	focus = {
-		id = BRA_support_the_colorado_party
-		icon = GFX_goal_focus_socialist_regime
-		cost = 1
-		x = 58
-		y = 3
-     
-    prerequisite = {
-	focus = BRA_challenge_the_blanco_government
-	} 
-	completion_reward = {
-    add_political_power = 35
-	URG = {
-			add_popularity = {
-				ideology = social_egalitarianism
-				popularity = 0.15
-			}
-	}		
-			}			
-	}
-	
-	focus = {
-		id = BRA_direct_intervention
-		icon = GFX_focus_RAJ_lions_of_the_great_war
-		cost = 1
-		x = 60
-		y = 4
-     
-    prerequisite = {
-	focus = BRA_support_the_colorado_party
-	focus = BRA_justify_our_interests_in_the_platine_region
-	} 
-	completion_reward = {
-    add_political_power = 35
-	URG = {
-   start_civil_war = {
-    ruling_party = social_egalitarianism
-    ideology = social_egalitarianism
-    size = 1
-    only_own_territory = no
-    capital = 10362
-    states = { 
-        1077
-    }
-	
-	}
-
-	
-			}
-every_country = {
-country_event = brazil.25
-	}
-	
-	
-	
-	}
-	
 	
 	
 
 	
-
+	
+}
 	
 	
 	

@@ -346,37 +346,3 @@ country_event = {
 	}
 	
 }
-
-#Flensburg Lion
-country_event = {
-    id = prussia.16
-	title = prussia.16.t
-	desc = prussia.16.d
-	picture = GFX_event_isted_lion
-	
-	fire_only_once = yes
-	
-	trigger = {
-	    tag = PRS
-		has_country_flag = eoanb_flag_won_2_schleswig_war
-		owns_state = 949
-	}
-	
-	option = {
-	    name = prussia.16.a
-		ai_chance = { factor = 75 }
-		add_war_support = 0.05
-		DEN = {
-		    add_opinion_modifier = {
-			    target = PRS
-				modifier = eoanb_om_diplomatic_insult
-			}
-		}
-	}
-	
-	option = {
-	    name = prussia.16.b
-		ai_chance = { factor = 25 }
-		add_stability = 0.05
-	}
-}
