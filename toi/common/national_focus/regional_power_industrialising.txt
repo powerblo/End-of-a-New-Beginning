@@ -78,7 +78,7 @@ focus_tree = {
 		x = 16
 		y = 0
 		completion_reward = {
-			naval_experience = 10
+			navy_experience = 10
 		}
 		available = {
 			any_owned_state = { is_coastal = yes }
@@ -403,7 +403,7 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				random_country ={
+				any_country ={
 					has_tech = steam_locomotive
 					has_opinion = {
 						target = ROOT
