@@ -505,6 +505,11 @@ if = {
 			freedom_level = 0.2
 		}
 		set_autonomy = {
+			target = SRC
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
 			target = TSM
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
@@ -562,6 +567,7 @@ if = {
 			puppet = NVS
 			puppet = BCO
 			puppet = VAN
+			puppet = SRC
 		}
 	}
 }
