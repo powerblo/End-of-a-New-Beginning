@@ -111,6 +111,7 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		379 = { add_core_of = USA }
+		1093 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -185,14 +186,30 @@ USA_grant_statehood = {
 		icon = generic_political_discourse
 
 		available = {
-			USA = { controls_state = 382 }
-			382 = { state_population > 40000 }
+			OR = {
+				AND = {
+					USA = { controls_state = 382 }
+					382 = { state_population > 40000 }
+				}
+				AND = {
+					USA = { controls_state = 1051 }
+					1051 = { state_population > 40000 }
+				}
+			}
 		}
 
 		visible = {
 			TAG = USA
-			USA = { controls_state = 382 }
-			382 = { state_population > 20000 }
+			OR = {
+				AND = {
+					USA = { controls_state = 382 }
+					382 = { state_population > 20000 }
+				}
+				AND = {
+					USA = { controls_state = 1051 }
+					1051 = { state_population > 20000 }
+				}
+			}
 		}
 
 		fire_only_once = yes
@@ -202,6 +219,7 @@ USA_grant_statehood = {
 		complete_effect = {
 		382 = { add_core_of = USA }
 		1051 = { add_core_of = USA }
+		1092 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
