@@ -107,7 +107,6 @@ country_event = {###natives want to buy cannons
 			add_equipment_to_stockpile = {
 				type = cannon_equipment_0
 				amount = 20
-				producer = ROOT
 			}
 			add_opinion_modifier = {
 				target = ROOT
@@ -313,5 +312,9 @@ country_event = { #add colonal power
 		}
 		set_variable = { colonial_power = 30 }
         set_variable = { colonial_power_rate = 1 }
+	}
+	
+	option = {
+		name = EDC_afr.16.a
 	}
 }

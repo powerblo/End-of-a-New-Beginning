@@ -487,7 +487,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = afr_build_a_main_rail_route
+		id = afr_build_a_main_rail_route2
 		icon = GFX_goal_focus_railroad_development
 		cost = 32.9
 		available = {
@@ -771,7 +771,6 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = cannon_equipment_0
 				amount = 25
-				producer = ROOT
 			}
 		}
 		x = 12
@@ -996,22 +995,22 @@ focus_tree = {
 			focus = afr_comission_cannons
 		}
 		completion_reward = {
-			any_country ={
-				limit={
-					AND = {
-						has_tech = gw_artillery
-						has_opinion = {
-							target = ROOT
-							value > 0
-						}
-						any_owned_state={
-							is_capital = yes
-							is_on_continent = europe
-						}
-					}
-				}
-				country_event = { id = EDC_afr.10 hours = 16 } 
-			}
+			#all_country ={
+			#	limit={
+			#		AND = {
+			#			has_tech = gw_artillery
+			#			has_opinion = {
+			#				target = ROOT
+			#				value > 0
+			#			}
+			#			any_owned_state={
+			#				is_capital = yes
+			#				is_on_continent = europe
+			#			}
+			#		}
+			#	}
+			#	country_event = { id = EDC_afr.10 hours = 16 } 
+			#}
 		}
 		x = 10
 		y = 5

@@ -2391,13 +2391,15 @@ country_event = {
 			add_to_faction = USA
 		}
 		option = {
-			ai_will_do = {
+			ai_chance = {
 				factor = 40
 				modifier = {
 					add = 60
-					has_opinion = {
-						tag = USA
-						value = 50
+					ROOT = {
+						has_opinion = {
+							tag = USA
+							value = 50
+						}
 					}
 				}
 			}
@@ -2412,13 +2414,15 @@ country_event = {
 			USA = { add_to_faction = ENG }
 		}
 		option = {
-			ai_will_do = {
+			ai_chance = {
 				factor = 50
 				modifier = {
 					add = 50
-					has_opinion = {
-						tag = USA
-						value = 0
+					ROOT = {
+						has_opinion = {
+							tag = USA
+							value = 0
+						}
 					}
 				}
 			}
