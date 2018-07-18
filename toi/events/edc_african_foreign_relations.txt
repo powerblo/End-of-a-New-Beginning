@@ -1,47 +1,5 @@
-add_namespace = EDC_afr
+﻿add_namespace = EDC_afr
 
-# tribal war starts
-country_event = {
-	id = EDC_afr.1
-	title = EDC_afr.1.t
-	desc = EDC_afr.1.d
-	picture = GFX_report_event_chinese_army_training
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EDC_afr.1.a
-		any_neighbor_state = {
-			limit = {is_owned_by = FROM}
-			add_claim_by = ROOT
-			}
-			#ROOT ={ 
-				create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
-					type = take_state_focus
-					target = FROM
-					generator = any_neighbor_state = {limit = {is_owned_by = FROM}}
-				}
-				declare_war_on = {
-					target = FROM
-					type = take_state_focus
-				}
-		#}
-	}
-}
-# ping event
-country_event = {
-	id = EDC_afr.2
-	title = EDC_afr.2.t
-	desc = EDC_afr.2.d
-	picture = GFX_report_event_chinese_army_training
-	
-	is_triggered_only = yes
-	hidden = yes
-	
-	immediate = {
-		FROM = { country_event = { id = EDC_afr.1 hours = 6 } }
-	}
-}
 #### Industrial progress events
 country_event = {#1 industrial point
 	id = EDC_afr.3
@@ -190,7 +148,7 @@ country_event = {###natives reached 100% industrialisation
 		custom_effect_tooltip = afr_become_industrialised
 		hidden_effect = {
 			clear_variable = ROOT.industrisation_progress
-			remove_idea = afr_reforming_kingdom
+			remove_ideas = afr_reforming_kingdom
 			add_ideas = industrializing
 			add_ideas = afr_post_tribal
 		}
@@ -295,12 +253,12 @@ country_event = {###army is pissed about new weapons
 	}
 	
 	option = {#no
-		name = EDC_afr.13.a
+		name = EDC_afr.14.a
 		add_manpower = -100
 		army_experience = -5
 	}
 	option = {#accept their demands
-		name = EDC_afr.13.b
+		name = EDC_afr.14.b
 		set_country_flag = af_t_10_fac
 		custom_effect_tooltip = EDC_afr.9.t
 		hidden_effect = {
@@ -310,9 +268,9 @@ country_event = {###army is pissed about new weapons
 	}
 }
 country_event = {###send a colonisation proposal to you benafactor
-	id = EDC_afr.14
-	title = EDC_afr.14.t
-	desc = EDC_afr.14.d
+	id = EDC_afr.16
+	title = EDC_afr.16.t
+	desc = EDC_afr.16.d
 	picture = GFX_report_event_chinese_army_training
 	
 	#is_triggered_only = yes
@@ -326,12 +284,12 @@ country_event = {###send a colonisation proposal to you benafactor
 	}
 	
 	option = {#no
-		name = EDC_afr.13.a
+		name = EDC_afr.16.a
 		add_manpower = -100
 		army_experience = -5
 	}
 	option = {#accept their demands
-		name = EDC_afr.13.b
+		name = EDC_afr.16.b
 		set_country_flag = af_t_10_fac
 		custom_effect_tooltip = EDC_afr.9.t
 		hidden_effect = {
