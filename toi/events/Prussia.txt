@@ -355,7 +355,7 @@ country_event = {
 	picture = GFX_event_isted_lion
 	
 	fire_only_once = yes
-	
+
 	trigger = {
 	    tag = PRS
 		has_country_flag = eoanb_flag_won_2_schleswig_war
@@ -378,5 +378,41 @@ country_event = {
 	    name = prussia.16.b
 		ai_chance = { factor = 25 }
 		add_stability = 0.05
+	}
+}
+
+#Heydt Rescript
+country_event = {
+    id = prussia.17
+	title = prussia.17.t
+	desc = prussia.17.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = PRS
+		date > 1859.11.1
+	}
+	
+	option = {
+	    name = prussia.17.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+		    ideology = traditional_conservatism
+			popularity = 0.05
+		}
+		add_political_power = 20
+		BRA = {
+		    add_opinion_modifier = {
+			    target = PRS
+				modifier = eoanb_om_heydt_edict
+			}
+		}
+		PRS = {
+		    add_opinion_modifier = {
+			    target = BRA
+				modifier = eoanb_om_heydt_edict
+			}
+		}
 	}
 }
