@@ -13,8 +13,7 @@ ideas = {
 
 			picture = SWE_Finnish_Defeat
 			
-			modifier = {
-				army_org = -10				
+			modifier = {				
 				conscription = -0.01				
 				war_support_factor = -0.25
 			}
@@ -26,6 +25,26 @@ ideas = {
 					build_cost_ic = 0.10 instant = yes
 				}
 			}
+		}						
+			
+		SWE_Inept_Army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Inept_Army
+			
+			modifier = {
+				army_org = -15				
+				army_morale = -0.15
+				training_time_army_factor = 1
+			}				
 		}
 	}
 		
