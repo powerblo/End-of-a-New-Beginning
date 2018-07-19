@@ -233,6 +233,7 @@ stability_good_modifier = {
 	industrial_capacity_dockyard = 0.1
 	political_power_factor = 0.1
 	surrender_limit = 0.05
+	stability_weekly = -0.005
 }
 
 # applies when stability < 50%
@@ -242,6 +243,7 @@ stability_bad_modifier = {
 	political_power_factor = -0.25
 	industrial_capacity_dockyard = -0.5
 	surrender_limit = -0.3
+	stability_weekly = 0.005
 }
 
 war_support_good_modifier = {
@@ -250,6 +252,7 @@ war_support_good_modifier = {
 	army_core_defence_factor = 0.1
 	command_power_gain_mult = 0.5
 	surrender_limit = 0.05
+	war_support_weekly = -0.01
 }
 
 war_support_bad_modifier = {
@@ -258,6 +261,7 @@ war_support_bad_modifier = {
 	#army_noncore_defence_factor = -0.50
 	command_power_gain_mult = -0.95 
 	surrender_limit = -0.3
+	war_support_weekly = 0.0025
 }
 
 
