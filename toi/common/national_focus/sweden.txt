@@ -725,6 +725,100 @@ focus_tree = {
 
 		}
 	}
+	
+	focus = {
+		id = SWE_lifeguard
+		x = 31
+		y = 4
+		prerequisite = { focus = SWE_better_artillery }
+		icon = GFX_goal_focus_lifeguard
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			custom_effect_tooltip = SWE_create_unit_lifeguard_tt
+			hidden_effect = {
+			create_corps_commander = {
+				name = "Carl Herman Leuhusen"
+				picture = "Portrait_SWE_Carl_Herman_Leuhusen.dds"
+				traits = { cavalry_officer cavalry_leader career_officer }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 1
+			}
+			division_template = {
+				name = "Livgardet till Fot"
+				priority = 2				
+				division_names_group = SWE_MEC_01
+				regiments = {
+					line_infantry = { x = 0 y = 0}
+					line_infantry = { x = 0 y = 1}
+					line_infantry = { x = 0 y = 2}
+					line_infantry = { x = 1 y = 0}
+					line_infantry = { x = 1 y = 1}
+					line_infantry = { x = 1 y = 2}
+					line_infantry = { x = 2 y = 0}
+					line_infantry = { x = 2 y = 1}
+					line_infantry = { x = 2 y = 2}
+					line_infantry = { x = 3 y = 0}				
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }										
+					military_police  = { x = 0 y = 3 }														
+				}  				
+			}
+			division_template = {
+				name = "Livgardet till Häst"
+				priority = 2				
+				division_names_group = SWE_MEC_01
+				regiments = {					#Change these to Dragoons once the Tech Tree is fixed
+					light_cavalry = { x = 0 y = 0}
+					light_cavalry = { x = 0 y = 1}
+					light_cavalry = { x = 0 y = 2}
+					light_cavalry = { x = 1 y = 0}
+					light_cavalry = { x = 1 y = 1}
+					light_cavalry = { x = 1 y = 2}
+					light_cavalry = { x = 2 y = 0}
+					light_cavalry = { x = 2 y = 1}
+					light_cavalry = { x = 2 y = 2}	
+					light_cavalry = { x = 3 y = 0}				
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }		
+					recon  = { x = 0 y = 2 }				
+					military_police  = { x = 0 y = 3 }														
+				}  				
+			}			
+
+		random_owned_controlled_state = {
+			prioritize = { 141 }
+			create_unit = { 
+				division = "name = \"Göta Livgarde\" division_template = \"Livgardet till Fot\" start_experience_factor = 1.0" 
+				owner = SWE
+				}
+			create_unit = { 
+				division = "name = \"Svea Livgarde\" division_template = \"Livgardet till Fot\" start_experience_factor = 1.0" 
+				owner = SWE
+				}
+			create_unit = { 
+				division = "name = \"Livregementets Husarer\" division_template = \"Livgardet till Häst\" start_experience_factor = 1.0" 
+				owner = SWE
+				}
+			create_unit = { 
+				division = "name = \"Livregementets Dragoner\" division_template = \"Livgardet till Häst\" start_experience_factor = 1.0" 
+				owner = SWE
+				}
+				
+		}
+			}
+		}
+	}		
 
 	focus = {
 		id = SWE_update_conscription
