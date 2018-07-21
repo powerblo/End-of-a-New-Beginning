@@ -134,21 +134,32 @@ create_country_leader = {
  create_corps_commander = {
      name = "Gustaf Rudolf Abelin"
      picture = "Gustaf_Rudolf_Abelin.dds"
-     traits = { organizer career_officer }
-     skill = 5
+     traits = { skilled_staffer career_officer }
+     skill = 4
      attack_skill = 3
      defense_skill = 2
      planning_skill = 2
      logistics_skill = 3
    }
+   
+ create_corps_commander = {
+     name = "Carl Fredrik Akrell"
+     picture = "Portrait_SWE_Carl_Fredrik_Akrell.dds"
+     traits = { organizer career_officer war_hero }
+     skill = 5
+     attack_skill = 2
+     defense_skill = 2
+     planning_skill = 5
+     logistics_skill = 2
+   }   
 
  create_field_marshal = {
      name = "Jakob Essen Hamilton"
      picture = "Jakob_Essen_Hamilton.dds"
-     traits = { inspirational_leader cavalry_officer }
+     traits = { inspirational_leader cavalry_officer cavalry_leader }
      skill = 4
-     attack_skill = 2
-     defense_skill = 3
+     attack_skill = 3
+     defense_skill = 2
      planning_skill = 3
      logistics_skill = 3
    }
@@ -159,6 +170,14 @@ create_country_leader = {
      traits = { superior_tactician }
      skill = 4
    }
+   
+    create_navy_leader = {
+     name = "Adolf von Rosen"
+     picture = "Portrait_SWE_Adolf_Von_Rosen.dds"
+     traits = { }
+     skill = 1
+   }  
+   
  create_corps_commander = {
      name = "Johan af Kleen"
      picture = "Johan_af_Kleen.dds"
