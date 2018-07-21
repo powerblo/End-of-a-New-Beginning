@@ -2,13 +2,10 @@
 state={
 	id=510
 	name="STATE_510"
-	manpower = 897169
 	resources={
-		oil=4
-		wood=2
+		oil=4.000
+		wood=2.000
 	}
-	
-	state_category = large_town
 
 	history={
 		owner = ARG
@@ -16,14 +13,19 @@ state={
 			infrastructure = 4
 			industrial_complex = 2
 			arms_factory = 1
+
 		}
 		victory_points = {
 			7500 1 
 		}
 		add_core_of = ARG
+
 	}
 
 	provinces={
-		2172 5163 7500 8208 10975 10985 13000 
+		5163 7500 8208 10975 10985 13000 
 	}
+	manpower=897169
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

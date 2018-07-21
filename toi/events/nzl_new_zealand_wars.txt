@@ -119,6 +119,23 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = nzl_nzw.3.b #whitch to the KIN
+		custom_effect_tooltip = nzl_change_tag_to_KIN
+		hidden_effect = {
+			KIN ={
+				load_oob = KIN_revolt_1
+				add_ideas = {nzl_maori_buffs}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 250
+					producer = KIN
+				}
+				add_manpower = 2500
+				change_tag_from = NZL
+			}
+		}
+	}
 }
 # waikato invasion begins
 country_event = {
