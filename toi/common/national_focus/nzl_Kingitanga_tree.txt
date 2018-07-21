@@ -9,11 +9,14 @@ focus_tree = {
 	}
 	default = no
 	focus = {
-		id = KIN_resist_the_invasion
+		id = KIN_build_our_people
 		icon = GFX_goal_unknown
 		cost = 10.00
-		x = 6
+		x = 9
 		y = 0
+		completion_reward={
+			add_stability = 0.05
+		}
 	}
 	focus = {
 		id = KIN_we_fight_alone
@@ -23,6 +26,12 @@ focus_tree = {
 			focus = KIN_incorperate_the_PAI
 			focus = KIN_incorperate_the_TAA
 		}
+		prerequisite = {
+			focus = KIN_why_we_fight
+		}
+		completion_reward={
+			add_war_support = 0.10
+		}
 		x = 9
 		y = 3
 	}
@@ -31,7 +40,10 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = KIN_resist_the_invasion
+			focus = KIN_build_our_people
+		}
+		available = {
+			has_war = yes
 		}
 		x = 3
 		y = 1
@@ -44,6 +56,9 @@ focus_tree = {
 		prerequisite = {
 			focus = KIN_our_land
 		}
+		completion_reward={
+			add_manpower = 1200
+		}
 		x = 1
 		y = 2
 
@@ -55,13 +70,16 @@ focus_tree = {
 		prerequisite = {
 			focus = KIN_rally_tribes_to_our_call
 		}
+		completion_reward={
+			add_manpower = 1500
+		}
 		x = 1
 		y = 3
 
 	}
 	focus = {
 		id = KIN_the_weapons_of_war
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_our_land
@@ -79,7 +97,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KIN_buy_arms_from_symthisers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_the_weapons_of_war
@@ -96,7 +114,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KIN_pa_innovation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_fortify_city
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_our_land
@@ -135,7 +153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KIN_gunfighter_pa
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_fortify_city
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_pa_innovation
@@ -151,28 +169,50 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = KIN_resist_the_invasion
+			focus = KIN_build_our_people
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		available = {
+			has_war = no
+		}
+		x = 15
+		y = 1
+
+	}
+	focus = {
+		id = KIN_our_power
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = KIN_build_our_people
+		}
+		completion_reward = {
+			add_political_power = 50
 		}
 		x = 9
 		y = 1
-
 	}
 	focus = {
 		id = KIN_why_we_fight
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = KIN_our_people
+			focus = KIN_our_power
 		}
 		x = 9
 		y = 2
 		available = {
-			has_war = yes
+			has_war_with = NZL
+		}
+		completion_reward = {
+			add_war_support = 0.075
 		}
 	}
 	focus = {
 		id = KIN_incorperate_the_PAI
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_why_we_fight
@@ -181,13 +221,19 @@ focus_tree = {
 			focus = KIN_we_fight_alone
 			focus = KIN_incorperate_the_TAA
 		}
+		available = {
+			PAI = {exists = yes}
+		}
+		completion_reward = {
+			country_event = {id = nzl_other.19 days = 1}
+		}
 		x = 7
 		y = 3
 
 	}
 	focus = {
 		id = KIN_incorperate_the_TAA
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_why_we_fight
@@ -195,6 +241,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = KIN_we_fight_alone
 			focus = KIN_incorperate_the_PAI
+		}
+		available = {
+			TAA = {exists = yes}
+		}
+		completion_reward = {
+			country_event = {id = nzl_other.20 days = 1}
 		}
 		x = 11
 		y = 3
@@ -245,6 +297,18 @@ focus_tree = {
 
 	}
 	focus = {
+		id = KIN_ask_FRA_for_aid
+		icon = GFX_goal_unknown
+		cost = 10.00
+		
+		prerequisite = {
+			focus = KIN_offer_aid_to_fighters_families
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
 		id = KIN_our_own_fight
 		icon = GFX_goal_unknown
 		cost = 10.00
@@ -256,26 +320,33 @@ focus_tree = {
 
 	}
 	focus = {
-		id = KIN_ask_FRA_for_aid
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = KIN_offer_aid_to_fighters_families
-		}
-		x = 11
-		y = 6
-
-	}
-	focus = {
 		id = KIN_unexpected_victory
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = KIN_ask_FRA_for_aid
 			focus = KIN_our_own_fight
+			focus = KIN_we_fight_alone
 		}
 		x = 9
 		y = 7
+
+	}
+	focus = {
+		id = KIN_encorage_maori_immergration_into_the_waikato
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = KIN_our_people
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		available = {
+			#has_war = no
+		}
+		x = 13
+		y = 2
 
 	}
 }
