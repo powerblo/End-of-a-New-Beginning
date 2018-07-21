@@ -79,3 +79,13 @@ eoanb_category_formables = {
 	icon = generic_political_actions
 	
 }
+
+eoanb_category_options = {
+	icon = generic_political_actions
+	
+	visible = {
+		NOT = {
+			has_country_flag = eoanb_flag_options_disabled
+		}
+	}
+}

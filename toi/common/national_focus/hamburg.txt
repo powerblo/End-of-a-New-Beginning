@@ -40,6 +40,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = HAM_focus_germany_policy }
 		mutually_exclusive = { focus = HAM_focus_stay_neutral focus = HAM_focus_vienna_ambassador }
+		available = {
+			country_exists = PRS
+		}
 		
 		completion_reward = {
 			reverse_add_opinion_modifier = {
@@ -125,6 +128,7 @@ focus_tree = {
 		
 		completion_reward = {
 			868 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -152,17 +156,19 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 9347
-			}
-			add_building_construction = {
-				type = coastal_bunker 
-				level = 2
-				instant_build = yes
-				province = 9347
+			868 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9347
+				}
+				add_building_construction = {
+					type = coastal_bunker 
+					level = 2
+					instant_build = yes
+					province = 9347
+				}
 			}
 		}
 	}
@@ -179,6 +185,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = HAM_focus_germany_policy }
 		mutually_exclusive = { focus = HAM_focus_berlin_ambassador focus = HAM_focus_stay_neutral }
+		available = {
+			country_exists = AUS
+		}
 		
 		completion_reward = {
 			reverse_add_opinion_modifier = {

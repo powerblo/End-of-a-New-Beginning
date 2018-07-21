@@ -1204,3 +1204,66 @@ tribal_decisions_eoanb = {
 	}
 	
 }
+
+eoanb_category_options = {
+	
+	eoanb_decision_open_options = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			country_event = { id = generic.8 }
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+	eoanb_decision_disable_options = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_disable_options
+			hidden_effect = {
+				set_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+}
