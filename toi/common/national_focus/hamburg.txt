@@ -252,4 +252,284 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = HAM_focus_money_talks
+		icon = GFX_goal_focus_banks
+		x = 7
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hanse_legacy }
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_hamburg_mint
+		icon = GFX_goal_focus_increase_wages
+		x = 7
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_money_talks }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HAM_idea_hansa_heritage_2
+				remove_idea = HAM_idea_hansa_heritage
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_hamburg_borse
+		icon = GFX_goal_focus_the_elite
+		x = 7
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hamburg_mint }
+		available = {
+			HAM = { 
+				owns_state = 868
+			}
+		}
+		
+		completion_reward = {
+			868 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_hamburg_sparkasse
+		icon = GFX_goal_focus_fund_partisans
+		x = 7
+		y = 4
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hamburg_borse }
+		
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_lubeck_bahnhof
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 9
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hanse_legacy }
+		
+		completion_reward = {
+			868 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_kloster_bahnhof
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 9
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_lubeck_bahnhof }
+		
+		completion_reward = {
+			868 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_city_infrastructure
+		icon = GFX_goal_focus_industrial_revolution
+		x = 9
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_kloster_bahnhof }
+		
+		completion_reward = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_hamburger_hafen
+		icon = GFX_goal_generic_amphibious_assault
+		x = 11
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hanse_legacy }
+		
+		completion_reward = {
+			868 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 9347
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_kommerzdeputation
+		icon = GFX_goal_focus_decentralisation_power
+		x = 11
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hamburger_hafen }
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.01
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_hafen_ausbau
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 11
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_kommerzdeputation }
+		
+		completion_reward = {
+			868 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 9347
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_sandtorhafen
+		icon = GFX_goal_generic_navy_cruiser
+		x = 11
+		y = 4
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hafen_ausbau }
+		
+		completion_reward = {
+			868 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 9347
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_nordseehandel
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 13
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_hanse_legacy }
+		available = {
+			has_completed_focus = HAM_focus_hamburg_mint
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HAM_idea_hansa_heritage_3
+				remove_idea = HAM_idea_hansa_heritage_2
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_professional_merchants
+		icon = GFX_goal_generic_national_unity
+		x = 13
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_nordseehandel }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HAM_idea_hansa_heritage_4
+				remove_idea = HAM_idea_hansa_heritage_3
+			}
+		}
+	}
+	
 }
