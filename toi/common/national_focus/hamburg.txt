@@ -534,4 +534,374 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = HAM_focus_expand_1854_reforms
+		icon = GFX_goal_focus_military_reforms
+		x = 18
+		y = 0
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_prussian_rifles
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 17
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_expand_1854_reforms }
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0 
+				amount = 500
+				producer = PRS
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_officers_in_prussia
+		icon = GFX_goal_focus_ally_PRS
+		x = 17
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_prussian_rifles }
+		
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_recruit_barracks
+		icon = GFX_goal_focus_fund_partisans
+		x = 16
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_officers_in_prussia }
+		
+		completion_reward = {
+			add_manpower = 2000
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_tactics_training
+		icon = GFX_focus_generic_military_academy
+		x = 18
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_officers_in_prussia }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_army_drills
+		icon = GFX_focus_secret_rearmament
+		x = 17
+		y = 4
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_tactics_training focus = HAM_focus_recruit_barracks }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_army_reform
+		icon = GFX_goal_focus_enact_law
+		x = 17
+		y = 5
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_army_drills }
+		
+		completion_reward = {
+			remove_ideas = HAM_LEGION
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_royal_admiralty
+		icon = GFX_goal_focus_generic_navy_ironclad
+		x = 20
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_expand_1854_reforms }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_naval_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 20
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_royal_admiralty }
+		
+		completion_reward = {
+			868 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_purchase_ships_tech
+		icon = GFX_goal_generic_navy_battleship
+		x = 20
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_naval_dockyard }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = lineship_tech }
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_seemannsschule
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 20
+		y = 4
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_purchase_ships_tech }
+		
+		completion_reward = {
+			add_manpower = 500
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_adopt_constitution
+		icon = GFX_focus_generic_treaty
+		x = 24
+		y = 0
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { has_idea = constitution_adopted }
+		}
+		bypass = {
+			has_idea = constitution_adopted
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = constitution_adopted
+				remove_idea = no_constitution
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_seperate_church
+		icon = GFX_goal_focus_christianity_state_religion
+		x = 23
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_adopt_constitution }
+		available = {
+			NOT = { has_idea = secular_state }
+		}
+		bypass = {
+			has_idea = secular_state
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = secular_state
+				remove_idea = state_religion
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_full_equality
+		icon = GFX_goal_generic_major_alliance
+		x = 23
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_seperate_church }
+		available = {
+			NOT = { has_idea = full_equality }
+		}
+		bypass = {
+			has_idea = full_equality
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = full_equality
+				remove_idea = limited_equality
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_freedom_press
+		icon = GFX_goal_focus_elections
+		x = 23
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_full_equality }
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_open_borders
+		icon = GFX_goal_focus_gerrymandering
+		x = 25
+		y = 1
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_adopt_constitution }
+		available = {
+			NOT = { has_idea = open_borders }
+		}
+		bypass = {
+			has_idea = open_borders
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = open_borders
+				remove_idea = border_control
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_representative_system
+		icon = GFX_goal_focus_support_conservatism
+		x = 25
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_open_borders }
+		available = {
+			NOT = { has_idea = free_elections }
+		}
+		bypass = {
+			has_idea = free_elections
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = free_elections
+				remove_idea = no_elections
+			}
+		}
+	}
+	
+	focus = {
+		id = HAM_focus_trade_law
+		icon = GFX_goal_focus_support_liberalism
+		x = 25
+		y = 3
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = HAM_focus_representative_system }
+		available = {
+			NOT = { has_idea = export_focus }
+		}
+		bypass = {
+			has_idea = export_focus
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = export_focus
+				remove_idea = limited_exports
+			}
+		}
+	}
+	
 }
