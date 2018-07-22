@@ -437,7 +437,17 @@ focus_tree = {
 			focus = afr_wes_govermental_westernisation
 		}
 		completion_reward ={
-			
+			add_political_power = 50
+		}
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_neighbor_country =  {
+					has_idea = afr_colonial_power
+				}
+			}
 		}
 		x = 16
 		y = 2
@@ -453,6 +463,19 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = afr_wes_our_way_not_thiers
 		}
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_neighbor_country =  {
+					has_idea = afr_colonial_power
+				}
+			}
+		}
+		completion_reward ={
+			add_political_power = 50
+		}
 		x = 18
 		y = 2
 
@@ -464,6 +487,17 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_wes_european_politics_focus
 			focus = afr_wes_western_protection
+		}
+		completion_reward ={
+			country_event = {
+				id = EDC_afr.17
+				days = 7
+			}
+		}
+		available = {
+			any_country = {
+				has_idea = afr_colonial_power
+			}
 		}
 		x = 17
 		y = 3
@@ -478,6 +512,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = afr_wes_european_politics_focus
+		}
+		available = {
+			has_country_flag = in_colonal_sphere
+		}
+		bypass = {
+			is_puppet = yes
 		}
 		x = 16
 		y = 4
@@ -558,6 +598,17 @@ focus_tree = {
 		}
 		cancel = {
 			has_country_flag = afr_colonial_request_rejected
+		}
+		available={
+			NOT = {has_country_flag = afr_colonial_request_rejected}
+		}
+		select_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = @ROOT_colonial_deals
+				}
+				country_event = {id = EDC_afr.22 days = 24 random = 50}
+			}
 		}
 		mutually_exclusive = {
 			focus = afr_wes_government_reforms_3

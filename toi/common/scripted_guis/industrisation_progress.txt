@@ -376,7 +376,7 @@ scripted_gui = {
        window_name = "progress_in_colonial_area_container"
  
        context_type = selected_state_context
-	   parent_window_token = "countrystateview"
+	   parent_window_token = selected_state_view 
 		
        visible = {
 			ROOT = {
@@ -388,29 +388,36 @@ scripted_gui = {
 				OWNER = {
 					OR = {
 						capital_scope = {is_on_continent = europe}
-						OVERLORD = {
-							capital_scope = {is_on_continent = europe}
+						AND = {
+							OVERLORD = {
+								capital_scope = {is_on_continent = europe}
+							}
+							NOT = {has_country_flag = @ROOT_colonial_deals}
 						}
 					}
 				}
 			}
 			OR = {
 				any_neighbor_state = {
-					is_controlled_by = ROOT
+					OR = {
+						is_controlled_by = ROOT
+						owner = {
+							OVERLORD = { TAG = ROOT}
+						}
+					}
 				}
 				is_coastal = yes
 			}
 		}
  
         effects = {
-            colonisation_stage_1_bg_click = {##for testing
+            colonisation_stage_1_bg_click = {##
 				#ROOT = {
 					set_variable = {ROOT.colonisation_progress_@THIS = 1}
 					#add_to_variable = { THIS.colonisation_progress = -0.0001}
 					#add_to_variable = { THIS.colonisation_progress = 100000 }
 					#clamp_variable = { var = colonial_power min = 0 max = colonial_power_max }
 				#}
-				#add_claim_by = THIS.colonisation_progress
 				subtract_from_variable = {ROOT.colonial_power = 80}
             }
 			colonisation_stage_2_bg_click = {
@@ -435,6 +442,9 @@ scripted_gui = {
 				add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
 				subtract_from_variable = {ROOT.colonial_power = 190}
 				##send event to owner nation-will lock out any other power within the NATIONS borders
+				owner = {
+					country_event = {id = EDC_afr.19}#ask for fealty/only trader etc
+				}
 			}
 			colonisation_stage_6_bg_click = {
 				add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
@@ -444,36 +454,90 @@ scripted_gui = {
 			colonisation_stage_7_bg_click = {
 				#add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
 				subtract_from_variable = {ROOT.colonial_power = 260}
+				ROOT = {
+					set_state_owner = PREV
+				}
 			}
         }
         triggers = {
 			colonisation_stage_1_bg_click_enabled={
 				NOT = {check_variable = {ROOT.colonisation_progress_@THIS >0}}
 				check_variable = {ROOT.colonial_power >79}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+				}
 			}
 			colonisation_stage_2_bg_click_enabled={	
 				check_variable = {ROOT.colonisation_progress_@THIS =1}
 				check_variable = {ROOT.colonial_power >99}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+				}
 			}
 			colonisation_stage_3_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 2}
 				check_variable = {ROOT.colonial_power >124}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+				}
 			}
 			colonisation_stage_4_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 3}
 				check_variable = {ROOT.colonial_power >154}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+				}
 			}
 			colonisation_stage_5_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 4}
 				check_variable = {ROOT.colonial_power >189}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+				}
 			}
 			colonisation_stage_6_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 5}
 				check_variable = {ROOT.colonial_power >229}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+					is_puppet_of = ROOT
+				}
 			}
 			colonisation_stage_7_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 6}
 				check_variable = {ROOT.colonial_power >259}
+				owner = { 
+					OR = {
+						has_country_flag = @ROOT_colonial_deals
+						NOT = {has_country_flag = in_colonal_sphere}
+					}
+					NOT = {has_country_flag = colonal_state}
+					is_puppet_of = ROOT
+				}
 			}
         }
 	}
