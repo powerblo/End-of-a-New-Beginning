@@ -10,6 +10,8 @@ continuous_focus_palette = {
 			
 	position = { x = 50 y = 2650 }
 
+	#Availability for Continuous Foci will be added later
+	
 	focus = {
 		id = eoanb_focus_continuous_dockyards
 		
@@ -80,6 +82,86 @@ continuous_focus_palette = {
 		}
 		
 		idea = eoanb_continuous_stability
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_military
+		
+		icon = GFX_goal_continuous_non_factory_construct
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_military
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_research
+		
+		icon = GFX_goal_continuous_research
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_research
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_population
+		
+		icon = GFX_goal_continuous_boost_freedom
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_population
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_warsupport
+		
+		icon = GFX_goal_continuous_def_against_influence
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_warsupport
 		
 		ai_will_do = {
 			factor = 1

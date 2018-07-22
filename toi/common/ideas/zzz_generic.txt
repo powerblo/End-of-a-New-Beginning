@@ -62,7 +62,72 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.05
+				stability_weekly = 0.001
+			}
+		}
+		
+		eoanb_continuous_military = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory  = 0.1
+				
+			}
+		}
+		
+		eoanb_continuous_research = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		
+		eoanb_continuous_population = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION  = 0.1
+			}
+		}
+		
+		eoanb_continuous_warsupport = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_weekly = 0.0025
 			}
 		}
 
