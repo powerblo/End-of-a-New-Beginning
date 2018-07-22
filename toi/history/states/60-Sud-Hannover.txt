@@ -2,38 +2,36 @@
 state={
 	id=60
 	name="STATE_60"
-	manpower = 700400
 	resources={
-		steel=8
-		chromium = 2
-		tungsten = 2
-		wood = 2
+		steel=8.000
+		chromium=2.000
+		tungsten=2.000
+		wood=2.000
 	}
-
-	state_category = large_city
 
 	history={
 		owner = THU
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
+
 		}
 		victory_points = {
-			425 5
+			425 5 
 		}
 		victory_points = {
-			538 1
+			538 1 
 		}
 		victory_points = {
-			482 1
-		}
-		victory_points = {
-			3561 1
-		}
-		add_core_of = THU
+			482 1 
+		}		add_core_of = THU
+
 	}
 
 	provinces={
-		425 482 538 3500 3561 6501 6524 6582 9497
+		425 482 538 3500 6501 6524 6582 9497 13665
 	}
+	manpower=700400
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

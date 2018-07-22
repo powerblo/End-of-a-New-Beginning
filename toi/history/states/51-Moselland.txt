@@ -2,39 +2,37 @@
 state={
 	id=51
 	name="STATE_51"
-	manpower = 1700765
 	resources={
-		steel=16
-		wood = 8
-		coal = 8
+		steel=16.000
+		wood=8.000
+		coal=8.000
 	}
-
-
-	state_category = city
 
 	history={
 		owner = PRS
 		victory_points = {
-			6469 10
+			6469 10 
 		}
 		victory_points = {
-			587 5
+			587 5 
 		}
-		
-		victory_points = { 
+		victory_points = {
 			11435 10 
 		}
-		
 		buildings = {
 			infrastructure = 6
 			arms_factory = 1
 			industrial_complex = 1
+
 		}
 		add_core_of = PRS
+
 	}
 
 	provinces={
-		 587 3444 3547 9522 11435 11470 11494 
+		587 3423 3444 3547 9522 11435 11470 11494 
 	}
-
+	manpower=1700765
+	buildings_max_level_factor=1.000
+	state_category=city
 }

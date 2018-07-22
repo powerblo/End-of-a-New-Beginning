@@ -2,19 +2,22 @@
 state={
 	id=57
 	name="STATE_57"
-	manpower = 3409333
-	state_category = large_city
+	resources={
+		coal=6.000
+		wood=2.000
+		steel=2.000
+	}
 
 	history={
 		owner = PRS
 		victory_points = {
-			495 5
+			495 5 
 		}
 		victory_points = {
-			6535 3
+			6535 3 
 		}
 		victory_points = {
-			9509 3
+			9509 3 
 		}
 		buildings = {
 			infrastructure = 6
@@ -24,17 +27,16 @@ state={
 				bunker = 2
 
 			}
+
 		}
 		add_core_of = PRS
-	}
-	
-	resources = {
-		coal = 6
-		wood = 2
-		steel = 2
+
 	}
 
 	provinces={
-		405 495 3355 3398 6535 6622 9443 9509 11346 11431
+		405 495 3398 6535 6622 9443 9509 9547 11346 11431 
 	}
+	manpower=3409333
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

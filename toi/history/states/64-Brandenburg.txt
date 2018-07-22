@@ -2,28 +2,34 @@
 state={
 	id=64
 	name="STATE_64"
-	manpower = 3265029
-	buildings_max_level_factor = 1
-
-	state_category = metropolis
-
+	resources={
+		steel=12.000
+		wood=6.000
+		coal=6.000
+	}
 
 	history={
 		owner = PRS
 		victory_points = {
-			3522 5
+			3522 5 
 		}
-		victory_points = { 
+		victory_points = {
 			3499 3 
 		}
 		victory_points = {
-			11505 1
+			11505 1 
 		}
 		victory_points = {
-			375 1
+			375 1 
 		}
 		victory_points = {
-			6487 1
+			3561 1 
+		}
+		victory_points = {
+			6487 1 
+		}
+		victory_points = {
+			11402 5
 		}
 		buildings = {
 			infrastructure = 5
@@ -34,17 +40,16 @@ state={
 				bunker = 2
 
 			}
+
 		}
 		add_core_of = PRS
-	}
-	
-	resources = {
-		steel = 12
-		wood = 6
-		coal = 6
+
 	}
 
 	provinces={
-		375 3367 3499 3522 6487 9428 9456 9560 11219 11359 11444 11505 
+		375 478 3367 3499 3522 3561 6441 6487 9238 9375 9428 9456 9496 9535 9560 11219 11359 11402 11415 11444 11468 11505 11545 
 	}
+	manpower=3265029
+	buildings_max_level_factor=1.000
+	state_category=metropolis
 }
