@@ -344,7 +344,9 @@ create_corps_commander = {
 create_corps_commander = {
   name = "Gustav Friedrich von Beyer"
   picture = "Portrait_PRS_Gustav_Friedrich_von_Beyer.dds"
-  traits = { }
+  traits = {
+    infantry_leader
+  }
   skill = 3
   attack_skill = 1
   defense_skill = 1
@@ -358,6 +360,30 @@ create_corps_commander = {
   traits = { 
     politically_connected
   }
+  skill = 1
+  attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "Adolf von Bonin"
+  picture = "Portrait_PRS_Adolf_von_Bonin.dds"
+  traits = {
+     infantry_leader
+  }
+  skill = 1
+  attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "August of Wurttemberg"
+  picture = "Portrait_PRS_Prince_August_of_Wurttemberg.dds"
+  traits = { }
   skill = 1
   attack_skill = 1
 	defense_skill = 1
