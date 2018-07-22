@@ -7,20 +7,20 @@ focus_tree = {
 	
 	default = no
 	
-	#focus = {
-	#	id = 
-	#	icon = 
-	#	x = 
-	#	y = 
-	#	cost = 
-	#	available_if_capitulated = no
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#	
-	#	completion_reward = {
-	#		
-	#	}
-	#}
+	focus = {
+		id = GER_focus_finally_united
+		icon = GFX_goal_focus_unlock_germany
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
 	
 }
