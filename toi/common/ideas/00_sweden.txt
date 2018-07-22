@@ -46,6 +46,24 @@ ideas = {
 				training_time_army_factor = 1
 			}				
 		}
+		SWE_Toxic_Politics = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Toxic_Politics
+			
+			modifier = {
+				stability_factor = -0.15				
+				political_power_cost = 0.20		
+			}				
+		}		
 	}
 		
 	army_chief = {
