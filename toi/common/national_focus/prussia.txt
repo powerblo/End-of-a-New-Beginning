@@ -2141,7 +2141,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_unlock_germany
-		icon = GFX_goal_focus_unlock_germany
+		icon = GFX_goal_focus_form_germany
 		x = 13
 		y = 10
 		cost = 10
@@ -2163,6 +2163,38 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_german_ft
+		}
+	}
+	
+	focus = {
+		id = PRS_advance_focus
+		icon = GFX_goal_focus_unlock_germany
+		x = 13
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_unlock_germany }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_trigger_tt_unlock_GER_ft	
+			}
+			hidden_trigger = {
+				OR = {
+				has_cosmetic_tag = PRS_GER_bismarck
+				has_cosmetic_tag = PRS_GER_liberal
+				has_cosmetic_tag = PRS_GER_socialist
+				}
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_focus_tt_german_ft_ready
+			hidden_effect = {
+				load_focus_tree = germany_united_focus
+			}
 		}
 	}
 	
