@@ -6,7 +6,12 @@ GER_unite_liberal = {
 		icon = generic_political_discourse
 
 		available = {
-			PRS_owns_all_ger_unify_state = yes
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_trigger_unite_GER_liberalism
+				hidden_trigger = {
+					PRS_owns_all_ger_unify_state = yes
+				}
+			}
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
 			has_country_flag = eoanb_flag_won_fra_prs_war
@@ -51,7 +56,12 @@ GER_unite_bismarck = {
 		icon = generic_political_discourse
 
 		available = {
-			PRS_owns_all_ger_unify_state = yes
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_trigger_unite_GER_bismarckism
+				hidden_trigger = {
+					PRS_owns_all_ger_unify_state = yes
+				}
+			}
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
 			has_country_flag = eoanb_flag_won_fra_prs_war
@@ -92,7 +102,12 @@ GER_unite_socialist = {
 		icon = generic_political_discourse
 
 		available = {
-			PRS_owns_all_ger_unify_state = yes
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_trigger_unite_GER_socialism		
+				hidden_trigger = {
+					PRS_owns_all_ger_unify_state = yes
+				}
+			}
 			has_country_flag = eoanb_flag_won_2_schleswig_war
 			has_country_flag = eoanb_flag_won_7_weeks_war
 			has_country_flag = eoanb_flag_won_fra_prs_war
