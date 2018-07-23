@@ -39,6 +39,7 @@ focus_tree = {
 		}
 		x = 8
 		y = 0
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -51,6 +52,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = -0.1
 			add_stability = 0.175
+		}
+		available = {
+			NOT = {has_country_flag = first_taranaki_war}
 		}
 		x = 12
 		y = 0
@@ -177,7 +181,15 @@ focus_tree = {
 		}
 		x = 8
 		y = 1
-
+		ai_will_do = {
+			factor = 15
+			
+			# Modifies the base factor if the triggers are met
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	focus = {
 		id = nzl_vic_confiscate_hostile_maori_land
@@ -196,7 +208,15 @@ focus_tree = {
 		}
 		x = 8
 		y = 2
-
+		ai_will_do = {
+			factor = 15
+			
+			# Modifies the base factor if the triggers are met
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	focus = {
 		id = nzl_vic_ignore_TAA_warnings
