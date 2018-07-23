@@ -143,17 +143,19 @@ country_event = {
 	title =  nzl_nzw.2.t
 	desc =  nzl_nzw.2.d
 
-	is_triggered_only = yes
+	#is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		num_divisions > 5
 		tag = NZL
 		date > 1863.06.1
 		#NOT = { date > 1961.10.1 }
-		OR = {
-			1077 = { is_owned_and_controlled_by = NZL } #Taranaki
-		}
+		1077 = { is_owned_and_controlled_by = NZL } #Waikato
 		NOT = { has_country_flag = waikato_invasion_war}
+		KIN = {
+			exists = yes
+		}
 	}
 
 	immediate = {
@@ -162,7 +164,7 @@ country_event = {
 
 	option = {
 		name = nzl_nzw.2.a #shit
-			declare_war_on = {
+		declare_war_on = {
 			target = KIN
 			type = annex_everything
 		}
@@ -358,7 +360,7 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = secound_taranaki_war
+		set_country_flag = second_taranaki_war
 	}
 
 	option = {
@@ -644,14 +646,23 @@ country_event = {#second taranaki war ends in defeat
 	title = nzl_nzw.15.t
 	desc = nzl_nzw.15.d
 	 
-
 	fire_only_once = yes
-	is_triggered_only = yes
+	#is_triggered_only = yes
+	trigger = {
+		date > 1865.06.01
+		has_war = yes
+		TAA = {
+			exists = yes
+			has_war = yes
+		}
+	}
 	immediate = {
 		add_stability = -0.10
 		add_war_support = -0.10
 	}
-
+	mean_time_to_happen = {
+		days = 180
+	}
 	option = {
 		name = nzl_nzw.15.a #we have lost
 		white_peace = TAA

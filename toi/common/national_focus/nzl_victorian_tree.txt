@@ -280,6 +280,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.10
 		}
+		bypass = {
+			has_country_flag = second_taranaki_war
+		}
 		x = 8
 		y = 5
 
@@ -297,9 +300,12 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			NOT = {
-				has_country_flag = nzl_maori_agatate_in_taranaki
-				has_completed_focus = nzl_vic_finish_off_the_taranaki_rebels 
+			OR = {
+				has_country_flag = second_taranaki_war
+				NOT = {
+					has_country_flag = nzl_maori_agatate_in_taranaki
+					has_completed_focus = nzl_vic_finish_off_the_taranaki_rebels 
+				}
 			}
 		}
 		completion_reward = {
@@ -323,6 +329,9 @@ focus_tree = {
 		}
 		x = 8
 		y = 7
+		bypass = {
+			has_country_flag = second_taranaki_war
+		}
 
 	}
 	focus = {
@@ -550,6 +559,7 @@ focus_tree = {
 					tag=ENG
 				}
 			}
+			has_country_flag = first_taranaki_war
 		}
 		completion_reward = {
 			ENG = {country_event = {id = nzl_other.1}}
@@ -1466,8 +1476,8 @@ focus_tree = {
 			focus = nzl_vic_finish_off_the_taranaki_rebels
 		}
 		available = {
-			any_owned_state = {state = 1067 }
-			any_owned_state = {state = 1068 }
+			any_owned_state = {state = 1077 }
+			any_owned_state = {state = 1078 }
 		}
 		x = 8
 		y = 11
