@@ -35,17 +35,21 @@
     state_religion
 	religion_orthodox
         #NATIONAL SPIRITS
-	
+		RUS_idea_selfhandling
+		RUS_idea_outdated_army
+		RUS_idea_agrarian
+		RUS_idea_disconnected_country
+		RUS_idea_lost_crimea_war
   }
 
 
 set_politics = {
     parties = {
       anarchism = {
-        popularity = 0
+        popularity = 3
       }
       vanguard_communism = {
-        popularity = 0
+        popularity = 2
       }
       collectivist_socialism = {
         popularity = 0
@@ -63,10 +67,10 @@ set_politics = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 0
+        popularity = 5
       }
       autocracy = {
-        popularity = 85
+        popularity = 75
       }
       fundamentalism = {
         popularity = 0

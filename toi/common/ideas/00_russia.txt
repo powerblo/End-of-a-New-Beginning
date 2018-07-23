@@ -2,7 +2,7 @@ ideas = {
 	country = {
 		RUS_idea_selfhandling = {
 			allowed = {
-				always = no
+				always = yes
 			}
 			
 			allowed_civil_war = {
@@ -18,6 +18,107 @@ ideas = {
 				stability_factor = -0.30	
 			}
 		}
+		
+		RUS_idea_mahtra_strikes = {
+			allowed = { 
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_mahtra
+			
+			modifier = {
+				stability_weekly = -0.01
+				political_power_gain = -0.1
+				anarchism_drift = 0.01
+				war_support_weekly = -0.05
+				local_resources_factor = -0.01
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_infrastructure_factor = -0.2
+			}
+		}
+		
+		RUS_idea_outdated_army = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+		
+			picture = SWE_Inept_Army
+			
+			research_bonus = { land_doctrine = -0.75 }
+			
+			modifier = {
+			#
+			}
+		}
+		
+		RUS_idea_agrarian = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				production_factory_start_efficiency_factor = -0.25
+			}
+		}
+		
+		RUS_idea_disconnected_country = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_disconnected_country
+			
+			modifier = {
+				army_speed_factor = -0.20
+			}
+		}
+		
+		RUS_idea_lost_crimea_war = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+				army_org_Factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}
 	}
 }
-		
+	
