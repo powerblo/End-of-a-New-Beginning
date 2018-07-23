@@ -169,12 +169,22 @@ guiTypes = {
    }
    containerWindowType = {
        name = "progress_in_colonial_area_container"
-       position = { x = 0 y = 557}
+       position = { x = 0 y = -95}
 		moveable = yes
 		iconType = {
            name ="colonisation_progress_bg"
            spriteType = "GFX_colonisation_menu"
            position = { x=0 y=0 }
+       }
+	   instantTextBoxType = {
+           name ="colonisation_progress_text"
+           position = { x= 25 y = 15 }
+           font = "hoi_18mbs"
+           text = "Colonial State Progress"
+           format = center
+           maxWidth = 250
+           maxHeight = 24
+           fixedsize = yes
        }
        #buttonType ={
        #    name ="colonisation_progress_bg"

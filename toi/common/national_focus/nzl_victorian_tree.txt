@@ -39,6 +39,7 @@ focus_tree = {
 		}
 		x = 8
 		y = 0
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -51,6 +52,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = -0.1
 			add_stability = 0.175
+		}
+		available = {
+			NOT = {has_country_flag = first_taranaki_war}
 		}
 		x = 12
 		y = 0
@@ -177,7 +181,15 @@ focus_tree = {
 		}
 		x = 8
 		y = 1
-
+		ai_will_do = {
+			factor = 15
+			
+			# Modifies the base factor if the triggers are met
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	focus = {
 		id = nzl_vic_confiscate_hostile_maori_land
@@ -196,7 +208,15 @@ focus_tree = {
 		}
 		x = 8
 		y = 2
-
+		ai_will_do = {
+			factor = 15
+			
+			# Modifies the base factor if the triggers are met
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	focus = {
 		id = nzl_vic_ignore_TAA_warnings
@@ -260,6 +280,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.10
 		}
+		bypass = {
+			has_country_flag = second_taranaki_war
+		}
 		x = 8
 		y = 5
 
@@ -277,9 +300,12 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			NOT = {
-				has_country_flag = nzl_maori_agatate_in_taranaki
-				has_completed_focus = nzl_vic_finish_off_the_taranaki_rebels 
+			OR = {
+				has_country_flag = second_taranaki_war
+				NOT = {
+					has_country_flag = nzl_maori_agatate_in_taranaki
+					has_completed_focus = nzl_vic_finish_off_the_taranaki_rebels 
+				}
 			}
 		}
 		completion_reward = {
@@ -303,6 +329,9 @@ focus_tree = {
 		}
 		x = 8
 		y = 7
+		bypass = {
+			has_country_flag = second_taranaki_war
+		}
 
 	}
 	focus = {
@@ -530,6 +559,7 @@ focus_tree = {
 					tag=ENG
 				}
 			}
+			has_country_flag = first_taranaki_war
 		}
 		completion_reward = {
 			ENG = {country_event = {id = nzl_other.1}}
@@ -1446,8 +1476,8 @@ focus_tree = {
 			focus = nzl_vic_finish_off_the_taranaki_rebels
 		}
 		available = {
-			any_owned_state = {state = 1067 }
-			any_owned_state = {state = 1068 }
+			any_owned_state = {state = 1077 }
+			any_owned_state = {state = 1078 }
 		}
 		x = 8
 		y = 11
