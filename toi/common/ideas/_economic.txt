@@ -62,7 +62,12 @@ ideas = {
 		civilian_economy = {
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_civilian_economy
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 		
 			cost = 250
@@ -254,6 +259,14 @@ ideas = {
 
 		free_trade = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_free_trade
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 			
 			cost = 300
 			removal_cost = -1
@@ -274,6 +287,14 @@ ideas = {
 		
 		export_focus = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_export_focus
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 			
 			cost = 300
 			removal_cost = -1
@@ -296,6 +317,14 @@ ideas = {
 		
 		limited_exports = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_limited_exports
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 		
 			cost = 300
 			removal_cost = -1
@@ -432,7 +461,12 @@ ideas = {
 			level = 4
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_five_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {
@@ -464,7 +498,12 @@ ideas = {
 			level = 3
 
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_three_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			modifier = {
@@ -493,7 +532,12 @@ ideas = {
 		two_percent = {
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_two_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {

@@ -106,6 +106,125 @@ political_actions = {
 		
 	}
 	
+	#Core Land from Second Schleswig War
+	eoanb_decision_PRS_core_second_schleswig_war = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1865.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			OR = {
+				PRS = {
+					owns_state = 58
+					owns_state = 949
+					owns_state = 1032
+				}
+				any_country = {
+					limit = {
+						is_subject_of = PRS
+					}
+					owns_state = 58
+					owns_state = 949
+					owns_state = 1032
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 58
+				add_state_core = 949
+				add_state_core = 1032
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Core Land from Seven Weeks War
+	eoanb_decision_PRS_core_seven_weeks_war = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1870.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			OR = {
+				PRS = {
+					owns_state = 1061
+					owns_state = 56
+					owns_state = 59
+					owns_state = 61
+					owns_state = 1034
+					owns_state = 938
+					owns_state = 868
+					owns_state = 867
+					owns_state = 745
+					owns_state = 1035
+				}
+				any_country = {
+					limit = {
+						is_subject_of = PRS
+					}
+					owns_state = 1061
+					owns_state = 56
+					owns_state = 59
+					owns_state = 61
+					owns_state = 1034
+					owns_state = 938
+					owns_state = 868
+					owns_state = 867
+					owns_state = 745
+					owns_state = 1035
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 500
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 1061
+				add_state_core = 56
+				add_state_core = 59
+				add_state_core = 61
+				add_state_core = 1034
+				add_state_core = 938
+				add_state_core = 868
+				add_state_core = 867
+				add_state_core = 745
+				add_state_core = 1035
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }
 
 economic_decisions = {
