@@ -1,16 +1,7 @@
-﻿
-create_country_leader = {
-    name = "Gabriel Antonio Pereira"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_URG_Gabriel_Antonio_Pereira.dds"
-    expire = 1900.1.1
-    ideology = conserv_liberal
-}
-
-1857.1.1 = {
+﻿1857.1.1 = {
   capital = 300
 
-  oob = "URG_1857"
+  oob = "URC_1857"
 
   set_convoys = 50
   
@@ -72,13 +63,13 @@ create_country_leader = {
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 30
+        popularity = 60
       }
       centrism = {
-        popularity = 45
+        popularity = 25
       }
       traditional_conservatism = {
-        popularity = 20
+        popularity = 10
       }
       radical_democracy = {
         popularity = 5
@@ -94,7 +85,7 @@ create_country_leader = {
       }
     }
 
-    ruling_party = centrism
+    ruling_party = social_egalitarianism
   }
 
   set_technology = {
@@ -106,19 +97,9 @@ create_country_leader = {
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Gabriel Antonio Pereira"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_URG_Gabriel_Antonio_Pereira.dds"
-    expire = 1900.1.1
-    ideology = conserv_liberal
-    traits = { }
-
-}
-
-  create_country_leader = {
     name = "Venancio Flores"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_URG_Venancio_Flores.dds"
+    picture = "Portrait_URC_Venancio_Flores.dds"
     expire = 1900.1.1
     ideology = liberal_social
     traits = { }
@@ -126,9 +107,10 @@ create_country_leader = {
 
 
 
+
 create_corps_commander = {
-  name = "Enrique Castro"
-  picture = "Portrait_URG_Enrique_Castro.dds"
+  name = "Leon de Palleja"
+  picture = "Portrait_URC_Leon_de_Palleja.dds"
   traits = { }
   skill = 1
   attack_skill = 1
@@ -137,14 +119,4 @@ create_corps_commander = {
 	logistics_skill = 1
 }
 
-create_corps_commander = {
-  name = "Anacleto Medina"
-  picture = "Portrait_URG_Anacleto_Medina.dds"
-  traits = { }
-  skill = 1
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
 }
