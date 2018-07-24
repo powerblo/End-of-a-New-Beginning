@@ -347,7 +347,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.15.a
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 10 
+			modifier = { 
+				factor = 0 
+				is_historical_focus_on = yes
+			}
+		}
 		PRS = { country_event = { days = 1 id = secschwar.16 } }
 	}
 	

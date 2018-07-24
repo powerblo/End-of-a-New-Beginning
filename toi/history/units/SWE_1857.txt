@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Infanteriregemente"
+	name = "Infanteribrigad"
   
 	division_names_group = SWE_INF_01  
 
@@ -16,7 +16,7 @@
 }
 
 division_template = {
-	name = "Husarregemente"
+	name = "Husarbrigad"
   
 	division_names_group = SWE_CAV_01    
 
@@ -32,7 +32,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Fältjägarregemente"
+	name = "Fältjägarbrigad"
   
 	division_names_group = SWE_MOT_01    
 
@@ -50,58 +50,85 @@ division_template = {
 
 units = {
 		division= {
-			name = "Smålands Regemente"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 13
+			}
 			location = 9329
-			division_template = "Infanteriregemente"
+			division_template = "Infanteribrigad"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "Norra Skånska Infanteriregementet"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 12
+			}
 			location = 11215
-			division_template = "Infanteriregemente"
+			division_template = "Infanteribrigad"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "Bohusläns Regemente"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 11
+			}
 			location = 6310
-			division_template = "Infanteriregemente"
+			division_template = "Infanteribrigad"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "Dalregementet"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 4
+			}
 			location = 77
-			division_template = "Fältjägarregemente"
+			division_template = "Fältjägarbrigad"
 			start_experience_factor = 0.4
 		}
 		division= {
-			name = "Upplands Regemente"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 10
+			}
 			location = 6050
-			division_template = "Infanteriregemente"
+			division_template = "Infanteribrigad"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "Kronprinsens husarregemente"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 7
+			}
 			location = 6050
-			division_template = "Husarregemente"
+			division_template = "Husarbrigad"
 			start_experience_factor = 0.7
 		}
 		division= {
-			name = "Norrlands Husarkår"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 10
+			}
 			location = 9108
-			division_template = "Husarregemente"
+			division_template = "Husarbrigad"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "Adelsfanan"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 3
+			}
 			location = 6050
-			division_template = "Husarregemente"
+			division_template = "Husarbrigad"
 			start_experience_factor = 0.7
 		}
 		
 		division= {
-			name = "Östergötlands Kavalleriregemente"
+			division_name = {
+					is_name_ordered = yes
+					name_order = 11
+			}
 			location = 11380
-			division_template = "Husarregemente"
+			division_template = "Husarbrigad"
 			start_experience_factor = 0.2
 		}		
 		

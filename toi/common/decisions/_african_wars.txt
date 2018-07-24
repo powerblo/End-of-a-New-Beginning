@@ -1,4 +1,3 @@
-
 tribal_decisions_eoanb = {
 	make_tribal_weapons={
 		icon = generic_prepare_civil_war
@@ -9,9 +8,10 @@ tribal_decisions_eoanb = {
 		}
 		visible = {
 			OR = {
-				has_idea = volunteer_only
-				has_idea = limited_conscription
-				has_idea = extensive_conscription
+				has_idea = manpower_tribal_warriors
+				has_idea = manpower_tribal_every_tenth
+				has_idea = manpower_tribal_every_fifth
+				has_idea = manpower_tribal_everyone
 			}
 		}
 		days_re_enable = 120

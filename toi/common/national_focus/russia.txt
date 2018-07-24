@@ -1,0 +1,465 @@
+focus_tree = {
+	id = russia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS
+		}
+	}
+	default = no
+	focus = {
+		id = RUS_ec_ref_1857
+		x = 5
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = RUS_land_to_farms_1857
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RUS_ec_ref_1857
+		}
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available_if_capitulated = no
+		completion_reward = {
+			203 = { add_extra_state_shared_building_slots = 1 }
+			203 = { add_building_construction = { type = cotton_farm level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_log_ind_1857
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = RUS_land_to_farms_1857
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			220 = { add_extra_state_shared_building_slots = 1 }
+			220 = { add_building_construction = { type = logging_camp level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_mat_transfer_1857
+		x = 1 
+		y = 3
+		prerequisite = {
+			focus = RUS_log_ind_1857
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {	
+			203 = { add_extra_state_shared_building_slots = 1 }
+			220 = { add_extra_state_shared_building_slots = 1 }
+			242 = { add_extra_state_shared_building_slots = 1 }
+			203 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			220 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			242 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_mine_eff_1857
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_ec_ref_1857
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RUS_idea_mining
+				days = 180
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_steel_1857
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_mine_eff_1857
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 32
+				state = 242
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_coal_1857
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RUS_steel_1857
+		}
+		available_if_capitulated = no
+		cost = 10
+		completion_reward = {
+			add_resource = {
+				type = coal
+				amount = 18
+				state = 145
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_connect_country_1857
+		x = 5
+		y = 1
+		prerequisite = {
+			focus = RUS_ec_ref_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		cost = 10
+		completion_reward = {
+			add_timed_idea = {
+				idea = RUS_idea_construction
+				days = 180
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_pet_mos_road_1857
+		x = 5
+		y = 2
+		prerequisite = {
+			focus = RUS_connect_country_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		cost = 20
+		completion_reward = {
+			add_political_power = -150
+			195 = { add_extra_state_shared_building_slots = 2 }
+			195 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			208 = { add_extra_state_shared_building_slots = 2 }
+			208 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			263 = { add_extra_state_shared_building_slots = 2 }
+			263 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			246 = { add_extra_state_shared_building_slots = 2 }
+			246 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			219 = { add_extra_state_shared_building_slots = 2 }
+			219 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_POL_inf_1857
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = RUS_pet_mos_road_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			87 = { add_extra_state_shared_building_slots = 1 }
+			87 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			10 = { add_extra_state_shared_building_slots = 1 }
+			10 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			90 = { add_extra_state_shared_building_slots = 1 }
+			90 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			98 = { add_extra_state_shared_building_slots = 1 }
+			98 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_cau_road_1857
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = RUS_POL_inf_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			231 = { add_extra_state_shared_building_slots = 1 }
+			231 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			230 = { add_extra_state_shared_building_slots = 1 } 
+			230 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			229 = { add_extra_state_shared_building_slots = 1 }
+			229 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = RUS_finish_connecting_1857
+		x = 5 
+		y = 5
+		prerequisite = {
+			focus = RUS_cau_road_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = RUS_idea_disconnected_country
+		}
+	}
+	
+	focus = {
+		id = RUS_mil_1_1857
+		x = 7
+		y = 1
+		prerequisite = { 
+			focus = RUS_ec_ref_1857
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = RUS_mil_2_1857
+		x = 7
+		y = 2
+		prerequisite = {
+			focus = RUS_mil_1_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_mil_3_1857
+		x = 7
+		y = 3
+		prerequisite = {
+			focus = RUS_mil_2_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_mil_4_1857
+		x = 7
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = RUS_mil_3_1857
+		}
+		available_if_capitulated = no
+		cost = 10
+		completion_reward = {
+			add_political_power = -50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_ind_cities_1857
+		x = 9
+		y = 1
+		prerequisite = {
+			focus = RUS_ec_ref_1857
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -150
+			add_manpower = -1000
+			953 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			202 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			10 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			195 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			217 = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_moscow_civ_1857
+		x = 9
+		y = 2
+		prerequisite = {
+			focus = RUS_ind_cities_1857
+		}
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_idea_agrarian1
+				remove_idea = RUS_idea_agrarian
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_wars_civ_1857
+		x = 9
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = RUS_moscow_civ_1857
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_idea_agrarian2
+				remove_idea = RUS_idea_agrarian1
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_tsar_civ_1857
+		x = 9
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = RUS_wars_civ_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_idea_agrarian3
+				remove_idea = RUS_idea_agrarian2
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_industrialize_1857
+		x = 8
+		y = 5
+		prerequisite = {
+			focus = RUS_tsar_civ_1857
+		}
+		prerequisite = {
+			focus = RUS_mil_4_1857
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		cost = 20
+		completion_reward = {
+			remove_ideas = RUS_idea_agrarian3
+			swap_ideas = {
+				add_idea = industrializing
+				remove_idea = agrarian
+			}
+		}
+	}
+}

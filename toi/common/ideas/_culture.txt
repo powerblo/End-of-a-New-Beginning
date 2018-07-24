@@ -12,7 +12,12 @@ ideas = {
 			picture = GFX_idea_oral_tradition
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_oral_tradition
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -33,7 +38,12 @@ ideas = {
 			picture = GFX_idea_priviledged_education
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_privileged_education
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -61,7 +71,12 @@ ideas = {
 			picture = GFX_idea_open_schools
 
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_open_schools
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -82,7 +97,12 @@ ideas = {
 		compulsory_education = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_compulsory_education
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {

@@ -9,7 +9,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_hos_is_leader
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -32,7 +37,12 @@ ideas = {
 			}
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_hos_regency
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -53,7 +63,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_pre_industrial_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -84,7 +99,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_victorian_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -113,7 +133,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_machine_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -138,7 +163,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_oil_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -161,7 +191,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_aviation_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -188,7 +223,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_modern_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -217,7 +257,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_atomic_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -246,7 +291,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_information_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -275,7 +325,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_digital_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -304,7 +359,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_post_digital_era
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -340,11 +400,14 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_pre_industrial_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -425,11 +488,14 @@ ideas = {
 			level = 2
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_victorian_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -509,11 +575,14 @@ ideas = {
 			level = 2
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_victorian_army_PRS
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -564,11 +633,14 @@ ideas = {
 			level = 3
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_machine_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -647,11 +719,14 @@ ideas = {
 			level = 4
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_combined_arms
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -730,11 +805,14 @@ ideas = {
 			level = 5
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_modern_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -814,11 +892,14 @@ ideas = {
 			level = 6
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_digital_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -898,11 +979,14 @@ ideas = {
 			level = 7
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_modern_war_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -982,11 +1066,14 @@ ideas = {
 			level = 8
 			
 			available = {
-				always = no
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_futuristic_army
+				}
 				hidden_trigger = {
+					always = no
 					NOT = {
 						OR = {
 							has_idea = AF_T_unorganized_tribal_nation
@@ -1374,7 +1461,12 @@ ideas = {
 			level = 5
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_agrarian
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1398,7 +1490,12 @@ ideas = {
 			level = 4
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_industrializing
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1427,7 +1524,12 @@ ideas = {
 			level = 3
 
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_industrialized
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1448,7 +1550,12 @@ ideas = {
 		electrification = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_electrification
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1476,7 +1583,12 @@ ideas = {
 		mass_production = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_mass_production
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1513,7 +1625,12 @@ ideas = {
 			level = 5
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_non_monarchical_system
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 			
 			modifier = {
@@ -1532,7 +1649,12 @@ ideas = {
 			level = 4
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_no_heir
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1559,7 +1681,12 @@ ideas = {
 			level = 3
 
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_dethroned_heir
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1581,7 +1708,12 @@ ideas = {
 		nonfamily_heir = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_nonfamily_heir
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1605,7 +1737,12 @@ ideas = {
 		weak_heir = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_weak_heir
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1630,7 +1767,12 @@ ideas = {
 		has_heir = {
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_has_heir
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			ai_will_do = {
@@ -1662,7 +1804,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_catholic
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1680,8 +1827,13 @@ ideas = {
 			removal_cost = -1
 			level = 1
 
-			allowed = { 
-				always = no 
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_protestant
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1698,7 +1850,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_orthodox
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1717,7 +1874,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_coptic
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1736,7 +1898,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_sunni
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1755,7 +1922,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_shiite
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1774,7 +1946,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_ibadi
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1793,7 +1970,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_jewish
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1812,7 +1994,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_mahayana
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1831,7 +2018,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_gelupga
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1850,7 +2042,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_theravada
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1869,7 +2066,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_hindu
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1888,7 +2090,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_shinto
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1907,7 +2114,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_sikh
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1926,7 +2138,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_animist
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -1945,7 +2162,12 @@ ideas = {
 			level = 1
 			
 			available = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_secular
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {

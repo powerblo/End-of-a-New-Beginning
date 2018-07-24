@@ -29,7 +29,12 @@ ideas = {
 			level = 4
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_encouraged_growth
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {
@@ -56,7 +61,12 @@ ideas = {
 			level = 3
 
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_stagnation_growth
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			modifier = {
@@ -78,7 +88,12 @@ ideas = {
 		disencouraged_growth = {
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_disencouraged_growth
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {
@@ -104,7 +119,12 @@ ideas = {
 		restricted_growth = {
 			
 			available = {
-				always = yes
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_restricted_growth
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {

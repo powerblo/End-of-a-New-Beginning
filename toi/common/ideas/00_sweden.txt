@@ -63,6 +63,76 @@ ideas = {
 				stability_factor = -0.15				
 				political_power_cost = 0.20		
 			}				
+		}
+		SWE_government_intervention_judicial = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_government_intervention_judicial
+			
+			modifier = {				
+				political_power_cost = 0.50		
+			}				
+		}
+		SWE_lumber_boom = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Profits
+			
+			modifier = {
+				consumer_goods_factor = -0.05					
+			}				
+		}
+		SWE_profits_for_the_rich = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_profits_for_the_rich
+			
+			modifier = {			
+				consumer_goods_factor = 0.15	
+			}				
+		}
+		SWE_SWAFD = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_SWAFD
+			
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.05				
+				conscription = 0.01
+			}				
 		}		
 	}
 		
