@@ -492,6 +492,47 @@ ideas = {
 			}
 		}
 	}
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		PRS_infantry_equipment_manufactory_krupp = {
+
+			picture = generic_infantry_equipment_manufacturer_3
+
+			allowed = {
+				original_tag = PRS
+			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				infantry_weapons = 0.05
+			}
+
+			traits = { PRS_trait_infantery_krupp }
+		}
+		
+		PRS_artillery_equipment_manufactory_spandau = {
+
+			picture = generic_artillery_manufacturer_1
+
+			allowed = {
+				original_tag = PRS
+			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				artillery = 0.05
+			}
+
+			traits = { PRS_trait_artillery_spandau }
+		}
+		
+	}
 	army_chief = {
 		PRS_Albrecht_von_Roon = {
 			
@@ -510,6 +551,54 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+	}
+	theorist = {
+		PRS_theorist_naval_prince_adalbert = {
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			cost = 250
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { PRS_trait_naval_adalbert }
+		}
+		PRS_theorist_air_otto_lilienthal = {
+
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				date > 1865.1.1
+			}
+			
+			cost = 250
+
+			research_bonus = {
+				air_doctrine = 0.1
+				aviation_tech = 0.1
+			}
+
+			traits = { PRS_trait_air_lilienthal }
+		}
+		PRS_theorist_land_moltke = {
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			cost = 250
+
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+
+			traits = { PRS_trait_land_moltke }
 		}
 	}
 }

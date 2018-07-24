@@ -424,7 +424,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS } }
 			}
 
 			cost = 150
@@ -445,7 +445,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = artillery_manufacturer_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS } }
 			}
 
 			cost = 150
@@ -674,7 +674,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = military_theorist limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS } }
 			}
 
 			research_bonus = {
@@ -690,7 +690,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = naval_theorist limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS } }
 			}
 
 			research_bonus = {
@@ -706,11 +706,11 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = air_warfare_theorist limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = PRS } }
 			}
 
 			research_bonus = {
-				air_warfare_doctrine = 0.05
+				air_doctrine = 0.05
 			}
 
 			traits = { air_warfare_theorist }
