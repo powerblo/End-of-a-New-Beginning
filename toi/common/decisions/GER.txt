@@ -143,3 +143,67 @@ GER_unite_socialist = {
 	}
 	
 }
+
+political_actions = {
+
+	#Core Land that is not German after unification
+	eoanb_decision_GER_core_united_reich = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_trigger_core_united_reich		
+				hidden_trigger = {
+					PRS = {
+						owns_state = 42
+						owns_state = 870
+						owns_state = 54
+						owns_state = 53
+						owns_state = 52
+						owns_state = 950
+						owns_state = 50
+						owns_state = 744
+						owns_state = 28
+					}
+				}
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			OR = {
+				has_cosmetic_tag = PRS_GER_liberal
+				has_cosmetic_tag = PRS_GER_bismarck
+				has_cosmetic_tag = PRS_GER_socialist
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 250
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_core_united_reich
+			hidden_effect = {
+				PRS = {
+					add_state_core = 42
+					add_state_core = 870
+					add_state_core = 54
+					add_state_core = 53
+					add_state_core = 52
+					add_state_core = 950
+					add_state_core = 50
+					add_state_core = 744
+					add_state_core = 28
+				}
+				28 = { set_state_name = "Elsass" }
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}
