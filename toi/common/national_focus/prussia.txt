@@ -1047,7 +1047,7 @@ focus_tree = {
 	focus = {
 		id = PRS_focus_1858_elections
 		icon = GFX_goal_focus_elections
-		x = 43
+		x = 45
 		y = 0
 		cost = 10
 		available_if_capitulated = no
@@ -1063,84 +1063,84 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = PRS_focus_new_era
-		icon = GFX_goal_focus_enact_law
-		x = 36
-		y = 1
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = PRS_focus_1858_elections }
-		
-		completion_reward = {
-			add_timed_idea = { idea = PRS_idea_new_era days = 500 }
-		}
-	}
+	#focus = {
+	#	id = PRS_focus_new_era
+	#	icon = GFX_goal_focus_enact_law
+	#	x = 36
+	#	y = 1
+	#	cost = 10
+	#	available_if_capitulated = no
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = { focus = PRS_focus_1858_elections }
+	#	
+	#	completion_reward = {
+	#		add_timed_idea = { idea = PRS_idea_new_era days = 500 }
+	#	}
+	#}
 	
-	focus = {
-		id = PRS_focus_second_eisenach
-		icon = GFX_goal_generic_improve_relations
-		x = 36
-		y = 2
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = PRS_focus_new_era }
-		
-		completion_reward = {
-			custom_effect_tooltip = PRS_focus_tt_second_eisenach
-			hidden_effect = {
-				add_opinion_modifier = { target = BAD modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = BAD modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = BAV modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = BAV modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = HSD modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = HSD modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = FRK modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = FRK modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = HES modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = HES modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = THU modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = THU modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = SAX modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = SAX modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = HAN modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = HAN modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = OLD modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = OLD modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = BRE modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = BRE modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = HAM modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = HAM modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = LCK modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = LCK modifier = PRS_FOCUS_EISENACH_REL }
-				add_opinion_modifier = { target = MCK modifier = PRS_FOCUS_EISENACH_REL }
-				reverse_add_opinion_modifier = { target = MCK modifier = PRS_FOCUS_EISENACH_REL }
-			}
-		}
-	}
+	#focus = {
+	#	id = PRS_focus_second_eisenach
+	#	icon = GFX_goal_generic_improve_relations
+	#	x = 36
+	#	y = 2
+	#	cost = 10
+	#	available_if_capitulated = no
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = { focus = PRS_focus_new_era }
+	#	
+	#	completion_reward = {
+	#		custom_effect_tooltip = PRS_focus_tt_second_eisenach
+	#		hidden_effect = {
+	#			add_opinion_modifier = { target = BAD modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = BAD modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = BAV modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = BAV modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = HSD modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = HSD modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = FRK modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = FRK modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = HES modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = HES modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = THU modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = THU modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = SAX modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = SAX modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = HAN modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = HAN modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = OLD modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = OLD modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = BRE modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = BRE modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = HAM modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = HAM modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = LCK modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = LCK modifier = PRS_FOCUS_EISENACH_REL }
+	#			add_opinion_modifier = { target = MCK modifier = PRS_FOCUS_EISENACH_REL }
+	#			reverse_add_opinion_modifier = { target = MCK modifier = PRS_FOCUS_EISENACH_REL }
+	#		}
+	#	}
+	#}
 	
-	focus = {
-		id = PRS_focus_nationalverein
-		icon = GFX_goal_focus_invite_prussian_diplomats
-		x = 36
-		y = 3
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = PRS_focus_second_eisenach }
-		
-		completion_reward = {
-			custom_effect_tooltip = PRS_focus_tt_nationalverein
-		}
-	}
+	#focus = {
+	#	id = PRS_focus_nationalverein
+	#	icon = GFX_goal_focus_invite_prussian_diplomats
+	#	x = 36
+	#	y = 3
+	#	cost = 10
+	#	available_if_capitulated = no
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = { focus = PRS_focus_second_eisenach }
+	#	
+	#	completion_reward = {
+	#		custom_effect_tooltip = PRS_focus_tt_nationalverein
+	#	}
+	#}
 	
 	focus = {
 		id = PRS_focus_army_mobilization
@@ -1248,7 +1248,6 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_1862_elections }
 		mutually_exclusive = { focus = PRS_focus_new_candidate }
 		available = { 
-			has_completed_focus = PRS_focus_new_era
 			has_completed_focus = PRS_focus_constitutional_crisis
 			has_completed_focus = PRS_focus_dissolve_parliament
 		}
@@ -1274,7 +1273,6 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_1862_elections }
 		mutually_exclusive = { focus = PRS_focus_king_abdicate } 
 		available = { 
-			has_completed_focus = PRS_focus_new_era
 			has_completed_focus = PRS_focus_constitutional_crisis
 			has_completed_focus = PRS_focus_dissolve_parliament
 		}
@@ -1284,7 +1282,7 @@ focus_tree = {
 			create_country_leader = {
 			name = "Otto von Bismarck"
 			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "gfx/leaders/PRS/Portrait_PRS_Otto_von_Bismarck_Military.dds"
+			picture = "gfx/leaders/PRS/Portrait_PRS_Otto_von_Bismarck.dds"
 			expire = "1900.1.1"
 			ideology = conserv
 			traits = {
@@ -1709,6 +1707,23 @@ focus_tree = {
 		
 		completion_reward = {
 			swap_ideas = { remove_idea = state_religion add_idea = secular_state }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_nationalverein
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 45
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_seperate_state_church }
+		
+		completion_reward = {
+			custom_effect_tooltip = PRS_focus_tt_nationalverein
 		}
 	}
 	
@@ -2581,6 +2596,515 @@ focus_tree = {
 		completion_reward = {
 			add_opinion_modifier = { target = RUS modifier = eoanb_om_PRS_NGC_improved }
 			reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_PRS_NGC_improved }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_colonial_politics_branch
+		icon = GFX_goal_focus_international_investments
+		x = 55
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				PRS = { has_navy_size = { size > 24 } }
+				PRS = { has_tech = tech_naval_1857_troops }
+				PRS = { has_completed_focus = PRS_high_seas }
+			}
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_brandenburg_colonies
+		icon = GFX_goal_focus_ally_PRS
+		x = 55
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_colonial_politics_branch }
+		
+		completion_reward = {
+			PRS = {
+				add_state_claim = 1110
+				add_state_claim = 1111
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_goldcoast_stfriedrichsburg
+		icon = GFX_goal_focus_christianity_state_religion
+		x = 54
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_cpb_brandenburg_colonies }
+		
+		completion_reward = {
+			PRS = {
+				transfer_state = 1110
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_togo_whydah
+		icon = GFX_goal_focus_christianity_state_religion
+		x = 56
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_cpb_brandenburg_colonies }
+		
+		completion_reward = {
+			PRS = {
+				transfer_state = 1111
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_kaabu_koba_pitstop
+		icon = GFX_goal_generic_amphibious_assault
+		x = 55
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_cpb_togo_whydah focus = PRS_focus_cpb_goldcoast_stfriedrichsburg }
+		
+		completion_reward = {
+			PRS = {
+				transfer_state = 1109
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_colonial_navy
+		icon = GFX_goal_focus_mass_produce_ships
+		x = 52
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_colonial_politics_branch }
+		
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = naval_equipment }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_cpb_purchase_curacao
+		icon = GFX_goal_focus_increase_wages
+		x = 58
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_colonial_politics_branch }
+		available = {
+			695 = { is_owned_by = HOL }
+		}
+		
+		completion_reward = {
+			HOL = { country_event = { days = 1 id = prussiafocus.3 } }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_foreign_politics_branch
+		icon = GFX_goal_focus_reform_administration
+		x = 35
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_foreign_politics_ENG
+		icon = GFX_goal_focus_ally_ENG
+		x = 31
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_branch }
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_ENG
+		icon = GFX_goal_focus_merchants_british
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_ENG }
+		mutually_exclusive = { focus = PRS_focus_fp_dislike_ENG }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_focus_like }
+			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_focus_like }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_ENG_2
+		icon = GFX_goal_focus_banks
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_like_ENG }
+		
+		completion_reward = {
+			add_political_power = 150
+			ENG = { add_political_power = 150 }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_ENG_3
+		icon = GFX_goal_focus_colonial_empire_uk
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_like_ENG_2 }
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_ENG
+		icon = GFX_focus_generic_coastal_fort
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_ENG }
+		mutually_exclusive = { focus = PRS_focus_fp_like_ENG }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_focus_dislike }
+			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_focus_dislike }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_ENG_2
+		icon = GFX_goal_focus_popularize
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_dislike_ENG }
+		
+		completion_reward = {
+			ENG = { add_stability = -0.05 }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_ENG_3
+		icon = GFX_goal_focus_generic_navy_ironclad
+		x = 32
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_dislike_ENG_2 }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_foreign_politics_europe
+		icon = GFX_goal_focus_continent_west_europe
+		x = 35
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_branch }
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fpe_towards_aus
+		icon = GFX_goal_focus_ally_AUS
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_focus_like }
+			reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_focus_like }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fpe_towards_swi
+		icon = GFX_goal_focus_ally_SWI
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = SWI modifier = eoanb_om_PRS_focus_like }
+			reverse_add_opinion_modifier = { target = SWI modifier = eoanb_om_PRS_focus_like }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fpe_european_embassies
+		icon = GFX_goal_focus_decentralisation_power
+		x = 35
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fpe_towards_swi focus = PRS_focus_fpe_towards_aus }
+		
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fpe_prussian_ambitions
+		icon = GFX_goal_focus_gerrymandering
+		x = 35
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fpe_european_embassies }
+		
+		completion_reward = {
+			add_war_support = 0.05
+			hidden_effect = {
+				add_named_threat = { 
+					threat = 2
+					name = eoanb_threat_name_PRS_ambitions
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_foreign_politics_FRA
+		icon = GFX_goal_focus_ally_FRA
+		x = 39
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_branch }
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_FRA
+		icon = GFX_goal_focus_merchants_french
+		x = 38
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_FRA }
+		mutually_exclusive = { focus = PRS_focus_fp_dislike_FRA }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_like }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_like }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_FRA_2
+		icon = GFX_goal_focus_colonial_empire_france
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_like_FRA }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_like_FRA_3
+		icon = GFX_focus_generic_treaty
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_like_FRA_2 }
+		
+		completion_reward = {
+			add_political_power = 150
+			FRA = { add_stability = 0.05 }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_FRA
+		icon = GFX_goal_focus_franco_prussian_war
+		x = 40
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_foreign_politics_FRA }
+		mutually_exclusive = { focus = PRS_focus_fp_like_FRA }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_dislike }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_dislike }
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_FRA_2
+		icon = GFX_goal_focus_fund_partisans
+		x = 40
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_dislike_FRA }
+		
+		completion_reward = {
+			FRA = {
+				add_political_power = -100
+				add_stability = -0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = PRS_focus_fp_dislike_FRA_3
+		icon = GFX_goal_focus_leave_continent_alone
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = PRS_focus_fp_dislike_FRA_2 }
+		
+		completion_reward = {
+			FRA = { 
+				add_timed_idea = {
+					idea = PRS_idea_undermine_france
+					days = 365
+				} 
+			}
 		}
 	}
 	

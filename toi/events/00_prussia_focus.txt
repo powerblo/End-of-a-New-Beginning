@@ -29,6 +29,7 @@ country_event = {
 
 		}
 		}
+		add_timed_idea = { idea = PRS_idea_new_era days = 500 }
 		hidden_effect = {
 			complete_national_focus = PRS_focus_1858_elections
 		}
@@ -68,4 +69,64 @@ country_event = {
 			complete_national_focus = PRS_focus_1862_elections
 		}
 	}
+}
+
+#Prussia wants to buy Curacao
+country_event = {
+	id = prussiafocus.3
+	title = prussiafocus.3.t
+	desc = prussiafocus.3.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussiafocus.3.a
+		ai_chance = { factor = 75 }
+		add_political_power = 100
+		PRS = { country_event = { days = 1 id = prussiafocus.4 } }
+	}
+	
+	option = {
+		name = prussiafocus.3.b
+		ai_chance = { factor = 25 }
+		PRS = { country_event = { days = 1 id = prussiafocus.5 } }
+	}
+	
+}
+
+#HOL says Yes
+country_event = {
+	id = prussiafocus.4
+	title = prussiafocus.4.t
+	desc = prussiafocus.4.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussiafocus.4.a
+		ai_chance = { factor = 100 }
+		add_political_power = -100
+		PRS = {
+			transfer_state = 695
+		}
+	}
+	
+}
+
+#HOL says No
+country_event = {
+	id = prussiafocus.5
+	title = prussiafocus.5.t
+	desc = prussiafocus.5.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussiafocus.5.a
+		ai_chance = { factor = 100 }
+	}
+	
 }
