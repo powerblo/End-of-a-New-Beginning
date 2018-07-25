@@ -171,6 +171,20 @@ country_event = {
 		ITA = {set_politics = {ruling_party = centrism elections_allowed = yes}}
 	}
 }
+country_event = { 
+	id = ita.8
+	title = ita.8.t
+	desc = ita.8.d
+	picture = GFX_ITA_Proclamation_of_the_Kingdom_of_Italy
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.8.a
+		custom_effect_tooltip = ita_formation_of_italy_tips
+	}
+}
+
 
 
 
