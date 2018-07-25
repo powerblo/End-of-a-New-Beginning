@@ -494,9 +494,13 @@ add_war_support = 0.05
     name = brazil.25.a
 	trigger = { original_tag = BRA }
 	add_political_power = 35
-	declare_war_on = {
-    target = URG
-    type = topple_government
+	add_manpower = -18000
+	URC = { load_oob = "BRA_volunteers" 
+	add_equipment_to_stockpile = {
+    type = cavalry_equipment
+    amount = 1000
+    producer = BRA
+}
 }
 }
   option = { #  Empire
@@ -504,11 +508,33 @@ add_war_support = 0.05
 	trigger = { original_tag = URG }
 	add_political_power = -25
 	add_stability = -0.5
+	URC = { 
+	transfer_state = 1097 
+	load_oob = "URC_1857"
+	every_state = {
+			limit = {
+				is_core_of = URG
+			}		
+	add_core_of = URC
+}
+}	
+	declare_war_on = {
+    target = URC
+    type = annex_everything
+}
+
 }
 
   option = { #  Empire
     name = brazil.25.c
 	trigger = { NOT = { original_tag = URG } NOT = { original_tag = BRA } }
+}
+
+ option = { #  Empire
+    name = brazil.25.d1
+	trigger = { original_tag = ARG }
+	add_manpower = -2000
+	URC = { add_manpower = 2000 }
 }
  }
 

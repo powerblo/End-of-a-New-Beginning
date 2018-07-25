@@ -79,10 +79,21 @@ bookmarks = {
         GER_general_idea_ger_confed
         AUS_hungarian_revolution
       }
-    }
-     "PIE" = {
+    }     
+	
+	"CHI" = {
+      history = "CHI_END_OF_NEW_BEG_DESC"
+      ideology = autocracy
+    } 
+
+	"---" = {
+			history = "OTHER_EONAB_DESC"
+	}	
+	
+	"PIE" = {
       history = "PIE_END_OF_NEW_BEG_DESC"
       ideology = centrism
+	  minor = yes
       ideas={
         PIE_National_Society
       }
@@ -92,15 +103,17 @@ bookmarks = {
         PIE_Form_Italy
       }
     }
-	"---" = {
-			history = "OTHER_EONAB_DESC"
-	}
-    "OTO" = {
-      history = "OTO_END_OF_NEW_BEG_DESC"
-      ideology = autocracy
-      minor = yes
-    }
-    "BEL" = {
+	"BRA" = {
+  	  history = "BRA_END_OF_NEW_BEG_DESC"
+  	  ideology = autocracy
+  	  minor = yes
+	  ideas={
+        BRA_golden_prosperity
+        BRA_transatlantic
+        BRA_parliament
+      }
+    }     
+	"BEL" = {
       history = "BEL_END_OF_NEW_BEG_DESC"
       ideology = centrism
       minor = yes
@@ -114,12 +127,21 @@ bookmarks = {
         BEL_leopold_i_colonial_ambitions
         BEL_thousand_meter_of_mines
       }
-    }
-     "CHI" = {
-      history = "CHI_END_OF_NEW_BEG_DESC"
+    }	
+		
+	"POR" = {
+  	  history = "POR_END_OF_NEW_BEG_DESC"
+  	  ideology = traditional_conservatism
+  	  minor = yes
+  	}
+	
+    "OTO" = {
+      history = "OTO_END_OF_NEW_BEG_DESC"
       ideology = autocracy
       minor = yes
     }
+	
+
     "JAP" = {
       history = "JAP_END_OF_NEW_BEG_DESC"
       ideology = fundamentalism
@@ -135,20 +157,7 @@ bookmarks = {
       ideology = autocracy
       minor = yes
     }
-  	"POR" = {
-  	  history = "POR_END_OF_NEW_BEG_DESC"
-  	  ideology = traditional_conservatism
-  	  minor = yes
-  	}
-	 "BRA" = {
-  	  history = "BRA_END_OF_NEW_BEG_DESC"
-  	  ideology = autocracy
-  	  minor = yes
-	  ideas={
-        BRA_golden_prosperity
-        BRA_transatlantic
-        BRA_parliament
-      }
-    }
+
+
   }
 }
