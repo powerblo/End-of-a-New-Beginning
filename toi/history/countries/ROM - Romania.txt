@@ -1,5 +1,5 @@
-﻿1857.1.1 = {
-  capital = 46
+1857.1.1 = {
+  capital = 1034
 
   oob = "ROM_1857"
 
@@ -12,7 +12,6 @@
 		  
     hos_is_leader
     victorian_era
-	law_victorian_army
     agrarian
     no_heir
     absolute_monarchy
@@ -35,7 +34,8 @@
     state_religion
 	religion_orthodox
         #NATIONAL SPIRITS
-	
+	#ROM_idea_sentiment_of_unity
+	#ROM_battleground - not yet implemented
   }
 
 
@@ -57,19 +57,19 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 13
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 47
       }
       chauvinist_populism = {
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 10
       }
       fundamentalism = {
-        popularity = 0
+        popularity = 20
       }
     }
 
@@ -80,8 +80,8 @@
 
   set_technology = {
 	infantry_weapons = 1
-	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	vic_army_cloth = 2
+	tech_naval_1812_frigate = 2
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -94,15 +94,95 @@
 
   # POLITICAL LEADERS
 
+
+
 create_country_leader = {
-	name = "Barbu Dimitrie Stirbei"
-	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
-	picture = "Portrait_ROM_Barbu_Dimitrie_Stirbei.dds"
-	expire = "1965.1.1"
-	ideology = despotism
+	name = "Alexandru Dimitrie Ghica"
+	desc = "POLITICS_AD_GHIKA_DESC"
+	picture = "Portrait_ROM_AD_Ghica.dds"
+	expire = "1870.1.1"
+	ideology = absolutism
 	traits = {
 		#
 	}
 }
+
+#create_country_leader = {
+#	name = "Barbu Dimitrie Stirbei"
+#	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
+#	picture = "Portrait_ROM_Barbu_Dimitrie_Stirbei.dds"
+#	expire = "1965.1.1"
+#	ideology = despotism
+#	traits = {
+#		#
+#	}
+#}
+
+#create_country_leader = {
+#	name = "Alexandru I. Cuza"
+#	desc = "POLITICS_CUZA_DESC"
+#	picture = "Portrait_ROM_A.I.Cuza.dds"
+#	expire = "1965.1.1"
+#	ideology = despotism
+#	traits = {
+#		#
+#	}
+#}
+
+#create_country_leader = {
+#	name = "Mihail Kogălniceanu"
+#	desc = "POLITICS_KOGALNICEANU_DESC"
+#	picture = "Portrait_ROM_M_Kogalniceanu.dds"
+#	expire = "1965.1.1"
+#	ideology = despotism
+#	traits = {
+#		#
+#	}
+#}
+
+create_country_leader = {
+	name = "Ion C. Brătianu"
+	desc = "POLITICS_BRATIANU_DESC"
+	picture = "Portrait_ROM_I.C.Brat.dds"
+	expire = "1965.1.1"
+	ideology = reactionary # Radical Liberals represented by radical democracy until the foundation of the National Liberal Party
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+    name = "Alexander D. Macedonsky"
+    picture = "Portrait_ROM_A_Macedonski.dds"
+    traits = { }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 3
+ }
+
+create_corps_commander = {
+    name = "Nicolae Haralambie"
+    picture = "Portrait_ROM_N_HARALAMBIE.dds"
+    traits = { }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 3
+ }
+ 
+ create_corps_commander = {
+    name = "Nicolae C. Golescu"
+    picture = "Portrait_ROM_N_golescu.dds"
+    traits = { }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+ }
+
 
 }
