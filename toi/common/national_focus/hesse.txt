@@ -1,0 +1,129 @@
+focus_tree = {
+    id = hesse_focus
+	
+	country = {
+	    factor = 0
+		
+		modifier = {
+		    add = 20
+			tag = HES
+		}
+	}
+	
+	default = no
+	
+	#military tree
+	
+	focus = {
+	    id = HES_army
+		icon = GFX_no_idea_lol
+		x = 1
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		completion_reward = {
+		    army_experience = 15
+		}
+	}
+	
+	focus = {
+	    id = HES_cavalry_uniforms
+		icon = GFX_no_idea_lol
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		prerequisite = { focus = HES_army }
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+			    type = uniform_equipment_1
+				amount = 1000
+				producer = HES
+			}
+		}
+	}
+	
+	focus = {
+	    id = HES_draft
+		icon = GFX_no_idea_lol
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		prerequisite = { focus = HES_cavalry_uniforms }
+		completion_reward = {
+		    if = {
+			    limit = {
+				    OR = { 
+					    has_idea = disarmed_nation
+						has_idea = volunteer_only 
+					}
+				}
+				add_ideas = limited_conscription
+			}
+			else = {
+			    add_manpower = 15000
+			}
+		}
+	}
+	
+	focus = {
+	    id = HES_army_expansion
+		icon = GFX_no_idea_lol
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		prerequisite = { focus = HES_army }
+		completion_reward = {
+		    add_ideas = HES_expanded_army
+		}
+	}
+	
+	focus = {
+	    id = HES_gendarmerie
+		icon = GFX_no_idea_lol
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		prerequisite = { focus = HES_army_expansion }
+		completion_reward = {
+		    add_ideas = HES_gendarmerie
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = HES_army_budget
+		icon = GFX_no_idea_lol
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+		    factor = 1
+		}
+		prerequisite = { focus = HES_gendarmerie }
+		prerequisite = { focus = HES_draft }
+		completion_reward = {
+		    remove_ideas = HES_army_budget_problem
+			add_stability = -0.05
+		}
+	}
+}
