@@ -10,7 +10,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.02
 			}
 		}
 		
@@ -24,8 +24,8 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.02
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 		
@@ -39,9 +39,9 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_speed_arms_factory_factor = 0.1
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.02
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.02
 			}
 		}
 		
@@ -55,8 +55,8 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.02
+				production_speed_industrial_complex_factor = 0.05
 			}
 		}
 		
@@ -70,9 +70,9 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_speed_industrial_complex_factor = 0.1
-				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.02
+				production_speed_industrial_complex_factor = 0.05
+				local_resources_factor = 0.02
 				production_speed_arms_factory_factor = -0.025
 			}
 		}
@@ -87,7 +87,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.02
 			}
 		}
 		
@@ -101,8 +101,8 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				line_change_production_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.02
+				line_change_production_efficiency_factor = 0.02
 			}
 		}
 		
@@ -580,6 +580,78 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
+			}
+		}
+	}
+	
+	political_advisor = {
+		BAV_advisor_friedrich_von_hegnenberg_dux = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				clever_buisnessman 
+			}
+		}
+		
+		BAV_advisor_joseph_poezl = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				working_class_figurehead 
+			}
+		}
+		
+		BAV_advisor_august_schenk_von_stauffenberg = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				efficient_administrator 
+			}
+		}
+		
+		BAV_advisor_gustav_von_schloer = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				railroad_tycoon 
+			}
+		}
+		
+		BAV_advisor_siegmund_von_pranckh = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				war_industrialist_1 
+			}
+		}
+		
+		BAV_advisor_hans_von_und_zu_aufsess = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				ingenious_scientist 
+			}
+		}
+		
+		BAV_advisor_ludwig_feuerbach = {
+			allowed = {
+				original_tag = BAV
+			}
+
+			traits = { 
+				influencial_writer 
 			}
 		}
 	}
