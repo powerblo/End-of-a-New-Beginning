@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 231
+  capital = 1120
 
   oob = "GEO_1857"
 
@@ -36,6 +36,22 @@
          #NATIONAL SPIRITS
 	
   }
+  
+RUS = {
+  if = {
+    limit = {
+      has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+      target = GEO
+      autonomous_state = autonomy_dominion
+      freedom_level = 0.2
+    }
+  else = {
+    puppet = GEO
+  }
+  }
+}
 
   set_politics = {
     parties = {
@@ -83,9 +99,9 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Leader"
+    name = "Nikoloz Dadiani"
     desc = "POLITICS_TEMP_DESC"
-    picture = ""
+    picture = "Portrait_GEO_Dadiani_Niko.dds"
     expire = 2000.09.10
     ideology = despotism
 }
