@@ -34,7 +34,9 @@
     state_religion
 	religion_orthodox
          #NATIONAL SPIRITS
-	
+	ROM_idea_sentiment_of_unity
+	ROM_battleground
+ 
   }
 
   set_politics = {
@@ -87,7 +89,27 @@
   desc = "POLITICS_GEORGE_V_DESC"
   picture = "Portrait_MOL_Caimacamia_de_Trei.dds"
   expire = "1900.1.1"
+  ideology = conserv_liberal
+  traits = {
+
+  }
+}
+  create_country_leader = {
+  name = "Nicolae Vogoride"
+  desc = "NICOLAE_VOGORIDE_DESC"
+  picture = "Portrait_MOL_Nicolas_Vogorides.dds"
+  expire = "1900.1.1"
   ideology = oligarchism
+  traits = {
+
+  }
+}
+  create_country_leader = {
+  name = "Lascăr Cataragiu"
+  desc = "NICOLAE_VOGORIDE_DESC"
+  picture = "Portrait_MOL_Lascar_Cataragiu.dds"
+  expire = "1900.1.1"
+  ideology = conserv
   traits = {
 
   }
