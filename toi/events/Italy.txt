@@ -184,6 +184,31 @@ country_event = {
 		custom_effect_tooltip = ita_formation_of_italy_tips
 	}
 }
+country_event = { 
+	id = ita.9	
+	title = ita.9.t
+	desc = ita.9.d
+	picture = GFX_event_ITA_Po_Valley_Modernization
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.9.a
+		add_tech_bonus = {
+    		bonus = 0.25
+    		uses = 5
+    		category = biochemistry_tech
+		}
+	}
+	option = {
+		name = ita.9.b
+		add_research_slot = 1
+	}
+	option = {
+		name = ita.9.c
+		add_manpower = 10000
+	}
+}
 
 
 
