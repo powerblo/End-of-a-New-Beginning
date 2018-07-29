@@ -317,8 +317,35 @@ focus_tree = {
 		prerequisite = {
 			focus = ghica_reforms
 		}
+		ai_will_do = {
+					factor = 100
+		}
 		x = 7
 		y = 4
+
+	}
+	focus = {
+		id = send_costofau_west
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = improved_education
+		}
+		ai_will_do = {
+					factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 4
+				category = humanities_tech
+				category = biochemistry_tech
+				category = chemistry_tech
+				category = electronics_devices_tech
+			}
+		}
+		x = 8
+		y = 5
 
 	}
 	focus = {

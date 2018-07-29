@@ -1,3 +1,6 @@
+﻿
+###############ROMANIA events I########################
+
 add_namespace = grigore_ghica
 add_namespace = walalchian_union
 
@@ -75,7 +78,49 @@ country_event = { # Grigore asks napoleon for audience
 		name = grigore_ghica.1.b
 		ai_chance = { factor = 95 }
 		custom_effect_tooltip = reject_ghika_tt
-		hidden_effect = {
+		FRA = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		OTO = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		AUS = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		RUS = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		ENG = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		MOL = {
+			news_event = {
+				id = grigore_ghica.6
+				days = 10
+			}
+			set_global_flag = ghika_bad_health
+		}
+		ROM = {
 			news_event = {
 				id = grigore_ghica.6
 				days = 10
