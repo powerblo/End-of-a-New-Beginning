@@ -202,13 +202,11 @@ focus_tree = {
 				}
 			available = {
 					date > 1856.01.01
-					NOT = {
 					has_resources_amount = {
 							resource = oil
-							amount = 5
+							amount > 5
 							state = 46
 						}
-					}
 				}
 			bypass = {
 
