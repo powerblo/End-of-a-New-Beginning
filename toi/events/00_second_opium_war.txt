@@ -151,72 +151,72 @@ country_event = { # Treaty of Tientsin 2 - Chinese Answer
   }
 }
 
-country_event = { # Treaty of Aigun - Russia
-  id = second_opium_war.7
-  title = second_opium_war.7.t
-  desc = second_opium_war.7.d
-  picture = GFX_report_event_second_opium_war_tianjin_treaty
+#country_event = { # Treaty of Aigun - Russia
+#  id = second_opium_war.7
+# title = second_opium_war.7.t
+#  desc = second_opium_war.7.d
+#  picture = GFX_report_event_second_opium_war_tianjin_treaty
+#
+#  trigger = {
+#    tag = RUS
+#    CHI = {
+#      surrender_progress > 0.6
+#    }
+#  }
+#
+# fire_only_once = yes
+#
+# option = { # Those lands are ours
+#    name = second_opium_war.7.a
+#    CHI = {
+#      country_event = { id = second_opium_war.8 days = 1 }
+#    }
+#  }
+#}
 
-  trigger = {
-    tag = RUS
-    CHI = {
-      surrender_progress > 0.6
-    }
-  }
+#country_event = { # Treaty of Aigun - China
+ # id = second_opium_war.8
+ # title = second_opium_war.8.t
+ # desc = second_opium_war.8.d
+ # picture = GFX_report_event_second_opium_war_tianjin_treaty
+#
+ # is_triggered_only = yes
+#
+  #option = { # We cannot risk a war with Russia
+  #  name = second_opium_war.8.a
+   # RUS = {
+   #   country_event = { id = second_opium_war.9 days = 1 }
+   # }
+  #}
+#}
 
-  fire_only_once = yes
-
-  option = { # Those lands are ours
-    name = second_opium_war.7.a
-    CHI = {
-      country_event = { id = second_opium_war.8 days = 1 }
-    }
-  }
-}
-
-country_event = { # Treaty of Aigun - China
-  id = second_opium_war.8
-  title = second_opium_war.8.t
-  desc = second_opium_war.8.d
-  picture = GFX_report_event_second_opium_war_tianjin_treaty
-
-  is_triggered_only = yes
-
-  option = { # We cannot risk a war with Russia
-    name = second_opium_war.8.a
-    RUS = {
-      country_event = { id = second_opium_war.9 days = 1 }
-    }
-  }
-}
-
-country_event = { # Treaty of Aigun - Russia - China's answer
-  id = second_opium_war.9
-  title = second_opium_war.9.t
-  desc = second_opium_war.9.d
-  picture = GFX_report_event_second_opium_war_tianjin_treaty
-
-  is_triggered_only = yes
-
-  option = { # Another victory for Russia
-    name = second_opium_war.9.a
-    transfer_state = 408
-    transfer_state = 409
-    transfer_state = 537
-    transfer_state = 560
-    transfer_state = 561
-    transfer_state = 655
-    transfer_state = 657
-
-    add_state_core = 408
-    add_state_core = 409
-    add_state_core = 537
-    add_state_core = 560
-    add_state_core = 561
-    add_state_core = 655
-    add_state_core = 657
-  }
-}
+#country_event = { # Treaty of Aigun - Russia - China's answer
+ # id = second_opium_war.9
+ # title = second_opium_war.9.t
+ # desc = second_opium_war.9.d
+ # picture = GFX_report_event_second_opium_war_tianjin_treaty
+#
+ # is_triggered_only = yes
+#
+ # option = { # Another victory for Russia
+ #   name = second_opium_war.9.a
+ #   transfer_state = 408
+ #   transfer_state = 409
+ #   transfer_state = 537
+ #   transfer_state = 560
+ #   transfer_state = 561
+ #   transfer_state = 655
+ #   transfer_state = 657
+#
+ #   add_state_core = 408
+ #   add_state_core = 409
+ #   add_state_core = 537
+  #  add_state_core = 560
+ #   add_state_core = 561
+ #   add_state_core = 655
+ #   add_state_core = 657
+ # }
+#}
 
 country_event = { # Convention of Peking 1 - Ratification
   id = second_opium_war.10

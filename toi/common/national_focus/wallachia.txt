@@ -202,13 +202,11 @@ focus_tree = {
 				}
 			available = {
 					date > 1856.01.01
-					NOT = {
 					has_resources_amount = {
 							resource = oil
-							amount = 5
+							amount > 5
 							state = 46
 						}
-					}
 				}
 			bypass = {
 
@@ -317,8 +315,37 @@ focus_tree = {
 		prerequisite = {
 			focus = ghica_reforms
 		}
+		ai_will_do = {
+					factor = 100
+		}
 		x = 7
 		y = 4
+
+	}
+	focus = {
+		id = send_costaforu_west
+		icon = GFX_goal_focus_costaforu
+		cost = 7
+		prerequisite = {
+			focus = improved_education
+		}
+		ai_will_do = {
+					factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 4
+				category = humanities_tech
+				category = biochemistry_tech
+				category = chemistry_tech
+				category = electronics_devices_tech
+			}
+			custom_effect_tooltip = ROM_costaforu_focus_a
+			hidden_effect = { set_country_flag = costaforu_active } 
+		}
+		x = 8
+		y = 5
 
 	}
 	focus = {

@@ -1,0 +1,107 @@
+add_namespace = russia
+	###Beijing Treaty
+	country_event = {
+		id = russia.1
+		title = russia.1.t
+		desc = russia.1.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = RUS
+			date > 1860.09.14
+		}
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty	
+		
+		option = {
+			name = russia.1.a
+			add_political_power = -25
+			CHI = {
+				country_event = { id = russia.2 days = 1 }
+			}
+		}
+	}
+	
+	country_event = {
+		id = russia.2
+		title = russia.2.t
+		desc = russia.2.d
+		
+		is_triggered_only = yes
+		
+		
+		option = {
+			ai_chance = { factor = 95 }
+			name = russia.2.a
+			RUS = {
+				country_event = { id = russia.3	days = 2 }
+			}
+		}
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty
+		
+		option = {
+			name = russia.2.b
+			ai_chance = { factor = 5 }
+			RUS = {
+				country_event = { id = russia.4	days = 2 }
+			}
+		}
+	}
+	
+	country_event = {
+		id = russia.3
+		title = russia.3.t
+		desc = russia.3.d
+		
+		is_triggered_only = yes
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty
+		
+		option = {
+			name = russia.3.a
+			add_political_power = -125
+			RUS = {
+				transfer_state = 561
+				transfer_state = 657
+				transfer_state = 560
+				transfer_state = 409
+				transfer_state = 408
+				transfer_state = 944
+				transfer_state = 943
+				transfer_state = 946
+				transfer_state = 945
+				add_state_core = 561
+				add_state_core = 657
+				add_state_core = 560
+				add_state_core = 409
+				add_state_core = 408
+				add_state_core = 944
+				add_state_core = 943
+				add_state_core = 946
+				add_state_core = 945
+			}
+			hidden_effect = {
+				set_country_flag = rus_qing_accepted
+			}
+		}
+	}
+	
+	country_event = {
+		id = russia.4
+		title = russia.4.t
+		desc = russia.4.d
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty
+		
+		is_triggered_only = yes
+		
+		option = {	
+			name = russia.4.a
+			add_political_power = -50
+			hidden_effect = {
+				set_country_flag = rus_qing_declined
+			}
+		}
+	}

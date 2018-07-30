@@ -120,6 +120,29 @@ ideas = {
 			}
 		}
 		
+		RUS_idea_lost_crimea_war1 = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+				army_org_Factor = -0.1
+				army_morale_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		
 		RUS_idea_mining = {
 			allowed = {
 				always = no

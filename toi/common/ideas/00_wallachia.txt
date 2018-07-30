@@ -14,7 +14,7 @@ ideas = {
 			picture = ROM_unity
 			
 			modifier = {
-				centrism_drift = 0.1
+				radical_democracy_drift = 0.1
 				drift_defence_factor = 0.15
 				war_support_factor = 0.05
 				autonomy_gain = 1
@@ -44,6 +44,21 @@ ideas = {
 				army_org = -10
 				army_defence_factor = 0.5
 				army_attack_factor = -0.5
+			}
+		}
+	}
+	political_advisor = {
+		ROM_gheroghe_costraforu = {
+			allowed = {
+				original_tag = ROM
+			}
+			available = {
+				has_country_flag = costaforu_active
+			}
+
+			traits = { 
+				friend_of_capitalism				
+				radical_democrat
 			}
 		}
 	}
