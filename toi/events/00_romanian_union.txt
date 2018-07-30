@@ -11,15 +11,19 @@ add_namespace = walalchian_union
 #######################################################################
 
 country_event = { # Grigore asks napoleon for audience
-	id = grigore_ghica.1
+	id = grigore_ghica.0
 	title = grigore_ghica.1.t
 	desc = grigore_ghica.1.d
 	picture = GFX_grigore_ghica2
+	
+	fire_only_once = yes
 
-	trigger = { 
-		date > 1857.8.20
-		tag = FRA
-		NOT = { has_global_flag = ghica_asks_for_audience }
+	trigger = {
+		AND = {
+			date > 1857.7.15
+			original_tag = FRA
+			exists = yes
+		}
 	}
 	
 	immediate = { # Optional : all the following will occur once the event occurs
@@ -28,22 +32,14 @@ country_event = { # Grigore asks napoleon for audience
 	
 	option = { # Napoleon accepts Ghika's offer, no Paris convention will happen and England will get angry
 		name = grigore_ghica.1.a
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 0 }
 		ENG = {
-			add_opinion_modifier = {
-				target = FRA
-				modifier = fra_accept_romanian_unification
-			}
 			country_event = {
 				id = grigore_ghica.2
 				days = 5
 			}
 		}
 		RUS = {
-			add_opinion_modifier = {
-				target = FRA
-				modifier = fra_accept_romanian_unification
-			}
 			country_event = {
 				id = grigore_ghica.2
 				days = 5
@@ -76,7 +72,7 @@ country_event = { # Grigore asks napoleon for audience
 	
 	option = { # Napoleon rejects Ghika's offer, if Vogoride will execute the electoral fraud the Paris convention will happen, England is happy with this but Ghika will suffer and commit suicide
 		name = grigore_ghica.1.b
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 100 }
 		custom_effect_tooltip = reject_ghika_tt
 		FRA = {
 			news_event = {
@@ -149,7 +145,7 @@ country_event = { # anti-unionist powers of Austria, Russia, Ottoman Empire and 
 	
 	option = { # revoke_guarantee
 		name = grigore_ghica.2.a
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 25 }
 		diplomatic_relation = {
 			country = ROM
 			relation = guarantee
@@ -164,7 +160,16 @@ country_event = { # anti-unionist powers of Austria, Russia, Ottoman Empire and 
 	
 	option = { # stand_with_ghica
 		name = grigore_ghica.2.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 75
+			modifier = {
+			factor = 0
+			 OR = { 
+				tag = OTO
+				tag = AUS
+				}
+			}
+		}
 		remove_opinion_modifier = {
 			target = FRA
 			modifier = fra_accept_romanian_unification
