@@ -22,7 +22,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		completion_reward = {
 		    army_experience = 15
@@ -37,7 +37,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		prerequisite = { focus = HES_army }
 		completion_reward = {
@@ -57,7 +57,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		prerequisite = { focus = HES_cavalry_uniforms }
 		completion_reward = {
@@ -84,7 +84,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		prerequisite = { focus = HES_army }
 		completion_reward = {
@@ -100,7 +100,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		prerequisite = { focus = HES_army_expansion }
 		completion_reward = {
@@ -117,260 +117,13 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-		    factor = 40
+		    factor = 1
 		}
 		prerequisite = { focus = HES_gendarmerie }
 		prerequisite = { focus = HES_draft }
 		completion_reward = {
 		    remove_ideas = HES_army_budget_problem
 			add_stability = -0.05
-		}
-	}
-	
-	focus = {
-	    id = HES_PRS_doctrines
-		icon = GFX_no_idea_lol
-		x = 0
-		y = 4
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-		    factor = 40
-			
-			modifier = {
-			    factor = 40
-				
-				has_opinion = {
-					target = PRS
-					value > 70
-				}
-			}
-
-            modifier = {
-			    factor = 40
-				
-				has_completed_focus = HES_PRS_embassy	
-			}			
-		}
-		mutually_exclusive = {
-		    focus = HES_AUS_doctrines
-		}
-		prerequisite = {
-		    focus = HES_army_budget
-		}
-		completion_reward = {
-		    add_tech_bonus = {
-			    bonus = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	
-	focus = {
-	    id = HES_PRS_guns
-		icon = GFX_no_idea_lol
-		x = 0
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-		    factor = 40
-		}
-		prerequisite = {
-		    focus = HES_PRS_doctrines
-		}
-		completion_reward = {
-		    add_equipment_to_stockpile = {
-			    type = infantry_equipment_rifle_2
-				amount = 2000
-				producer = PRS				
-			}
-			add_tech_bonus = {
-			    bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-	}
-	
-	focus = {
-	    id = HES_AUS_doctrines
-		icon = GFX_no_idea_lol
-		x = 2
-		y = 4
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-		    factor = 40
-			
-			modifier = {
-			    factor = 40
-				
-				has_opinion = {
-					target = AUS
-					value > 70
-				}
-			}
-			
-			modifier = {
-			    factor = 40
-				
-				has_completed_focus = HES_AUS_embassy
-			}
-		}
-		prerequisite = {
-		    focus = HES_army_budget
-		}
-		mutually_exclusive = {
-		    focus = HES_PRS_doctrines
-		}
-		completion_reward = {
-		    add_tech_bonus = {
-			    bonus = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	
-	focus = {
-	    id = HES_AUS_cannons
-		icon = GFX_no_idea_lol
-		x = 2
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-		    factor = 40
-		}
-		prerequisite = {
-		    focus = HES_AUS_doctrines
-		}
-		completion_reward = {
-		    add_equipment_to_stockpile = {
-			    type = cannon_equipment_1
-				amount = 100
-				producer = AUS
-			}
-			add_tech_bonus = {
-			    bonus = 0.5
-				uses = 2
-				category = artillery
-			}
-		}
-	}
-	
-	focus = {
-	    id = HES_foreign_policy
-		icon = GFX_no_idea_lol
-		x = 6
-		y = 0
-		cost = 10
-		ai_will_do = {
-		    factor = 40
-		}
-		completion_reward = {
-		    add_political_power = 195
-		}
-	}
-	
-	focus = {
-	    id = HES_PRS_embassy
-		icon = GFX_no_idea_lol
-		x = 4
-		y = 1
-		cost = 10
-		ai_will_do = {
-		    factor = 40
-			
-			modifier = {
-			    factor = 10
-				
-				has_completed_focus = HES_PRS_doctrines
-			}
-			
-			modifier = {
-			    factor = 40
-				
-				has_opinion = {
-				    value > 70
-					target = PRS
-				}
-			}
-		}
-		available = {
-		    country_exists = PRS
-		}
-		prerequisite = {
-		    focus = HES_foreign_policy
-		}
-		mutually_exclusive = {
-		    focus = HES_AUS_embassy
-			focus = HES_neutrality
-		}
-		completion_reward = {
-		
-		}
-	}
-	
-	focus = {
-	    id = HES_neutrality
-		icon = GFX_no_idea_lol
-		x = 6
-		y = 1
-		cost = 10
-		ai_will_do = {
-		    factor = 40
-		}
-		prerequisite = {
-		    focus = HES_foreign_policy
-		}
-		mutually_exclusive = {
-		    focus = HES_AUS_embassy
-			focus = HES_PRS_embassy
-		}
-		completion_reward = {
-		    add_stability = 0.05
-		}
-	}
-	
-	focus = {
-	    id = HES_AUS_embassy
-		icon = GFX_no_idea_lol
-        x = 8
-		y = 1
-		cost = 10
-		ai_will_do = {
-		    factor = 40
-			
-			modifier = {
-			    factor = 10
-				
-				has_completed_focus = HES_AUS_doctrines
-			}
-			
-			modifier = {
-			    factor = 40
-				
-				has_opinion = {
-				    target = AUS
-					value > 70
-				}
-			}
-		}
-		available = {
-		    country_exists = AUS
-		}
-		prerequisite = {
-		    focus = HES_foreign_policy
-		}
-		mutually_exclusive = {
-		    focus = HES_PRS_embassy
-			focus = HES_neutrality
-		}
-		completion_reward = {
-		    
 		}
 	}
 }
