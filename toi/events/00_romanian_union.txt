@@ -74,49 +74,7 @@ country_event = { # Grigore asks napoleon for audience
 		name = grigore_ghica.1.b
 		ai_chance = { factor = 100 }
 		custom_effect_tooltip = reject_ghika_tt
-		FRA = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		OTO = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		AUS = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		RUS = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		ENG = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		MOL = {
-			news_event = {
-				id = grigore_ghica.6
-				days = 10
-			}
-			set_global_flag = ghika_bad_health
-		}
-		ROM = {
+		hidden_effect = {
 			news_event = {
 				id = grigore_ghica.6
 				days = 10
@@ -186,6 +144,14 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			TAG = FRA
+			TAG = ROM
+			TAG = MOL
+		}
+	}
 	
 	immediate = { # Optional : all the following will occur once the event occurs
 		set_global_flag = ghika_dead
