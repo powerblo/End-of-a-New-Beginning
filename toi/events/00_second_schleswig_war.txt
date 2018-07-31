@@ -312,6 +312,19 @@ country_event = {
 				HLS = { surrender_progress > 0.8 }
 				PRS = { controls_state = 37 }
 			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				MCK = { controls_state = 58 }
+				MCK = { controls_state = 1032 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				MCK = { controls_state = 99 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				MCK = { controls_state = 37 }
+			}
 		}			
 	}
 	
