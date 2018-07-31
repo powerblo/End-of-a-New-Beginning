@@ -1,1 +1,402 @@
 ﻿add_namespace = fraprswar
+
+#Namespace for ahistorical paths
+add_namespace = fraprswarah
+
+#Leopold becomes Spanish Throne Candidate
+country_event = {
+	id = fraprswar.1
+	title = fraprswar.1.t
+	desc = fraprswar.1.d
+	picture = GFX_report_event_royal_visit
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		PRS = { owns_state = 1033 }
+		PRS = { has_country_flag = eoanb_flag_won_7_weeks_war }
+		NOT = { PRS = { has_completed_focus = PRS_focus_socialism_rise } }
+		date > 1870.4.10
+	}
+	
+	option = {
+		name = fraprswar.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_PRS_claims_SPR_leopold
+		hidden_effect = {
+			FRA = { country_event = { days = 3 id = fraprswar.2 } }
+		}
+	}
+	
+}
+
+#Leopold claims Spanish Throne
+country_event = {
+	id = fraprswar.2
+	title = fraprswar.2.t
+	desc = fraprswar.2.d
+	picture = GFX_report_event_journalists_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_FRA_contests_PRS_SPR
+		hidden_effect = {
+			PRS = { country_event = { days = 2 id = fraprswar.3 } }
+		}
+	}
+	
+	option = {
+		name = fraprswar.2.b
+		ai_chance = { factor = 0 }
+		add_political_power = -500
+		add_stability = -0.25
+		add_war_support = -0.25
+		custom_effect_tooltip = eoanb_tt_FRA_allows_leopold_SPR
+	}
+	
+}
+
+#France demands that Leopold backs off
+country_event = {
+	id = fraprswar.3
+	title = fraprswar.3.t
+	desc = fraprswar.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.3.a
+		ai_chance = { factor = 100 }
+		FRA = { country_event = { days = 1 id = fraprswar.6 } }
+		hidden_effect = {
+			create_faction = faction_german_front
+		}
+	}
+	
+	option = {
+		name = fraprswar.3.b
+		ai_chance = { factor = 0 }
+		FRA = { country_event = { days = 1 id = fraprswar.4 } }
+		hidden_effect = {
+			create_faction = faction_german_front
+		}
+	}
+	
+}
+
+#Leopold says No
+country_event = {
+	id = fraprswar.4
+	title = fraprswar.4.t
+	desc = fraprswar.4.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.4.a
+		ai_chance = { factor = 100 }
+		PRS = { country_event = { days = 1 id = fraprswar.5 } }
+	}
+	
+	option = {
+		name = fraprswar.4.b
+		ai_chance = { factor = 0 }
+		add_political_power = -200
+		add_stability = -0.2
+	}
+	
+}
+
+#The French Demands
+country_event = {
+	id = fraprswar.5
+	title = fraprswar.5.t
+	desc = fraprswar.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.5.a
+		ai_chance = { factor = 100 }
+		declare_war_on = { target = FRA type = topple_government }
+		hidden_effect = {
+			add_named_threat = { 
+				threat = 5 
+				name = eoanb_threat_fp_war
+			}
+			news_event = news.10
+			set_global_flag = eoanb_flag_franco_prussian_war_ongoing
+			BAV = { country_event = { days = 1 id = fraprswar.12 } }
+			BAD = { country_event = { days = 1 id = fraprswar.12 } }
+			WUR = { country_event = { days = 1 id = fraprswar.12 } }
+			HSD = { country_event = { days = 1 id = fraprswar.12 } }
+		}
+	}
+	
+	option = {
+		name = fraprswar.5.b
+		ai_chance = { factor = 0 }
+		add_political_power = -200
+		add_stability = -0.2
+		add_war_support = -0.2
+	}
+	
+}
+
+#Leopold backs off
+country_event = {
+	id = fraprswar.6
+	title = fraprswar.6.t
+	desc = fraprswar.6.d
+	picture = GFX_report_event_soviet_purge_trial
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.6.a
+		ai_chance = { factor = 100 }
+		PRS = { country_event = { days = 1 id = fraprswar.7 } }
+	}
+	
+}
+
+#France demands no further claims from Prussia
+country_event = {
+	id = fraprswar.7
+	title = fraprswar.7.t
+	desc = fraprswar.7.d
+	picture = GFX_report_event_saf_soldiers_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.7.a
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_FRA_will_probably_war
+		FRA = { country_event = { days = 1 id = fraprswar.8 } }
+	}
+	
+	option = {
+		name = fraprswar.7.b
+		ai_chance = { factor = 100 }
+		PRS = { country_event = { days = 1 id = fraprswar.9 } }
+	}
+	
+}
+
+#French Ultimatum after Refusal leads to War
+country_event = {
+	id = fraprswar.8
+	title = fraprswar.8.t
+	desc = fraprswar.8.d
+	picture = GFX_report_event_romanian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.8.a
+		ai_chance = { factor = 100 }
+		declare_war_on = { target = PRS type = topple_government }
+		hidden_effect = {
+			add_named_threat = { 
+				threat = 5 
+				name = eoanb_threat_fp_war
+			}
+			news_event = news.10
+			set_global_flag = eoanb_flag_franco_prussian_war_ongoing
+			BAV = { country_event = { days = 1 id = fraprswar.12 } }
+			BAD = { country_event = { days = 1 id = fraprswar.12 } }
+			WUR = { country_event = { days = 1 id = fraprswar.12 } }
+			HSD = { country_event = { days = 1 id = fraprswar.12 } }
+		}
+	}
+
+}
+
+#The Ems Dispatch
+country_event = {
+	id = fraprswar.9
+	title = fraprswar.9.t
+	desc = fraprswar.9.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.9.a
+		ai_chance = { factor = 100 }
+		FRA = { country_event = { days = 1 id = fraprswar.10 } }
+	}
+	
+}
+
+#France mobilizes and declares War
+country_event = {
+	id = fraprswar.10
+	title = fraprswar.10.t
+	desc = fraprswar.10.d
+	picture = GFX_report_event_ANZAC_day
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.10.a
+		ai_chance = { factor = 100 }
+		declare_war_on = { target = PRS type = topple_government }
+		hidden_effect = {
+			add_named_threat = { 
+				threat = 5 
+				name = eoanb_threat_fp_war
+			}
+			news_event = news.10
+			set_global_flag = eoanb_flag_franco_prussian_war_ongoing
+			BAV = { country_event = { days = 1 id = fraprswar.12 } }
+			BAD = { country_event = { days = 1 id = fraprswar.12 } }
+			WUR = { country_event = { days = 1 id = fraprswar.12 } }
+			HSD = { country_event = { days = 1 id = fraprswar.12 } }
+		}
+	}
+	
+}
+
+#Prussia loses the War
+country_event = {
+	id = fraprswar.11
+	title = fraprswar.11.t
+	desc = fraprswar.11.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = FRA
+		has_global_flag = eoanb_flag_franco_prussian_war_ongoing
+		PRS = { surrender_progress > 0.4 }
+		FRA = { controls_state = 42 }
+		FRA = { controls_state = 744 }
+		FRA = { controls_state = 50 }
+	}
+	
+	option = {
+		name = fraprswar.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_PRS_lost_fpw
+		hidden_effect = {
+			news_event = news.12
+			white_peace = PRS
+			PRS = { dismantle_faction = yes }
+			clr_global_flag = eoanb_flag_franco_prussian_war_ongoing
+			FRA = { transfer_state = 42 }
+			FRA = { transfer_state = 984 }
+			FRA = { transfer_state = 1035 }
+			WUR = { transfer_state = 744 }
+			WUR = { transfer_state = 870 }
+			WUR = { transfer_state = 1033 }
+			PRS = { release = FRK }
+			PRS = {
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_political_power = -100
+			}
+		}
+	}
+	
+}
+	
+#Join Prussia
+country_event = {
+	id = fraprswar.12
+	title = fraprswar.12.t
+	desc = fraprswar.12.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fraprswar.12.a
+		ai_chance = { factor = 100 }
+		add_to_war = { targeted_alliance = PRS enemy = FRA }
+	}
+	
+	option = {
+		name = fraprswar.12.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Prussia wins the War
+country_event = {
+	id = fraprswar.13
+	title = fraprswar.13.t
+	desc = fraprswar.13.d
+	picture = GFX_report_event_albanian_partisans
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		has_global_flag = eoanb_flag_franco_prussian_war_ongoing
+		OR = {
+			FRA = { surrender_progress > 0.6 }
+			AND = {
+				FRA = { surrender_progress > 0.3 }
+				PRS = { controls_state = 17 }
+				PRS = { controls_state = 28 }
+				PRS = { controls_state = 972 }
+			}
+			AND = {
+				FRA = { surrender_progress > 0.1 }
+				PRS = { controls_state = 972 }
+				PRS = { controls_state = 28 }
+				PRS = { controls_state = 18 }
+				PRS = { controls_state = 29 }
+			}
+			PRS = { controls_state = 814 }
+			PRS = { controls_state = 16 }
+		}
+	}
+	
+	option = {
+		name = fraprswar.13.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_PRS_won_fpw
+		hidden_effect = {
+			white_peace = FRA
+			PRS = { dismantle_faction = yes }
+			clr_global_flag = eoanb_flag_franco_prussian_war_ongoing
+			PRS = { transfer_state = 28 }
+			PRS = { annex_country = { target = BAV transfer_troops = no } }
+			PRS = { annex_country = { target = BAD transfer_troops = no } }
+			PRS = { annex_country = { target = WUR transfer_troops = no } }
+			PRS = { annex_country = { target = HSD transfer_troops = no } }
+			FRA = {
+				add_stability = -0.05
+				add_political_power = -50
+			}
+			FRA = {
+				add_ideas = FRA_idea_loss_of_alsace
+			}
+			PRS = {
+				add_timed_idea = {
+				idea = PRS_idea_reparations_from_FRA
+				days = 365
+				}
+			}
+			FRA = {
+				add_timed_idea = {
+				idea = PRS_idea_reparations_to_PRS
+				days = 365
+				}
+			}
+		}
+	}
+	
+}

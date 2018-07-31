@@ -393,6 +393,32 @@ ideas = {
 				political_power_factor = -0.05
 			}
 		}
+		PRS_idea_reparations_to_PRS = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_international_inflow
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		PRS_idea_reparations_from_FRA = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
 	}
 	political_advisor = {
 		PRS_advisor_august_von_der_heydt = {
