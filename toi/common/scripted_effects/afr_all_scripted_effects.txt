@@ -930,7 +930,7 @@ afr_give_colonal_power={
 	hidden_effect = {
 		add_ideas = {afr_colonial_power}
 		set_variable = { colonial_power = 15 }
-		set_variable = { colonial_power_rate = political_power_gain }
+		set_variable = { colonial_power_rate = 1 }
 		set_variable = { colonial_power_max = num_of_factories }
 		multiply_variable = { var = colonial_power_max value = 8 }
 	}
