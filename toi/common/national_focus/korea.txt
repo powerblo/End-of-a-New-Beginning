@@ -430,6 +430,303 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = KOR_deforestation
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_sociocrisis }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = logging_camp
+   		level = 1
+    	instant_build = yes } }
+			}	
+		}
+
+	focus = {
+		id = KOR_yangbanplant
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_deforestation }
+		
+		completion_reward = {
+		1018 = { add_extra_state_shared_building_slots = 1 }
+		1018 = { add_building_construction = {
+   		type = farm
+    	level = 1
+    	instant_build = yes } }
+		add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = KOR_ricepattyfarm
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1024 = { add_extra_state_shared_building_slots = 1 }
+		1024 = { add_building_construction = {
+   		type = farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_newriceseed
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_ricepattyfarm }
+		
+		completion_reward = {
+		#pop growth +3%
+		}
+	}
+
+	focus = {
+		id = KOR_morepaddy
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_newriceseed }
+		
+		completion_reward = {
+		1021 = { add_extra_state_shared_building_slots = 1 }
+		1021 = { add_building_construction = {
+   		type = farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_teaproduc
+		#icon = GFX_focus_generic_self_management
+		x = 36
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1015 = { add_extra_state_shared_building_slots = 1 }
+		1015 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_ginsengcult
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = ginseng_cultivation
+		}
+		add_political_power = 5
+		}
+	}
+
+	focus = {
+		id = KOR_cottonfarm
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1019 = { add_extra_state_shared_building_slots = 1 }
+		1019 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_peasantirrigation
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_teaproduc }
+		prerequisite = { focus = KOR_ginsengcult }
+		prerequisite = { focus = KOR_cottonfarm }
+		
+		completion_reward = {
+		1016 = { set_building_level = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+    	add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = KOR_teaplantations
+		#icon = GFX_focus_generic_self_management
+		x = 36
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_peasantirrigation }
+		
+		completion_reward = {
+		1021 = { add_extra_state_shared_building_slots = 1 }
+		1021 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_moreginseng
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = ginseng_cultivation2
+		}
+		add_political_power = 5
+		}
+	}
+
+	focus = {
+		id = KOR_morecottonfarm
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_peasantirrigation }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_extractresources
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_deforestation }
+	
+		
+	}
+
+
+	focus = {
+		id = KOR_northenmining
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_extractresources }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = coal_mine
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+
+
+
+
+
+
+
+
+
 #End of branch
 
 #Start of branch
@@ -467,6 +764,8 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		mutually_exclusive = { focus = KOR_recognizechoe }
 
 		prerequisite = { focus = KOR_teachingschoe }
 
@@ -536,6 +835,10 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		#make choe je-u available as advisor
+
+		mutually_exclusive = { focus = KOR_denouncedong }
 
 		prerequisite = { focus = KOR_teachingschoe }
 
@@ -699,6 +1002,13 @@ focus = {
 		y = 0
 		cost = 10
 		available_if_capitulated = no
+		
+		available = {
+        has_completed_focus = KOR_sociocrisis
+       }
+    
+
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -866,9 +1176,9 @@ focus = {
 			factor = 1
 		}
 
-		#lock off if "Byeong-in Persecution"
-		# and "Expel Paris Mission Society"
-		# focuses are done
+		#lock off if "Byeong-in Persecution" and "Expel Paris Mission Society" focuses are done
+
+		#add simon francois berneux and pierre henri dorie advisors
 
 		prerequisite = { focus = KOR_embracewest }
 
@@ -890,9 +1200,9 @@ focus = {
 			factor = 1
 		}
 
-		#lock off if "Byeong-in Persecution"
-		# and "Expel Paris Mission Society"
-		# focuses are done
+		#lock off if "Byeong-in Persecution" and "Expel Paris Mission Society" focuses are done
+
+		#change state religion to secular
 
 
 		prerequisite = { focus = KOR_invitejesuit }
@@ -983,3 +1293,12 @@ focus = {
 		#50% boost to cultural tech
 		}
 	}
+
+
+
+
+
+
+	#End of branch
+	#Start of branch
+
