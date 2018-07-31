@@ -163,8 +163,8 @@ guiTypes = {
            maxHeight = 24
            fixedsize = yes
     
-           pdx_tooltip = "COLONIAL_POWER_TOOLTIP"
-           pdx_tooltip_delayed = "COLONIAL_POWER_TOOLTIP_DELAYED"
+           pdx_tooltip = COLONIAL_POWER_TOOLTIP
+           pdx_tooltip_delayed = COLONIAL_POWER_TOOLTIP_DELAYED
        }
    }
    containerWindowType = {
@@ -180,7 +180,7 @@ guiTypes = {
            name ="colonisation_progress_text"
            position = { x= 25 y = 15 }
            font = "hoi_18mbs"
-           text = "Colonial State Progress"
+           text = "Colonial Progress in State"
            format = center
            maxWidth = 250
            maxHeight = 24
@@ -197,41 +197,55 @@ guiTypes = {
            spriteType = "GFX_colonial_power"
            position = { x=10 y=50 }
        #    shortcut = "ctrl+o"
+		pdx_tooltip = COLONISATION_STAGE_1_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_1_TOOLTIP_DELAYED
        }
 	   buttonType ={
            name ="colonisation_stage_2_bg"
            spriteType = "GFX_colonial_power"
            position = { x=60 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_2_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_2_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
 	   buttonType ={
            name ="colonisation_stage_3_bg"
            spriteType = "GFX_colonial_power"
            position = { x=110 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_3_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_3_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
 	   buttonType ={
            name ="colonisation_stage_4_bg"
            spriteType = "GFX_colonial_power"
            position = { x=160 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_4_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_4_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
 	   buttonType ={
            name ="colonisation_stage_5_bg"
            spriteType = "GFX_colonial_power"
            position = { x=220 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_5_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_5_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
 	   buttonType ={
            name ="colonisation_stage_6_bg"
            spriteType = "GFX_colonial_power"
            position = { x=270 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_6_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_6_COLONIAL_POWER_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
 	   buttonType ={
            name ="colonisation_stage_7_bg"
            spriteType = "GFX_colonial_power"
            position = { x=320 y=50 }
+		   pdx_tooltip = COLONISATION_STAGE_7_TOOLTIP
+           pdx_tooltip_delayed = COLONISATION_STAGE_7_COLONIAL_POWER_TOOLTIP_DELAYED
        #    shortcut = "ctrl+o"
        }
        iconType = {

@@ -1,0 +1,1304 @@
+focus_tree = {
+	id = korea_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+	
+	default = no
+	
+#Start of branch
+
+		focus = {
+		id = KOR_sedoregime
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -15
+			#sedo politics event
+		}
+	}
+
+			focus = {
+		id = KOR_sociocrisis
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_sedoregime }
+		
+		completion_reward = {
+			add_political_power = -150
+			#nat spirit add, socioeconmoinc malaise
+		}
+	}
+
+			focus = {
+		id = KOR_distanceclans
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_sociocrisis }
+		
+		mutually_exclusive = {
+        focus = KOR_submitclans
+        } 
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+			focus = {
+		id = KOR_approachkim
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_distanceclans }
+		
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.05
+		}
+	}
+
+			focus = {
+		id = KOR_offerpositions
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_approachkim }
+		
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+			focus = {
+		id = KOR_courtclanleaders
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_approachkim }
+		
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+
+			focus = {
+		id = KOR_supportrivalschools
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_approachkim }
+		
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+
+			focus = {
+		id = KOR_formcoalition
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_offerpositions }
+		prerequisite = { focus = KOR_courtclanleaders }
+		prerequisite = { focus = KOR_supportrivalschools }
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+			focus = {
+		id = KOR_encouragedisputes
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_formcoalition }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+		}
+	}
+			focus = {
+		id = KOR_ignitefaction
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_formcoalition }
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+		}
+	}
+
+			focus = {
+		id = KOR_supportrivals
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_formcoalition }
+		
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+
+
+	focus = {
+		id = KOR_restorecheckbalance
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_encouragedisputes }
+		prerequisite = { focus = KOR_ignitefaction }
+		prerequisite = { focus = KOR_supportrivals }
+		
+		completion_reward = {
+			add_political_power = 200
+			#grant checked factionalism
+		}
+	}
+
+#End of branch
+
+#Start of branch
+
+focus = {
+		id = KOR_submitclans
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_sociocrisis }
+		
+		mutually_exclusive = {
+        focus = KOR_distanceclans
+        } 
+
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+	}
+
+focus = {
+		id = KOR_complykims
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_submitclans }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.02
+		}
+	}
+
+focus = {
+		id = KOR_curbcho
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_complykims }
+		
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+
+
+focus = {
+		id = KOR_quellrivals
+		#icon = GFX_focus_generic_self_management
+		x = 27
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_curbcho }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = KOR_onedoctrine
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_curbcho }
+
+		completion_reward = {
+			add_political_power = 15
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = KOR_oneclan
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_onedoctrine }
+		prerequisite = { focus = KOR_quellrivals }
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.08
+		}
+	}
+
+	focus = {
+		id = KOR_debasecurrency
+		#icon = GFX_focus_generic_self_management
+		x = 26
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_oneclan }
+
+		completion_reward = {
+		add_ideas = KOR_debasecurrencyidea
+
+		}
+	}
+
+		focus = {
+		id = KOR_foldtemples
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_oneclan }
+
+		completion_reward = {
+		add_political_power = 25
+		add_stability = -0.05
+
+		}
+	}
+
+
+		focus = {
+		id = KOR_sangmintax
+		#icon = GFX_focus_generic_self_management
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_oneclan }
+
+		completion_reward = {
+		add_political_power = -50
+		#raise to high taxes
+
+		}
+	}
+
+	focus = {
+		id = KOR_stablizecrisis
+		#icon = GFX_focus_generic_self_management
+		x = 28
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_debasecurrency }
+		prerequisite = { focus = KOR_foldtemples }
+		prerequisite = { focus = KOR_sangmintax }
+		
+		completion_reward = {
+			add_political_power = -100
+			#remove socioeconomic malaise
+			#replace with stagnant economy
+		}
+	}
+
+	focus = {
+		id = KOR_deforestation
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_sociocrisis }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = logging_camp
+   		level = 1
+    	instant_build = yes } }
+			}	
+		}
+
+	focus = {
+		id = KOR_yangbanplant
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_deforestation }
+		
+		completion_reward = {
+		1018 = { add_extra_state_shared_building_slots = 1 }
+		1018 = { add_building_construction = {
+   		type = farm
+    	level = 1
+    	instant_build = yes } }
+		add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = KOR_ricepattyfarm
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1024 = { add_extra_state_shared_building_slots = 1 }
+		1024 = { add_building_construction = {
+   		type = farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_newriceseed
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_ricepattyfarm }
+		
+		completion_reward = {
+		#pop growth +3%
+		}
+	}
+
+	focus = {
+		id = KOR_morepaddy
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_newriceseed }
+		
+		completion_reward = {
+		1021 = { add_extra_state_shared_building_slots = 1 }
+		1021 = { add_building_construction = {
+   		type = farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_teaproduc
+		#icon = GFX_focus_generic_self_management
+		x = 36
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1015 = { add_extra_state_shared_building_slots = 1 }
+		1015 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_ginsengcult
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = ginseng_cultivation
+		}
+		add_political_power = 5
+		}
+	}
+
+	focus = {
+		id = KOR_cottonfarm
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		1019 = { add_extra_state_shared_building_slots = 1 }
+		1019 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_peasantirrigation
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_teaproduc }
+		prerequisite = { focus = KOR_ginsengcult }
+		prerequisite = { focus = KOR_cottonfarm }
+		
+		completion_reward = {
+		1016 = { set_building_level = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+    	add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = KOR_teaplantations
+		#icon = GFX_focus_generic_self_management
+		x = 36
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_peasantirrigation }
+		
+		completion_reward = {
+		1021 = { add_extra_state_shared_building_slots = 1 }
+		1021 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_moreginseng
+		#icon = GFX_focus_generic_self_management
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanplant }
+		
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = ginseng_cultivation2
+		}
+		add_political_power = 5
+		}
+	}
+
+	focus = {
+		id = KOR_morecottonfarm
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_peasantirrigation }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_extractresources
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_deforestation }
+	
+		
+	}
+
+
+	focus = {
+		id = KOR_northenmining
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_extractresources }
+		
+		completion_reward = {
+		1017 = { add_extra_state_shared_building_slots = 1 }
+		1017 = { add_building_construction = {
+   		type = coal_mine
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+#End of branch
+
+#Start of branch
+
+	focus = {
+		id = KOR_teachingschoe
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 0
+		cost = 0
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+	available = {
+        date > 1860.1.1
+    }
+
+
+		completion_reward = {
+
+		#event rise of donghak
+
+		}
+	}
+
+	focus = {
+		id = KOR_denouncedong
+		#icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = KOR_recognizechoe }
+
+		prerequisite = { focus = KOR_teachingschoe }
+
+
+		completion_reward = {
+
+		add_political_power = 30
+		add_stability = 0.05
+		#trigger peasant revolt on 1862.10.2
+		#trigger donghak peasant revolt on 1894.11.1
+
+		}
+	}
+
+	focus = {
+		id = KOR_persecutedong
+		#icon = GFX_focus_generic_self_management
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_denouncedong }
+
+
+		completion_reward = {
+
+		add_political_power = 35
+		add_stability = 0.02
+
+		}
+	}
+
+	focus = {
+		id = KOR_uniteconfucian
+		#icon = GFX_focus_generic_self_management
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_persecutedong }
+
+
+		completion_reward = {
+
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas =  KOR_uniteconfucianidea
+
+		}
+	}
+
+	focus = {
+		id = KOR_recognizechoe
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		#make choe je-u available as advisor
+
+		mutually_exclusive = { focus = KOR_denouncedong }
+
+		prerequisite = { focus = KOR_teachingschoe }
+
+		completion_reward = {
+
+		add_political_power = -50
+		add_stability = -0.2
+
+		}
+	}
+
+	focus = {
+		id = KOR_aidchoe
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_recognizechoe }
+
+		completion_reward = {
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		}
+	}
+
+	focus = {
+		id = KOR_religiousdong
+		#icon = GFX_focus_generic_self_management
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_aidchoe }
+
+		completion_reward = {
+		add_stability = -0.05
+
+		}
+	}
+
+
+	focus = {
+		id = KOR_newfollowers
+		#icon = GFX_focus_generic_self_management
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_aidchoe }
+
+		completion_reward = {
+		add_stability = -0.05
+
+		}
+	}
+
+
+   	focus = {
+		id = KOR_spreaddong
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_religiousdong }
+		prerequisite = { focus = KOR_newfollowers }
+
+		completion_reward = {
+		add_war_support = -0.5
+		#gain donghak popular movement
+		}
+	}
+
+	focus = {
+		id = KOR_pushreform
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_spreaddong }
+
+		completion_reward = {
+		add_political_power = -100
+		#gets event peasant demands
+		}
+	}
+
+ 	focus = {
+		id = KOR_landreform
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_pushreform }
+
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.15
+		add_ideas = KOR_landreformidea
+		}
+	}
+
+ 	focus = {
+		id = KOR_farmerrights
+		#icon = GFX_focus_generic_self_management
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_landreform }
+
+		completion_reward = {
+		add_political_power = 150
+		add_stability = 0.1
+		# change slavery to segregation
+		# lose donghak revolutionaries
+		# gains appeased peasants
+		}
+	}
+
+	#End of branch
+	#Start of branch
+
+	focus = {
+		id = KOR_traditionszhu
+		#icon = GFX_focus_generic_self_management
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		
+		available = {
+        has_completed_focus = KOR_sociocrisis
+       }
+    
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_political_power = 50
+
+		}
+	}
+
+	focus = {
+		id = KOR_supportsilhak
+		#icon = GFX_focus_generic_self_management
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = KOR_koreanconfucianism }
+
+		prerequisite = { focus = KOR_traditionszhu }
+
+		completion_reward = {
+		add_political_power = -50
+		add_stability = -0.15
+		}
+	}
+
+	focus = {
+		id = KOR_promotesilhak
+		#icon = GFX_focus_generic_self_management
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_supportsilhak }
+
+		completion_reward = {
+		add_political_power = -75
+		add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = KOR_asianenlightenment
+		#icon = GFX_focus_generic_self_management
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_promotesilhak }
+
+		completion_reward = {
+		add_political_power = 100
+		#50% boost to scientific research
+		}
+	}
+
+
+	focus = {
+		id = KOR_harmonizelearning
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		#only available if widespread corruption is removed
+
+		mutually_exclusive = {
+        focus = KOR_embracewest
+        } 
+
+		prerequisite = { focus = KOR_asianenlightenment }
+
+		completion_reward = {
+		add_political_power = -30
+		add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = KOR_practicallearning
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_harmonizelearning }
+
+		completion_reward = {
+		#50% boost to industrial research
+		}
+	}
+
+	focus = {
+		id = KOR_pragmaticreforms
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_practicallearning }
+
+		completion_reward = {
+		add_political_power = -150
+		#remove stagnant economy
+		
+		}
+	}
+
+	focus = {
+		id = KOR_embracewest
+		#icon = GFX_focus_generic_self_management
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_harmonizelearning
+        } 
+
+		prerequisite = { focus = KOR_asianenlightenment }
+
+		completion_reward = {
+		add_political_power = -60
+		add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = KOR_invitejesuit
+		#icon = GFX_focus_generic_self_management
+		x = 11
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		#lock off if "Byeong-in Persecution" and "Expel Paris Mission Society" focuses are done
+
+		#add simon francois berneux and pierre henri dorie advisors
+
+		prerequisite = { focus = KOR_embracewest }
+
+		completion_reward = {
+		add_political_power = -30
+		add_stability = -0.03
+		#50% boost to scientific research
+		}
+	}
+
+	focus = {
+		id = KOR_toleratecatholics
+		#icon = GFX_focus_generic_self_management
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		#lock off if "Byeong-in Persecution" and "Expel Paris Mission Society" focuses are done
+
+		#change state religion to secular
+
+
+		prerequisite = { focus = KOR_invitejesuit }
+
+		completion_reward = {
+		add_political_power = -150
+		add_stability = -0.15
+		#add manpower
+		#add western positive opinion
+		}
+	}
+
+	focus = {
+		id = KOR_westerninnovation
+		#icon = GFX_focus_generic_self_management
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_toleratecatholics focus = KOR_pragmaticreforms }
+
+		completion_reward = {
+		add_political_power = 100
+		#100% boost scientific research
+		#maybe production research boost
+		}
+	}
+
+
+	focus = {
+		id = KOR_koreanconfucianism
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = KOR_supportsilhak }
+
+		prerequisite = { focus = KOR_traditionszhu }
+
+		completion_reward = {
+		add_political_power = 100
+		#gains neo confucianism
+		}
+	}
+
+	focus = {
+		id = KOR_confucianseowon
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_koreanconfucianism }
+
+		completion_reward = {
+		add_political_power = 20
+		#50% boost to cultural tech
+		}
+	}
+
+	focus = {
+		id = KOR_metaphysicalstudies
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_confucianseowon }
+
+		completion_reward = {
+		add_political_power = 20
+		add_stability = 0.02
+		#50% boost to cultural tech
+		}
+	}
+
+
+
+
+
+
+	#End of branch
+	#Start of branch
+

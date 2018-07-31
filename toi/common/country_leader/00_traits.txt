@@ -307,6 +307,17 @@ leader_traits = {
 		}
 	}
 	
+	captain_of_industry = {
+		sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	armaments_organizer = {
 		sprite = 10
 		random = yes
@@ -853,6 +864,14 @@ leader_traits = {
 		}
 	}
 	
+	artillery_manufacturer = {
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	PRS_trait_infantery_krupp = {
 		random = no
 		
@@ -882,6 +901,14 @@ leader_traits = {
 	}
 	
 	infantry_equipment_manufacturer_1 = {
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	infantry_equipment_manufacturer = {
 		random = no
 		
 		ai_will_do = {
