@@ -130,6 +130,18 @@ ideas = {
 				war_support_weekly = 0.0025
 			}
 		}
+		
+		hidden_idea_never_surrender = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 1
+			}
+		}
 
 	}
 

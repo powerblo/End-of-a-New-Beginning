@@ -274,6 +274,9 @@ country_event = {
 			MCK = { give_military_access = PRS }
 			PRS = { give_military_access = MCK }
 			set_global_flag = eoanb_flag_second_schleswig_war
+			DEN = {
+				add_ideas = hidden_idea_never_surrender
+			}
 		}
 	}
 }
@@ -291,8 +294,25 @@ country_event = {
 		TAG = PRS
 		has_global_flag = eoanb_flag_second_schleswig_war
 		PRS = { has_war_with = DEN }
-		HLS = { surrender_progress > 0.8 }
-		DEN = { surrender_progress > 0.2 }
+		OR = {
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				DEN = { surrender_progress > 0.2 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				PRS = { controls_state = 58 }
+				PRS = { controls_state = 1032 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				PRS = { controls_state = 99 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				PRS = { controls_state = 37 }
+			}
+		}			
 	}
 	
 	option = {
@@ -389,6 +409,9 @@ country_event = {
 			PRS = { set_country_flag = eoanb_flag_won_2_schleswig_war }
 			DEN = { white_peace = SCH }
 			DEN = { white_peace = HLS }
+			DEN = {
+				remove_ideas = hidden_idea_never_surrender
+			}
 		}
 	}
 }
@@ -419,6 +442,9 @@ country_event = {
 			PRS = { set_country_flag = eoanb_flag_won_2_schleswig_war }
 			DEN = { white_peace = SCH }
 			DEN = { white_peace = HLS }
+			DEN = {
+				remove_ideas = hidden_idea_never_surrender
+			}
 		}
 	}
 }
