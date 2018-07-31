@@ -26,6 +26,7 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = 0.15
+				stability_factor = -0.03
 			}
 		}
 		
@@ -104,6 +105,23 @@ ideas = {
             conscription = 0.05
 			planning_speed = -0.1
 			training_time_factor = 0.1
+			}
+		}
+		
+	BRA_national_guard2 = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_amateur_tacticians
+			
+			modifier = {
+            conscription = 0.1
+			planning_speed = -0.15
+			training_time_factor = 0.02
+			army_org_Factor = -0.03
 			}
 		}
 		
@@ -261,7 +279,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = state_country_industrialization_industrializing
+			picture = industrializing
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
@@ -275,7 +293,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = state_country_industrialization_industrializing
+			picture = ast_volunteer_defence_corps
 			
 			modifier = {
 				army_core_attack_factor = 0.02
@@ -291,7 +309,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = state_country_industrialization_industrializing
+			picture = industrializing
 			
 			modifier = {
 			consumer_goods_factor = -0.09
@@ -320,10 +338,58 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = industrialization_agrarian
+			picture = RUS_agrarian
 			
 			modifier = {
 			production_speed_buildings_factor = -0.09
 			}
-		}			
+		}
+
+	BRA_new_army = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = military_junta
+			
+			modifier = {
+			conscription = 0.02
+			army_org_Factor = 0.02
+			army_attack_factor = 0.01
+			land_reinforce_rate	= 0.01
+			supply_consumption_factor = -0.15
+			}
+		}		
 }
+
+hidden_ideas = {
+		BRA_production = {
+			allowed = {
+				original_tag = BRA
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_naval_base_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+			}
+		}
+		BRA_pride = {
+			allowed = {
+				original_tag = BRA
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+                naval_hit_chance = 0.3
+				naval_coordination = 0.2
+				experience_gain_navy_factor = 0.1
+			}
+		}		
+		
+}		
+		
