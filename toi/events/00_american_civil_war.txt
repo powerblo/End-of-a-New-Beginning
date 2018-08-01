@@ -142,14 +142,18 @@ country_event = {
         hidden_effect = { set_global_flag = ACWAmerican_Civil_War }
         hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }
         hidden_effect = { CSA = { set_country_flag = CSAAmerican_Civil_War } }
-        hidden_effect = { USA = { country_event = { days = 5 id = usa.14 } } }
-        hidden_effect = { CSA = { country_event = { days = 2 id = csa.10 } } }
+        hidden_effect = { USA = { country_event = { days = 1 id = usa.14 } } }
+        hidden_effect = { CSA = { country_event = { days = 1 id = csa.10 } } }
         hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
         hidden_effect = { USA = { country_event = { days = 3 id = acw.7 } } }
         hidden_effect = { USA = { country_event = { id = acw.6 } } }
         hidden_effect = { CSA = { country_event = { id = acw.6 } } }
         hidden_effect = { USA = { country_event = { days = 1 id = csa.7 } } }
         hidden_effect = { news_event = { id = acw_news.1 } }
+        hidden_effect= { CSA = { add_stability = 0.3 } }
+        hidden_effect= { CSA = { add_war_support = 0.3 } }
+        hidden_effect= { USA = { add_stability = 0.3 } }
+        hidden_effect= { USA = { add_war_support = 0.3 } }
     }
 }
 country_event = {
@@ -1061,7 +1065,7 @@ country_event = {
     option = {
         name = acw.21.a
         add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 }
-        add_equipment_to_stockpile = { type = uniform_equipment_1 amount = 4000 }
+        add_equipment_to_stockpile = { type = uniform_equipment amount = 4000 }
         add_equipment_to_stockpile = { type = cavalry_equipment amount = 2000 }
     }
 }
