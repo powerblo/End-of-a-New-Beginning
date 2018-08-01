@@ -32,8 +32,8 @@ ideas = {
 			picture = BEL_industrial_revolution
 			
 			modifier = {
-				industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -71,6 +71,27 @@ ideas = {
 			modifier = {
 				centrism_drift = 0.1
 				traditional_conservatism_drift = 0.1
+			}
+		}
+		
+		BEL_idea_french_rail_influence = {
+			allowed = {
+				original_tag = BEL
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_build_infrastructure
+			
+			targeted_modifier = { 
+				tag = FRA 
+				attack_bonus_against = -0.2 
+				defense_bonus_against = -0.2
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_infrastructure_factor = -0.2
 			}
 		}
 	}
