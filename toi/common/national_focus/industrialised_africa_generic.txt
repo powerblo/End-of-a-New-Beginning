@@ -82,6 +82,10 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			army_experience = 10
+			swap_ideas = {
+				add_idea = law_victorian_army
+				remove_idea = law_pre_industrial_army
+			}
 		}
 
 	}
@@ -797,11 +801,14 @@ focus_tree = {
 	}
 	focus = {
 		id = afr_vic_political_innovation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_self_management
 		cost = 10.00
 		x = 29
 		y = 0
-
+		completion_reward = {
+			add_political_power = 100
+		
+		}
 	}
 	focus = {
 		id = afr_vic_african_confederation
@@ -820,7 +827,7 @@ focus_tree = {
 	}
 	focus = {
 		id = afr_vic_western_constatution
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_self_management
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_political_innovation
@@ -831,44 +838,64 @@ focus_tree = {
 		}
 		x = 23
 		y = 1
+		completion_reward = {
+			add_stability = -0.025
+		}
 
 	}
 	focus = {
 		id = afr_vic_establish_modern_adminastration
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_the_elite
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_western_constatution
 		}
 		x = 21
 		y = 2
-
+		completion_reward = {
+			add_ideas = {afr_western_administration}
+		}
 	}
 	focus = {
-		id = afr_vic_prepare_a_constatution
-		icon = GFX_goal_unknown
+		id = afr_vic_establish_taxation_code
+		icon = GFX_goal_focus_banks
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_western_constatution
 		}
 		x = 23
 		y = 2
-
+		bypass = {
+			OR = {
+				has_idea = human_rights
+				has_idea = constitution_adopted
+			}
+		}
+		completion_reward = {
+			add_ideas= {
+				high_taxes
+			}
+		}
 	}
 	focus = {
 		id = afr_vic_establish_royal_traditions
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_enact_law
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_western_constatution
 		}
 		x = 25
 		y = 2
+		completion_reward = {
+			add_ideas= {
+				afr_noble_traditions
+			}
+		}
 
 	}
 	focus = {
-		id = afr_vic_govern_like_the_british
-		icon = GFX_goal_unknown
+		id = afr_vic_govern_like_the_west
+		icon = GFX_goal_focus_continent_west_europe
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_establish_modern_adminastration
@@ -880,47 +907,77 @@ focus_tree = {
 			focus = afr_vic_establish_royal_traditions
 		}
 		mutually_exclusive = {
-			focus = afr_vic_govern_like_the_germans
+			focus = afr_vic_govern_like_the_east
+		}
+		available = {
+			ENG = {
+				exists = yes
+				has_idea = parliamentary_monarchy
+			}
 		}
 		x = 22
 		y = 3
+		completion_reward = {
+			add_ideas = {
+				parliamentary_monarchy
+			}
+		}
 
 	}
 	focus = {
-		id = afr_vic_govern_like_the_germans
+		id = afr_vic_govern_like_the_east
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_establish_royal_traditions
 		}
 		prerequisite = {
-			focus = afr_vic_prepare_a_constatution
+			focus = afr_vic_establish_taxation_code
 		}
 		prerequisite = {
 			focus = afr_vic_establish_modern_adminastration
 		}
 		mutually_exclusive = {
-			focus = afr_vic_govern_like_the_british
+			focus = afr_vic_govern_like_the_west
+		}
+		available = {
+			OR = {
+				RUS = {
+					exists = yes
+					has_idea = absolute_monarchy
+				}
+				AUS = {
+					exists = yes
+					has_idea = absolute_monarchy
+				}
+			}
 		}
 		x = 24
 		y = 3
-
+		completion_reward = {
+			add_ideas = {
+				absolute_monarchy
+			}
+		}
 	}
 	focus = {
 		id = afr_vic_our_kingdom
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = afr_vic_govern_like_the_germans
-			focus = afr_vic_govern_like_the_british
+			focus = afr_vic_govern_like_the_east
+			focus = afr_vic_govern_like_the_west
 		}
 		x = 23
 		y = 4
+		completion_reward={
+			add_stability = 0.075
+		}
 
 	}
 	focus = {
 		id = afr_vic_traditional_governance
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_tribal_shield
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_political_innovation
@@ -931,6 +988,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 1
+		completion_reward = {
+			add_stability = 0.05
+		}
 
 	}
 	focus = {
@@ -1007,7 +1067,7 @@ focus_tree = {
 	}
 	focus = {
 		id = afr_vic_idea_of_a_republic
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_political_innovation
@@ -1018,6 +1078,9 @@ focus_tree = {
 		}
 		x = 35
 		y = 1
+		completion_reward = {
+			add_stability = -0.025
+		}
 
 	}
 	focus = {

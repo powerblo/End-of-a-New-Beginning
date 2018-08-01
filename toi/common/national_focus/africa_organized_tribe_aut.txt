@@ -983,6 +983,7 @@ focus_tree = {
 			custom_effect_tooltip = eoanb_af_t_tt_small_kingdom_western
 			hidden_effect = {
 				swap_ideas = { remove_idea = AF_T_organized_tribal_nation_3 add_idea = AF_T_small_kingdom }
+				load_focus_tree = western_oriented_small_kingdom
 			}
 		}
 	}
@@ -1005,6 +1006,7 @@ focus_tree = {
 			custom_effect_tooltip = eoanb_af_t_tt_small_kingdom_grand
 			hidden_effect = {
 				swap_ideas = { remove_idea = AF_T_organized_tribal_nation_3 add_idea = AF_T_small_kingdom }
+				load_focus_tree = inwards_oriented_kingdom
 			}
 		}
 	}
@@ -1071,10 +1073,8 @@ focus_tree = {
 		icon = GFX_focus_rom_handle_king
 		cost = 20
 		prerequisite = {
-			focus = AF_O_K_early_tactics
-		}
-		prerequisite = {
 			focus = AF_O_K_divide_lands_between_nobles
+			focus = AF_O_K_early_tactics
 		}
 		prerequisite = {
 			focus = AF_O_K_prospect_land
