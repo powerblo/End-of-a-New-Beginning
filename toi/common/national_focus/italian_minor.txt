@@ -56,6 +56,15 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_minor_Il_Sogno_Italiano
 		}
+		ai_will_do = {
+        factor = 1
+        
+        # Modifies the base factor if the triggers are met
+        modifier = {
+            factor = 100
+            is_historical_focus_on = yes
+        }
+    }
 		x = 4
 		y = 1
 		completion_reward = {
@@ -224,6 +233,15 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_minor_Stand_Up_agast_Savoy
 		}
+		ai_will_do = {
+        factor = 1
+        
+        # Modifies the base factor if the triggers are met
+        modifier = {
+            factor = 100
+            is_historical_focus_on = yes
+        }
+    }
 		x = 2
 		y = 4
 		completion_reward = {
@@ -251,6 +269,15 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_minor_Sympathize_With_the_Piedmontese
 		}
+		ai_will_do = {
+        factor = 1
+        
+        # Modifies the base factor if the triggers are met
+        modifier = {
+            factor = 0
+            is_historical_focus_on = yes
+        }
+    }
 		x = 6
 		y = 4
 		completion_reward = {
@@ -394,6 +421,16 @@ focus_tree = {
 		id = ITA_minor_Il_Sogno_Italiano
 		icon = GFX_focus_generic_italy_first
 		cost = 10
+		ai_will_do = {
+        factor = 1
+        
+        # Modifies the base factor if the triggers are met
+        modifier = {
+            factor = 0
+            is_historical_focus_on = yes
+        }
+    }
+
 		prerequisite = {
 			focus = ITA_minor_Seek_for_identity
 		}
