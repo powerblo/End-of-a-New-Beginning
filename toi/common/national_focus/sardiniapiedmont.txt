@@ -325,5 +325,438 @@ focus_tree = {
 
 
 	}
+	focus = {
+		id = PIE_Agricultural_Focus
+		icon = GFX_focus_ITA_Farms
+		cost = 5.00
+		x = 19
+		y = 0
+
+		completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = farm
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = farm
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = farm
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = farm
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+
+	}
+	focus = {
+		id = PIE_Military_Focus
+		icon = GFX_focus_generic_military_mission
+		cost = 5.00
+		x = 25
+		y = 0
+
+		completion_reward = {
+			add_war_support = 0.01
+			army_experience = 10
+			navy_experience = 10
+		}
+
+	}
+	focus = {
+		id = PIE_Reliance_on_Farming
+		icon = GFX_focus_ITA_Wheat
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Agricultural_Focus
+		}
+		x = 19
+		y = 1
+
+		completion_reward = {
+			add_offsite_building = { type = farm level = 1}
+			add_offsite_building = { type = farm level = 1}
+		}
+
+	}
+	focus = {
+		id = PIE_Industrializing 
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Reliance_on_Farming
+		}
+		x = 19
+		y = 2
+
+		completion_reward = {
+			swap_ideas = {
+   				 add_idea = industrializing
+    			 remove_idea = agrarian
+				}
+		}
+
+	}
+	focus = {
+		id = PIE_Develop_Mines
+		icon = GFX_goal_generic_construction2
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Industrializing 
+		}
+		x = 17
+		y = 3
+
+		completion_reward = { 
+			add_resource = {
+   				 type = coal
+   				 amount = 3
+  			     state = 981
+			}
+	
+		}
+
+	}
+	focus = {
+		id = PIE_Exports_to_America
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Industrializing 
+		}
+		x = 19
+		y = 3
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+
+		}
+
+	}
+	focus = {
+		id = PIE_Increased_Exports
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Exports_to_America
+		}
+		x = 19
+		y = 4
+
+		completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+			
+		}
+
+	}
+	focus = {
+		id = PIE_Army_Focus
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Military_Focus
+		}
+		x = 24
+		y = 1
+
+		completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+
+	}
+	focus = {
+		id = PIE_Lessons_from_the_Crimean_War
+		icon = GFX_focus_chi_army_reform
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Army_Focus
+		}
+		x = 24
+		y = 2
+
+		completion_reward = {
+			add_tech_bonus = {
+    				bonus = 0.25
+    				uses = 2
+    				category = land_doctrine
+				}
+			add_tech_bonus = {
+    				bonus = 0.25
+    				uses = 2
+    				category = infantry_weapons
+				}
+		}
+
+	}
+	focus = {
+		id = PIE_Increased_Conscription 
+		icon = GFX_focus_generic_military_mission
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Lessons_from_the_Crimean_War
+		}
+		x = 24
+		y = 3
+
+		completion_reward = {
+			add_manpower = 1000
+		}
+
+	}
+	focus = {
+		id = PIE_Develop_Lumber
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Develop_Mines
+		}
+		x = 17
+		y = 4
+
+		completion_reward = { 
+			add_resource = {
+   				 type = wood
+   				 amount = 3
+  			     state = 981
+			}
+			add_resource = {
+   				 type = wood
+   				 amount = 2
+  			     state = 158
+			}
+	
+		}
+
+	}
+	focus = {
+		id = PIE_Develop_Iron_Works
+		icon = GFX_focus_generic_steel
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Develop_Lumber
+		}
+		x = 17
+		y = 5
+
+		completion_reward = { 
+			add_resource = {
+   				 type = steel
+   				 amount = 3
+  			     state = 981
+			}
+			add_resource = {
+   				 type = steel
+   				 amount = 1
+  			     state = 158
+			}
+	
+		}
+
+	}
+	focus = {
+		id = PIE_Naval_Focus
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Military_Focus
+		}
+		x = 26
+		y = 1
+
+		completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = dockyard
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = dockyard
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = dockyard
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+
+	}
+	focus = {
+		id = PIE_Naval_Research
+		icon = GFX_focus_research
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Naval_Focus
+		}
+		x = 26
+		y = 2
+
+		completion_reward = {
+				add_tech_bonus = {
+    				bonus = 0.25
+    				uses = 2
+    				category = naval_equipment
+				}
+		}
+
+	}
+	focus = {
+		id = PIE_Increase_Naval_Production
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Naval_Research
+		}
+		x = 26
+		y = 3
+
+		completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = dockyard
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = dockyard
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = dockyard
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+
+	}
+	focus = {
+		id = PIE_Increased_Military_Production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = PIE_Increased_Conscription 
+		}
+		prerequisite = {
+			focus = PIE_Increase_Naval_Production
+		}
+		x = 25
+		y = 4
+
+		completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+
+	}
 	
 }
