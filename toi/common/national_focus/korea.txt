@@ -610,7 +610,7 @@ focus = {
 		prerequisite = { focus = KOR_cottonfarm }
 		
 		completion_reward = {
-		1016 = { set_building_level = {
+		1016 = { add_building_construction = {
    		type = infrastructure
    		level = 1
     	instant_build = yes } }
@@ -673,8 +673,8 @@ focus = {
 		prerequisite = { focus = KOR_peasantirrigation }
 		
 		completion_reward = {
-		1017 = { add_extra_state_shared_building_slots = 1 }
-		1017 = { add_building_construction = {
+		1020 = { add_extra_state_shared_building_slots = 1 }
+		1020 = { add_building_construction = {
    		type = cotton_farm
    		level = 1
     	instant_build = yes } }
@@ -1296,9 +1296,579 @@ focus = {
 
 
 
-
-
-
 	#End of branch
 	#Start of branch
 
+	focus = {
+		id = KOR_seearmy
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_war_support = 0.15
+		add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = KOR_armyreform
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+				#only available after install dawongun
+
+
+
+		prerequisite = { focus = KOR_seearmy }
+
+		completion_reward = {
+		army_experience = 15
+		}
+	}
+
+	focus = {
+		id = KOR_yangbanstaff
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_armyreform }
+
+		completion_reward = {
+		#50% boost to doctrine
+		}
+	}
+
+	focus = {
+		id = KOR_recruitofficers
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanstaff }
+
+		completion_reward = {
+		army_experience = 25
+		}
+	}
+
+	focus = {
+		id = KOR_recruitment
+		#icon = GFX_focus_generic_self_management
+		x = 4
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_yangbanstaff }
+
+		completion_reward = {
+		add_manpower = 75000
+		}
+	}
+	
+	#End of branch
+	#Start of branch
+
+	focus = {
+		id = KOR_improvenavy
+		#icon = GFX_focus_generic_self_management
+		x = 8
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+
+		completion_reward = {
+		navy_experience = 25
+		1024 = { add_extra_state_shared_building_slots = 1 }
+		1024 = { add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_centralports
+		#icon = GFX_focus_generic_self_management
+		x = 7
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+				#only available after install dawongun
+
+
+
+		prerequisite = { focus = KOR_improvenavy }
+
+
+		completion_reward = {
+		1019 = { add_extra_state_shared_building_slots = 2 }
+		1019 = { add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_southports
+		#icon = GFX_focus_generic_self_management
+		x = 7
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = KOR_centralports }
+
+
+		completion_reward = {
+		525 = { add_extra_state_shared_building_slots = 2 }
+		525 = { add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_largevessel
+		#icon = GFX_focus_generic_self_management
+		x = 7
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		mutually_exclusive = {
+        focus = KOR_smalldeadly
+        } 
+
+
+		prerequisite = { focus = KOR_southports }
+
+
+		completion_reward = {
+		#50% boost to stoop and frigate tech
+		}
+	}
+
+	focus = {
+		id = KOR_newnavy
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+				#only available after install dawongun
+
+		
+		prerequisite = { focus = KOR_improvenavy }
+
+
+		completion_reward = {
+		navy_experience = 10 
+		}
+	}
+
+	focus = {
+		id = KOR_navalinfrastructure
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = KOR_newnavy }
+
+
+		completion_reward = {
+		525 = { add_extra_state_shared_building_slots = 2 }
+		525 = { add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes } add_building_construction = {
+   		type = dockyard
+   		level = 1
+    	instant_build = yes }
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes }
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_smalldeadly
+		#icon = GFX_focus_generic_self_management
+		x = 9
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_largevessel
+        } 
+
+
+		prerequisite = { focus = KOR_navalinfrastructure }
+
+
+		completion_reward = {
+		#50% boost to corvette and gunboat tech
+		}
+	}
+
+ #End of branch
+ #Start of branch
+
+ 	focus = {
+		id = KOR_hermitkingdom
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		completion_reward = {
+		#gets event Joseon's Place on the World Stage
+		}
+	}	
+
+	focus = {
+		id = KOR_remainiso
+		#icon = GFX_focus_generic_self_management
+		x = 16
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_opendoor
+        } 
+
+
+		prerequisite = { focus = KOR_hermitkingdom }
+
+
+		completion_reward = {
+		add_stability = 0.1
+		#west opinion -30
+		}
+	}
+
+	focus = {
+		id = KOR_defendvalues
+		#icon = GFX_focus_generic_self_management
+		x = 16
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_remainiso }
+
+		completion_reward = {
+		add_political_power = 50
+		#ideology drift defense 25%
+		}
+	}
+
+	focus = {
+		id = KOR_instillpride
+		#icon = GFX_focus_generic_self_management
+		x = 16
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_defendvalues }
+
+		completion_reward = {
+		add_war_support = 0.1
+		#grant korea for koreans
+		}
+	}
+
+	focus = {
+		id = KOR_frenchencroachment
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_instillpride }
+
+		completion_reward = {
+		add_political_power = 50
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = french_encroachment
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_byeongpersucution
+		#icon = GFX_focus_generic_self_management
+		x = 13
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_frenchencroachment }
+
+		completion_reward = {
+		add_stability = -0.15
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = byeong_persecution
+		}
+		#event byeong-in persecution
+		}
+	}
+
+	focus = {
+		id = KOR_expelparis
+		#icon = GFX_focus_generic_self_management
+		x = 15
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_frenchencroachment }
+
+		completion_reward = {
+		add_political_power = 30
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = byeong_persecution2
+		}
+		#event jesuit martyrs
+		}
+	}
+
+	focus = {
+		id = KOR_rallydefenses
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_byeongpersucution }
+		prerequisite = { focus = KOR_expelparis }
+
+		completion_reward = {
+		add_manpower = 7500
+		add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = KOR_fortifyganghwa
+		#icon = GFX_focus_generic_self_management
+		x = 13
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_rallydefenses }
+
+		completion_reward = {
+		add_manpower = 7500
+		add_war_support = 0.15
+		1018 = { add_building_construction = {
+   		type = coastal_bunker
+   		level = 5
+    	instant_build = yes } }
+
+		
+		}
+	}
+
+	focus = {
+		id = KOR_producemyeonje
+		#icon = GFX_focus_generic_self_management
+		x = 15
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_rallydefenses }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = KOR_koreadefiant
+		#icon = GFX_focus_generic_self_management
+		x = 14
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_fortifyganghwa }
+		prerequisite = { focus = KOR_producemyeonje }
+
+
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.15
+		add_war_support = 0.15
+		}
+	}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#open korea doors
+	focus = {
+		id = KOR_opendoor
+		#icon = GFX_focus_generic_self_management
+		x = 32
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_remainiso
+        } 
+
+
+		prerequisite = { focus = KOR_hermitkingdom }
+
+
+		completion_reward = {
+		add_stability = -0.3
+
+		}
+	}
