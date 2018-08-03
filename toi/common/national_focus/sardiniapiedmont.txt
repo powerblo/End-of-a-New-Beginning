@@ -297,7 +297,7 @@ focus_tree = {
 			always = no
 		}
 		x = 8
-		y = 10
+		y = 9
 
 		completion_reward = {
 			custom_effect_tooltip = pie_expedition_thousand_ft
@@ -318,7 +318,114 @@ focus_tree = {
 			focus = PIE_Garibali_Sicily_Expedition
 		}
 		x = 8
-		y = 12
+		y = 10
+
+		available = {
+			has_completed_focus = PIE_Industrializing 
+			has_completed_focus = PIE_Military_Focus
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = ITA
+			158 = {
+					add_core_of = PIE
+				}
+				159 = {
+					add_core_of = PIE
+				}
+				808 = {
+					add_core_of = PIE
+				}
+				813 = {
+					add_core_of = PIE
+				}
+				162 = {
+					add_core_of = PIE
+				}
+				161 = {
+					add_core_of = PIE
+				}
+				157 = {
+					add_core_of = PIE
+				}
+				812 = {
+					add_core_of = PIE
+				}
+				117 = {
+					add_core_of = PIE
+				}
+				156 = {
+					add_core_of = PIE
+				}
+				115 = {
+					add_core_of = PIE
+				}
+				114 = {
+					add_core_of = PIE
+				}
+				add_state_core = 982
+				add_state_core = 735
+				add_state_core = 822
+				add_state_core = 981
+				add_state_core = 997
+				country_event = {
+					id = ita.8
+					hours = 1
+				}
+				load_focus_tree = italy_focus
+				hidden_effect = {
+				 set_politics = {
+
+    parties = {
+      anarchism = {
+        popularity = 13
+      }
+      vanguard_communism = {
+        popularity = 1
+      }
+      collectivist_socialism = {
+        popularity = 1
+      }
+      social_egalitarianism = {
+        popularity = 1
+      }
+      centrism = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 20
+      }
+      radical_democracy = {
+        popularity = 2
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 52
+
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+    ruling_party = autocracy
+											
+
+											}
+
+		add_ideas = {
+			ITA_Unorganized_Army
+			ITA_Unorganized_Navy
+		}
+		remove_ideas = {
+			PIE_National_Society
+		}
+		LVN = { remove_ideas = { LVN_National_Society } }
+
+				}
+		}
+
 
 
 	}

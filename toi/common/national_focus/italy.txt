@@ -116,16 +116,16 @@ focus_tree = {
 		y = 4
 			bypass = {
 					OR = {
-							ITA = {
+							PIE = {
 									has_government = traditional_conservatism
 								}
-							ITA = {
+							PIE = {
 									has_government = centrism
 								}
 						}
 				}
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.05
 						}
 				}
@@ -144,7 +144,7 @@ focus_tree = {
 		x = 4
 		y = 5
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Nurture_Liberal_Ideals
 						}
 				}
@@ -160,7 +160,7 @@ focus_tree = {
 		x = 1
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.05
 						}
 				}
@@ -179,7 +179,7 @@ focus_tree = {
 		x = 7
 		y = 5
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Follow_Mazzini
 						}
 				}
@@ -196,7 +196,7 @@ focus_tree = {
 		x = 4
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_political_power = 100
 						}
 				}
@@ -213,16 +213,16 @@ focus_tree = {
 		y = 7
 			available = {
 					OR = {
-							ITA = {
+							PIE = {
 									has_government = traditional_conservatism
 								}
-							ITA = {
+							PIE = {
 									has_government = centrism
 								}
 						}
 				}
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.2
 						}
 				}
@@ -238,7 +238,7 @@ focus_tree = {
 		x = 3
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.2
 						}
 				}
@@ -254,10 +254,10 @@ focus_tree = {
 		x = 5
 		y = 7
 			completion_reward = {
-					ITA = {
+					PIE = {
 							kill_country_leader = yes
 						}
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Overthrow_The_King
 						}
 				}
@@ -273,7 +273,7 @@ focus_tree = {
 		x = 5
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							remove_ideas = ITA_Overthrow_The_King
 						}
 					if = {
@@ -311,10 +311,10 @@ focus_tree = {
 		x = 5
 		y = 9
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.1
 						}
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Checks_And_Balances
 						}
 				}
@@ -333,7 +333,7 @@ focus_tree = {
 		x = 4
 		y = 10
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_political_power = 150
 						}
 				}
@@ -349,19 +349,19 @@ focus_tree = {
 		x = 7
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_March_On_Rome
 						}
-					ITA = {
+					PIE = {
 							add_popularity = {
 									ideology = traditional_conservatism
 									popularity = 0.1
 								}
 						}
-					ITA = {
+					PIE = {
 							add_stability = -0.03
 						}
-					ITA = {
+					PIE = {
 							country_event = {
 									days = 1
 									id = ita.5
@@ -380,21 +380,21 @@ focus_tree = {
 		x = 7
 		y = 7
 			available = {
-					ITA = {
+					PIE = {
 							has_government = traditional_conservatism
 						}
 				}
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Ban_Monarchism
 						}
-					ITA = {
+					PIE = {
 							add_popularity = {
 									ideology = autocracy
 									popularity = -1
 								}
 						}
-					ITA = {
+					PIE = {
 							add_stability = -0.02
 						}
 				}
@@ -410,7 +410,7 @@ focus_tree = {
 		x = 7
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Unite_Italian_Lands
 						}
 				}
@@ -429,7 +429,7 @@ focus_tree = {
 		x = 15
 		y = 4
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = -0.05
 						}
 				}
@@ -445,7 +445,7 @@ focus_tree = {
 		x = 14
 		y = 5
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Crack_Down_Centrists
 						}
 				}
@@ -461,10 +461,10 @@ focus_tree = {
 		x = 12
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.05
 						}
-					ITA = {
+					PIE = {
 							add_war_support = 0.1
 						}
 				}
@@ -480,7 +480,7 @@ focus_tree = {
 		x = 14
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Restrict_Free_Speech
 						}
 				}
@@ -496,7 +496,7 @@ focus_tree = {
 		x = 14
 		y = 7
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_popularity = {
 									ideology = centrism
 									popularity = -0.25
@@ -537,7 +537,7 @@ focus_tree = {
 		x = 17
 		y = 5
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_timed_idea = {
 									idea = ITA_Improve_Public_Opinion
 									days = 70
@@ -556,7 +556,7 @@ focus_tree = {
 		x = 17
 		y = 6
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_research_slot = 1
 						}
 				}
@@ -572,7 +572,7 @@ focus_tree = {
 		x = 17
 		y = 7
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_tech_bonus = {
 									bonus = 0.5
 									uses = 1
@@ -610,7 +610,7 @@ focus_tree = {
 		x = 17
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Restrict_The_Economy
 						}
 				}
@@ -626,10 +626,10 @@ focus_tree = {
 		x = 17
 		y = 9
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Advocate_Expansion
 						}
-					ITA = {
+					PIE = {
 							add_war_support = 0.10
 						}
 				}
@@ -648,7 +648,7 @@ focus_tree = {
 		x = 15
 		y = 10
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Military_Draft
 						}
 				}
@@ -664,7 +664,7 @@ focus_tree = {
 		x = 14
 		y = 11
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Perfect_War_Machine
 						}
 				}
@@ -680,7 +680,7 @@ focus_tree = {
 		x = 16
 		y = 11
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_war_support = 0.05
 						}
 				}
@@ -1246,16 +1246,16 @@ focus_tree = {
 		x = 1
 		y = 7
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Hate_Crimes
 						}
-					ITA = {
+					PIE = {
 							add_popularity = {
 									ideology = centrism
 									popularity = 0.1
 								}
 						}
-					ITA = {
+					PIE = {
 							add_stability = 0.03
 						}
 				}
@@ -1271,10 +1271,10 @@ focus_tree = {
 		x = 1
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Free_Speech
 						}
-					ITA = {
+					PIE = {
 							add_stability = 0.05
 						}
 				}
@@ -1290,10 +1290,10 @@ focus_tree = {
 		x = 12
 		y = 7
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.05
 						}
-					ITA = {
+					PIE = {
 							add_war_support = 0.1
 						}
 				}
@@ -1309,10 +1309,10 @@ focus_tree = {
 		x = 12
 		y = 8
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_war_support = 0.05
 						}
-					ITA = {
+					PIE = {
 							add_ideas = ITA_Elite_Troop_Training
 						}
 				}
@@ -1334,7 +1334,7 @@ focus_tree = {
 		x = 13
 		y = 12
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_stability = 0.10
 						}
 				}
@@ -1350,7 +1350,7 @@ focus_tree = {
 		x = 4
 		y = 11
 			completion_reward = {
-					ITA = {
+					PIE = {
 							add_political_power = 150
 						}
 				}
