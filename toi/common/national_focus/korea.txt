@@ -1074,7 +1074,12 @@ focus = {
 
 		completion_reward = {
 		add_political_power = 100
-		#50% boost to scientific research
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = science_tech
+		}
+
 		}
 	}
 
@@ -1118,7 +1123,11 @@ focus = {
 		prerequisite = { focus = KOR_harmonizelearning }
 
 		completion_reward = {
-		#50% boost to industrial research
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = industry
+		}
 		}
 	}
 
@@ -1185,7 +1194,11 @@ focus = {
 		completion_reward = {
 		add_political_power = -30
 		add_stability = -0.03
-		#50% boost to scientific research
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = science_tech
+		}
 		}
 	}
 
@@ -1230,8 +1243,16 @@ focus = {
 
 		completion_reward = {
 		add_political_power = 100
-		#100% boost scientific research
-		#maybe production research boost
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = science_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = industry
+		}
 		}
 	}
 
@@ -1271,7 +1292,11 @@ focus = {
 
 		completion_reward = {
 		add_political_power = 20
-		#50% boost to cultural tech
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = philosophy_religion_tech
+		}
 		}
 	}
 
@@ -1290,7 +1315,11 @@ focus = {
 		completion_reward = {
 		add_political_power = 20
 		add_stability = 0.02
-		#50% boost to cultural tech
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = philosophy_religion_tech
+		}
 		}
 	}
 
@@ -1351,7 +1380,11 @@ focus = {
 		prerequisite = { focus = KOR_armyreform }
 
 		completion_reward = {
-		#50% boost to doctrine
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = land_doctrine
+		}
 		}
 	}
 
@@ -1492,7 +1525,16 @@ focus = {
 
 
 		completion_reward = {
-		#50% boost to stoop and frigate tech
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = frigate_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = sloop_tech
+		}
 		}
 	}
 
@@ -1572,7 +1614,16 @@ focus = {
 
 
 		completion_reward = {
-		#50% boost to corvette and gunboat tech
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = corvette_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = gunboat_tech
+		}
 		}
 	}
 
@@ -1662,12 +1713,16 @@ focus = {
 	focus = {
 		id = KOR_frenchencroachment
 		#icon = GFX_focus_generic_self_management
-		x = 14
+		x = 12
 		y = 13
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+
+		mutually_exclusive = {
+		focus = KOR_unlikelyalliance
 		}
 
 		prerequisite = { focus = KOR_instillpride }
@@ -1684,7 +1739,7 @@ focus = {
 	focus = {
 		id = KOR_byeongpersucution
 		#icon = GFX_focus_generic_self_management
-		x = 13
+		x = 11
 		y = 14
 		cost = 10
 		available_if_capitulated = no
@@ -1707,7 +1762,7 @@ focus = {
 	focus = {
 		id = KOR_expelparis
 		#icon = GFX_focus_generic_self_management
-		x = 15
+		x = 13
 		y = 14
 		cost = 10
 		available_if_capitulated = no
@@ -1730,7 +1785,7 @@ focus = {
 	focus = {
 		id = KOR_rallydefenses
 		#icon = GFX_focus_generic_self_management
-		x = 14
+		x = 12
 		y = 15
 		cost = 10
 		available_if_capitulated = no
@@ -1750,7 +1805,7 @@ focus = {
 	focus = {
 		id = KOR_fortifyganghwa
 		#icon = GFX_focus_generic_self_management
-		x = 13
+		x = 11
 		y = 16
 		cost = 10
 		available_if_capitulated = no
@@ -1775,7 +1830,7 @@ focus = {
 	focus = {
 		id = KOR_producemyeonje
 		#icon = GFX_focus_generic_self_management
-		x = 15
+		x = 13
 		y = 16
 		cost = 10
 		available_if_capitulated = no
@@ -1793,7 +1848,7 @@ focus = {
 	focus = {
 		id = KOR_koreadefiant
 		#icon = GFX_focus_generic_self_management
-		x = 14
+		x = 12
 		y = 17
 		cost = 10
 		available_if_capitulated = no
@@ -1812,14 +1867,102 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = KOR_unlikelyalliance
+		#icon = GFX_focus_generic_self_management
+		x = 16
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 
+		mutually_exclusive = {
+        focus = KOR_frenchencroachment
+        } 
+
+		prerequisite = { focus = KOR_instillpride }
+
+		completion_reward = {
+		add_political_power = -150
+		add_stability = -0.15
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = unlikelyalliance
+		}
+		#event deal with joseon
+		}
+	}
+
+	focus = {
+		id = KOR_portprotection
+		#icon = GFX_focus_generic_self_management
+		x = 16
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_unlikelyalliance }
+
+		completion_reward = {
+		add_political_power = -10
+		add_stability = -0.1
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = portprotection
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_navaltech
+		#icon = GFX_focus_generic_self_management
+		x = 15
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_portprotection }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = infantry_tech
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_armytech
+		#icon = GFX_focus_generic_self_management
+		x = 17
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_portprotection }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = naval_equipment
+		}
+		}
+	}
 
  
-
-
-
-
-
 
 
 
@@ -1870,5 +2013,1374 @@ focus = {
 		completion_reward = {
 		add_stability = -0.3
 
+		}
+	}
+
+	focus = {
+		id = KOR_westerntrade
+		#icon = GFX_focus_generic_self_management
+		x = 30
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_tsushimatrade
+        } 
+
+
+		prerequisite = { focus = KOR_opendoor }
+
+
+		completion_reward = {
+		add_stability = -0.1
+		add_political_power = -50
+		#western opinion +15
+		}
+	}
+
+	focus = {
+		id = KOR_unequaltreaties
+		#icon = GFX_focus_generic_self_management
+		x = 30
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_westerntrade }
+
+
+		completion_reward = {
+		add_stability = -0.1
+		add_political_power = -100
+		#western opinion +30
+		}
+	}
+
+	focus = {
+		id = KOR_frenchrelations
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_russianrelations
+        } 
+
+		prerequisite = { focus = KOR_unequaltreaties }
+
+
+		completion_reward = {
+		add_political_power = -25
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = frenchrelations
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_frenchinnovations
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_frenchrelations }
+
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = infantry_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = naval_equipment
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_catholicmissions
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_frenchinnovations }
+
+
+		completion_reward = {
+		add_stability = -0.5
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = catholicmissions
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_frenchembassy
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_catholicmissions }
+
+
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = frenchembassy
+		}
+		#event korean embassy request
+		}
+	}
+
+	focus = {
+		id = KOR_francokorean
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_frenchembassy }
+
+
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = FRA
+    	modifier = francokorean
+		}
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = francokorean2
+		}
+		#event french alliance with joseon
+		}
+	}
+
+	focus = {
+		id = KOR_franceadvisors
+		#icon = GFX_focus_generic_self_management
+		x = 29
+		y = 18
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_francokorean }
+
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = industry
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russianrelations
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_frenchrelations
+        } 
+
+		prerequisite = { focus = KOR_unequaltreaties }
+
+
+		completion_reward = {
+		add_political_power = -25
+		add_opinion_modifier = {
+    	target = RUS
+    	modifier = russianrelations
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russianinnovations
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_russianrelations }
+
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = infantry_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = naval_equipment
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russianaccess
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_russianinnovations }
+
+
+		completion_reward = {
+		add_stability = -0.05
+		#russia gets military access
+		add_opinion_modifier = {
+    	target = RUS
+    	modifier = russianaccess
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russianembassy
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_russianaccess }
+
+
+		completion_reward = {
+		#russian gets korean embassy request
+		add_opinion_modifier = {
+    	target = RUS
+    	modifier = russianembassy
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russokorean
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_russianembassy }
+
+
+		completion_reward = {
+		#russia gets alliance with Joseon request
+		add_opinion_modifier = {
+    	target = RUS
+    	modifier = russokorean
+		}
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = russokorean2
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_russianadvisors
+		#icon = GFX_focus_generic_self_management
+		x = 31
+		y = 18
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = KOR_russokorean }
+
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = infantry_tech
+		}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = KOR_tsushimatrade
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_westerntrade
+        } 
+
+
+		prerequisite = { focus = KOR_opendoor }
+
+
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = JAP
+    	modifier = tsushimatrade
+		}
+		add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = KOR_envoyjapan
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = KOR_westerntrade
+        } 
+
+
+		prerequisite = { focus = KOR_opendoor }
+
+
+		completion_reward = {
+		add_opinion_modifier = {
+    	target = JAP
+    	modifier = envoyjapan
+		}
+		add_political_power = -100
+		#japan gets korean envoy
+		}
+	}
+
+	focus = {
+		id = KOR_busanroute
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_envoyjapan }
+
+		completion_reward = {
+		1020 = { add_building_construction = {
+   		type = dockyard
+   		level = 2
+    	instant_build = yes } }
+    	1020 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_japankorean
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_busanroute }
+
+		completion_reward = {
+		#japan opinion +50
+		#china opinion -50
+		add_stability = -0.2
+		#japan gets event alliance with joseon
+		}
+	}
+
+	focus = {
+		id = KOR_surveyjapan
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_japankorean }
+
+		completion_reward = {
+		add_political_power = -50
+		#technical survey of japan event
+		}
+	}
+
+	focus = {
+		id = KOR_industrialjapan
+		#icon = GFX_focus_generic_self_management
+		x = 33
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_surveyjapan }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = industry
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_militaryjapan
+		#icon = GFX_focus_generic_self_management
+		x = 35
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_surveyjapan }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 2
+    	 category = infantry_tech
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_japanadvisors
+		#icon = GFX_focus_generic_self_management
+		x = 34
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_militaryjapan }
+		prerequisite = { focus = KOR_industrialjapan }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = infantry_tech
+		}
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = industry
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_koreanindustrial
+		#icon = GFX_focus_generic_self_management
+		x = 32
+		y = 19
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_japanadvisors }
+		prerequisite = { focus = KOR_russianadvisors }
+		prerequisite = { focus = KOR_franceadvisors }
+
+		completion_reward = {
+		add_political_power = 200
+		add_stability = 0.25
+		#switch to industrializing
+		#remove stagnent economy
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = KOR_chineserelations
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_remainiso focus = KOR_opendoor }
+
+		completion_reward = {
+		add_political_power = 10
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = chineserelations
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_closerqing
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chineserelations }
+
+		completion_reward = {
+		add_political_power = -30
+		add_stability = 0.05
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = closerqing
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_manchurianroutes
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_closerqing }
+
+		completion_reward = {
+		add_political_power = 35
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = industry
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_chineseideas
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_manchurianroutes }
+
+		completion_reward = {
+		add_political_power = 50
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = philosophy_religion_tech
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_chinesetextiles
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chineseideas }
+
+		completion_reward = {
+		1024 = { add_extra_state_shared_building_slots = 2 }
+    	1024 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_domestictextiles
+		#icon = GFX_focus_generic_self_management
+		x = 20
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chinesetextiles }
+
+		completion_reward = {
+		1018 = { add_extra_state_shared_building_slots = 2 }
+    	1018 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_chinaweapons
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chineseideas }
+
+		completion_reward = {
+		add_tech_bonus = {
+   		 bonus = 0.5
+    	 uses = 1
+    	 category = infantry_tech
+		}
+		1015 = { add_extra_state_shared_building_slots = 2 }
+		1015 = { add_building_construction = {
+   		type = arms_factory
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_domesticweapons
+		#icon = GFX_focus_generic_self_management
+		x = 22
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chinaweapons }
+
+		completion_reward = {
+		1024 = { add_extra_state_shared_building_slots = 2 }
+		1024 = { add_building_construction = {
+   		type = arms_factory
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_questionqing
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_chineserelations }
+
+		completion_reward = {
+		add_stability = -0.15
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = questionqing
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_antiqing
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_questionqing }
+
+		completion_reward = {
+		add_political_power = -50
+		add_war_support = 0.1
+		add_opinion_modifier = {
+    	target = CHI
+    	modifier = antiqing
+		}
+		}
+	}
+
+	focus = {
+		id = KOR_scholarsoldier
+		#icon = GFX_focus_generic_self_management
+		x = 23
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_antiqing }
+
+		completion_reward = {
+		add_stability = -0.05
+		add_manpower = 5000
+		
+		}
+	}
+
+	focus = {
+		id = KOR_northfort
+		#icon = GFX_focus_generic_self_management
+		x = 25
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_antiqing }
+		
+		completion_reward = {
+		1017 = { add_building_construction = {
+   		type = bunker
+   		level = 3
+    	instant_build = yes }
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+    	1015 = { add_building_construction = {
+   		type = bunker
+   		level = 3
+    	instant_build = yes }
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+    	1016 = { add_building_construction = {
+   		type = bunker
+   		level = 3
+    	instant_build = yes }
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_rallyhan
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_scholarsoldier }
+		prerequisite = { focus = KOR_northfort }
+
+		completion_reward = {
+		add_political_power = -50
+		#event han chinese support
+		}
+	}
+
+	focus = {
+		id = KOR_chunghwa
+		#icon = GFX_focus_generic_self_management
+		x = 24
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_rallyhan }
+
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = CHI }
+		}
+	}
+
+	#End of branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#Start of branch
+
+	focus = {
+		id = KOR_installdaewongun
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = KOR_disciplineclans
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 11
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_installdaewongun }
+
+		completion_reward = {
+		add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = KOR_strengthenuijeongbu
+		#icon = GFX_focus_generic_self_management
+		x = 39
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_disciplineclans }
+
+
+		completion_reward = {
+		add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = KOR_removeclan
+		#icon = GFX_focus_generic_self_management
+		x = 41
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_disciplineclans }
+
+
+		completion_reward = {
+		add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = KOR_rootoutcorruption
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 13
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_removeclan }
+ 		prerequisite = { focus = KOR_strengthenuijeongbu }
+
+
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.1
+		#remove inlaw government
+		}
+	}
+
+	focus = {
+		id = KOR_civilservicereform
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_rootoutcorruption }
+
+
+		completion_reward = {
+		add_stability = 0.15
+		#remove widespread corruption
+		}
+	}
+
+	focus = {
+		id = KOR_removeseowontax
+		#icon = GFX_focus_generic_self_management
+		x = 39
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_civilservicereform }
+
+
+		completion_reward = {
+		add_stability = -0.03
+		add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = KOR_taxesyangban
+		#icon = GFX_focus_generic_self_management
+		x = 41
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_civilservicereform }
+
+
+		completion_reward = {
+		add_stability = -0.05
+		add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = KOR_shutdownseowon
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_removeseowontax }
+		prerequisite = { focus = KOR_taxesyangban }
+
+
+		completion_reward = {
+		add_stability = -0.05
+		add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = KOR_securebloodline
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_shutdownseowon }
+
+		completion_reward = {
+		add_stability = 0.05
+		add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = KOR_ensureroyal
+		#icon = GFX_focus_generic_self_management
+		x = 40
+		y = 18
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_securebloodline }
+
+		completion_reward = {
+		add_political_power = -100
+		#grant restrengthen royal government
+		}
+	}
+
+	focus = {
+		id = KOR_renovatehanseong
+		#icon = GFX_focus_generic_self_management
+		x = 46
+		y = 14
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_rootoutcorruption }
+
+
+		completion_reward = {
+		add_stability = 0.05
+		1019 = { 
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_floodcontrol
+		#icon = GFX_focus_generic_self_management
+		x = 44
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_renovatehanseong }
+
+
+		completion_reward = {
+		add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = KOR_southrice
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_floodcontrol }
+
+
+		completion_reward = {
+		1021 = { add_extra_state_shared_building_slots = 2 }
+		1021 = { add_building_construction = {
+   		type = farm
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_gainrelief
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 18
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_southrice }
+
+
+		completion_reward = {
+		add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = KOR_endstarvation
+		#icon = GFX_focus_generic_self_management
+		x = 42
+		y = 19
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_gainrelief }
+
+
+		completion_reward = {
+		#remove mass starvation
+		}
+	}
+
+	focus = {
+		id = KOR_southcotton
+		#icon = GFX_focus_generic_self_management
+		x = 44
+		y = 17
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_floodcontrol }
+
+
+		completion_reward = {
+		1021 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 1
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_expandcotton
+		#icon = GFX_focus_generic_self_management
+		x = 44
+		y = 18
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_southcotton }
+
+
+		completion_reward = {
+		1024 = { add_building_construction = {
+   		type = cotton_farm
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_infantilecotton
+		#icon = GFX_focus_generic_self_management
+		x = 44
+		y = 19
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_expandcotton }
+
+
+		completion_reward = {
+		1021 = { add_building_construction = {
+   		type = industrial_complex
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_hanriver
+		#icon = GFX_focus_generic_self_management
+		x = 48
+		y = 15
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_renovatehanseong }
+
+
+		completion_reward = {
+		1019 = { 
+    	add_building_construction = {
+   		type = infrastructure
+   		level = 2
+    	instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = KOR_reconstructpalace
+		#icon = GFX_focus_generic_self_management
+		x = 48
+		y = 16
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = KOR_hanriver }
+
+
+		completion_reward = {
+		add_political_power = -150
+		add_stability = 0.1
 		}
 	}
