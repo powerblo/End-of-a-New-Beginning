@@ -86,6 +86,24 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
+			}
+			country_event = { id = EDC_berlin_con.6 hours = 20 }
+		}
+	}
+	PRS = {
+		if={
+			limit = {
+				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
+				OR = {
+					has_cosmetic_tag = PRS_GER_liberal
+					has_cosmetic_tag = PRS_GER_bismarck
+					has_cosmetic_tag = PRS_GER_socialist
+				}
+				GER = {
+					exists = no
+				}
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -94,6 +112,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -102,6 +121,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -110,6 +130,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -118,6 +139,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -126,6 +148,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -134,6 +157,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -142,6 +166,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -150,6 +175,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -158,6 +184,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -166,6 +193,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -174,6 +202,7 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -182,7 +211,18 @@ afr_send_event_to_voting_nations = {
 		if={
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
+				NOT = {PIE = {has_cosmetic_tag = ITA}}
 				exists = yes
+			}
+			country_event = { id = EDC_berlin_con.6 hours = 20 }
+		}
+	}
+	PIE = {
+		if={
+			limit = {
+				NOT = {has_country_flag = berlin_conferance_voter}
+				exists = yes
+				has_cosmetic_tag = ITA
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -206,6 +246,14 @@ afr_ber_vote_on_slavery = {
 			country_event = { id = EDC_berlin_con.10 hours = 20 }
 		}
 	}
+	PRS = {
+		if={
+			limit = {
+				has_country_flag = berlin_conferance_voter
+			}
+			country_event = { id = EDC_berlin_con.10 hours = 20 }
+		}
+	}
 	ENG = {
 		if={
 			limit = {
@@ -287,6 +335,14 @@ afr_ber_vote_on_slavery = {
 		}
 	}
 	ITA = {
+		if={
+			limit = {
+				has_country_flag = berlin_conferance_voter
+			}
+			country_event = { id = EDC_berlin_con.10 hours = 20 }
+		}
+	}
+	PIE = {
 		if={
 			limit = {
 				has_country_flag = berlin_conferance_voter
@@ -335,10 +391,26 @@ afr_ber_check_votes = {
 	}
 	if ={
 		limit ={
+			check_variable = {GER.ger_conferance_vote > GER.highest_conferance_vote}
+		}
+		set_variable = {GER.highest_conferance_vote = GER.ger_conferance_vote}
+		PRS = {save_global_event_target_as=afr_ber_reigion_winner}
+	}
+	if ={
+		limit ={
 			check_variable = {GER.ita_conferance_vote > GER.highest_conferance_vote}
+			ITA = {exists = yes}
 		}
 		set_variable = {GER.highest_conferance_vote = GER.ita_conferance_vote}
 		ITA = {save_global_event_target_as=afr_ber_reigion_winner}
+	}
+	if ={
+		limit ={
+			check_variable = {GER.ita_conferance_vote > GER.highest_conferance_vote}
+			PIE = {has_cosmetic_tag = ITA}
+		}
+		set_variable = {GER.highest_conferance_vote = GER.ita_conferance_vote}
+		PIE = {save_global_event_target_as=afr_ber_reigion_winner}
 	}
 	if ={
 		limit ={
@@ -561,6 +633,12 @@ afr_assign_extra_vote_to_country={
 	if ={
 		limit = {
 			PREV = {tag = ITA}
+		}
+		add_to_variable = {GER.ita_conferance_vote = 1}
+	}
+	if ={
+		limit = {
+			PREV = {tag = PIE}
 		}
 		add_to_variable = {GER.ita_conferance_vote = 1}
 	}
