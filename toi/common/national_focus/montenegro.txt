@@ -1,0 +1,1073 @@
+focus_tree = {
+	id = montenegro
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MNT
+		}
+	}
+	default = no
+
+	focus = {
+		id = MNT_Status_of_the_Principality
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10
+		x = 10
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+			MNT = { country_event = { id = montenegro.1 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Knez_Danilo_I
+		icon = GFX_focus_generic_home_defense
+		cost = 10
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = MNT_Status_of_the_Principality
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.2 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Stand_by_Danilos_Code
+		icon = GFX_goal_focus_enact_law
+		x = 7
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = MNT_Knez_Danilo_I
+		}
+		completion_reward = {
+			add_popularity = { ideology = fundamentalism popularity = -0.1 }
+		}
+	}
+
+	focus = {
+		id = MNT_Industrial_Question
+		icon = GFX_AUS_focus_ind_ind_ind
+		x = 13
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = MNT_Knez_Danilo_I
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = mechanical_engineering_tech }
+		}
+	}
+
+	focus = {
+		id = MNT_Civilian_Factories
+		icon = GFX_goal_focus_industrial_revolution
+		x = 11
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Industrial_Question
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Connect_the_10_Nahiyas
+		icon = GFX_AUS_focus_mil_industry
+		x = 13
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Industrial_Question
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Expand_the_Military_Complex
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Industrial_Question
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Workplace_for_the_Peasants
+		icon = GFX_AUS_focus_industry
+		x = 11
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Civilian_Factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Connect_Podgorica_-Cerovo
+		icon = GFX_focus_ITA_North_and_South
+		x = 13
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Connect_the_10_Nahiyas
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Produce_Firearms
+		icon = GFX_goal_generic_military_sphere
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Expand_the_Military_Complex
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Study_Mechanical_Engineering
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 13
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = MNT_Workplace_for_the_Peasants
+		}
+		prerequisite = {
+			focus = MNT_Connect_Podgorica_-Cerovo
+		}
+		prerequisite = {
+			focus = MNT_Produce_Firearms
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = mechanical_engineering_tech }
+		}
+	}
+
+	focus = {
+		id = MNT_Our_Knez_has_been_Assassinated
+		icon = GFX_focus_conspiracy_murder_act
+		x = 22
+		y = 0
+		cost = 10
+		available = {
+			has_country_flag = MNT_knez_dead
+		}
+		completion_reward = {
+			add_stability = -0.15
+			MNT = { country_event = { id = montenegro.3 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Invite_Nikola_I
+		icon = GFX_goal_focus_ally_FRA
+		x = 21
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MNT_Our_Knez_has_been_Assassinated
+		}
+		completion_reward {
+			MNT = { country_event = { id = montenegro.4 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Punish_Clan_Bjelopavlic
+		icon = GFX_goal_generic_political_pressure
+		x = 23
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MNT_Our_Knez_has_been_Assassinated
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.5 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Execute_Todor_Kadic
+		icon = GFX_focus_ITA_South_Harsh
+		x = 23
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = MNT_Punish_Clan_Bjelopavlic
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = { 
+		id = MNT_Crown_Knez_Nikola_I
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 21
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = MNT_Invite_Nikola_I
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MNT_Age_of_Reforms
+		icon = GFX_goal_focus_reform_administration
+		x = 22
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = MNT_Crown_Knez_Nikola_I
+		}
+		prerequisite = {
+			focus = MNT_Execute_Todor_Kadic
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = MNT_Education
+		icon = GFX_goal_generic_scientific_exchange
+		x = 21
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Age_of_Reforms
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.6 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Study_Machinery
+		icon = GFX_AUS_focus_s_rail
+		x = 21
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Education
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = mechanical_engineering_tech }
+		}
+	}
+
+	focus = {
+		id = MNT_Biochemistry_and_Agriculture
+		icon = GFX_focus_ITA_Farms
+		x = 19
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Education
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = biochemistry_tech }
+		}
+	}
+
+	focus = {
+		id = MNT_Chemical_Processing
+		icon = GFX_goal_generic_oil_refinery
+		x = 17
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Education
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = process_engineering_tech }
+		}
+	}
+
+	focus = {
+		id = MNT_Military_Reform
+		icon = GFX_focus_chi_army_reform
+		x = 23
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Age_of_Reforms
+		}
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = MNT_New_Factories_in_Moracka
+		icon = GFX_AUS_focus_open_mines
+		x = 23
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Military_Reform
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Study_Land_Doctrines
+		icon = GFX_focus_prc_infiltration
+		x = 25
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Military_Reform
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = MNT_Infantry_Weapons
+		icon = GFX_goal_generic_small_arms
+		x = 27
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Military_Reform
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
+		}
+	}
+
+	focus = {
+		id = MNT_Coal_Mines
+		icon = GFX_goal_focus_coal_mines
+		x = 17
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = MNT_Chemical_Processing
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = coal_mine
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = coal_mine
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = coal_mine
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Cotton_Farms
+		icon = GFX_goal_focus_tomato_farming
+		x = 19
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = MNT_Biochemistry_and_Agriculture
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = cotton_farm
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = cotton_farm
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id =  MNT_Logging_Camps
+		icon = GFX_AUS_focus_deforestation
+		x = 21
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = MNT_Study_Machinery
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Train_our_Generals
+		icon = GFX_focus_Make_a_Man_Out_Of_You
+		x = 25
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = MNT_New_Factories_in_Moracka
+		}
+		prerequisite = {
+			focus = MNT_Study_Land_Doctrines
+		}
+		prerequisite = {
+			focus = MNT_Infantry_Weapons
+		}
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_intel days = 3650 }
+		}
+	}
+
+	focus = {
+		id = MNT_Second_Golden_Age
+		icon = GFX_goal_focus_fund_partisans
+		x = 22
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = MNT_Coal_Mines
+		}
+		prerequisite = {
+			focus = MNT_Cotton_Farms
+		}
+		prerequisite = {
+			focus = MNT_Logging_Camps
+		}
+		prerequisite = {
+			focus = MNT_Train_our_Generals
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			MNT = { country_event = { id = montenegro.7 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Gradually_Remove_Religion
+		icon = GFX_goal_focus_utah_sword
+		x = 5
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Stand_by_Danilos_Code
+		}
+		mutually_exclusive = {
+			focus = MNT_Befriend_the_Patriarch
+		}
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = MNT_Befriend_the_Patriarch
+		icon = GFX_goal_focus_utah_agreement
+		x = 9
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MNT_Stand_by_Danilos_Code
+		}
+		mutually_exclusive = {	
+			focus = MNT_Gradually_Remove_Religion
+		}
+		completion_reward = {
+			add_popularity = { ideology = fundamentalism popularity = 0.1 }
+		}
+	}
+
+	focus = {
+		id = MNT_Ban_Theocratic_Ideals
+		icon = GFX_AUS_focus_public_schools
+		x = 5
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Gradually_Remove_Religion
+		}
+		completion_reward = {
+			add_popularity = { ideology = fundamentalism popularity = -0.1 }
+		}
+	}
+
+	focus = {
+		id = MNT_Give_More_Power_to_the_Metropolitanate
+		icon = GFX_AUS_focus_credit_anstalt
+		x = 9
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = MNT_Befriend_the_Patriarch
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MNT_Diplomatic_Relations
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 13
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = MNT_Balkan_Brethren
+		icon = GFX_Huge-oslavia
+		x = 10
+		y = 9
+		cost = 1
+		prerequisite = {
+			focus = MNT_Diplomatic_Relations
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.8 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Serbia
+		icon = GFX_goal_tripartite_pact
+		x = 8
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Balkan_Brethren
+		}
+		completion_reward = {
+			SER = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_allies
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = MNT_Bosnia
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 10
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Balkan_Brethren
+		}
+		completion_reward = {
+			BOS = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_allies
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = MNT_Ottoman_Relations
+		icon = GFX_focus_Sultan
+		x = 13
+		y = 9
+		cost = 1
+		prerequisite = {
+			focus = MNT_Diplomatic_Relations
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.9 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Announce_Rivalry
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 12
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Ottoman_Relations
+		}
+		mutually_exclusive = {
+			focus = MNT_Announce_Friendship
+		}
+		completion_reward = {
+			OTO = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_rivals
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = MNT_Announce_Friendship
+		icon = GFX_goal_continuous_increase_nu
+		x = 14
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Ottoman_Relations
+		}
+		mutually_exclusive = {
+			focus = MNT_Announce_Rivalry
+		}
+		completion_reward = {
+			OTO = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_allies
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Prepare_for_the_Worst
+		icon = GFX_AUS_focus_fortify_italy
+		x = 13
+		y = 11
+		cost = 10
+		prerequisite = {
+			focus =MNT_Announce_Friendship
+			focus =MNT_Announce_Rivalry
+		}
+		completion_reward = {
+			942 = {
+				add_building_construction = {
+					type = bunker
+					province = 9809
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11858
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Giants_of_Europe
+		icon = GFX_goal_focus_imperialism
+		x = 17
+		y = 9
+		cost = 1
+		prerequisite = {
+			focus = MNT_Diplomatic_Relations
+		}
+		completion_reward = {
+			MNT = { country_event = { id = montenegro.10 } }
+		}
+	}
+
+	focus = {
+		id = MNT_Austrian_Empire
+		icon = GFX_goal_focus_ally_AUS
+		x = 16
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Giants_of_Europe
+		}
+		completion_reward = {
+			AUS = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_allies
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Russian_Empire
+		icon = GFX_focus_ger_strike_at_the_source
+		x = 18
+		y = 10
+		cost = 10
+		prerequisite = {
+			focus = MNT_Giants_of_Europe
+		}
+		completion_reward = {
+			RUS = {
+				add_opinion_modifier = {
+					target = MNT
+					modifier = mnt_allies
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Other_Kinds_of_Warfare
+		icon = GFX_goal_generic_navy_battleship
+		x = 5
+		y = 7
+		cost = 1
+	}
+
+	focus = { 
+		id = MNT_Our_Naval_Force
+		icon = GFX_goal_generic_amphibious_assault
+		x = 4
+		y = 8
+		cost = 10
+		prerequisite = {
+			focus = MNT_Other_Kinds_of_Warfare
+		}
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = MNT_New_Dockyard_in_Kotor
+		icon = GFX_AUS_focus_docks_2
+		x = 6
+		y = 8
+		cost = 10
+		prerequisite = {
+			focus = MNT_Other_Kinds_of_Warfare
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { 
+						building = dockyard
+						size > 0 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MNT_Air_Combat
+		icon = GFX_goal_continuous_air_production
+		x = 4
+		y = 9
+		cost = 10
+		prerequisite = {
+			focus = MNT_Our_Naval_Force
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+	}
+
+	focus = {
+		id = MNT_New_Ship_Designs
+		icon = GFX_goal_focus_expand_lgoc
+		x = 6
+		y = 9
+		cost = 10
+		prerequisite = {
+			focus = MNT_New_Dockyard_in_Kotor
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+	}
+}

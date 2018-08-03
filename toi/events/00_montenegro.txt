@@ -1,0 +1,163 @@
+﻿###########################
+# Montenegro Events
+###########################
+
+add_namespace = montenegro
+
+#----------------------------------------------------------------------------------------------
+# FOCUS TREE EVENTS - 1857 TO 1870
+#----------------------------------------------------------------------------------------------
+
+country_event = {
+	id = montenegro.1
+	title = montenegro.1.t
+	desc = montenegro.1.d
+	picture = GFX_report_event_belgian_parliament
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.1.a
+	}
+}
+
+country_event = {
+	id = montenegro.2
+	title = montenegro.2.t
+	desc = montenegro.2.d
+	picture = GFX_report_ITA_Proclamation_of_the_Kingdom_of_Italy
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.2.a
+	}
+}
+
+country_event = {
+	id = montenegro.3
+	title = montenegro.3.t
+	desc = montenegro.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.3.a
+	}
+}
+
+country_event = {
+	id = montenegro.4
+	title = montenegro.4.t
+	desc = montenegro.4.d
+	picture = GFX_report_event_nap_france_redraw_cantons
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Finnaly, a new leader.
+		name = montenegro.4.a
+		create_country_leader = {
+			name = "Nikola I"
+			picture = "Portrait_MNT_Nikola_I.dds"
+			ideology = despotism
+		}
+	}
+}
+
+country_event = {
+ 	id = montenegro.5
+	title = montenegro.5.t
+	desc = montenegro.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.5.a
+	}
+}
+
+country_event = {
+	id = montenegro.6
+	title = montenegro.6.t
+	desc = montenegro.6.d
+	picture = GFX_report_event_nap_france_amnesty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.6.a
+	}
+}
+
+country_event = {
+	id = montenegro.7
+	title = montenegro.7.t
+	desc = montenegro.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.7.a
+	}
+}
+
+country_event = {
+	id = montenegro.8
+	title = montenegro.8.t
+	desc = montenegro.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.8.a
+	}
+}
+
+country_event = {
+	id = montenegro.9
+	title = montenegro.9.t
+	desc = montenegro.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.9.a
+	}
+}
+
+country_event = {
+	id = montenegro.10
+	title = montenegro.10.t
+	desc = montenegro.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = montenegro.10.a
+	}
+}
+
+country_event = {
+	id = montenegro.11
+	title = montenegro.11.t
+	desc = montenegro.11.d
+	picture = GFX_report_event_great_stink
+
+	trigger = {
+		tag = MNT
+		date > 1860.1.1
+	}
+
+	mean_time_to_happen = {
+	  days = 5
+	}
+
+	fire_only_once = yes
+	option = {
+		name = montenegro.11.a
+		hidden_effect = {
+			complete_national_focus = MNT_Our_Knez_has_been_Assassinated
+		}
+	}
+}

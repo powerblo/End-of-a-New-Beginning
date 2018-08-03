@@ -14,8 +14,8 @@
     victorian_era
 	law_victorian_army
     agrarian
-    no_heir
-    absolute_monarchy
+    has_heir
+    constitutional_monarchy
 
     civilian_economy
     limited_exports
@@ -28,12 +28,12 @@
     limited_equality
     absolutism
 
-    no_constitution
+    constitution_adopted
     no_elections
 
     privileged_education
     state_religion
-	religion_orthodox
+	religion_secular
         #NATIONAL SPIRITS
 	
   }
@@ -66,10 +66,10 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 55
       }
       fundamentalism = {
-        popularity = 0
+        popularity = 45
       }
     }
 
@@ -106,10 +106,26 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
+  name = "Petar II"
+  desc = ""
+  picture = "Portrait_MNT_Petar_II.dds"
+  expire = "1953.3.1"
+  ideology = christian
+}
+
+create_country_leader = {
+  name = "Nikola I"
+  desc = ""
+  picture = "Portrait_MNT_Nikola_I.dds"
+  expire = "1953.3.1"
+  ideology = despotism
+}
+
+create_country_leader = {
 	name = "Danilo I"
 	desc = ""
 	picture = "Portrait_MNT_Danilo_I.dds"
-	expire = "1953.3.1"
+	expire = "1860.1.1"
 	ideology = despotism
 }
 
