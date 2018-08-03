@@ -24,15 +24,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no  
 		
-		available = { 
-			BAV = { 
-				controls_state = 52
-			} 
-		}
-		
 		completion_reward = {
-			52 = { add_extra_state_shared_building_slots = 1 }
-			52 = { add_building_construction = { type = cotton_farm level = 1 instant_build = yes } }
 			add_ideas = BAV_agriculture
 		}
 	}
@@ -49,15 +41,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		
-		available = { 
-			BAV = { 
-				controls_state = 53
-			} 
-		}
-		
 		completion_reward = {
-			53 = { add_extra_state_shared_building_slots = 1 }
-			53 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			add_ideas = BAV_bavindustry
 		}
 	}
@@ -159,8 +143,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			54 = { add_extra_state_shared_building_slots = 2  }
-			54 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
+			54 = { add_extra_state_shared_building_slots = 1  }
+			54 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			add_political_power = 50
 		}
 	}
@@ -1218,7 +1202,7 @@ focus_tree = {
 	#Focus for Gott, steh' uns bei!
 	focus = { 
 		id = BAV_gottstehunsbei 
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_steh_uns_bei 
 		ai_will_do = { factor = 80}
 		x = 23
 		y = 5 
@@ -1492,7 +1476,7 @@ focus_tree = {
 	#Focus for Convince Wuerttemberg
 	focus = { 
 		id = BAV_convincewuerttemberg
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_convince_wurttemberg 
 		ai_will_do = { factor = 1}
 		x = 20
 		y = 7 
@@ -1511,7 +1495,7 @@ focus_tree = {
 	#Focus for Convince Baden
 	focus = { 
 		id = BAV_convincebaden
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_convince_baden 
 		ai_will_do = { factor = 1}
 		x = 20
 		y = 8 
@@ -2133,7 +2117,7 @@ focus_tree = {
 	#Focus for Accept Protestantism
 	focus = { 
 		id = BAV_acceptprotestantism
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_accept_protestantism 
 		ai_will_do = { factor = 1}
 		x = 22
 		y = 6
