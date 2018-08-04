@@ -185,10 +185,19 @@ country_event = {
 	option = {
 		name = bavariafocus.6.a
 		ai_chance = { 
-			factor = 70 
-			#modifier = {
-			#	
-			#}
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 60
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 80
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sway_convince_accept
 		
@@ -204,9 +213,18 @@ country_event = {
 		name = bavariafocus.6.b
 		ai_chance = { 
 			factor = 30
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 40
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 20
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sway_convince_deny
 		hidden_effect = {
@@ -229,10 +247,19 @@ country_event = {
 	option = {
 		name = bavariafocus.7.a
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 50
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 60
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sway_convince_accept
 		
@@ -247,10 +274,19 @@ country_event = {
 	option = {
 		name = bavariafocus.7.b
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 70
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 50
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 40
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sway_convince_deny
 		hidden_effect = {
@@ -273,10 +309,19 @@ country_event = {
 	option = {
 		name = bavariafocus.8.a
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 70
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 90
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_accept
 		
@@ -294,10 +339,19 @@ country_event = {
 	option = {
 		name = bavariafocus.8.b
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 30
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 10
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
 	}
@@ -315,10 +369,19 @@ country_event = {
 	option = {
 		name = bavariafocus.9.a
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 70
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 90
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_accept
 		
@@ -330,10 +393,19 @@ country_event = {
 	option = {
 		name = bavariafocus.9.b
 		ai_chance = { 
-			factor = 50 
-			#modifier = {
-			#	
-			#}
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 30
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 10
+				has_opinion_modifier = bav_common_policy
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
 	}
@@ -879,5 +951,47 @@ country_event = {
 	
 	option = {
 		name = bavariafocus.31.a
+	}
+}
+
+#Nuremberg Verein
+country_event = {
+	id = bavariafocus.32
+	title = bavariafocus.32.t
+	desc = bavariafocus.32.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.32.a
+	}
+}
+
+#Bezirksamt Erlangen
+country_event = {
+	id = bavariafocus.33
+	title = bavariafocus.33.t
+	desc = bavariafocus.33.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.33.a
+	}
+}
+
+#Muenchner Culture
+country_event = {
+	id = bavariafocus.34
+	title = bavariafocus.34.t
+	desc = bavariafocus.34.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.34.a
 	}
 }
