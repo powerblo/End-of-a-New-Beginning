@@ -995,3 +995,97 @@ country_event = {
 		name = bavariafocus.34.a
 	}
 }
+
+#Pride
+country_event = {
+	id = bavariafocus.35
+	title = bavariafocus.35.t
+	desc = bavariafocus.35.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.35.a
+	}
+}
+
+#Concert of Europe
+news_event = {
+	id = bavariafocus.36
+	title = bavariafocus.36.t
+	desc = bavariafocus.36.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = BAV 
+		}
+		name = bavariafocus.36.a
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = BAV
+			}
+		}
+		name = bavariafocus.36.b
+	}
+}
+
+#Middle Power
+news_event = {
+	id = bavariafocus.37
+	title = bavariafocus.37.t
+	desc = bavariafocus.37.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = BAV 
+		}
+		name = bavariafocus.37.a
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = BAV
+			}
+		}
+		name = bavariafocus.37.b
+	}
+}
+
+#Donau-Main-Kanal
+country_event = {
+	id = bavariafocus.38
+	title = bavariafocus.38.t
+	desc = bavariafocus.38.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.38.a
+	}
+}
+
+#Sued-Nord-Bahn
+country_event = {
+	id = bavariafocus.39
+	title = bavariafocus.39.t
+	desc = bavariafocus.39.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.39.a
+	}
+}
