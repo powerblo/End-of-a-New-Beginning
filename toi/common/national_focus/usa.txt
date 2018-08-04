@@ -1675,6 +1675,12 @@ focus_tree = {
 		y = 14
 		completion_reward = {
 			add_political_power = 25
+			if = {
+				limit = {
+					has_country_flag = USA_ACW_monroe_broken
+				}
+				country_event = { id = acw.42 }
+			}
 		}
 	}
 	focus = {
