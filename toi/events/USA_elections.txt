@@ -1,0 +1,147 @@
+﻿add_namespace = usa_election
+#THE 1860 AND 1864 ELECTIONS ARE IN THE REGULAR USA EVENTS
+#Election of 1860
+country_event = {
+		id = usa_election.1
+		title = usa_election.1.t
+		desc = usa_election.1.d
+		picture = GFX_report_event_election_vote
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1868.11.2
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+				name = usa_election.1.a
+				trigger = {
+					NOT = { has_country_flag = USA_Civil_War_Avoided }
+				}
+				ai_chance = {
+					factor = 50
+
+					modifier = {
+						add = 45
+						has_country_flag = USASoaring_Eagle
+					}
+
+					modifier = {
+						add = -20
+						has_country_flag = USABroken_Eagle
+					}
+				}
+				set_country_flag = USA_Grant_1868
+				add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
+				add_popularity = { ideology = centrism popularity = 0.03 }
+		}
+		option = {
+				name = usa_election.1.b
+				ai_chance = {
+					factor = 50
+
+					modifier = {
+						add = -45
+						has_country_flag = USASoaring_Eagle
+					}
+
+					modifier = {
+						add = 20
+						has_country_flag = USABroken_Eagle
+					}
+
+					modifier = {
+						factor = 0
+						is_historical_focus_on = yes
+					}
+				}
+				set_country_flag = USA_Seymour_1868
+				add_popularity = { ideology = traditional_conservatism popularity = 0.05 }
+		}
+}
+#Grant Inaugerated
+country_event = {
+		id = usa_election.2
+		title = usa_election.2.t
+		desc = usa_election.2.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_Grant_1868
+			date > 1868.3.4
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+			name = usa_election.2.a
+			retire_country_leader = yes
+			create_country_leader = {
+    				name = "Ulysses S. Grant"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Ulysses_grant.dds"
+    				expire = "1947.1.1"
+    				ideology = liberal_social
+    				traits = {
+    					war_veteran
+  						eoanb_trait_military_leader
+    				}
+  				}
+			set_politics = { ruling_party = social_egalitarianism }
+		}
+}
+#Seymour Inaugerated
+country_event = {
+		id = usa_election.3
+		title = usa_election.3.t
+		desc = usa_election.3.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_Seymour_1868
+			date > 1868.3.4
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+			name = usa_election.2.a
+			retire_country_leader = yes
+			create_country_leader = {
+    				name = "Horatio Seymour"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Horatio_Seymour.dds"
+    				expire = "1947.1.1"
+    				ideology = conserv
+  				}
+			set_politics = { ruling_party = traditional_conservatism }
+		}
+}
+
+#NEWS EVENTS#
+add_namespace = usa_election_news
+#1860 Election - Lincoln
+news_event = {
+		id = usa_election_news.1
+		title = usa_election_news.1.t
+		desc = usa_election_news.1.d
+
+		picture = GFX_news_event_lincoln_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.3.a
+		}
+}

@@ -576,14 +576,14 @@ USA_american_civil_war_descision = {
 			}
 		}
 
-		cost = 75
+		cost = 100
 
 		days_re_enable = 5
 
 		complete_effect = {
 			add_stability = -0.1
-			add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 }
-            add_equipment_to_stockpile = { type = uniform_equipment amount = 4000 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 }
+            add_equipment_to_stockpile = { type = uniform_equipment amount = 6000 }
             add_equipment_to_stockpile = { type = cavalry_equipment amount = 1000 }
 		}
 
@@ -591,34 +591,13 @@ USA_american_civil_war_descision = {
 			factor = 100
 			modifier = {
 				factor = 0
-				AND = {
-					date > 1864.1.1
-					tag = CSA
-					is_historical_focus_on = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					has_equipment = { infantry_equipment > 1999 }
-					has_equipment = { uniform_equipment > 1999 }
-					has_equipment = { cavalry_equipment > 249 }
-				}
-			}
-			modifier = {
-				factor = 0
-				num_divisions < 40
-				if = {
-					limit = {
-						tag = USA
+				OR = {
+					has_manpower < 50000
+					AND = {
+						date > 1864.1.1
+						tag = CSA
+						is_historical_focus_on = yes
 					}
-					controls_state = 371
-				}
-				if = {
-					limit = {
-						tag = USA
-					}
-					controls_state = 954
 				}
 			}
 		}
@@ -665,20 +644,7 @@ USA_american_civil_war_descision = {
 
 		complete_effect = {
 			add_war_support = -0.1
-			if = {
-				limit = {
-					tag = USA
-				}
-				hidden_effect = { load_oob = USA_civilwar_draft }
-				custom_effect_tooltip = USA_ACW_draft_descision
-			}
-			if = {
-				limit = {
-					tag = CSA
-				}
-				hidden_effect = { load_oob = CSA_civilwar_draft }
-				custom_effect_tooltip = CSA_ACW_draft_descision
-			}
+			add_manpower = 50000
 		}
 
 		ai_will_do = {

@@ -84,6 +84,10 @@
     tech_support = 1
     tech_naval_1812_frigate = 1
     gw_artillery = 1
+    hand_revolvers = 1
+    socket_bayonet = 1
+    rifle_equipment1 = 1
+    civil_army_cloth = 1
     iron_railways = 1
     steam_engine = 1
     manufactories = 1
@@ -92,6 +96,9 @@
     early_artificial_fertilizer = 1
     electrical_engineering = 1
     tech_naval_1830_frigate = 1
+    mongolfiere = 1
+    ornithopter = 1
+    screw_propeller = 1
   }
 
   give_guarantee = MEX
@@ -179,11 +186,13 @@
   }
 
   create_country_leader = {
-    name = "Abraham Lincoln"
+    name = "John C. Frémont"
     desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
     picture = "Portrait_USA_Abraham_Lincoln.dds"
     expire = "1886.5.2"
     ideology = conserv_liberal
+    traits = {
+    }
   }
 
   # GENERALS

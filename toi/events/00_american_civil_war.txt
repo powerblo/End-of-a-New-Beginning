@@ -168,7 +168,6 @@ country_event = {
     
     option = {
         name = acw.5.a
-        add_political_power = -25
         army_experience = -20
         add_ideas = USA_Civil_War_Army_Competency
         set_country_flag = USA_officers_leave_acw
@@ -185,13 +184,14 @@ country_event = {
 
     option = {
         name = acw.6.a
-        add_political_power = 300
+        add_political_power = 200
         add_ideas = USA_Civil_War
         if = {
             limit = {
                 tag = USA
             }
             USA = { remove_ideas = american_slavery_3 }
+            add_political_power = 500
         }
         add_war_support = 0.8
         add_stability = 0.8
@@ -1042,7 +1042,7 @@ country_event = {
         }
     }
 }
-#Equipment for the CSA
+#Equipment for both Sides
 country_event = {
     id = acw.21
     title = acw.21.t
@@ -1051,7 +1051,7 @@ country_event = {
     
     trigger = {
         tag = CSA
-        has_war_with = USA
+        has_global_flag = ACWAmerican_Civil_War
     }
 
     fire_only_once = yes
@@ -1059,13 +1059,24 @@ country_event = {
     mean_time_to_happen = {
         days = 5
     }
-
-    fire_only_once = yes
     
     option = {
+        trigger = {
+            tag = CSA
+        }
         name = acw.21.a
-        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 }
-        add_equipment_to_stockpile = { type = uniform_equipment amount = 4000 }
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 }
+        add_equipment_to_stockpile = { type = uniform_equipment amount = 8000 }
+        add_equipment_to_stockpile = { type = cavalry_equipment amount = 2000 }
+        hidden_effect = { USA = { country_event = { id = acw.21 } } }
+    }
+    option = {
+        trigger = {
+            tag = USA
+        }
+        name = acw.21.a
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 }
+        add_equipment_to_stockpile = { type = uniform_equipment amount = 8000 }
         add_equipment_to_stockpile = { type = cavalry_equipment amount = 2000 }
     }
 }
