@@ -1684,6 +1684,7 @@ country_event = {
 		option = {
 			name = usa.45.a
 			custom_effect_tooltip = 01_lincoln_tt
+			kill_country_leadre = yes
 			hidden_effect = { news_event = { id = usa_news.18 } }
 			hidden_effect = {
 				create_country_leader = {
@@ -1694,6 +1695,7 @@ country_event = {
     				ideology = federal
   				}
 			}
+			set_politics = { ruling_party = traditional_conservatism }
 			add_stability = -0.2
 			set_global_flag = Lincoln_Assassinated
 			set_country_flag = Lincoln_Assassinated
