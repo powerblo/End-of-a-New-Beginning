@@ -251,6 +251,51 @@ country_event = { # The 1867 Federal Elections
 	}
 }
 
+#Choosing Capital
+country_event = {
+	id = british_canada.11
+	title = british_canada.11.t
+	desc = british_canada.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1857.12.30
+		CAN = {
+			is_subject_of = ENG
+			owns_state = 276
+			owns_state = 468
+		}
+	}
+	
+	option = {
+		name = british_canada.11.a
+		ai_chance = { factor = 95 }
+		custom_effect_tooltip = eoanb_tt_event_ENG_CAN_capital_ottawa
+		hidden_effect = {	
+			CAN = { set_capital = 276 }
+		}
+	}
+	
+	option = {
+		name = british_canada.11.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_event_ENG_CAN_capital_montreal
+		hidden_effect = {	
+			CAN = { set_capital = 468 }
+		}
+	}
+	
+}
+
 #######################################################################
 
 ####  ####  ##### ##### #####  #### #   #       ####  ###  #     #   # #   # ####  #####  ###
