@@ -1,0 +1,689 @@
+focus_tree = {
+	id = saxony_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = SAX
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = SAX_Johann_Saxony
+		x = 22
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		icon = GFX_goal_Johnnys_Saxony		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = SAX_build_dresden
+		x = 21
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_Johann_Saxony }
+		icon = GFX_goal_generic_construct_infrastructure		
+		completion_reward = {
+			add_political_power = 50
+			65 = {
+				 add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}			
+		}
+		
+	focus = {
+		id = SAX_build_leipzig
+		x = 23
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_Johann_Saxony }
+		icon = GFX_goal_generic_construct_infrastructure		
+		completion_reward = {
+			add_political_power = 50
+			65 = {
+				 add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}			
+		}
+
+
+	focus = {
+		id = SAX_dresden_zivile
+		x = 21
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_build_dresden }
+		icon = GFX_goal_generic_construct_civ_factory		
+		completion_reward = {
+			65 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			65 = { add_extra_state_shared_building_slots = 1 }
+			}			
+		}
+		
+	focus = {
+		id = SAX_leipzig_zivile
+		x = 23
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_build_leipzig }	
+		icon = GFX_goal_generic_construct_civ_factory		
+		completion_reward = {
+			65 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			65 = { add_extra_state_shared_building_slots = 1 }			
+			}			
+		}
+
+	focus = {
+		id = SAX_dresden_zivile_zwei
+		x = 21
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_dresden_zivile }
+		icon = GFX_goal_generic_construct_civ_factory		
+		completion_reward = {
+			65 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			65 = { add_extra_state_shared_building_slots = 1 }			
+			}			
+		}
+
+	focus = {
+		id = SAX_leipzig_zivile_zwei
+		x = 23
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = {focus = SAX_leipzig_zivile }
+		icon = GFX_goal_generic_construct_civ_factory		
+		completion_reward = {
+			65 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			65 = { add_extra_state_shared_building_slots = 1 }			
+			}			
+		}
+
+	focus = {
+		id = SAX_militaraufbau
+		x = 22
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_leipzig_zivile_zwei }
+		prerequisite = { focus = SAX_dresden_zivile_zwei }
+		icon = GFX_goal_generic_construct_mil_factory		
+		completion_reward = {
+			65 = { add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
+			65 = { add_extra_state_shared_building_slots = 2 }			
+			}			
+		}
+
+	focus = {
+		id = SAX_ricky_harty
+		x = 18
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Johann_Saxony }
+		icon = GFX_goal_generic_air_production		
+		completion_reward = {
+				add_ideas = SAX_idea_Ricky_Harty	
+			}			
+		}
+
+	focus = {
+		id = SAX_zivile_fabriken
+		x = 17
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_ricky_harty }
+		mutually_exclusive = { focus = SAX_militarische_fabriken }
+		icon = GFX_goal_generic_construction2		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SAX_idea_Ricky_Harty_Civ
+				remove_idea = SAX_idea_Ricky_Harty
+				}	
+			}			
+		}
+
+	focus = {
+		id = SAX_militarische_fabriken
+		x = 19
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_ricky_harty }
+		mutually_exclusive = { focus = SAX_zivile_fabriken }
+		icon = GFX_goal_generic_production2		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SAX_idea_Ricky_Harty_Mil
+				remove_idea = SAX_idea_Ricky_Harty
+				}	
+			}			
+		}
+
+	focus = {
+		id = SAX_Prussian_Workers
+		x = 18
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_militarische_fabriken focus = SAX_zivile_fabriken }
+		icon = GFX_goal_generic_national_unity		
+		completion_reward = {
+				add_manpower = 10000	
+			}			
+		}
+
+	focus = {
+		id = SAX_Chemnitz_is_my_city
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Prussian_Workers }
+		icon = GFX_goal_generic_construct_civ_factory		
+		completion_reward = {
+				add_ideas = SAX_idea_Chemnitz_is_my_city
+			}			
+		}
+
+	focus = {
+		id = SAX_Northern_Farmland
+		x = 25
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Johann_Saxony }
+		icon = GFX_goal_generic_consumer_goods		
+		completion_reward = {
+			65 = { add_extra_state_shared_building_slots = 3 }	
+			}			
+		}
+
+	focus = {
+		id = Sax_Cloth_and_Cotton
+		x = 25
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Northern_Farmland }
+		icon = GFX_goal_SAX_Cotton		
+		completion_reward = {
+			65 = {
+				add_resource = {
+					type = fabric
+					amount = 15
+					}
+				}	
+			}			
+		}
+
+	focus = {
+		id = SAX_Prussian_Farmers
+		x = 25
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = Sax_Cloth_and_Cotton }
+		icon = GFX_goal_generic_construction2		
+		completion_reward = {
+				add_manpower = 10000	
+			}			
+		}
+
+	focus = {
+		id = SAX_Return_Favour
+		x = 25
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Prussian_Farmers }
+		icon = GFX_focus_generic_diplomatic_treaty		
+		completion_reward = {
+				add_manpower = -15000
+			PRS = {
+				add_opinion_modifier = { target = SAX modifier = SAX_returned_favor }
+				add_manpower = 15000				
+				}			
+			}
+		}
+		
+	focus = {
+		id = SAX_verbinden_zusammen
+		x = 22
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Return_Favour }
+		prerequisite = { focus = SAX_Chemnitz_is_my_city }
+		prerequisite = { focus = SAX_militaraufbau }
+		icon = GFX_goal_generic_construct_infrastructure		
+		completion_reward = {
+			65 = {
+				 add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}		
+		}
+		
+	focus = {
+		id = SAX_pronounce_thriving_economy
+		x = 22
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_verbinden_zusammen }
+		icon = GFX_goal_focus_increase_wages	
+		completion_reward = {
+				add_ideas = SAX_idea_thriving_economy
+			}		
+		}
+
+	focus = {
+		id = SAX_world_stage
+		x = 22
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_pronounce_thriving_economy }
+		icon = GFX_goal_focus_continent_west_europe		
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = SAX_look_to_stage }
+			add_opinion_modifier = { target = AUS modifier = SAX_look_to_stage }
+			add_opinion_modifier = { target = RUS modifier = SAX_look_to_stage }
+			add_opinion_modifier = { target = ENG modifier = SAX_look_to_stage }
+			add_opinion_modifier = { target = FRA modifier = SAX_look_to_stage }			
+			add_opinion_modifier = { target = USA modifier = SAX_look_to_stage }
+			}		
+		}
+
+	focus = {
+		id = SAX_Democracies
+		x = 20
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_world_stage }
+		mutually_exclusive = { focus = SAX_Monarchies }		
+		icon = GFX_goal_focus_ally_ENG
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = SAX_Democracies }
+			add_opinion_modifier = { target = ENG modifier = SAX_Democracies }
+			}		
+		}
+
+	focus = {
+		id = SAX_Monarchies
+		x = 24
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_world_stage }
+		mutually_exclusive = { focus = SAX_Democracies }		
+		icon = GFX_goal_focus_ally_AUS	
+		completion_reward = {
+			add_opinion_modifier = { target = RUS modifier = SAX_Monarchies }
+			add_opinion_modifier = { target = AUS modifier = SAX_Monarchies }
+			}		
+		}
+
+	focus = {
+		id = SAX_Liberalism
+		x = 20
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Democracies }		
+		icon = GFX_goal_focus_the_workers	
+		completion_reward = {
+			add_popularity = { 
+	    		ideology = centrism
+	    		popularity = 0.1
+	    		}
+			}		
+		}
+
+	focus = {
+		id = SAX_Conservatism
+		x = 24
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Monarchies }		
+		icon = GFX_goal_focus_the_elite	
+		completion_reward = {
+			add_popularity = { 
+	    		ideology = traditional_conservatism
+	    		popularity = 0.1
+	    		}
+			}		
+		}
+
+	focus = {
+		id = SAX_Democratic_Power
+		x = 20
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Liberalism }		
+		icon = GFX_goal_focus_support_conservatism	
+		completion_reward = {
+			add_ideas = SAX_idea_centrism_growth
+			}		
+		}
+
+	focus = {
+		id = SAX_Autocratic_Power
+		x = 24
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Conservatism }		
+		icon = GFX_goal_SAX_Authoritarian		
+		completion_reward = {
+			add_ideas = SAX_idea_conservatism_growth
+			}		
+		}
+
+	focus = {
+		id = SAX_Landtag_Regiert_Oberhand
+		x = 20
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Democratic_Power }		
+		icon = GFX_goal_SAX_landtag		
+		completion_reward = {
+			create_country_leader = {
+					name = "Landtag"
+					desc = "POLITICS_TEMP_DESC"
+					picture = Portrait_SAX_Sachsischer_Landtag.dds
+					expire = "1900.1.1"
+					ideology = social_liberal
+					traits = {
+					}
+				}
+			}		
+		}
+
+	focus = {
+		id = SAX_Long_Live_Johnny
+		x = 24
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Autocratic_Power }
+		icon = GFX_goal_Johnnys_Saxony
+		completion_reward = {
+			create_country_leader = {
+					name = "Johann of Saxony"
+					desc = "POLITICS_John_DESC"
+					picture = Portrait_SAX_Johann.dds
+					expire = "1873.1.1"
+					ideology = conserv
+					traits = {
+					}
+				}
+			}
+		}
+
+	focus = {
+		id = SAX_Defense_of_Saxony
+		x = 30
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			add_ideas = SAX_idea_Defense_of_Saxony
+			}
+		}
+
+	focus = {
+		id = SAX_Prussian_Forts
+		x = 29
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Defense_of_Saxony }		
+		icon = GFX_goal_generic_construct_military
+		completion_reward = {
+			65 = {
+				if = {
+				limit = { is_controlled_by = ROOT }	
+				custom_effect_tooltip = SAX_Prussian_Forts_tt
+				hidden_effect = {				
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3535
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 514
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 573
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3514
+					instant_build = yes
+						}
+					}			
+				}		
+			}	
+		}
+	}
+		
+	focus = {
+		id = SAX_Austrian_Forts
+		x = 31
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Defense_of_Saxony }		
+		icon = GFX_goal_generic_construct_military
+		completion_reward = {
+			65 = {
+				if = {
+				limit = { is_controlled_by = ROOT }		
+				custom_effect_tooltip = SAX_Austrian_Forts_tt
+				hidden_effect = {		
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9441
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9471
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6559
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 573
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3514
+					instant_build = yes
+						}
+					}			
+				}		
+			}	
+		}
+	}	
+		
+	focus = {
+		id = SAX_reserves
+		x = 30
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Austrian_Forts }
+		prerequisite = { focus = SAX_Prussian_Forts }		
+		icon = GFX_goal_focus_divide_unite_army
+		completion_reward = {
+			add_ideas = SAX_idea_reserves
+			}
+		}
+
+	focus = {
+		id = SAX_Army_Doctrine
+		x = 29
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_reserves }	
+		mutually_exclusive = { focus = SAX_Infantry_Doctrine }		
+		icon = GFX_goal_generic_build_tank
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+				}
+			}
+		}
+
+	focus = {
+		id = SAX_Infantry_Doctrine
+		x = 31
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_reserves }	
+		mutually_exclusive = { focus = SAX_Army_Doctrine }		
+		icon = GFX_goal_generic_small_arms
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				}
+			}
+		}
+
+	focus = {
+		id = SAX_modern_equipment
+		x = 30
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
+		prerequisite = { focus = SAX_Infantry_Doctrine focus = SAX_Army_Doctrine }			
+		icon = GFX_goal_generic_special_forces
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				}
+			}
+		}		
+		
+	}		
