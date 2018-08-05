@@ -27,7 +27,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = -15
-			#sedo politics event
+			KOR = { country_event = { id = korea.1 } }
 		}
 	}
 
@@ -404,7 +404,7 @@ focus = {
 
 		completion_reward = {
 		add_political_power = -50
-		#raise to high taxes
+		add_ideas = high_taxes
 
 		}
 	}
@@ -453,7 +453,7 @@ focus = {
 
 	focus = {
 		id = KOR_yangbanplant
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_paddy1
 		x = 38
 		y = 3
 		cost = 10
@@ -475,7 +475,7 @@ focus = {
 
 	focus = {
 		id = KOR_ricepattyfarm
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_rice2
 		x = 34
 		y = 4
 		cost = 10
@@ -496,7 +496,7 @@ focus = {
 
 	focus = {
 		id = KOR_newriceseed
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_rice3
 		x = 34
 		y = 5
 		cost = 10
@@ -507,13 +507,13 @@ focus = {
 		prerequisite = { focus = KOR_ricepattyfarm }
 		
 		completion_reward = {
-		#pop growth +3%
+		add_ideas = KOR_newriceseedidea
 		}
 	}
 
 	focus = {
 		id = KOR_morepaddy
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_rice4
 		x = 34
 		y = 6
 		cost = 10
@@ -576,7 +576,7 @@ focus = {
 
 	focus = {
 		id = KOR_cottonfarm
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_cotton
 		x = 40
 		y = 4
 		cost = 10
@@ -597,7 +597,7 @@ focus = {
 
 	focus = {
 		id = KOR_peasantirrigation
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_paddy2
 		x = 38
 		y = 5
 		cost = 10
@@ -662,7 +662,7 @@ focus = {
 
 	focus = {
 		id = KOR_morecottonfarm
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_cotton
 		x = 40
 		y = 6
 		cost = 10
@@ -972,7 +972,7 @@ focus = {
 
  	focus = {
 		id = KOR_farmerrights
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_paddy1
 		x = 6
 		y = 7
 		cost = 10
@@ -3217,7 +3217,7 @@ focus = {
 
 	focus = {
 		id = KOR_southrice
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_rice1
 		x = 42
 		y = 17
 		cost = 10
@@ -3239,7 +3239,7 @@ focus = {
 	}
 
 	focus = {
-		id = KOR_gainrelief
+		id = KOR_grainrelief
 		#icon = GFX_focus_generic_self_management
 		x = 42
 		y = 18
@@ -3278,7 +3278,7 @@ focus = {
 
 	focus = {
 		id = KOR_southcotton
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_cotton
 		x = 44
 		y = 17
 		cost = 10
@@ -3300,7 +3300,7 @@ focus = {
 
 	focus = {
 		id = KOR_expandcotton
-		#icon = GFX_focus_generic_self_management
+		#icon = GFX_goal_focus_paddy2
 		x = 44
 		y = 18
 		cost = 10
