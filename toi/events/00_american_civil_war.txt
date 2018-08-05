@@ -171,6 +171,19 @@ country_event = {
         army_experience = -20
         add_ideas = USA_Civil_War_Army_Competency
         set_country_flag = USA_officers_leave_acw
+        USA = {
+            every_unit_leader = {
+                limit = {
+                    OR = {
+                        has_id = 50020
+                        has_id = 50021
+                        has_id = 50027
+                        has_id = 50028
+                    }
+                }
+                set_nationality = CSA
+            }
+        }
     }
 }
 
@@ -1859,6 +1872,85 @@ country_event = {
         name = acw.42.b
         add_political_power = -50
         custom_effect_tooltip = USA_ends_monroe_broken
+    }
+}
+#Average Confederate Leaders leave the USA
+country_event = {
+    id = acw.43
+    title = acw.43.t
+    desc = acw.43.d
+    
+    picture = GFX_report_event_generic_battle
+
+    trigger = {
+        CSA = {
+            owns_state = 365
+        }
+    }
+
+    mean_time_to_happen = { days = 4 }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.43.a
+        USA = {
+            every_unit_leader = {
+                limit = {
+                    OR = {
+                        has_id = 50022
+                        has_id = 50023
+                        has_id = 50024
+                        has_id = 50025
+                        has_id = 50026  
+                    }
+                }
+                set_nationality = CSA
+            } 
+        }
+    }
+}
+#Grant and Sherman join
+country_event = {
+    id = acw.44
+    title = acw.44.t
+    desc = acw.44.d
+    
+    picture = GFX_report_event_generic_battle
+
+    trigger = {
+        has_global_flag = ACWAmerican_Civil_War
+    }
+
+    mean_time_to_happen = { days = 2 }
+
+    fire_only_once = yes
+    
+    option = {
+        name = acw.44.a
+        create_corps_commander = {
+            name = "Ulysses S. Grant"
+            picture = "Portrait_USA_Ulysses_grant.dds"
+            traits = { old_guard ranger }
+            skill = 4
+            id = 5001
+            attack_skill = 6
+            defense_skill = 4
+            planning_skill = 5
+            logistics_skill = 4
+        }
+        create_corps_commander = {
+            name = "William T. Sherman"
+            picture = "Portrait_USA_William_Sherman.dds"
+            traits = { swamp_fox commando }
+            skill = 4
+            id = 5002
+            attack_skill = 7
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        }
+        set_country_flag = USA_grantsherman_rejoin
     }
 }
 #State Occupations Events #
