@@ -45,7 +45,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = -150
-			#nat spirit add, socioeconmoinc malaise
+			add_ideas = KOR_sociocrisisidea
 		}
 	}
 
@@ -425,8 +425,8 @@ focus = {
 		
 		completion_reward = {
 			add_political_power = -100
-			#remove socioeconomic malaise
-			#replace with stagnant economy
+			remove_ideas = KOR_sociocrisisidea
+			add_ideas = KOR_stabilizecrisisidea
 		}
 	}
 
@@ -1640,6 +1640,8 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		prerequisite = { focus = KOR_rootoutcorruption }
 
 
 		completion_reward = {
@@ -3268,7 +3270,7 @@ focus = {
 			factor = 1
 		}
 
-		prerequisite = { focus = KOR_gainrelief }
+		prerequisite = { focus = KOR_grainrelief }
 
 
 		completion_reward = {
