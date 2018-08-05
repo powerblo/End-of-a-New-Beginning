@@ -333,6 +333,10 @@ country_event = {
 				PRS_Zollverein_3
 			}
 			add_ideas = BAV_sueddeutscher_zollverein
+			
+			BAV = {
+				country_event = { id = bavariafocus.41 days = 3 }
+			}
 		}
 	}
 	
@@ -354,6 +358,12 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.42 days = 3 }
+			}
+		}
 	}
 }
 
@@ -387,6 +397,8 @@ country_event = {
 		
 		BAV = {
 			add_to_faction = ROOT
+			
+			country_event = { id = bavariafocus.43 days = 3 }
 		}
 	}
 	
@@ -408,6 +420,12 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.44 days = 3 }
+			}
+		}
 	}
 }
 
@@ -1087,5 +1105,87 @@ country_event = {
 	
 	option = {
 		name = bavariafocus.39.a
+	}
+}
+
+#SGC
+news_event = {
+	id = bavariafocus.40
+	title = bavariafocus.40.t
+	desc = bavariafocus.40.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = BAV 
+		}
+		name = bavariafocus.40.a
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = BAV
+			}
+		}
+		name = bavariafocus.40.b
+	}
+}
+
+#SG Zoll (good)
+country_event = {
+	id = bavariafocus.41
+	title = bavariafocus.41.t
+	desc = bavariafocus.41.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.41.a
+	}
+}
+
+#SG Zoll (bad)
+country_event = {
+	id = bavariafocus.42
+	title = bavariafocus.42.t
+	desc = bavariafocus.42.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.42.a
+	}
+}
+
+#Third Deutschland (good)
+country_event = {
+	id = bavariafocus.43
+	title = bavariafocus.43.t
+	desc = bavariafocus.43.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.43.a
+	}
+}
+
+#Third Deutschland (bad)
+country_event = {
+	id = bavariafocus.44
+	title = bavariafocus.44.t
+	desc = bavariafocus.44.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.44.a
 	}
 }
