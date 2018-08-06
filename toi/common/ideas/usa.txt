@@ -72,6 +72,36 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+		USA_Westpoint1 = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				experience_gain_army = -0.01
+				max_command_power = 25
+			}
+		}
+		USA_Westpoint2 = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				experience_gain_army = -0.005
+				max_command_power = 12
+			}
+		}
 		USA_UtahWar = {
 			allowed = {
 				TAG = USA
@@ -951,6 +981,25 @@ ideas = {
 				political_power_gain = -0.1
 				drift_defence_factor = 0.1
 			}
+		}
+		USA_technological_ascendence = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_generic_research_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+
 		}
 		USA_assimilation_programs = {
 			

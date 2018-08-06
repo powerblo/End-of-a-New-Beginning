@@ -888,6 +888,7 @@ country_event = {
 		id = usa.25
 		title = usa.25.t
 		desc = usa.25.d
+		cost = 
 		picture = GFX_report_event_worker_protests
 
 		fire_only_once = yes
@@ -2160,6 +2161,7 @@ country_event = {
 			add_political_power = -10
 			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
 			set_global_flag = USA_Liberia_No_Intervention
+			LIB = { country_event = { id = usa.59 days = 4 } }
 			add_timed_idea = { idea = USA_liberia_emigration_1 days = 1000 }
 			366 = {
 				add_manpower = -1000
@@ -2253,6 +2255,7 @@ country_event = {
 				add_manpower = -2500
 			}
 			set_global_flag = USA_Liberia_Encouraged
+			LIB = { country_event = { id = usa.59 days = 4 } }
 			add_timed_idea = { idea = USA_liberia_emigration_2 days = 1000 }
 		}
 		option = {
@@ -2304,6 +2307,7 @@ country_event = {
 				add_manpower = -5000
 			}
 			add_popularity = { ideology = social_egalitarianism popularity = -0.05 }
+			LIB = { country_event = { id = usa.59 days = 4 } }
 			set_global_flag = USA_Liberia_Mandatory
 			add_timed_idea = { idea = USA_liberia_emigration_3 days = 1000 }
 		}
@@ -2469,6 +2473,29 @@ country_event = {
 				#}
 			}
 			name = usa.62.b
+		}
+}
+#USA Requests Non Aggression Pact
+country_event = {
+		id = usa.63
+		title = usa.63.t
+		desc = usa.63.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.63.a
+			add_political_power = 25
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		option = {
+			name = usa.63.b
+			add_political_power = -25
 		}
 }
 
