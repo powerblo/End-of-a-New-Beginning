@@ -174,3 +174,42 @@ ITA_Culture_category_decisions = {
 
 
 }
+ITA_Referendum_category_decisions = {
+	
+	ITA_decision_ticino_referendum = {
+
+	icon = generic_political_actions
+
+	available = {
+			 NOT = {
+        	AND = {
+        		    has_idea = ITA_Unorganized_Army
+        			has_idea = ITA_Unorganized_Navy
+
+        	}
+
+        }
+		}
+	visible = {
+			always = yes
+		}
+	complete_effect = {
+		country_event = {
+   			 id = ita.10
+   			 hours = 1
+			}
+				
+		}
+
+		cost = 100
+
+
+
+	}
+
+	
+
+
+
+
+}
