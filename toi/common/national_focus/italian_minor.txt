@@ -1140,13 +1140,18 @@ focus_tree = {
 			focus = ITA_minor_War_Is_A_Fast_Path
 		}
 		bypass = {
-			owns_state = 997
-			owns_state = 812
-			owns_state = 156
-			owns_state = 117
-			owns_state = 115
-			NSC = {
-				exists = no
+			OR = {
+				AND = {
+					owns_state = 997
+					owns_state = 812
+					owns_state = 156
+					owns_state = 117
+					owns_state = 115
+					NSC = {
+						exists = no
+					}
+				}
+				original_tag = NSC
 			}
 		}
 		completion_reward = {
@@ -1161,12 +1166,14 @@ focus_tree = {
 		y = 8
 		prerequisite = {
 			focus = ITA_minor_kill_sardinia
-		}
-		prerequisite = {
 			focus = ITA_minor_kill_sicily
 		}
 		available = {
 			owns_state = 158
+			OR = {
+				has_completed_focus = ITA_minor_kill_sicily
+				original_tag = NSC
+			}
 		}
 		completion_reward = {
 			add_political_power = 50
