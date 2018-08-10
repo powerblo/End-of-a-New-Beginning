@@ -1,5 +1,49 @@
 ﻿add_namespace = EDC_afr
 
+# tribal war starts
+country_event = {
+	id = EDC_afr.1
+	title = EDC_afr.1.t
+	desc = EDC_afr.1.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EDC_afr.1.a
+		random_neighbor_state = {
+				limit = {
+					is_owned_by = FROM
+					is_claimed_by = ROOT
+				}
+			}
+			#ROOT ={ 
+				create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
+					type = take_state_focus
+					target = FROM
+					#generator = any_neighbor_state = {limit = {is_owned_by = FROM}}
+				}
+				declare_war_on = {
+					target = FROM
+					type = take_state_focus
+				}
+		#}
+	}
+}
+# ping event
+country_event = {
+	id = EDC_afr.2
+	title = EDC_afr.2.t
+	desc = EDC_afr.2.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		FROM = { country_event = { id = EDC_afr.1 hours = 6 } }
+	}
+}
 #### Industrial progress events
 country_event = {#1 industrial point
 	id = EDC_afr.3
@@ -179,7 +223,7 @@ country_event = {###natives reached 10 factories
 	#is_triggered_only = yes
 	trigger = {
 		check_variable = {ROOT.industrisation_progress < 100}
-		has_idea = AF_T_small_kingdom
+		has_idea = afr_reforming_kingdom
 		num_of_factories > 9
 		NOT= {has_country_flag= af_t_10_fac}
 	}
@@ -1072,5 +1116,291 @@ country_event = { #A african tribe asks to become a colony
 		name = EDC_afr.22.a
 		#the war continues
 		FROM = {set_country_flag = afr_colonial_request_rejected}
+	}
+}
+country_event = {##territorial disputes on tribal border
+	id = EDC_afr.23
+	title = EDC_afr.23.t
+	desc = EDC_afr.23.d
+	picture = GFX_report_event_chinese_army_training
+	#hidden = yes
+	mean_time_to_happen = {
+		days = 720
+		modifier = {
+			factor = 1.5 # If true multiply 720 by 1.5 = 1080
+			OR = {
+				AND = {
+					OR = {
+					has_idea = AF_T_organized_tribal_nation
+					has_idea = AF_T_organized_tribal_nation_2
+					has_idea = AF_T_organized_tribal_nation_3
+					}
+					NOT = {has_completed_focus = AF_O_K_expansion_territory}
+				}
+				has_completed_focus = AF_T_claim_neighboring_lands
+			}
+		}
+		modifier = {
+			factor = 2.5 # If true multiply 200 by 0.4 = 40
+			AND = {
+				OR = {
+					has_idea = AF_T_unorganized_tribal_nation
+					has_idea = AF_T_unorganized_tribal_nation_2
+					has_idea = AF_T_unorganized_tribal_nation_3
+					has_idea = AF_T_unorganized_tribal_nation_4
+					has_idea = AF_T_unorganized_tribal_nation_5
+				}
+				NOT = {has_completed_focus = AF_T_claim_neighboring_lands}
+			}
+		}
+		modifier = {
+			factor = 0.8 # If true multiply 720 by 0.8 = 576
+			has_idea = AF_T_small_kingdom
+			has_idea = afr_large_kingdom
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+				has_idea = AF_T_unorganized_tribal_nation
+				has_idea = AF_T_unorganized_tribal_nation_2
+				has_idea = AF_T_unorganized_tribal_nation_3
+				has_idea = AF_T_unorganized_tribal_nation_4
+				has_idea = AF_T_unorganized_tribal_nation_5
+				}
+				has_completed_focus = AF_T_claim_neighboring_lands
+			}
+			AND = {
+				OR = {
+				has_idea = AF_T_organized_tribal_nation
+				has_idea = AF_T_organized_tribal_nation_2
+				has_idea = AF_T_organized_tribal_nation_3
+				}
+				OR = {
+					has_completed_focus = AF_O_K_expansion_territory
+					has_completed_focus = AF_T_claim_neighboring_lands
+				}
+			}
+			has_idea = AF_T_small_kingdom
+			has_idea = afr_large_kingdom
+		}
+		any_state ={
+			owner = {
+				OR = {
+					has_idea = AF_T_unorganized_tribal_nation
+					has_idea = AF_T_unorganized_tribal_nation_2
+					has_idea = AF_T_unorganized_tribal_nation_3
+					has_idea = AF_T_unorganized_tribal_nation_4
+					has_idea = AF_T_unorganized_tribal_nation_5
+					has_idea = AF_T_organized_tribal_nation
+					has_idea = AF_T_organized_tribal_nation_2
+					has_idea = AF_T_organized_tribal_nation_3
+					has_idea = AF_T_small_kingdom
+					has_idea = afr_large_kingdom
+				}
+				#owns_state = PREV
+				any_neighbor_country = {
+					tag = ROOT
+				}
+			}
+			NOT ={
+				is_claimed_by = ROOT
+			}
+			any_neighbor_state = {
+				is_fully_controlled_by = ROOT
+			}
+			#save_event_target_as = enemy_state
+		}
+	}
+	immediate={
+		hidden_effect = {
+		random_neighbor_country = {
+			limit = {
+				OR = {
+					has_idea = AF_T_unorganized_tribal_nation
+					has_idea = AF_T_organized_tribal_nation
+					has_idea = AF_T_organized_tribal_nation_2
+					has_idea = AF_T_organized_tribal_nation_3
+					has_idea = AF_T_small_kingdom
+					has_idea = afr_large_kingdom
+				}
+			}
+			country_event = {
+					id = EDC_afr.24
+					days = 1
+				}
+				#add_claim_by = ROOT
+			}
+		}
+	}
+		
+	option = {
+		name = EDC_afr.23.a
+		#tester
+	}
+}
+country_event = { #A tribal state is in dispute
+	id = EDC_afr.24
+	title = EDC_afr.24.t
+	desc = EDC_afr.24.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		FROM = {
+			country_event = {
+				id = EDC_afr.25
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #A border dispute
+	id = EDC_afr.25
+	title = EDC_afr.25.t
+	desc = EDC_afr.25.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	#hidden = yes
+	immediate={
+		hidden_effect={
+			FROM = {
+				random_owned_state ={
+					limit = {
+						NOT ={
+							is_claimed_by = ROOT
+						}
+						any_neighbor_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+				save_event_target_as = contested_state
+				}
+			}
+		}
+	}
+	option = { # push the claim (this allows agaitate for war)
+		name = EDC_afr.25.a
+		event_target:contested_state={
+			add_claim_by = ROOT
+		}
+	}
+	option = { # offer to settle the claim - small tribes may submit to large tribes
+		name = EDC_afr.25.b
+		FROM = {
+			country_event = {
+				id = EDC_afr.26
+				days = 1
+			}
+		}
+	}
+	option = { # ignore it
+		name = EDC_afr.25.c
+		add_political_power = -15
+		FROM = {
+			add_political_power = 10
+		}
+	}
+}
+country_event = { #A tribal state is in dispute
+	id = EDC_afr.26
+	title = EDC_afr.26.t
+	desc = EDC_afr.26.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	#hidden = yes
+	option = { # flatly refuse to deal
+		name = EDC_afr.26.a
+	}
+	option = { # agree to settle it
+		name = EDC_afr.26.b
+	}
+	option = { # cave immediately
+		name = EDC_afr.26.c
+		trigger = {
+			OR = {
+				event_target:contested_state = {
+					is_capital = no
+				}
+				AND = {
+					FROM = {
+						has_idea = AF_T_small_kingdom
+					}
+					ROOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						has_idea = afr_large_kingdom
+					}
+					ROOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+							has_idea = AF_T_organized_tribal_nation
+							has_idea = AF_T_organized_tribal_nation_2
+							has_idea = AF_T_organized_tribal_nation_3
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			set_state_owner = event_target:contested_state
+		}
+		add_stability = -0.2
+	}
+}
+country_event = { #A rival tribe has a claim on a state
+	id = EDC_afr.27
+	title = EDC_afr.27.t
+	desc = EDC_afr.27.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	#hidden = yes
+	option = { # what
+		name = EDC_afr.27.a
+	}
+}
+country_event = {###natives reached 10 factories
+	id = EDC_afr.28
+	title = EDC_afr.28.t
+	desc = EDC_afr.28.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		num_of_factories > 19
+		NOT= {has_country_flag= af_t_20_fac}
+		has_country_flag = af_t_10_fac
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.28.a
+		set_country_flag = af_t_20_fac
+		custom_effect_tooltip = EDC_afr.6.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.6 hours = 1 }
+		}	
 	}
 }

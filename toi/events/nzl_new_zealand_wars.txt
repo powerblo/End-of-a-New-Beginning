@@ -86,36 +86,15 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_state = {
-			limit = {
-				is_controlled_by = ROOT
-				state = 1077 #Taranaki
-			}
-			remove_claim_by = KIN
-			add_core_of = KIN
-			remove_core_of = NZL
-			add_claim_by = NZL
-			KIN = { transfer_state = PREV }
+		KIN = {
+			end_puppet = NZL
 		}
-		#CNT = {
-		#	set_cosmetic_tag = CNT_FAI
-		#	transfer_technology = yes
-		#}
 	}
 
 	option = {
 		name = nzl_nzw.3.a #shit
 		hidden_effect = {
-			KIN ={
-				load_oob = KIN_revolt_1
-				add_ideas = {nzl_maori_buffs}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 250
-					producer = KIN
-				}
 				add_manpower = 2500
-			}
 		}
 	}
 	option = {
@@ -123,8 +102,6 @@ country_event = {
 		custom_effect_tooltip = nzl_change_tag_to_KIN
 		hidden_effect = {
 			KIN ={
-				load_oob = KIN_revolt_1
-				add_ideas = {nzl_maori_buffs}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 250
@@ -151,10 +128,13 @@ country_event = {
 		tag = NZL
 		date > 1863.06.1
 		#NOT = { date > 1961.10.1 }
-		1077 = { is_owned_and_controlled_by = NZL } #Waikato
+		NOT  = {1077 = { is_owned_and_controlled_by = NZL }} #Waikato
 		NOT = { has_country_flag = waikato_invasion_war}
 		KIN = {
 			exists = yes
+			NOT = {
+				is_puppet_of = NZL
+			}
 		}
 	}
 

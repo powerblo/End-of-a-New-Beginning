@@ -18,6 +18,7 @@ focus_tree = {
 			add_political_power = 25
 			add_stability = -0.1
 		}
+		ai_will_do = { factor = 11 } 
 	}
 	focus = {
 		id = nzl_vic_quell_the_natives
@@ -69,6 +70,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 10
 		}
+		ai_will_do = { factor = 17 } 
 	}
 	focus = {
 		id = nzl_vic_our_industries
@@ -79,6 +81,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = process_engineering_tech }
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_the_sedifice_is_unfit
@@ -92,6 +95,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
+		ai_will_do = { factor = 8 } 
 
 	}
 	focus = {
@@ -108,6 +112,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -126,6 +131,7 @@ focus_tree = {
 		}
 		x = 2
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -144,6 +150,7 @@ focus_tree = {
 		}
 		x = 4
 		y = 3
+		ai_will_do = { factor = 0 } 
 
 	}
 	focus = {
@@ -164,6 +171,7 @@ focus_tree = {
 		}
 		x = 4
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -234,7 +242,7 @@ focus_tree = {
 		}
 		x = 7
 		y = 3
-
+		ai_will_do = { factor = 15 } 
 	}
 	focus = {
 		id = nzl_vic_purcase_land_in_taranaki
@@ -262,6 +270,7 @@ focus_tree = {
 		}
 		x = 7
 		y = 4
+		ai_will_do = { factor = 20 } 
 
 	}
 	focus = {
@@ -285,6 +294,7 @@ focus_tree = {
 		}
 		x = 8
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -314,6 +324,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 5
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -332,6 +343,7 @@ focus_tree = {
 		bypass = {
 			has_country_flag = second_taranaki_war
 		}
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -356,6 +368,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 3
+		ai_will_do = { factor = 19 } 
 
 	}
 	focus = {
@@ -371,6 +384,7 @@ focus_tree = {
 			add_political_power=50
 			army_experience = 10
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_build_the_northern_half_of_the_great_south_road
@@ -390,6 +404,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -411,6 +426,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 6
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -434,10 +450,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			country_event = {id =  nzl_nzw.3 days = 1}
+			#country_event = {id =  nzl_nzw.3 days = 1}
 		}
 		x = 10
 		y = 7
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -455,6 +472,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 8
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -472,6 +490,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 9
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -487,6 +506,7 @@ focus_tree = {
 		}
 		x = 15
 		y = 1
+		ai_will_do = { factor = 15 } 
 
 	}
 	focus = {
@@ -504,6 +524,7 @@ focus_tree = {
 		}
 		x = 14
 		y = 2
+		ai_will_do = { factor = 17 } 
 
 	}
 	focus = {
@@ -521,6 +542,7 @@ focus_tree = {
 		completion_reward = {
 			NSW = {country_event = {id = nzl_other.4}}
 		}
+		ai_will_do = { factor = 17 } 
 	}
 	focus = {
 		id = nzl_vic_draft_some_troops
@@ -540,6 +562,7 @@ focus_tree = {
 		}
 		x = 15
 		y = 3
+		ai_will_do = { factor = 17 } 
 
 	}
 	focus = {
@@ -566,6 +589,7 @@ focus_tree = {
 		}
 		x = 14
 		y = 4
+		ai_will_do = { factor = 20 } 
 
 	}
 	focus = {
@@ -583,6 +607,7 @@ focus_tree = {
 		}
 		x = 16
 		y = 4
+		ai_will_do = { factor = 5 } 
 
 	}
 	focus = {
@@ -598,6 +623,7 @@ focus_tree = {
 		}
 		x = 15
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -621,6 +647,7 @@ focus_tree = {
 		}
 		x = 18
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -635,6 +662,7 @@ focus_tree = {
 		}
 		x = 18
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -649,6 +677,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -676,6 +705,7 @@ focus_tree = {
 		}
 		x = 22
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -693,6 +723,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -712,6 +743,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -731,6 +763,7 @@ focus_tree = {
 		}
 		x = 19
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -750,6 +783,7 @@ focus_tree = {
 		}
 		x = 21
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -779,6 +813,7 @@ focus_tree = {
 		}
 		x = 25
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -800,6 +835,7 @@ focus_tree = {
 		}
 		x = 22
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -821,6 +857,7 @@ focus_tree = {
 		}
 		x = 22
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -835,6 +872,7 @@ focus_tree = {
 		}
 		x = 24
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -849,6 +887,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = process_engineering_tech }
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_wealth_of_the_waikato
@@ -873,6 +912,7 @@ focus_tree = {
 		}
 		x = 24
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -891,6 +931,7 @@ focus_tree = {
 		}
 		x = 24
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -912,6 +953,7 @@ focus_tree = {
 				set_state_flag = waikato_ironsands
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_wealth_of_the_taranaki
@@ -936,6 +978,7 @@ focus_tree = {
 		}
 		x = 26
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -954,6 +997,7 @@ focus_tree = {
 		}
 		x = 26
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -976,6 +1020,7 @@ focus_tree = {
 				
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_native_lumber_exporting
@@ -1008,6 +1053,7 @@ focus_tree = {
 		}
 		x = 29
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1048,6 +1094,7 @@ focus_tree = {
 		}
 		x = 28
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1066,6 +1113,7 @@ focus_tree = {
 		}
 		x = 28
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1087,6 +1135,7 @@ focus_tree = {
 		}
 		x = 28
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1118,6 +1167,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_protect_the_forest
@@ -1137,6 +1187,7 @@ focus_tree = {
 		}
 		x = 30
 		y = 2
+		ai_will_do = { factor = 5 } 
 
 	}
 	focus = {
@@ -1151,6 +1202,7 @@ focus_tree = {
 		}
 		x = 32
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1168,6 +1220,7 @@ focus_tree = {
 		}
 		x = 32
 		y = 2
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_expolit_otago_gold_rush
@@ -1189,6 +1242,7 @@ focus_tree = {
 		}
 		x = 30
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1207,6 +1261,7 @@ focus_tree = {
 		}
 		x = 32
 		y = 3
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1221,6 +1276,7 @@ focus_tree = {
 		}
 		x = 2
 		y = 4
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1244,6 +1300,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1260,6 +1317,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1277,6 +1335,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1295,6 +1354,7 @@ focus_tree = {
 		}
 		x = 2
 		y = 6
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1316,6 +1376,7 @@ focus_tree = {
 		}
 		x = 4
 		y = 6
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1337,6 +1398,7 @@ focus_tree = {
 		}
 		x = 2
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1358,6 +1420,7 @@ focus_tree = {
 		}
 		x = 4
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1383,6 +1446,7 @@ focus_tree = {
 		}
 		x = 8
 		y = 10
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1392,8 +1456,9 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_adapt_gunfighter_pa_building
 		}
-		x = 19
+		x = 18
 		y = 5
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1415,6 +1480,7 @@ focus_tree = {
 		}
 		x = 30
 		y = 4
+		ai_will_do = { factor = 15 }
 
 	}
 	focus = {
@@ -1433,6 +1499,7 @@ focus_tree = {
 				state = 723
 			} 
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_the_capital_is_established
@@ -1447,6 +1514,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.3
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_a_country_of_wonders
@@ -1467,6 +1535,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_political_power = 100
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_land_confescations
@@ -1489,6 +1558,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_the_kingitanga_fallout
@@ -1513,6 +1583,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.033
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_ignore_him
@@ -1529,6 +1600,7 @@ focus_tree = {
 		completion_reward = {#make this dynamic
 			add_political_power = 45
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_offer_him_land
@@ -1545,6 +1617,7 @@ focus_tree = {
 		completion_reward = {
 			KIN = {country_event = {id=nzl_other.14 days = 7}}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_industrialising_the_south
@@ -1567,6 +1640,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_industrialising_the_north
@@ -1597,6 +1671,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_confirm_our_industrial_might
@@ -1616,6 +1691,7 @@ focus_tree = {
 				remove_idea = agrarian
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_a_nation_of_innovation
@@ -1641,6 +1717,7 @@ focus_tree = {
 				remove_idea = pre_industrial_era
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_our_own_navy
@@ -1681,6 +1758,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_expand_our_naval_bases
@@ -1719,6 +1797,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_a_port_worthy_of_the_capital
@@ -1744,6 +1823,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_the_great_dockyards_of_the_north
@@ -1772,6 +1852,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_adopt_secret_ballots
@@ -1797,6 +1878,7 @@ focus_tree = {
 			}
 			
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_ideals_of_freedom
@@ -1811,6 +1893,7 @@ focus_tree = {
 			add_political_power = 45
 			add_stability = 0.05
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_building_a_railway
@@ -1827,6 +1910,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.50 uses = 1 category = trains_tech }
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_open_a_passenger_railway_in_christchurch
@@ -1846,6 +1930,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_southern_cromite_mines
@@ -1863,6 +1948,7 @@ focus_tree = {
 				state = 723
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_dun_mountian_railway
@@ -1883,6 +1969,7 @@ focus_tree = {
 				state = 723
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_establish_mosgiel_woollen_factory_company
@@ -1905,6 +1992,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_otagos_industrial_base
@@ -1925,6 +2013,7 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_reconise_the_kingitanga
@@ -1940,6 +2029,7 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1954,6 +2044,7 @@ focus_tree = {
 		}
 		x = 13
 		y = 1
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1972,6 +2063,7 @@ focus_tree = {
 		}
 		x = 12
 		y = 2
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -1986,6 +2078,7 @@ focus_tree = {
 		}
 		x = 12
 		y = 6
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -2001,6 +2094,7 @@ focus_tree = {
 		}
 		x = 14
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -2016,6 +2110,7 @@ focus_tree = {
 		}
 		x = 12
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -2030,6 +2125,7 @@ focus_tree = {
 		}
 		x = 16
 		y = 7
+		ai_will_do = { factor = 10 } 
 
 	}
 	focus = {
@@ -2047,6 +2143,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.10
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_our_land_now
@@ -2066,6 +2163,7 @@ focus_tree = {
 				add_manpower = 3300
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_the_rights_of_the_maori
@@ -2087,6 +2185,7 @@ focus_tree = {
 				add_ideas = {full_equality}
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_encorage_maori_population_growth
@@ -2106,6 +2205,7 @@ focus_tree = {
 				days = 365
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_start_land_clearing_projects
@@ -2122,6 +2222,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_convince_the_tribes_to_sell
@@ -2138,6 +2239,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.10
 		}
+		ai_will_do = { factor = 10 } 
 	}
 	focus = {
 		id = nzl_vic_distrabute_the_land_to_new_tribes_and_settlers
@@ -2178,5 +2280,6 @@ focus_tree = {
 				add_manpower = 15000
 			}
 		}
+		ai_will_do = { factor = 10 } 
 	}
 }

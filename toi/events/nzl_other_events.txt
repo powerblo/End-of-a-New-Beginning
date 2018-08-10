@@ -373,27 +373,6 @@ country_event = { #The Kingitanga Deal
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
-	immediate = {
-		every_owned_state = {
-			limit = {
-				is_controlled_by = ROOT
-				state = 1077 #Waikato
-			}
-			remove_claim_by = KIN
-			add_core_of = KIN
-			remove_core_of = NZL
-			add_claim_by = NZL
-			KIN = { 
-				transfer_state = PREV 
-				
-				}
-		}
-		puppet = KIN
-		#CNT = {
-		#	set_cosmetic_tag = CNT_FAI
-		#	transfer_technology = yes
-		#}
-	}
 	option = {
 		name = nzl_other.15.a #we agree
 		ai_chance = {

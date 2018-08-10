@@ -210,6 +210,53 @@ country_event = {
 	}
 }
 
+country_event = { 
+	id = ita.10	
+	title = ita.10.t
+	desc = ita.10.d
+	picture = GFX_event_ITA_Po_Valley_Modernization
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.10.a
+		#puppet state = yess
+			random_list = {
+    	75 = {
+    		#country_event = {
+    			#id = ita.11
+    			#hours = 1
+
+    		#}
+
+
+    		TIC = { add_state_core = 979 }
+    		TIC = { set_state_owner = 979 }
+    		TIC = { set_state_controller = 979 }
+        	puppet = TIC
+    	}
+    	25 = {
+    		#country_event = {
+    			#id = ita.12
+    			#hours = 1
+    		}
+
+
+       	 
+   	 	}
+
+	}	
+}
+	option = {
+		name = ita.10.b
+		#annex directly = noo
+		
+	}
+	option = {
+		name = ita.10.c
+		#do nothing :shrug:
+	}
+}
 
 
 
