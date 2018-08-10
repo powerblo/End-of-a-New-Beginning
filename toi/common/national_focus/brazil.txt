@@ -108,7 +108,7 @@ focus_tree = {
 	
 	focus = {
 		id = BRA_southern_italian_communities
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_goal_focus_italycom
 		cost = 10
 		x = 2
 		y = 5
@@ -143,7 +143,7 @@ focus_tree = {
 		501 = {
 		add_manpower = 10000
 		}
-		add_ideas = BRA_italian_workforce
+		add_timed_idea = { idea = BRA_italian_workforce days = 80 }
 		}
 	}
 	
@@ -164,7 +164,7 @@ focus_tree = {
 	
 	focus = {
 		id = BRA_southern_german_communities
-		icon = GFX_focus_ITA_Prussia
+		icon = GFX_goal_focus_germancom
 		cost = 10
 		x = 4
 		y = 5
@@ -893,7 +893,7 @@ focus = {
 	
 	focus = {
 		id = BRA_propose_a_research_treaty
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_BRA_goal_research_treaty
 		cost = 10
 		x = 22
 		y = 9
