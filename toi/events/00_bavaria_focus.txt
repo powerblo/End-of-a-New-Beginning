@@ -590,9 +590,13 @@ country_event = {
                 factor = 100
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 70
+				has_opinion = {
+					target = BAV
+					value = 20
+				}
+			}
 		}
 		BAV = {
 			set_country_flag = "Austria sees Bavaria as a possible ally"
@@ -612,9 +616,13 @@ country_event = {
                 factor = 0
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 30
+				has_opinion = {
+					target = BAV
+					value = 20
+				}
+			}
 		}
 	}
 }
@@ -636,9 +644,12 @@ country_event = {
                 factor = 100
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 70
+				BAV = {
+					has_country_flag = "Austria sees Bavaria as a possible ally"
+				}
+			}
 		}
 		BAV = {
 			set_country_flag = "Austria sees Bavaria as an ally"
@@ -658,9 +669,12 @@ country_event = {
                 factor = 0
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 30
+				BAV = {
+					has_country_flag = "Austria sees Bavaria as a possible ally"
+				}
+			}
 		}
 	}
 }
@@ -712,9 +726,13 @@ country_event = {
                 factor = 0
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 70
+				has_opinion = {
+					target = BAV
+					value = 20
+				}
+			}
 		}
 		BAV = {
 			set_country_flag = "Prussia accepts Bavaria's support"
@@ -734,9 +752,13 @@ country_event = {
                 factor = 100
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 30
+				has_opinion = {
+					target = BAV
+					value = 20
+				}
+			}
 		}
 	}
 }
@@ -773,9 +795,12 @@ country_event = {
                 factor = 0
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 70
+				BAV = {
+					has_country_flag = "Prussia accepts Bavaria's support"
+				}
+			}
 		}
 		
 		BAV = {
@@ -796,9 +821,12 @@ country_event = {
                 factor = 100
                 is_historical_focus_on = yes
             }
-			#modifier = {
-			#	
-			#}
+			modifier = {
+				factor = 30
+				BAV = {
+					has_country_flag = "Prussia accepts Bavaria's support"
+				}
+			}
 		}
 	}
 }
