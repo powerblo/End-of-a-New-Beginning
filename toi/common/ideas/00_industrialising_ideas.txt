@@ -15,6 +15,19 @@ ideas = {
 				global_building_slots_factor = 0.05
 			}
 		}
+		AF_T_military_streamlining={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.075
+			}
+		}
 		AF_T_small_scale_railways={
 			allowed = {
 				always = yes
@@ -438,6 +451,22 @@ ideas = {
 
 			modifier = {
 				political_power_cost = -0.15
+			}
+		}
+	}
+	country = {
+		afr_generic_voices_of_the_people = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				centrism_drift = 0.05
+				traditional_conservatism_drift = 0.05
+				radical_democracy_drift = 0.05
+			}
+		}
+		afr_generic_tales_of_democracy = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				autocracy_drift = -0.05
 			}
 		}
 	}

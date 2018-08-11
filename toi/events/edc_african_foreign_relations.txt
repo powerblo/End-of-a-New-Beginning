@@ -176,7 +176,7 @@ country_event = {###natives reached 100% industrialisation
 	
 	#is_triggered_only = yes
 	trigger = {
-		check_variable = {ROOT.industrisation_progress > 99}
+		check_variable = {ROOT.industrisation_progress > 99.9}
 		has_idea = afr_reforming_kingdom
 	}
 	mean_time_to_happen = {
@@ -250,10 +250,10 @@ country_event = {###populus is adgitated about change
 	trigger = {
 		check_variable = {ROOT.industrisation_progress < 100}
 		check_variable = {ROOT.industrisation_progress > 20}
-		has_idea = AF_T_small_kingdom
+		has_idea = afr_reforming_kingdom
 		AND = {
-			has_stability < 20
-			has_stability > 10
+			has_stability < 0.25
+			has_stability > 0.1
 		}
 	}
 	mean_time_to_happen = {
@@ -289,7 +289,7 @@ country_event = {###army is pissed about new weapons
 	trigger = {
 		check_variable = {ROOT.industrisation_progress < 100}
 		check_variable = {ROOT.industrisation_progress > 25}
-		has_idea = AF_T_small_kingdom
+		has_idea = afr_reforming_kingdom
 	}
 	mean_time_to_happen = {
 		days = 1000
@@ -320,7 +320,7 @@ country_event = {###send a colonisation proposal to you benafactor
 	trigger = {
 		check_variable = {ROOT.industrisation_progress < 100}
 		check_variable = {ROOT.industrisation_progress > 25}
-		has_idea = AF_T_small_kingdom
+		has_idea = afr_reforming_kingdom
 	}
 	mean_time_to_happen = {
 		days = 1000
@@ -1377,7 +1377,7 @@ country_event = { #A rival tribe has a claim on a state
 		name = EDC_afr.27.a
 	}
 }
-country_event = {###natives reached 10 factories
+country_event = {###natives reached 20 factories
 	id = EDC_afr.28
 	title = EDC_afr.28.t
 	desc = EDC_afr.28.d
@@ -1390,6 +1390,7 @@ country_event = {###natives reached 10 factories
 		num_of_factories > 19
 		NOT= {has_country_flag= af_t_20_fac}
 		has_country_flag = af_t_10_fac
+		NOT = {has_idea = industrializing}
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -1401,6 +1402,223 @@ country_event = {###natives reached 10 factories
 		custom_effect_tooltip = EDC_afr.6.t
 		hidden_effect = {
 			country_event = { id = EDC_afr.6 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched factory_industry_1
+	id = EDC_afr.29
+	title = EDC_afr.29.t
+	desc = EDC_afr.29.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = factory_industry_1
+		NOT= {has_country_flag= af_t_factory_industry_1}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.29.a
+		set_country_flag = af_t_factory_industry_1
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched dry_puddling_process
+	id = EDC_afr.30
+	title = EDC_afr.30.t
+	desc = EDC_afr.30.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = dry_puddling_process
+		NOT= {has_country_flag= af_t_dry_puddling_process}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.30.a
+		set_country_flag = af_t_dry_puddling_process
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched early_dynamo_generator
+	id = EDC_afr.31
+	title = EDC_afr.31.t
+	desc = EDC_afr.31.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = early_dynamo_generator
+		NOT= {has_country_flag= af_t_early_dynamo_generator}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.31.a
+		set_country_flag = af_t_early_dynamo_generator
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched mechanical_production_1
+	id = EDC_afr.32
+	title = EDC_afr.32.t
+	desc = EDC_afr.32.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = mechanical_production_1
+		NOT= {has_country_flag= af_t_mechanical_production_1}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.32.a
+		set_country_flag = af_t_mechanical_production_1
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched Electrical Telegraph
+	id = EDC_afr.33
+	title = EDC_afr.33.t
+	desc = EDC_afr.33.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = electrical_telegraph
+		NOT= {has_country_flag= af_t_electrical_telegraph}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.33.a
+		set_country_flag = af_t_electrical_telegraph
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched Industrial Society
+	id = EDC_afr.34
+	title = EDC_afr.34.t
+	desc = EDC_afr.34.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		has_tech = tech_humanities_industrial_society
+		NOT= {has_country_flag= af_t_tech_humanities_industrial_society}
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.34.a
+		set_country_flag = af_t_tech_humanities_industrial_society
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives reached 30 factories
+	id = EDC_afr.35
+	title = EDC_afr.35.t
+	desc = EDC_afr.35.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		num_of_factories > 39
+		NOT= {has_country_flag= af_t_30_fac}
+		has_country_flag = af_t_20_fac
+		NOT = {has_idea = industrializing}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.35.a
+		set_country_flag = af_t_30_fac
+		custom_effect_tooltip = EDC_afr.6.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.6 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched industrial_fertilizers
+	id = EDC_afr.36
+	title = EDC_afr.36.t
+	desc = EDC_afr.36.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		NOT= {has_country_flag= af_t_tech_industrial_fertilizers}
+		NOT = {has_idea = industrializing}
+		has_tech = industrial_fertilizers
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.36.a
+		set_country_flag = af_t_tech_industrial_fertilizers
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
 		}	
 	}
 }
