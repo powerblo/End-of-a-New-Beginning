@@ -13,10 +13,10 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
-
-    civilian_economy
+    has_heir
+    semi_presidential_republic
+	
+    low_economic_mobilisation
     limited_exports
     two_percent
     normal_taxes
@@ -25,13 +25,13 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+    segregation
+    universal_male_suffrage
 
-    no_constitution
-    no_elections
+    limited_constitution
+    limited_elections
 
-    privileged_education
+    open_schools
     state_religion
 	religion_catholic
          #NATIONAL SPIRITS
@@ -53,26 +53,26 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 11
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 48
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 9
       }
       chauvinist_populism = {
-        popularity = 100
+        popularity = 24
       }
       autocracy = {
-        popularity = 0
+        popularity = 8
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -87,13 +87,21 @@ create_country_leader = {
     name = "Carlos Antonio López"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_PAR_Carlos_Antonio_Lopez.dds"
-    expire = 1900.1.1
+    expire = 1862.1.1
+    ideology = conserv
+}
+
+create_country_leader = {
+    name = "Francisco Solano López"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_PAR_Carlos_Antonio_Lopez.dds"
+    expire = 1900.7.10
     ideology = tropical
 }
 
 create_corps_commander {
   name = "Francisco Solano López"
-  picture = "Portrait_PAR_Carlos_Antonio_Lopez.dds"
+  picture = "Portrait_PAR_Francisco_Antonio_Lopez.dds"
   traits = { }
   skill = 2
   attack_skill = 1

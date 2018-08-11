@@ -13,8 +13,8 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -25,11 +25,11 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+    limited_equality
+    universal_male_suffrage
 
-    no_constitution
-    no_elections
+    limited_constitution
+    free_elections
 
     privileged_education
     state_religion
@@ -56,13 +56,13 @@
         popularity = 10
       }
       traditional_conservatism = {
-        popularity = 10
+        popularity = 70
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 80
+        popularity = 20
       }
       autocracy = {
         popularity = 0
@@ -72,7 +72,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -88,7 +88,7 @@
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_BOL_Jorge_Cordova.dds"
     expire = 1870.1.1
-    ideology = tropical
+    ideology = conserv
 }
    # GENERALS
 

@@ -13,8 +13,8 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -25,13 +25,12 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+    segregation
 
-    no_constitution
-    no_elections
+    limited_constitution
+    free_elections
 
-    privileged_education
+    open_schools
     state_religion
 	religion_catholic
          #NATIONAL SPIRITS
@@ -53,7 +52,7 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 20
       }
       traditional_conservatism = {
         popularity = 80
@@ -62,7 +61,7 @@
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 20
+        popularity = 0
       }
       autocracy = {
         popularity = 0
@@ -83,20 +82,13 @@
 
   # POLITICAL LEADERS
 
-  create_country_leader = {
-    name = "Mariano Ospina Rodríguez"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_COL_Mariano_Ospina_Rodriguez.dds"
-    expire = 1861.4.1
-    ideology = conserv
-}
 
 create_country_leader = {
-    name = "Juan José Nieto"
+    name = "Manuel Maria Mallarino"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_COL_Juan_Jose_Nieto.dds"
-    expire = 1861.4.1
-    ideology = conserv_liberal
+    picture = "Portrait_COL_Manuel_Maria_Mallarino.dds"
+    expire = 1857.4.1
+    ideology = conserv
 }
 
 create_corps_commander = {

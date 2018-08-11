@@ -13,8 +13,8 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -25,11 +25,11 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+    segregation
+    parliamentary_suffrage
 
-    no_constitution
-    no_elections
+    constitution_adopted
+    limited_elections
 
     privileged_education
     state_religion
@@ -53,26 +53,26 @@
         popularity = 0
       }
       centrism = {
-        popularity = 20
+        popularity = 42
       }
       traditional_conservatism = {
-        popularity = 20
+        popularity = 31
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 60
+        popularity = 20
       }
       autocracy = {
-        popularity = 0
+        popularity = 7
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = centrism
   }
 
   set_technology = {
@@ -87,8 +87,16 @@
     name = "Francisco Robles"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_ECU_Francisco_Robles.dds"
-    expire = 1865.1.1
-    ideology = tropical
+    expire = 1865.4.2
+    ideology = conserv_liberal
+}
+
+ create_country_leader = {
+    name = "Gabriel Garcia Moreno"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_ECU_Gabriel_Garcia_Moreno.dds"
+    expire = 1870.1.1
+    ideology = conserv
 }
 
 create_corps_commander {
