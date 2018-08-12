@@ -45,7 +45,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = -150
-			#add_ideas = KOR_sociocrisisidea
+			add_ideas = KOR_sociocrisisidea
 		}
 	}
 
@@ -229,7 +229,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 200
-			#grant checked factionalism
+			add_ideas = KOR_restorecheckbalanceidea
 		}
 	}
 
@@ -425,8 +425,8 @@ focus = {
 		
 		completion_reward = {
 			add_political_power = -100
-			#remove_ideas = KOR_sociocrisisidea
-			#add_ideas = KOR_stabilizecrisisidea
+			remove_ideas = KOR_sociocrisisidea
+			add_ideas = KOR_stabilizecrisisidea
 		}
 	}
 
@@ -1641,7 +1641,9 @@ focus = {
 			factor = 1
 		}
 
-		prerequisite = { focus = KOR_rootoutcorruption }
+		available = {
+		has_completed_focus = KOR_rootoutcorruption
+		}
 
 
 		completion_reward = {
@@ -2652,6 +2654,9 @@ focus = {
 
 		prerequisite = { focus = KOR_chineserelations }
 
+
+		mutually_exclusive = { focus = KOR_questionqing }
+
 		completion_reward = {
 		add_political_power = -30
 		add_stability = 0.05
@@ -2811,6 +2816,8 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		mutually_exclusive = { focus = KOR_closerqing }
 
 		prerequisite = { focus = KOR_chineserelations }
 
@@ -2972,8 +2979,24 @@ focus = {
 			factor = 1
 		}
 
+		available = {
+		has_country_leader = {
+    	name = "Sinjeong"
+    	ruling_only = yes
+		}
+		}
+
 		completion_reward = {
 		add_political_power = 100
+		retire_country_leader = yes
+		create_country_leader = {
+    	name = "Heungseon Daewongun"
+    	desc = "POLITICS_TEMP_DESC"
+    	picture = "Portrait_KOR_Heungseon.dds"
+    	expire = 1900.1.1
+    	ideology = absolutism
+    	}
+
 		}
 	}
 
@@ -3043,6 +3066,8 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+
 
 		prerequisite = { focus = KOR_removeclan }
  		prerequisite = { focus = KOR_strengthenuijeongbu }
