@@ -197,14 +197,14 @@ country_event = {
 
     option = {
         name = acw.6.a
-        add_political_power = 200
+        add_political_power = 300
         add_ideas = USA_Civil_War
         if = {
             limit = {
                 tag = USA
             }
             USA = { remove_ideas = american_slavery_3 }
-            add_political_power = 500
+            add_political_power = 200
         }
         add_war_support = 0.8
         add_stability = 0.8
@@ -1919,7 +1919,8 @@ country_event = {
     picture = GFX_report_event_generic_battle
 
     trigger = {
-        has_global_flag = ACWAmerican_Civil_War
+	    tag = USA
+        has_country_flag = USAAmerican_Civil_War
     }
 
     mean_time_to_happen = { days = 2 }
