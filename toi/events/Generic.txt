@@ -76,6 +76,15 @@ country_event = {
 		
 		is_triggered_only = yes
 		
+		immediate = {
+			ROOT = {
+				set_variable = {
+					var = pol_stability
+					value = 1
+				}
+			}
+		}	
+
 		option = {
 			name = generic.4.a
 			ai_chance = { factor = 100 }

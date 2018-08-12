@@ -329,9 +329,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			country_event = { id = bavariafocus.5 days = 3 }
 			add_ideas = BAV_triasidea
 			set_country_flag = "Triaspolitik of Maximilian II."
+			
+			custom_effect_tooltip = BAV_customeffect_trias
+			
+			hidden_effect = {
+				country_event = { id = bavariafocus.5 days = 3 }
+			}
 		}
 	}
  
@@ -1213,7 +1218,7 @@ focus_tree = {
 	#Focus for Ludwig II. 
 	focus = { 
 		id = BAV_ludwigii 
-		icon = GFX_goal_focus_ludwig_ii
+		icon = GFX_goal_focus_steh_uns_bei
 		ai_will_do = {
 			factor = 40
 			
@@ -1372,7 +1377,7 @@ focus_tree = {
 	#Focus for Gott, steh' uns bei!
 	focus = { 
 		id = BAV_gottstehunsbei 
-		icon = GFX_goal_focus_steh_uns_bei 
+		icon =  GFX_goal_focus_ludwig_ii
 		ai_will_do = {
 			factor = 40
 			
