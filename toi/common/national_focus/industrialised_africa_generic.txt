@@ -854,21 +854,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = afr_vic_african_confederation
-		icon = GFX_goal_unknown
-		cost = 10.00
-		mutually_exclusive = {
-			focus = afr_vic_european_political_spheres
-			focus = afr_vic_protector_of_africa
-		}
-		prerequisite = {
-			focus = afr_vic_build_dedicated_government_buildings
-		}
-		x = 29
-		y = 8
-
-	}
-	focus = {
 		id = afr_vic_western_constatution
 		icon = GFX_focus_generic_self_management
 		cost = 10.00
@@ -1245,6 +1230,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 5
+		completion_reward = {
+			add_stability = 0.1
+		}
 
 	}
 	focus = {
@@ -1253,6 +1241,35 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_one_people_one_nation
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = oral_tradition
+				}
+				swap_ideas = {
+					add_idea = privileged_education
+					remove_idea = oral_tradition
+				}
+			}
+			if = {
+				limit = {
+					has_idea = privileged_education
+				}
+				swap_ideas = {
+					add_idea = open_schools
+					remove_idea = privileged_education
+				}
+			}
+			if = {
+				limit = {
+					has_idea = open_schools
+				}
+				swap_ideas = {
+					add_idea = compulsory_education
+					remove_idea = open_schools
+				}
+			}
 		}
 		x = 27
 		y = 6
@@ -1264,6 +1281,32 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_one_people_one_nation
+		}
+		bypass = {
+			OR = {
+				has_idea = free_trade
+				has_idea = export_focus
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					add_idea = limited_exports
+					remove_idea = closed_economy
+				}
+			}
+			if = {
+				limit = {
+					has_idea = limited_exports
+				}
+				swap_ideas = {
+					add_idea = export_focus
+					remove_idea = limited_exports
+				}
+			}
 		}
 		x = 33
 		y = 6
@@ -1293,10 +1336,13 @@ focus_tree = {
 	}
 	focus = {
 		id = afr_vic_research_grants
-		icon = GFX_goal_unknown
+		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
 			focus = afr_vic_education_reforms
+		}
+		completion_reward = {
+			add_research_slot = 1
 		}
 		x = 27
 		y = 7
@@ -1305,12 +1351,30 @@ focus_tree = {
 	focus = {
 		id = afr_vic_build_dedicated_government_buildings
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 25.00
 		prerequisite = {
 			focus = afr_vic_one_people_one_nation
 		}
 		x = 29
 		y = 7
+		completion_reward = {
+			add_stability = 0.25
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = afr_vic_found_a_ministry_of_foreign_affairs
+		icon = GFX_goal_unknown
+		cost = 25.00
+		prerequisite = {
+			focus = afr_vic_build_dedicated_government_buildings
+		}
+		x = 25
+		y = 8
+		completion_reward = {
+			
+		}
 
 	}
 	focus = {
@@ -1329,14 +1393,63 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = afr_vic_build_dedicated_government_buildings
+			focus = afr_vic_found_a_ministry_of_foreign_affairs
 		}
 		mutually_exclusive = {
-			focus = afr_vic_european_political_spheres
+			focus = afr_vic_contemplate_european_political_involvments
+			focus = afr_vic_african_confederation
+			focus = afr_vic_mantain_neutrality
+		}
+		x = 26
+		y = 9
+
+	}
+	focus = {
+		id = afr_vic_african_confederation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		mutually_exclusive = {
+			focus = afr_vic_contemplate_european_political_involvments
+			focus = afr_vic_protector_of_africa
+			focus = afr_vic_mantain_neutrality
+		}
+		prerequisite = {
+			focus = afr_vic_found_a_ministry_of_foreign_affairs
+		}
+		x = 24
+		y = 9
+
+	}
+	focus = {
+		id = afr_vic_mantain_neutrality
+		icon = GFX_goal_unknown
+		cost = 10.00
+		mutually_exclusive = {
+			focus = afr_vic_contemplate_european_political_involvments
+			focus = afr_vic_protector_of_africa
 			focus = afr_vic_african_confederation
 		}
-		x = 32
-		y = 8
+		prerequisite = {
+			focus = afr_vic_found_a_ministry_of_foreign_affairs
+		}
+		x = 28
+		y = 9
+
+	}
+	focus = {
+		id = afr_vic_contemplate_european_political_involvments
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_found_a_ministry_of_foreign_affairs
+		}
+		mutually_exclusive = {
+			focus = afr_vic_protector_of_africa
+			focus = afr_vic_african_confederation
+			focus = afr_vic_mantain_neutrality
+		}
+		x = 22
+		y = 9
 
 	}
 	focus = {
@@ -1344,14 +1457,13 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = afr_vic_build_dedicated_government_buildings
+			focus = afr_vic_contemplate_european_political_involvments
 		}
-		mutually_exclusive = {
-			focus = afr_vic_protector_of_africa
-			focus = afr_vic_african_confederation
+		allow_branch = {
+			has_completed_focus = afr_vic_contemplate_european_political_involvments
 		}
-		x = 26
-		y = 8
+		x = 25
+		y = 10
 
 	}
 	focus = {
@@ -1361,8 +1473,11 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_vic_protector_of_africa
 		}
-		x = 32
-		y = 9
+		allow_branch = {
+			has_completed_focus = afr_vic_protector_of_africa
+		}
+		x = 25
+		y = 10
 
 	}
 	focus = {
@@ -1372,8 +1487,8 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_vic_establish_our_dominace_in_africa
 		}
-		x = 31
-		y = 10
+		x = 26
+		y = 11
 
 	}
 	focus = {
@@ -1383,8 +1498,19 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_vic_establish_our_dominace_in_africa
 		}
-		x = 33
-		y = 10
+		x = 24
+		y = 11
+
+	}
+	focus = {
+		id = afr_vic_react_to_the_african_conference
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_european_political_spheres
+		}
+		x = 22
+		y = 11
 
 	}
 	focus = {
@@ -1395,7 +1521,40 @@ focus_tree = {
 			focus = afr_vic_european_political_spheres
 		}
 		x = 24
-		y = 9
+		y = 11
+
+	}
+	focus = {
+		id = afr_vic_prepare_to_take_sides
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_send_observers_to_european_governments
+		}
+		x = 26
+		y = 12
+
+	}
+	focus = {
+		id = afr_vic_take_sides_in_italy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_prepare_to_take_sides
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = afr_vic_take_sides_in_the_franco-prussian_war
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_prepare_to_take_sides
+		}
+		x = 27
+		y = 13
 
 	}
 	focus = {
@@ -1406,19 +1565,23 @@ focus_tree = {
 			focus = afr_vic_european_political_spheres
 		}
 		x = 26
-		y = 9
+		y = 11
 
 	}
 	focus = {
 		id = afr_vic_a_nation_of_many
 		icon = GFX_goal_unknown
 		cost = 10.00
+		x = 25
+		y = 10
 		prerequisite = {
 			focus = afr_vic_african_confederation
 		}
-		x = 29
-		y = 9
-
+		allow_branch = {
+			OR = {
+				has_completed_focus = afr_vic_african_confederation
+			}
+		}
 	}
 	focus = {
 		id = afr_vic_invite_our_african_neighbours
@@ -1427,8 +1590,8 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_vic_our_confederation_articles
 		}
-		x = 29
-		y = 11
+		x = 25
+		y = 12
 
 	}
 	focus = {
@@ -1438,8 +1601,8 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_vic_a_nation_of_many
 		}
-		x = 29
-		y = 10
+		x = 25
+		y = 11
 
 	}
 }
