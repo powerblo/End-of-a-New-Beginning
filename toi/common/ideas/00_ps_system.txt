@@ -1,12 +1,98 @@
 ideas = {
 	country = {
-		PP_first_stage_drift_single = {
+		PS_riots_in_the_streets_single = {
 			removal_cost = -1
 			
-			picture = generic_production_bonus
+			picture = generic_neutrality_drift_bonus
 			
 			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				drift_defence_factor = -0.10
+				stability_factor = -0.1
+				radical_democracy_acceptance = 15
 				radical_democracy_drift = 0.10
+			}
+		}
+		
+		PS_big_scale_protests_single = {
+			removal_cost = -1
+			
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				production_speed_buildings_factor = -0.30
+				conscription_factor = -0.15
+				drift_defence_factor = -0.20
+				industrial_capacity_factory = -0.30
+				stability_factor = -0.20
+				radical_democracy_acceptance = 15
+				radical_democracy_drift = 0.5
+			}
+		}
+		
+		PS_fighting_in_the_streets = {
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				conscription_factor = -0.20
+				army_attack_factor = -0.20
+				army_speed_factor = -0.20
+				training_time_factor = 0.20
+				army_defence_factor = -0.20
+				line_change_production_efficiency_factor = -0.30
+				production_factory_max_efficiency_factor = -0.30
+				industry_repair_factor = -0.30
+			}
+		}
+		
+		PS_call_for_civil_war = {
+			removal_cost = -1
+			
+			picture = anarchy
+			
+			modifier = {
+				army_org_factor = -0.20
+				army_morale_factor = -0.15
+				conscription_factor = -0.15
+			}
+		}
+		
+		#double
+		PS_riots_in_the_streets_double = {
+			removal_cost = -1
+			
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				drift_defence_factor = -0.10
+				stability_factor = -0.1
+				radical_democracy_acceptance = 15
+				radical_democracy_drift = 0.10
+				collectivist_socialism_acceptance = 15
+				collectivist_socialism_drift = 0.10
+			}
+		}
+		
+		PS_big_scale_protests_double = {
+			removal_cost = -1
+			
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				production_speed_buildings_factor = -0.30
+				conscription_factor = -0.15
+				drift_defence_factor = -0.20
+				industrial_capacity_factory = -0.30
+				stability_factor = -0.20
+				radical_democracy_acceptance = 15
+				radical_democracy_drift = 0.5
+				collectivist_socialism_acceptance = 15
+				collectivist_socialism_drift = 0.5
 			}
 		}
 	}

@@ -1,20 +1,15 @@
-﻿#add_namespace = pssystem
+﻿add_namespace = pssystem
 
-#-250
-#country_event = {
-#	id = pssystem.0
-#	title = pssystem.0.t
-#	desc = pssystem.0.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_one
-#	}
-#	
-#	trigger = {
-#		has_political_power < -249
+#60
+country_event = {
+	id = pssystem.0
+	title = pssystem.0.t
+	desc = pssystem.0.d
+	picture = GFX_report_wittelsbachs
+	
+	trigger = {
+		check_variable = { ROOT.pol_stability < 61 }
+		check_variable = { ROOT.fighting_in_streets_done = 0 }
 #		NOT = {
 #			OR = {
 #				#America
@@ -157,29 +152,46 @@
 #				tag = ZUL
 #			}
 #		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.0.a
-#	}
-#}
-#
-#-500
-#country_event = {
-#	id = pssystem.1
-#	title = pssystem.1.t
-#	desc = pssystem.1.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_two
-#	}
-#	
-#	trigger = {
-#		has_political_power < -499
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		random_list = {
+			50 = {
+				add_ideas = PS_riots_in_the_streets_single
+			}
+			50 = {
+				add_ideas = PS_riots_in_the_streets_double
+			}
+		}
+		set_variable = { ROOT.fighting_in_streets_done = 1 }
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.0.a
+	}
+}
+
+#40
+country_event = {
+	id = pssystem.1
+	title = pssystem.1.t
+	desc = pssystem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = { ROOT.pol_stability < 41 }
+		check_variable = { ROOT.big_scale_protests_done = 0 }
+		OR = {
+			has_idea = PS_riots_in_the_streets_single
+			has_idea = PS_riots_in_the_streets_double
+		}
 #		NOT = {
 #			OR = {
 #				#America
@@ -322,29 +334,46 @@
 #				tag = ZUL
 #			}
 #		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.1.a
-#	}
-#}
-#
-#-750
-#country_event = {
-#	id = pssystem.2
-#	title = pssystem.2.t
-#	desc = pssystem.2.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_three
-#	}
-#	
-#	trigger = {
-#		has_political_power < -749
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_idea = PS_riots_in_the_streets_single
+			}
+			add_ideas = PS_big_scale_protests_single
+		}
+		else_if = {
+			limit = {
+				has_idea = PS_riots_in_the_streets_double
+			}
+			add_ideas = PS_big_scale_protests_double
+		}
+		set_variable = { ROOT.big_scale_protests_done = 1 }
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.1.a
+	}
+}
+
+#20
+country_event = {
+	id = pssystem.2
+	title = pssystem.2.t
+	desc = pssystem.2.d
+	picture = GFX_report_wittelsbachs
+	
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = { ROOT.pol_stability < 21 }
+		check_variable = { ROOT.fighting_in_the_streets_done = 0 }
+		OR = {
+			has_idea = PS_big_scale_protests_single
+			has_idea = PS_big_scale_protests_double
+		}
 #		NOT = {
 #			OR = {
 #				#America
@@ -487,29 +516,32 @@
 #				tag = ZUL
 #			}
 #		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.2.a
-#	}
-#}
-#
-#-1000
-#country_event = {
-#	id = pssystem.3
-#	title = pssystem.3.t
-#	desc = pssystem.3.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_four
-#	}
-#	
-#	trigger = {
-#		has_political_power < -999
+	}
+	
+	immediate = {
+		add_ideas = PS_fighting_in_the_streets
+		set_variable = { ROOT.fighting_in_the_streets_done = 1 }
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.2.a
+	}
+}
+
+#10
+country_event = {
+	id = pssystem.3
+	title = pssystem.3.t
+	desc = pssystem.3.d
+	picture = GFX_report_wittelsbachs
+	
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = { ROOT.pol_stability < 11 }
+		check_variable = { ROOT.call_for_civil_war_done = 0 }
+		has_idea = PS_fighting_in_the_streets
 #		NOT = {
 #			OR = {
 #				#America
@@ -652,29 +684,41 @@
 #				tag = ZUL
 #			}
 #		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.3.a
-#	}
-#}
-#
-#-1000
-#country_event = {
-#	id = pssystem.9
-#	title = pssystem.9.t
-#	desc = pssystem.9.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	is_triggered_only = yes
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.9.a
-#		
-#		add_ideas = {
-#			PP_first_stage_drift_single
-#		}
-#	}
-#}
+	}
+	
+	immediate = {
+		add_ideas = PS_call_for_civil_war
+		set_variable = { ROOT.call_for_civil_war_done = 1 }
+		
+		if = {
+			limit = {
+				has_idea = PS_big_scale_protests_single
+			}
+			start_civil_war = {
+				ideology = radical_democracy
+				size = 0.5
+				only_own_territory = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = PS_big_scale_protests_double
+			}
+			start_civil_war = {
+				ideology = radical_democracy
+				size = 0.3
+				only_own_territory = no
+			}
+			start_civil_war = {
+				ideology = collectivist_socialism
+				size = 0.3
+				only_own_territory = no
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.3.a
+	}
+}

@@ -1668,6 +1668,13 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = WUR
+			}
+		}
+		
 		completion_reward = {
 			WUR = {
 				country_event = { id = bavariafocus.6 days = 2 }
@@ -1688,6 +1695,13 @@ focus_tree = {
 		prerequisite = { focus = BAV_convincewuerttemberg} 
 		cost = 5
 		available_if_capitulated = no
+		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = BAD
+			}
+		}
 		
 		completion_reward = {
 			BAD = {
@@ -1732,6 +1746,13 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = HSD
+			}
+		}
+		
 		completion_reward = {
 			HSD = {
 				country_event = { id = bavariafocus.7 days = 2 }
@@ -1752,6 +1773,13 @@ focus_tree = {
 		prerequisite = { focus = BAV_extendthetrias} 
 		cost = 5
 		available_if_capitulated = no
+		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = FRK
+			}
+		}
 		
 		completion_reward = {
 			FRK = {
@@ -1775,6 +1803,13 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = SAX
+			}
+		}
+		
 		completion_reward = {
 			SAX = {
 				country_event = { id = bavariafocus.7 days = 2 }
@@ -1797,6 +1832,13 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = THU
+			}
+		}
+		
 		completion_reward = {
 			THU = {
 				country_event = { id = bavariafocus.7 days = 2 }
@@ -1818,6 +1860,13 @@ focus_tree = {
 		prerequisite = { focus = BAV_swayhessedarmstadt} 
 		cost = 5
 		available_if_capitulated = no
+		
+		bypass = {
+			has_completed_focus = BAV_likefatherlikeson
+			NOT = {
+				country_exists = HAN
+			}
+		}
 		
 		completion_reward = {
 			HAN = {

@@ -10,20 +10,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			tag = BAV
-			tag = PRS
-			tag = WUR
-			tag = BAD
-			tag = HSD
-			tag = FRK
-			tag = HES
-			tag = THU
-			tag = SAX
-			tag = HAN
-			tag = MCK
+		AND = {
+			OR = {
+				tag = BAV
+				tag = PRS
+				tag = WUR
+				tag = BAD
+				tag = HSD
+				tag = FRK
+				tag = HES
+				tag = THU
+				tag = SAX
+				tag = HAN
+				tag = MCK
+			}
+			check_variable = { 2ch_elected = 0 }
 		}
-		check_variable = { 2ch_elected = 0 }
 	}
 	
 	immediate = {
