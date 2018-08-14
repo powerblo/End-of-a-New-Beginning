@@ -232,3 +232,51 @@ country_event = {
 		}
 	}
 }
+
+#Ask to Unify Germany
+country_event = {
+	id = bavariaevent.7
+	title = bavariaevent.7.t
+	desc = bavariaevent.7.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 20
+				has_opinion = {
+					target = FROM
+					value = 80
+				}
+			}
+		}
+		name = bavariaevent.7.a
+	
+		custom_effect_tooltip = BAV_customeffect_proxy_unify_germany_yes
+		
+		hidden_effect = {
+			BAV = {
+				set_country_flag = BAV_AUS_allows_unification
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 20
+				has_opinion = {
+					target = FROM
+					value = 80
+				}
+			}
+		}
+		name = bavariaevent.7.b
+		
+		custom_effect_tooltip = BAV_customeffect_proxy_unify_germany_no
+	}
+}

@@ -13,6 +13,18 @@ ideas = {
 				radical_democracy_acceptance = 15
 				radical_democracy_drift = 0.10
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
 		}
 		
 		PS_big_scale_protests_single = {
@@ -28,6 +40,18 @@ ideas = {
 				stability_factor = -0.20
 				radical_democracy_acceptance = 15
 				radical_democracy_drift = 0.5
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
 			}
 		}
 		
@@ -46,6 +70,18 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.30
 				industry_repair_factor = -0.30
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
 		}
 		
 		PS_call_for_civil_war = {
@@ -57,6 +93,18 @@ ideas = {
 				army_org_factor = -0.20
 				army_morale_factor = -0.15
 				conscription_factor = -0.15
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
 			}
 		}
 		
@@ -76,6 +124,18 @@ ideas = {
 				collectivist_socialism_acceptance = 15
 				collectivist_socialism_drift = 0.10
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
 		}
 		
 		PS_big_scale_protests_double = {
@@ -93,6 +153,18 @@ ideas = {
 				radical_democracy_drift = 0.5
 				collectivist_socialism_acceptance = 15
 				collectivist_socialism_drift = 0.5
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
 			}
 		}
 	}
