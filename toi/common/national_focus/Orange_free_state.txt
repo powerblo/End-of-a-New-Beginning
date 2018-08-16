@@ -1,0 +1,805 @@
+focus_tree = {
+	id = Orange_free_state
+	country = {
+		factor = 0
+		modifier = {###for testing
+			add = 10
+			OR = {
+				tag = OFS
+			}
+		}
+	}
+	default = yes
+	focus = {
+		id = ofs_vic_start_legal_reforms
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 5
+		y = 0
+		completion_reward = {
+			add_political_power = 75
+		}
+
+	}
+	focus = {
+		id = ofs_vic_attempt_to_levy_taxes
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = ofs_vic_the_fuctions_of_a_state
+		}
+		completion_reward = {
+			swap_ideas={
+				add_idea = normal_taxes
+				remove_idea = low_taxes
+			}
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_economic_focus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = ofs_vic_external_focus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 30
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = ofs_vic_army_focus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 41
+		y = 0
+		completion_reward = {
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = ofs_vic_establish_laws_on_tariffs
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ofs_vic_start_legal_reforms
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			add_stability = 0.033
+		}
+
+	}
+	focus = {
+		id = ofs_vic_gunpowder_regulations
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ofs_vic_start_legal_reforms
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			add_stability = 0.033
+		}
+
+	}
+	focus = {
+		id = ofs_vic_liquor_reulations
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ofs_vic_start_legal_reforms
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			add_stability = 0.033
+		}
+
+	}
+	focus = {
+		id = ofs_vic_consoladate_internal_governence
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_liquor_reulations
+		}
+		prerequisite = {
+			focus = ofs_vic_gunpowder_regulations
+		}
+		prerequisite = {
+			focus = ofs_vic_establish_laws_on_tariffs
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = ofs_vic_continue_constitutional_reforms
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_consoladate_internal_governence
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_consolidate_power
+		}
+		available = {
+			has_war = no
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_reform_the_voting_system
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_continue_constitutional_reforms
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_focus_on_exsternal_problems
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_consoladate_internal_governence
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_consolidate_power
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_consoladate_internal_governence
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_continue_constitutional_reforms
+		}
+		available = {
+			has_war = no
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_the_fuctions_of_a_state
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_focus_on_exsternal_problems
+			focus = ofs_vic_consolidate_power
+			focus = ofs_vic_continue_constitutional_reforms
+		}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_create_a_national_tax_code
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_attempt_to_levy_taxes
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = ofs_vic_establish_national_banknotes
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_create_a_national_tax_code
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = ofs_vic_encorage_immergration
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_the_fuctions_of_a_state
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_thoughts_on_a_monarcy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_consolidate_power
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_begin_to_consoladate_power
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_thoughts_on_a_monarcy
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_the_failures_of_our_republic
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_to_consoladate_power
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = ofs_vic_encorage_monarcist_surge
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_the_failures_of_our_republic
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = ofs_vic_industrialising_our_nation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_economic_focus
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_begin_military_production
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_industrialising_our_nation
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_encorage_manufactory_develpoment
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_military_production
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_encorage_factory_jobs
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_military_production
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_start_to_connect_our_economy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_economic_focus
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_exspand_our_road_network
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_start_to_connect_our_economy
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_roads_in_the_west
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_exspand_our_road_network
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_roads_in_the_east
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_exspand_our_road_network
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_invest_in_resource_discovery
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_economic_focus
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_build_coal_mines
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_invest_in_resource_discovery
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_the_question_of_the_diamonds
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_invest_in_resource_discovery
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_secure_the_diamond_mines
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_the_question_of_the_diamonds
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_nationalise_the_mines
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_secure_the_diamond_mines
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_privatise_the_mines
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_privatise_the_mines
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_secure_the_diamond_mines
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_nationalise_the_mines
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_attempt_diplomatic_ties_with_SAR
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_external_focus
+		}
+		x = 24
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_offer_joint_guarentees
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_attempt_diplomatic_ties_with_SAR
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_offer_to_join_with_the_SAR
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_offer_joint_guarentees
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_mantain_frendly_independant_relations
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_mantain_frendly_independant_relations
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_offer_joint_guarentees
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_offer_to_join_with_the_SAR
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_our_british_policy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_external_focus
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_attempt_to_submit_to_ENG
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_our_british_policy
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_steadfast_independace
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_prepare_for_re-annexation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_attempt_to_submit_to_ENG
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_develop_independant_indentity
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_steadfast_independace
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_our_british_policy
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_attempt_to_submit_to_ENG
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_develop_independant_indentity
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_steadfast_independace
+			focus = ofs_vic_attempt_to_submit_to_ENG
+		}
+		mutually_exclusive = {
+			focus = ofs_vic_prepare_for_re-annexation
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_native_deals
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_external_focus
+		}
+		x = 31
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_begin_land_deals
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_native_deals
+		}
+		x = 31
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_encorage_more_deals
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_land_deals
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_establish_diplomacy_with_the_west
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_external_focus
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_send_emissaries_to_the_netherlands
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		x = 33
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_send_emissaries_to_britian
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_send_emissaries_to_the_USA
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_suppling_our_forces
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_army_focus
+		}
+		x = 39
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_inovate_our_guns
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_army_focus
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_continue_innovation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_inovate_our_guns
+		}
+		x = 41
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_deal_with_SAR_partisans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_the_fuctions_of_a_state
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_remove_single_citizenship_requirement
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_reform_the_voting_system
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_crown_a_monarch
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_encorage_monarcist_surge
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = ofs_vic_create_a_standing_force
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_army_focus
+		}
+		x = 43
+		y = 1
+
+	}
+	focus = {
+		id = ofs_vic_adopt_new_doctrines
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_create_a_standing_force
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_new_arms_new_tactics
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_adopt_new_doctrines
+		}
+		prerequisite = {
+			focus = ofs_vic_continue_innovation
+		}
+		x = 41
+		y = 3
+
+	}
+	focus = {
+		id = ofs_vic_establish_military_command
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_new_arms_new_tactics
+		}
+		x = 41
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_build_a_larger_force
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_establish_military_command
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = ofs_vic_update_supply_methods
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_suppling_our_forces
+		}
+		prerequisite = {
+			focus = ofs_vic_new_arms_new_tactics
+		}
+		x = 39
+		y = 4
+
+	}
+	focus = {
+		id = ofs_vic_increase_research_funding
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_create_a_national_tax_code
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = ofs_vic_encorage_the_founding_of_a_research_foundation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_increase_research_funding
+		}
+		x = 3
+		y = 8
+
+	}
+	focus = {
+		id = ofs_vic_cement_constatution
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_remove_single_citizenship_requirement
+		}
+		x = 1
+		y = 6
+
+	}
+}

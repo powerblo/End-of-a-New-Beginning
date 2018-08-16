@@ -1013,3 +1013,314 @@ afr_give_colonal_power={
 		multiply_variable = { var = colonial_power_max value = 8 }
 	}
 }
+afr_add_cores_home_region_tribal={
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_senegal = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_senegal = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_manuritania = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_manuritania = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_mali = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_mali = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_guinea = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_guinea = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_sierra_leone = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_sierra_leone = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_nigeria = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_nigeria = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_gabon = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_gabon = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_kongo = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_kongo = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_angola = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_angola = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_african_horn = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_african_horn = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_nambia = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_nambia = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_rhodesia = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_rhodesia = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_zanzabar = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_zanzabar = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_kenya = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_kenya = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_uganda = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_uganda = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_equatorial_africa = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_equatorial_africa = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_ivory_coast = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_ivory_coast = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_ghana = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_ghana = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_niger = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_niger = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_togo = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_togo = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_benin = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_benin = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				is_in_burkina_faso = yes
+			}
+		}
+		every_state = {
+			limit = {
+				NOT = {owner = {tag = ROOT}}
+				is_in_burkina_faso = yes
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
