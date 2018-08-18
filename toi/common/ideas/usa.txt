@@ -33,7 +33,7 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				stability_factor = -0.2
+				stability_factor = -0.05
 			}
 		}
 		american_slavery_3 = {
@@ -70,6 +70,114 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
+			}
+		}
+		american_slavery_tension_1 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		american_slavery_tension_2 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+		american_slavery_tension_3 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+		american_slavery_tension_4 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+		american_slavery_tension_5 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+		american_slavery_tension_6 = {
+			
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.35
 			}
 		}
 		USA_Westpoint1 = {
@@ -112,8 +220,22 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-				political_power_factor = -0.15
+				political_power_gain = -0.15
 				war_support_factor = -0.1
+			}
+		}
+		USA_UtahWar_2 = {
+			allowed = {
+				TAG = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				political_power_gain = -0.1
+				war_support_factor = -0.05
 			}
 		}
 		USA_Buchanan_Corruption = {
@@ -294,7 +416,7 @@ ideas = {
 			picture = chi_incompetent_officers
 			
 			modifier = {
-				army_org_Factor = -0.1
+				army_attack_factor = -0.1
 				max_planning = -0.1
 				planning_speed = -0.1
 			}
@@ -395,6 +517,25 @@ ideas = {
 				conscription_factor = 0.2
 				industrial_capacity_factory = 0.1
 				MONTHLY_POPULATION = -0.2
+			}
+		}
+		USA_sherman_march = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				army_attack_factor = 0.2
+				army_org_Factor = 0.1
+				army_speed_factor = 0.2
 			}
 		}
 		civil_war_attack_1 = {

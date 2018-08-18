@@ -1,0 +1,212 @@
+﻿add_namespace = utah
+#USA demands for Utah
+country_event = {
+		id = utah.1
+		title = utah.1.t
+		desc = utah.1.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = uta.1.a
+			USA = { country_event = { id = usa.32 days = 2 } }
+		}
+		option = {
+			name = uta.1.b
+			add_political_power = -25
+			country_event = { id = utah.7 }
+		}
+}
+#USA Utah peace for Civil War
+country_event = {
+		id = utah.2
+		title = utah.2.t
+		desc = utah.2.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_UtahWar_Escalated
+			has_war_with = UTA
+			country_exists = CSA
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = utah.2.a
+			ai_chance = {
+				factor = 70
+			}
+			UTA = { country_event = { id = utah.3 } }
+			add_political_power = -25
+		}
+		option = {
+			name = utah.2.b
+			ai_chance = {
+				factor = 30
+			}
+		}
+}
+#Utah responds to Civil War Peace
+country_event = {
+		id = utah.3
+		title = utah.3.t
+		desc = utah.3.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = uta.3.a
+			ai_chance = {
+				factor = 90
+			}
+			custom_effect_tooltip = USA_UTA_civilwarpeace
+			hidden_effect = {
+				white_peace = {
+					tag = USA
+					message = USA_UTA_CivilWar_Peace
+				}
+			}
+			USA = { clr_country_flag = USA_UtahWar_Escalated }
+		}
+		option = {
+			name = uta.3.b
+			ai_chance = {
+				factor = 10
+			}
+			add_political_power = -25
+		}
+}
+#Rise of Minutemen
+country_event = {
+		id = utah.4
+		title = utah.4.t
+		desc = utah.4.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = UTA
+			has_war_with = USA
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = uta.4.a
+			add_manpower = 4000
+			hidden_effect = { load_oob = UTA_militia }
+		}
+}
+#Remove Militia Idea
+country_event = {
+		id = utah.5
+		title = utah.5.t
+		desc = utah.5.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = UTA
+			has_manpower > 50000
+			has_idea = UTA_mormon_militia
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = uta.5.a
+			remove_ideas = UTA_mormon_militia
+		}
+}
+#Remove Mormon Promised Land
+country_event = {
+		id = utah.6
+		title = utah.6.t
+		desc = utah.6.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = UTA
+			OR = {
+				has_idea = atheistic_state
+				NOT = {
+					has_idea = religion_protestant
+				}
+			}
+			has_idea = UTA_promised_land
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = uta.6.a
+			remove_ideas = UTA_promised_land
+			if = {
+				limit = {
+					has_idea = UTA_mormon_militia
+				}
+				remove_ideas = UTA_mormon_militia
+			}
+		}
+}
+#Establish ourself
+country_event = {
+		id = utah.7
+		title = utah.7.t
+		desc = utah.7.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = uta.7.a
+			add_political_power = 25
+			USA = { country_event = { id = usa.33 days = 1 } }
+		}
+		option = {
+			name = uta.7.b
+			add_political_power = -25
+			set_politics = {
+				ruling_party = fundamentalism
+			}
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = 0.1
+			}
+			USA = { country_event = { id = usa.33 days = 1 } }
+		}
+		option = {
+			name = uta.7.c
+			add_political_power = -100
+			add_stability = -0.1
+			add_war_support = -0.1
+			set_politics = {
+				ruling_party = fundamentalism
+			}
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = state_religion
+				add_idea = theocratic_state
+			}
+			swap_ideas = {
+				remove_idea = free_elections
+				add_idea = no_elections
+			}
+			swap_ideas = {
+				remove_idea = constitution_adopted
+				add_idea = human_rights
+			}
+			swap_ideas = {
+				remove_idea = presidential_republic
+				add_idea = totalitarian_dictatorship
+			}
+			USA = { country_event = { id = usa.33 days = 1 } }
+		}
+}
