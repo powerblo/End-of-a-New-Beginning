@@ -469,5 +469,47 @@ ideas = {
 				autocracy_drift = -0.05
 			}
 		}
+		afr_ofs_invest_in_resource_discovery = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		afr_ofs_gold_mines_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+		afr_ofs_gold_mines_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
 	}
 }
