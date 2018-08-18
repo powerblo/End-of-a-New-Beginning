@@ -233,6 +233,25 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = KOR_shoreup
+		icon = GFX_goal_generic_neutrality_focus
+		x = 22
+		y = 8
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOR_restorecheckbalance }
+		
+		completion_reward = {
+			add_political_power = 50
+			remove_ideas = KOR_sociocrisisidea
+			add_ideas = KOR_stabilizecrisisidea
+		}
+	}
+
 #End of branch
 
 #Start of branch
@@ -410,7 +429,7 @@ focus = {
 	}
 
 	focus = {
-		id = KOR_stablizecrisis
+		id = KOR_stabilizecrisis
 		icon = GFX_focus_generic_self_management
 		x = 28
 		y = 8
@@ -649,7 +668,7 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = KOR_yangbanplant }
+		prerequisite = { focus = KOR_peasantirrigation }
 		
 		completion_reward = {
 		add_opinion_modifier = {
@@ -733,7 +752,7 @@ focus = {
 
 	focus = {
 		id = KOR_teachingschoe
-		icon = GFX_goal_tfv_smiling_buddha
+		icon = GFX_goal_focus_choejeu
 		x = 4
 		y = 0
 		cost = 0
@@ -827,7 +846,7 @@ focus = {
 
 	focus = {
 		id = KOR_recognizechoe
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_cheondo
 		x = 6
 		y = 1
 		cost = 10
@@ -913,7 +932,7 @@ focus = {
 
    	focus = {
 		id = KOR_spreaddong
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_cheondospreading
 		x = 6
 		y = 4
 		cost = 10
@@ -1021,7 +1040,7 @@ focus = {
 
 	focus = {
 		id = KOR_supportsilhak
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_silhak
 		x = 10
 		y = 1
 		cost = 10
@@ -1042,7 +1061,7 @@ focus = {
 
 	focus = {
 		id = KOR_promotesilhak
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_silhakspreading
 		x = 10
 		y = 2
 		cost = 10
@@ -1145,9 +1164,7 @@ focus = {
 		prerequisite = { focus = KOR_practicallearning }
 
 		completion_reward = {
-		add_political_power = -150
-		#remove stagnant economy
-		
+		add_political_power = -150	
 		}
 	}
 
@@ -1259,7 +1276,7 @@ focus = {
 
 	focus = {
 		id = KOR_koreanconfucianism
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_confucianism
 		x = 14
 		y = 1
 		cost = 10
@@ -1280,7 +1297,7 @@ focus = {
 
 	focus = {
 		id = KOR_confucianseowon
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_seowon
 		x = 14
 		y = 2
 		cost = 10
@@ -1939,7 +1956,7 @@ focus = {
 		add_tech_bonus = {
    		 bonus = 0.5
     	 uses = 2
-    	 category = infantry_tech
+    	 category = naval_equipment
 		}
 		}
 	}
@@ -1961,7 +1978,7 @@ focus = {
 		add_tech_bonus = {
    		 bonus = 0.5
     	 uses = 2
-    	 category = naval_equipment
+    	 category = infantry_tech
 		}
 		}
 	}
@@ -2150,7 +2167,7 @@ focus = {
 
 	focus = {
 		id = KOR_frenchembassy
-		#icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_franceicon
 		x = 29
 		y = 16
 		cost = 10
@@ -2595,9 +2612,7 @@ focus = {
 			factor = 1
 		}
 
-		prerequisite = { focus = KOR_japanadvisors }
-		prerequisite = { focus = KOR_russianadvisors }
-		prerequisite = { focus = KOR_franceadvisors }
+		prerequisite = { focus = KOR_japanadvisors focus = KOR_franceadvisors focus = KOR_russianadvisors}
 
 		completion_reward = {
 		add_political_power = 200

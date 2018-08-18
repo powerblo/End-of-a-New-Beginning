@@ -10,6 +10,7 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
+			TAG = KOR
 			has_completed_focus = KOR_sedoregime
 		}
 		
@@ -45,3 +46,78 @@ country_event = {
     	}
 		}
 }
+
+country_event = {
+		id = korea.3
+		title = korea.3.t
+		desc = korea.3.d
+		#picture = GFX_event_prussia_wedding
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = KOR
+			date > 1864.04.01
+			has_completed_focus = KOR_installdaewongun
+			has_completed_focus = KOR_denouncedong
+		}
+		
+		option = {
+			name = korea.3.a
+			ai_chance = { factor = 50 }
+			add_political_power = 35
+			add_stability = -0.05
+
+    	}
+    	option = {
+			name = korea.3.1.a
+			ai_chance = { factor = 50 }
+			add_political_power = -35
+			add_stability = -0.02
+
+    	}
+}	
+
+country_event = {
+		id = korea.4 
+		title = korea.4.t
+		desc = korea.4.d
+		#picture = GFX_event_prussia_wedding
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = KOR
+			has_completed_focus = KOR_rallyhan
+		}
+		
+		option = {
+			name = korea.4.a
+			ai_chance = { factor = 100 }
+		}
+}
+
+country_event = {
+		id = korea.5 
+		title = korea.5.t
+		desc = korea.5.d
+		#picture = GFX_event_prussia_wedding
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = KOR
+			date > 1866.06.24
+		}
+		
+		option = {
+			name = korea.5.a
+			ai_chance = { factor = 100 }
+			add_opinion_modifier = {
+    		target = USA
+    		modifier = shipwreck
+		}
+		}
+}
+
+
