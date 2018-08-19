@@ -1,0 +1,942 @@
+﻿add_namespace = boer_states
+#######################################################################
+
+####   ###  ##### ####      #### #####  ###  ##### #####  ####
+#   # #   # #     #   #    #       #   #   #   #   #     #
+####  #   # ####  ####      ###    #   #####   #   ####   ###
+#   # #   # #     #   #        #   #   #   #   #   #         #
+####   ###  ##### #   #    ####    #   #   #   #   ##### ####
+
+#######################################################################
+
+country_event = { #Truce with South African Republic
+	id = boer_states.1
+	title = boer_states.1.t
+	desc = boer_states.1.d
+		
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = OFS
+		OFS = { has_war_with = TRV }
+		date > 1858.1.1
+	}
+		
+	option = {
+		name = boer_states.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = OFS_TRV_Truce
+		hidden_effect = { white_peace = TRV }
+	}
+		
+	option = {
+		name = boer_states.1.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #War on SAF
+	id = boer_states.2
+	title = boer_states.2.t
+	desc = boer_states.2.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1857.6.26
+	}
+		
+	option = {
+		name = boer_states.2.a
+		declare_war_on = { target = OFS type = annex_everything }
+	}
+}
+
+country_event = { # OFS - Boshoff Resigns !
+	id = boer_states.3
+	title = boer_states.3.t
+	desc = boer_states.3.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1859.9.6
+	}
+		
+	option = { # The Chairman of the Volksraad, Esaias Reynier Snijman, will serve as acting president for now
+		name = boer_states.3.a
+		create_country_leader = {
+			name = "Esaias Reynier Snijman"
+			picture = "Portrait_OFS_Esaias_Reynier_Snijman.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - The Presidency of Pretorius
+	id = boer_states.4
+	title = boer_states.4.t
+	desc = boer_states.4.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1860.2.8
+	}
+		
+	option = { # Isn't he the president of the South African Republic already ?
+		name = boer_states.4.a
+		create_country_leader = {
+			name = "Marthinus Wessel Pretorius"
+			picture = "Portrait_OFS_Marthinus_Wessel_Pretorius.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - Pretorius left the Orange Free State !
+	id = boer_states.5
+	title = boer_states.5.t
+	desc = boer_states.5.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1863.3.18
+	}
+		
+	option = { # The Government Secretary of the Volksraad, Joseph Allison, will serve as acting president for now
+		name = boer_states.5.a
+		create_country_leader = {
+			name = "Joseph Allison"
+			picture = "Portrait_OFS_Joseph_Allison.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - The Resignation of Pretorius was accepted by the Volksraad
+	id = boer_states.6
+	title = boer_states.6.t
+	desc = boer_states.6.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1863.6.17
+	}
+		
+	option = { # The Volksraad will take charge until a new acting president is chosen
+		name = boer_states.6.a
+		create_country_leader = {
+			name = "Volksraad"
+			picture = "Portrait_OFS_Volksraad.dds"
+			ideology = conserv
+		}
+		hidden_effect = {
+			country_event = {
+				id = boer_states.7
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # OFS - The Volksraad decides to give the seat to Jacobus Johannes Venter
+	id = boer_states.7
+	title = boer_states.7.t
+	desc = boer_states.7.d
+		
+	is_triggered_only = yes
+
+	fire_only_once = yes
+		
+	option = { # He becomes the acting president
+		name = boer_states.7.a
+		create_country_leader = {
+			name = "Jacobus Johannes Venter"
+			picture = "Portrait_OFS_Jacobus_Johannes_Venter.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # OFS - Johannes Henricus Brand is elected president
+	id = boer_states.8
+	title = boer_states.8.t
+	desc = boer_states.8.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = OFS
+		date > 1864.2.2
+	}
+		
+	option = { # Alright
+		name = boer_states.8.a
+		create_country_leader = {
+			name = "Johannes Henricus Brand"
+			picture = "Portrait_OFS_Johannes_Henricus_Brand.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Resignation of Pretorius
+	id = boer_states.9
+	title = boer_states.9.t
+	desc = boer_states.9.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1860.9.15
+	}
+		
+	option = { # Johannes Hermanus Grobler becomes the acting president
+		name = boer_states.9.a
+		create_country_leader = {
+			name = "Johannes Hermanus Grobler"
+			picture = "Portrait_TRV_Johannes_Hermanus_Grobler.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Stephanus Schoeman takes power !
+	id = boer_states.10
+	title = boer_states.10.t
+	desc = boer_states.10.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1860.12.6
+	}
+		
+	option = { # What a twist ?
+		name = boer_states.10.a
+		set_politics = {
+			ruling_party = radical_democracy
+		}
+		create_country_leader = {
+			name = "Stephanus Schoeman"
+			picture = "Portrait_TRV_Stephanus_Schoeman.dds"
+			ideology = reactionary
+		}
+	}
+}
+
+country_event = { # TRV - The Volksraad takes down Schoeman
+	id = boer_states.11
+	title = boer_states.11.t
+	desc = boer_states.11.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1862.4.17
+	}
+		
+	option = { # What a twist ?
+		name = boer_states.11.a
+		set_politics = {
+			ruling_party = traditional_conservatism
+		}
+		create_country_leader = {
+			name = "Willem Cornelis Janse van Rensburg"
+			picture = "Portrait_TRV_Willem_Cornelis_Janse_van_Rensburg.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - The Transvaal Civil War
+	id = boer_states.12
+	title = boer_states.12.t
+	desc = boer_states.12.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1862.10.9
+	}
+		
+	option = { # Schoeman, stahp !
+		name = boer_states.12.a
+		hidden_effect = {
+			start_civil_war = { ideology = radical_democracy size = 0.3 }
+			news_event = british_colonies_news.4
+		}
+	}
+}
+
+country_event = { # TRV - The Return of Pretorius
+	id = boer_states.13
+	title = boer_states.13.t
+	desc = boer_states.13.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1864.5.10
+	}
+		
+	option = { # Pretorius manages to be important in every Boer state at the same time
+		name = boer_states.13.a
+		create_country_leader = {
+			name = "Marthinus Wessel Pretorius"
+			picture = "Portrait_TRV_Marthinus_Wessel_Pretorius.dds"
+			ideology = conserv
+		}
+	}
+}
+
+country_event = { # TRV - Creation of the State President seat
+	id = boer_states.14
+	title = boer_states.14.t
+	desc = boer_states.14.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = TRV
+		date > 1864.5.10
+	}
+		
+	option = { # A stronger leader for a stronger state
+		name = boer_states.14.a
+		add_political_power = 50
+		add_stability = 0.2
+	}
+}
+
+country_event = { # ZUL - The boer men arrive asking for their payment
+	id = boer_states.15
+	title = boer_states.15.t
+	desc = boer_states.15.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = ZUL
+		date > 1882.2.18
+		801 = {
+			is_controlled_by = ROOT
+			is_capital = no
+		}
+	}
+	immediate = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				state = 801 #uMfolozi
+			}
+			remove_claim_by = NIR
+			add_core_of = NIR
+			NIR = { 
+				transfer_state = PREV 
+			}
+			set_state_name = "Vryheid"
+		}
+	}	
+	option = { # a deal was a deal
+		name = boer_states.15.a
+		801={
+			remove_core_of = ZUL
+			add_claim_by = ZUL
+		}
+		give_guarantee = NIR
+		TRV = {
+			give_guarantee = NIR
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { # No
+		name = boer_states.15.b
+		declare_war_on = {
+			target = NIR
+			type = annex_everything
+		}
+		add_stability = -0.15
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { # NIR - Zululand just got annexed, should NIR ask TRV for safety?
+	id = boer_states.16
+	title = boer_states.16.t
+	desc = boer_states.16.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = NIR
+		date > 1888.1.1
+		ZUL = {
+			exists = no
+		}
+	}
+	option = { # yes
+		name = boer_states.16.a
+		TRV = {
+			country_event = {id = boer_states.17 days = 2}
+		}
+		ai_chance = {
+			factor = 80
+		}
+		
+	}
+	option = { # No
+		name = boer_states.16.b
+		hidden_effect = {
+			NAT = {
+				country_event = {id = boer_states.18 days = 720 random = 100}
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = { # TRV - NIR asks for annexation, should we agree
+	id = boer_states.17
+	title = boer_states.17.t
+	desc = boer_states.17.d
+		
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.17.a
+		FROM = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = THIS
+				}
+				remove_claim_by = THIS
+				remove_core_of = THIS
+				add_core_of = TRV
+				TRV = { 
+					transfer_state = PREV 
+				}
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+		
+	}
+	option = { # No
+		name = boer_states.17.b
+		add_political_power = 25
+		ai_chance = {
+			factor = 20
+		}
+		hidden_effect = {
+			NAT = {
+				country_event = {id = boer_states.18 days = 720 random = 100}
+			}
+		}
+	}
+}
+
+country_event = { # NAT - annex NIR?
+	id = boer_states.18
+	title = boer_states.18.t
+	desc = boer_states.18.d
+		
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.18.a
+		NIR = {
+			country_event = {id = boer_states.19 days = 2}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		801={
+			add_core_of = NAT
+		}
+	}
+	option = { # No
+		name = boer_states.18.b
+		add_political_power = 25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { # NIR - NAT demands annexation
+	id = boer_states.19
+	title = boer_states.19.t
+	desc = boer_states.19.d
+		
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.19.a
+		ai_chance = {
+			factor = 95
+		}
+		801 = {
+			NAT = { 
+				transfer_state = 801
+			}
+		}
+	}
+	option = { # No
+		name = boer_states.19.b
+		add_political_power = -50
+		ai_chance = {
+			factor = 5
+		}
+		FROM = {
+			country_event = {id = boer_states.20 days = 2}
+		}
+	}
+}
+country_event = { # NAT - Force annexation on NIR?
+	id = boer_states.20
+	title = boer_states.20.t
+	desc = boer_states.20.d
+		
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.19.a
+		ai_chance = {
+			factor = 95
+		}
+		declare_war_on = {
+			target = NIR
+			type = annex_everything
+		}
+	}
+	option = { # No
+		name = boer_states.19.b
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = -0.05
+	}
+}
+
+country_event = { # ENG - STL declares themselves as an independant state
+	id = boer_states.21
+	title = boer_states.21.t
+	desc = boer_states.21.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = ENG
+		date > 1882.6.26
+		1148 = {
+			is_controlled_by = ROOT
+			is_capital = no
+		}
+	}
+	immediate = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				state = 1148 #Stellaland
+			}
+			remove_claim_by = STL
+			add_core_of = STL
+			STL = { 
+				transfer_state = PREV 
+			}
+			add_manpower = 4000
+		}
+		hidden_effect = {
+			country_event = {id = boer_states.22 days = 67 random = 25}
+		}
+	}	
+	option = { # another boer state?
+		name = boer_states.21.a
+	}
+	option = { # for Stellaland
+		name = boer_states.21.b
+		trigger = {
+			is_ai = no
+		}
+		STL = {
+			change_tag_from = ENG
+		}
+	}
+}
+
+country_event = { # ENG - GOS declares themselves as an independant state
+	id = boer_states.22
+	title = boer_states.22.t
+	desc = boer_states.22.d
+		
+	is_triggered_only = yes
+		
+	immediate = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				state = 1067 #Goshen
+			}
+			remove_claim_by = GOS
+			add_core_of = GOS
+			GOS = { 
+				transfer_state = PREV 
+			}
+			add_manpower = 1000
+		}
+		hidden_effect = {
+			GOS = {country_event = {id = boer_states.23 days = 365 random = 100}}
+		}
+	}	
+	option = { # another boer state?
+		name = boer_states.22.a
+	}
+}
+country_event = { # GOS - ask STL for unifaction
+	id = boer_states.23
+	title = boer_states.23.t
+	desc = boer_states.23.d
+		
+	is_triggered_only = yes
+			
+	option = { # go ahead
+		name = boer_states.23.a
+		STL = {country_event = {id = boer_states.24 days = 2}}
+	}
+	option = { # no
+		name = boer_states.23.b
+	}
+}
+country_event = { # STL - GOS asks for unifaction
+	id = boer_states.24
+	title = boer_states.24.t
+	desc = boer_states.24.d
+		
+	is_triggered_only = yes
+			
+	option = { # yes
+		name = boer_states.24.a
+		annex_country = {
+			target = GOS
+			transfer_troops = yes
+		}
+		set_cosmetic_tag = STL_USS
+	}
+	option = { # how about a confederation
+		name = boer_states.24.b
+		create_faction = STL_GOS_confed
+	}
+	option = { # no
+		name = boer_states.24.c
+	}
+}
+
+country_event = { # ENG - STL is in a stragetically avanatious position, shall we annex them
+	id = boer_states.25
+	title = boer_states.25.t
+	desc = boer_states.25.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = ENG
+		date > 1884.2.1
+		STL = {
+			exists = yes
+		}
+	}	
+	option = { # declare them a protectorate
+		name = boer_states.25.a
+		ai_chance = {
+			factor = 100
+		}
+		give_guarantee = STL
+		if = {
+			limit = {
+				GOS = {
+					exists = yes
+				}
+			}
+			give_guarantee = GOS
+		}
+		1067 = {
+			add_core_of = ENG
+		}
+		1148 = {
+			add_core_of = ENG
+		}
+	}
+	option = { # repect their soverenty
+		name = boer_states.25.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { # STL - ENG has declared us to be part of it's realm, shall we ask to join TRV instead?
+	id = boer_states.26
+	title = boer_states.26.t
+	desc = boer_states.26.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = STL
+		date > 1884.9.1
+		is_guaranteed_by = ENG
+	}	
+	option = { # go to TRV
+		name = boer_states.26.a
+		TRV = {country_event = {id = boer_states.28 days = 6}}
+	}
+	option = { # submit now
+		name = boer_states.26.b
+		ENG = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		if = {
+			limit = {
+				GOS = {
+					exists = yes
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = GOS
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { # STL - ENG moves in
+	id = boer_states.27
+	title = boer_states.27.t
+	desc = boer_states.27.d
+		
+	fire_only_once = yes
+		
+	trigger = {
+		TAG = STL
+		date > 1884.12.1
+		exists = yes
+		is_guaranteed_by = ENG
+	}	
+	option = { # fight
+		name = boer_states.27.a
+		ENG = {
+			declare_war_on = {
+				target = STL
+				type = annex_everything
+			}
+		}
+	}
+	option = { # submit now
+		name = boer_states.27.b
+		ENG = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		if = {
+			limit = {
+				GOS = {
+					exists = yes
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = GOS
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+country_event = { # TRV - STL has asked to join our nation
+	id = boer_states.28
+	title = boer_states.28.t
+	desc = boer_states.28.d
+		
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.28.a
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			ENG = {country_event = {id = boer_states.29 days = 30}}
+		}
+	}
+	option = { # no
+		name = boer_states.28.b
+	}
+}
+country_event = { # ENG - TRV has annexed STL
+	id = boer_states.29
+	title = boer_states.29.t
+	desc = boer_states.29.d
+		
+	is_triggered_only = yes
+	option = { # take the land anyway
+		name = boer_states.29.a
+		TRV = {country_event = {id = boer_states.30 days = 30}}
+	}
+	option = { # back down
+		name = boer_states.29.b
+		add_political_power = -20
+	}
+}
+country_event = { # TRV - ENG has moved troops into STL
+	id = boer_states.30
+	title = boer_states.30.t
+	desc = boer_states.30.d
+		
+	is_triggered_only = yes
+	option = { # back down
+		name = boer_states.30.a
+		ENG = {
+			set_state_owner = 1148
+			set_state_owner = 1067
+		}
+	}
+	option = { # no, we shall fight for boer freedom
+		name = boer_states.30.b
+		ENG = {
+			declare_war_on = {
+				target = ROOT
+				type = take_state_focus
+				generator = { 1148 1067 }
+			}
+		}
+	}
+}
+country_event = { # TRV - ENG has won
+	id = boer_states.31
+	title = boer_states.31.t
+	desc = boer_states.31.d
+		
+	trigger = {
+		tag = TRV
+		has_war_with = ENG
+		ENG = {
+			controls_state = 1148
+			controls_state = 1067
+		}
+	}
+	option = { # give in
+		name = boer_states.31.a
+		ENG = {
+			set_state_owner = 1148
+			set_state_owner = 1067
+		}
+		white_peace = ENG
+		ai_chance = {
+			factor = 100
+		}
+		ENG = {
+			set_truce = {
+				target = TRV
+				days = 365
+			}
+		}
+	}
+	option = { # no, we shall fight on
+		name = boer_states.31.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { # ENG - TRV has won
+	id = boer_states.32
+	title = boer_states.32.t
+	desc = boer_states.32.d
+		
+	trigger = {
+		has_war_with = TRV
+		OR = {
+			TRV = {
+				controls_state = 1148
+			}
+			OFS = {
+				controls_state = 1148
+			}
+			STL = {
+				controls_state = 1148
+			}
+		}
+		OR = {
+			TRV = {
+				controls_state = 1067
+			}
+			OFS = {
+				controls_state = 1067
+			}
+			STL = {
+				controls_state = 1067
+			}
+			GOS = {
+				controls_state = 1067
+			}
+		}
+		tag = ENG
+	}
+	option = { # give in
+		name = boer_states.32.a
+		1148 = {
+			remove_core_of = ENG
+		}
+		1067={
+			remove_core_of = ENG
+		}
+		white_peace = TRV
+		set_truce = {
+			target = TRV
+			days = 365
+		}
+		if = {
+			limit = {
+				has_war_with = OFS
+				OFS = {
+					has_country_flag = joined_TRV_in_war
+				}
+			}
+			white_peace = OFS
+			OFS = {
+				clr_country_flag = joined_TRV_in_war
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { # no, we shall fight on
+		name = boer_states.32.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

@@ -453,6 +453,32 @@ ideas = {
 				political_power_cost = -0.15
 			}
 		}
+		boer_standing_army = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_generic_war_preparation
+
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		boer_large_standing_army = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_generic_war_preparation
+
+			modifier = {
+				conscription = 0.075
+			}
+		}
 	}
 	country = {
 		afr_generic_voices_of_the_people = {

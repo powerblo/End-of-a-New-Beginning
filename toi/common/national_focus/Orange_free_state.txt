@@ -186,6 +186,11 @@ focus_tree = {
 		available = {
 			has_war=yes
 		}
+		bypass = {
+			TRV = {
+				exists = no
+			}
+		}
 		completion_reward = {
 			add_war_support = 0.25
 			add_stability = 0.05
@@ -419,6 +424,29 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_economic_focus
 		}
+		completion_reward = {
+			781={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			780={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			776={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 		x = 16
 		y = 1
 
@@ -432,6 +460,29 @@ focus_tree = {
 		}
 		x = 16
 		y = 3
+		completion_reward = {
+			777={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			778={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			775={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -443,6 +494,34 @@ focus_tree = {
 		}
 		x = 15
 		y = 4
+		completion_reward = {
+			777={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			776={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 1147
+				}
+				1147={
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -454,6 +533,91 @@ focus_tree = {
 		}
 		x = 17
 		y = 4
+		completion_reward = {
+			781={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			780={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			775={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			778={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 779
+				}
+				779={
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = ofs_vic_bring_setsoto_into_our_road_network
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_roads_in_the_west
+			focus = ofs_vic_roads_in_the_east
+		}
+		x = 16
+		y = 5
+		available ={
+			owns_state = 779
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					779={
+						free_building_slots = {
+							building = infrastructure
+							size > 8
+						}
+					}
+				}
+				779={
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				779={
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -601,6 +765,26 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_external_focus
 		}
+		available ={
+			TRV = {
+				exists = yes
+				NOT = {
+					any_owned_state = {
+						is_core_of = OFS
+					}
+				}
+			}
+			NOT = {
+				any_owned_state = {
+					is_core_of = TRV
+				}
+			}
+		}
+		allow_branch = {
+			TRV = {
+				exists = yes
+			}
+		}
 		x = 24
 		y = 1
 
@@ -672,7 +856,7 @@ focus_tree = {
 	focus = {
 		id = ofs_vic_prepare_for_re-annexation
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 15.00
 		prerequisite = {
 			focus = ofs_vic_attempt_to_submit_to_ENG
 		}
@@ -807,6 +991,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_army_focus
 		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_tech }
+		}
 		x = 41
 		y = 1
 
@@ -817,6 +1004,9 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_inovate_our_guns
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_tech }
 		}
 		x = 41
 		y = 2
@@ -864,6 +1054,9 @@ focus_tree = {
 		}
 		x = 43
 		y = 1
+		completion_reward = {
+			add_ideas = {boer_standing_army}
+		}
 
 	}
 	focus = {
@@ -875,6 +1068,9 @@ focus_tree = {
 		}
 		x = 43
 		y = 2
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
 
 	}
 	focus = {
@@ -886,6 +1082,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ofs_vic_continue_innovation
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = law_victorian_army
+				remove_idea = law_pre_industrial_army
+			}
 		}
 		x = 41
 		y = 3
@@ -900,6 +1102,10 @@ focus_tree = {
 		}
 		x = 41
 		y = 4
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 150
+		}
 
 	}
 	focus = {
@@ -911,7 +1117,12 @@ focus_tree = {
 		}
 		x = 41
 		y = 5
-
+		completion_reward = {
+			swap_ideas ={
+				add_idea = boer_large_standing_army
+				remove_idea = boer_standing_army
+			}
+		}
 	}
 	focus = {
 		id = ofs_vic_update_supply_methods
@@ -936,6 +1147,35 @@ focus_tree = {
 		}
 		x = 3
 		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = oral_tradition
+				}
+				swap_ideas = {
+					add_idea = privileged_education
+					remove_idea = oral_tradition
+				}
+			}
+			if = {
+				limit = {
+					has_idea = open_schools
+				}
+				swap_ideas = {
+					add_idea = compulsory_education
+					remove_idea = open_schools
+				}
+			}
+			if = {
+				limit = {
+					has_idea = privileged_education
+				}
+				swap_ideas = {
+					add_idea = open_schools
+					remove_idea = privileged_education
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -947,7 +1187,9 @@ focus_tree = {
 		}
 		x = 3
 		y = 8
-
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = ofs_vic_cement_constatution
@@ -959,5 +1201,126 @@ focus_tree = {
 		x = 1
 		y = 6
 
+	}
+	focus = {
+		id = ofs_vic_begin_intergration_of_the_TRV
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_economic_focus
+		}
+		available ={
+			TRV = {
+				exists = no
+			}
+			any_owned_state = {
+				is_core_of = TRV
+			}
+		}
+		allow_branch = {
+			TRV = {
+				exists = no
+			}
+		}
+		x = 24
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					1140 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 1140
+				TRV = {
+					remove_state_core = 1140
+				}
+			}
+			if = {
+				limit = {
+					1141 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 1141
+				TRV = {
+					remove_state_core = 1141
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_allow_TRV_citizens_to_vote
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_intergration_of_the_TRV
+		}
+		x = 24
+		y = 2
+		completion_reward = {
+			add_stability = 0.025
+		}
+	}
+	focus = {
+		id = ofs_vic_continue_intergration_of_TRV
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_allow_TRV_citizens_to_vote
+		}
+		available ={
+			any_owned_state = {
+				is_core_of = TRV
+			}
+		}
+		x = 24
+		y = 3
+		completion_reward = {
+			if = {
+				limit = {
+					1142 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 1142
+				TRV = {
+					remove_state_core = 1142
+				}
+			}
+			if = {
+				limit = {
+					1143 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 1143
+				TRV = {
+					remove_state_core = 1143
+				}
+			}
+			if = {
+				limit = {
+					1144 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 1144
+				TRV = {
+					remove_state_core = 1144
+				}
+			}
+			if = {
+				limit = {
+					275 = {
+						is_fully_controlled_by = OFS
+					}
+				}
+				add_state_core = 275
+				TRV = {
+					remove_state_core = 275
+				}
+			}
+		}
 	}
 }
