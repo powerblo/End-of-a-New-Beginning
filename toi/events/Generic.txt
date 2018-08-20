@@ -271,3 +271,32 @@ country_event = {
 	}
 	
 }
+
+#Picking future of current administration
+country_event = {
+	id = generic.12
+	title = generic.12.t
+	desc = generic.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.12.a
+		ai_chance = { factor = 70 }
+		custom_effect_tooltip = eoanb_tt_generic_12_a
+		hidden_effect = {
+			complete_national_focus = generic_focus_gov_centralized
+		}
+	}
+	
+	option = {
+		name = generic.12.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = eoanb_tt_generic_12_b
+		hidden_effect = {
+			complete_national_focus = generic_focus_gov_decentralized
+		}
+	}
+	
+}
