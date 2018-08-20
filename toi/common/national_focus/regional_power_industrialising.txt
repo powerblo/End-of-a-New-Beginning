@@ -266,9 +266,10 @@ focus_tree = {
 		prerequisite = {
 			focus = afr_expand_research_facilities
 		}
-		available = {
-			var.industrisation_progress > 49.9
-		}
+		#NEEDS FIXING
+		#available = {
+		#	var.industrisation_progress > 49.9
+		#}
 		x = 2
 		y = 5
 		completion_reward = {

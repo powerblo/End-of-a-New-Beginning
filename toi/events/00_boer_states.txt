@@ -838,6 +838,8 @@ country_event = { # TRV - ENG has won
 	title = boer_states.31.t
 	desc = boer_states.31.d
 		
+	fire_only_once = yes
+		
 	trigger = {
 		tag = TRV
 		has_war_with = ENG
@@ -874,6 +876,8 @@ country_event = { # ENG - TRV has won
 	id = boer_states.32
 	title = boer_states.32.t
 	desc = boer_states.32.d
+		
+	fire_only_once = yes
 		
 	trigger = {
 		has_war_with = TRV
