@@ -322,6 +322,7 @@ country_event = { # TRV - Creation of the State President seat
 	}
 }
 
+
 country_event = { # ZUL - The boer men arrive asking for their payment
 	id = boer_states.15
 	title = boer_states.15.t
@@ -636,7 +637,7 @@ country_event = { # STL - GOS asks for unifaction
 			target = GOS
 			transfer_troops = yes
 		}
-		set_cosmetic_tag = STL_USS
+		set_cosmetic_tag = USS
 	}
 	option = { # how about a confederation
 		name = boer_states.24.b
@@ -790,8 +791,15 @@ country_event = { # TRV - STL has asked to join our nation
 			ENG = {country_event = {id = boer_states.29 days = 30}}
 		}
 	}
-	option = { # no
+	option = { # puppet them only
 		name = boer_states.28.b
+		puppet = FROM
+		hidden_effect = {
+			ENG = {country_event = {id = boer_states.29 days = 30}}
+		}
+	}
+	option = { # no
+		name = boer_states.28.c
 	}
 }
 country_event = { # ENG - TRV has annexed STL
@@ -833,12 +841,10 @@ country_event = { # TRV - ENG has moved troops into STL
 		}
 	}
 }
-country_event = { # TRV - ENG has won
+country_event = { # TRV - ENG has won STL war
 	id = boer_states.31
 	title = boer_states.31.t
 	desc = boer_states.31.d
-		
-	fire_only_once = yes
 		
 	trigger = {
 		tag = TRV
@@ -872,12 +878,10 @@ country_event = { # TRV - ENG has won
 		}
 	}
 }
-country_event = { # ENG - TRV has won
+country_event = { # ENG - TRV has won STL war
 	id = boer_states.32
 	title = boer_states.32.t
 	desc = boer_states.32.d
-		
-	fire_only_once = yes
 		
 	trigger = {
 		has_war_with = TRV
@@ -944,3 +948,929 @@ country_event = { # ENG - TRV has won
 		}
 	}
 }
+
+country_event = { # OFS - Cattle raids intestify
+	id = boer_states.33
+	title = boer_states.33.t
+	desc = boer_states.33.d
+		
+	trigger = {
+		TAG = OFS
+		date > 1858.10.12
+		has_idea = ofs_basutoland_raids
+	}
+	fire_only_once = yes
+			
+	option = { # we must fight this
+		name = boer_states.33.a
+		remove_ideas = {
+			ofs_basutoland_raids
+		}
+		declare_war_on = {
+			target = SOT
+			type = take_claimed_state
+		}
+		hidden_effect = {
+			OFS = {country_event = {id = boer_states.40 days = 2}}
+			ENG = {country_event = {id = boer_states.40 days = 2}}
+			SOT = {country_event = {id = boer_states.40 days = 2}}
+		}
+		set_country_flag = STO_OFS_war
+	}
+	option = { # ask the cape colony to arbratrate
+		name = boer_states.33.b
+		ENG = {country_event = {id = boer_states.34 days = 15}}#change target is cape colony is made
+	}
+	option = { # we must weather this
+		name = boer_states.33.c
+	}
+}
+
+country_event = { # ENG - OFS asks for abratration
+	id = boer_states.34
+	title = boer_states.34.t
+	desc = boer_states.34.d
+		
+	is_triggered_only = yes
+	
+	option = { # side with OFS
+		name = boer_states.34.a
+		set_country_flag = ENG_sided_with_OFS
+		OFS = {country_event = {id = boer_states.35 days = 2}}
+		SOT = {country_event = {id = boer_states.35 days = 2}}
+	}
+	option = { # side with SOT
+		name = boer_states.34.b
+		set_country_flag = ENG_sided_with_SOT
+		OFS = {country_event = {id = boer_states.35 days = 2}}
+		SOT = {country_event = {id = boer_states.35 days = 2}}
+	}
+}
+country_event = { # Sign the treaty?
+	id = boer_states.35
+	title = boer_states.35.t
+	desc = boer_states.35.d
+		
+	is_triggered_only = yes
+			
+	option = { # agree
+		name = boer_states.35.a
+		set_country_flag = OFS_voted_yes
+		
+	}
+	option = { # disagree
+		name = boer_states.35.b
+	}
+}
+country_event = { # treaty results agree
+	id = boer_states.36
+	title = boer_states.36.t
+	desc = boer_states.36.d
+		
+	trigger = {
+		tag = OFS
+		has_country_flag = OFS_voted_yes
+		SOT = {
+			has_country_flag = OFS_voted_yes
+		}
+	}
+	fire_only_once = yes
+	immediate = {
+		remove_ideas = {
+			ofs_basutoland_raids
+		}
+	}
+			
+	option = { # ENG sided with us
+		name = boer_states.36.a
+		trigger = {
+			has_country_flag = ENG_sided_with_SOT
+		}
+		779={
+			add_core_of = OFS
+			remove_claim_by = OFS
+			ROOT ={
+				transfer_state = PREV 
+			}
+		}779={
+			add_core_of = OFS
+			remove_claim_by = OFS
+			ROOT ={
+				transfer_state = PREV 
+			}
+		}
+	}
+	option = { # ENG sided against us
+		name = boer_states.36.b
+		trigger = {
+			has_country_flag = ENG_sided_with_OFS
+		}
+		779={
+			remove_claim_by = OFS
+		}
+		add_political_power = -100
+	}
+}
+
+country_event = { # OFS - status Quo
+	id = boer_states.37
+	title = boer_states.37.t
+	desc = boer_states.37.d
+		
+	trigger = {
+		tag = OFS
+		OR = {
+			NOT = {has_country_flag = OFS_voted_yes}
+			SOT = {
+				NOT = {has_country_flag = OFS_voted_yes}
+			}
+		}
+		ENG = {
+			OR = {
+				has_country_flag = ENG_sided_with_OFS
+				has_country_flag = ENG_sided_with_SOT
+			}
+		}
+	}
+	fire_only_once = yes
+			
+	option = { # damn
+		name = boer_states.37.a
+		hidden_effect = {
+			country_event = {id = boer_states.38 days = 90 random = 30}
+		}
+		white_peace = SOT
+	}
+}
+
+country_event = { # OFS - Breaking point
+	id = boer_states.38
+	title = boer_states.38.t
+	desc = boer_states.38.d
+	
+	is_triggered_only = yes
+				
+	option = { # deal with them once and for all
+		name = boer_states.38.a
+		remove_ideas = {
+			ofs_basutoland_raids
+		}
+		declare_war_on = {
+			target = SOT
+			type = take_claimed_state
+		}
+		hidden_effect = {
+			OFS = {country_event = {id = boer_states.40 days = 2}}
+			ENG = {country_event = {id = boer_states.40 days = 2}}
+			SOT = {country_event = {id = boer_states.40 days = 2}}
+			set_country_flag = STO_OFS_war
+		}
+		
+	}
+	option = { # we shall just have to deal with these
+		name = boer_states.38.b
+		
+	}
+}
+country_event = { # OFS - SOT raids end under british dominion
+	id = boer_states.39
+	title = boer_states.39.t
+	desc = boer_states.39.d
+	trigger = {
+		SOT = {
+			OR = {
+				exists = no
+				is_puppet_of = ENG
+			}
+		}
+		tag = OFS
+		has_idea = ofs_basutoland_raids
+	}
+				
+	option = { # deal with them once and for all
+		name = boer_states.39.a
+		remove_ideas = {
+			ofs_basutoland_raids
+		}
+	}
+}
+country_event = { # ENG - Sotho-free state war
+	id = boer_states.40
+	title = boer_states.40.t
+	desc = boer_states.40.d
+	
+	is_triggered_only = yes
+				
+	option = { # ok
+		name = boer_states.40.a
+	}
+}
+country_event = { # ENG - SOT dominate
+	id = boer_states.41
+	title = boer_states.41.t
+	desc = boer_states.41.d
+	trigger = {
+		tag = ENG
+		OFS = {
+			surrender_progress > 0.15
+			has_country_flag = STO_OFS_war
+		}
+		SOT = {
+			surrender_progress < 0.15
+		}
+	}
+	fire_only_once = yes			
+	option = { # ignore the war
+		name = boer_states.41.a
+	}
+	option = { # offer to abratrate a treaty
+		name = boer_states.41.b
+		country_event = {id = boer_states.43 days = 20}
+		set_country_flag = OFS_winning
+	}
+}
+country_event = { # ENG - OFS dominate
+	id = boer_states.42
+	title = boer_states.42.t
+	desc = boer_states.42.d
+	trigger = {
+		tag = ENG
+		OFS = {
+			surrender_progress < 0.15
+			has_country_flag = STO_OFS_war
+		}
+		SOT = {
+			surrender_progress > 0.15
+		}
+	}
+	fire_only_once = yes			
+	option = { # ignore the war
+		name = boer_states.42.a
+	}
+	option = { # offer to abratrate a treaty
+		name = boer_states.42.b
+		OFS = {country_event = {id = boer_states.43 days = 5}}
+		set_country_flag = OFS_winning
+	}
+}
+country_event = { # ENG - Sotho-free state abratration
+	id = boer_states.43
+	title = boer_states.43.t
+	desc = boer_states.43.d
+	
+	is_triggered_only = yes
+				
+	option = { # yes
+		name = boer_states.43.a
+		SOT = {country_event = {id = boer_states.44 days = 2}}
+	}
+	option = { # no
+		name = boer_states.43.b
+		ENG = {country_event = {id = boer_states.45 days = 2}}
+	}
+}
+country_event = { # ENG - Sotho-free state abratration
+	id = boer_states.44
+	title = boer_states.44.t
+	desc = boer_states.44.d
+	
+	is_triggered_only = yes
+				
+	option = { # yes
+		name = boer_states.44.a
+		OFS = {country_event = {id = boer_states.46 days = 2}}
+	}
+	option = { # no
+		name = boer_states.44.b
+		ENG = {country_event = {id = boer_states.45 days = 2}}
+	}
+}
+country_event = { # ENG - our abratratration was refused
+	id = boer_states.45
+	title = boer_states.45.t
+	desc = boer_states.45.d
+	
+	is_triggered_only = yes
+				
+	option = { # ok
+		name = boer_states.45.a
+	}
+}
+country_event = { # OFS - our abratratration was accepted
+	id = boer_states.46
+	title = boer_states.46.t
+	desc = boer_states.46.d
+	
+	is_triggered_only = yes
+				
+	option = { # ok
+		trigger = {
+			ENG = {
+				has_country_flag = OFS_winning
+			}
+		}
+		name = boer_states.4.a
+		779={
+			add_core_of = OFS
+			remove_claim_by = OFS
+			ROOT ={
+				transfer_state = PREV 
+			}
+		}
+		white_peace = SOT
+	}
+	option = { # ok
+		trigger = {
+			ENG = {
+				has_country_flag = SOT_winning
+			}
+		}
+		name = boer_states.4.b
+		SOT ={
+			transfer_state = 776 
+		}
+		white_peace = SOT
+	}
+}
+country_event = { # SOT - OFS dominate
+	id = boer_states.47
+	title = boer_states.47.t
+	desc = boer_states.47.d
+	trigger = {
+		tag = SOT
+		SOT = {
+			surrender_progress > 0.10
+		}
+		has_war_with = OFS
+		NOR = {
+			has_country_flag = SOT_ask_ENG_pup
+			has_country_flag = SOT_going_alone
+		}
+	}
+	fire_only_once = yes	
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = { # continue the war
+		name = boer_states.47.a
+		set_country_flag = SOT_going_alone
+	}
+	option = { # ask eng for protection
+		name = boer_states.47.b
+		ENG = {country_event = {id = boer_states.48 days = 5}}
+		set_country_flag = SOT_ask_ENG_pup
+	}
+}
+
+country_event = { # ENG - SOT asks for protection
+	id = boer_states.48
+	title = boer_states.48.t
+	desc = boer_states.48.d
+	is_triggered_only = yes
+	option = { # agree
+		name = boer_states.48.a
+		OFS = {country_event = {id = boer_states.49 days = 2}}
+		puppet = SOT
+	}
+	option = { # no
+		name = boer_states.48.b
+		SOT = {
+			clr_country_flag = SOT_ask_ENG_pup
+			set_country_flag = SOT_going_alone
+		}
+	}
+}
+country_event = { # OFS - ENG offers peace terms
+	id = boer_states.49
+	title = boer_states.49.t
+	desc = boer_states.49.d
+	is_triggered_only = yes
+	option = { # accept
+		name = boer_states.49.a
+		779={
+			add_core_of = OFS
+			remove_claim_by = OFS
+			remove_core_of = SOT
+			ROOT ={
+				transfer_state = PREV 
+			}
+		}
+		white_peace = SOT
+		if={
+			limit = {
+				ENG = {has_war_with = OFS}
+			}
+			white_peace = ENG
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { # continue the fight (why?)
+		name = boer_states.49.b
+		ENG = {country_event = {id = boer_states.50 days = 2}}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { # ENG - OFS refuses deal
+	id = boer_states.50
+	title = boer_states.50.t
+	desc = boer_states.50.d
+	is_triggered_only = yes
+	option = { # we made a deal
+		name = boer_states.50.a
+		add_to_war = { 
+			targeted_alliance = SOT 
+			enemy = OFS
+			hostility_reason = asked_to_join
+		}
+		###anglo boer war
+	}
+}
+
+country_event = { #diamonds discovered in the campbell state
+	id = boer_states.51
+	title = boer_states.51.t
+	desc = boer_states.51.d
+		
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = OFS
+		OR = {
+			date > 1870.1.1
+			AND = {
+				has_completed_focus = ofs_vic_invest_in_resource_discovery
+				date > 1869.1.1
+			}
+		}
+		owns_state = 1149
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+	option = {
+		name = boer_states.51.a
+		ai_chance = { factor = 100 }
+		add_ideas = {
+			ofs_campbell_diamonds
+		}
+		1149={
+			set_state_flag = campbell_diamonds
+		}
+		set_country_flag = ofs_discovered_diamonds
+		if = {
+			limit = {
+				1149={
+					is_core_of = GQW
+				}
+			}
+			GQW = {country_event = {id = boer_states.52 days = 5}}
+		}
+	}
+}
+country_event = { # GQW - diamonds have been found in the campbell lands
+	id = boer_states.52
+	title = boer_states.52.t
+	desc = boer_states.52.d
+	is_triggered_only = yes
+	option = { # assert our claim
+		name = boer_states.52.a
+		hidden_effect = {
+			GQW = {country_event = {id = boer_states.53 days = 160 random = 40}}
+		}
+	}
+	option = { # the land is rightfully OFS
+		name = boer_states.52.b
+		1149 = {
+			remove_core_of = GQW
+		}
+	}
+}
+country_event = { # GQW - the british have taken interest in the campbell diamond fields
+	id = boer_states.53
+	title = boer_states.53.t
+	desc = boer_states.53.d
+	is_triggered_only = yes
+	option = { # send an envoy to offer british controll over the state
+		name = boer_states.53.a
+		ENG = {country_event = {id = boer_states.54 days = 5}}
+	}
+	option = { # we like our soverenty, give up the claims
+		name = boer_states.53.b
+		1149={
+			remove_core_of = GQW
+		}
+	}
+}
+country_event = { # ENG - GQW offers us the campbell diamond mines
+	id = boer_states.54
+	title = boer_states.54.t
+	desc = boer_states.54.d
+	is_triggered_only = yes
+	option = { # agree
+		name = boer_states.54.a
+		puppet = GQW
+		GQW ={
+			transfer_state = 1149
+			add_core_of = OFS
+		}
+		OFS = {country_event = {id = boer_states.55 days = 5}}
+	}
+	option = { # decline
+		name = boer_states.54.b
+	}
+}
+country_event = { # OFS - Britian annexs west griqualand as well as the diamond mines
+	id = boer_states.55
+	title = boer_states.55.t
+	desc = boer_states.55.d
+	is_triggered_only = yes
+	option = { # we can do nothing
+		name = boer_states.55.a
+		1149={
+			remove_core_of = OFS
+		}
+	}
+	option = { # continue to assert claims
+		name = boer_states.55.b
+		hidden_effect = {
+			ENG = {country_event = {id = boer_states.56 days = 2000 random = 250}}
+		}
+	}
+	option = { # we shall fight this
+		name = boer_states.55.c
+		declare_war_on = {
+			target = GQW
+			type = take_core_state
+		}
+		ENG = {
+			add_to_war = { 
+				targeted_alliance = GQW 
+				enemy = OFS 
+				hostility_reason = asked_to_join
+			}
+		}
+		OFS = {news_event = {id = boer_states.58 days = 2}}
+	}
+}
+country_event = { # ENG - OFS continues to demand campbell returned, 
+	id = boer_states.56
+	title = boer_states.56.t
+	desc = boer_states.56.d
+	is_triggered_only = yes
+	option = { # send monetary recompence
+		name = boer_states.56.a
+		OFS = {
+			country_event = {id = boer_states.57 days = 2}
+		}
+		1149={
+			remove_core_of = OFS
+		}
+	}
+	option = { # cede the land back
+		name = boer_states.56.b
+		OFS = {
+			transfer_state = 1149
+		}
+	}
+}
+country_event = { # OFS - ENG sends monetary recompence for campbell
+	id = boer_states.57
+	title = boer_states.57.t
+	desc = boer_states.57.d
+	is_triggered_only = yes
+	option = { # fine
+		name = boer_states.57.a
+		add_timed_idea = {
+			idea = ofs_campbell_recompence
+			days = 180
+		}
+	}
+}
+
+#start of the Anglo - Freestate War
+
+news_event = { # Anglo - Freestate War
+	id = boer_states.58
+	title = boer_states.58.t
+	desc = boer_states.58.d
+	is_triggered_only = yes
+	major = yes
+	option = { # ok
+		name = boer_states.58.a
+		trigger = {
+			NOT = {
+				tag= ENG
+				tag = OFS
+			}
+		}
+	}
+	option = { # we ,must resist
+		name = boer_states.58.b
+		trigger = {
+			tag = OFS
+		}
+		set_country_flag = OFS_Boer_war
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = ofs_vic_mantain_frendly_independant_relations
+				}
+				country_event = {id = boer_states.59 days = 2}#ask other boer nations for help
+			}
+			if = {
+				limit = {
+					has_completed_focus = ofs_vic_send_emissaries_to_germany
+				}
+				country_event = {id = boer_states.61 days = 5}# request GER abratration
+			}
+		}
+	}
+	option = { # they are no threat
+		name = boer_states.58.c
+		trigger = {
+			tag= ENG
+		}
+	}
+}
+country_event = { # OFS - ask other boer nations to help
+	id = boer_states.59
+	title = boer_states.59.t
+	desc = boer_states.59.d
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.59.a
+		TRV = {country_event = {id = boer_states.60 days = 2}}
+	}
+	option = { # no
+		name = boer_states.59.b
+		
+	}
+}
+country_event = { # TRV - OFS calls for aid
+	id = boer_states.60
+	title = boer_states.60.t
+	desc = boer_states.60.d
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.60.a
+		add_to_war = { 
+			targeted_alliance = OFS
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+	}
+	option = { # no
+		name = boer_states.60.b
+		
+	}
+}
+country_event = { # OFS - send envoys to GER
+	id = boer_states.61
+	title = boer_states.61.t
+	desc = boer_states.61.d
+	is_triggered_only = yes
+	option = { # yes
+		name = boer_states.61.a
+		random_country = {
+			limit = {
+					OR = {
+						has_cosmetic_tag = PRS_GER_liberal
+						has_cosmetic_tag = PRS_GER_bismarck
+						has_cosmetic_tag = PRS_GER_socialist
+						has_cosmetic_tag = GER_alt_form
+					}
+				}
+			country_event = {id = boer_states.62 days = 2}
+		}
+	}
+	option = { # no
+		name = boer_states.61.b
+		
+	}
+}
+country_event = { # PRS/GER - OFS calls for abratration
+	id = boer_states.62
+	title = boer_states.62.t
+	desc = boer_states.62.d
+	is_triggered_only = yes
+	option = { # agree
+		name = boer_states.62.a
+		ENG = {country_event = {id = boer_states.64 days = 2}}
+	}
+	option = { # no
+		name = boer_states.62.b
+		OFS = {country_event = {id = boer_states.63 days = 2}}
+	}
+}
+country_event = { # OFS- GER refuses
+	id = boer_states.63
+	title = boer_states.63.t
+	desc = boer_states.63.d
+	is_triggered_only = yes
+	option = { # damn
+		name = boer_states.63.a
+	}
+}
+country_event = { # ENG - Ger offers abratration
+	id = boer_states.64
+	title = boer_states.64.t
+	desc = boer_states.64.d
+	is_triggered_only = yes
+	option = { # agree
+		name = boer_states.64.a
+		1149={
+			OFS ={
+				transfer_state = PREV 
+			}
+		}
+		white_peace = OFS
+		if={
+			limit = {
+				has_war_with = TRV
+			}
+			white_peace = TRV
+		}
+		GQW = {white_peace = OFS}
+	}
+	option = { # no
+		name = boer_states.64.b
+		FROM = {
+			set_country_flag = OFS_reconises_british_agression
+		}
+	}
+}
+
+country_event = { #OFS occupies south africa
+	id = boer_states.65
+	title = boer_states.65.t
+	desc = boer_states.65.d
+		
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		OFS = {
+			controls_state = 681
+			controls_state = 719
+			controls_state = 1147
+			controls_state = 1146
+			controls_state = 1149
+			has_country_flag = OFS_Boer_war
+		}
+		
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = boer_states.65.a #give the boers what they want
+		ai_chance = { factor = 75 }
+		1149={
+			OFS ={
+				transfer_state = PREV 
+			}
+		}
+		white_peace = OFS
+		if={
+			limit = {
+				has_war_with = TRV
+			}
+			white_peace = TRV
+		}
+		GQW = {white_peace = OFS}
+	}
+	option = {
+		name = boer_states.65.b #bring the might of the empire down on these boers
+		ai_chance = { factor = 25 }
+		if = {
+			limit = {
+				any_country = {has_country_flag = OFS_reconises_british_agression}
+			}
+			random_country = {
+				limit = {
+					has_country_flag = OFS_reconises_british_agression
+				}
+				country_event = {id = boer_states.66 days = 2}
+			}
+		}
+		else = {
+			HOL = {
+				country_event = {id = boer_states.68 days = 2}
+			}
+		}
+	}
+}
+
+country_event = { # GER - ENG declares all out war
+	id = boer_states.66
+	title = boer_states.66.t
+	desc = boer_states.66.d
+	is_triggered_only = yes
+	option = { # we must intervene (sets off WWI 45 years early)
+		name = boer_states.66.a
+		add_to_war = { 
+			targeted_alliance = OFS
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+		HOL = {
+			country_event = {id = boer_states.67 days = 2}
+		}
+		RUS = {
+			country_event = {id = boer_states.69 days = 2}
+		}
+		FRA = {
+			if = {
+				limit = {
+					has_idea = FRA_idea_loss_of_alsace
+				}
+			country_event = {id = boer_states.70 days = 2}
+			}
+		}
+	}
+	option = { # we don't have the might
+		name = boer_states.66.b
+		
+	}
+}
+
+country_event = { # HOL - ENG declares all out war against the Boers and germany has intervened
+	id = boer_states.67
+	title = boer_states.67.t
+	desc = boer_states.67.d
+	is_triggered_only = yes
+	option = { # join and save the boers
+		name = boer_states.67.a
+		add_to_war = { 
+			targeted_alliance = OFS
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+	}
+	option = { # we can do nothing
+		name = boer_states.67.b
+		
+	}
+}
+country_event = { # HOL - ENG declares all out war against the Boers
+	id = boer_states.68
+	title = boer_states.68.t
+	desc = boer_states.68.d
+	is_triggered_only = yes
+	option = { # join and save the boers
+		name = boer_states.68.a
+		add_to_war = { 
+			targeted_alliance = OFS
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+	}
+	option = { # we can do nothing
+		name = boer_states.68.b
+		
+	}
+}
+
+country_event = { # RUS - ENG declares all out war against the Boers and germany has intervened
+	id = boer_states.69
+	title = boer_states.69.t
+	desc = boer_states.69.d
+	is_triggered_only = yes
+	option = { # continue the great game, help germany
+		name = boer_states.69.a
+		add_to_war = { 
+			targeted_alliance = GER
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+	}
+	option = { # we can do nothing
+		name = boer_states.69.b
+		
+	}
+}
+
+country_event = { # FRA - ENG declares all out war against the Boers and germany has intervened
+	id = boer_states.70
+	title = boer_states.70.t
+	desc = boer_states.70.d
+	is_triggered_only = yes
+	option = { # REVENGE!
+		name = boer_states.70.a
+		add_to_war = { 
+			targeted_alliance = ENG
+			enemy = GER
+			hostility_reason = asked_to_join
+		}
+	}
+	option = { # we have no interest fighting germany again
+		name = boer_states.70.b
+		
+	}
+}
+
+#end of the anglo - Freestate War
