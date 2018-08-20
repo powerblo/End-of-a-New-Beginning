@@ -2200,9 +2200,9 @@ focus_tree = {
 			}
 			hidden_trigger = {
 				OR = {
-				has_cosmetic_tag = PRS_GER_bismarck
-				has_cosmetic_tag = PRS_GER_liberal
-				has_cosmetic_tag = PRS_GER_socialist
+					has_cosmetic_tag = PRS_GER_bismarck
+					has_cosmetic_tag = PRS_GER_liberal
+					has_cosmetic_tag = PRS_GER_socialist
 				}
 			}
 		}
@@ -2210,7 +2210,24 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_german_ft_ready
 			hidden_effect = {
-				load_focus_tree = germany_united_focus
+				if = {
+					limit = {
+						has_cosmetic_tag = PRS_GER_bismarck
+					}   
+					load_focus_tree = germany_united_focus
+				}
+				else_if = {
+					limit = {
+						has_cosmetic_tag = PRS_GER_liberal
+					}   
+					load_focus_tree = germany_united_focus_liberal
+				}
+				else_if = {
+					limit = {
+						has_cosmetic_tag = PRS_GER_socialist
+					}   
+					load_focus_tree = germany_united_focus_socialist
+				}
 			}
 		}
 	}
