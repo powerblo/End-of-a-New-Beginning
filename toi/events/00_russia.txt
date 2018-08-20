@@ -1,4 +1,4 @@
-add_namespace = russia
+﻿add_namespace = russia
 add_namespace = russian_protest
 	###Beijing Treaty
 	country_event = {
@@ -127,7 +127,7 @@ add_namespace = russian_protest
 		}
 	}
 	
-	country_event = {  #Krenholm Factory
+	country_event = { 
 		id = russia.5
 		title = russia.5.t
 		desc = russia.5.d
@@ -137,7 +137,7 @@ add_namespace = russian_protest
 		fire_only_once = yes
 		
 		trigger = {
-			date = > 1857.07.02
+			date > 1857.07.02
 		    tag = RUS
 		}
 		
