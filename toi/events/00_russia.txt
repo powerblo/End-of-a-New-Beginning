@@ -1,4 +1,5 @@
-﻿add_namespace = russia
+add_namespace = russia
+add_namespace = russian_protest
 	###Beijing Treaty
 	country_event = {
 		id = russia.1
@@ -102,6 +103,53 @@
 			add_political_power = -50
 			hidden_effect = {
 				set_country_flag = rus_qing_declined
+			}
+		}
+	}
+	
+	country_event = {
+		id = russian_protest.1
+		title = russian_protest.1.t
+		desc = russian_protest.1.d
+		
+		picture = GFX_report_event_russian_protests
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1858.09.13
+			tag = RUS
+		}
+		
+		option = {
+			name = russian_protest.1.a
+			add_stability = -0.03
+		}
+	}
+	
+	country_event = {  #Krenholm Factory
+		id = russia.5
+		title = russia.5.t
+		desc = russia.5.d
+		
+		picture = GFX_report_event_krenholm_manufacture
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date = > 1857.07.02
+		    tag = RUS
+		}
+		
+		option = {
+			name = russia.5.a
+			191 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
