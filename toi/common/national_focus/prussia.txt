@@ -1244,6 +1244,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = PRS_focus_1862_elections }
 		mutually_exclusive = { focus = PRS_focus_new_candidate }
