@@ -542,12 +542,7 @@ country_event = { # Creation of the Compagnie universelle du canal maritime de S
   option = { # Invest
     name = nap_france.101.a
     add_political_power = 50
-    #add_ideas = FRA_suez_investments
-  }
-
-  option = { # No
-    name = nap_france.101.b
-    add_political_power = -50
+    set_country_flag = FRA_suez_company
   }
 }
 
@@ -955,6 +950,128 @@ country_event = { # Choose the leader of the revolt
     set_politics = {
       ruling_party = vanguard_communism
     }
+  }
+}
+
+country_event = { # Start of the Suez Canal construction
+  id = nap_france.115
+  title = nap_france.115.t
+  desc = nap_france.115.d
+  picture = GFX_report_event_suez_canal
+
+  trigger = {
+    has_tech = suez_canal_preparations
+  }
+
+  fire_only_once = yes
+
+  option = {
+    name = nap_france.115.a
+    set_country_flag = FRA_suez_canal_0
+    hidden_effect = { news_event = { id = nap_france_flavor.9 } }
+  }
+}
+
+country_event = { # Start of the El Qantara-Port-Saïd Section
+  id = nap_france.116
+  title = nap_france.116.t
+  desc = nap_france.116.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.116.a
+    clr_country_flag = FRA_suez_canal_0
+  }
+}
+
+country_event = { # Completion of the El Qantara-Port-Saïd Section
+  id = nap_france.117
+  title = nap_france.117.t
+  desc = nap_france.117.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.117.a
+    set_country_flag = FRA_suez_canal_1
+  }
+}
+
+country_event = { # Start of the Bitter Lake-El Qantara Section
+  id = nap_france.118
+  title = nap_france.118.t
+  desc = nap_france.118.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.118.a
+    clr_country_flag = FRA_suez_canal_1
+  }
+}
+
+country_event = { # Completion of the Bitter Lake-El Qantara Section
+  id = nap_france.119
+  title = nap_france.119.t
+  desc = nap_france.119.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.119.a
+    set_country_flag = FRA_suez_canal_2
+  }
+}
+
+country_event = { # Start of the Suez-Bitter Lake Section
+  id = nap_france.120
+  title = nap_france.120.t
+  desc = nap_france.120.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.120.a
+    clr_country_flag = FRA_suez_canal_2
+  }
+}
+
+country_event = { # Completion of the Suez Canal
+  id = nap_france.121
+  title = nap_france.121.t
+  desc = nap_france.121.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.121.a
+    set_country_flag = FRA_suez_canal_3
+    country_event = {
+      id = nap_france.122
+      days = 125
+    }
+  }
+}
+
+country_event = { # Inauguration of the Suez Canal
+  id = nap_france.122
+  title = nap_france.122.t
+  desc = nap_france.122.d
+  picture = GFX_report_event_suez_canal
+
+  is_triggered_only = yes
+
+  option = {
+    name = nap_france.122.a
+    set_global_flag = SUEZ_CANAL_BUILT
+    hidden_effect = { news_event = { id = nap_france_flavor.10 } }
   }
 }
 

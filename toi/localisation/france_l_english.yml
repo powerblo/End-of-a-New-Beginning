@@ -23,6 +23,24 @@
  CAM_ask_french_protectorate:0 "Ask to be a French Protectorate"
  CAM_ask_french_protectorate_tt:0 "The french leaders will be notified that you request their protection, but may not respond immediatly."
 
+ suez_canal_preparations:0 "Suez Canal Preparations"
+ suez_canal_preparations_desc:0 "Suez Canal Preparations"
+ suez_bitter_lake_section:0 "Suez-Bitter Lake Section"
+ suez_bitter_lake_section_desc:0 "Suez-Bitter Lake Section"
+ bitter_lake_el_qantara_section:0 "Bitter Lake-El Qantara Section"
+ bitter_lake_el_qantara_section_desc:0 "Bitter Lake-El Qantara Section"
+ el_qantara_port_said_section:0 "El Qantara-Port-Saïd Section"
+ el_qantara_port_said_section_desc:0 "El Qantara-Port-Saïd Section"
+
+ eoanb_category_suez_canal:0 "Construction of the Suez Canal"
+ FRA_decision_suez_canal_section_3:0 "Construct the Suez-Bitter Lake Section"
+ FRA_decision_suez_canal_section_2:0 "Construct the Bitter Lake-El Qantara Section"
+ FRA_decision_suez_canal_section_1:0 "Construct the El Qantara-Port-Saïd Section"
+
+ FRA_suez_canal_0:0 "The construction of the Suez Canal has started"
+ FRA_suez_canal_1:0 "The El Qantara-Port-Saïd section has been finished"
+ FRA_suez_canal_2:0 "The Bitter Lake-El Qantara section has been finished"
+
 ##################################################
 #                     FOCUS
 ##################################################
@@ -309,6 +327,14 @@
  nap_france_flavor.8.d:0 "Today, Victor Hugo published his new novel, named "Les Misérables". This series of stories put in perspective the condition of the poorest classes in France, set in the early 19th century. The publication of this book has already made a lot of noise, and sometime even considered as "the best novel of the 19th century"."
  nap_france_flavor.8.a:0 "A beacon of french litterature"
 
+ nap_france_flavor.9.t:0 "Construction of the Suez Canal started"
+ nap_france_flavor.9.d:0 ""
+ nap_france_flavor.9.a:0 "A new way will soon open for our ships!"
+
+ nap_france_flavor.10.t:0 "Inauguration of the Suez Canal"
+ nap_france_flavor.10.d:0 ""
+ nap_france_flavor.10.a:0 "A needed alternative to the burden of the Cape Horn"
+
   # Event Text
 
  nap_france.1.t:0 "The Future of our Empire"
@@ -390,7 +416,7 @@
  nap_france.18.a:0 "Tant pis !"
 
  nap_france.19.t:0 "Our reaction to the American Civil War"
- nap_france.19.d:0 ""
+ nap_france.19.d:0 "After years or rising tension, the United States finally broke apart. While we watch the fight from far away across the Atlantic, we are forced to admit that the matter of the United States have an impact in the entire world, and so we need to make our opinion on the matter. On one hand, the Confederates States of America, or CSA, have all of the precious cotton and if independent, will be an important player in the Caribbean Sea, where we have holdings, so supporting them would allow us a better control of the area. On the other hand, the United States have always been a close partners, and our shared history allow us a closer relations, on top of the fact that they have superior numbers and industry and is so likely to win the civil war. We could, of course, always take a neutral stance on the matter. We win nothing but at least we don't loose anything if we bet on the world side."
  nap_france.19.a:0 "Hold a Strict Neutral Stance"
  nap_france.19.b:0 "Support the Union"
  nap_france.19.c:0 "Support the Confederates"
@@ -408,7 +434,7 @@
  nap_france.102.d:0 "Henri Mouhot, contaminated by the yellow fever, has died at the age of 35. He was an explorator, he was one of the first european to venture inside the siamese jungle. After having wrote two books on the kingdom of Siam, he decided in 1857 to explore Laos, and Cambodia, where he became a great frind of the local king, [CAM.GetLeader]. He rediscovered Ankgor Wat, and showed its beauty to the rest of the world. Sadly, his trip from Bangkok to Luang Prabang will be his last. He will be remembered as one of the greatest french explorer of our time."
  nap_france.102.a:0 "We mourn the death of a great adventurer"
 
- nap_france.103.t:0 "Pierre Bosquet's death"
+ nap_france.103.t:0 "Pierre Joseph François Bosquet's death"
  nap_france.103.d:0 ""
  nap_france.103.a:0 "A great hero indeed"
 
@@ -462,6 +488,38 @@
  nap_france.114.a:0 "The radical republican, Jules Favre"
  nap_france.114.b:0 "The opportunistic syndicalist, Henri Tolain"
  nap_france.114.c:0 "The hardline socialist, Auguste Blanqui"
+
+ nap_france.115.t:0 "Start of the Suez Canal construction"
+ nap_france.115.d:0 ""
+ nap_france.115.a:0 "Progress will march forward!"
+
+ nap_france.116.t:0 "Start of the El Qantara-Port-Saïd Section"
+ nap_france.116.d:0 ""
+ nap_france.116.a:0 "A straight line shouldn't take too long to dig"
+
+ nap_france.117.t:0 "Completion of the El Qantara-Port-Saïd Section"
+ nap_france.117.d:0 ""
+ nap_france.117.a:0 "We're a third of the way!"
+
+ nap_france.118.t:0 "Start of the Bitter Lake-El Qantara Section"
+ nap_france.118.d:0 ""
+ nap_france.118.a:0 "Some infrastructure is needed, no big deal"
+
+ nap_france.119.t:0 "Completion of the Bitter Lake-El Qantara Section"
+ nap_france.119.d:0 ""
+ nap_france.119.a:0 "We're close to the Red Sea now!"
+
+ nap_france.120.t:0 "Start of the Suez-Bitter Lake Section"
+ nap_france.120.d:0 ""
+ nap_france.120.a:0 "Should be relatively simple"
+
+ nap_france.121.t:0 "Completion of the Suez Canal"
+ nap_france.121.d:0 ""
+ nap_france.121.a:0 "One of the greatest projects of the modern world!"
+
+ nap_france.122.t:0 "Inauguration of the Suez Canal"
+ nap_france.122.d:0 ""
+ nap_france.122.a:0 "We can now forget about Cape Horn!"
 
  nap_france.200.t:0 "Launch the Coup in Mexico"
  nap_france.200.d:0 ""
