@@ -419,6 +419,27 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		PRS_idea_fp_mil_boost = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = ger_rebuild_the_nation
+			
+			modifier = {
+				ai_focus_aggressive_factor = 0.25
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_attack_factor = 0.15
+				army_morale_factor = 0.15
+				category_all_infantry = {
+					soft_attack = 0.1
+					breakthrough = 0.25
+				}
+			}
+		}
 	}
 	political_advisor = {
 		PRS_advisor_august_von_der_heydt = {
