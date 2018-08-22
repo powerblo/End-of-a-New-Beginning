@@ -708,6 +708,14 @@ focus_tree = {
 			any_owned_state = { is_coastal = yes }
 		}
 		prerequisite = { focus = generic_focus_navy }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -777,6 +785,14 @@ focus_tree = {
 			any_owned_state = { is_coastal = yes }
 		}
 		prerequisite = { focus = generic_focus_naval_dockyards }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
