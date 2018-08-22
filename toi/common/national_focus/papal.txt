@@ -1964,7 +1964,7 @@ focus = {
 		completion_reward =	{
 			add_opinion_modifier = { target = FRA modifier = PAP_reaffirm_french_ties}
 			FRA = {
-				add_opinion_modifier = { target =  modifier = PAP_reaffirm_french_ties}
+				add_opinion_modifier = { target = PAP  modifier = PAP_reaffirm_french_ties}
 			}
 		}
 	}
@@ -1984,13 +1984,16 @@ focus = {
 		}
 
 		completion_reward =	{
-			add_opinion_modifier = { target = POR modifier = PAP_catholic_missions_iberia}
+			add_opinion_modifier = { 
+				target = POR
+			 	modifier = PAP_catholic_missions_iberia 
+			 }
 			POR = {
-				add_opinion_modifier = { target =  modifier = PAP_catholic_missions_iberia}
+				add_opinion_modifier = { target = PAP modifier = PAP_catholic_missions_iberia}
 			}
 			add_opinion_modifier = { target = SPR modifier = PAP_catholic_missions_iberia}
 			SPR = {
-				add_opinion_modifier = { target =  modifier = PAP_catholic_missions_iberia}
+				add_opinion_modifier = { target = PAP  modifier = PAP_catholic_missions_iberia}
 			}
 		}
 	}
@@ -2012,7 +2015,7 @@ focus = {
 		completion_reward =	{
 			add_opinion_modifier = { target = AUS modifier = PAP_catholic_missions_austria}
 			AUS = {
-				add_opinion_modifier = { target =  modifier = PAP_catholic_missions_austria}
+				add_opinion_modifier = { target = PAP modifier = PAP_catholic_missions_austria}
 			}
 		}
 	}
