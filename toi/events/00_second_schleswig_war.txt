@@ -270,12 +270,34 @@ country_event = {
 		custom_effect_tooltip = eoanb_tt_event_secschwar_12
 		hidden_effect = {
 			declare_war_on = { target = DEN type = annex_everything }
-			MCK = { add_to_war = { targeted_alliance = PRS enemy = DEN } }
-			MCK = { give_military_access = PRS }
-			PRS = { give_military_access = MCK }
+			PRS = {
+				annex_country = {
+					target = MCK
+					transfer_troops = no
+				}
+			}
 			set_global_flag = eoanb_flag_second_schleswig_war
 			DEN = {
 				add_ideas = hidden_idea_never_surrender
+			}
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+				}
+				DEN = { add_ideas = PRS_idea_weakened_DEN }
+			}
+			else_if = {
+				limit = {
+					is_historical_focus_on = no
+				}
+				random_list = {
+					50 = {
+						DEN = { add_ideas = PRS_idea_weakened_DEN }
+					}
+					50 = {
+						#
+					}
+				}
 			}
 		}
 	}
@@ -324,6 +346,19 @@ country_event = {
 			AND = {
 				HLS = { surrender_progress > 0.8 }
 				MCK = { controls_state = 37 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				AUS = { controls_state = 58 }
+				AUS = { controls_state = 1032 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				AUS = { controls_state = 99 }
+			}
+			AND = {
+				HLS = { surrender_progress > 0.8 }
+				AUS = { controls_state = 37 }
 			}
 		}			
 	}
@@ -416,7 +451,7 @@ country_event = {
 		hidden_effect = {
 			DEN = { white_peace = PRS }
 			DEN = { white_peace = AUS }
-			DEN = { white_peace = MCK }
+			PRS = { release = MCK }
 			PRS = { puppet = HLS }
 			clr_global_flag = eoanb_flag_second_schleswig_war
 			PRS = { set_country_flag = eoanb_flag_won_2_schleswig_war }
@@ -445,7 +480,7 @@ country_event = {
 		hidden_effect = {
 			DEN = { white_peace = PRS }
 			DEN = { white_peace = AUS }
-			DEN = { white_peace = MCK }
+			PRS = { release = MCK }
 			DEN = { release = SCH }
 			AUS = { puppet = HLS }
 			PRS = { puppet = SCH }

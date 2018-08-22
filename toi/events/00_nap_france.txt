@@ -543,6 +543,20 @@ country_event = { # Creation of the Compagnie universelle du canal maritime de S
     name = nap_france.101.a
     add_political_power = 50
     set_country_flag = FRA_suez_company
+	hidden_effect = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			FRA = { country_event = { days = 200 id = france.1 } }
+		}
+		else_if = {
+			limit = {
+				is_ai = no
+			}
+			#
+		}
+	}
   }
 }
 
@@ -968,7 +982,21 @@ country_event = { # Start of the Suez Canal construction
   option = {
     name = nap_france.115.a
     set_country_flag = FRA_suez_canal_0
-    hidden_effect = { news_event = { id = nap_france_flavor.9 } }
+    hidden_effect = { 
+		news_event = { id = nap_france_flavor.9 } 
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			FRA = { country_event = { days = 200 id = france.2 } }
+		}
+		else_if = {
+			limit = {
+				is_ai = no
+			}
+			#
+		}
+	}
   }
 }
 
@@ -997,6 +1025,18 @@ country_event = { # Completion of the El Qantara-Port-Saïd Section
   option = {
     name = nap_france.117.a
     set_country_flag = FRA_suez_canal_1
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		FRA = { country_event = { days = 200 id = france.3 } }
+	}
+	else_if = {
+		limit = {
+			is_ai = no
+		}
+		#
+	}
   }
 }
 
@@ -1025,6 +1065,18 @@ country_event = { # Completion of the Bitter Lake-El Qantara Section
   option = {
     name = nap_france.119.a
     set_country_flag = FRA_suez_canal_2
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		FRA = { country_event = { days = 200 id = france.4 } }
+	}
+	else_if = {
+		limit = {
+			is_ai = no
+		}
+		#
+	}
   }
 }
 
