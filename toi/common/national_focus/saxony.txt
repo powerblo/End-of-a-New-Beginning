@@ -16,7 +16,7 @@ focus_tree = {
 		id = SAX_Johann_Saxony
 		x = 22
 		y = 0
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -30,14 +30,13 @@ focus_tree = {
 		id = SAX_build_dresden
 		x = 21
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = {focus = SAX_Johann_Saxony }
 		icon = GFX_goal_generic_construct_infrastructure		
 		completion_reward = {
-			add_political_power = 50
 			65 = {
 				 add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 				}
@@ -48,14 +47,13 @@ focus_tree = {
 		id = SAX_build_leipzig
 		x = 23
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = {focus = SAX_Johann_Saxony }
 		icon = GFX_goal_generic_construct_infrastructure		
 		completion_reward = {
-			add_political_power = 50
 			65 = {
 				 add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 				}
@@ -67,7 +65,7 @@ focus_tree = {
 		id = SAX_dresden_zivile
 		x = 21
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -83,7 +81,7 @@ focus_tree = {
 		id = SAX_leipzig_zivile
 		x = 23
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -99,7 +97,7 @@ focus_tree = {
 		id = SAX_dresden_zivile_zwei
 		x = 21
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -115,7 +113,7 @@ focus_tree = {
 		id = SAX_leipzig_zivile_zwei
 		x = 23
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -131,7 +129,7 @@ focus_tree = {
 		id = SAX_militaraufbau
 		x = 22
 		y = 4
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -139,7 +137,7 @@ focus_tree = {
 		prerequisite = { focus = SAX_dresden_zivile_zwei }
 		icon = GFX_goal_generic_construct_mil_factory		
 		completion_reward = {
-			65 = { add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
+			65 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 			65 = { add_extra_state_shared_building_slots = 2 }			
 			}			
 		}
@@ -148,7 +146,7 @@ focus_tree = {
 		id = SAX_ricky_harty
 		x = 18
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -163,7 +161,7 @@ focus_tree = {
 		id = SAX_zivile_fabriken
 		x = 17
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -182,7 +180,7 @@ focus_tree = {
 		id = SAX_militarische_fabriken
 		x = 19
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -201,7 +199,7 @@ focus_tree = {
 		id = SAX_Prussian_Workers
 		x = 18
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -216,7 +214,7 @@ focus_tree = {
 		id = SAX_Chemnitz_is_my_city
 		x = 18
 		y = 4
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -231,7 +229,7 @@ focus_tree = {
 		id = SAX_Northern_Farmland
 		x = 25
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -246,7 +244,7 @@ focus_tree = {
 		id = Sax_Cloth_and_Cotton
 		x = 25
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -256,7 +254,7 @@ focus_tree = {
 			65 = {
 				add_resource = {
 					type = fabric
-					amount = 15
+					amount = 8
 					}
 				}	
 			}			
@@ -266,7 +264,7 @@ focus_tree = {
 		id = SAX_Prussian_Farmers
 		x = 25
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -281,7 +279,7 @@ focus_tree = {
 		id = SAX_Return_Favour
 		x = 25
 		y = 4
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -300,7 +298,7 @@ focus_tree = {
 		id = SAX_verbinden_zusammen
 		x = 22
 		y = 5
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -319,7 +317,7 @@ focus_tree = {
 		id = SAX_pronounce_thriving_economy
 		x = 22
 		y = 6
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -334,7 +332,7 @@ focus_tree = {
 		id = SAX_world_stage
 		x = 22
 		y = 7
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -354,7 +352,7 @@ focus_tree = {
 		id = SAX_Democracies
 		x = 20
 		y = 8
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -371,7 +369,7 @@ focus_tree = {
 		id = SAX_Monarchies
 		x = 24
 		y = 8
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -388,7 +386,7 @@ focus_tree = {
 		id = SAX_Liberalism
 		x = 20
 		y = 9
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -406,7 +404,7 @@ focus_tree = {
 		id = SAX_Conservatism
 		x = 24
 		y = 9
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -424,7 +422,7 @@ focus_tree = {
 		id = SAX_Democratic_Power
 		x = 20
 		y = 10
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -439,7 +437,7 @@ focus_tree = {
 		id = SAX_Autocratic_Power
 		x = 24
 		y = 10
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -454,7 +452,7 @@ focus_tree = {
 		id = SAX_Landtag_Regiert_Oberhand
 		x = 20
 		y = 11
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -477,7 +475,7 @@ focus_tree = {
 		id = SAX_Long_Live_Johnny
 		x = 24
 		y = 11
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -500,7 +498,7 @@ focus_tree = {
 		id = SAX_Defense_of_Saxony
 		x = 30
 		y = 0
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -514,7 +512,7 @@ focus_tree = {
 		id = SAX_Prussian_Forts
 		x = 29
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -560,7 +558,7 @@ focus_tree = {
 		id = SAX_Austrian_Forts
 		x = 31
 		y = 1
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -612,7 +610,7 @@ focus_tree = {
 		id = SAX_reserves
 		x = 30
 		y = 2
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -628,7 +626,7 @@ focus_tree = {
 		id = SAX_Army_Doctrine
 		x = 29
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -649,7 +647,7 @@ focus_tree = {
 		id = SAX_Infantry_Doctrine
 		x = 31
 		y = 3
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
@@ -670,7 +668,7 @@ focus_tree = {
 		id = SAX_modern_equipment
 		x = 30
 		y = 4
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 40
 		}
