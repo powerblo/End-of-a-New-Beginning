@@ -540,7 +540,7 @@ country_event = { #colonal power asks for fealty
 	
 	option = { #yes
 		name = EDC_afr.19.a
-		FROM = {set_country_flag = @ROOT_colonial_deals}
+		set_country_flag = @FROM_colonial_deals
 		set_country_flag = in_colonal_sphere
 		FROM = {
 			puppet = ROOT
@@ -552,6 +552,10 @@ country_event = { #colonal power asks for fealty
 			random_country = {
 				limit ={
 					check_variable = {colonisation_progress_@PREV > 3}
+					is_colonial_nation = yes
+					NOT = {
+						tag = FROM#not the colonal power
+					}
 				}
 				country_event = {id = EDC_afr.20 days = 1}#any country with power in the area
 			}
@@ -559,7 +563,15 @@ country_event = { #colonal power asks for fealty
 	}
 	option = { #no
 		name = EDC_afr.19.a
-		subtract_from_variable = { FROM.colonisation_progress_@THIS = 1 }
+		every_owned_state = {
+			limit ={
+				is_in_colonial_region = yes
+				FROM = {
+					check_variable = {colonisation_progress_@PREV > 4}
+				}
+			}
+			subtract_from_variable = { FROM.colonisation_progress_@THIS = 1 }
+		}
 		FROM = {
 			add_political_power = -25
 		}

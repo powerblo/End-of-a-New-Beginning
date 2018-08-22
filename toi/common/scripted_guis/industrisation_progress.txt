@@ -421,7 +421,7 @@ scripted_gui = {
 					#add_to_variable = { THIS.colonisation_progress = 100000 }
 					#clamp_variable = { var = colonial_power min = 0 max = colonial_power_max }
 				#}
-				subtract_from_variable = {ROOT.colonial_power = ROOT.colonial_cost}
+				subtract_from_variable = {ROOT.colonial_power = 80}
             }
 			colonisation_stage_2_bg_click = {
 				add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
@@ -460,6 +460,7 @@ scripted_gui = {
 				subtract_from_variable = {ROOT.colonial_power = 260}
 				ROOT = {
 					set_state_owner = PREV
+					transfer_state = PREV
 				}
 			}
         }
@@ -523,24 +524,22 @@ scripted_gui = {
 				check_variable = {ROOT.colonisation_progress_@THIS = 5}
 				check_variable = {ROOT.colonial_power >229}
 				owner = { 
+					NOT = {has_country_flag = colonal_state}
 					OR = {
-						has_country_flag = @ROOT_colonial_deals
+						is_puppet_of = ROOT
 						NOT = {has_country_flag = in_colonal_sphere}
 					}
-					NOT = {has_country_flag = colonal_state}
-					is_puppet_of = ROOT
 				}
 			}
 			colonisation_stage_7_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 6}
 				check_variable = {ROOT.colonial_power >259}
 				owner = { 
+					NOT = {has_country_flag = colonal_state}
 					OR = {
-						has_country_flag = @ROOT_colonial_deals
+						is_puppet_of = ROOT
 						NOT = {has_country_flag = in_colonal_sphere}
 					}
-					NOT = {has_country_flag = colonal_state}
-					is_puppet_of = ROOT
 				}
 			}
         }
