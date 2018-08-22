@@ -1,11 +1,11 @@
 ﻿1857.1.1 = {
-  capital = 230
+  capital = 9
 
-  oob = "ARM_1857"
+  oob = "BOH_1857"
 
   set_convoys = 0
 
-  set_research_slots = 2
+  set_research_slots = 3
 
   add_ideas = { 
   
@@ -35,26 +35,10 @@
 
     privileged_education
     state_religion
-	religion_orthodox
+	religion_protestant
     #NATIONAL SPIRITS
 	
   }
-  
-  RUS = {
-  if = {
-    limit = {
-      has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-      target = ARM
-      autonomous_state = autonomy_dominion
-      freedom_level = 0.2
-    }
-  else = {
-    puppet = ARM
-  }
-  }
-}
 
   set_politics = {
     parties = {

@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-  capital = 230
+  capital = 114
 
-  oob = "ARM_1857"
+  oob = "SAR_1857"
 
   set_convoys = 0
 
@@ -35,26 +35,10 @@
 
     privileged_education
     state_religion
-	religion_orthodox
+	religion_catholic
     #NATIONAL SPIRITS
 	
   }
-  
-  RUS = {
-  if = {
-    limit = {
-      has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-      target = ARM
-      autonomous_state = autonomy_dominion
-      freedom_level = 0.2
-    }
-  else = {
-    puppet = ARM
-  }
-  }
-}
 
   set_politics = {
     parties = {
