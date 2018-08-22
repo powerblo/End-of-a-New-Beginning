@@ -103,9 +103,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_industry }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -155,9 +157,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_build_civ_factory }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -258,9 +262,11 @@ focus_tree = {
 			factor = 1
 		}
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -307,9 +313,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_new_roads }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -356,9 +364,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_new_roads_2 }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -405,9 +415,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_new_roads_3 focus = generic_focus_build_mil_factory }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -454,9 +466,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_cotton_farms }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
@@ -503,9 +517,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = generic_focus_cotton_farms }
 		bypass = {
-			any_state = {
-				has_state_category = enclave
-				is_capital = yes
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
 			}
 		}
 		
