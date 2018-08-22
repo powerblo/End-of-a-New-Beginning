@@ -1478,8 +1478,8 @@ country_event = { # ENG - GQW offers us the campbell diamond mines
 		puppet = GQW
 		GQW ={
 			transfer_state = 1149
-			add_core_of = OFS
 		}
+		1149 = { add_core_of = OFS }
 		OFS = {country_event = {id = boer_states.55 days = 5}}
 	}
 	option = { # decline

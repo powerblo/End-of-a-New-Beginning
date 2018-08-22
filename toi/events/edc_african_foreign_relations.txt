@@ -12,21 +12,21 @@ country_event = {
 	option = {
 		name = EDC_afr.1.a
 		random_neighbor_state = {
-				limit = {
-					is_owned_by = FROM
-					is_claimed_by = ROOT
-				}
+			limit = {
+				is_owned_by = FROM
+				is_claimed_by = ROOT
 			}
-			#ROOT ={ 
-				create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
-					type = take_state_focus
-					target = FROM
-					#generator = any_neighbor_state = {limit = {is_owned_by = FROM}}
-				}
-				declare_war_on = {
-					target = FROM
-					type = take_state_focus
-				}
+		}
+		#ROOT ={ 
+			create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
+				type = take_state_focus
+				target = FROM
+				#generator = any_neighbor_state = {limit = {is_owned_by = FROM}}
+			}
+			declare_war_on = {
+				target = FROM
+				type = take_state_focus
+			}
 		#}
 	}
 }
