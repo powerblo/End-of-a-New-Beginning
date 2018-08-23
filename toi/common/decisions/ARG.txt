@@ -1,0 +1,52 @@
+ARG_centralize_military = {
+
+	eoanb_descision_ARG_centralize_military = {
+
+		icon = GFX_decision_generic_army_support
+
+		available = {
+			OR = {
+				has_idea = ARG_decentral_military_2
+				has_idea = ARG_decentral_military_1
+			}
+			has_army_experience > 49.99
+		}
+
+		visible = {
+			TAG = ARG
+			OR = {
+				has_idea = ARG_decentral_military_2
+				has_idea = ARG_decentral_military_1
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			army_experience = -50
+		}
+
+		days_remove = 100
+
+		days_re_enable = 1
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = ARG_decentral_military_2
+				}
+				swap_ideas = {
+					remove_idea = ARG_decentral_military_2
+					add_idea = ARG_decentral_military_1
+				}
+			}
+			else = {
+				remove_ideas = ARG_decentral_military_1
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

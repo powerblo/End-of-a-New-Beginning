@@ -70,14 +70,21 @@ USA_ACW_incompetent_military = {
 	}
 
 	ai_strategy = {
-		type = ignore_army_incompetence
-		value = 50
+		type = invade
+		id = "CSA"
+		value = -100
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = "CSA"
+		value = -100
 	}
 
 	ai_strategy = {
 		type = consider_weak
 		id = "CSA"
-		value = 50
+		value = -200
 	}
 
 	ai_strategy = {

@@ -246,4 +246,50 @@ wargoal_types = {
 		
 		threat = 2
 	}
+
+	acw_civil_war_wargoal = { #for unique name and to make it a 'civil war'
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = ACW_CIVIL_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+				
+		threat = 1
+		annex_threat_factor = 0.1
+		annex_cost = -75
+	}
+
+	argentine_civil_war_wargoal = { #for unique name and to make it a 'civil war'
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = ARG_CIVIL_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+				
+		threat = 1
+		annex_threat_factor = 0.1
+		annex_cost = -75
+	}
 }

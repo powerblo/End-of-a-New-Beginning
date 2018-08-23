@@ -1,0 +1,243 @@
+﻿add_namespace = arg
+country_event = {
+		id = arg.1
+		title = arg.1.t
+		desc = arg.1.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = ARG
+			BUE = { exists = no }
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = arg.1.a
+			set_global_flag = ARG_won_arg_civwar
+			drop_cosmetic_tag = yes
+			509 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			278 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			hidden_effect = { news_event = { id = arg_news.1 } }
+		}
+		option = {
+			name = arg.1.b
+			set_global_flag = ARG_won_arg_civwar
+			509 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			278 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			hidden_effect = { news_event = { id = arg_news.1 } }
+		}
+}
+country_event = {
+		id = arg.2
+		title = arg.2.t
+		desc = arg.2.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = BUE
+			ARG = { exists = no }
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = arg.2.a
+			set_global_flag = BUE_won_arg_civwar
+			ai_chance = {
+				factor = 100
+			}
+
+			ARG = { drop_cosmetic_tag = yes }
+			ARG = {
+				annex_country = {
+					target = BUE
+					transfer_troops = yes
+				}
+			}
+			ARG = { set_capital = 509 }
+			509 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			278 = {
+				remove_core_of = BUE
+				add_core_of = ARG
+			}
+			ARG = {
+				create_country_leader = {
+					name = "Bartolomé Mitre"
+					desc = ""
+					picture = "Portrait_ARG_Bartolome_Mitre.dds"
+					expire = "1953.3.1"
+					ideology = conserv_liberal
+					traits = {
+				  }
+				}
+				set_politics = {
+					parties = {
+						centrism = {
+							popularity = 40
+						}
+						traditional_conservatism = {
+							popularity = 60
+						}
+					}
+			      	ruling_party = centrism
+				}
+			}
+			if = {
+				limit = {
+					is_ai = no
+				}
+				ARG = {
+            		change_tag_from = BUE
+			        }
+			    }
+			hidden_effect = { news_event = { id = arg_news.1 } }
+		}
+}
+country_event = {
+		id = arg.3
+		title = arg.3.t
+		desc = arg.3.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = ARG
+			owns_state = 509
+			509 = { is_capital = no }
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = arg.3.a
+			set_capital = 509
+		}
+		option = {
+			name = arg.3.b
+			
+		}
+}
+country_event = {
+		id = arg.4
+		title = arg.4.t
+		desc = arg.4.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = BUE
+			ARG = { exists = yes }
+			date > 1861.7.1
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = arg.4.a
+			trigger = {
+				tag = BUE
+			}
+			declare_war_on = {
+				target = ARG
+				type = argentine_civil_war_wargoal
+			}
+			hidden_effect = { ARG = { country_event = { id = arg.4 } } }
+			hidden_effect = { news_event = { id = arg_news.2 } }
+		}
+		option = {
+			name = arg.4.a
+			trigger = {
+				tag = ARG
+			}
+		}
+}
+
+add_namespace = arg_news
+#argentine civil war over
+news_event = {
+		id = arg_news.1
+		title = arg_news.1.t
+		desc = {
+			text = arg_news.1.d
+			trigger = { has_global_flag = BUE_won_arg_civwar }
+		}
+		desc = {
+			text = arg_news.1.d_confed
+			trigger = { has_global_flag = ARG_won_arg_civwar }
+		}
+
+		picture = GFX_news_event_arg_civilwar
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = arg_news.1.a
+			trigger = {
+				NOT = { tag = ARG }
+			}
+		}
+		option = {
+			name = arg_news.1.b
+			trigger = {
+				tag = ARG
+			}
+		}
+}
+#argentine civil war started
+news_event = {
+		id = arg_news.2
+		title = arg_news.2.t
+		desc = arg_news.2.d
+
+		picture = GFX_news_event_arg_civilwar
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = arg_news.2.a
+			trigger = {
+				NOT = { tag = ARG }
+			}
+		}
+		option = {
+			name = arg_news.2.b
+			trigger = {
+				tag = ARG
+				tag = BUE
+			}
+		}
+}

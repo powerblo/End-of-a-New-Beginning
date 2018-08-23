@@ -34,6 +34,7 @@ country_event = {
 				hidden_effect = { USA = { set_country_flag = USAPanic_Of_1857 } }
 				add_ideas = USA_1857Panic
 				hidden_effect = { USA = { country_event = { days = 14 id = usa.2 } } }
+				hidden_effect = { news_event = { id = usa_news.0 } }
 		}
 }
 country_event = {
@@ -2084,15 +2085,15 @@ country_event = {
 		picture = GFX_report_event_royal_visit
 
 		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 2
+		}
 		
 		trigger = {
 			owns_state = 360
 			controls_state = 360
-			date > 1857.8.27
-		}
-
-		mean_time_to_happen = { 
-			days = 2
+			date > 1857.8.25
 		}
 		
 		option = {
@@ -2448,7 +2449,6 @@ country_event = {
 			annex_country = {
 				target = UTA
 			}
-			remove_ideas = USA_UtahWar
 			swap_ideas = {
 				remove_idea = state_religion
 				add_idea = secular_state
@@ -2457,6 +2457,7 @@ country_event = {
 				set_country_flag = USAUtah_War_Over
 			}
 			hidden_effect = { news_event = { id = utah_news.1 } }
+			remove_ideas = USA_UtahWar
 		}
 	}
 #Utah Refused Annexation
@@ -3003,6 +3004,13 @@ country_event = {
 		
 		option = {
 			name = usa.45.a
+			ai_chance = {
+				factor = 70
+				modifier = {
+					factor = 100
+					is_historical_focus_on = yes
+				}
+			}
 			custom_effect_tooltip = 01_lincoln_tt
 			kill_country_leader = yes
 			hidden_effect = { news_event = { id = usa_news.18 } }
@@ -3022,6 +3030,13 @@ country_event = {
 		}
 		option = {
 			name = usa.45.b
+			ai_chance = {
+				factor = 30
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+			}
 			custom_effect_tooltip = 02_lincoln_tt
 			hidden_effect = { news_event = { id = usa_news.19 } }
 			set_global_flag = Lincoln_Survived
@@ -3339,6 +3354,8 @@ country_event = {
 		mean_time_to_happen = {
 			days = 45
 		}
+
+		fire_only_once = yes
 		
 		option = {
 			name = usa.56.a
@@ -3915,6 +3932,33 @@ country_event = {
 #News Events
 
 add_namespace = usa_news
+#Panic of 1857
+news_event = {
+		id = usa_news.0
+		title = usa_news.0.t
+		desc = usa_news.0.d
+		picture = GFX_news_event_panic_eighteen_fifty
+
+		fire_only_once = yes
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.0.a
+			trigger = {
+				NOT = { tag = USA }
+			}
+		}
+		option = {
+			name = usa_news.0.b
+			trigger = {
+				tag = USA
+			}
+			set_global_flag = Panic_of_1857
+		}
+}
 #Lincoln-Douglas debate
 news_event = {
 		id = usa_news.1
