@@ -69,15 +69,15 @@ country_event = {
 		fire_only_once = yes
 
 		trigger = {
-			NOT = {
-				FRA = {
-					owns_state = 822 
-				}
-			}
-			PAP = { 
-				has_completed_focus = PAP_Restore_Status_Quo 
-			}
-			tag = PAP
+			#NOT = {
+			#	FRA = {
+			#		owns_state = 822 
+			#	}
+			#}
+			#PAP = { 
+			#	has_completed_focus = PAP_Restore_Status_Quo 
+			#}
+			#tag = PAP
 		}
 		
 		option = {
@@ -107,13 +107,13 @@ country_event = {
 		fire_only_once = yes
 
 		trigger = {
-			FRA = {
-				owns_state = 822 
-			}
-			PAP = { 
-				has_completed_focus = PAP_Restore_Status_Quo 
-			}
-			tag = PAP
+			#FRA = {
+			#	owns_state = 822 
+			#}
+			#PAP = { 
+			#	has_completed_focus = PAP_Restore_Status_Quo 
+			#}
+			#tag = PAP
 		}
 		
 		option = {
@@ -141,15 +141,15 @@ country_event = {
 		fire_only_once = yes
 
 		trigger = {
-			NOT = {
-				FRA = {
-					owns_state = 822 
-				}
-			}
-			PAP = { 
-				has_completed_focus = PAP_Carry_On_Unification
-			}
-			tag = PAP
+			#NOT = {
+			#	FRA = {
+			#		owns_state = 822 
+			#	}
+			#}
+			#PAP = { 
+			#	has_completed_focus = PAP_Carry_On_Unification
+			#}
+			#tag = PAP
 		}
 		
 		option = {
@@ -181,13 +181,13 @@ country_event = {
 		fire_only_once = yes
 
 		trigger = {
-			FRA = {
-				owns_state = 822 
-			}
-			PAP = { 
-				has_completed_focus = PAP_Carry_On_Unification
-			}
-			tag = PAP
+			#FRA = {
+			#	owns_state = 822 
+			#}
+			#PAP = { 
+			#	has_completed_focus = PAP_Carry_On_Unification
+			#}
+			#tag = PAP
 		}
 		
 		option = {
@@ -218,10 +218,10 @@ country_event = {
 		fire_only_once = yes
 
 		trigger = {
-			PAP = { 
-				has_completed_focus = PAP_Attack_Savoy
-			}
-			has_idea = PAP_Anti_Piedmont_Alliance
+			#PAP = { 
+			#	has_completed_focus = PAP_Attack_Savoy
+			#}
+			#has_idea = PAP_Anti_Piedmont_Alliance
 		}
 		
 		option = {
@@ -244,10 +244,10 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-			tag = PIE
-			PIE = {
-				is_puppet = yes
-			}
+			#tag = PIE
+			#PIE = {
+			#	is_puppet = yes
+			#}
 		}
 
 		option = {
@@ -279,10 +279,10 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-			tag = PIE
-			PIE = {
-				is_puppet = no
-			}
+			#tag = PIE
+			#PIE = {
+			#	is_puppet = no
+			#}
 		}
 
 		option = {
