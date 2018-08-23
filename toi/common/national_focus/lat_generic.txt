@@ -6380,7 +6380,7 @@ focus_tree = {
 	focus = {
 		id = LAT_generic_Industry_Forever
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 50
 		prerequisite = {
 			focus = LAT_generic_More_Machines_More_Work
 		}
@@ -6415,23 +6415,14 @@ focus_tree = {
 			}
 		}
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 2
+			add_political_power = -100
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}	
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}	
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}	
+			add_extra_state_shared_building_slots = 1	
 			add_building_construction = {
 				type = arms_factory
 				level = 1

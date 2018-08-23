@@ -233,6 +233,12 @@ technologies = {
 		political_power_gain = 0.1
 		MONTHLY_POPULATION = 0.06
 		
+		allow = {
+		 	NOT = {
+				has_idea = agrarian
+			}
+        }
+		
 		path = {
 			leads_to_tech = tech_humanities_social_stratification
 			research_cost_coeff = 1

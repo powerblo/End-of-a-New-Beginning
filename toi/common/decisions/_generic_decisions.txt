@@ -1031,7 +1031,7 @@ eoanb_religious_affairs = {
 		icon = generic_political_discourse
 		
 		available = {
-			has_war_support < 0.5
+			has_war_support > 0.5
 		}
 		
 		visible = {
@@ -1427,6 +1427,7 @@ eoanb_category_military = {
 		
 		#Capital is not in Africa, country owns one state that is not connected to the capital, not on the same continent as the capital, and is uncored
 		visible = {
+			owns_state = 681
 			NOT = {
 				capital_scope = {
 					is_on_continent = africa
