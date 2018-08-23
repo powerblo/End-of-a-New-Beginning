@@ -164,27 +164,29 @@ country_event = {
 			ai_chance = { factor = 100 }
 			add_political_power = -10
 		}
-} 
+}
+#TOO IMPORTANT TO BE A FLAVOR EVENT LIKE THIS
+#NEEDS FIXING 
 #Das Kapital 
-country_event = {
-		id = prussia.9
-		title = prussia.9.t
-		desc = prussia.9.d
-		picture = GFX_event_das_kapital
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1867.2.6
-		}
-		
-		option = {
-			name = prussia.9.a 
-			ai_chance = { factor = 100 }
-			add_political_power = -20
-	}
-} 
+#country_event = {
+#		id = prussia.9
+#		title = prussia.9.t
+#		desc = prussia.9.d
+#		picture = GFX_event_das_kapital
+#		
+#		fire_only_once = yes
+#		
+#		trigger = {
+#			TAG = PRS
+#			date > 1867.2.6
+#		}
+#		
+#		option = {
+#			name = prussia.9.a 
+#			ai_chance = { factor = 100 }
+#			add_political_power = -20
+#	}
+#} 
 
 #Hannover gets asked for access
 country_event = {

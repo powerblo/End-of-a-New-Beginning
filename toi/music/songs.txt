@@ -928,3 +928,25 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "eoanb_vic_2_waltz"
+	
+	chance = {
+		modifier = {
+			factor = 0.5
+
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			
+			NOT = { has_global_flag = is_eoanb_music_custom_true }
+		}
+		modifier = {
+			factor = 0
+		
+			NOT = { has_idea = victorian_era  }
+		}
+	}
+}

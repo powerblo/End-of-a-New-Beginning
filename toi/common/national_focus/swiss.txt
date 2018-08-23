@@ -1,0 +1,138 @@
+focus_tree = {
+	id = switzerland_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SWI
+		}
+	}
+	
+	default = no
+
+		focus = {
+		id = SWI_helveticdream
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 26
+		y = 0
+		cost = 10	
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+		focus = {
+		id = SWI_innaguratetriannual
+		icon = GFX_goal_focus_elections
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = SWI_helveticdream }
+
+		
+		completion_reward = {
+			#every 3 years democractic elections
+		}
+	}
+
+		focus = {
+		id = SWI_neuchatelaffair
+		icon = GFX_goal_generic_dangerous_deal
+		x = 26
+		y = 2
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = SWI_innaguratetriannual }
+
+		
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+
+		focus = {
+		id = SWI_letthemsupport
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = SWI_stoptheirfanatism
+        } 
+
+
+		prerequisite = { focus = SWI_neuchatelaffair }
+
+		
+		completion_reward = {
+			add_political_power = -40
+			add_stability = 0.05
+		}
+	}
+
+		focus = {
+		id = SWI_stoptheirfanatism
+		icon = GFX_goal_generic_political_pressure
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+        focus = SWI_letthemsupport
+        } 
+
+		prerequisite = { focus = SWI_neuchatelaffair }
+
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+		}
+	}
+
+
+		focus = {
+		id = SWI_multicultural
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		prerequisite = { focus = SWI_innaguratetriannual }
+
+		
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+

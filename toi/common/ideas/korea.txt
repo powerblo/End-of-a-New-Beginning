@@ -44,6 +44,45 @@ ideas = {
 		}
 
 
+	KOR_sociocrisisidea = {
+			
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			
+			modifier = {
+		   political_power_factor = -0.1
+		   consumer_goods_factor = 0.05
+		   trade_opinion_factor = -0.25
+			}
+		}
+
+	KOR_stabilizecrisisidea = {
+			
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			
+			modifier = {
+		   political_power_factor = 0.05
+		   trade_opinion_factor = -0.15
+			}
+		}
+
+	KOR_restorecheckbalanceidea = {
+			
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = placeholder
+			
+			modifier = {
+		   political_power_factor = 0.2
+		   stability_factor = 0.3
+			}
+		}
+
+		
+
 
 
 

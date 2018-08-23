@@ -2,12 +2,15 @@ ideas = {
 	country = {
 		HAM_LEGION = {
 			allowed = {
-				original_tag = HAM
+				OR = {
+					original_tag = HAM
+					original_tag = LCK
+				}
 			}
 			
 			removal_cost = -1
 			
-			picture = anti_soviet_pact
+			picture = HAM_hanseatic_legion
 			
 			research_bonus = { land_doctrine = -0.25 }
 			

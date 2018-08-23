@@ -1276,6 +1276,20 @@ focus_tree = {
 
 	}
 	focus = {
+		id = afr_vic_unite_home_region
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = afr_vic_one_people_one_nation
+		}
+		completion_reward = {
+			afr_add_cores_home_region_tribal = yes
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
 		id = afr_vic_values_of_trade
 		icon = GFX_goal_unknown
 		cost = 10.00
@@ -1373,7 +1387,7 @@ focus_tree = {
 		x = 25
 		y = 8
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 
 	}
@@ -1514,7 +1528,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = afr_vic_react_to_the_african_conference
+		id = afr_vic_react_to_the_african_conference_2
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {

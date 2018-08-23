@@ -6,6 +6,7 @@
   set_convoys = 0
   
   set_research_slots = 2
+  set_stability = 0.35
 
   add_ideas = { 
     #POLITICS 
@@ -19,7 +20,7 @@
     civilian_economy
     limited_exports
     two_percent
-    normal_taxes
+    low_taxes
 	cl_legal
 
     stagnation_growth
@@ -33,9 +34,9 @@
 
     privileged_education
     state_religion
-	  religion_protestant
-         #NATIONAL SPIRITS
-	
+	 religion_protestant
+    #NATIONAL SPIRITS
+	ofs_basutoland_raids
   }
 
   set_politics = {
@@ -78,6 +79,7 @@
   set_technology = {
 	infantry_weapons = 1
 	vic_army_cloth = 1
+	start_build_tech = 1
 	tech_naval_1812_frigate = 1
   }
 

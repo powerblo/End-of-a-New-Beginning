@@ -1,7 +1,8 @@
 #Generic FT, Victorian Era
+#Takes around 7 1/2 years to complete, making most countries complete it in late 1864
 focus_tree = {
 	id = generic
-
+	continuous_focus_position = {x = 600 y = 1000 }
 	country = {
 		factor = 1
 		
@@ -101,6 +102,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_industry }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -147,6 +156,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_build_civ_factory }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -244,6 +261,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -287,6 +312,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_new_roads }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -330,6 +363,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_new_roads_2 }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -373,6 +414,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_new_roads_3 focus = generic_focus_build_mil_factory }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -416,6 +465,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_cotton_farms }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -459,6 +516,14 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = generic_focus_cotton_farms }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -643,6 +708,14 @@ focus_tree = {
 			any_owned_state = { is_coastal = yes }
 		}
 		prerequisite = { focus = generic_focus_navy }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -712,6 +785,14 @@ focus_tree = {
 			any_owned_state = { is_coastal = yes }
 		}
 		prerequisite = { focus = generic_focus_naval_dockyards }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -751,6 +832,301 @@ focus_tree = {
 		
 		completion_reward = {
 			air_experience = 25
+		}
+	}
+	
+	focus = {
+		id = generic_focus_strengthen_government
+		icon = GFX_goal_focus_reform_administration
+		x = 17
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = generic_focus_internal_stabilization
+		icon = GFX_goal_focus_enact_law
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_strengthen_government }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = generic_focus_war_rhetoric
+		icon = GFX_goal_focus_popularize
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_strengthen_government }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = generic_focus_defend_ideology
+		icon = GFX_focus_generic_self_management
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_war_rhetoric focus = generic_focus_internal_stabilization }
+		
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_ideology days = 1000 }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_decide_future_gov
+		icon = GFX_goal_focus_elections
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_defend_ideology }
+		
+		completion_reward = {
+			country_event = { id = generic.12 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_gov_centralized
+		icon = GFX_goal_focus_the_elite
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_decide_future_gov }
+		available = {
+			always = no
+		}
+		mutually_exclusive = {  focus = generic_focus_gov_decentralized }
+		
+		completion_reward = {
+			#
+		}
+	}
+	
+	focus = {
+		id = generic_focus_centralized_administration
+		icon = GFX_focus_generic_treaty
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_gov_centralized }
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = generic_focus_centralized_economic_management
+		icon = GFX_goal_focus_increase_wages
+		x = 14
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_centralized_administration }
+		
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = generic_focus_centralized_army
+		icon = GFX_goal_focus_military_reforms
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_gov_centralized }
+		
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = generic_focus_high_command_reform
+		icon = GFX_focus_generic_military_academy
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_centralized_army }
+		
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = generic_focus_stabilized_centralization
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_high_command_reform focus = generic_focus_centralized_economic_management }
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = generic_focus_gov_decentralized
+		icon = GFX_goal_focus_decentralisation_power
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_decide_future_gov }
+		available = {
+			always = no
+		}
+		mutually_exclusive = {  focus = generic_focus_gov_centralized }
+		
+		completion_reward = {
+			#
+		}
+	}
+	
+	focus = {
+		id = generic_focus_decentralized_autonomy
+		icon = GFX_goal_focus_gerrymandering
+		x = 18
+		y = 5
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_gov_decentralized }
+		
+		completion_reward = {
+			add_political_power = 200
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+		id = generic_focus_spread_military
+		icon = GFX_focus_generic_military_mission
+		x = 20
+		y = 5
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_gov_decentralized }
+		
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	
+	focus = {
+		id = generic_focus_decentralized_government
+		icon = GFX_goal_focus_support_liberalism
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_decentralized_autonomy }
+		prerequisite = { focus = generic_focus_spread_military }
+		
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.02
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+		id = generic_focus_limited_constitution
+		icon = GFX_goal_focus_newspapers
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_decentralized_government focus = generic_focus_stabilized_centralization }
+		available = {
+			has_idea = no_constitution
+		}
+		bypass = {
+			NOT = {
+				has_idea = no_constitution
+			}
+		}
+		
+		completion_reward = {
+			swap_ideas = { add_idea = limited_constitution remove_idea = no_constitution }
 		}
 	}
 	

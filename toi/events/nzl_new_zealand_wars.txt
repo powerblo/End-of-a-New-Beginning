@@ -49,10 +49,6 @@ country_event = {
 				add_ideas = {nzl_maori_buffs}
 			}
 		}
-		#CNT = {
-		#	set_cosmetic_tag = CNT_FAI
-		#	transfer_technology = yes
-		#}
 	}
 
 	option = {
@@ -86,15 +82,15 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		KIN = {
-			end_puppet = NZL
-		}
+		 NZL = {
+			end_puppet = KIN
+		 }
 	}
 
 	option = {
 		name = nzl_nzw.3.a #shit
 		hidden_effect = {
-				add_manpower = 2500
+			add_manpower = 500
 		}
 	}
 	option = {
@@ -104,10 +100,10 @@ country_event = {
 			KIN ={
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 250
+					amount = 25
 					producer = KIN
 				}
-				add_manpower = 2500
+				add_manpower = 500
 				change_tag_from = NZL
 			}
 		}

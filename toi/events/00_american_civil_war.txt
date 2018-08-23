@@ -135,9 +135,19 @@ country_event = {
     
     option = {
         name = acw.4.a
+        hidden_effect = {
+            363 = { set_demilitarized_zone = no }
+            362 = { set_demilitarized_zone = no }
+            368 = { set_demilitarized_zone = no }
+            372 = { set_demilitarized_zone = no }
+            369 = { set_demilitarized_zone = no }
+            373 = { set_demilitarized_zone = no }
+            374 = { set_demilitarized_zone = no }
+            746 = { set_demilitarized_zone = no }
+        }
         declare_war_on = {
             target = USA
-            type = annex_everything
+            type = acw_civil_war_wargoal
         }
         hidden_effect = { set_global_flag = ACWAmerican_Civil_War }
         hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }

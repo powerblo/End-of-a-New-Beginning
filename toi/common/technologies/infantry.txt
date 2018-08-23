@@ -38,6 +38,8 @@ technologies = {
 
 	infantry_weapons = {
 
+		supply_consumption_factor = 0.05
+	
 		enable_equipments = {
 			infantry_equipment_rifle_0
 		}
@@ -45,6 +47,16 @@ technologies = {
 		enable_subunits = {
 			line_infantry
 			light_infantry
+		}
+		
+		enable_building = {
+			building = bunker
+			level = 5
+		}
+		
+		enable_building = {
+			building = coastal_bunker
+			level = 5
 		}
 
 		path = {
@@ -90,6 +102,8 @@ technologies = {
 	}
 
 	rifle_equipment1 = {
+	
+		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_1
@@ -117,6 +131,8 @@ technologies = {
 	}
 
 	rifle_equipment2 = {
+	
+		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_2
@@ -179,6 +195,8 @@ technologies = {
 	}
 
 	rifle_equipment3 = {
+	
+		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_3
@@ -276,6 +294,8 @@ technologies = {
 	}
 
 	rifle_equipment4 = {
+	
+		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_4
@@ -336,6 +356,8 @@ technologies = {
 	}
 
 	rifle_equipment5 = {
+	
+		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_5

@@ -13,15 +13,15 @@ technologies = {
 		}
 		enable_building = {
 			building = rocket_site
-			level = 2
+			level = 3
 		}
 		enable_building = {
 			building = synthetic_refinery
-			level = 4
+			level = 5
 		}
 		enable_building = {
 			building = nuclear_reactor
-			level = 1
+			level = 3
 		}
 		enable_building = {
 			building = anti_air_building
@@ -31,6 +31,55 @@ technologies = {
 			building = radar_station
 			level = 6
 		}
+		enable_building = {
+			building = air_base
+			level = 25
+		}
+		enable_building = {
+			building = naval_base
+			level = 25
+		}
+		enable_building = {
+			building = bunker
+			level = 10
+		}
+		enable_building = {
+			building = coastal_bunker
+			level = 10
+		}
+		enable_building = {
+			building = coal_mine
+			level = 8
+		}
+		enable_building = {
+			building = cotton_farm
+			level = 15
+		}
+		enable_building = {
+			building = steel_mill
+			level = 5
+		}
+		enable_building = {
+			building = machine_parts_factory
+			level = 5
+		}
+		enable_building = {
+			building = farm
+			level = 15
+		}
+		enable_building = {
+			building = arms_factory
+			level = 50
+		}
+		enable_building = {
+			building = industrial_complex
+			level = 50
+		}
+		enable_building = {
+			building = dockyard
+			level = 25
+		}
+		#Code below enables Nukes to be used
 		nuclear_production = 1
 		
 		start_year = 1857
@@ -42,6 +91,56 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0
+		}
+		
+	}
+	
+	#Buildings you can always build
+	
+	start_build_tech = {
+	
+		enable_building = {
+			building = infrastructure
+			level = 8
+		}
+		enable_building = {
+			building = arms_factory
+			level = 5
+		}
+		enable_building = {
+			building = industrial_complex
+			level = 5
+		}
+		enable_building = {
+			building = dockyard
+			level = 5
+		}
+		enable_building = {
+			building = cotton_farm
+			level = 5
+		}
+		enable_building = {
+			building = logging_camp
+			level = 3
+		}
+		enable_building = {
+			building = farm
+			level = 5
+		}
+		enable_building = {
+			building = naval_base
+			level = 8
+		}
+		
+		start_year = 1857
+		research_cost = 1
+		
+		allow = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0 
 		}
 		
 	}

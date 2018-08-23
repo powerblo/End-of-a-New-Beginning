@@ -126,6 +126,25 @@ country_event = {
 		name = fraprswar.5.a
 		ai_chance = { factor = 100 }
 		declare_war_on = { target = FRA type = topple_government }
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			PRS = { add_ideas = PRS_idea_fp_mil_boost }
+		}
+		else_if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			random_list = {
+				50 = {
+					PRS = { add_ideas = PRS_idea_fp_mil_boost }
+				}
+				50 = {
+					#
+				}
+			}
+		}
 		hidden_effect = {
 			add_named_threat = { 
 				threat = 5 
@@ -204,6 +223,25 @@ country_event = {
 		name = fraprswar.8.a
 		ai_chance = { factor = 100 }
 		declare_war_on = { target = PRS type = topple_government }
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			PRS = { add_ideas = PRS_idea_fp_mil_boost }
+		}
+		else_if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			random_list = {
+				50 = {
+					PRS = { add_ideas = PRS_idea_fp_mil_boost }
+				}
+				50 = {
+					#
+				}
+			}
+		}
 		hidden_effect = {
 			add_named_threat = { 
 				threat = 5 
@@ -250,6 +288,25 @@ country_event = {
 		name = fraprswar.10.a
 		ai_chance = { factor = 100 }
 		declare_war_on = { target = PRS type = topple_government }
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			PRS = { add_ideas = PRS_idea_fp_mil_boost }
+		}
+		else_if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			random_list = {
+				50 = {
+					PRS = { add_ideas = PRS_idea_fp_mil_boost }
+				}
+				50 = {
+					#
+				}
+			}
+		}
 		hidden_effect = {
 			add_named_threat = { 
 				threat = 5 
@@ -304,6 +361,16 @@ country_event = {
 				add_stability = -0.1
 				add_war_support = -0.1
 				add_political_power = -100
+			}
+			if = {
+				limit = {
+					PRS = {
+						has_idea = PRS_idea_fp_mil_boost
+					}
+				}
+				PRS = {
+					remove_ideas = PRS_idea_fp_mil_boost
+				}
 			}
 		}
 	}
@@ -395,6 +462,19 @@ country_event = {
 				add_timed_idea = {
 				idea = PRS_idea_reparations_to_PRS
 				days = 365
+				}
+			}
+			PRS = {
+				add_ideas = GER_idea_winners_of_fp
+			}
+			if = {
+				limit = {
+					PRS = {
+						has_idea = PRS_idea_fp_mil_boost
+					}
+				}
+				PRS = {
+					remove_ideas = PRS_idea_fp_mil_boost
 				}
 			}
 		}

@@ -42,8 +42,8 @@
  KOR_foldtemples_desc:0 "Many of our current troubles root from those greedy Buddhists who huddle in their temples and charge high rates on our people. Forcing some of these institutions to close and liquidating their assets will surely help expand the royal coffers."
  KOR_sangmintax:0 "Raise Sangmin Taxes"
  KOR_sangmintax_desc:0 "For the greater good of Korea, more taxes should be levied on the Sangmin peasant class to be used for further economic projects. They may grumble a bit more if we did this, but time and numerous revolts have proven that the poor can never be satisfied anyway."
- KOR_stablizecrisis:0 "Stabilize the Crisis"
- KOR_stablizecrisis_desc:0 "With new means of cash flow to the royal coffers attained, efforts may now be focused toward shoring up our Kingdom and bringing about some degree of order in the midst of the economic chaos rippling throughout the country."
+ KOR_stabilizecrisis:0 "Stabilize the Crisis"
+ KOR_stabilizecrisis_desc:0 "With new means of cash flow to the royal coffers attained, efforts may now be focused toward shoring up our Kingdom and bringing about some degree of order in the midst of the economic chaos rippling throughout the country."
  KOR_teachingschoe:0 "Teachings of Choe Je-U"
  KOR_teachingschoe_desc:0 "A new movement has been founded by the name of Donghak, or “Eastern Learning.” This ideology, being a mixture of Confucianism with elements from Buddhism, shamanism, and even Catholicism, will greatly shape the fate of our Kingdom."
  KOR_denouncedong:0 "Denounce Donghak as Heresy"
@@ -246,7 +246,7 @@
  KOR_questionqing_desc:0 "For too long we have tolerated the reign of the Manchu usurpers in China. The time has come for their barbaric reign to come to an end, and restore a true ethnic Chinese Emperor to the throne. "
  KOR_antiqing:0 "Spread Anti-Qing Sentiment"
  KOR_antiqing_desc:0 "As much as a regime change in China may seem attractive to us, the majority of our people want nothing to do with meddling in other countries’ affairs or entering into any foreign conflict of any kind. This must change. "
- KOR_scholarsoldier:0 "Scholors to Soldiers"
+ KOR_scholarsoldier:0 "Scholars to Soldiers"
  KOR_scholarsoldier_desc:0 "For too long the general consensus in Korea has been to place all of our focus entirely on higher pursuits rather than the baser life of soldiery, which has led to a major neglect of our army. Reversing this message and rallying greater support for our troops is a must. "
  KOR_northfort:0 "Northern Fortifications"
  KOR_northfort_desc:0 "Like in the days of old, we must set our people to work refurbishing the old forts that line our border with Qing Manchuria, as a majority of our fighting will likely be within the treacherous mountainous passes of that region."
@@ -296,15 +296,17 @@
  KOR_hanriver_desc:0 "After building up the administrative and cultural buildings of our capital, it is time to expand the Han River Valley's infrastructure by contracting Bukhan Mountain, which forms the natural northern border of Hanseong, to make further room for expansion."
  KOR_reconstructpalace:0 "Reconstruct Gyeongbok Palace"
  KOR_reconstructpalace_desc:0 "Now that our capital is starting to become a respectable city again, one final project must be initiated to maximize our new King's prestige. The old palace of Gyeongbokgung lies in a state of disrepair after sustaining heavy damage during the Imjin War. If this symbol of the Joseon Kings can be rebuilt, the royalty will be able to undeniably demonstrate its superiority over the rival clans."
-
+ KOR_shoreup:0 "Shore up the economy"
+ KOR_shoreup_desc:0 "Shore up the economy"
 
 
  #Ideas
  KOR_debasecurrencyidea:0 "Debased Currency"
  KOR_uniteconfucianidea:0 "United Confucian Orthodoxy"
  KOR_landreformidea:0 "Institutionally Reformed Land"
-
-
+ KOR_sociocrisisidea:0 "Socioeconomic Malaise"
+ KOR_stabilizecrisisidea:0 "Stagnant Economy"
+ KOR_restorecheckbalanceidea:0 "Checked Factionalism"
 
  #Opinion modifiers
  ginseng_cultivation:0 "Ginseng Cultivation"
@@ -329,10 +331,23 @@
  closerqing:0 "Draw Closer to Qing"
  questionqing:0 "Question Qing Legitimacy"
  antiqing:0 "Spread Anti-Qing Sentiment"
-
+ shipwreck:0 "Shipwreck of the Surprise"
 
 
  #Events
  korea.1.t:0 "Sedo Politics"
  korea.1.d:0 "Since the beginning of King Sunjo’s reign in 1800, the influential Andong Kim clan has risen to dominate nearly all corners of Joseon politics and society. With their uncontested power over the royal court and the yangban bureaucracy, the Joseon kings, including the current ruler King Cheoljong, have been stripped of almost all of their monarchical authority by this Sedo regime. Widespread reform is needed to clear out all this corruption, but with the Andong Kims’ stranglehold on the government, swift change is unlikely to occur"
  korea.1.a:0 "These are dark times indeed"
+ korea.2.t:0 "Death of King Cheoljong"
+ korea.2.d:0 "Since our previous king Cheoljong died without a viable heir, searching has led Dowager Queen Sinjeong to declare Yi Myeong-bok as our new monarch under the title of King Gojong, who ascended the throne on 21 January 1864. Because the King is only 12 years old, Sinjeong has been placed as the official regent of Gojong, however the Queen has already begun to look to Gojong’s father, Yi Ha-eung, as the new Daewongun, or Prince of the Great Court"
+ korea.2.a:0 "All hail King Gojong and the Regent Sinjeong"
+ korea.3.t:0 "Capture of Choe Je-U"
+ korea.3.d:0 "At long last we have managed to capture the seditionist Choe Je-U, the man responsible for the spread of his destabilizing Donghak ideology that now encroaches into the hearts and minds of our peasantry. He has been pronounced guilty but now awaits his punishment. Putting an end to his life will strike a major blow to his movement, but it may also destabilize our kingdom even more"
+ korea.3.a:0 "Put this madman to the sword!"
+ korea.3.1.a:0 "Banish him"
+ korea.4.t:0 "Han Chinese Support"
+ korea.4.d:0 "After months of effort, our counselors have finally been able to contact numerous groups of ethnic Chinese dissidents who reject the current Qing Emperor as the rightful ruler of China. If we can help arm these rebels, they may prove to be a useful ally in our upcoming fight for the fate of the Dragon Throne."
+ korea.4.a:0 "Excellent"
+ korea.4.t:0 "Shipwreck of the Surprise"
+ korea.4.d:0 "An American vessel by the name of the Surprise has been shipwrecked on our coast near Chulsan. Luckily, the crew was unharmed by the incident, and we have received a report from Governor Park Gyu-su of Pyongyang that he has already made arrangements for the expatriation of the sailors back to China."
+ korea.4.a:0 "What a shame"

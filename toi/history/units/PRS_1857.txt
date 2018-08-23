@@ -353,3 +353,24 @@ units = {
 		ship = { name = "Berlin" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
 	}
 }
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_rifle_0
+			creator = "PRS"
+		}
+		requested_factories = 5
+		progress = 0.4
+		efficiency = 20
+	}
+	add_equipment_production = {
+		equipment = {
+			type = uniform_equipment_1
+			creator = "PRS"
+		}
+		requested_factories = 2
+		progress = 0.7
+		efficiency = 30
+	}
+}

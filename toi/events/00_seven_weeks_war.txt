@@ -601,6 +601,27 @@ country_event = {
 		declare_war_on = { target = SAX type = annex_everything }
 		hidden_effect = {
 			SAX = { country_event = { id = sevenweekswar.24 } }
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+				}
+				AUS = { add_ideas = PRS_idea_weakened_sww }
+				SAX = { add_ideas = PRS_idea_weakened_sww }
+			}
+			else_if = {
+				limit = {
+					is_historical_focus_on = no
+				}
+				random_list = {
+					50 = {
+						AUS = { add_ideas = PRS_idea_weakened_sww }
+						SAX = { add_ideas = PRS_idea_weakened_sww }
+					}
+					50 = {
+						#
+					}
+				}
+			}
 		}
 	}
 	
@@ -740,7 +761,7 @@ country_event = {
 	
 	option = {
 		name = sevenweekswar.27.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 60 }
 		custom_effect_tooltip = eoanb_tt_PRS_ngc_historical
 		add_ideas = PRS_idea_anti_ngc_sentiment
 		hidden_effect = {
@@ -763,7 +784,7 @@ country_event = {
 	option = {
 		name = sevenweekswar.27.b
 		ai_chance = { 
-			factor = 10 
+			factor = 40
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
