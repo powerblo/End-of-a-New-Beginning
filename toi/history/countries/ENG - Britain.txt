@@ -427,12 +427,18 @@
 		freedom_level = 0.2
 	}
 	set_autonomy = {
+		target = NAT
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
 		target = IOM
 		autonomous_state = autonomy_integrated_puppet
 	}
 	else = {
 		puppet = RAJ
 		puppet = IOM
+		puppet = NAT
 	}
 }
 
