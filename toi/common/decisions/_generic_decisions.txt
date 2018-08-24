@@ -1433,6 +1433,18 @@ eoanb_category_military = {
 					is_on_continent = africa
 				}
 			}
+			has_manpower > 2500
+			has_equipment = {
+				infantry_equipment > 2500
+			}
+			has_equipment = {
+				uniform_equipment > 2500
+			}
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
 			OR = {
 				AND = {
 					capital_scope = {
@@ -1442,7 +1454,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = europe
+							is_on_continent = europe
 						}
 					}	
 				}
@@ -1454,7 +1466,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = north_america
+							is_on_continent = north_america
 						}
 					}	
 				}
@@ -1466,7 +1478,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = south_america
+							is_on_continent = south_america
 						}
 					}	
 				}
@@ -1478,7 +1490,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = australia
+							is_on_continent = australia
 						}
 					}	
 				}
@@ -1490,7 +1502,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = asia
+							is_on_continent = asia
 						}
 					}	
 				}
@@ -1502,7 +1514,7 @@ eoanb_category_military = {
 						is_in_home_area = no
 						NOT = { is_core_of = ROOT }
 						NOT = {
-						is_on_continent = middle_east
+							is_on_continent = middle_east
 						}
 					}	
 				}
@@ -1535,9 +1547,299 @@ eoanb_category_military = {
 		}
 		
 		remove_effect = {
-			custom_effect_tooltip = eoanb_tt_decision_recruit_colonial_infantry
+			custom_effect_tooltip = eoanb_tt_decision_recruit_colonial_infantry_1
 			hidden_effect = {
-				load_oob = "DECISION_recruit_colonials"
+				load_oob = "DECISION_recruit_colonials_12589"
+			}
+		}
+		
+		#Might make the AI do this later
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+	eoanb_decision_generic_recruit_colonial_troops_2 = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+			}
+		}
+		
+		#Capital is not in Africa, country owns one state that is not connected to the capital, not on the same continent as the capital, and is uncored
+		visible = {
+			owns_state = 824
+			NOT = {
+				capital_scope = {
+					is_on_continent = africa
+				}
+			}
+			has_manpower > 2500
+			has_equipment = {
+				infantry_equipment > 2500
+			}
+			has_equipment = {
+				uniform_equipment > 2500
+			}
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+			OR = {
+				AND = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = europe
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = north_america
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = north_america
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = south_america
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = south_america
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = australia
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = australia
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = asia
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = middle_east
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = middle_east
+						}
+					}	
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		#Can only be taken once
+		days_re_enable = 1000000
+		
+		days_remove = 30
+		
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = -2000
+			}
+		}
+		
+		modifier = {
+			experience_gain_army_factor = -0.25
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_recruit_colonial_infantry_2
+			hidden_effect = {
+				load_oob = "DECISION_recruit_colonials_8248"
+			}
+		}
+		
+		#Might make the AI do this later
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+	eoanb_decision_generic_recruit_colonial_troops_3 = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+			}
+		}
+		
+		#Capital is not in Africa, country owns one state that is not connected to the capital, not on the same continent as the capital, and is uncored
+		visible = {
+			owns_state = 459
+			NOT = {
+				capital_scope = {
+					is_on_continent = africa
+				}
+			}
+			has_manpower > 2500
+			has_equipment = {
+				infantry_equipment > 2500
+			}
+			has_equipment = {
+				uniform_equipment > 2500
+			}
+			OR = {
+				has_idea = victorian_era
+				has_idea = machine_era
+				has_idea = oil_era
+			}
+			OR = {
+				AND = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = europe
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = north_america
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = north_america
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = south_america
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = south_america
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = australia
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = australia
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = asia
+						}
+					}	
+				}
+				AND = {
+					capital_scope = {
+						is_on_continent = middle_east
+					}
+					any_owned_state = {
+						is_in_home_area = no
+						NOT = { is_core_of = ROOT }
+						NOT = {
+							is_on_continent = middle_east
+						}
+					}	
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		#Can only be taken once
+		days_re_enable = 1000000
+		
+		days_remove = 30
+		
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = -2000
+			}
+		}
+		
+		modifier = {
+			experience_gain_army_factor = -0.25
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_recruit_colonial_infantry_3
+			hidden_effect = {
+				load_oob = "DECISION_recruit_colonials_1145"
 			}
 		}
 		
