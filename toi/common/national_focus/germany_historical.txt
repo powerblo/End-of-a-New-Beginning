@@ -1,0 +1,1656 @@
+focus_tree = {
+	id = germany_united_focus
+
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	
+	focus = {
+		id = GER_focus_historical_deutsches_heer
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_decentralized_army
+		icon = GFX_goal_focus_divide_unite_army
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_deutsches_heer }
+		mutually_exclusive = { focus = GER_focus_historical_centralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_wurttemberg_contingent
+		icon = GFX_goal_focus_landwehr
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_new_regiment_numbering
+		icon = GFX_goal_focus_military_reforms
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_wurttemberg_contingent }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_bavarian_contingent
+		icon = GFX_goal_focus_king_army_prs
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_doctrine_schooling
+		icon = GFX_focus_generic_military_mission
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_bavarian_contingent }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_saxony_contingent
+		icon = GFX_goal_focus_form_germany
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_law_may_1874
+		icon = GFX_focus_generic_treaty
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_saxony_contingent }
+		available = {
+			date > 1874.5.1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_prussian_contingent
+		icon = GFX_goal_focus_ally_PRS
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_popularize_officers
+		icon = GFX_goal_focus_popularize
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_prussian_contingent }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_german_general_staff
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_popularize_officers }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_exercise_regiments
+		icon = GFX_focus_generic_little_entente
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_general_staff }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_fortress_status
+		icon = GFX_goal_generic_build_tank
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_prussian_contingent }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_expand_barracks
+		icon = GFX_goal_generic_construct_military
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_fortress_status }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_mauser_infantry_rifles
+		icon = GFX_goal_generic_small_arms
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_centralized_army focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_mauser_cavalry_rifles
+		icon = GFX_goal_generic_cavalry
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_mauser_infantry_rifles }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_own_revolver
+		icon = GFX_focus_ger_oppose_hitler
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_mauser_cavalry_rifles }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_centralized_army
+		icon = GFX_goal_focus_unlock_germany
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_deutsches_heer }
+		mutually_exclusive = { focus = GER_focus_historical_decentralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_southern_uniforms_prussian
+		icon = GFX_goal_focus_ally_PRS
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_centralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_southern_helmets_prussian
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_southern_uniforms_prussian }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_new_recruit_system
+		icon = GFX_focus_secret_rearmament
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_centralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_unified_national_ranks
+		icon = GFX_goal_focus_reform_administration
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_new_recruit_system }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_war_ministry
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_centralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_expand_budget
+		icon = GFX_goal_focus_increase_wages
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_war_ministry }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_military_textbooks
+		icon = GFX_goal_focus_newspapers
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_centralized_army }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_military_academies
+		icon = GFX_focus_generic_military_academy
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_military_textbooks }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_reichs_manoever
+		icon = GFX_goal_focus_king_army_prs
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_military_academies }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_kaiserliche_marine
+		icon = GFX_goal_focus_generic_navy_ironclad
+		x = 22
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_imperial_admiralty
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_kaiserliche_marine }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_minister_von_stosch
+		icon = GFX_goal_focus_military_reforms
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_imperial_admiralty }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_marineakademie
+		icon = GFX_goal_generic_amphibious_assault
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_minister_von_stosch }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_seebattalion
+		icon = GFX_goal_focus_mass_produce_ships
+		x = 20
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_marineakademie }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_marine_inspectors
+		icon = GFX_goal_focus_enact_law
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_minister_von_stosch }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_naval_corps
+		icon = GFX_goal_generic_navy_battleship
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_marine_inspectors }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_ostsee_nordsee_bases
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_minister_von_stosch }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_kanoonenbootdiplomatie
+		icon = GFX_goal_focus_generic_navy_ironclad
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_ostsee_nordsee_bases }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_minister_caprivi
+		icon = GFX_goal_focus_reform_administration
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_seebattalion }
+		prerequisite = { focus = GER_focus_historical_naval_corps }
+		prerequisite = { focus = GER_focus_historical_kanoonenbootdiplomatie }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_schichau_werke
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_minister_caprivi }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_torpedo_boats
+		icon = GFX_goal_generic_occupy_start_war
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_schichau_werke }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_convoys_for_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 23
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_minister_caprivi }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_armored_frigates
+		icon = GFX_goal_focus_generic_navy_ironclad
+		x = 23
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_convoys_for_trade }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_imperial_navy
+		icon = GFX_goal_focus_mass_produce_ships
+		x = 22
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_armored_frigates }
+		prerequisite = { focus = GER_focus_historical_torpedo_boats }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_gruenderzeit
+		icon = GFX_goal_focus_gerrymandering
+		x = 28
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_gold_standard
+		icon = GFX_goal_focus_banks
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_gruenderzeit }
+		mutually_exclusive = { focus = GER_focus_historical_bimetalism }
+		mutually_exclusive = { focus = GER_focus_historical_silver_standard }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_government_investments
+		icon = GFX_goal_generic_national_unity
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_gold_standard }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_state_railways
+		icon = GFX_goal_focus_railroad_development
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_government_investments }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_bimetalism
+		icon = GFX_goal_focus_decentralisation_power
+		x = 28
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_gruenderzeit }
+		mutually_exclusive = { focus = GER_focus_historical_gold_standard }
+		mutually_exclusive = { focus = GER_focus_historical_silver_standard }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_public_private_cooperation
+		icon = GFX_goal_focus_support_liberalism
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_bimetalism }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_railway_boom
+		icon = GFX_goal_generic_construction2
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_public_private_cooperation }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_silver_standard
+		icon = GFX_goal_focus_banks2
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_gruenderzeit }
+		mutually_exclusive = { focus = GER_focus_historical_gold_standard }
+		mutually_exclusive = { focus = GER_focus_historical_bimetalism }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_joint_stock_companies
+		icon = GFX_goal_focus_fund_partisans
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_silver_standard }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_private_railway_investments
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_joint_stock_companies }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_zusammenbruch
+		icon = GFX_goal_generic_dangerous_deal
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_private_railway_investments focus = GER_focus_historical_railway_boom focus = GER_focus_historical_state_railways }
+		available = {
+			always = no
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_fight_crisis
+		icon = GFX_goal_focus_the_elite
+		x = 28
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_zusammenbruch }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_direct_intervention
+		icon = GFX_goal_focus_elections
+		x = 26
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_fight_crisis }
+		mutually_exclusive = { focus = GER_focus_historical_subsidize_businesses }
+		mutually_exclusive = { focus = GER_focus_historical_force_profits }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_control_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 26
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_direct_intervention }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_unemployed_benefits
+		icon = GFX_goal_focus_republican_spirit
+		x = 26
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_control_factories }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_protective_tariffs
+		icon = GFX_goal_generic_forceful_treaty
+		x = 26
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_control_factories }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_subsidize_businesses
+		icon = GFX_goal_generic_consumer_goods
+		x = 28
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_fight_crisis }
+		mutually_exclusive = { focus = GER_focus_historical_direct_intervention }
+		mutually_exclusive = { focus = GER_focus_historical_force_profits }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_aid_programs
+		icon = GFX_goal_focus_industrial_revolution
+		x = 28
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_subsidize_businesses }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_fight_unemployment
+		icon = GFX_goal_focus_support_conservatism
+		x = 28
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_aid_programs }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_balanced_tarriffs
+		icon = GFX_goal_fight_the_elite
+		x = 28
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_fight_unemployment }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_force_profits
+		icon = GFX_goal_focus_working_hours
+		x = 30
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_fight_crisis }
+		mutually_exclusive = { focus = GER_focus_historical_direct_intervention }
+		mutually_exclusive = { focus = GER_focus_historical_subsidize_businesses }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_raise_taxes
+		icon = GFX_goal_focus_increase_wages
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_force_profits }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_sell_state_possessions
+		icon = GFX_goal_focus_international_investments
+		x = 30
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_raise_taxes }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_lower_tarriffs
+		icon = GFX_goal_generic_major_alliance
+		x = 30
+		y = 9
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_sell_state_possessions }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_crisis_is_over
+		icon = GFX_goal_focus_industrial_revolution
+		x = 28
+		y = 10
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_lower_tarriffs focus = GER_focus_historical_balanced_tarriffs focus = GER_focus_historical_protective_tariffs }
+		available = {
+			always = no
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_deutsche_wirtschaft
+		icon = GFX_focus_generic_support_the_left_right
+		x = 38
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_agrarian_state
+		icon = GFX_goal_generic_construct_civilian
+		x = 35
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = GER_focus_historical_deutsche_wirtschaft }
+		mutually_exclusive = { focus = GER_focus_historical_industrial_economy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_agrarian_culture
+		icon = GFX_goal_focus_military_reforms
+		x = 33
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_agrarian_state }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_shock_of_globalisation
+		icon = GFX_goal_focus_continent_west_europe
+		x = 33
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_agrarian_culture }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_new_marketing_strategies
+		icon = GFX_goal_focus_fund_partisans
+		x = 33
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_shock_of_globalisation }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_world_competition
+		icon = GFX_goal_focus_international_investments
+		x = 33
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_new_marketing_strategies }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_potatoes_and_sugar
+		icon = GFX_goal_focus_popularize
+		x = 35
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_agrarian_state }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_new_rotations
+		icon = GFX_goal_focus_the_workers
+		x = 35
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_potatoes_and_sugar }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_artificial_fertilizers
+		icon = GFX_goal_focus_coal_mines
+		x = 35
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_new_rotations }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_population_growth
+		icon = GFX_goal_focus_ally_PRS
+		x = 35
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_artificial_fertilizers }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_produce_agrarian_machines
+		icon = GFX_goal_focus_working_hours
+		x = 37
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_agrarian_state }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_advances_in_chemistry
+		icon = GFX_focus_research2
+		x = 37
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_produce_agrarian_machines }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_mechanization
+		icon = GFX_goal_focus_telegraph_lines
+		x = 37
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_advances_in_chemistry }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_feed_soldiers
+		icon = GFX_goal_focus_military_reforms
+		x = 37
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_mechanization }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_industrial_economy
+		icon = GFX_goal_generic_production
+		x = 41
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_deutsche_wirtschaft }
+		mutually_exclusive = { focus = GER_focus_historical_agrarian_state }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_industrial_empire
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 39
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_industrial_economy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_siemens
+		icon = GFX_goal_generic_air_production
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_industrial_empire }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_bayer
+		icon = GFX_goal_generic_scientific_exchange
+		x = 39
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_siemens }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_norddeutscher_lloyd
+		icon = GFX_goal_focus_mass_produce_ships
+		x = 39
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_bayer }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_deutsche_bank
+		icon = GFX_goal_focus_banks
+		x = 41
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_industrial_economy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_technische_hochschulen
+		icon = GFX_focus_research
+		x = 41
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_deutsche_bank }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_social_security
+		icon = GFX_goal_focus_support_conservatism
+		x = 41
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_technische_hochschulen }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_workers_rights
+		icon = GFX_goal_focus_revolutionary_council
+		x = 41
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_social_security }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_made_in_germany
+		icon = GFX_goal_focus_ally_PRS
+		x = 43
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_industrial_economy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_huettenzechen
+		icon = GFX_goal_focus_coal_mines
+		x = 43
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_made_in_germany }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_laenderbahn
+		icon = GFX_goal_focus_railroad_development
+		x = 43
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_huettenzechen }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_maritime_trade
+		icon = GFX_goal_focus_international_investments
+		x = 43
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_laenderbahn }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+}
