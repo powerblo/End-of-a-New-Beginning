@@ -205,11 +205,59 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		path = {
+			leads_to_tech = armor_tech_bicycle_division
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1.25
 		start_year = 1865
 		folder = {
 			name = armour_folder
 			position = { x = 14 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			biwheel_vehicle_tech
+		}
+	}
+	
+	armor_tech_bicycle_division = {
+		
+		enable_subunits = {
+			bicycle_infantry
+		}
+		
+		research_cost = 1
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 6 }
 		}
 		
 		ai_will_do = {
