@@ -1324,3 +1324,89 @@ afr_add_cores_home_region_tribal={
 	}
 }
 
+ofs_increase_currency_value={
+	if = {
+		limit = {
+			tag = OFS
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_valued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_valued
+				add_idea = ofs_bluebacks_heavly_valued
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks
+				add_idea = ofs_bluebacks_valued
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_devalued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_devalued
+				add_idea = ofs_bluebacks
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_heavly_devalued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_heavly_devalued
+				add_idea = ofs_bluebacks_devalued
+			}
+		}	
+	}
+}
+ofs_decrease_currency_value={
+	if = {
+		limit = {
+			tag = OFS
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_devalued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_valued
+				add_idea = ofs_bluebacks_heavly_devalued
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks
+				add_idea = ofs_bluebacks_devalued
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_valued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_valued
+				add_idea = ofs_bluebacks
+			}
+		}
+		if={
+			limit = {
+				has_idea = ofs_bluebacks_heavly_valued
+			}
+			swap_ideas={
+				remove_idea = ofs_bluebacks_heavly_valued
+				add_idea = ofs_bluebacks_valued
+			}
+		}
+	}
+}

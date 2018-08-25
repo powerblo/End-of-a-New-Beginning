@@ -11,20 +11,27 @@ focus_tree = {
 	}
 	default = yes
 	focus = {
-		id = ofs_vic_start_legal_reforms
-		icon = GFX_goal_unknown
+		id = ofs_vic_complete_legal_reforms
+		icon = GFX_goal_focus_reform_administration
 		cost = 1.70
 		x = 5
 		y = 0
 		completion_reward = {
 			add_political_power = 75
 		}
-
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	focus = {
 		id = ofs_vic_attempt_to_levy_taxes
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 15.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
 			focus = ofs_vic_the_fuctions_of_a_state
 		}
@@ -40,8 +47,12 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_economic_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 17
 		y = 0
 		available = {
@@ -51,34 +62,51 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_external_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 10.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 30
 		y = 0
 		completion_reward = {
 			add_political_power = 100
 		}
 		available = {
-			has_completed_focus = ofs_vic_focus_on_exsternal_problems
+			has_completed_focus = ofs_vic_the_fuctions_of_a_state
 		}
 	}
 	focus = {
 		id = ofs_vic_army_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 10.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = ofs_vic_the_fuctions_of_a_state
+				has_completed_focus = ofs_vic_focus_on_exsternal_problems
+			}
+		}
 		x = 41
 		y = 0
 		completion_reward = {
 			army_experience = 10
 		}
-
 	}
 	focus = {
 		id = ofs_vic_establish_laws_on_tariffs
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 1.70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
-			focus = ofs_vic_start_legal_reforms
+			focus = ofs_vic_complete_legal_reforms
 		}
 		x = 3
 		y = 1
@@ -89,10 +117,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_gunpowder_regulations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 1.70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
-			focus = ofs_vic_start_legal_reforms
+			focus = ofs_vic_complete_legal_reforms
 		}
 		x = 5
 		y = 1
@@ -105,8 +137,12 @@ focus_tree = {
 		id = ofs_vic_liquor_reulations
 		icon = GFX_goal_unknown
 		cost = 1.70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
-			focus = ofs_vic_start_legal_reforms
+			focus = ofs_vic_complete_legal_reforms
 		}
 		x = 7
 		y = 1
@@ -117,8 +153,12 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_consoladate_internal_governence
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_generic_self_management
+		cost = 5.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
 			focus = ofs_vic_liquor_reulations
 		}
@@ -138,8 +178,12 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_continue_constitutional_reforms
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_self_management
 		cost = 25.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
 			focus = ofs_vic_consoladate_internal_governence
 		}
@@ -161,8 +205,12 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_reform_the_voting_system
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 10.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
 			focus = ofs_vic_continue_constitutional_reforms
 		}
@@ -178,10 +226,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_focus_on_exsternal_problems
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_political_pressure
 		cost = 5.00
 		prerequisite = {
 			focus = ofs_vic_consoladate_internal_governence
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		available = {
 			has_war=yes
@@ -203,6 +255,10 @@ focus_tree = {
 		id = ofs_vic_consolidate_power
 		icon = GFX_goal_unknown
 		cost = 25.00
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = {
 			focus = ofs_vic_consoladate_internal_governence
 		}
@@ -218,15 +274,22 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_the_fuctions_of_a_state
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_focus_enact_law
+		cost = 15.00
 		prerequisite = {
 			focus = ofs_vic_focus_on_exsternal_problems
 			focus = ofs_vic_consolidate_power
 			focus = ofs_vic_continue_constitutional_reforms
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		available = {
 			has_war = no
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 		x = 5
 		y = 4
@@ -234,35 +297,62 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_create_a_national_tax_code
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_attempt_to_levy_taxes
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 5
 		y = 6
+		completion_reward = {
+			add_stability = 0.05
+		}
 
 	}
 	focus = {
 		id = ofs_vic_establish_national_banknotes
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_banks
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_create_a_national_tax_code
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 5
 		y = 7
+		completion_reward = {
+			add_ideas = {
+				ofs_bluebacks
+			}
+			custom_effect_tooltip = ofs_blueback_warning
+		}
 
 	}
 	focus = {
-		id = ofs_vic_encorage_immergration
+		id = ofs_vic_encorage_immirgration
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_the_fuctions_of_a_state
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 7
 		y = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = afr_encoraged_immirgration
+				days = 180
+			}
+		}
 
 	}
 	focus = {
@@ -271,6 +361,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_consolidate_power
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 9
 		y = 4
@@ -283,6 +377,10 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_thoughts_on_a_monarcy
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 9
 		y = 5
 
@@ -293,6 +391,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_begin_to_consoladate_power
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 9
 		y = 6
@@ -305,13 +407,17 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_the_failures_of_our_republic
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 9
 		y = 7
 
 	}
 	focus = {
 		id = ofs_vic_industrialising_our_nation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_economic_focus
@@ -348,13 +454,17 @@ focus_tree = {
 				}
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 13
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_begin_military_production
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_industrialising_our_nation
@@ -391,27 +501,113 @@ focus_tree = {
 				}
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 13
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_encorage_manufactory_develpoment
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_production2
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_begin_military_production
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available={
+			has_tech = machine_tools_1
+		}
 		x = 12
 		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = machine_parts_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = machine_parts_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = machine_parts_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
 		id = ofs_vic_encorage_factory_jobs
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 20.00
 		prerequisite = {
 			focus = ofs_vic_begin_military_production
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_more_than_150k_pop	
+				set_temp_variable = {a = max_manpower}
+				check_variable = {a>150000}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		x = 14
 		y = 3
@@ -419,7 +615,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_start_to_connect_our_economy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_economic_focus
@@ -447,16 +643,24 @@ focus_tree = {
 				}
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 16
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_exspand_our_road_network
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_start_to_connect_our_economy
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 16
 		y = 3
@@ -487,10 +691,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_roads_in_the_west
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_exspand_our_road_network
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 15
 		y = 4
@@ -526,10 +734,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_roads_in_the_east
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_exspand_our_road_network
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 17
 		y = 4
@@ -579,11 +791,15 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_bring_setsoto_into_our_road_network
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_roads_in_the_west
 			focus = ofs_vic_roads_in_the_east
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 16
 		y = 5
@@ -622,7 +838,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_invest_in_resource_discovery
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construction2
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_economic_focus
@@ -632,20 +848,24 @@ focus_tree = {
 				afr_ofs_invest_in_resource_discovery
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 20
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_build_coal_mines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_coal_mines
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
 		}
-		#allow_branch = {
-		#	has_country_flag = ofs_discovered_coal
-		#}
+		allow_branch = {
+			has_country_flag = ofs_discovered_coal
+		}
 		available = {
 			has_country_flag = ofs_discovered_coal
 		}
@@ -659,20 +879,24 @@ focus_tree = {
 				}
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 18
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_open_gold_mines
-		icon = GFX_goal_unknown
+		icon = GFX_nzl_goal_gold_otago
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
 		}
-		#allow_branch = {
-			#has_country_flag = ofs_discovered_gold
-		#}
+		allow_branch = {
+			has_country_flag = ofs_discovered_gold
+		}
 		available = {
 			has_country_flag = ofs_discovered_gold
 		}
@@ -681,13 +905,17 @@ focus_tree = {
 				afr_ofs_gold_mines_1
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 22
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_exspand_gold_mining_operations
-		icon = GFX_goal_unknown
+		icon = GFX_nzl_goal_gold_otago
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_open_gold_mines
@@ -698,13 +926,17 @@ focus_tree = {
 				add_idea = afr_ofs_gold_mines_2
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 22
 		y = 4
 
 	}
 	focus = {
 		id = ofs_vic_campbell_diamonds
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construction2
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
@@ -715,6 +947,10 @@ focus_tree = {
 		available = {
 			has_country_flag = ofs_discovered_diamonds
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 20
 		y = 2
 		completion_reward = {
@@ -724,10 +960,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_secure_the_diamond_mines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_fortify_city
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_campbell_diamonds
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 20
 		y = 3
@@ -752,13 +992,17 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_nationalise_the_mines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_increase_wages
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_secure_the_diamond_mines
 		}
 		mutually_exclusive = {
 			focus = ofs_vic_privatise_the_mines
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 19
 		y = 4
@@ -772,13 +1016,17 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_privatise_the_mines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_international_investments
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_secure_the_diamond_mines
 		}
 		mutually_exclusive = {
 			focus = ofs_vic_nationalise_the_mines
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 21
 		y = 4
@@ -797,7 +1045,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_attempt_diplomatic_ties_with_SAR
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_major_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_external_focus
@@ -816,22 +1064,42 @@ focus_tree = {
 					is_core_of = TRV
 				}
 			}
+			has_war = no
 		}
 		allow_branch = {
 			TRV = {
 				exists = yes
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 24
 		y = 1
-
+		completion_reward = {
+			TRV={country_event = {days = 1 id=boer_states.74}}
+		}
 	}
 	focus = {
 		id = ofs_vic_offer_joint_guarentees
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_major_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_attempt_diplomatic_ties_with_SAR
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = TRV_accepts_envoys
+		}
+		completion_reward = {
+			give_guarantee = TRV
+			TRV={
+				give_guarantee = OFS
+			}
 		}
 		x = 24
 		y = 2
@@ -839,13 +1107,24 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_offer_to_join_with_the_SAR
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_offer_joint_guarentees
 		}
 		mutually_exclusive = {
 			focus = ofs_vic_mantain_frendly_independant_relations
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_stability > 0.65
+			has_war=no
+		}
+		completion_reward = {
+			TRV={country_event = {days = 1 id=boer_states.77}}
 		}
 		x = 23
 		y = 3
@@ -861,24 +1140,39 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ofs_vic_offer_to_join_with_the_SAR
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = TRV
+				modifier = long_term_alliance
+			}
+		}
 		x = 25
 		y = 3
 
 	}
 	focus = {
 		id = ofs_vic_our_british_policy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ally_ENG
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_external_focus
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 28
 		y = 1
+		
 
 	}
 	focus = {
 		id = ofs_vic_attempt_to_submit_to_ENG
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_british_colonial_empire
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_our_british_policy
@@ -886,19 +1180,30 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ofs_vic_steadfast_independace
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 27
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_prepare_for_re-annexation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 15.00
 		prerequisite = {
 			focus = ofs_vic_attempt_to_submit_to_ENG
 		}
+		available={
+			has_country_flag = britian_accepts_re_annexation
+		}
 		mutually_exclusive = {
 			focus = ofs_vic_develop_independant_indentity
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 27
 		y = 3
@@ -913,6 +1218,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ofs_vic_attempt_to_submit_to_ENG
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 29
 		y = 2
@@ -929,6 +1238,18 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ofs_vic_prepare_for_re-annexation
 		}
+		available = {
+			NOT = {
+				AND = {
+					has_country_flag = britian_accepts_re_annexation
+					has_completed_focus = ofs_vic_steadfast_independace
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 29
 		y = 3
 
@@ -939,6 +1260,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_external_focus
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 31
 		y = 1
@@ -951,6 +1276,10 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_native_deals
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 31
 		y = 2
 
@@ -961,6 +1290,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_begin_land_deals
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 31
 		y = 3
@@ -973,8 +1306,15 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_external_focus
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 35
 		y = 1
+		completion_reward = {
+			add_political_power = 75
+		}
 
 	}
 	focus = {
@@ -984,16 +1324,24 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 33
 		y = 2
 
 	}
 	focus = {
-		id = ofs_vic_send_emissaries_to_germany
+		id = ofs_vic_send_emissaries_to_portugal
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 35
 		y = 2
@@ -1006,8 +1354,41 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 37
 		y = 2
+
+	}
+	focus = {
+		id = ofs_vic_send_emissaries_to_germany
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_send_emissaries_to_the_USA
+			focus = ofs_vic_send_emissaries_to_portugal
+			focus = ofs_vic_send_emissaries_to_the_netherlands
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		x = 35
+		y = 3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ofs_germany_exists
+				PRS = {
+					OR = {
+						has_cosmetic_tag = PRS_GER_liberal
+						has_cosmetic_tag = PRS_GER_bismarck
+						has_cosmetic_tag = PRS_GER_socialist
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1017,13 +1398,17 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_army_focus
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 39
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_inovate_our_guns
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_army_focus
@@ -1031,13 +1416,17 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_tech }
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 41
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_continue_innovation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_inovate_our_guns
@@ -1045,27 +1434,56 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_tech }
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 41
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_deal_with_SAR_partisans
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_gerrymandering
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_the_fuctions_of_a_state
 		}
+		available = {
+			has_war = no
+			has_idea = ofs_SAR_partisans
+		}
+		bypass = {
+			NOT = {
+				has_idea = ofs_SAR_partisans
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 3
 		y = 5
+		completion_reward = {
+			remove_ideas = {
+				ofs_SAR_partisans
+			}
+		}
 
 	}
 	focus = {
 		id = ofs_vic_remove_single_citizenship_requirement
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_reform_the_voting_system
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
 		}
 		x = 1
 		y = 5
@@ -1078,16 +1496,24 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_encorage_monarcist_surge
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 9
 		y = 8
 
 	}
 	focus = {
 		id = ofs_vic_create_a_standing_force
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_army_focus
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 43
 		y = 1
@@ -1098,10 +1524,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_adopt_new_doctrines
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_doctrines
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_create_a_standing_force
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 43
 		y = 2
@@ -1112,7 +1542,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_new_arms_new_tactics
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_military_reform
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_adopt_new_doctrines
@@ -1126,6 +1556,10 @@ focus_tree = {
 				remove_idea = law_pre_industrial_army
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 41
 		y = 3
 
@@ -1137,6 +1571,10 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_new_arms_new_tactics
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 41
 		y = 4
 		completion_reward = {
@@ -1147,10 +1585,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_build_a_larger_force
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_establish_military_command
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 41
 		y = 5
@@ -1171,16 +1613,24 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_new_arms_new_tactics
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 39
 		y = 4
 
 	}
 	focus = {
 		id = ofs_vic_increase_research_funding
-		icon = GFX_goal_unknown
+		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_create_a_national_tax_code
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 3
 		y = 7
@@ -1217,10 +1667,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_encorage_the_founding_of_a_research_foundation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_increase_research_funding
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 3
 		y = 8
@@ -1230,10 +1684,14 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_cement_constatution
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_newspapers
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_remove_single_citizenship_requirement
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 1
 		y = 6
@@ -1259,6 +1717,10 @@ focus_tree = {
 				exists = no
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 24
 		y = 1
 		completion_reward = {
@@ -1269,9 +1731,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 1140
-				TRV = {
-					remove_state_core = 1140
-				}
 			}
 			if = {
 				limit = {
@@ -1280,9 +1739,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 1141
-				TRV = {
-					remove_state_core = 1141
-				}
 			}
 		}
 	}
@@ -1292,6 +1748,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_begin_intergration_of_the_TRV
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
 		}
 		x = 24
 		y = 2
@@ -1311,6 +1771,10 @@ focus_tree = {
 				is_core_of = TRV
 			}
 		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 		x = 24
 		y = 3
 		completion_reward = {
@@ -1321,9 +1785,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 1142
-				TRV = {
-					remove_state_core = 1142
-				}
 			}
 			if = {
 				limit = {
@@ -1332,9 +1793,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 1143
-				TRV = {
-					remove_state_core = 1143
-				}
 			}
 			if = {
 				limit = {
@@ -1343,9 +1801,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 1144
-				TRV = {
-					remove_state_core = 1144
-				}
 			}
 			if = {
 				limit = {
@@ -1354,9 +1809,6 @@ focus_tree = {
 					}
 				}
 				add_state_core = 275
-				TRV = {
-					remove_state_core = 275
-				}
 			}
 		}
 	}
