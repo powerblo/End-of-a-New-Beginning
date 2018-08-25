@@ -391,7 +391,9 @@ technologies = {
 	#From "mechanical_engineering": Steam Engine is here at x = 6, y = 0, High Speed Steam Engine at x = 6, y = 4
 	armor_tech_steam_car_experiment = {
 	
-		
+		steam_car_support_company = {
+			armor_value = 0.05
+		}
 		
 		path = {
 			leads_to_tech = armor_tech_steam_car_prototype
@@ -442,7 +444,10 @@ technologies = {
 	
 	armor_tech_steam_car_prototype = {
 	
-		
+		steam_car_support_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		
 		path = {
 			leads_to_tech = armor_tech_steam_car
