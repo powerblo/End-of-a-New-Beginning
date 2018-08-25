@@ -688,6 +688,12 @@ country_event = {
 			clr_global_flag = eoanb_flag_seven_weeks_war_ongoing
 			HAN = { annex_country = { target = OLD transfer_troops = no } }
 			WUR = { transfer_state = 1033 }
+			AUS = {
+				remove_ideas = PRS_idea_weakened_sww
+			}
+			SAX = {
+				remove_ideas = PRS_idea_weakened_sww
+			}
 		}
 	}
 	
@@ -736,6 +742,12 @@ country_event = {
 			PRS = { transfer_state = 1061 }
 			PRS = { set_country_flag = eoanb_flag_PRS_can_form_ngc }
 			PRS = { set_country_flag = eoanb_flag_won_7_weeks_war }
+			AUS = {
+				remove_ideas = PRS_idea_weakened_sww
+			}
+			SAX = {
+				remove_ideas = PRS_idea_weakened_sww
+			}
 		}
 	}
 	
