@@ -1128,6 +1128,32 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
+				
+				instantTextBoxType = {
+					name = "armor_subtitle_steam_engine"
+					position = { x = 760 y = 260 }
+					textureFile = ""
+					font = "hoi_12header"
+					borderSize = { x = 0 y = 0}
+					text = "ARMOR_SUBTITLE_STEAM_ENGINE"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "armor_subtitle_high_speed_steam_engine"
+					position = { x = 725 y = 500 }
+					textureFile = ""
+					font = "hoi_12header"
+					borderSize = { x = 0 y = 0}
+					text = "ARMOR_SUBTITLE_HIGH_SPEED_STEAM_ENGINE"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
 
 				containerWindowType = {
 					name = "armour_year_right"
@@ -1190,6 +1216,19 @@ guiTypes = {
 					
 					instantTextBoxType = {
 						name = "armour_year5"
+						position = { x = 60 y = 655 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1875"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+					
+					instantTextBoxType = {
+						name = "armour_year6"
 						position = { x = 60 y = 790 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1202,7 +1241,7 @@ guiTypes = {
 					}
 					
 					instantTextBoxType = {
-						name = "armour_year6"
+						name = "armour_year7"
 						position = { x = 60 y = 885 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1216,7 +1255,7 @@ guiTypes = {
 
 
 					instantTextBoxType = {
-						name = "armour_year7"
+						name = "armour_year8"
 						position = { x = 60 y = 1010 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1290,9 +1329,22 @@ guiTypes = {
 						Orientation = "UPPER_LEFT"
 					}
 					
-					
 					instantTextBoxType = {
 						name = "armour_year5_left"
+						position = { x = 0 y = 655 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1875"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+					
+					
+					instantTextBoxType = {
+						name = "armour_year6_left"
 						position = { x = 0 y = 790 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1305,7 +1357,7 @@ guiTypes = {
 					}
 					
 					instantTextBoxType = {
-						name = "armour_year6_left"
+						name = "armour_year7_left"
 						position = { x = 0 y = 885 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1318,7 +1370,7 @@ guiTypes = {
 					}
 
 					instantTextBoxType = {
-						name = "armour_year7_left"
+						name = "armour_year8_left"
 						position = { x = 0 y = 1010 }
 						textureFile = ""
 						font = "hoi_36header"
@@ -1359,6 +1411,22 @@ guiTypes = {
 			
 			gridboxtype = {
 				name = "armor_tech_velocipede_tree"
+				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			
+			gridboxtype = {
+				name = "armor_tech_steam_car_experiment_tree"
+				position = { x=50 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			
+			gridboxtype = {
+				name = "steam_engine_tree"
 				position = { x=50 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }

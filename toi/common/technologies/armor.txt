@@ -388,4 +388,149 @@ technologies = {
 		}
 	}
 	
+	#From "mechanical_engineering": Steam Engine is here at x = 6, y = 0, High Speed Steam Engine at x = 6, y = 4
+	armor_tech_steam_car_experiment = {
+	
+		
+		
+		path = {
+			leads_to_tech = armor_tech_steam_car_prototype
+			research_cost_coeff = 1
+		}
+		
+		dependencies = {
+			steam_engine = 1
+			high_speed_steam_engine = 1
+		}
+		
+		research_cost = 1.1
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1875.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			fourwheel_vehicle_tech
+		}
+	}
+	
+	armor_tech_steam_car_prototype = {
+	
+		
+		
+		path = {
+			leads_to_tech = armor_tech_steam_car
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 0.95
+		start_year = 1870
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1880.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1885.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			fourwheel_vehicle_tech
+		}
+	}
+	
+	armor_tech_steam_car = {
+		
+		enable_equipments = {
+			armor_equipment_steam_car_0
+		}
+		
+		enable_subunits = {
+			steam_car_support_company
+		}
+		
+		research_cost = 1.4
+		start_year = 1880
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1890.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1895.1.1"
+			}
+			
+			modifier = {
+				factor = 1.25
+				date > "1900.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			fourwheel_vehicle_tech
+		}
+	}
+	
 }
