@@ -559,7 +559,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_war_preparation #get a diamonds gfx
+			picture = GFX_idea_ofs_campbell_diamonds #get a diamonds gfx
 
 			modifier = {
 				consumer_goods_factor = -0.10
@@ -572,7 +572,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_war_preparation #get a diamonds gfx
+			picture = GFX_idea_ofs_campbell_diamonds #get a diamonds gfx
 
 			modifier = {
 				consumer_goods_factor = -0.01
@@ -658,6 +658,32 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				trade_opinion_factor = 0.2
+			}
+		}	
+		afr_supply_methods = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_generic_morale_bonus
+
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+		afr_updated_supply_methods = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_generic_morale_bonus
+
+			modifier = {
+				supply_consumption_factor = -0.10
 			}
 		}
 	}

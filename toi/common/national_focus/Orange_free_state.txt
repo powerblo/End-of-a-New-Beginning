@@ -425,6 +425,9 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					NOT ={
+						state = 1149
+					}
 					free_building_slots = {
 						building = industrial_complex
 						size > 0
@@ -472,6 +475,9 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					NOT ={
+						state = 1149
+					}
 					free_building_slots = {
 						building = arms_factory
 						size > 0
@@ -528,6 +534,9 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					NOT ={
+						state = 1149
+					}
 					free_building_slots = {
 						building = machine_parts_factory
 						size > 0
@@ -557,7 +566,6 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
 	focus = {
 		id = ofs_vic_encorage_factory_jobs
@@ -580,6 +588,9 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
+					NOT ={
+						state = 1149
+					}
 					free_building_slots = {
 						building = industrial_complex
 						size > 0
@@ -611,7 +622,6 @@ focus_tree = {
 		}
 		x = 14
 		y = 3
-
 	}
 	focus = {
 		id = ofs_vic_start_to_connect_our_economy
@@ -1107,7 +1117,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_offer_to_join_with_the_SAR
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_trv_ofs_union
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_offer_joint_guarentees
@@ -1301,7 +1311,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_establish_diplomacy_with_the_west
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_continent_west_europe
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_external_focus
@@ -1328,6 +1338,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			HOL ={
+				country_event = {days = 8 id=boer_states.79}
+			}
+		}
 		x = 33
 		y = 2
 
@@ -1343,6 +1358,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			POR ={
+				country_event = {days = 8 id=boer_states.79}
+			}
+		}
 		x = 35
 		y = 2
 
@@ -1355,6 +1375,16 @@ focus_tree = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
 		}
 		available_if_capitulated = no
+		completion_reward = {
+			USA ={
+				country_event = {days = 8 id=boer_states.79}
+			}
+		}
+		available = {
+			USA = {
+				has_war = no
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1374,6 +1404,27 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if={
+				limit = {
+					PRS = {
+						OR = {
+							has_cosmetic_tag = PRS_GER_liberal
+							has_cosmetic_tag = PRS_GER_bismarck
+							has_cosmetic_tag = PRS_GER_socialist
+						}
+					}
+				}
+				PRS ={
+					country_event = {days = 8 id=boer_states.79}
+				}
+			}
+			else={
+				GER ={
+					country_event = {days = 8 id=boer_states.79}
+				}
+			}
 		}
 		x = 35
 		y = 3
@@ -1401,6 +1452,9 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {afr_supply_methods}
 		}
 		x = 39
 		y = 1
@@ -1483,7 +1537,10 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = universal_male_suffrage
+				remove_idea = property_owners_suffrage
+			}
 		}
 		x = 1
 		y = 5
@@ -1617,6 +1674,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = afr_updated_supply_methods
+				remove_idea = afr_supply_methods
+			}
+		}
 		x = 39
 		y = 4
 
@@ -1693,13 +1756,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			swap_ideas={
+				add_idea = limited_constitution
+				remove_idea = no_constitution
+			}
+		}
 		x = 1
 		y = 6
 
 	}
 	focus = {
 		id = ofs_vic_begin_intergration_of_the_TRV
-		icon = GFX_goal_unknown
+		icon = GFX_goal_trv_ofs_union
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_economic_focus
@@ -1744,7 +1813,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_allow_TRV_citizens_to_vote
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_begin_intergration_of_the_TRV
@@ -1761,7 +1830,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_continue_intergration_of_TRV
-		icon = GFX_goal_unknown
+		icon = GFX_goal_trv_ofs_union
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_allow_TRV_citizens_to_vote

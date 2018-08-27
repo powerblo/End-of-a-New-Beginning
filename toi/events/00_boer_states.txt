@@ -19,7 +19,15 @@ country_event = { #Truce with South African Republic
 	trigger = {
 		TAG = OFS
 		OFS = { has_war_with = TRV }
-		date > 1858.1.1
+		OR = {
+			date > 1858.1.1
+			AND = {
+				date > 1857.11.1
+				OR = {
+					TRV= {surrender_progress > 0.15}
+				}
+			}
+		}
 	}
 		
 	option = {
@@ -2156,7 +2164,104 @@ country_event = { #TRV declines
 	
 	is_triggered_only=yes
 	option = {
-		name = boer_states.78.a #accept
+		name = boer_states.78.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #OFS asks for recognition
+	id = boer_states.79
+	title = boer_states.79.t
+	desc = boer_states.79.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.79.a #recognise them
+		ai_chance = { factor = 80 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.80}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = afr_country_was_recognised
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = afr_recognised_country
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = PRS
+					tag = GER
+				}
+			}
+			set_country_flag = recognised_ofs
+		}
+		
+	}
+	option = {
+		name = boer_states.79.b #who?
+		ai_chance = { factor = 19 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.81}
+		}
+	}
+	option = {
+		name = boer_states.79.c #guarantee them
+		ai_chance = { factor = 1 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.82}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = afr_country_was_recognised
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = afr_recognised_country
+		}
+		give_guarantee = FROM
+		if = {
+			limit = {
+				OR = {
+					tag = PRS
+					tag = GER
+				}
+			}
+			set_country_flag = recognised_ofs
+		}
+	}
+}
+country_event = { #recognition accepted
+	id = boer_states.78
+	title = boer_states.78.t
+	desc = boer_states.78.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.78.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #recognition declined
+	id = boer_states.78
+	title = boer_states.78.t
+	desc = boer_states.78.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.78.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #recognition guaranteed
+	id = boer_states.78
+	title = boer_states.78.t
+	desc = boer_states.78.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.78.a #ok
 		ai_chance = { factor = 100 }
 	}
 }
