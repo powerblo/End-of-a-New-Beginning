@@ -773,7 +773,13 @@ country_event = {
 	
 	option = {
 		name = sevenweekswar.27.a
-		ai_chance = { factor = 60 }
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		custom_effect_tooltip = eoanb_tt_PRS_ngc_historical
 		add_ideas = PRS_idea_anti_ngc_sentiment
 		hidden_effect = {
@@ -796,11 +802,7 @@ country_event = {
 	option = {
 		name = sevenweekswar.27.b
 		ai_chance = { 
-			factor = 40
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			factor = 80
 		}
 		custom_effect_tooltip = eoanb_tt_PRS_ngc_united
 		add_ideas = PRS_idea_anti_ngc_sentiment
