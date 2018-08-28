@@ -838,6 +838,11 @@ focus_tree = {
 			focus = afr_wes_western_protection
 			focus = afr_wes_traditional_western_blend
 		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = afr_progress_tree
+			}
+		}
 		available = {
 			NOT = {
 				has_country_flag = afr_progress_tree

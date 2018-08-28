@@ -1,0 +1,544 @@
+focus_tree = {
+	id = nzl_TAA_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = EGY
+		}
+	}
+	default = no
+	focus = {
+		id = EGY_vic_begin_army_exspansion
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 0
+		y = 0
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = EGY_vic_army_innovations
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_army_innovations
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 2
+		y = 0
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = EGY_vic_begin_army_exspansion
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_new_doctrines
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_army_innovations
+			focus = EGY_vic_begin_army_exspansion
+		}
+		x = 1
+		y = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_increase_army_budget
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_begin_army_exspansion
+		}
+		prerequisite = {
+			focus = EGY_vic_new_doctrines
+		}
+		x = 0
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_military_schools
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_army_innovations
+		}
+		prerequisite = {
+			focus = EGY_vic_new_doctrines
+		}
+		x = 2
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_new_army_expansion
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_military_schools
+			focus = EGY_vic_increase_army_budget
+		}
+		prerequisite = {
+			focus = EGY_vic_reforms_of_ismail
+		}
+		x = 1
+		y = 6
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_the_said_reforms
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 5
+		y = 0
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_the_question_of_the_sudanese_slave_raids
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_the_said_reforms
+		}
+		x = 4
+		y = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_the_welfare_of_the_fellahin
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_the_said_reforms
+		}
+		x = 6
+		y = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_enforce_the_ban
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_the_question_of_the_sudanese_slave_raids
+		}
+		x = 4
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_promulgate_the_saidiyah
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_the_welfare_of_the_fellahin
+		}
+		x = 6
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_expand_cairo
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_promulgate_the_saidiyah
+		}
+		prerequisite = {
+			focus = EGY_vic_enforce_the_ban
+		}
+		x = 5
+		y = 3
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_education_investments
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_expand_cairo
+		}
+		x = 5
+		y = 4
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_reforms_of_ismail
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_education_investments
+		}
+		x = 5
+		y = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_OTO_chains
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		available = {
+			has_country_flag = OTO_puppet
+		}
+		#allow_branch = {
+		#	OR = {
+		#		has_country_flag = OTO_puppet
+		#		OVERLORD = {tag= OTO}
+		#	}
+		#}
+		x = 10
+		y = 0
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_glorify_muhammed_ali
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_OTO_chains
+		}
+		x = 9
+		y = 1
+		mutually_exclusive = {
+			focus = EGY_vic_accept_OTO
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_accept_OTO
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_OTO_chains
+		}
+		mutually_exclusive = {
+			focus = EGY_vic_glorify_muhammed_ali
+		}
+		x = 11
+		y = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_request_more_automony
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_glorify_muhammed_ali
+		}
+		x = 9
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_a_loyal_state
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_accept_OTO
+		}
+		x = 11
+		y = 2
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_bring_gov_into_line_with_OTO
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_a_loyal_state
+		}
+		x = 11
+		y = 3
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_request_firman_stab_succ
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_request_more_automony
+		}
+		x = 9
+		y = 3
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_firman_1867
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_request_firman_stab_succ
+		}
+		x = 9
+		y = 4
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_firman_1873
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_firman_1867
+		}
+		x = 9
+		y = 5
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_our_OTO_independace
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_firman_1873
+		}
+		x = 10
+		y = 6
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_debt_management
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_our_OTO_independace
+		}
+		x = 10
+		y = 7
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_sell_suez_canal_shares
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_debt_management
+		}
+		x = 10
+		y = 8
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_sell_etreria_to_italy
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_debt_management
+		}
+		available = {
+			OR = {
+				ITA = {
+					exists = yes
+				}
+				hidden_trigger={
+				PIE = {
+					has_cosmetic_tag = ITA
+				}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 550
+					owns_state = 983
+				}
+				AND = {
+					MED = {
+						owns_state = 550
+						owns_state = 983
+						OVERLORD = {tag = ROOT}
+					}
+				}
+			}
+		}
+		x = 8
+		y = 8
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = EGY_vic_sell_french_somaliland
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = EGY_vic_debt_management
+		}
+		available = {
+			OR = {
+				owns_state = 268
+				MED = {
+					owns_state = 268
+					OVERLORD = {tag = ROOT}
+				}
+			}
+		}
+		x = 12
+		y = 8
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+}

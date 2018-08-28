@@ -135,7 +135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_liquor_reulations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 1.70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -336,7 +336,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_encorage_immirgration
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_propaganda
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_the_fuctions_of_a_state
@@ -1142,7 +1142,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_mantain_frendly_independant_relations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_offer_joint_guarentees
@@ -1266,7 +1266,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_native_deals
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_tribal_hut
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_external_focus
@@ -1275,14 +1275,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_political_power = 75
+		}
 		x = 31
 		y = 1
 
 	}
 	focus = {
 		id = ofs_vic_begin_land_deals
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_focus_tribal_hut
+		cost = 15.00
 		prerequisite = {
 			focus = ofs_vic_native_deals
 		}
@@ -1290,20 +1293,40 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT ={
+						state = 1149
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 		x = 31
 		y = 2
 
 	}
 	focus = {
 		id = ofs_vic_encorage_more_deals
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_focus_tribal_hut
+		cost = 15.00
 		prerequisite = {
 			focus = ofs_vic_begin_land_deals
 		}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT ={
+						state = 1149
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 		x = 31
 		y = 3
@@ -1329,7 +1352,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_send_emissaries_to_the_netherlands
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
@@ -1349,7 +1372,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_send_emissaries_to_portugal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
@@ -1369,7 +1392,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_send_emissaries_to_the_USA
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_establish_diplomacy_with_the_west
@@ -1394,7 +1417,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_send_emissaries_to_germany
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_send_emissaries_to_the_USA
@@ -1444,7 +1467,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_suppling_our_forces
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_consumer_goods
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_army_focus
@@ -1599,7 +1622,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_new_arms_new_tactics
-		icon = GFX_goal_focus_military_reform
+		icon = GFX_focus_secret_rearmament
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_adopt_new_doctrines
@@ -1623,7 +1646,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_establish_military_command
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_little_entente
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_new_arms_new_tactics
@@ -1662,7 +1685,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ofs_vic_update_supply_methods
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_position_armies
 		cost = 10.00
 		prerequisite = {
 			focus = ofs_vic_suppling_our_forces

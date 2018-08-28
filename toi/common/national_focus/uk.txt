@@ -578,6 +578,9 @@ focus_tree = {
 		y = 1
 		available = {
 			date > 1859.1.1
+			SRS = {
+				exists = yes
+			}
 		}
 		completion_reward = {
 			country_event = {
@@ -1076,10 +1079,19 @@ focus_tree = {
 			focus = ENG_develop_natal
 			focus = ENG_mining_operations
 		}
+		available = {
+			OR = {
+				owns_state = 1149
+				GQW = {
+					owns_state = 1149
+					is_puppet_of = ROOT
+				}
+			}
+		}
 		x = 33
 		y = 4
 		completion_reward = {
-			618 = { 
+			1149 = { 
 				add_building_construction = { 
 					type = industrial_complex 
 					level = 1 
@@ -1131,6 +1143,26 @@ focus_tree = {
 		}
 		x = 35
 		y = 4
+		completion_reward = {
+			if = {
+				limit = {
+					QNL = {
+						exists = no
+					}
+				}
+				add_state_claim = 523
+			}
+			else = {
+				QNL = {add_state_claim = 523}
+			}
+			523 = {
+				owner = {
+					country_event = {
+						id = vbritain.73
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
