@@ -403,7 +403,7 @@ focus_tree = {
 		focus = BRA_coal_and_steel_mining_in_the_west
 		}
 		completion_reward = {
-		1036 = {
+		1038 = {
 		add_building_construction = {
 					type = infrastructure
 					level = 3
@@ -428,9 +428,9 @@ focus_tree = {
 		focus = BRA_settle_the_amazon
 		}
 		completion_reward = {
-		1036 = {
+		505 = {
 		add_building_construction = {
-					type = industrial_complex
+					type = cotton_farm
 					level = 1
 					instant_build = yes
 				}
@@ -801,6 +801,10 @@ focus = {
 		prerequisite = {
 		focus = BRA_rio_de_janeiro_coffee_elites
 		}
+		
+	    mutually_exclusive = {
+		focus = BRA_convince_elitists_to_support_industry
+		}
 
 		completion_reward = {
 	    add_political_power = -75
@@ -813,10 +817,14 @@ focus = {
 		id = BRA_convince_elitists_to_support_industry
 		icon = GFX_goal_generic_national_unity
 		cost = 10
-		x = 20
-		y = 7
+		x = 22
+		y = 6
 
 		prerequisite = {
+		focus = BRA_rio_de_janeiro_coffee_elites
+		}
+		
+	    mutually_exclusive = {
 		focus = BRA_prevent_massive_loans
 		}
 
