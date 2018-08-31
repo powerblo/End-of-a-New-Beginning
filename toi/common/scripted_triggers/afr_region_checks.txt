@@ -334,6 +334,13 @@ is_in_burkina_faso={
 		state = 855
 	}
 }
+is_in_chad={
+	OR ={
+		state = 839
+		state = 660
+		state = 838
+	}
+}
 is_in_colonial_region = {
 	OR={
 		is_in_senegal = yes
@@ -358,6 +365,7 @@ is_in_colonial_region = {
 		is_in_togo = yes
 		is_in_benin = yes
 		is_in_burkina_faso = yes
+		is_in_chad = yes
 	}
 }
 is_colonial_nation = {
