@@ -44,7 +44,14 @@ country_event = {
 country_event = {
     id = acw.1
     title = acw.1.t
-    desc = acw.1.d
+    desc = {
+        trigger = { has_country_flag = USA_LincolnElected }
+        text = acw.1.d
+    }
+    desc = {
+        trigger = { has_country_flag = USA_DouglasElected }
+        text = acw.1.d_douglas
+    }
     picture = GFX_report_event_german_reichstag_gathering
     
     fire_only_once = yes

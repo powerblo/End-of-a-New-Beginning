@@ -146,23 +146,39 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_state_rail_0 }
 		available = { 
-			PRS = { 
-				controls_state = 60 
-				controls_state = 64
-			} 
-		}
-		bypass = {
-			60 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					PRS = { 
+						controls_state = 60 
+						controls_state = 64
+					}
+				}
+				AND = {
+					any_country = {
+						is_subject_of = PRS
+						controls_state = 60
+						controls_state = 64
+					}
 				}
 			}
-			64 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+		}
+		bypass = {
+			OR = {
+				AND = {
+					60 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					64 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
+				has_country_flag = eoanb_flag_PRS_decentralized_ngc
 			}
 		}
 		
@@ -184,16 +200,32 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_berlin_anhalt_rail }
 		available = { 
-			PRS = { 
-				controls_state = 5 
-				controls_state = 63
-				controls_state = 64 
-				controls_state = 68 
-				controls_state = 85 
-			} 
-		}
+			OR = {
+				AND = {
+					PRS = { 
+						controls_state = 5
+						controls_state = 63
+						controls_state = 64
+						controls_state = 68
+						controls_state = 85
+					}
+				}
+				AND = {
+					any_country = {
+						is_subject_of = PRS
+						controls_state = 5
+						controls_state = 63
+						controls_state = 64
+						controls_state = 68
+						controls_state = 85
+					}
+				}
+			}
+		}	
 		bypass = {
-			5 = {
+			OR = {
+				AND = {
+					5 = {
 				free_building_slots = { 
 					building = infrastructure 
 					size < 1
@@ -223,6 +255,9 @@ focus_tree = {
 					size < 1
 				}
 			}
+				}
+				has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			}
 		}
 		
 		completion_reward = {
@@ -246,23 +281,39 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_ostbahn_rail }
 		available = { 
-			PRS = { 
-				controls_state = 66 
-				controls_state = 67
-			} 
-		}
-		bypass = {
-			66 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					PRS = { 
+						controls_state = 66
+						controls_state = 67
+					}
+				}
+				AND = {
+					any_country = {
+						is_subject_of = PRS
+						controls_state = 66
+						controls_state = 67
+					}
 				}
 			}
-			67 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+		}	
+		bypass = {
+			OR = {
+				AND = {
+					66 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					67 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
+				has_country_flag = eoanb_flag_PRS_decentralized_ngc
 			}
 		}
 		
@@ -284,23 +335,39 @@ focus_tree = {
 		}
 		prerequisite = { focus = PRS_silesia_rail }
 		available = { 
-			PRS = { 
-				controls_state = 56
-				controls_state = 57
-			} 
-		}
-		bypass = {
-			56 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					PRS = { 
+						controls_state = 56
+						controls_state = 57
+					}
+				}
+				AND = {
+					any_country = {
+						is_subject_of = PRS
+						controls_state = 56
+						controls_state = 57
+					}
 				}
 			}
-			57 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+		}
+		bypass = {
+			OR = {
+				AND = {
+					56 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					57 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
+				has_country_flag = eoanb_flag_PRS_decentralized_ngc
 			}
 		}
 		

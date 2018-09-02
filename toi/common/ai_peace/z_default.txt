@@ -358,7 +358,15 @@ default_peace = {
 							count > 0
 						}
 						ROOT = { num_of_factories < 5 }
-						NOT = { ROOT = { tag = CHI } }
+						NOT = { 
+							ROOT = { 
+								OR = {
+									tag = CHI 
+									tag = TRV
+									tag = OFS
+								}
+							} 
+						}
 					}
 					AND = {
 						num_claimed_peace_conference_neighbour_states = {
@@ -366,7 +374,15 @@ default_peace = {
 							count > 1
 						}
 						ROOT = { num_of_factories < 10 }
-						NOT = { ROOT = { tag = CHI } }
+						NOT = { 
+							ROOT = { 
+								OR = {
+									tag = CHI 
+									tag = TRV
+									tag = OFS
+								}
+							} 
+						}
 					}
 					AND = {
 						num_claimed_peace_conference_neighbour_states = {
@@ -374,7 +390,15 @@ default_peace = {
 							count > 2
 						}
 						ROOT = { num_of_factories < 20 }
-						NOT = { ROOT = { tag = CHI } }
+						NOT = { 
+							ROOT = { 
+								OR = {
+									tag = CHI 
+									tag = TRV
+									tag = OFS
+								}
+							} 
+						}
 					}
 					AND = {
 						num_claimed_peace_conference_neighbour_states = {
@@ -382,7 +406,15 @@ default_peace = {
 							count > 3
 						}
 						ROOT = { num_of_factories < 50 }
-						NOT = { ROOT = { tag = CHI } }
+						NOT = { 
+							ROOT = { 
+								OR = {
+									tag = CHI 
+									tag = TRV
+									tag = OFS
+								}
+							} 
+						}
 					}
 					AND = {
 						num_claimed_peace_conference_neighbour_states = {
@@ -390,7 +422,15 @@ default_peace = {
 							count > 4
 						}
 						ROOT = { num_of_factories < 100 }
-						NOT = { ROOT = { tag = CHI } }
+						NOT = { 
+							ROOT = { 
+								OR = {
+									tag = CHI 
+									tag = TRV
+									tag = OFS
+								}
+							} 
+						}
 					}
 				}
 			}

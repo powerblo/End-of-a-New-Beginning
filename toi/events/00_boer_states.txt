@@ -19,7 +19,15 @@ country_event = { #Truce with South African Republic
 	trigger = {
 		TAG = OFS
 		OFS = { has_war_with = TRV }
-		date > 1858.1.1
+		OR = {
+			date > 1858.1.1
+			AND = {
+				date > 1857.11.1
+				OR = {
+					TRV= {surrender_progress > 0.15}
+				}
+			}
+		}
 	}
 		
 	option = {
@@ -1504,6 +1512,18 @@ country_event = { #diamonds discovered in the campbell state
 			}
 			GQW = {country_event = {id = boer_states.52 days = 5}}
 		}
+		if={
+			limit = {
+				OR= {
+					has_idea = ofs_bluebacks_heavly_devalued
+					has_idea = ofs_bluebacks_devalued
+					has_idea = ofs_bluebacks
+					has_idea = ofs_bluebacks_valued
+					has_idea = ofs_bluebacks_heavly_valued
+				}
+			}
+			ofs_increase_currency_value = yes
+		}
 	}
 }
 country_event = { # GQW - diamonds have been found in the campbell lands
@@ -1982,5 +2002,266 @@ country_event = { # TRV - Britain gives Swaziland to us as a puppet
 	option = { # fine
 		name = boer_states.71.a
 		puppet = SWZ
+	}
+}
+
+country_event = { #Coal discovered in the north
+	id = boer_states.72
+	title = boer_states.72.t
+	desc = boer_states.72.d
+		
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = OFS
+		OR = {
+			date > 1871.1.1
+			AND = {
+				has_completed_focus = ofs_vic_invest_in_resource_discovery
+				date > 1869.6.12
+			}
+		}
+		owns_state = 778
+	}
+	mean_time_to_happen = {
+		days = 360
+	}
+	option = {
+		name = boer_states.72.a
+		ai_chance = { factor = 100 }
+		778={
+			set_state_flag = coal_mines
+			add_resource = {
+				type = coal
+				amount = 4
+			}
+		}
+		set_country_flag = ofs_discovered_coal
+	}
+}
+country_event = { #gold discovered in the north
+	id = boer_states.73
+	title = boer_states.73.t
+	desc = boer_states.73.d
+		
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = OFS
+		OR = {
+			date > 1871.1.1
+			AND = {
+				has_completed_focus = ofs_vic_invest_in_resource_discovery
+				date > 1869.6.12
+			}
+		}
+		OR = {
+			owns_state = 781
+			owns_state = 780
+		}
+	}
+	mean_time_to_happen = {
+		days = 720
+	}
+	option = {
+		name = boer_states.73.a
+		ai_chance = { factor = 100 }
+		
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ofs_discovered_gold
+				}
+			}
+			set_country_flag = ofs_discovered_gold
+		}
+	}
+}
+country_event = { #OFS sends an envoy
+	id = boer_states.74
+	title = boer_states.74.t
+	desc = boer_states.74.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.74.a #accept the enovy
+		ai_chance = { factor = 85 }
+		add_opinion_modifier = {
+			target = OFS
+			modifier = medium_increase
+		}
+		OFS={
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			set_country_flag = TRV_accepts_envoys
+			country_event = {days = 1 id=boer_states.75}
+		}
+		
+	}
+	option = {
+		name = boer_states.74.b #reject the enovy
+		ai_chance = { factor = 15 }
+		OFS ={
+			country_event = {days = 1 id=boer_states.76}
+		}
+		
+	}
+}
+country_event = { #TRV return the envoy
+	id = boer_states.75
+	title = boer_states.75.t
+	desc = boer_states.75.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.75.a #accept the enovy
+		ai_chance = { factor = 100 }
+		
+	}
+}
+country_event = { #TRV rejects us
+	id = boer_states.76
+	title = boer_states.76.t
+	desc = boer_states.76.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.76.a #we wher rejected
+		ai_chance = { factor = 100 }
+		
+	}
+}
+country_event = { #OFS asks for intergration
+	id = boer_states.77
+	title = boer_states.77.t
+	desc = boer_states.77.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.77.a #accept
+		ai_chance = { factor = 80 }
+		annex_country = {
+			target = OFS
+			transfer_troops = yes
+		}
+		
+	}
+	option = {
+		name = boer_states.77.b #decline, we need an ally not land
+		ai_chance = { factor = 20 }
+		OFS ={
+			country_event = {days = 1 id=boer_states.78}
+		}
+		
+	}
+}
+country_event = { #TRV declines
+	id = boer_states.78
+	title = boer_states.78.t
+	desc = boer_states.78.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.78.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #OFS asks for recognition
+	id = boer_states.79
+	title = boer_states.79.t
+	desc = boer_states.79.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.79.a #recognise them
+		ai_chance = { factor = 80 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.80}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = afr_country_was_recognised
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = afr_recognised_country
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = PRS
+					tag = GER
+				}
+			}
+			set_country_flag = recognised_ofs
+		}
+		
+	}
+	option = {
+		name = boer_states.79.b #who?
+		ai_chance = { factor = 19 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.81}
+		}
+	}
+	option = {
+		name = boer_states.79.c #guarantee them
+		ai_chance = { factor = 1 }
+		FROM ={
+			country_event = {days = 1 id=boer_states.82}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = afr_country_was_recognised
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = afr_recognised_country
+		}
+		give_guarantee = FROM
+		if = {
+			limit = {
+				OR = {
+					tag = PRS
+					tag = GER
+				}
+			}
+			set_country_flag = recognised_ofs
+		}
+	}
+}
+country_event = { #recognition accepted
+	id = boer_states.80
+	title = boer_states.80.t
+	desc = boer_states.80.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.80.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #recognition declined
+	id = boer_states.81
+	title = boer_states.81.t
+	desc = boer_states.81.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.81.a #ok
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = { #recognition guaranteed
+	id = boer_states.82
+	title = boer_states.82.t
+	desc = boer_states.82.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.82.a #ok
+		ai_chance = { factor = 100 }
 	}
 }

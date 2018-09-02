@@ -520,6 +520,19 @@ ideas = {
 				consumer_goods_factor = 0.025
 			}
 		}
+		ofs_SAR_partisans = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_generic_war_preparation
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
 		ofs_campbell_diamonds = {
 			allowed = {
 				owns_state = 1149
@@ -530,7 +543,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_war_preparation #get a diamonds gfx
+			picture = GFX_idea_ofs_campbell_diamonds #get a diamonds gfx
 
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -546,7 +559,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_war_preparation #get a diamonds gfx
+			picture = GFX_idea_ofs_campbell_diamonds #get a diamonds gfx
 
 			modifier = {
 				consumer_goods_factor = -0.10
@@ -559,10 +572,118 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_generic_war_preparation #get a diamonds gfx
+			picture = GFX_idea_ofs_campbell_diamonds #get a diamonds gfx
 
 			modifier = {
 				consumer_goods_factor = -0.01
+			}
+		}
+		afr_encoraged_immirgration = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_international_inflow
+
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+			}
+		}
+		ofs_bluebacks = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = -0.025
+			}
+		}
+		ofs_bluebacks_devalued = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks_devalued #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				trade_opinion_factor = -0.25
+			}
+		}
+		ofs_bluebacks_heavly_devalued = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks_very_devalued #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				trade_opinion_factor = -0.50
+			}
+		}
+		ofs_bluebacks_valued = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks_valued #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.1
+			}
+		}
+		ofs_bluebacks_heavly_valued = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks_very_valued #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = 0.2
+			}
+		}	
+		afr_supply_methods = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_generic_morale_bonus
+
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+		afr_updated_supply_methods = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_generic_morale_bonus
+
+			modifier = {
+				supply_consumption_factor = -0.10
 			}
 		}
 	}

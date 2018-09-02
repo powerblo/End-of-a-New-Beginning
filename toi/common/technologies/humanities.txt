@@ -233,6 +233,16 @@ technologies = {
 		political_power_gain = 0.1
 		MONTHLY_POPULATION = 0.06
 		
+		on_research_complete = {
+			custom_effect_tooltip = eoanb_tt_technology_industrial_society
+		}
+		
+		allow = {
+		 	NOT = {
+				has_idea = agrarian
+			}
+        }
+		
 		path = {
 			leads_to_tech = tech_humanities_social_stratification
 			research_cost_coeff = 1

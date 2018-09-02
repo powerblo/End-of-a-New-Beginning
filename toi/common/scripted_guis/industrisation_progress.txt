@@ -437,6 +437,15 @@ scripted_gui = {
 				if = {
 					limit = {
 						NOT = {owner = {is_guaranteed_by = ROOT}}
+						AND = {
+							NOT = { owner  = {is_puppet = yes}}
+							owner = {
+								OVERLORD = {
+									is_colonial_nation = yes
+									NOT = {tag=ROOT}
+								}
+							}
+						}
 					}
 					owner = {ROOT = {give_guarantee = PREV}}
 				}
@@ -468,45 +477,57 @@ scripted_gui = {
 			colonisation_stage_1_bg_click_enabled={
 				NOT = {check_variable = {ROOT.colonisation_progress_@THIS >0}}
 				check_variable = {ROOT.colonial_power > 79}
-				owner = { 
-					OR = {
-						has_country_flag = @ROOT_colonial_deals
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						OR = {
+							has_country_flag = @ROOT_colonial_deals
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
+						NOT = {has_country_flag = colonal_state}
 					}
-					NOT = {has_country_flag = colonal_state}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_2_bg_click_enabled={	
 				check_variable = {ROOT.colonisation_progress_@THIS =1}
 				check_variable = {ROOT.colonial_power > 99}
-				owner = { 
-					OR = {
-						has_country_flag = @ROOT_colonial_deals
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						OR = {
+							has_country_flag = @ROOT_colonial_deals
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
+						NOT = {has_country_flag = colonal_state}
 					}
-					NOT = {has_country_flag = colonal_state}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_3_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 2}
 				check_variable = {ROOT.colonial_power >124}
-				owner = { 
-					OR = {
-						has_country_flag = @ROOT_colonial_deals
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						OR = {
+							has_country_flag = @ROOT_colonial_deals
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
+						NOT = {has_country_flag = colonal_state}
 					}
-					NOT = {has_country_flag = colonal_state}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_4_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 3}
 				check_variable = {ROOT.colonial_power >154}
-				owner = { 
-					OR = {
-						has_country_flag = @ROOT_colonial_deals
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						OR = {
+							has_country_flag = @ROOT_colonial_deals
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
+						NOT = {has_country_flag = colonal_state}
 					}
-					NOT = {has_country_flag = colonal_state}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_5_bg_click_enabled={
@@ -523,26 +544,580 @@ scripted_gui = {
 			colonisation_stage_6_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 5}
 				check_variable = {ROOT.colonial_power >229}
-				owner = { 
-					NOT = {has_country_flag = colonal_state}
-					OR = {
-						is_puppet_of = ROOT
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						NOT = {has_country_flag = colonal_state}
+						OR = {
+							is_puppet_of = ROOT
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
 					}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_7_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 6}
 				check_variable = {ROOT.colonial_power >259}
-				owner = { 
-					NOT = {has_country_flag = colonal_state}
-					OR = {
-						is_puppet_of = ROOT
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						NOT = {has_country_flag = colonal_state}
+						OR = {
+							is_puppet_of = ROOT
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
 					}
+					is_claimed_by = ROOT
 				}
 			}
         }
+		ai_weights = {
+			colonisation_stage_1_bg_click = {
+				ai_will_do = {
+            		factor = -1
+            		modifier = {
+            		    any_neighbor_state = {
+							owner = {tag = ROOT}
+						}
+						add = 5
+            		}
+					modifier = {
+            		    is_in_senegal = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_senegal = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_senegal = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_manuritania = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_manuritania = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_manuritania = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_mali = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_mali = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_mali = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_guinea = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_guinea = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_guinea = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_sierra_leone = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_sierra_leone = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_sierra_leone = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_nigeria = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_nigeria = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_nigeria = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_gabon = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_gabon = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_gabon = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_kongo = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_kongo = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_kongo = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_angola = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_angola = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_angola = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_african_horn = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_african_horn = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_african_horn = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_nambia = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_nambia = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_nambia = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_rhodesia = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_rhodesia = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_rhodesia = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_zanzabar = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_zanzabar = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_zanzabar = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_kenya = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_kenya = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_kenya = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_uganda = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_uganda = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_uganda = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_equatorial_africa = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_equatorial_africa = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_equatorial_africa = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_ivory_coast = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_ivory_coast = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_ivory_coast = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_ghana = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_ghana = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_ghana = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_niger = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_niger = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_niger = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_togo = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_togo = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_togo = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_benin = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_benin = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_benin = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_burkina_faso = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_burkina_faso = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_burkina_faso = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = {
+            		    is_in_chad = yes
+						ROOT ={
+							OR= {
+								any_owned_state ={
+									is_in_chad = yes
+								}
+								any_country = {
+									OVERLORD = {tag = FROM}
+									any_owned_state ={
+										is_in_chad = yes
+									}
+								}
+							}
+						}	
+						add = 5
+            		}
+					modifier = { # ENG historical colonies
+            		    OR = {
+							is_in_nigeria = yes
+							is_in_togo = yes
+							is_in_kenya = yes
+							is_in_uganda = yes
+							is_in_rhodesia = yes
+							is_in_sierra_leone = yes
+							is_in_ghana = yes
+						}
+						add = 5
+						ROOT = {
+							tag = ENG
+						}
+            		}
+					modifier = {#German historical colonies
+            		    OR = {
+							is_in_equatorial_africa = yes
+							is_in_nambia = yes
+							is_in_zanzabar = yes
+							is_in_togo = yes
+						}
+						add = 5
+						ROOT = {
+							tag = PRS
+						}
+            		}
+					modifier = {#porugese historical colonies
+            		    OR = {
+							is_in_angola = yes
+						}
+						add = 5
+						ROOT = {
+							tag = POR
+						}
+            		}
+					modifier = {#french historical colonies
+            		    OR = {
+							is_in_ivory_coast = yes
+							is_in_mali = yes
+							is_in_manuritania = yes
+							is_in_gabon = yes
+							is_in_niger = yes
+							is_in_senegal = yes
+						}
+						add = 5
+						ROOT = {
+							tag = FRA
+						}
+            		}
+					modifier = {#belgim historical colonies
+            		    OR = {
+							is_in_kongo = yes
+						}
+						add = 5
+						ROOT = {
+							tag = BEL
+						}
+            		}
+					
+        		}
+			}
+			colonisation_stage_2_bg_click = {
+       			ai_will_do = {
+            		factor = 10
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 2}
+						}
+						add = -5
+            		}
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 3}
+						}
+						add = -5
+            		}
+        		}
+   			}
+			colonisation_stage_3_bg_click = {
+       			ai_will_do = {
+            		factor = 15
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 3}
+						}
+						add = -5
+            		}
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 4}
+						}
+						add = -10
+            		}
+        		}
+   			}
+			colonisation_stage_4_bg_click = {
+       			ai_will_do = {
+            		factor = 20
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 4}
+						}
+						add = -10
+            		}
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 5}
+						}
+						add = -10
+            		}
+        		}
+   			}
+			colonisation_stage_5_bg_click = {
+       			ai_will_do = {
+            		factor = 40
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 5}
+						}
+						add = -20
+            		}
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 6}
+						}
+						add = -20
+            		}
+        		}
+   			}
+			colonisation_stage_6_bg_click = {
+       			ai_will_do = {
+            		factor = 30
+					modifier = {
+            		    any_state = {
+							check_variable = {ROOT.colonisation_progress_@THIS > 6}
+						}
+						add = -20
+            		}
+        		}
+   			}
+			colonisation_stage_7_bg_click = {
+       			ai_will_do = {
+            		factor = 50
+        		}
+   			}
+		}
 	}
 	
 }

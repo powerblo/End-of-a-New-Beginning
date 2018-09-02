@@ -7,6 +7,7 @@ focus_tree = {
 			add = 16
 			OR = {
 				tag =ZUL
+				tag =MED
 			}
 		}
 	}
@@ -39,6 +40,11 @@ focus_tree = {
 			focus = afr_inw_our_way_not_thiers
 		}
 		available = {
+			NOT = {
+				has_country_flag = afr_traditional_tree
+			}
+		}
+		allow_branch = {
 			NOT = {
 				has_country_flag = afr_traditional_tree
 			}

@@ -12,6 +12,7 @@ focus_tree = {
 		id = PIE_Risorgimento
 		icon = GFX_goal_focus_resorgimento
 		cost = 10.00
+		bypass = { has_country_flag = PIE_Plombieres_Starts_Focus_Clear }
 		x = 8
 		y = 0
 			available_if_capitulated = no
@@ -33,6 +34,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Plombieres_Meeting
 		}
+
 		x = 8
 		y = 3
 
@@ -62,6 +64,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Risorgimento
 		}
+		bypass = { has_country_flag = PIE_Plombieres_Starts_Focus_Clear }
 		x = 8
 		y = 1
 			available_if_capitulated = no
@@ -220,6 +223,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = PIE_Annex_Central_Italian_States
+			annex_country = {
+				target = TUS
+				transfer_troops = yes
+			}
 		}
 
 	}
@@ -233,6 +240,11 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = PIE_Occupy_Central_Italy
+		}
+		available = {
+			NOT = {
+				has_war = yes
+			}
 		}
 		x = 8
 		y = 7
@@ -306,7 +318,12 @@ focus_tree = {
 
 			}
 		}
-
+        
+		bypass = {
+		    NOT = {
+			    country_exists = NSC
+			}
+		}
 
 
 	}

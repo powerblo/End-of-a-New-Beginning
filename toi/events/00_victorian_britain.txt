@@ -1789,6 +1789,44 @@ country_event = { # The Origin of Species
 	}
 }
 
+country_event = { # Britian claims southern new guinea
+	id = vbritain.73
+	title = vbritain.73.t
+	desc = vbritain.73.d
+	picture = GFX_report_event_saf_soldiers
+		
+	is_triggered_only = yes
+		
+	option = { # cede it
+		name = vbritain.73.a
+		if = {
+			limit = {
+				QNL = {
+					exists = yes
+				}
+			}
+			QNL = {
+				set_state_owner = 523
+			}
+		}
+		else = {
+			ENG = {
+				set_state_owner = 523
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # Preposterous!
+		name = vbritain.73.b
+		add_political_power = 15
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
 #----------------------------------------------------------------------------------------------
 # EVENTS RELATED TO BRITISH ELECTIONS
 #----------------------------------------------------------------------------------------------

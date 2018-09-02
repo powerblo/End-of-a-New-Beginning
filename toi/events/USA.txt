@@ -1787,13 +1787,15 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_country_flag = USA_Civil_War_Avoid_Attempt_1
-							has_country_flag = USA_Civil_War_Avoid_Attempt_2
-							has_country_flag = USA_Civil_War_Avoid_Attempt_3
-							has_country_flag = USA_Civil_War_Avoid_Attempt_4
-							has_country_flag = USA_Civil_War_Avoid_Attempt_5
-							has_country_flag = USA_Civil_War_Avoid_Attempt_6
-							has_country_flag = USA_Civil_War_Avoid_Attempt_7
+							AND = {
+								has_country_flag = USA_Civil_War_Avoid_Attempt_1
+								has_country_flag = USA_Civil_War_Avoid_Attempt_2
+								has_country_flag = USA_Civil_War_Avoid_Attempt_3
+								has_country_flag = USA_Civil_War_Avoid_Attempt_4
+								has_country_flag = USA_Civil_War_Avoid_Attempt_5
+								has_country_flag = USA_Civil_War_Avoid_Attempt_6
+								has_country_flag = USA_Civil_War_Avoid_Attempt_7
+							}
 						}
 					}
 					hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
@@ -1807,13 +1809,15 @@ country_event = {
 					}
 				if = {
 					limit = {
-						has_country_flag = USA_Civil_War_Avoid_Attempt_1
-						has_country_flag = USA_Civil_War_Avoid_Attempt_2
-						has_country_flag = USA_Civil_War_Avoid_Attempt_3
-						has_country_flag = USA_Civil_War_Avoid_Attempt_4
-						has_country_flag = USA_Civil_War_Avoid_Attempt_5
-						has_country_flag = USA_Civil_War_Avoid_Attempt_6
-						has_country_flag = USA_Civil_War_Avoid_Attempt_7
+						AND = {
+							has_country_flag = USA_Civil_War_Avoid_Attempt_1
+							has_country_flag = USA_Civil_War_Avoid_Attempt_2
+							has_country_flag = USA_Civil_War_Avoid_Attempt_3
+							has_country_flag = USA_Civil_War_Avoid_Attempt_4
+							has_country_flag = USA_Civil_War_Avoid_Attempt_5
+							has_country_flag = USA_Civil_War_Avoid_Attempt_6
+							has_country_flag = USA_Civil_War_Avoid_Attempt_7
+						}
 					}
 					hidden_effect = { USA = { country_event = { days = 30 id = usa.15 } } }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
@@ -2457,7 +2461,7 @@ country_event = {
 				set_country_flag = USAUtah_War_Over
 			}
 			hidden_effect = { news_event = { id = utah_news.1 } }
-			remove_ideas = USA_UtahWar
+			remove_ideas = USA_UtahWar_2
 		}
 	}
 #Utah Refused Annexation
@@ -3873,7 +3877,7 @@ country_event = {
 		
 		option = {
 			name = usa.65.a
-			remove_ideas = USA_UtahWar
+			remove_ideas = USA_UtahWar_2
 			swap_ideas = {
 				remove_idea = state_religion
 				add_idea = secular_state
@@ -3891,7 +3895,7 @@ country_event = {
 		}
 		option = {
 			name = usa.65.b
-			remove_ideas = USA_UtahWar
+			remove_ideas = USA_UtahWar_2
 			clr_country_flag = USA_UtahWar_Escalated
 			if = {
 				limit = {
@@ -3925,7 +3929,7 @@ country_event = {
 			name = usa.66.a
 			add_political_power = -100
 			clr_country_flag = USA_UtahWar_Escalated
-			remove_ideas = USA_UtahWar
+			remove_ideas = USA_UtahWar_2
 		}
 }
 
@@ -3938,8 +3942,6 @@ news_event = {
 		title = usa_news.0.t
 		desc = usa_news.0.d
 		picture = GFX_news_event_panic_eighteen_fifty
-
-		fire_only_once = yes
 
 		major = yes
 		
