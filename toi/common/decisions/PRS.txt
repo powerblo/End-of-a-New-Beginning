@@ -231,17 +231,7 @@ political_actions = {
 				HSD = { remove_state_core = 1061 }
 				HAN = { remove_state_core = 56 }
 				HAN = { remove_state_core = 59 }
-				MCK = { remove_state_core = 61 }
-				MCK = { remove_state_core = 1034 }
-				LCK = { remove_state_core = 938 }
-				HAM = { remove_state_core = 868 }
-				BRE = { remove_state_core = 867 }
-				OLD = { remove_state_core = 745 }
 				OLD = { remove_state_core = 1035 }
-				FRK = { remove_state_core = 869 }
-				HES = { remove_state_core = 55 }
-				THU = { remove_state_core = 60 }
-				SAX = { remove_state_core = 65 }
 			}
 		}
 		
@@ -356,6 +346,511 @@ political_actions = {
 					remove_state_core = 1032
 				}
 			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Mecklenburg
+	eoanb_decision_PRS_annex_NGC_MCK = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			MCK = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = MCK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = MCK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_MCK
+			hidden_effect = {
+				annex_country = {
+					target = MCK
+					transfer_troops = yes
+				}
+				MCK = {
+					remove_state_core = 61
+					remove_state_core = 1034
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Lubeck
+	eoanb_decision_PRS_annex_NGC_LCK = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			LCK = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = LCK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = LCK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_LCK
+			hidden_effect = {
+				annex_country = {
+					target = LCK
+					transfer_troops = yes
+				}
+				LCK = {
+					remove_state_core = 938
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Hamburg
+	eoanb_decision_PRS_annex_NGC_HAM = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			HAM = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = HAM
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = HAM
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_HAM
+			hidden_effect = {
+				annex_country = {
+					target = HAM
+					transfer_troops = yes
+				}
+				HAM = {
+					remove_state_core = 868
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Bremen
+	eoanb_decision_PRS_annex_NGC_BRE = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			BRE = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = BRE
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = BRE
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_BRE
+			hidden_effect = {
+				annex_country = {
+					target = BRE
+					transfer_troops = yes
+				}
+				BRE = {
+					remove_state_core = 867
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Oldenburg
+	eoanb_decision_PRS_annex_NGC_OLD = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			OLD = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = OLD
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = OLD
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_OLD
+			hidden_effect = {
+				annex_country = {
+					target = OLD
+					transfer_troops = yes
+				}
+				OLD = {
+					remove_state_core = 745
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Saxony
+	eoanb_decision_PRS_annex_NGC_SAX = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			SAX = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = SAX
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = SAX
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_SAX
+			hidden_effect = {
+				annex_country = {
+					target = SAX
+					transfer_troops = yes
+				}
+				SAX = {
+					remove_state_core = 65
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Thuringia
+	eoanb_decision_PRS_annex_NGC_THU = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			THU = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = THU
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = THU
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_THU
+			hidden_effect = {
+				annex_country = {
+					target = THU
+					transfer_troops = yes
+				}
+				THU = {
+					remove_state_core = 60
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Hesse
+	eoanb_decision_PRS_annex_NGC_HES = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			HES = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = HES
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = HES
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_HES
+			hidden_effect = {
+				annex_country = {
+					target = HES
+					transfer_troops = yes
+				}
+				HES = {
+					remove_state_core = 55
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Frankfurt
+	eoanb_decision_PRS_annex_NGC_FRK = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.25
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			FRK = { is_subject_of = PRS }
+			date > 1869.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = FRK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = FRK
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_FRK
+			hidden_effect = {
+				annex_country = {
+					target = FRK
+					transfer_troops = yes
+				}
+				FRK = {
+					remove_state_core = 869
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
 		}
 		
 		ai_will_do = {
