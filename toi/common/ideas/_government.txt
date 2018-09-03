@@ -405,7 +405,7 @@ ideas = {
 					tooltip = eoanb_law_tt_no_constitution
 				}
 				hidden_trigger = {
-					always = yes
+					always = no
 				}
 			}
 
@@ -429,11 +429,11 @@ ideas = {
 			picture = GFX_idea_human_rights
 			
 			available = {
-				NOT = {
-					OR = {
-						has_idea = slavery
-						has_idea = tribal_slavery
-					}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_human_rights
+				}
+				hidden_trigger = {
+					always = no
 				}
 			}
 
@@ -461,9 +461,11 @@ ideas = {
 			picture = GFX_idea_constitution_adopted
 
 			available = {
-				has_stability > 0.25
-				NOT = {
-					has_idea = pre_industrial_era
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_constitution_adopted
+				}
+				hidden_trigger = {
+					always = no
 				}
 			}
 
@@ -492,7 +494,12 @@ ideas = {
 			picture = GFX_idea_limited_constitution
 
 			available = {
-				has_stability > 0.25
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_limited_constitution
+				}
+				hidden_trigger = {
+					always = no
+				}
 			}
 
 			modifier = {
@@ -524,24 +531,11 @@ ideas = {
 			picture = GFX_idea_no_elections
 			
 			available = {
-				NOT = {
-					OR = {
-						AND = {
-							has_government = centrism
-							NOT = { has_idea = absolutism }
-							NOT = { has_idea = no_constitution }
-						}
-						AND = {
-							has_government = social_egalitarianism
-							NOT = { has_idea = absolutism }
-							NOT = { has_idea = no_constitution }
-						}
-						AND = {
-							has_government = radical_democracy
-							NOT = { has_idea = absolutism }
-							NOT = { has_idea = no_constitution }
-						}
-					}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_no_elections
+				}
+				hidden_trigger = {
+					always = no
 				}
 			}
 
@@ -569,7 +563,7 @@ ideas = {
 					tooltip = eoanb_law_tt_one_party_elections
 				}
 				hidden_trigger = {
-					always = yes
+					always = no
 				}
 			}
 
@@ -603,7 +597,7 @@ ideas = {
 					tooltip = eoanb_law_tt_limited_elections
 				}
 				hidden_trigger = {
-					always = yes
+					always = no
 				}
 			}
 
@@ -632,8 +626,11 @@ ideas = {
 			picture = GFX_idea_free_elections
 
 			available = {
-				NOT = {
-					has_idea = absolutism
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_free_elections
+				}
+				hidden_trigger = {
+					always = no
 				}
 			}
 

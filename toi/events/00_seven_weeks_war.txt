@@ -601,6 +601,10 @@ country_event = {
 		declare_war_on = { target = SAX type = annex_everything }
 		hidden_effect = {
 			SAX = { country_event = { id = sevenweekswar.24 } }
+			add_named_threat = { 
+				threat = 5
+				name = eoanb_threat_sww_war
+			}
 			if = {
 				limit = {
 					is_historical_focus_on = yes
@@ -688,6 +692,7 @@ country_event = {
 			clr_global_flag = eoanb_flag_seven_weeks_war_ongoing
 			HAN = { annex_country = { target = OLD transfer_troops = no } }
 			WUR = { transfer_state = 1033 }
+			AUS = { set_country_flag = AUS_flag_won_sww }
 			AUS = {
 				remove_ideas = PRS_idea_weakened_sww
 			}

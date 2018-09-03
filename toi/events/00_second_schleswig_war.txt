@@ -270,6 +270,10 @@ country_event = {
 		custom_effect_tooltip = eoanb_tt_event_secschwar_12
 		hidden_effect = {
 			declare_war_on = { target = DEN type = annex_everything }
+			add_named_threat = { 
+				threat = 3
+				name = eoanb_threat_ssw_war
+			}
 			PRS = {
 				annex_country = {
 					target = MCK

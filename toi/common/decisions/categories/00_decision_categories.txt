@@ -142,3 +142,13 @@ eoanb_category_suez_canal = {
 		has_country_flag = FRA_suez_company
 	}
 }
+
+aggressive_expansion_category = {
+	icon = generic_political_actions
+	
+	visible = {
+		any_other_country = {
+			has_added_tension_amount > 10
+		}
+	}
+}
