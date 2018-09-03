@@ -601,6 +601,10 @@ country_event = {
 		declare_war_on = { target = SAX type = annex_everything }
 		hidden_effect = {
 			SAX = { country_event = { id = sevenweekswar.24 } }
+			add_named_threat = { 
+				threat = 5
+				name = eoanb_threat_sww_war
+			}
 			if = {
 				limit = {
 					is_historical_focus_on = yes
