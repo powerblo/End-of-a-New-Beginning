@@ -42,7 +42,7 @@ country_event = {
 	trigger = {
 		has_country_flag = containment_target
 		NOT = { has_global_flag = containment_successful }
-		surrender_progress > 0.6
+		surrender_progress > 0.5
 	}
 
 	mean_time_to_happen = {
@@ -70,7 +70,7 @@ country_event = {
 	trigger = {
 		has_country_flag = containment_target
 		has_global_flag = containment_successful
-		surrender_progress < 0.6
+		surrender_progress < 0.5
 	}
 
 	mean_time_to_happen = {
