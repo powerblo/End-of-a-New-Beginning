@@ -292,4 +292,26 @@ wargoal_types = {
 		annex_threat_factor = 0.1
 		annex_cost = -75
 	}
+
+	contain_wargoal = { #aggressive expansion curtailing
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = CONTAIN_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		liberate = {
+			always = yes
+		}
+
+		threat = 1
+		puppet_cost = 50
+	}
 }
