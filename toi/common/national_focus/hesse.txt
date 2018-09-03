@@ -261,6 +261,8 @@ focus_tree = {
 		}
 	}
 	
+	#diplomatic tree	
+	
 	focus = {
 	    id = HES_foreign_policy
 		icon = GFX_no_idea_lol
@@ -310,7 +312,40 @@ focus_tree = {
 			focus = HES_neutrality
 		}
 		completion_reward = {
-		
+		    add_opinion_modifier = {
+			    target = PRS
+				modifier = HES_diplomacy
+			}
+			PRS = {
+			    add_opinion_modifier = {
+				    target = HES
+					modifier = HES_diplomacy
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = HES_PRS_rifles
+		icon = GFX_no_idea_lol
+		x = 4
+		y = 2
+		cost = 10
+		ai_will_do = {
+		    factor = 40
+		}
+		available = {
+		    country_exists = PRS
+		}
+		prerequisite = {
+		    focus = HES_PRS_embassy
+		}
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+			    type = infantry_equipment_rifle_0
+				amount = 5000
+				producer = PRS
+			}
 		}
 	}
 	
@@ -332,6 +367,30 @@ focus_tree = {
 		}
 		completion_reward = {
 		    add_stability = 0.05
+		}
+	}
+	
+	focus = {
+	    id = HES_armed_neutrality
+		icon = GFX_no_idea_lol
+		x = 6
+		y = 2
+		cost = 10
+		ai_will_do = {
+		    factor = 40
+		}
+		prerequisite = {
+		    focus = HES_neutrality
+		}
+		completion_reward = {
+		    55 = {
+			    add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+			        type = arms_factory
+				    level = 2
+				    instant_build = yes
+			    }
+			}
 		}
 	}
 	
@@ -370,7 +429,40 @@ focus_tree = {
 			focus = HES_neutrality
 		}
 		completion_reward = {
-		    
+		    add_opinion_modifier = {
+			    target = AUS
+				modifier = HES_diplomacy
+			}
+			AUS = {
+			    add_opinion_modifier = {
+				    target = HES
+					modifier = HES_diplomacy
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = HES_AUS_rifles
+		icon = GFX_no_idea_lol
+		x = 8
+		y = 2
+		cost = 10
+		ai_will_do = {
+		    factor = 40
+		}
+		available = {
+		    country_exists = AUS
+		}
+		prerequisite = {
+		    focus = HES_AUS_embassy
+		}
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+			    type = infantry_equipment_rifle_0
+				amount = 5000
+				producer = AUS
+			}
 		}
 	}
 }
