@@ -1101,6 +1101,77 @@ eoanb_religious_affairs = {
 	
 }
 
+#Political Actions
+political_actions = {
+	
+	eoanb_decision_generic_independence_struggle = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				has_war_support > 0.25
+				ROOT = {
+					OVERLORD = {
+						has_stability < 0.35
+					}
+				}
+			}
+		}
+		
+		visible = {
+			ROOT = {
+				is_subject = yes
+			}
+			NOT = {
+				OR = {
+					has_autonomy_state = autonomy_dominion
+					has_autonomy_state = autonomy_principality
+					has_autonomy_state = autonomy_grand_principality
+					has_autonomy_state = autonomy_protectorate
+					has_autonomy_state = autonomy_imperial_protectorate
+					has_autonomy_state = autonomy_personal_union
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 500 
+		
+		days_remove = 14
+		
+		cost = 125
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = eoanb_idea_independence_struggle
+				days = 90
+			}
+			hidden_effect = {
+				ROOT = {
+					OVERLORD = { country_event = { id = independence.1 } }
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.25
+		}
+		
+		remove_effect = {
+			country_event = { id = independence.2 }
+		}
+		
+		#AI can be incited to do this, will add later
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+}
+
 #Foreign Politics
 foreign_politics = {
 	

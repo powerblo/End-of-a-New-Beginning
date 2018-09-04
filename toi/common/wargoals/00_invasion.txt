@@ -314,4 +314,25 @@ wargoal_types = {
 		threat = 1
 		puppet_cost = 50
 	}
+	
+	independence_wargoal = { #subjects fighting for independence
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = INDEPENDENCE_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		threat = 0.7
+	}
 }
