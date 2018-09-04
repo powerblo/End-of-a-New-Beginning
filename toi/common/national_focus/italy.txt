@@ -24,8 +24,8 @@ focus_tree = {
 		id = ITA_Industry_Agriculture_Focus
 		icon = GFX_goal_unknown
 		cost = 10.00
-		x = 26
-		y = 2
+		x = 37
+		y = 0
 			completion_reward = {
 					add_offsite_building = {
 							type = industrial_complex
@@ -52,7 +52,7 @@ focus_tree = {
 		id = ITA_Military_Focus
 		icon = GFX_goal_unknown
 		cost = 10.00
-		x = 36
+		x = 25
 		y = 1
 			completion_reward = {
 					army_experience = 10
@@ -80,11 +80,8 @@ focus_tree = {
 		id = ITA_Industrialization
 		icon = GFX_focus_ITA_Industry
 		cost = 10.00
-		allow_branch = {
-			always = no 
-		}
-		x = 26
-		y = 2
+		x = 37
+		y = 0
 			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
@@ -693,14 +690,188 @@ focus_tree = {
 
 	}
 	focus = {
+		id = ITA_Regio_Esercito
+		icon = GFX_focus_ITA_Royal_Army
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Military_Focus
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = ITA_Deal_with_Brigandage
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Regio_Esercito
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = ITA_Carbinieri
+		icon = GFX_focus_ITA_Cav_1
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Deal_with_Brigandage
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = ITA_IV_Corps
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Deal_with_Brigandage
+		}
+		x = 23
+		y = 4
+
+	}
+	focus = {
+		id = ITA_Creation_Decree
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_IV_Corps
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = ITA_Corazzieri
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Carbinieri
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = ITA_Regia_Marina
+		icon = GFX_focus_ITA_Marina
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Deal_with_Brigandage
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = ITA_Purchase_Foreign_Ships
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Regia_Marina
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = ITA_Corpo_Aeronautico_Militare
+		icon = GFX_focus_ITA_Balloon
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Deal_with_Brigandage
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = ITA_Expand_Balloon_Activites
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Corpo_Aeronautico_Militare
+		}
+		x = 29
+		y = 5
+
+	}
+	focus = {
+		id = ITA_Partial_Unification_of_the_Army
+		icon = GFX_focus_ITA_Royal_Army
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Purchase_Foreign_Ships
+		}
+		prerequisite = {
+			focus = ITA_Creation_Decree
+		}
+		prerequisite = {
+			focus = ITA_Corazzieri
+		}
+		prerequisite = {
+			focus = ITA_Expand_Balloon_Activites
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = ITA_Combine_Italian_Fleets
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Partial_Unification_of_the_Army
+		}
+		x = 29
+		y = 7
+
+	}
+	focus = {
+		id = ITA_Unified_Naval_Doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Combine_Italian_Fleets
+		}
+		x = 27
+		y = 9
+
+	}
+	focus = {
+		id = ITA_A_True_Pier_of_Europe
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Unified_Naval_Doctrine
+		}
+		x = 28
+		y = 11
+
+	}
+	focus = {
+		id = ITA_Militarize_Merchant_Navy
+		icon = GFX_focus_ITA_Merchant_Fleet
+		cost = 10.00
+		prerequisite = {
+			focus = ITA_Combine_Italian_Fleets
+		}
+		x = 29
+		y = 10
+
+	}
+	focus = {
 		id = ITA_Northern_Industry
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Industrialization
 		}
-		x = 23
-		y = 3
+		x = 34
+		y = 1
 
 	}
 	focus = {
@@ -710,8 +881,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Northern_Industry
 		}
-		x = 21
-		y = 4
+		x = 32
+		y = 2
 
 	}
 	focus = {
@@ -721,8 +892,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Hydropower
 		}
-		x = 21
-		y = 5
+		x = 32
+		y = 3
 
 	}
 	focus = {
@@ -732,8 +903,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Industry_Agriculture_Focus
 		}
-		x = 26
-		y = 3
+		x = 37
+		y = 1
 			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
@@ -775,8 +946,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 23
-		y = 4
+		x = 34
+		y = 2
 
 	}
 	focus = {
@@ -786,8 +957,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Turn_Weeds_Into_Food
 		}
-		x = 23
-		y = 5
+		x = 34
+		y = 3
 
 	}
 	focus = {
@@ -797,8 +968,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 25
-		y = 4
+		x = 36
+		y = 2
 
 	}
 	focus = {
@@ -808,8 +979,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Tomatoes
 		}
-		x = 25
-		y = 5
+		x = 36
+		y = 3
 
 	}
 	focus = {
@@ -819,8 +990,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Even_Better_Pasta
 		}
-		x = 25
-		y = 6
+		x = 36
+		y = 4
 
 	}
 	focus = {
@@ -830,8 +1001,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 27
-		y = 4
+		x = 38
+		y = 2
 			completion_reward = {
 
 }
@@ -844,8 +1015,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Rethink_Land_Policies
 		}
-		x = 27
-		y = 5
+		x = 38
+		y = 3
 			completion_reward = {
 
 }
@@ -858,8 +1029,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Remove_Fuedal_Sytems
 		}
-		x = 27
-		y = 6
+		x = 38
+		y = 4
 			completion_reward = {
 					country_event = {
 							id = ita.9
@@ -875,8 +1046,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Industrialization
 		}
-		x = 28
-		y = 3
+		x = 39
+		y = 1
 
 	}
 	focus = {
@@ -886,8 +1057,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Agriculture_Revival
 		}
-		x = 29
-		y = 4
+		x = 40
+		y = 2
 
 	}
 	focus = {
@@ -897,8 +1068,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Prevent_Emigration
 		}
-		x = 29
-		y = 5
+		x = 40
+		y = 3
 
 	}
 	focus = {
@@ -917,182 +1088,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Spread_Moderning_Farming
 		}
-		x = 26
-		y = 7
-
-	}
-	focus = {
-		id = ITA_Regio_Esercito
-		icon = GFX_focus_ITA_Royal_Army
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Military_Focus
-		}
-		x = 36
-		y = 2
-
-	}
-	focus = {
-		id = ITA_Deal_with_Brigandage
-		icon = GFX_goal_generic_military_sphere
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Regio_Esercito
-		}
-		x = 36
-		y = 3
-
-	}
-	focus = {
-		id = ITA_Carbinieri
-		icon = GFX_focus_ITA_Cav_1
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 32
-		y = 4
-
-	}
-	focus = {
-		id = ITA_IV_Corps
-		icon = GFX_focus_generic_little_entente
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 34
-		y = 4
-
-	}
-	focus = {
-		id = ITA_Creation_Decree
-		icon = GFX_focus_generic_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_IV_Corps
-		}
-		x = 34
+		x = 37
 		y = 5
-
-	}
-	focus = {
-		id = ITA_Corazzieri
-		icon = GFX_goal_generic_cavalry
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Carbinieri
-		}
-		x = 32
-		y = 5
-
-	}
-	focus = {
-		id = ITA_Regia_Marina
-		icon = GFX_focus_ITA_Marina
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 38
-		y = 4
-
-	}
-	focus = {
-		id = ITA_Purchase_Foreign_Ships
-		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Regia_Marina
-		}
-		x = 38
-		y = 5
-
-	}
-	focus = {
-		id = ITA_Corpo_Aeronautico_Militare
-		icon = GFX_focus_ITA_Balloon
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 40
-		y = 4
-
-	}
-	focus = {
-		id = ITA_Expand_Balloon_Activites
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Corpo_Aeronautico_Militare
-		}
-		x = 40
-		y = 5
-
-	}
-	focus = {
-		id = ITA_Partial_Unification_of_the_Army
-		icon = GFX_focus_ITA_Royal_Army
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Purchase_Foreign_Ships
-		}
-		prerequisite = {
-			focus = ITA_Creation_Decree
-		}
-		prerequisite = {
-			focus = ITA_Corazzieri
-		}
-		prerequisite = {
-			focus = ITA_Expand_Balloon_Activites
-		}
-		x = 36
-		y = 6
-
-	}
-	focus = {
-		id = ITA_Combine_Italian_Fleets
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Partial_Unification_of_the_Army
-		}
-		x = 40
-		y = 7
-
-	}
-	focus = {
-		id = ITA_Unified_Naval_Doctrine
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Combine_Italian_Fleets
-		}
-		x = 38
-		y = 9
-
-	}
-	focus = {
-		id = ITA_A_True_Pier_of_Europe
-		icon = GFX_goal_focus_continent_west_europe
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Unified_Naval_Doctrine
-		}
-		x = 39
-		y = 11
-
-	}
-	focus = {
-		id = ITA_Militarize_Merchant_Navy
-		icon = GFX_focus_ITA_Merchant_Fleet
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Combine_Italian_Fleets
-		}
-		x = 40
-		y = 10
 
 	}
 	focus = {
@@ -1367,7 +1364,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Partial_Unification_of_the_Army
 		}
-		x = 36
+		x = 25
 		y = 7
 
 	}
@@ -1378,7 +1375,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Partial_Unification_of_the_Army
 		}
-		x = 32
+		x = 21
 		y = 7
 
 	}
@@ -1389,7 +1386,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Colonial_Troops
 		}
-		x = 34
+		x = 23
 		y = 9
 
 	}
@@ -1403,7 +1400,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Unified_Naval_Doctrine
 		}
-		x = 36
+		x = 25
 		y = 10
 
 	}
@@ -1414,8 +1411,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Southern_Revival
 		}
-		x = 27
-		y = 4
+		x = 38
+		y = 2
 
 	}
 	focus = {
@@ -1425,8 +1422,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Mining_Operations
 		}
-		x = 27
-		y = 5
+		x = 38
+		y = 3
 
 	}
 	focus = {
@@ -1436,8 +1433,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Northern_Industry
 		}
-		x = 23
-		y = 4
+		x = 34
+		y = 2
 
 	}
 	focus = {
@@ -1447,8 +1444,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Northern_Industry
 		}
-		x = 25
-		y = 4
+		x = 36
+		y = 2
 
 	}
 	focus = {
@@ -1458,8 +1455,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Apuan_Alps
 		}
-		x = 23
-		y = 5
+		x = 34
+		y = 3
 
 	}
 	focus = {
@@ -1469,8 +1466,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Railroads
 		}
-		x = 23
-		y = 6
+		x = 34
+		y = 4
 
 	}
 	focus = {
@@ -1480,8 +1477,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_River_Channels
 		}
-		x = 23
-		y = 7
+		x = 34
+		y = 5
 
 	}
 	focus = {
@@ -1491,8 +1488,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Marble_Buildings
 		}
-		x = 25
-		y = 5
+		x = 36
+		y = 3
 
 	}
 	focus = {
@@ -1502,8 +1499,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Charcoal_Mines
 		}
-		x = 27
-		y = 6
+		x = 38
+		y = 4
 
 	}
 	focus = {
@@ -1513,8 +1510,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Southern_Revival
 		}
-		x = 29
-		y = 4
+		x = 40
+		y = 2
 
 	}
 	focus = {
@@ -1524,8 +1521,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Address_Illiteracy
 		}
-		x = 29
-		y = 5
+		x = 40
+		y = 3
 
 	}
 	focus = {
