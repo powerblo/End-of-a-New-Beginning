@@ -32,3 +32,30 @@ PRS_owns_all_ger_unify_state = {
 		}
 	}
 }
+
+PRS_owns_all_ger_unify_state_socialist = {
+	TAG = PRS
+	OR = {
+		AND = {
+			PRS = {
+				owns_state = 951
+				owns_state = 1003
+				owns_state = 59
+				owns_state = 869
+				owns_state = 50
+				owns_state = 52
+			}
+		}
+		AND = {
+			any_country = {
+				is_subject_of = PRS
+				owns_state = 951
+				owns_state = 1003
+				owns_state = 59
+				owns_state = 869
+				owns_state = 50
+				owns_state = 52
+			}
+		}
+	}
+}

@@ -28,6 +28,9 @@ country_event = {
 	option = {
 		name = independence.2.a
 		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = flag_fighting_for_independence
+		}
 		OVERLORD = {
 			ROOT = {
 				declare_war_on = {
@@ -35,12 +38,7 @@ country_event = {
 					type = independence_wargoal
 				}
 			}
-		}
-		hidden_effect = {
-			set_country_flag = flag_fighting_for_independence
-			OVERLORD = {
-				end_puppet = ROOT
-			}
+			end_puppet = ROOT
 		}
 	}
 	

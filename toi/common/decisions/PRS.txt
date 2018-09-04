@@ -858,6 +858,235 @@ political_actions = {
 		}
 	}
 	
+	#Intervene against Socialist Prussia (FRA)
+	eoanb_decision_PRS_intervention_by_FRA = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war_support > 0.25
+			has_global_flag = eoanb_flag_war_over_south_germany
+		}
+		
+		visible = {
+			TAG = FRA
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = collectivist_socialism
+					has_government = vanguard_communism
+					has_government = anarchism
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			declare_war_on = {
+				target = PRS
+				type = liberate_wargoal
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Intervene against Socialist Prussia (AUS)
+	eoanb_decision_PRS_intervention_by_AUS = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war_support > 0.25
+			has_global_flag = eoanb_flag_war_over_south_germany
+		}
+		
+		visible = {
+			TAG = AUS
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = collectivist_socialism
+					has_government = vanguard_communism
+					has_government = anarchism
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			declare_war_on = {
+				target = PRS
+				type = liberate_wargoal
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Intervene against Socialist Prussia (RUS)
+	eoanb_decision_PRS_intervention_by_RUS = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war_support > 0.25
+			has_global_flag = eoanb_flag_war_over_south_germany
+		}
+		
+		visible = {
+			TAG = RUS
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = collectivist_socialism
+					has_government = vanguard_communism
+					has_government = anarchism
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			declare_war_on = {
+				target = PRS
+				type = liberate_wargoal
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Intervene for Socialist Prussia (FRA)
+	eoanb_decision_PRS_help_by_FRA = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war_support > 0.25
+			has_global_flag = eoanb_flag_war_over_south_germany
+		}
+		
+		visible = {
+			TAG = FRA
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			OR = {
+				has_government = social_egalitarianism
+				has_government = collectivist_socialism
+				has_government = vanguard_communism
+				has_government = anarchism
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			add_to_war = { 
+				targeted_alliance = PRS 
+				enemy = BAV 
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Blockade Prussia (ENG)
+	eoanb_decision_ENG_blockade_PRS = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			ships_in_area = { area = 9 size > 9 }
+			has_global_flag = eoanb_flag_war_over_south_germany
+		}
+		
+		visible = {
+			TAG = ENG
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = collectivist_socialism
+					has_government = vanguard_communism
+					has_government = anarchism
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			PRS = {
+				add_timed_idea = {
+					idea = PRS_idea_ENG_blockaded_trade
+					days = 90
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	#Landsturmregimente (PRS)
+	eoanb_decision_PRS_sgw_landsturm = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			PRS = {
+				surrender_progress > 0.35
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS = { has_country_flag = eoanb_flag_uniting_germany_socialist }
+			has_global_flag = eoanb_flag_war_over_south_germany
+			owns_state = 951
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_sgw_landsturm
+			hidden_effect = {
+				load_oob = "PRS_sgw_landsturm"
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }
 
 economic_decisions = {

@@ -473,6 +473,45 @@ ideas = {
 				army_org_Factor = -0.1
 			}
 		}
+		PRS_idea_rapid_expansion = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				generate_wargoal_tension = 0.5
+			}
+		}
+		PRS_idea_southern_humiliation = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+		PRS_idea_ENG_blockaded_trade = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_coastal_navy
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
 	}
 	political_advisor = {
 		PRS_advisor_august_von_der_heydt = {
