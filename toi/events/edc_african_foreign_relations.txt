@@ -368,7 +368,7 @@ country_event = { #selecting a colonal "master"
 	id = EDC_afr.17
 	title = EDC_afr.17.t
 	desc = EDC_afr.17.desc
-	picture = GFX_report_event_chinese_army_training
+	#picture = GFX_report_event_chinese_army_training
 	
 	is_triggered_only = yes
 	hidden = no
@@ -396,16 +396,238 @@ country_event = { #selecting a colonal "master"
 		}
 	}
 	option = {
+		name = EDC_afr.17.g #GER
+		trigger = {
+			GER= {
+				has_idea = afr_colonial_power
+			}
+		}
+		GER = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.gb #GER
+		trigger = {
+			PRS= {
+				has_idea = afr_colonial_power
+			}
+		}
+		PRS = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {#next
+		name = EDC_afr.17.next #minors
+		country_event = {id = EDC_afr.37}
+		trigger = {
+			is_ai = no
+			OR = {
+				BEL= {
+					has_idea = afr_colonial_power
+				}
+				POR= {
+					has_idea = afr_colonial_power
+				}
+				SPR= {
+					has_idea = afr_colonial_power
+				}
+			}
+		}
+	}
+	option = {#next
+		name = EDC_afr.17.next2 #teritary
+		country_event = {id = EDC_afr.39}
+		trigger = {
+			is_ai = no
+			NOT = {
+				BEL= {
+					has_idea = afr_colonial_power
+				}
+				POR= {
+					has_idea = afr_colonial_power
+				}
+				SPR= {
+					has_idea = afr_colonial_power
+				}
+			}
+			OR = {
+				ITA= {
+					has_idea = afr_colonial_power
+				}
+				PIE= {
+					has_idea = afr_colonial_power
+				}
+				HOL= {
+					has_idea = afr_colonial_power
+				}
+				SWE= {
+					has_idea = afr_colonial_power
+				}
+			}
+		}
+	}
+	option = {#next
+		name = EDC_afr.17.next3 #teritary
+		country_event = {id = EDC_afr.38}
+		trigger = {
+			is_ai = no
+			NOT = {
+				BEL= {
+					has_idea = afr_colonial_power
+				}
+				POR= {
+					has_idea = afr_colonial_power
+				}
+				SPR= {
+					has_idea = afr_colonial_power
+				}
+				ITA= {
+					has_idea = afr_colonial_power
+				}
+				PIE= {
+					has_idea = afr_colonial_power
+				}
+				HOL= {
+					has_idea = afr_colonial_power
+				}
+				SWE= {
+					has_idea = afr_colonial_power
+				}
+			}
+			OR = {
+				AUS= {
+					has_idea = afr_colonial_power
+				}
+				RUS= {
+					has_idea = afr_colonial_power
+				}
+			}
+		}
+	}
+	option = {## ai only
+		name = EDC_afr.17.d #BEL
+		trigger = {
+			BEL= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		BEL = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.e #POR
+		trigger = {
+			POR= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		POR = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
 		name = EDC_afr.17.c #SPA
 		trigger = {
 			SPR= {
 				has_idea = afr_colonial_power
 			}
+			is_ai = yes
 		}
 		SPR = {
 			country_event = {id = EDC_afr.18 days = 7}
 		}
 	}
+	option = {
+		name = EDC_afr.17.h #AUS
+		trigger = {
+			AUS= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		AUS = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.i #RUS
+		trigger = {
+			RUS= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		RUS = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.k #ITA
+		trigger = {
+			ITA= {
+				has_idea = afr_colonial_power
+				exists = yes
+			}
+			NOT = {
+				PIE = {
+					exists = yes
+				}
+			}
+			is_ai = yes
+		}
+		ITA = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.k #ITA
+		trigger = {
+			PIE= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		PIE = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.j #HOL
+		trigger = {
+			HOL= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		HOL = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.f #SWE
+		trigger = {
+			SWE= {
+				has_idea = afr_colonial_power
+			}
+			is_ai = yes
+		}
+		SWE = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+}
+country_event = { #selecting a colonal "master"
+	id = EDC_afr.37
+	title = EDC_afr.17.t
+	desc = EDC_afr.17.desc
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	hidden = no
 	option = {
 		name = EDC_afr.17.d #BEL
 		trigger = {
@@ -429,27 +651,30 @@ country_event = { #selecting a colonal "master"
 		}
 	}
 	option = {
-		name = EDC_afr.17.f #SWE
+		name = EDC_afr.17.c #SPA
 		trigger = {
-			SWE= {
+			SPR= {
 				has_idea = afr_colonial_power
 			}
 		}
-		SWE = {
+		SPR = {
 			country_event = {id = EDC_afr.18 days = 7}
 		}
 	}
-	option = {
-		name = EDC_afr.17.g #GER
-		trigger = {
-			GER= {
-				has_idea = afr_colonial_power
-			}
-		}
-		GER = {
-			country_event = {id = EDC_afr.18 days = 7}
-		}
+	option = {#next
+		name = EDC_afr.17.next #GER
+		country_event = {id = EDC_afr.39}
 	}
+}
+country_event = { #selecting a colonal "master"
+	id = EDC_afr.38
+	title = EDC_afr.17.t
+	desc = EDC_afr.17.desc
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	hidden = no
+	
 	option = {
 		name = EDC_afr.17.h #AUS
 		trigger = {
@@ -472,6 +697,48 @@ country_event = { #selecting a colonal "master"
 			country_event = {id = EDC_afr.18 days = 7}
 		}
 	}
+	option = {#next
+		name = EDC_afr.17.next #GER
+		country_event = {id = EDC_afr.17}
+	}
+}
+country_event = { #selecting a colonal "master"
+	id = EDC_afr.39
+	title = EDC_afr.17.t
+	desc = EDC_afr.17.desc
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	hidden = no
+	
+	option = {
+		name = EDC_afr.17.k #ITA
+		trigger = {
+			ITA= {
+				has_idea = afr_colonial_power
+				exists = yes
+			}
+			NOT = {
+				PIE = {
+					exists = yes
+				}
+			}
+		}
+		ITA = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
+	option = {
+		name = EDC_afr.17.k #ITA
+		trigger = {
+			PIE= {
+				has_idea = afr_colonial_power
+			}
+		}
+		PIE = {
+			country_event = {id = EDC_afr.18 days = 7}
+		}
+	}
 	option = {
 		name = EDC_afr.17.j #HOL
 		trigger = {
@@ -484,15 +751,19 @@ country_event = { #selecting a colonal "master"
 		}
 	}
 	option = {
-		name = EDC_afr.17.k #ITA
+		name = EDC_afr.17.f #SWE
 		trigger = {
-			ITA= {
+			SWE= {
 				has_idea = afr_colonial_power
 			}
 		}
-		ITA = {
+		SWE = {
 			country_event = {id = EDC_afr.18 days = 7}
 		}
+	}
+	option = {#next
+		name = EDC_afr.17.next #GER
+		country_event = {id = EDC_afr.38}
 	}
 }
 country_event = { #tribal nation asks for trade deal

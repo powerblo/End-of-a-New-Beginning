@@ -1,0 +1,46 @@
+contain_aggressive_expansion = {
+	enable = {
+		any_other_country = {
+			has_added_tension_amount > 24.99
+		}
+	}
+	abort = {
+		NOT = {
+			any_other_country = {
+				has_added_tension_amount > 24.99
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = contain
+		id = ROOT
+		value = 100
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = ROOT
+		value = 100
+	}
+	
+}
+allies_aggressive_expansion = { #don't get all loveydovey with your allies
+	enable = {
+		has_war_with = containment_target
+		has_war_together_with = ROOT
+	}
+	abort = {
+		NOT = {
+			has_war_with = containment_target
+			has_war_together_with = ROOT
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = ROOT
+		value = -50
+	}
+	
+}

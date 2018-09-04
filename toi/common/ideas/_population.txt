@@ -341,18 +341,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_tribal_slavery
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -376,18 +368,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_slavery
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -417,18 +401,10 @@ ideas = {
 
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_racial_laws
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -452,18 +428,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_segregation
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -490,18 +458,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_limited_equality
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -528,18 +488,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_full_equality
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -1498,12 +1450,11 @@ ideas = {
 			level = 5
 			
 			available = {
-				NOT = {
-					OR = {
-						has_government = anarchism
-						has_government = vanguard_communism
-						has_government = collectivist_socialism
-					}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_absolutism
+				}
+				hidden_trigger = {
+					always = no
 				}
 			}
 
@@ -1528,18 +1479,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_parliamentary_suffrage
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -1570,18 +1513,10 @@ ideas = {
 			
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_property_owners_suffrage
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -1610,18 +1545,10 @@ ideas = {
 
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_universal_male_suffrage
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 
@@ -1651,18 +1578,10 @@ ideas = {
 
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_african_unorg	
+					tooltip = eoanb_law_tt_universal_suffrage
 				}
 				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-						}
-					}
+					always = no
 				}
 			}
 

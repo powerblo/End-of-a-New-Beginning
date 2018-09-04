@@ -1,0 +1,97 @@
+aggressive_expansion_category = {
+
+	#Start
+	eoanb_descision_aggressive_expansion = {
+
+		icon = generic_political_discourse
+
+		available = {
+			FROM = {
+				has_added_tension_amount > 25
+			}
+			has_added_tension_amount < 25
+			NOT = {
+				has_idea = pre_industrial_era
+				has_war_with = FROM
+				has_war_together_with = FROM
+				is_in_faction_with = FROM
+				has_global_flag = containment_successful
+			}
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_added_tension_amount > 25
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			FROM = {
+				has_added_tension_amount > 10
+			}
+			NOT = {
+				has_idea = pre_industrial_era
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = 0.05
+			declare_war_on = {
+				target = FROM
+				type = contain_wargoal
+			}
+			add_named_threat = {
+				threat = -5
+				name = containment_joined_war
+			}
+			FROM = { set_country_flag = containment_target }
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_idea = american_slavery_1
+					has_idea = american_slavery_2
+					has_idea = american_slavery_3
+			    	has_idea = american_slavery_tension_1
+			    	has_idea = american_slavery_tension_2
+			    	has_idea = american_slavery_tension_3
+			    	has_idea = american_slavery_tension_4
+					has_idea = american_slavery_tension_5
+					has_idea = american_slavery_tension_6
+					has_idea = ARG_civil_war_calm
+					has_idea = ARG_civil_war_war
+				}
+			}
+			modifier = { #swiss neutrality
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						is_neighbor_of = FROM
+						tag = ENG
+						tag = FRA
+						tag = PRS
+						tag = AUS
+						tag = RUS
+						tag = PIE
+						tag = ITA
+						tag = GER
+					}
+				}
+			}
+		}
+	}
+}
