@@ -1170,6 +1170,56 @@ political_actions = {
 		}
 	}
 	
+	eoanb_decision_generic_increase_own_autonomy = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_stability > 0.35
+		}
+		
+		visible = {
+			is_subject = yes
+		}
+		
+		fire_only_once = no
+		
+		days_re_enable = 180  
+		
+		days_remove = 90
+		
+		cost = 75
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_increase_autonomy
+			hidden_effect = {
+				random_list = {
+					40 = {
+						#Overlord discovers it, not done yet
+						add_political_power = 1
+					}
+					60 = {
+						#Successfully stay "hidden"
+						add_political_power = 1
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -1
+			autonomy_gain = 1
+		}
+		
+		remove_effect = {
+			add_stability = -0.02
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
 }
 
 #Foreign Politics
