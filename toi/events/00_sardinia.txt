@@ -62,6 +62,7 @@ country_event = {
 		trigger = {
 			TAG = PIE
 			controls_state = 159
+
 			
 		}
 		
@@ -80,6 +81,12 @@ country_event = {
 					release_puppet = PRM
 					release_puppet = MOD
 					release_puppet = TUS
+					TUS = { white_peace = AUS }
+					TUS = { white_peace = LVN }
+					MOD = { white_peace = AUS }
+					MOD = { white_peace = LVN }
+					PRM = { white_peace = AUS }
+					PRM = { white_peace = LVN }
 
 				}
 		}
@@ -631,13 +638,9 @@ country_event = {
 		title = sardinia.30.t
 		desc = sardinia.30.d
 
-		trigger = {
-			date > 1860.5.14
-			tag = PIE
 
-		}
 
-		fire_only_once = yes
+		is_triggered_only = yes
 
 		option = {
 				name = sardinia.30.a
