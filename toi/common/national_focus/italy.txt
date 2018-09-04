@@ -942,23 +942,23 @@ focus_tree = {
 				}
 
 	}
-	focus = {
-		id = ITA_Turn_Weeds_Into_Food
-		icon = GFX_focus_ITA_Pasta
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Agriculture_Revival
-		}
-		x = 34
-		y = 2
+	#focus = {
+		#id = ITA_Turn_Weeds_Into_Food
+		#icon = GFX_focus_ITA_Pasta
+		#cost = 10.00
+		#prerequisite = {
+		#	focus = ITA_Agriculture_Revival
+		#}
+		#x = 34
+		#y = 2
 
-	}
+	#}
 	focus = {
 		id = ITA_Spread_Moderning_Farming
 		icon = GFX_focus_ITA_Farms
 		cost = 10.00
 		prerequisite = {
-			focus = ITA_Turn_Weeds_Into_Food
+			focus = ITA_Agriculture_Revival
 		}
 		x = 34
 		y = 3
@@ -975,23 +975,15 @@ focus_tree = {
 		y = 2
 
 	}
-	focus = {
-		id = ITA_Even_Better_Pasta
-		icon = GFX_focus_ITA_Pasta
-		cost = 10.00
-		prerequisite = {
-			focus = ITA_Tomatoes
-		}
-		x = 36
-		y = 3
-
-	}
+	#focus = {
+		###cost = 10.00
+		######}
 	focus = {
 		id = ITA_Poor_Man's_Food
 		icon = GFX_focus_ITA_Wheat
 		cost = 10.00
 		prerequisite = {
-			focus = ITA_Even_Better_Pasta
+			focus = ITA_Tomatoes
 		}
 		x = 36
 		y = 4
@@ -1013,7 +1005,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Remove_Fuedal_Sytems
-		icon = GFX_focus_Make_a_Man_Out_Of_You
+		icon = GFX_goal_focus_enact_law
 		cost = 10.00
 		prerequisite = {
 			focus = ITA_Rethink_Land_Policies
