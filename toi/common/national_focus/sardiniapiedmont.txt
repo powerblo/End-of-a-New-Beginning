@@ -17,7 +17,7 @@ focus_tree = {
 		y = 0
 			available_if_capitulated = no
 			ai_will_do = {
-					factor = 1
+					factor = 90
 				}
 			completion_reward = {
 					add_political_power = 150
@@ -64,6 +64,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Risorgimento
 		}
+		ai_will_do = {
+					factor = 90
+				}
 		bypass = { has_country_flag = PIE_Plombieres_Starts_Focus_Clear }
 		x = 8
 		y = 1
@@ -88,6 +91,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Napoleon3_Help
 		}
+		ai_will_do = {
+					factor = 1
+				}
 		available = {
 			always = no
 		}
@@ -121,6 +127,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = PIE_Accept_Confederation
 		}
+		ai_will_do = {
+					factor = 1
+				}
 		x = 9
 		y = 4
 
@@ -260,7 +269,11 @@ focus_tree = {
    							 delete_unit_template_and_units = {
    							 division_template = "Tuscan Infantry"}
    							 delete_unit_template_and_units = {
-   							 division_template = "Italian Infantry"}   
+   							 division_template = "Italian Infantry"}
+   							 country_event = {
+   							 	id = sardinia.30
+   							 	days = 1
+   							 }   
    			}
 		}
 

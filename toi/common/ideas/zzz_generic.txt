@@ -78,7 +78,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_factory  = 0.1
+				industrial_capacity_factory  = 0.05
 				
 			}
 		}
@@ -128,6 +128,70 @@ ideas = {
 
 			modifier = {
 				war_support_weekly = 0.0025
+			}
+		}
+		
+		eoanb_continuous_ideological_stability = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		eoanb_continuous_suppress_revolts = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_partisan_effect = -0.25
+			}
+		}
+		
+		eoanb_continuous_reduce_subjects = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				subjects_autonomy_gain = -0.5
+			}
+		}
+		
+		eoanb_continuous_empower_subjects = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				subjects_autonomy_gain = 1
 			}
 		}
 		
@@ -233,6 +297,19 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.025
 				planning_speed = 0.10
+			}
+		}
+		eoanb_idea_independence_struggle = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = chi_war_of_resistance3
+			
+			modifier = {
+				war_support_factor = 0.1
 			}
 		}
 	}
