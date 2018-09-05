@@ -1044,7 +1044,7 @@ country_event = {
 	}
 }
 
-#increase nr 1 endpoint
+#endpoint nr 1
 country_event = {
 	id = pssystem.17
 	title = pssystem.17.t
@@ -1055,11 +1055,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = pssystem.17.a
-		increase_ps_by_one = yes
 	}
 }
 
-#increase nr 2 endpoint
+#endpoint nr 2
 country_event = {
 	id = pssystem.18
 	title = pssystem.18.t
@@ -1068,17 +1067,17 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 70 }
 		name = pssystem.18.a
 	}
 	
 	option = {
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 30 }
 		name = pssystem.18.b
 	}
 }
 
-#increase nr 3 endpoint
+#endpoint nr 3
 country_event = {
 	id = pssystem.19
 	title = pssystem.19.t
@@ -1094,5 +1093,135 @@ country_event = {
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.19.b
+	}
+}
+
+#enpoint nr 4
+country_event = {
+	id = pssystem.20
+	title = pssystem.20.t
+	desc = pssystem.20.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.20.a
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.20.b
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.20.c
+	}
+}
+
+#enpoint nr 5
+country_event = {
+	id = pssystem.21
+	title = pssystem.21.t
+	desc = pssystem.21.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.21.a
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.21.b
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.21.c
+	}
+}
+
+#enpoint nr 6
+country_event = {
+	id = pssystem.22
+	title = pssystem.22.t
+	desc = pssystem.22.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.22.a
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.22.b
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.22.c
+	}
+}
+
+#enpoint nr 7
+country_event = {
+	id = pssystem.23
+	title = pssystem.23.t
+	desc = pssystem.23.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.a
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.b
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.c
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.d
+	}
+}
+
+#enpoint nr 8
+country_event = {
+	id = pssystem.24
+	title = pssystem.24.t
+	desc = pssystem.24.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.a
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.b
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.c
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.d
 	}
 }
