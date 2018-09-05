@@ -143,8 +143,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			54 = { add_extra_state_shared_building_slots = 1  }
-			54 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			add_political_power = 50
 			hidden_effect = {
 				country_event = { id = bavariafocus.32 days = 3 }
@@ -162,17 +160,14 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_bavarianindustry} 
 		cost = 5
-		available_if_capitulated = no  
-		
-		available = { 
-			BAV = { 
-				controls_state = 53
-			} 
-		}
+		available_if_capitulated = no
 		
 		completion_reward = {
-			53 = { add_extra_state_shared_building_slots = 1  }
-			53 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
 		}
 	}
  
@@ -511,7 +506,7 @@ focus_tree = {
 		y = 2 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_nurembergsindustrieundkulturverein} 
-		cost = 5
+		cost = 10
 		available_if_capitulated = no
 		
 		available = { 
@@ -561,7 +556,7 @@ focus_tree = {
 		y = 2 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_developearlyweaponfactories} 
-		cost = 5
+		cost = 10
 		available_if_capitulated = no
 		
 		available = { 
@@ -761,13 +756,13 @@ focus_tree = {
 		y = 3 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_grundentlastung} 
-		cost = 5
+		cost = 10
 		available_if_capitulated = no
 		
 		available = { 
 			BAV = { 
 				controls_state = 42
-			} 
+			}
 		}
 		
 		completion_reward = {
@@ -811,7 +806,7 @@ focus_tree = {
 		y = 3 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_knivesforthebrgermilitr} 
-		cost = 5
+		cost = 10
 		available_if_capitulated = no
 		
 		available = { 
@@ -944,18 +939,14 @@ focus_tree = {
 		y = 4 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_extendbavarianindustry} 
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		
-		available = { 
-			BAV = { 
-				controls_state = 54
-			} 
-		}
-		
 		completion_reward = {
-			54 = { add_extra_state_shared_building_slots = 1  }
-			54 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			swap_ideas = {
+				add_idea = BAV_bavindustry2
+				remove_idea = BAV_bavindustry
+			}
 		}
 	}
  
@@ -1000,8 +991,8 @@ focus_tree = {
 		
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BAV_bavindustry
-				add_idea = BAV_bavindustry2
+				remove_idea = BAV_bavindustry2
+				add_idea = BAV_bavindustry3
 			}
 		}
 	}
@@ -1097,8 +1088,8 @@ focus_tree = {
 		
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BAV_bavindustry2
-				add_idea = BAV_bavindustry3
+				remove_idea = BAV_bavindustry3
+				add_idea = BAV_bavindustry4
 			}
 		}
 	}
@@ -1132,7 +1123,7 @@ focus_tree = {
 		y = 4 
 		mutually_exclusive = { }
 		prerequisite = { focus = BAV_horsesforthelandwehr} 
-		cost = 5
+		cost = 10
 		available_if_capitulated = no
 		
 		available = { 
@@ -2598,7 +2589,6 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = BAV_visionaries2
-			add_stability = 0.1
 			swap_ideas = {
 				remove_idea = no_constitution
 				add_idea = constitution_adopted

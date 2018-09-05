@@ -37,6 +37,25 @@ ideas = {
 			}
 		}
 		
+		BAV_bavindustry2 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.02
+				conversion_cost_civ_to_mil_factor = -0.025
+			}
+		}
+		
 		BAV_bavindustryM2 = {
 			allowed = {
 				original_tag = BAV
@@ -57,25 +76,6 @@ ideas = {
 			}
 		}
 		
-		BAV_bavindustry2 = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-			   always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_production_bonus
-			
-			modifier = {
-				industrial_capacity_factory = 0.02
-				production_speed_industrial_complex_factor = 0.05
-			}
-		}
-		
 		BAV_bavindustry3 = {
 			allowed = {
 				original_tag = BAV
@@ -91,6 +91,27 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.02
+				conversion_cost_civ_to_mil_factor = -0.025
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		BAV_bavindustry4 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.02
+				conversion_cost_civ_to_mil_factor = -0.025
 				production_speed_industrial_complex_factor = 0.05
 				local_resources_factor = 0.02
 				production_speed_arms_factory_factor = -0.025

@@ -1,6 +1,31 @@
 ideas = {
 	country = {
-		PS_riots_in_the_streets_single = {
+		#negative
+		PS_opposition_rises = {
+			removal_cost = -1
+			
+			picture = generic_secret_police
+			
+			modifier = {
+				political_power_factor = -0.10
+				political_advisor_cost_factor = 0.05
+				drift_defence_factor = -0.15
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+	
+		PS_riots_in_the_streets = {
 			removal_cost = -1
 			
 			picture = generic_neutrality_drift_bonus
@@ -10,8 +35,6 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.1
 				drift_defence_factor = -0.10
 				stability_factor = -0.1
-				radical_democracy_acceptance = 15
-				radical_democracy_drift = 0.10
 			}
 			
 			allowed_civil_war = {
@@ -39,7 +62,7 @@ ideas = {
 				industrial_capacity_factory = -0.30
 				stability_factor = -0.20
 				radical_democracy_acceptance = 15
-				radical_democracy_drift = 0.5
+				radical_democracy_drift = 0.10
 			}
 			
 			allowed_civil_war = {
@@ -55,7 +78,7 @@ ideas = {
 			}
 		}
 		
-		PS_fighting_in_the_streets = {
+		PS_fighting_in_the_streets_single = {
 			removal_cost = -1
 			
 			picture = generic_purge
@@ -69,6 +92,8 @@ ideas = {
 				line_change_production_efficiency_factor = -0.30
 				production_factory_max_efficiency_factor = -0.30
 				industry_repair_factor = -0.30
+				radical_democracy_acceptance = 15
+				radical_democracy_drift = 0.05
 			}
 			
 			allowed_civil_war = {
@@ -109,18 +134,19 @@ ideas = {
 		}
 		
 		#double
-		PS_riots_in_the_streets_double = {
+		PS_big_scale_protests_double = {
 			removal_cost = -1
 			
-			picture = generic_neutrality_drift_bonus
+			picture = FRA_matignon_agreements
 			
 			modifier = {
-				production_speed_arms_factory_factor = -0.1
-				production_speed_industrial_complex_factor = -0.1
-				drift_defence_factor = -0.10
-				stability_factor = -0.1
-				radical_democracy_acceptance = 15
-				radical_democracy_drift = 0.10
+				production_speed_buildings_factor = -0.30
+				conscription_factor = -0.15
+				drift_defence_factor = -0.20
+				industrial_capacity_factory = -0.30
+				stability_factor = -0.20
+				#radical_democracy_acceptance = 15
+				#radical_democracy_drift = 0.10
 				collectivist_socialism_acceptance = 15
 				collectivist_socialism_drift = 0.10
 			}
@@ -138,21 +164,93 @@ ideas = {
 			}
 		}
 		
-		PS_big_scale_protests_double = {
+		PS_fighting_in_the_streets_double = {
 			removal_cost = -1
 			
-			picture = FRA_matignon_agreements
+			picture = generic_purge
 			
 			modifier = {
-				production_speed_buildings_factor = -0.30
-				conscription_factor = -0.15
-				drift_defence_factor = -0.20
-				industrial_capacity_factory = -0.30
-				stability_factor = -0.20
-				radical_democracy_acceptance = 15
-				radical_democracy_drift = 0.5
+				conscription_factor = -0.20
+				army_attack_factor = -0.20
+				army_speed_factor = -0.20
+				training_time_factor = 0.20
+				army_defence_factor = -0.20
+				line_change_production_efficiency_factor = -0.30
+				production_factory_max_efficiency_factor = -0.30
+				industry_repair_factor = -0.30
+				#radical_democracy_acceptance = 15
+				#radical_democracy_drift = 0.05
 				collectivist_socialism_acceptance = 15
-				collectivist_socialism_drift = 0.5
+				collectivist_socialism_drift = 0.05
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+		
+		#positive
+		PS_high_ps = {
+			removal_cost = -1
+			
+			picture = neutrality_idea
+			
+			modifier = {
+				political_power_factor = 0.10
+				political_advisor_cost_factor = -0.05
+				drift_defence_factor = 0.15
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+		
+		PS_overwhelming_ps = {
+			removal_cost = -1
+			
+			picture = neutrality_idea
+			
+			modifier = {
+				
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+		
+		PS_no_opposition_left = {
+			removal_cost = -1
+			
+			picture = neutrality_idea
+			
+			modifier = {
+				
 			}
 			
 			allowed_civil_war = {
