@@ -546,7 +546,7 @@ country_event = {
 		
 	}
 	
-	#hidden = yes
+	hidden = yes
 	
 	immediate = {
 		set_variable = {
@@ -1055,6 +1055,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = pssystem.17.a
+		
+		hidden_effect = {
+			increase_ps_by_two = yes
+		}
 	}
 }
 
@@ -1074,6 +1078,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 30 }
 		name = pssystem.18.b
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
 	}
 }
 
@@ -1088,11 +1096,19 @@ country_event = {
 	option = {
 		ai_chance = { factor = 65 }
 		name = pssystem.19.a
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.19.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 }
 
@@ -1107,11 +1123,19 @@ country_event = {
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.20.a
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.20.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 	
 	option = {
@@ -1131,16 +1155,28 @@ country_event = {
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.21.a
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.21.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 30 }
 		name = pssystem.21.c
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
 	}
 }
 
@@ -1155,6 +1191,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 35 }
 		name = pssystem.22.a
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
 	}
 	
 	option = {
@@ -1165,6 +1205,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 30 }
 		name = pssystem.22.c
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 }
 
@@ -1179,6 +1223,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.23.a
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 	
 	option = {
@@ -1189,11 +1237,19 @@ country_event = {
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.23.c
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.23.d
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 }
 
@@ -1208,16 +1264,28 @@ country_event = {
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.24.a
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.24.b
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
 	}
 	
 	option = {
 		ai_chance = { factor = 20 }
 		name = pssystem.24.c
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
 	}
 	
 	option = {
