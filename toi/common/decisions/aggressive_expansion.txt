@@ -1,6 +1,6 @@
 aggressive_expansion_category = {
 
-	#Start
+	#Coalition War
 	eoanb_descision_aggressive_expansion = {
 
 		icon = generic_political_discourse
@@ -51,6 +51,18 @@ aggressive_expansion_category = {
 				threat = -5
 				name = containment_joined_war
 			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							has_country_flag = containment_target
+						}
+					}
+				}
+				FROM = { set_country_flag = containment_target }
+				FROM = { save_global_event_target_as = contain_target_news }
+				news_event = { id = contain_news.1 }
+			}
 			FROM = { set_country_flag = containment_target }
 		}
 
@@ -90,6 +102,306 @@ aggressive_expansion_category = {
 						tag = ITA
 						tag = GER
 					}
+				}
+			}
+		}
+	}
+	eoanb_descision_aggressive_denounce = {
+
+		icon = generic_political_discourse
+
+		available = {
+			FROM = {
+				has_added_tension_amount > 10
+			}
+			has_added_tension_amount < 10
+			NOT = {
+				has_idea = pre_industrial_era
+				has_war_with = FROM
+				has_war_together_with = FROM
+				is_in_faction_with = FROM
+				has_country_flag = containment_denounced_them
+			}
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_added_tension_amount > 10
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			FROM = {
+				has_added_tension_amount > 10
+			}
+			NOT = {
+				has_idea = pre_industrial_era
+			}
+			NOT = {
+				has_country_flag = containment_denounced_them
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = containment_event_denounce
+			add_opinion_modifier = {
+				target = FROM
+				modifier = denounced_opinion
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = denounced_us_opinion
+				}
+			}
+			set_country_flag = containment_denounced_them
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							has_country_flag = containment_denounced_us
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = containment_denounced_us
+					FROM = { save_global_event_target_as = contain_denounce_news }
+					news_event = { id = contain_news.2 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { #swiss neutrality
+				factor = 0
+				tag = SWI
+			}
+		}
+	}
+	eoanb_descision_aggressive_pull_denounce = {
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = pre_industrial_era
+				has_war_with = FROM
+				has_war_together_with = FROM
+				is_in_faction_with = FROM
+			}
+			has_country_flag = containment_denounced_them
+			FROM = {
+				has_country_flag = containment_denounced_us
+			}
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_country_flag = containment_denounced_us
+			}
+		}
+
+		visible = {
+			has_country_flag = containment_denounced_them
+		}
+
+		cost = 0
+
+		complete_effect = {
+			remove_opinion_modifier = {
+				target = FROM
+				modifier = denounced_opinion
+			}
+			FROM = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = denounced_us_opinion
+				}
+			}
+			clr_country_flag = containment_denounced_them
+			if = {
+				limit = {
+					NOT = {
+						any_other_country = {
+							has_country_flag = containment_denounced_them
+						}
+					}
+				}
+				FROM = {
+					clr_country_flag = containment_denounced_us
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { #swiss neutrality
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					has_added_tension_amount > 10
+				}
+			}
+		}
+	}
+	eoanb_descision_aggressive_embargo = {
+
+		icon = generic_political_discourse
+
+		available = {
+			FROM = {
+				has_added_tension_amount > 15
+			}
+			has_added_tension_amount < 15
+			NOT = {
+				has_idea = pre_industrial_era
+				has_war_with = FROM
+				has_war_together_with = FROM
+				is_in_faction_with = FROM
+				has_country_flag = containment_embargoed_them
+			}
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_added_tension_amount > 15
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			FROM = {
+				has_added_tension_amount > 15
+			}
+			NOT = {
+				has_idea = pre_industrial_era
+				has_country_flag = containment_embargoed_them
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = containment_event_embargo
+			add_opinion_modifier = {
+				target = FROM
+				modifier = eoanb_embargo
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = eoanb_embargo
+				}
+			}
+			set_country_flag = containment_embargoed_them
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							has_country_flag = containment_embargoed_us
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = containment_embargoed_us
+					FROM = { save_global_event_target_as = contain_embargo_news }
+					news_event = { id = contain_news.3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { #swiss neutrality
+				factor = 0
+				tag = SWI
+			}
+		}
+	}
+	eoanb_descision_aggressive_pull_embargo = {
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = pre_industrial_era
+				has_war_with = FROM
+				has_war_together_with = FROM
+				is_in_faction_with = FROM
+			}
+			has_country_flag = containment_embargoed_them
+			FROM = {
+				has_country_flag = containment_embargoed_us
+			}
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_country_flag = containment_embargoed_us
+			}
+		}
+
+		visible = {
+			has_country_flag = containment_embargoed_them
+		}
+
+		cost = 0
+
+		complete_effect = {
+			remove_opinion_modifier = {
+				target = FROM
+				modifier = eoanb_embargo
+			}
+			FROM = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = eoanb_embargo
+				}
+			}
+			clr_country_flag = containment_embargoed_them
+			if = {
+				limit = {
+					NOT = {
+						any_other_country = {
+							has_country_flag = containment_embargoed_them
+						}
+					}
+				}
+				FROM = {
+					clr_country_flag = containment_embargoed_us
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = { #swiss neutrality
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				add = 10
+				FROM = {
+					has_added_tension_amount < 15
 				}
 			}
 		}
