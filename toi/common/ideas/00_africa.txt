@@ -686,5 +686,160 @@ ideas = {
 				supply_consumption_factor = -0.10
 			}
 		}
+		egy_sudan_slave_raids = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.05
+				conscription_factor = 0.025
+				stability_factor = -0.05
+			}
+		}
+		egy_vic_debt = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+		}
+		egy_vic_postal_service = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				drift_defence_factor = -0.10
+				planning_speed = 0.05
+				stability_factor = 0.025
+			}
+
+		}
+		egy_public_consered_debt_1 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.005
+				war_support_weekly = -0.001
+			}
+		}
+		egy_public_consered_debt_2 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.002
+			}
+		}
+		egy_public_consered_debt_3 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.02
+				war_support_weekly = -0.003
+			}
+		}
+		egy_public_consered_debt_4 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.05
+				war_support_weekly = -0.005
+			}
+		}
+		egy_public_consered_debt_5 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.1
+				war_support_weekly = -0.01
+			}
+		}
+		egy_industry_cuts={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		edc_bankrupt={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_factory_max_efficiency_factor = -0.5
+				production_speed_buildings_factor = -0.5
+				min_export = -0.05
+				research_time_factor = 0.50
+				stability_factor = -0.65
+				war_support_factor = -0.9
+				drift_defence_factor = -1
+				political_power_factor = -0.5
+				send_volunteer_size = -100
+				justify_war_goal_time = 100
+				guarantee_cost = 100
+				license_purchase_cost = 100
+				army_morale_factor = -0.5
+				max_planning = -0.5
+				navy_max_range_factor = -0.95
+				army_org_Factor = -0.5
+			}
+		}
 	}
 }

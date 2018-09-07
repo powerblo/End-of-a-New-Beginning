@@ -1,13 +1,13 @@
+
 autonomy_state = {
-	id = autonomy_khedive
+	id = autonomy_eyalet
 
 	#is_puppet = yes
 
-	min_freedom_level = 0.75
+	min_freedom_level = 0.6
 
 	rule = {
-		can_not_declare_war = no
-		can_decline_call_to_war = yes
+		can_decline_call_to_war = no
 	}
 
 	modifier = {
@@ -28,10 +28,10 @@ autonomy_state = {
 	
 	allowed = {
 		OR = {
-			tag = EGY
 			tag = HJZ
 			tag = LBA
 			tag = KUW
+			tag = EGY
 			tag = TUN
 		}
 		OVERLORD = { tag = OTO }
