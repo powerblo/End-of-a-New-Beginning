@@ -88,3 +88,144 @@ country_event = {
 		
 	}
 }
+country_event = { #everyone becomes suspicious
+	id = contain.4
+	title = contain.4.t
+	desc = contain.4.d
+	picture = GFX_report_event_generic_riot
+	
+	trigger = {
+		NOT = { has_country_flag = containment_warning_1 }
+		has_added_tension_amount > 10
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = contain.4.a
+		set_country_flag = containment_warning_1
+	}
+}
+country_event = { #everyone loses suspicion
+	id = contain.5
+	title = contain.5.t
+	desc = contain.5.d
+	picture = GFX_report_event_generic_riot
+	
+	trigger = {
+		has_country_flag = containment_warning_1
+		has_added_tension_amount < 10
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = contain.5.a
+		clr_country_flag = containment_warning_1
+	}
+}
+
+add_namespace = contain_news
+news_event = { #Coalition War
+	id = contain_news.1
+	title = contain_news.1.t
+	desc = contain_news.1.d
+	picture = GFX_news_event_contain_coalition_vic
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = contain_news.1.a
+		trigger = {
+			NOT = {
+				tag = FROM
+				has_country_flag = containment_target
+			}
+		}
+	}
+	option = {
+		name = contain_news.1.b
+		trigger = {
+			tag = FROM
+		}
+		clear_global_event_target = contain_target_news
+	}
+	option = {
+		name = contain_news.1.c
+		trigger = {
+			has_country_flag = containment_target
+		}
+	}
+}
+news_event = { #Denounce
+	id = contain_news.2
+	title = contain_news.2.t
+	desc = contain_news.2.d
+	picture = GFX_news_event_contain_denounce_vic
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = contain_news.2.a
+		trigger = {
+			NOT = {
+				tag = FROM
+				has_country_flag = containment_denounced_us
+			}
+		}
+	}
+	option = {
+		name = contain_news.2.b
+		trigger = {
+			tag = FROM
+		}
+		clear_global_event_target = contain_denounce_news
+	}
+	option = {
+		name = contain_news.2.c
+		trigger = {
+			has_country_flag = containment_denounced_us
+		}
+	}
+}
+news_event = { #Embargo
+	id = contain_news.3
+	title = contain_news.3.t
+	desc = contain_news.3.d
+	picture = GFX_news_event_contain_denounce_vic
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = contain_news.3.a
+		trigger = {
+			NOT = {
+				tag = FROM
+				has_country_flag = containment_embargoed_us
+			}
+		}
+	}
+	option = {
+		name = contain_news.3.b
+		trigger = {
+			tag = FROM
+		}
+		clear_global_event_target = contain_embargo_news
+	}
+	option = {
+		name = contain_news.3.c
+		trigger = {
+			has_country_flag = containment_embargoed_us
+		}
+	}
+}
