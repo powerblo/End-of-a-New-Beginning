@@ -617,10 +617,6 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_8
 		}
-		
-		enable_subunits = {
-			great_war_infantry
-		}
 
 		path = {
 			leads_to_tech = tech_infantry_improved_infantry_equipment
@@ -754,6 +750,14 @@ technologies = {
 		category_ranged_cavalry = {
 			soft_attack = 0.04
 			defense = 0.04
+		}
+		
+		enable_subunits = {
+			great_war_infantry
+		}
+		
+		dependencies = {
+			tech_infantry_infantry_helmets = 1
 		}
 
 		path = {
@@ -2605,10 +2609,13 @@ technologies = {
 			position = { x = 12 y = @1915}
 		}
 		
-		#Remove later with helmet production
-		category_army = {
-			defense = 0.15
-			breakthrough = 0.1
+		category_all_infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		enable_equipments = {
+			helmet_equipment_0
 		}
 
 		categories = {
@@ -2975,9 +2982,8 @@ technologies = {
 	
 	tech_infantry_colonial_cavalry = {
 
-		#Add a subunit later instead
 		category_cavalry = {
-			defense = 0.05
+			soft_attack = 0.02
 			breakthrough = 0.05
 		}
 		
@@ -3061,10 +3067,8 @@ technologies = {
 	
 	tech_infantry_great_war_cavalry = {
 
-		#Add a subunit later instead
-		category_cavalry = {
-			defense = 0.05
-			breakthrough = 0.05
+		enable_subunits = {
+			great_war_cavalry
 		}
 	
 		research_cost = 1.1
@@ -3114,7 +3118,8 @@ technologies = {
 	
 	tech_infantry_colonial_marines = {
 
-		#Add a subunit here later
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
 	
 		path = {
 			leads_to_tech = tech_infantry_improved_landing_gear
@@ -3462,7 +3467,13 @@ technologies = {
 	
 	tech_infantry_early_sniper_team = {
 
-		#Add a subunit here later
+		enable_subunits = {
+			sniper_team_support
+		}
+		
+		enable_equipments = {
+			sniper_equipment_0
+		}
 		
 		path = {
 			leads_to_tech = tech_infantry_sniper_team
@@ -3486,7 +3497,11 @@ technologies = {
 	
 	tech_infantry_sniper_team = {
 
-		#Add a subunit improvement here later
+		sniper_team_support = {
+			soft_attack = 0.1
+			defense = 0.04
+			breakthrough = 0.02
+		}
 	
 		research_cost = 1.1
 		start_year = 1918
@@ -3556,7 +3571,9 @@ technologies = {
 	
 	tech_infantry_marines_1 = {
 
-		#Add a subunit here later
+		enable_subunits = {	
+			marine
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_marines_2
@@ -3580,7 +3597,9 @@ technologies = {
 	
 	tech_infantry_marines_2 = {
 
-		#Add a subunit improvement here later
+		marine = {
+			soft_attack = 0.05
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_marines_3
@@ -3604,7 +3623,9 @@ technologies = {
 	
 	tech_infantry_marines_3 = {
 
-		#Add a subunit improvement here later
+		marine = {
+			max_organisation = 5
+		}
 		
 		research_cost = 1.1
 		start_year = 1914
@@ -3624,7 +3645,9 @@ technologies = {
 	
 	tech_infantry_mountaineers_1 = {
 
-		#Add a subunit here later
+		enable_subunits = {	
+			mountaineers
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_2
@@ -3648,7 +3671,9 @@ technologies = {
 	
 	tech_infantry_mountaineers_2 = {
 
-		#Add a subunit improvement here later
+		mountaineers = {
+			soft_attack = 0.05
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_3
@@ -3672,7 +3697,9 @@ technologies = {
 	
 	tech_infantry_mountaineers_3 = {
 
-		#Add a subunit improvement here later
+		mountaineers = {
+			max_organisation = 5
+		}
 		
 		research_cost = 1.1
 		start_year = 1914
@@ -3692,7 +3719,9 @@ technologies = {
 	
 	tech_infantry_shocktroops_1 = {
 
-		#Add a subunit here later
+		enable_subunits = {	
+			shock_troops
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_2
@@ -3716,7 +3745,9 @@ technologies = {
 	
 	tech_infantry_shocktroops_2 = {
 
-		#Add a subunit improvement here later
+		shock_troops = {
+			soft_attack = 0.05
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_3
@@ -3740,7 +3771,9 @@ technologies = {
 	
 	tech_infantry_shocktroops_3 = {
 
-		#Add a subunit improvement here later
+		shock_troops = {
+			max_organisation = 5
+		}
 		
 		research_cost = 1.1
 		start_year = 1914

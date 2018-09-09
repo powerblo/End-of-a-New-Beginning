@@ -213,6 +213,7 @@ sub_units = {
 		need = {
 			infantry_equipment = 100
 			uniform_equipment = 100
+			helmet_equipment = 100
 		}
 	}
 
@@ -372,12 +373,6 @@ sub_units = {
 			attack = -0.4
 		}
 	}
-	
-	############################################################
-	#                                                          #
-	#VANILLA UNITS BELOW - WILL BE MODIFIED WHEN WE GET TO THEM#
-	#                                                          #
-	############################################################
 
 	marine = {
 		sprite = infantry
@@ -405,16 +400,16 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 20
-		max_organisation = 70
-		default_morale = 0.4
+		max_organisation = 55
+		default_morale = 0.35
 		manpower = 1000
 
 		#Misc Abilities
-		training_time = 120
+		training_time = 150
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.3
-		breakthrough = 0.3
+		supply_consumption = 0.4
+		breakthrough = 0.2
 
 		need = {
 			infantry_equipment = 100
@@ -458,17 +453,17 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 20
-		max_organisation = 70
-		default_morale = 0.4
+		max_organisation = 55
+		default_morale = 0.35
 		manpower = 1000
 
 		#Misc Abilities
-		training_time = 120
+		training_time = 150
 		suppression = 1
 		weight = 0.5
 
-		supply_consumption = 0.35
-		breakthrough = 0.3
+		supply_consumption = 0.4
+		breakthrough = 0.2
 
 		need = {
 			infantry_equipment = 100
@@ -486,7 +481,62 @@ sub_units = {
 			movement = 0.2
 		}
 	}
+	
+	shock_troops = {
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
 
+		priority = 601
+		active = no
+
+		type = {
+			infantry
+		}
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 2
+
+		#Size Definitions
+		max_strength = 20
+		max_organisation = 55
+		default_morale = 0.4
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 150
+		suppression = 2
+		weight = 0.5
+
+		supply_consumption = 0.5
+		breakthrough = 0.3
+
+		need = {
+			infantry_equipment = 100
+			uniform_equipment = 100
+		}
+
+		urban = {
+			attack = 0.2
+			defence = 0.2
+			movement = 0.1
+		}
+	}
+
+	############################################################
+	#                                                          #
+	#VANILLA UNITS BELOW - WILL BE MODIFIED WHEN WE GET TO THEM#
+	#                                                          #
+	############################################################
+	
 	paratrooper = {
 		sprite = infantry
 		map_icon_category = infantry
