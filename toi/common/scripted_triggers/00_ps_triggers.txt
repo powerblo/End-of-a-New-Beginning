@@ -122,8 +122,6 @@ PS_pol_negative_null = {
 	}
 }
 
-### EVENT SYSTEM, DON'T DARE TO TOUCH, WILL KILL ANYBODY WHO DOES ###
-#general negative with 0
 PS_had_destabilizing_events = {
 	custom_trigger_tooltip = {
 		tooltip = PS_tooltip_pol_had_destabilizing_events
@@ -133,6 +131,7 @@ PS_had_destabilizing_events = {
 	}
 }
 
+### EVENT SYSTEM, DON'T DARE TO TOUCH, WILL KILL ANYBODY WHO DOES ###
 PS_pol_stab_sank_minus_one = {
 	check_variable = { 
 		ROOT.pol_stability < 0

@@ -25,13 +25,13 @@
  pssystem.7.d:0 "The situation in [Root.GetNameDef] seems to have finally stabilized, with only small leftovers of protesters on the streets. As we managed to raise Political Stability of our country to its former standards, workers from all around the nation head back to the factories and farms. The situation is lastly resolved."
  pssystem.7.a:0 "We hope it is over."
  pssystem.8.t:0 "High Political Stability!"
- pssystem.8.d:0 "Recently our sphere of influence in our country had spread yet again, furthering our political grasp. Our policies rarely get denied, and thanks to our guidance, [Root.GetName] is in a politically stable stance."
+ pssystem.8.d:0 "Recently our sphere of influence in our country had spread yet again, furthering our political grasp. Our policies rarely get denied, and thanks to our guidance, [Root.GetNameDef] is in a politically stable stance."
  pssystem.8.a:0 "This is proof of our efficiency."
  pssystem.9.t:0 "Political Stability Falls"
  pssystem.9.d:0 "Having enjoyed great political influence in the past weeks, our government now faced a few difficulties when trying to pass new policies. Perhaps being a sign that our way of ruling has become a bit too lax, we have to accept the fact that the current political climate does not allow for errors anymore."
  pssystem.9.a:0 "This reeks of opposition."
  pssystem.10.t:0 "Opposition Rises"
- pssystem.10.d:0 "Recently we have received word that the political opposition in our country is on the rise again. Multiple associations and small organizations begin to move inside the government, hindering our rule over [Root.GetName]. Even if these oppositions are tiny at the moment, we should be on guard."
+ pssystem.10.d:0 "Recently we have received word that the political opposition in our country is on the rise again. Multiple associations and small organizations begin to move inside the government, hindering our rule over [Root.GetNameDef]. Even if these oppositions are tiny at the moment, we should be on guard."
  pssystem.10.a:0 "So what? We're the only ones who can rule [Root.GetNameDef]."
  pssystem.11.t:0 "Opposition Sinks"
  pssystem.11.d:0 "It did not come to anyone as a surprise, but many governmental politicians who tried to oppose [Root.GetRulingParty] have quieted down, thanks to our efforts. However, it is to be assumed that there still are people who would like to see somebody else as the leader of [From.GetNameDef] than [Root.GetLeader]."
@@ -40,13 +40,13 @@
  pssystem.12.d:0 "Not having experienced any difficulties, our government by now is known as a very stable one among our neighbours. Passing laws is nowhere close to a troublesome process anymore, but instead a fast and efficient routine. [Root.GetName] is truly in a period of political prosperity."
  pssystem.12.a:0 "We have a bright future ahead of us."
  pssystem.13.t:0 "No Opposition Left"
- pssystem.13.d:0 "The opposition to the current governing body of [Root.GetName] is now de facto non-existent. Every single politician supports us, or at least is not against us, making the political climate in our country very relaxed."
+ pssystem.13.d:0 "The opposition to the current governing body of [Root.GetNameDef] is now de facto non-existent. Every single politician supports us, or at least is not against us, making the political climate in our country very relaxed."
  pssystem.13.a:0 "[Root.GetNameDef] is great!"
  pssystem.14.t:0 "Underwhelming Political Stability"
- pssystem.14.d:0 "The \"Period of political prosperity\" in [Root.GetNameDef] seemingly ended today, with a resurgence of politicians and writers, critizing the current political state of [Root.GetName]. Laws are yet again a topic to fight about and the [Root.GetRulingIdeology] [Root.GetRulingParty] will have to put up with difficulties."
+ pssystem.14.d:0 "The \"Period of political prosperity\" in [Root.GetName] seemingly ended today, with a resurgence of politicians and writers, critizing the current political state of [Root.GetName]. Laws are yet again a topic to fight about and the [Root.GetRulingIdeology] of [Root.GetRulingParty] will have to put up with difficulties."
  pssystem.14.a:0 "We have to move forward."
  pssystem.15.t:0 "Opposition Returns"
- pssystem.15.d:0 "As if out of the blue, a few political voices of discontent rang throughout [Root.GetName]. It was simply too good to be true; the Political Stability the government of [Root.GetName] enjoyed lasted for some time, only to lose some Stability later. Still, many are not worried about this event, seeing how the Political Stability within [Root.GetNameDef] remains relatively high."
+ pssystem.15.d:0 "As if out of the blue, a few political voices of discontent rang throughout [Root.GetNameDef]. It was simply too good to be true; the Political Stability the government of [Root.GetNameDef] enjoyed lasted for some time, only to lose some Stability later. Still, many are not worried about this event, seeing how the Political Stability within [Root.GetName] remains relatively high."
  pssystem.15.a:0 "What went wrong?"
  
  ###YEARLY EVENTS###
@@ -94,7 +94,6 @@
  pssystem.16.d:0 "Yearly factor: [?ROOT.pol_stability_yearly_factor]\nAccident factor: [?ROOT.pol_stab_accident_factor]\nParty popularity: [?ROOT.party_popularity@ruling_party]\nStability: [?ROOT.stability]\nhas_border_war\nhas_war\nhas_civil_war\nis_target_of_coup\nis_puppet\nis_subject\nis_in_faction"
  pssystem.16.a:0 ":ok_hand:"
  
- 
  ###FLAGS###
  PS_stage_one:0 "Riots in the Streets"
  PS_stage_two:0 "Big-Scale Protests"
@@ -133,6 +132,7 @@
  PS_tooltip_decrease_by_one:0 "§Y[Root.GetName]§!: Loses §Y1§! §YPolitical Stability§!"
  PS_tooltip_decrease_by_two:0 "§Y[Root.GetName]§!: Loses §Y2§! §YPolitical Stability§!"
  PS_tooltip_decrease_by_three:0 "§Y[Root.GetName]§!: Loses §Y3§! §YPolitical Stability§!"
+ PS_tooltip_pol_had_destabilizing_events:0 "§Y[Root.GetName]§!: Had §Ypolitically destabilizing accidents!"
  
  ###INTERFACE###
  PS_tooltip:0 "§YPolitical Stability§!\n"

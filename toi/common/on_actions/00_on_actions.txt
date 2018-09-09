@@ -77,6 +77,9 @@ on_actions = {
 			ROOT = {
 				decrease_ps_by_one = yes
 			}
+			FROM = {
+				decrease_ps_by_one = yes
+			}
 		}
 	}
 
@@ -146,7 +149,7 @@ on_actions = {
 	on_capitulation = {
 		effect = {
 			ROOT = {
-				decrease_ps_by_three = yes
+				decrease_ps_by_one = yes
 			}
 		}
 	}
@@ -176,7 +179,7 @@ on_actions = {
 	on_civil_war_end = {
 		effect = {
 			ROOT = {
-				decrease_ps_by_three = yes
+				decrease_ps_by_one = yes
 			}
 		}
 	}
@@ -187,6 +190,9 @@ on_actions = {
 	on_puppet = {
 		effect = {
 			ROOT = {
+				decrease_ps_by_one = yes
+			}
+			FROM = {
 				decrease_ps_by_one = yes
 			}
 		}

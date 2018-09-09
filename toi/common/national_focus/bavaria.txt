@@ -1013,7 +1013,10 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_ideas = BAV_bavindustryM
+			swap_ideas = {
+				remove_idea = BAV_bavindustry2
+				add_idea = BAV_bavindustryM
+			}
 		}
 	}
 	

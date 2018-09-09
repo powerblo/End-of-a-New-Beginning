@@ -233,7 +233,7 @@ country_event = {
 	}
 }
 
-#Ask to Unify Germany
+#German Question
 country_event = {
 	id = bavariaevent.7
 	title = bavariaevent.7.t
@@ -246,21 +246,18 @@ country_event = {
 		ai_chance = { 
 			factor = 50
 			modifier = {
-				factor = 20
-				has_opinion = {
-					target = FROM
-					value = 80
+				factor = 80
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
 				}
 			}
 		}
 		name = bavariaevent.7.a
-	
-		custom_effect_tooltip = BAV_customeffect_proxy_unify_germany_yes
+		
+		custom_effect_tooltip = BAV_customeffect_have_a_say
 		
 		hidden_effect = {
-			BAV = {
-				set_country_flag = BAV_AUS_allows_unification
-			}
+			country_event = { id = bavariaevent.8 days = 3 }
 		}
 	}
 	
@@ -269,14 +266,615 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 20
-				has_opinion = {
-					target = FROM
-					value = 80
-				}
+				has_country_flag = eoanb_flag_AUS_allied_BAV_sww
 			}
 		}
 		name = bavariaevent.7.b
 		
-		custom_effect_tooltip = BAV_customeffect_proxy_unify_germany_no
+		custom_effect_tooltip = BAV_customeffect_leave_up_AUS
+		
+		hidden_effect = {
+			set_country_flag = eoanb_flag_BAV_leave_up_AUS_sww
+			#change this
+			#Großösterreich
+		}
+	}
+}
+
+#Unify Germany
+country_event = {
+	id = bavariaevent.8
+	title = bavariaevent.8.t
+	desc = bavariaevent.8.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 45
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					OR = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+		}
+		name = bavariaevent.8.a
+		
+		custom_effect_tooltip = BAV_customeffect_send_demands
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.9 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 35
+			modifier = {
+				factor = 10
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					OR = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+			modifier = {
+				factor = 40
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+		}
+		name = bavariaevent.8.b
+		
+		custom_effect_tooltip = BAV_customeffect_agree_proposals
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.10 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 45
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					OR = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+			modifier = {
+				factor = 40
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+		}
+		name = bavariaevent.8.c
+		
+		custom_effect_tooltip = BAV_customeffect_send_proposals
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariaevent.13 days = 3 }
+			}
+		}
+	}
+}
+
+#Bavaria demands Ruhr
+country_event = {
+	id = bavariaevent.9
+	title = bavariaevent.9.t
+	desc = bavariaevent.9.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 70
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					OR = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_annex_ruhr_accept
+	
+		name = bavariaevent.9.a
+		
+		hidden_effect = {
+			BAV = {
+				transfer_state = 984
+				transfer_state = 51
+				transfer_state = 1009
+				transfer_state = 978
+				
+				984 = {
+					remove_core_of = PRS
+					add_core_of = BAV
+				}
+				51 = {
+					remove_core_of = PRS
+					add_core_of = BAV
+				}
+				1009 = {
+					remove_core_of = PRS
+					add_core_of = BAV
+				}
+				978 = {
+					remove_core_of = PRS
+					add_core_of = BAV
+				}
+			}
+			AUS = {
+				country_event = { id = bavariaevent.10 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 30
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				OR = {
+					has_completed_focus = BAV_focusoncivilianindustry
+					has_completed_focus = BAV_focusonmilitaryindustry
+				}
+			}
+			modifier = {
+				factor = 80
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						has_completed_focus = BAV_focusoncivilianindustry
+						has_completed_focus = BAV_focusonmilitaryindustry
+					}
+				}
+			}
+		}
+	
+		custom_effect_tooltip = BAV_customeffect_annex_ruhr_deny
+	
+		name = bavariaevent.9.b
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.10 days = 3 }
+			}
+		}
+	}
+}
+
+#Deutscher Staatenbund
+country_event = {
+	id = bavariaevent.10
+	title = bavariaevent.10.t
+	desc = bavariaevent.10.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+	
+		name = bavariaevent.10.a
+		
+		custom_effect_tooltip = BAV_customeffect_staatenbund_puppet
+		
+		create_faction = BAV_german_schutzbund
+		
+		#PRS allies
+		every_country = {
+			limit = {	
+				has_country_flag = eoanb_flag_PRS_ally_sww
+			}
+			AUS = {
+				add_to_faction = PREV
+				puppet = PREV
+			}
+		}
+		
+		#AUS allies
+		every_country = {
+			limit = {	
+				has_country_flag = eoanb_flag_AUS_ally_sww
+			}
+			AUS = {
+				add_to_faction = PREV
+				puppet = PREV
+			}
+		}
+		
+		#Neutral Thuringia
+		AUS = {
+			add_to_faction = THU
+			puppet = THU
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+		
+		name = bavariaevent.10.b
+		
+		custom_effect_tooltip = BAV_customeffect_staatenbund_faction
+		
+		create_faction = BAV_german_schutzbund
+		
+		#PRS allies
+		every_country = {
+			limit = {	
+				has_country_flag = eoanb_flag_PRS_ally_sww
+			}
+			AUS = {
+				add_to_faction = PREV
+			}
+		}
+		
+		#AUS allies
+		every_country = {
+			limit = {	
+				has_country_flag = eoanb_flag_AUS_ally_sww
+			}
+			AUS = {
+				add_to_faction = PREV
+			}
+		}
+		
+		#Neutral Thuringia
+		AUS = {
+			add_to_faction = THU
+		}
+	}
+}
+
+#Way of unification
+country_event = {
+	id = bavariaevent.13
+	title = bavariaevent.13.t
+	desc = bavariaevent.13.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_force
+		
+		name = bavariaevent.13.a
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.11 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_fluid
+	
+		name = bavariaevent.13.b
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.12 days = 3 }
+			}
+		}
+	}
+}
+
+#Unify under Bavaria (forced)
+country_event = {
+	id = bavariaevent.11
+	title = bavariaevent.11.t
+	desc = bavariaevent.11.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 70
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				has_completed_focus = BAV_concertofeurope
+			}
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_germany_under_BAV_accept
+		
+		name = bavariaevent.11.a
+		
+		hidden_effect = {
+			#PRS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_PRS_ally_sww
+				}
+				BAV = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			#AUS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				BAV = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			#Neutral Thuringia
+			BAV = { 
+				annex_country = { 
+					target = THU
+					transfer_troops = no 
+				}
+				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
+			}
+			
+			puppet = BAV
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 30
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				has_completed_focus = BAV_concertofeurope
+			}
+		}
+	
+		custom_effect_tooltip = BAV_customeffect_unify_germany_under_BAV_deny
+	
+		name = bavariaevent.11.b
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.10 days = 3 }
+			}
+		}
+	}
+}
+
+#Unify under Bavaria (fluid)
+country_event = {
+	id = bavariaevent.12
+	title = bavariaevent.12.t
+	desc = bavariaevent.12.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 70
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				has_completed_focus = BAV_concertofeurope
+			}
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_germany_under_BAV_accept_fluid
+		
+		name = bavariaevent.12.a
+		
+		hidden_effect = {
+			#PRS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_PRS_ally_sww
+				}
+				BAV = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			#AUS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				PREV = {
+					country_event = { id = bavariaevent.14 days = 3 }
+				}
+			}
+			
+			#Neutral Thuringia
+			BAV = { 
+				annex_country = { 
+					target = THU
+					transfer_troops = no 
+				}
+				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
+			}
+			
+			puppet = BAV
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 30
+				BAV = {
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				has_completed_focus = BAV_concertofeurope
+			}
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_germany_under_BAV_deny
+	
+		name = bavariaevent.12.b
+		
+		hidden_effect = {
+			AUS = {
+				country_event = { id = bavariaevent.10 days = 3 }
+			}
+		}
+	}
+}
+
+#Fluid join
+country_event = {
+	id = bavariaevent.14
+	title = bavariaevent.14.t
+	desc = bavariaevent.14.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_germany_fluid_ask_accept
+		
+		name = bavariaevent.14.a
+		
+		hidden_effect = {
+			BAV = { 
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				country_event = { id = bavariaevent.15 days = 3 }
+			}
+			AUS = {
+				country_event = { id = bavariaevent.15 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { 
+			factor = 50
+		}
+		
+		custom_effect_tooltip = BAV_customeffect_unify_germany_fluid_ask_deny
+		
+		name = bavariaevent.14.b
+		
+		hidden_effect = {
+			BAV = {
+				puppet = ROOT
+				country_event = { id = bavariaevent.16 days = 3 }
+			}
+			AUS = {
+				country_event = { id = bavariaevent.16 days = 3 }
+			}
+		}
+	}
+}
+
+#Fluid join accept
+country_event = {
+	id = bavariaevent.15
+	title = bavariaevent.15.t
+	desc = bavariaevent.15.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 100
+		}
+		
+		name = bavariaevent.15.a
+	}
+}
+
+#Fluid join deny
+country_event = {
+	id = bavariaevent.16
+	title = bavariaevent.16.t
+	desc = bavariaevent.16.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 100
+		}
+		
+		name = bavariaevent.16.a
 	}
 }
