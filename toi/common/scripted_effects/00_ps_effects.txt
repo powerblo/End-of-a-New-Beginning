@@ -2,11 +2,19 @@
 increase_ps_by_one = {
 	custom_effect_tooltip = PS_tooltip_increase_by_one
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp1 = ROOT.pol_stability }
-		add_to_temp_variable = { ROOT.PS_temp1 = 1 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp1
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp1
+				value = 1
+			}
+		}
 		if = {
 			limit = {
-				check_variable = { temp1 < 4 }
+				check_variable = { ROOT.PS_temp1 < 4 }
 			}
 			add_to_variable = {
 				var = ROOT.pol_stability
@@ -19,6 +27,7 @@ increase_ps_by_one = {
 				value = 3
 			}
 		}
+		clear_variable = PS_temp1
 	}
 }
 
@@ -26,8 +35,16 @@ increase_ps_by_one = {
 increase_ps_by_two = {
 	custom_effect_tooltip = PS_tooltip_increase_by_two
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp2 = ROOT.pol_stability }
-		add_to_temp_variable = { ROOT.PS_temp2 = 2 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp2
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp2
+				value = 2
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp2 < 4 }
@@ -43,6 +60,7 @@ increase_ps_by_two = {
 				value = 3
 			}
 		}
+		clear_variable = PS_temp2
 	}
 }
 
@@ -50,8 +68,16 @@ increase_ps_by_two = {
 increase_ps_by_three = {
 	custom_effect_tooltip = PS_tooltip_increase_by_three
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp3 = ROOT.pol_stability }
-		add_to_temp_variable = { ROOT.PS_temp3 = 3 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp3
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp3
+				value = 3
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp3 < 4 }
@@ -67,6 +93,7 @@ increase_ps_by_three = {
 				value = 3
 			}
 		}
+		clear_variable = PS_temp3
 	}
 }
 
@@ -74,8 +101,16 @@ increase_ps_by_three = {
 decrease_ps_by_one = {
 	custom_effect_tooltip = PS_tooltip_decrease_by_one
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp4 = ROOT.pol_stability }
-		subtract_from_temp_variable = { ROOT.PS_temp4 = 1 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp4
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp4
+				value = 1
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp4 > -6 }
@@ -91,6 +126,7 @@ decrease_ps_by_one = {
 				value = -5
 			}
 		}
+		clear_variable = PS_temp4
 	}
 }
 
@@ -98,8 +134,16 @@ decrease_ps_by_one = {
 decrease_ps_by_two = {
 	custom_effect_tooltip = PS_tooltip_decrease_by_two
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp5 = ROOT.pol_stability }
-		subtract_from_temp_variable = { ROOT.PS_temp5 = 2 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp5
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp5
+				value = 2
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp5 > -6 }
@@ -115,6 +159,7 @@ decrease_ps_by_two = {
 				value = -5
 			}
 		}
+		clear_variable = PS_temp5
 	}
 }
 
@@ -122,8 +167,16 @@ decrease_ps_by_two = {
 decrease_ps_by_three = {
 	custom_effect_tooltip = PS_tooltip_decrease_by_three
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp6 = ROOT.pol_stability }
-		subtract_from_temp_variable = { ROOT.PS_temp6 = 3 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp6
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp6
+				value = 3
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp6 > -6 }
@@ -139,6 +192,7 @@ decrease_ps_by_three = {
 				value = -5
 			}
 		}
+		clear_variable = PS_temp6
 	}
 }
 
@@ -164,8 +218,16 @@ increase_ps_accidents_by_two = {
 
 decrease_ps_accidents_by_one = {
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp7 = ROOT.pol_stab_accident_factor }
-		subtract_from_temp_variable = { ROOT.PS_temp7 = 1 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp7
+				value = pol_stab_accident_factor
+			}
+			subtract_from_variable = {
+				var = PS_temp7
+				value = 1
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp7 > -1 }
@@ -181,13 +243,22 @@ decrease_ps_accidents_by_one = {
 				value = 0
 			}
 		}
+		clear_variable = PS_temp7
 	}
 }
 
 decrease_ps_accidents_by_two = {
 	hidden_effect = {
-		set_temp_variable = { ROOT.PS_temp8 = ROOT.pol_stab_accident_factor }
-		subtract_from_temp_variable = { ROOT.PS_temp8 = 2 }
+		ROOT = {
+			set_variable = {
+				var = PS_temp8
+				value = pol_stab_accident_factor
+			}
+			subtract_from_variable = {
+				var = PS_temp8
+				value = 2
+			}
+		}
 		if = {
 			limit = {
 				check_variable = { ROOT.PS_temp8 > -1 }
@@ -203,5 +274,6 @@ decrease_ps_accidents_by_two = {
 				value = 0
 			}
 		}
+		clear_variable = PS_temp8
 	}
 }
