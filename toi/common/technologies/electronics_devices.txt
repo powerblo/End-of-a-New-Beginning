@@ -1480,7 +1480,10 @@ technologies = {
 
 		 allow = {
 		 	OR = {
-		 		tag = ITA
+		 		AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
            		tag = NOR
 		 	}
            	
@@ -1488,7 +1491,10 @@ technologies = {
 
         allow_branch = {
         	OR = {
-		 		tag = ITA
+		 		AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
            		tag = NOR
 		 	}
         }
@@ -1533,14 +1539,17 @@ technologies = {
 
 		 allow = {
            OR = {
-		 		tag = ITA
+           		AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
            		tag = NOR
 		 	}
         }
 
         allow_branch = {
            OR = {
-		 		tag = ITA
+		 		PIE = { has_cosmetic_tag = ITA }
            		tag = NOR
 		 	}
         }
@@ -1568,11 +1577,17 @@ technologies = {
 		production_speed_logging_camp_factor = 0.05
 
 		 allow = {
-           	tag = ITA
+           	AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
         }
 
         allow_branch = {
-            tag = ITA
+            AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
         }
 
 
@@ -1599,7 +1614,10 @@ technologies = {
 
 	allow = {
 			OR = {
-		 		tag = ITA
+		 		AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
            		tag = NOR
 		 	}    	
 
@@ -1607,7 +1625,10 @@ technologies = {
 
         allow_branch = {
            OR = {
-		 		tag = ITA
+		 		AND = { 
+           			tag = PIE 
+           			PIE = { has_cosmetic_tag = ITA }
+         		}
            		tag = NOR
 		 	}
         }
