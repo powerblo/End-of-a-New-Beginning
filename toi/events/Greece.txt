@@ -1,1 +1,243 @@
-﻿
+﻿add_namespace = greek_events
+# cretan revolt begins
+country_event = {
+	id = greek_events.1
+	title =  greek_events.1.t
+	desc =  greek_events.1.d
+	#picture = 
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	trigger = {
+		tag = OTO
+		date > 1866.06.06
+		#OR = {
+			182 = { is_owned_and_controlled_by = OTO } #Crete
+		#}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		set_country_flag = cretan_revolt
+		182 = {
+			add_core_of = CET
+			add_claim_by = OTO
+			CET = { 
+				transfer_state = PREV 
+				add_ideas = {CET_cretan_fighters}
+			}
+		}
+	}
+
+	option = {
+		name = greek_events.1.a #shit
+		hidden_effect = {
+			CET ={
+				load_oob = CET_rebellion_1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 250
+					producer = CET
+				}
+			}
+			#country_event = {id = nzl_nzw.8 days = 90}
+		}
+		declare_war_on = {
+			target = CET
+			type = annex_everything
+		}
+	}
+	option = {
+		name = greek_events.1.b #take control of the rebels
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			CET ={
+				load_oob = CET_rebellion_1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 250
+					producer = CET
+				}
+				change_tag_from = ROOT
+			}
+			#country_event = {id = nzl_nzw.8 days = 90}
+		}
+		declare_war_on = {
+			target = CET
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {#crete gets external aid
+	id = greek_events.2
+	title =  greek_events.2.t
+	desc =  greek_events.2.d
+	#picture = 
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	trigger = {
+		tag = CET
+		date > 1866.9.02
+		exists = yes
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = greek_events.2.a #great
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 250
+			producer = CET
+		}
+		add_manpower = 1000
+	}
+}
+country_event = {#greece sends aid
+	id = greek_events.3
+	title =  greek_events.3.t
+	desc =  greek_events.3.d
+	#picture = 
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = greek_events.3.a #great
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 100
+			producer = FROM
+		}
+		add_manpower = 1000
+	}
+}
+country_event = {#Arkadi explosision
+	id = greek_events.4
+	title =  greek_events.4.t
+	desc =  greek_events.4.d
+	#picture = 
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	trigger = {
+		tag = CET
+		date > 1866.11.02
+		exists = yes
+		has_war_with = OTO
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		182={
+			add_manpower = -800
+		}
+		add_manpower = -250
+	}
+
+	option = {
+		name = greek_events.4.a #what a waste
+			every_country={
+				limit = {##change this to great_power when that is in
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = RUS
+						tag = AUS
+						tag = PIE
+						tag = USA
+						tag = LVN
+						tag = PRS
+					}
+					exists = yes 
+				}
+				add_opinion_modifier = {
+					target = CET
+					modifier = large_increase
+				}
+				news_event = {
+					id = greek_events.5
+				}
+			}
+	}
+	
+}
+news_event = {#basiclly a news event
+	id = greek_events.5
+	title =  greek_events.5.t
+	desc =  greek_events.5.d
+	#picture = 
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 75
+		}
+		name = greek_events.5.a #what a tradgety
+	}
+	option = {
+		name = greek_events.5.b #we must do something
+		ai_chance = {
+			factor = 25
+		}
+		FROM = {
+			add_manpower = 250##"doing ""something"""
+		}
+		add_manpower = -250
+		set_country_flag = amenable_to_CET
+	}
+}
+country_event = {#Crete won(Somehow?) annex into greece
+	id = greek_events.6
+	title =  greek_events.6.t
+	desc =  greek_events.6.d
+	#picture = 
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	trigger = {
+		tag = CET
+		exists = yes
+		has_war = no
+		NOT={
+			has_country_flag = CET_independant_sprit
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = greek_events.6.a #integrate into greece
+		GRE = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = greek_events.6.a #refuse
+		set_country_flag = CET_independant_sprit
+	}
+	
+}

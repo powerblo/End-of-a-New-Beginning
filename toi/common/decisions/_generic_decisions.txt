@@ -1434,6 +1434,48 @@ foreign_politics = {
 		}
 	}
 	
+	#Greece sends help to Crete(move this if greece gets a file to its self)
+	eoanb_decision_gre_help_cet = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+			has_manpower > 999
+			OR = {
+				has_equipment = {
+					infantry_equipment_rifle_0 > 99
+				}
+				has_equipment = {
+					infantry_equipment_rifle_1 > 99
+				}
+			}
+		}
+		
+		visible = {
+			TAG = GRE
+			CET = {
+				has_war_with = OTO
+				exists = yes
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			CET= {
+				country_event = {id =greek_events.3}
+			}
+			add_manpower = -1000
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
 }
 
 tribal_decisions_eoanb = {
