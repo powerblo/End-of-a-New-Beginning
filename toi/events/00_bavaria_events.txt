@@ -656,14 +656,22 @@ country_event = {
 		name = bavariaevent.11.a
 		
 		hidden_effect = {
-			puppet = BAV
+			GEC = {
+				annex_country = {
+					target = BAV
+					transfer_troops = yes
+				}
+				change_tag_from = BAV
+			}
+			
+			puppet = GEC
 		
 			#PRS allies
 			every_country = {
 				limit = {	
 					has_country_flag = eoanb_flag_PRS_ally_sww
 				}
-				BAV = { annex_country = { target = PREV transfer_troops = no } }
+				GEC = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
 			#AUS allies
@@ -674,11 +682,11 @@ country_event = {
 						tag = BAV
 					}
 				}
-				BAV = { annex_country = { target = PREV transfer_troops = no } }
+				GEC = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
 			#Neutral Thuringia and Hessen + Prussia
-			BAV = {
+			GEC = {
 				annex_country = { 
 					target = THU
 					transfer_troops = no 
@@ -692,7 +700,6 @@ country_event = {
 					transfer_troops = no 
 				}
 				country_event = { id = bavariaevent.18 }
-				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
 			}
 		}
 	}
@@ -750,14 +757,22 @@ country_event = {
 		name = bavariaevent.12.a
 		
 		hidden_effect = {
-			puppet = BAV
+			GEC = {
+				annex_country = {
+					target = BAV
+					transfer_troops = yes
+				}
+				change_tag_from = BAV
+			}
+		
+			puppet = GEC
 		
 			#PRS allies
 			every_country = {
 				limit = {	
 					has_country_flag = eoanb_flag_PRS_ally_sww
 				}
-				BAV = { annex_country = { target = PREV transfer_troops = no } }
+				GEC = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
 			#AUS allies
@@ -772,7 +787,7 @@ country_event = {
 			}
 			
 			#Neutral Thuringia and Hessen + Prussia
-			BAV = { 
+			GEC = { 
 				annex_country = { 
 					target = THU
 					transfer_troops = no 
@@ -786,7 +801,6 @@ country_event = {
 					transfer_troops = no 
 				}
 				country_event = { id = bavariaevent.18 }
-				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
 			}
 		}
 	}
@@ -837,7 +851,7 @@ country_event = {
 		name = bavariaevent.14.a
 		
 		hidden_effect = {
-			BAV = { 
+			GEC = { 
 				annex_country = {
 					target = ROOT
 					transfer_troops = no
@@ -860,7 +874,7 @@ country_event = {
 		name = bavariaevent.14.b
 		
 		hidden_effect = {
-			BAV = {
+			GEC = {
 				puppet = ROOT
 				country_event = { id = bavariaevent.16 days = 3 }
 			}
@@ -919,7 +933,7 @@ news_event = {
 	option = {
 		trigger = { 
 			OR = {
-				tag = BAV
+				tag = GEC
 				tag = AUS
 			}
 		}
@@ -930,7 +944,7 @@ news_event = {
 		trigger = { 
 			NOT = {
 				OR = {
-					tag = BAV
+					tag = GEC
 					tag = AUS
 				}
 			}
