@@ -2265,3 +2265,191 @@ country_event = { #recognition guaranteed
 		ai_chance = { factor = 100 }
 	}
 }
+
+country_event = { #boers demand submition
+	id = boer_states.83
+	title = boer_states.83.t
+	desc = boer_states.83.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.83.a #ok
+		ai_chance = { 
+			factor = 50 
+			modifier={
+				add = 20
+				has_completed_focus = afr_wes_govermental_westernisation
+			}
+		}
+		puppet = FROM
+	}
+	option = {
+		name = boer_states.83.b #refuse
+		ai_chance = { 
+			factor = 50 
+			modifier={
+				add = -20
+				has_completed_focus = afr_wes_govermental_westernisation
+			}
+		}
+		FROM = {
+			country_event = {id = boer_states.84}
+		}
+	}
+}
+
+country_event = { #they refuse
+	id = boer_states.84
+	title = boer_states.84.t
+	desc = boer_states.84.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.83.a #force them
+		ai_chance = { factor = 50 }
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+	option = {
+		name = boer_states.83.b #can cannot afford to take action
+		ai_chance = { factor = 50 }
+		add_political_power = -100
+	}
+}
+
+country_event = { #OFS asks to be annexed
+	id = boer_states.85
+	title = boer_states.85.t
+	desc = boer_states.85.d
+		
+	is_triggered_only=yes
+	
+	option = {
+		name = boer_states.85.a#agree
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 0 # 
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			has_political_power > 50
+		}
+		
+		puppet =FROM
+		FROM = {
+			set_country_flag = britian_accepts_re_annexation
+		}
+		add_political_power = -50
+	}
+	
+	option = {
+		name = boer_states.85.a#no
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 100 # 
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = {id = boer_states.86}
+		}
+	}
+}
+
+country_event = { #annexation rejected
+	id = boer_states.86
+	title = boer_states.86.t
+	desc = boer_states.86.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.86.a #ok
+		ai_chance = { factor = 100 }
+		545={
+			add_claim_by = ROOT
+		}
+	}
+}
+
+country_event = { #SOT - ask britian for protection
+	id = boer_states.87
+	title = boer_states.87.t
+	desc = boer_states.87.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			owns_state = 779
+		}
+		tag = SOT
+		has_war = no
+	}
+	
+	option = {
+		name = boer_states.87.a #go to britian
+		ai_chance = { factor = 100 }
+		ENG = {
+			 country_event = {id = boer_states.88}
+		}
+	}
+	option = {
+		name = boer_states.87.a #no, we value our autonomy
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #ENG - SOT asks for protection
+	id = boer_states.88
+	title = boer_states.88.t
+	desc = boer_states.88.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = boer_states.88.a #agree
+		ai_chance = { factor = 100 }
+		puppet = FROM
+	}
+	option = {
+		name = boer_states.88.b #no, they have no value
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = boer_states.88.c #guarantee them anyway
+		ai_chance = { factor = 0 }
+		
+		give_guarantee = FROM
+	}
+}
+
+country_event = { #GQE - ask britian for protection
+	id = boer_states.89
+	title = boer_states.89.t
+	desc = boer_states.89.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GQE
+		date > 1874.02.01
+	}
+	
+	option = {
+		name = boer_states.89.a #go to britian
+		ai_chance = { factor = 100 }
+		ENG = {
+			 country_event = {id = boer_states.88}
+		}
+	}
+	option = {
+		name = boer_states.87.a #no, we value our autonomy
+		ai_chance = { factor = 0 }
+	}
+}

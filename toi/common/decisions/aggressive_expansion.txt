@@ -7,9 +7,9 @@ aggressive_expansion_category = {
 
 		available = {
 			FROM = {
-				has_added_tension_amount > 25
+				has_added_tension_amount > 30
 			}
-			has_added_tension_amount < 25
+			has_added_tension_amount < 30
 			NOT = {
 				has_idea = pre_industrial_era
 				has_war_with = FROM
@@ -23,7 +23,7 @@ aggressive_expansion_category = {
 		target_trigger = {
 			#Target is FROM
 			FROM = {
-				has_added_tension_amount > 25
+				has_added_tension_amount > 30
 				NOT = {
 					is_in_faction_with = ROOT
 				}

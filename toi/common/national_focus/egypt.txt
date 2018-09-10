@@ -462,6 +462,9 @@ focus_tree = {
 					}
 				}
 			}
+			hidden_effect = {
+				set_country_flag = EGY_ETH_war
+			}
 		}
 	}
 	focus = {
@@ -874,7 +877,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_OTO_chains
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_egypt_otto_chains
 		cost = 20
 		allow_branch = {
 			OVERLORD = {tag= OTO}
@@ -944,7 +947,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_accept_OTO
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_egy_submit_to_oto
 		cost = 20
 		prerequisite = {
 			focus = EGY_vic_OTO_chains
@@ -1006,7 +1009,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_a_loyal_state
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_egy_submit_to_oto
 		cost = 10
 		prerequisite = {
 			focus = EGY_vic_accept_OTO
@@ -1036,7 +1039,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_bring_gov_into_line_with_OTO
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_egy_submit_to_oto
 		cost = 10
 		prerequisite = {
 			focus = EGY_vic_a_loyal_state
