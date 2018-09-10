@@ -69,7 +69,10 @@ unidustrialized_warfare = {
 			NOT = { has_non_aggression_pact_with = FROM }
 			any_state = {
 				is_owned_and_controlled_by = FROM
-				is_claimed_by = ROOT
+				OR = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
 				any_neighbor_state = {
 					is_fully_controlled_by = ROOT
 				}
@@ -157,11 +160,9 @@ unidustrialized_warfare = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
-					strength_ratio = {
-						tag = FROM
-						ratio > 0.8
-					}
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
 				}
 			}
 			modifier = {
@@ -171,6 +172,106 @@ unidustrialized_warfare = {
 					ratio > 1.5
 				}
 			}
+		}
+	}
+}
+political_actions = {
+
+	#EGY annex south sudan
+	eoanb_decision_EGY_take_south_sudan = {
+
+		icon = generic_political_discourse
+
+		available = {
+			any_state = {
+				is_owned_and_controlled_by = FROM
+				is_claimed_by = ROOT
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			tag = EGY
+		}
+
+		visible = {
+			TAG = EGY
+			NOT = { has_war_with = FROM }
+			any_state = {
+				is_owned_and_controlled_by = FROM
+				is_claimed_by = ROOT
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+				}
+				OR = {
+					state = 832
+					state = 833
+					state = 834
+					state = 845
+				}
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+			NOT = {
+				OVERLORD = {
+					tag = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_debt_repayments = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_idea = egy_vic_debt
+		}
+
+		visible = {
+			has_idea = egy_vic_debt
+			check_variable = {ROOT.debt_level > 0}
+		}
+
+		modifier = {
+			#war_support_weekly = 0.01
+			consumer_goods_factor = -0.15
+			industrial_capacity_factory = -0.05
+		}
+		
+		fire_only_once = yes
+
+		cost = 10
+
+		remove_effect = {
+			custom_effect_tooltip = EGY_afr_decrease_debt_1
+			hidden_effect = {
+				subtract_from_variable = {var = debt_level value = 1}
+			}
+		}
+		days_remove = 120
+		days_re_enable = 360
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

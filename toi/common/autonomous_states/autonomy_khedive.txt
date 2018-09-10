@@ -27,7 +27,13 @@ autonomy_state = {
 	}
 	
 	allowed = {
-		tag = EGY
+		OR = {
+			tag = EGY
+			tag = HJZ
+			tag = LBA
+			tag = KUW
+			tag = TUN
+		}
 		OVERLORD = { tag = OTO }
 	}
 
