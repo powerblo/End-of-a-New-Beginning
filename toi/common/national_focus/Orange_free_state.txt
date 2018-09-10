@@ -1191,8 +1191,16 @@ focus_tree = {
 			focus = ofs_vic_steadfast_independace
 		}
 		available_if_capitulated = no
+		available ={
+			date < 1870.01.01
+		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {id = boer_states.85}
+			}
 		}
 		x = 27
 		y = 2
@@ -1215,6 +1223,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			ENG = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+		}
 		x = 27
 		y = 3
 
@@ -1235,6 +1251,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 2
+		completion_reward = {
+			add_stability = -0.05
+		}
 
 	}
 	focus = {
@@ -1259,6 +1278,9 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.1
 		}
 		x = 29
 		y = 3
@@ -1332,7 +1354,7 @@ focus_tree = {
 		y = 3
 
 	}
-	focus = {
+	focus =	{
 		id = ofs_vic_establish_diplomacy_with_the_west
 		icon = GFX_goal_focus_continent_west_europe
 		cost = 10.00
@@ -1901,6 +1923,341 @@ focus_tree = {
 					}
 				}
 				add_state_core = 275
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_exspand_influence_north
+		icon = GFX_goal_focus_imperialism
+		cost = 15.00
+		prerequisite = {
+			focus = ofs_vic_encorage_more_deals
+		}
+		prerequisite = {
+			focus = ofs_vic_develop_independant_indentity
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			OR = {
+				owns_state = 841
+				owns_state = 1143
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 30
+		y = 4
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ofs_vic_exspand_into_bamangwato
+		icon = GFX_goal_focus_imperialism
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_exspand_influence_north
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			owns_state = 841
+			841={
+				owner = {
+					NOT = {
+						has_idea = afr_colonial_power
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 29
+		y = 5
+		completion_reward = {
+			add_state_claim = 841
+			841={
+				owner={
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_influence_rhodesia
+		icon = GFX_goal_focus_imperialism
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_exspand_influence_north
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			owns_state = 1143
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 31
+		y = 5
+		completion_reward = {
+			545 = {
+				owner = {
+					country_event = {id = boer_states.83}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_begin_to_industrialise_rhodesia
+		icon = GFX_goal_focus_industrial_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_exspand_influence_north
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			custom_trigger_tooltip={
+				tooltip = OFS_has_dominion_over_rhodesia
+				any_neighbor_country={
+					OVERLORD = {tag = ROOT}
+					owns_state = 545
+				}
+			}
+			if = {
+				limit = {
+					tag = OFS
+				}
+				OR = {
+					has_idea = ofs_bluebacks
+					has_idea = ofs_bluebacks_valued
+					has_idea = ofs_bluebacks_heavly_valued
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 31
+		y = 6
+		completion_reward = {
+			545={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				owner = {
+					hidden_effect = {
+						load_focus_tree = industrialilzing_power_africa
+					}
+					swap_ideas = {
+						add_idea = afr_reforming_kingdom
+						remove_idea = AF_T_small_kingdom
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_civilian_industrialistion_rhodesia
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_to_industrialise_rhodesia
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			custom_trigger_tooltip={
+				tooltip = OFS_has_dominion_over_rhodesia
+				any_neighbor_country={
+					OVERLORD = {tag = ROOT}
+					owns_state = 545
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 30
+		y = 7
+		completion_reward = {
+			545={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				owner = {
+					custom_effect_tooltip = EDC_afr.5.t
+					hidden_effect = {
+						country_event = { id = EDC_afr.5} 
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_military_industrialistion_rhodesia
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ofs_vic_begin_to_industrialise_rhodesia
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			custom_trigger_tooltip={
+				tooltip = OFS_has_dominion_over_rhodesia
+				any_neighbor_country={
+					OVERLORD = {tag = ROOT}
+					owns_state = 545
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 32
+		y = 7
+		completion_reward = {
+			545={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				owner = {
+					custom_effect_tooltip = EDC_afr.5.t
+					hidden_effect = {
+						country_event = { id = EDC_afr.5} 
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_finish_the_industrialisation_in_rhodesia
+		icon = GFX_goal_focus_industrial_revolution
+		cost = 15.00
+		prerequisite = {
+			focus = ofs_vic_civilian_industrialistion_rhodesia
+			focus = ofs_vic_military_industrialistion_rhodesia
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			any_neighbor_country={
+				OVERLORD = {tag = ROOT}
+				owns_state = 545
+				check_variable = {THIS.industrisation_progress > 74.9}
+				has_idea = afr_reforming_kingdom
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 31
+		y = 8
+		completion_reward = {
+			545={
+				owner = {
+					custom_effect_tooltip = afr_become_industrialised
+					hidden_effect = {
+						clear_variable = THIS.industrisation_progress
+						remove_ideas = afr_reforming_kingdom
+						add_ideas = industrializing
+						add_ideas = afr_post_tribal
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ofs_vic_integrate_rhodesia
+		icon = GFX_goal_focus_imperialism
+		cost = 15.00
+		prerequisite = {
+			focus = ofs_vic_finish_the_industrialisation_in_rhodesia
+		}
+		available_if_capitulated = no
+		#allow_branch = {
+		#	OR = {
+		#		owns_state = 841
+		#		owns_state = 1143
+		#	}
+		#}
+		available={
+			custom_trigger_tooltip={
+				tooltip = OFS_has_dominion_over_rhodesia
+				any_neighbor_country={
+					OVERLORD = {tag = ROOT}
+					owns_state = 545
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 31
+		y = 9
+		completion_reward = {
+			545={
+				owner = {
+					ROOT={
+						annex_country={
+							target = PREV
+						}
+					}
+					
+				}
 			}
 		}
 	}

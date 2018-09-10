@@ -79,19 +79,15 @@
 
   set_technology = {
 	infantry_weapons = 1
-	vic_army_cloth = 1
+	tech_infantry_napoleonic_uniform = 1
 	start_build_tech = 1
 	tech_naval_1812_frigate = 1
   }
   
   OTO = {
-  if = {
-    limit = {
-      has_dlc = "Together for Victory"
-    }
     set_autonomy = {
       target = HJZ
-      autonomous_state = autonomy_dominion
+      autonomous_state = autonomy_eyalet
       freedom_level = 0.2
     }
   }

@@ -315,8 +315,10 @@ country_event = { #Otago Gold Rush
 	picture = GFX_report_event_generic_read_write
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		date > 1861.05.19
+		tag = NZL
 	}
 	fire_only_once = yes
 	option = {
@@ -331,6 +333,8 @@ country_event = { #Eruption of Mt Tarawera and the destruction of the pink and w
 	picture = GFX_report_event_generic_read_write
 
 	#is_triggered_only = yes
+	
+	fire_only_once = yes
 	trigger = {
 		date > 1886.06.19
 		has_idea = nzl_pink_white_terraces

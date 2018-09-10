@@ -39,6 +39,10 @@
  support_equipment_1_desc:0 "Radios, Jeeps, Pontoons & other equipment used to support troops."
  infantry_equipment_rifle:0 "Rifle Equipment"
  infantry_equipment_rifle_desc:0 "Troops armed with edge-cutting rifle and bayonet technology."
+ infantry_equipment_smg:0 "SMG Equipment"
+ infantry_equipment_smg_desc:0 "Submachine Guns, highly effective against hostile Infantry."
+ infantry_equipment_mg:0 "Machine Guns"
+ infantry_equipment_mg_desc:0 "Infantry Machine Guns, very efficient for suppression and against infantry."
  cavalry_equipment:0 "Cavalry Equipment"
  cavalry_equipment_desc:0 "Horses, saddles and mounted infantry equipment for the average mounted warrior."
  uniform_equipment:0 "Uniform Equipment"
@@ -346,42 +350,61 @@
  infantry_equipment_rifle_5_desc:0 "The Lee-Metford Rifle features a bolt action mechanism, which makes it much faster to operate."
  infantry_equipment_rifle_6:0 "Lee-Enfield Rifle"
  infantry_equipment_rifle_6_desc:0 "The Lee-Enfield Rifle Refines the Design of the earlier Lee-Enfield."
- infantry_equipment_1:0 "Magazine Lee–Enfield"
- infantry_equipment_1_desc:0 "The Magazine Lee–Enfield Rifle."
- infantry_equipment_2:0 "SMLE No.1"
- infantry_equipment_2_desc:0 "The SMLE No.1 Rifle."
- infantry_equipment_3:0 "Pattern 1914 Enfield"
- infantry_equipment_3_desc:0 "The Pattern 1914 Enfield."
- infantry_equipment_4:0 "M1917 Enfield"
- infantry_equipment_4_desc:0 "The M1917 Enfield."
- infantry_equipment_5:0 "M1 Garand"
- infantry_equipment_5_desc:0 "The M1 Garand."
- infantry_equipment_6:0 "M1 Thompson"
- infantry_equipment_6_desc:0 "The M1 Thompson."
- infantry_equipment_7:0 "M1 Carbine"
- infantry_equipment_7_desc:0 "The M1 Carbine."
- infantry_equipment_8:0 "M2 Carbine"
- infantry_equipment_8_desc:0 "The M2 Carbine."
- infantry_equipment_9:0 "AK-47"
- infantry_equipment_9_desc:0 "The AK-47."
- infantry_equipment_10:0 "L1A1 SLR"
- infantry_equipment_10_desc:0 "The L1A1 SLR."
- infantry_equipment_11:0 "Ak-74"
- infantry_equipment_11_desc:0 "The Ak-74."
- infantry_equipment_12:0 "FN P90"
- infantry_equipment_12_desc:0 "The FN P90."
- infantry_equipment_13:0 "G36"
- infantry_equipment_13_desc:0 "The G36."
- infantry_equipment_14:0 "FN SCAR"
- infantry_equipment_14_desc:0 "The FN SCAR."
-
+ infantry_equipment_rifle_7:0 "MLE Carbine Rifle"
+ infantry_equipment_rifle_7_desc:0 "The Magazine Lee-Enfield Carbine Rifle Mk.I is an improved version of the earlier Lee-Enfield Rifle, utilizing a magazine and a bolt-action operation mechanism."
+ infantry_equipment_rifle_8:0 "SMLE No.1"
+ infantry_equipment_rifle_8_desc:0 "This shortened version of the Lee-Enfield Carbine Rifle is more accurate and has an improved magazine and bolt action mechanism, allowing it to fire faster and with more stopping power."
+ infantry_equipment_rifle_9:0 "Pattern 1914 Enfield Rifle"
+ infantry_equipment_rifle_9_desc:0 "This newest design of the Enfield Rifle has been heavily modernized and its bolt-action mechanism improved."
+ infantry_equipment_rifle_10:0 "Rifle No.1 Mk.III"
+ infantry_equipment_rifle_10_desc:0 "The design of the old Enfield Rifle has been improved further with large advancements on the sights and operating mechanism."
+ infantry_equipment_smg_0:0 "MP18"
+ infantry_equipment_smg_0_desc:0 "An early submachine gun, highly effective against unprotected infantry but expensive to produce, and slightly weaker against armored targets."
+ infantry_equipment_mg_0:0 "Lewis Gun"
+ infantry_equipment_mg_0_desc:0 "An early heavy machine gun for infantry use."
+ infantry_equipment_mg_1:0 "M1918 Browning"
+ infantry_equipment_mg_1_desc:0 "An improved design of the heavy infantry machine gun."
+ #infantry_equipment_1:0 "Magazine Lee–Enfield"
+ #infantry_equipment_1_desc:0 "The Magazine Lee–Enfield Rifle."
+ #infantry_equipment_2:0 "SMLE No.1"
+ #infantry_equipment_2_desc:0 "The SMLE No.1 Rifle."
+ #infantry_equipment_3:0 "Pattern 1914 Enfield"
+ #infantry_equipment_3_desc:0 "The Pattern 1914 Enfield."
+ #infantry_equipment_4:0 "M1917 Enfield"
+ #infantry_equipment_4_desc:0 "The M1917 Enfield."
+ #infantry_equipment_5:0 "M1 Garand"
+ #infantry_equipment_5_desc:0 "The M1 Garand."
+ #infantry_equipment_6:0 "M1 Thompson"
+ #infantry_equipment_6_desc:0 "The M1 Thompson."
+ #infantry_equipment_7:0 "M1 Carbine"
+ #infantry_equipment_7_desc:0 "The M1 Carbine."
+ #infantry_equipment_8:0 "M2 Carbine"
+ #infantry_equipment_8_desc:0 "The M2 Carbine."
+ #infantry_equipment_9:0 "AK-47"
+ #infantry_equipment_9_desc:0 "The AK-47."
+ #infantry_equipment_10:0 "L1A1 SLR"
+ #infantry_equipment_10_desc:0 "The L1A1 SLR."
+ #infantry_equipment_11:0 "Ak-74"
+ #infantry_equipment_11_desc:0 "The Ak-74."
+ #infantry_equipment_12:0 "FN P90"
+ #infantry_equipment_12_desc:0 "The FN P90."
+ #infantry_equipment_13:0 "G36"
+ #infantry_equipment_13_desc:0 "The G36."
+ #infantry_equipment_14:0 "FN SCAR"
+ #infantry_equipment_14_desc:0 "The FN SCAR."
+ 
+ flamethrower_equipment:0 "Flamethrowers"
+ flamethrower_equipment_desc:0 "Flamethrowers are very effective against hostile infantry, but are considered inhumane and can easily lead to accidents."
+ flamethrower_equipment_0:0 "Early Flamethrower"
+ flamethrower_equipment_0_desc:0 "An early flamethrower."
  machine_gun_equipment_0:0 "Gatling Gun"
  machine_gun_equipment_0_desc:0 "The Gatling Gun allows a rapid fire rate and can therefore devastate enemy divisions. It is, however, highly inaccurate."
  machine_gun_equipment_1:0 "Mitrailleuse"
  machine_gun_equipment_1_desc:0 "An improved Gatling Gun."
  machine_gun_equipment_2:0 "Maxim Gun"
  machine_gun_equipment_2_desc:0 "The Maxim Gun is a recoil operated machine gun. At a fire rate of 600RPM it can mow down enemy infantry at close range. It is, however, still not very effective at longer distances."
-
+ machine_gun_equipment_3:0 "Vickers MG"
+ machine_gun_equipment_3_desc:0 "A modern machine gun."
  cannon_equipment:0 "Cannons"
  cannon_equipment_desc:0 "Cannons."
  cannon_equipment_0:0 "Bore Gun"
@@ -394,37 +417,44 @@
  rifled_cannon_equipment_1_desc:0 "This Field Gun is breech loaded rather than muzzle loaded, which allows for a faster firing rate."
  rifled_cannon_equipment_2:0 "1870 Field Gun"
  rifled_cannon_equipment_2_desc:0 "With a sliding breech block and interrupted screw, this field gun is even more effective than its predecessors."
-
  siege_gun_0:0 "Siege Gun"
  siege_gun_0_desc:0 "A heavy cannon to be used in sieges."
-
  howitzer_equipment_0:0 "Howitzer"
  howitzer_equipment_0_desc:0 "This cannon can fire projectiles over comparably long distances."
  howitzer_equipment_1:0 "Rifled Howitzer"
  howitzer_equipment_1_desc:0 "This improved variant of the Howitzer cannon is rifled, making it more accurate and powerful."
-
  rocket_artillery_equipment_0: "Congreve Rocket"
  rocket_artillery_equipment_0_desc:0 "The Congreve Rocket can be fired at enemies over distances as long as 900 meters."
  rocket_artillery_equipment_1:0 "Hale Rocket"
  rocket_artillery_equipment_1_desc:0 "The Hale Rocket is an improved, more accurate version of the Congreve Rocket."
-
  cavalry_equipment_0:0 "Horse and Tack"
  cavalry_equipment_0_desc:0 "Basic Cavalry Equipment."
  transport_equipment_0:0 "Covered Wagon"
  transport_equipment_0_desc:0 "A covered wagon, to protect transported goods or men from rain and debris."
  horse_artillery_equipment_0:0 "Horse Limber"
  horse_artillery_equipment_0_desc:0 "Horses equipped to drag artillery around."
-
- uniform_equipment_0:0 "Victorian Uniform"
- uniform_equipment_0_desc:0 "A uniform model from the victorian era."
- uniform_equipment_1:0 "1850 Uniform"
+ uniform_equipment_0:0 "Napoleonic Uniform"
+ uniform_equipment_0_desc:0 "A uniform model from the napoleonic era."
+ uniform_equipment_1:0 "Victorian Uniform"
  uniform_equipment_1_desc:0 "An improved uniform model with greater carrying capacity."
- uniform_equipment_2:0 "1864 Uniform"
+ uniform_equipment_2:0 "1850 Uniform"
  uniform_equipment_2_desc:0 "This uniform is sturdier than its predecessors."
- uniform_equipment_3:0 "1872 Uniform"
+ uniform_equipment_3:0 "1864 Uniform"
  uniform_equipment_3_desc:0 "This uniform is designed to be light, but protective and useful."
- uniform_equipment_4:0 "1878 Uniform"
- uniform_equipment_4_desc:0 "An improved version of the 1872 Uniform Design, applying simple camouflage principles."
+ uniform_equipment_4:0 "1872 Uniform"
+ uniform_equipment_4_desc:0 "An improved version of the 1864 Uniform Design, applying simple camouflage principles."
+ uniform_equipment_5:0 "1878 Uniform"
+ uniform_equipment_5_desc:0 "An improved version of the 1872 Uniform design, with better protective capabilities."
+ uniform_equipment_6:0 "1887 Uniform"
+ uniform_equipment_6_desc:0 "An improved version of the 1878 Uniform design, with better protective capabilities."
+ uniform_equipment_7:0 "1895 Uniform"
+ uniform_equipment_7_desc:0 "An improved version of the 1887 Uniform design, with better protective capabilities."
+ uniform_equipment_8:0 "1912 Uniform"
+ uniform_equipment_8_desc:0 "An improved version of the 1895 Uniform design, with better protective capabilities."
+ uniform_equipment_9:0 "1915 Uniform"
+ uniform_equipment_9_desc:0 "An improved version of the 1912 Uniform design, with better protective capabilities."
+ uniform_equipment_10:0 "1918 Uniform"
+ uniform_equipment_10_desc:0 "An improved version of the 1915 Uniform design, with better protective capabilities."
 
  #AUS
  AUS_infantry_equipment_rifle_0:0 "Pattern 1842 Augustin Rifle-Musket"
@@ -437,13 +467,11 @@
  AUS_infantry_equipment_rifle_3_short:0 "M1867"
  AUS_infantry_equipment_rifle_5:0 "Repeating Rifle Model 1886"
  AUS_infantry_equipment_rifle_5_short:0 "M1886"
-
  #BAD
  BAD_infantry_equipment_rifle_0:0 "Badisches Infanteriegewehr M 1813"
  BAD_infantry_equipment_rifle_0_short:0 "Infanteriegewehr M 1813"
  BAD_infantry_equipment_rifle_2:0 " Badische Infanteriegewehr M 1861"
- BAD_infantry_equipment_rifle_2_short:0 "Infanteriegewehr M 1861"
- 
+ BAD_infantry_equipment_rifle_2_short:0 "Infanteriegewehr M 1861" 
  #BAV
  BAV_infantry_equipment_rifle_0:0 "Gewehr 1801"
  BAV_infantry_equipment_rifle_0_short:0 "Gewehr 1801"
@@ -455,7 +483,6 @@
  BAV_infantry_equipment_rifle_3_short:0 "Werder-System M69"
  BAV_infantry_equipment_rifle_4:0 "Gewehr 71"
  BAV_infantry_equipment_rifle_5:0 "Gewehr 88"
-
  #CSA
  CSA_infantry_equipment_rifle_0:0 "Model 1842 Percussion Musket"
  CSA_infantry_equipment_rifle_0_desc:0 "Springfield Musket"
@@ -463,9 +490,7 @@
  CSA_infantry_equipment_rifle_2_short:0 "Richmond Musket"
  CSA_infantry_equipment_rifle_3:0 "Springfield Model 1866"
  CSA_infantry_equipment_rifle_3_short:0 "Springfield Rifle"
-
  CSA_machine_gun_equipment_0:0 "Gorgas Gun"
-
  CSA_cannon_equipment_0:0 "Model 1841 6-pounder Gun"
  CSA_cannon_equipment_0_short:0 "6pdr Gun"
  CSA_cannon_equipment_1:0 "Model 1857 12-pounder Napoleon"
@@ -474,19 +499,15 @@
  CSA_rifled_cannon_equipment_0_short:0 "10pdr Parrot Rifle"
  CSA_rifled_cannon_equipment_1:0 "12-pounder Whitworth Breech-Loading Gun"
  CSA_rifled_cannon_equipment_1_short:0 "12pdr Whitworth"
-
  CSA_siege_gun_0:0 "200-pounder Parrot Rifled Muzzle-Loader"
  CSA_siege_gun_0_short:0 "200pdr Parrot Rifle"
-
  CSA_howitzer_equipment_0:0 "Model 1841 12-pounder Howitzer"
  CSA_howitzer_equipment_0_short:0 "12pdr Howitzer"
  CSA_howitzer_equipment_1:0 "12-pounder Dahlgren Boat Howitzer"
  CSA_howitzer_equipment_1_short:0 "12pdr Dahlgren"
- 
  #DEN
  DEN_infantry_equipment_rifle_1:0 "Danish 1853/66 Snider Rifle"
  DEN_infantry_equipment_rifle_1_short:0 "1853/66 Snider Rifle"
-
  #FRA
  FRA_infantry_equipment_rifle_0:0 "Delvigne Rifle"
  FRA_infantry_equipment_rifle_1:0 "P1851 Minié"
@@ -496,21 +517,17 @@
  FRA_foureight_frigate:0 "Gomer Class"
  FRA_fivesix_frigate:0 "Gloire Class"
  FRA_sixone_frigate:0 "Magenta Class"
-
  #HES
  HES_infantry_equipment_rifle_0:0 "Modèle 1777 corrigé en l'an IX"
  HES_infantry_equipment_rifle_0_short:0 "Modèle 1777 corrigé"
  HES_infantry_equipment_rifle_1:0 "Vereinsgewehr 1857"
  HES_infantry_equipment_rifle_4:0 "Gewehr 71"
  HES_infantry_equipment_rifle_5:0 "Gewehr 88"
- 
  #HES
  HSD_infantry_equipment_rifle_1:0 "Großherzoglich Hessisches Infanteriegewehr 1850"
  HSD_infantry_equipment_rifle_1_short:0 "Infanteriegewehr M1850"
- 
  #JAP
  JAP_infantry_equipment_rifle_0:0 "Tanegashima"
- 
  #OLD
  OLD_infantry_equipment_rifle_0:0 "India-Pattern-Gewehr"
  OLD_infantry_equipment_rifle_1:0 "Perkussions-Gewehr Modell 1843/48"
@@ -519,7 +536,6 @@
  OLD_infantry_equipment_rifle_3:0 "Füsiliergewehr M/62 "
  OLD_infantry_equipment_rifle_4:0 "Gewehr 71"
  OLD_infantry_equipment_rifle_5:0 "Gewehr 88"
-
  #PRS
  PRS_infantry_equipment_rifle_0:0 "M1839"
  PRS_infantry_equipment_rifle_1:0 "M1839/55"
@@ -528,26 +544,22 @@
  PRS_infantry_equipment_rifle_3_short:0 "Dreyse M/1841"
  PRS_infantry_equipment_rifle_4:0 "Gewehr 71"
  PRS_infantry_equipment_rifle_5:0 "Gewehr 88"
-
+ PRS_infantry_equipment_rifle_7:0 "Gewehr 98"
  #SAX
  SAX_infantry_equipment_rifle_0:0 "M-1844"
  SAX_infantry_equipment_rifle_1:0 "M-1851"
  SAX_infantry_equipment_rifle_2:0 "M-1857"
  SAX_infantry_equipment_rifle_4:0 "Gewehr 71"
  SAX_infantry_equipment_rifle_5:0 "Gewehr 88"
- 
  #SPR
  SPR_infantry_equipment_rifle_3:0 "Spanish 1859/67 Berdan Infantry Rifle"
  SPR_infantry_equipment_rifle_3_short:0 "1859/67 Berdan Infantry Rifle"
  SPR_infantry_equipment_rifle_4:0 "Spanish M1871/89 Remington rifle"
  SPR_infantry_equipment_rifle_4_short:0 "M1871/89 Remington rifle"
- 
  #SWE
  SWE_infantry_equipment_rifle_0:0 " M/1815 Musket"
- 
  SWE_machine_gun_equipment_1:0 "Kulsprutegevär Fm/Kjellman"
  SWE_machine_gun_equipment_1_short:0 "Kjellman"
-
  #THU
  THU_infantry_equipment_rifle_0:0 "M1839"
  THU_infantry_equipment_rifle_1:0 "M1839/55"
@@ -556,7 +568,6 @@
  THU_infantry_equipment_rifle_3_short:0 "Dreyse M/1841"
  THU_infantry_equipment_rifle_4:0 "Gewehr 71"
  THU_infantry_equipment_rifle_5:0 "Gewehr 88"
-
  #USA
  USA_infantry_equipment_rifle_0:0 "Model 1842 Percussion Musket"
  USA_infantry_equipment_rifle_0_desc:0 "Springfield Musket."
@@ -566,31 +577,27 @@
  USA_infantry_equipment_rifle_3:0 "Springfield Model 1866"
  USA_infantry_equipment_rifle_3_short:0 "Springfield Rifle"
  USA_infantry_equipment_rifle_3_desc:0 "Springfield Rifle."
-
+ USA_infantry_equipment_rifle_7:0 "M1897 Trench"
+ USA_infantry_equipment_rifle_7_desc:0 "A highly effective trench shotgun."
  USA_machine_gun_equipment_0:0 "Agar Gun"
-
  USA_cannon_equipment_0:0 "Model 1841 6-pounder Gun"
  USA_cannon_equipment_0_short:0 "6pdr Gun"
  USA_cannon_equipment_1:0 "Model 1857 12-pounder Napoleon"
  USA_cannon_equipment_1_short:0 "12pdr Napoleon"
  USA_rifled_cannon_equipment_0:0 "10-pounder Parrot Rifled Muzzle-Loader"
  USA_rifled_cannon_equipment_0_short:0 "10pdr Parrot Rifle"
-
  USA_siege_gun_0:0 "200-pounder Parrot Rifled Muzzle-Loader"
  USA_siege_gun_0_short:0 "200pdr Parrot Rifle"
-
  USA_howitzer_equipment_0:0 "Model 1841 12-pounder Howitzer"
  USA_howitzer_equipment_0_short:0 "12pdr Howitzer"
  USA_howitzer_equipment_1:0 "12-pounder Dahlgren Boat Howitzer"
  USA_howitzer_equipment_1_short:0 "12pdr Dahlgren"
-
  #WUR
  WUR_infantry_equipment_rifle_0:0 "Modèle 1777 corrigé en l'an IX"
  WUR_infantry_equipment_rifle_0_short:0 "Modèle 1777 corrigé"
  WUR_infantry_equipment_rifle_1:0 "Vereinsgewehr 1857"
  WUR_infantry_equipment_rifle_4:0 "Gewehr 71"
  WUR_infantry_equipment_rifle_5:0 "Gewehr 88"
-
 
  twelve_frigate:0 "1812 Model Frigate"
  twelve_frigate_desc:0 "A heavier frigate design."
@@ -620,11 +627,9 @@
  seventy_frigate_desc:0 "An improved Steam Frigate, with even more powerful propulsion and even higher firepower."
  seventy_torpedo:0 "1870 Model Torpedo Boat"
  seventy_torpedo_desc:0 "A new design: Small and fast ships that carry torpedoes into battle. They aren't very heavily armored, but can easily sink battleships if they strike unexpectedly."
-
  category_cavalry:0 "Cavalry"
  category_ranged_cavalry:0 "Ranged Cavalry"
  machine_gun_company:0 "Gatling Gun Company"
-
  balloon_equipment:0 "Balloon Equipment"
  balloon_equipment_desc:0 "Ballons designed to recon areas from above and the equipment needed to repair and maintain them."
  balloon_equipment_0:0 "Early Recon Balloon"
@@ -639,7 +644,6 @@
  zeppelin_equipment_desc:0 "Mobile Air Bases used for strategic bombing."
  zeppelin_equipment_0:0 "Early Zeppelin"
  zeppelin_equipment_0_desc:0 "An Early Mobile Air Base used for strategic bombing."
- 
  equipment_1863_submarine:0 "Experimental Submarine"
  equipment_1863_submarine_desc:0 "An early experiment with a naval combat vehicle operating underwater."
  equipment_1873_submarine:0 "1873 Submarine"
@@ -698,7 +702,6 @@
  equipment_1857_gunboat_desc:0 "A smaller, but well-armed and decently protected naval vessel. This version has been upgraded to fit newer standards."
  equipment_1865_gunboat:0 "1865 Gunboat"
  equipment_1865_gunboat_desc:0 "A smaller, but well-armed and decently protected naval vessel. This version has been upgraded to fit newer standards."
- 
  armor_equipment_bicycle:0 "Bicycle"
  armor_equipment_bicycle_desc:0 "Pedal-Driven Bicycles allow for much more energy-efficient travel. They can be used to deliver messages along the battlefield without the needs for runners or communication infrastructure like telegraph lines."
  armor_equipment_bicycle_0:0 "Bicycle"
@@ -711,3 +714,11 @@
  armor_equipment_steam_car_desc:0 "Armored Cars used to transport infantry and provide aid in combat."
  armor_equipment_steam_car_0:0 "Steam Car"
  armor_equipment_steam_car_0_desc:0 "A lightly armored vehicle with its armament being the infantry riding it. Can be used to support divisions by adding a component that can move more quickly over terrain and resist small arms fire to some degree."
+ helmet_equipment:0 "Helmets"
+ helmet_equipment_desc:0 "Infantry Helmets, for protection from shrapnel, bullets, and anything else that may result in head injuries."
+ helmet_equipment_0:0 "Early Helmet"
+ helmet_equipment_0_desc:0 "A steel helmet designed to protect its wearer."
+ sniper_equipment:0 "Sharpshooting Equipment"
+ sniper_equipment_desc:0 "Equipment for Snipers and Spotters."
+ sniper_equipment_0:0 "M1903 Springfield"
+ sniper_equipment_0_desc:0 "Sharpshooting Equipment."

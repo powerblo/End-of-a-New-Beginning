@@ -1410,3 +1410,81 @@ ofs_decrease_currency_value={
 		}
 	}
 }
+
+afr_increase_taxes={
+	if= {
+		limit = {
+			has_idea = high_taxes
+		}
+		swap_ideas = {
+			add_idea = very_high_taxes
+			remove_idea = high_taxes
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = normal_taxes
+		}
+		swap_ideas = {
+			add_idea = high_taxes
+			remove_idea = normal_taxes
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = low_taxes
+		}
+		swap_ideas = {
+			add_idea = normal_taxes
+			remove_idea = low_taxes
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = very_low_taxes
+		}
+		swap_ideas = {
+			add_idea = low_taxes
+			remove_idea = very_low_taxes
+		}
+	}
+}
+
+afr_decrease_military_spending={
+	if= {
+		limit = {
+			has_idea = two_percent
+		}
+		swap_ideas = {
+			add_idea = one_percent
+			remove_idea = two_percent
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = three_percent
+		}
+		swap_ideas = {
+			add_idea = two_percent
+			remove_idea = three_percent
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = five_percent
+		}
+		swap_ideas = {
+			add_idea = three_percent
+			remove_idea = five_percent
+		}
+	}
+	else_if={
+		limit = {
+			has_idea = ten_percent
+		}
+		swap_ideas = {
+			add_idea = five_percent
+			remove_idea = ten_percent
+		}
+	}
+}

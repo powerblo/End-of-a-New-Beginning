@@ -215,6 +215,8 @@ country_event = { # The Birth of the Confederation
 		set_cosmetic_tag = CAN_CONFEDERATION
 		hidden_effect = {
 			country_event = { days = 1 id = british_canada.10 }
+			BRK={country_event = { days = 1 id = british_canada.12 }}
+			NVS={country_event = { days = 1 id = british_canada.12 }}
 		}
 	}
 }
@@ -293,6 +295,34 @@ country_event = {
 		}
 	}
 	
+}
+
+country_event = { # BRK,NVS get asked to join the confederation
+	id = british_canada.12
+	title = british_canada.12.t
+	desc = british_canada.12.d
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = british_canada.12.a # accept confederation
+		ai_chance = {
+			factor = 100
+		}
+		FROM ={
+			annex_country = { 
+				target = ROOT
+			}
+		}
+	}
+
+	option = { #no
+		name = british_canada.12.b # decline
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 #######################################################################
@@ -661,12 +691,49 @@ country_event = { # The Rupert"s Land Act
 	
 	option = { 
 		name = hbc.2.a
+		if = {
+			limit = {
+				ENG = {
+					has_completed_focus = ENG_accept_confederation_canada
+				}
+			}
 		CAN = {
 			annex_country = { 
 				target = HBC 
 			}
+			if= {
+				limit = {
+					BCO = {
+						is_puppet_of = HBC
+					}
+				}
+				annex_country = { 
+					target = BCO
+				}
+			}
 			annex_country = { 
 				target = NWT 
+			}
+		}
+		}
+		else = {
+			ENG = {
+				annex_country = { 
+					target = HBC 
+				}
+				if= {
+					limit = {
+						BCO = {
+							is_puppet_of = HBC
+						}
+					}
+					annex_country = { 
+						target = BCO
+					}
+				}
+				annex_country = { 
+					target = NWT 
+				}
 			}
 		}
 	}
