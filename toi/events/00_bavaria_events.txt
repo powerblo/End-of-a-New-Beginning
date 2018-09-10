@@ -656,6 +656,8 @@ country_event = {
 		name = bavariaevent.11.a
 		
 		hidden_effect = {
+			puppet = BAV
+		
 			#PRS allies
 			every_country = {
 				limit = {	
@@ -668,20 +670,30 @@ country_event = {
 			every_country = {
 				limit = {	
 					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						tag = BAV
+					}
 				}
 				BAV = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
-			#Neutral Thuringia
-			BAV = { 
+			#Neutral Thuringia and Hessen + Prussia
+			BAV = {
 				annex_country = { 
 					target = THU
 					transfer_troops = no 
 				}
+				annex_country = { 
+					target = HES
+					transfer_troops = no 
+				}
+				annex_country = { 
+					target = PRS
+					transfer_troops = no 
+				}
+				country_event = { id = bavariaevent.18 }
 				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
 			}
-			
-			puppet = BAV
 		}
 	}
 	
@@ -702,6 +714,9 @@ country_event = {
 		name = bavariaevent.11.b
 		
 		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariaevent.19 }
+			}
 			AUS = {
 				country_event = { id = bavariaevent.10 days = 3 }
 			}
@@ -735,6 +750,8 @@ country_event = {
 		name = bavariaevent.12.a
 		
 		hidden_effect = {
+			puppet = BAV
+		
 			#PRS allies
 			every_country = {
 				limit = {	
@@ -747,22 +764,30 @@ country_event = {
 			every_country = {
 				limit = {	
 					has_country_flag = eoanb_flag_AUS_ally_sww
+					NOT = {
+						tag = BAV
+					}
 				}
-				PREV = {
-					country_event = { id = bavariaevent.14 days = 3 }
-				}
+				country_event = { id = bavariaevent.14 days = 1 }
 			}
 			
-			#Neutral Thuringia
+			#Neutral Thuringia and Hessen + Prussia
 			BAV = { 
 				annex_country = { 
 					target = THU
 					transfer_troops = no 
 				}
+				annex_country = { 
+					target = HES
+					transfer_troops = no 
+				}
+				annex_country = { 
+					target = PRS
+					transfer_troops = no 
+				}
+				country_event = { id = bavariaevent.18 }
 				set_cosmetic_tag = BAV_cosmetic_GER_puppet_AUS
 			}
-			
-			puppet = BAV
 		}
 	}
 	
@@ -783,6 +808,9 @@ country_event = {
 		name = bavariaevent.12.b
 		
 		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariaevent.19 }
+			}
 			AUS = {
 				country_event = { id = bavariaevent.10 days = 3 }
 			}
@@ -876,5 +904,79 @@ country_event = {
 		}
 		
 		name = bavariaevent.16.a
+	}
+}
+
+#German unification news
+news_event = {
+	id = bavariaevent.17
+	title = bavariaevent.17.t
+	desc = bavariaevent.17.d
+	picture = GFX_news_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			OR = {
+				tag = BAV
+				tag = AUS
+			}
+		}
+		name = bavariaevent.17.a
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				OR = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+		name = bavariaevent.17.b
+	}
+}
+
+#Austria agrees
+country_event = {
+	id = bavariaevent.18
+	title = bavariaevent.18.t
+	desc = bavariaevent.18.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 100
+		}
+		
+		name = bavariaevent.18.a
+		
+		hidden_effect = {
+			every_country = {
+				country_event = { id = bavariaevent.17 days = 4 }
+			}
+		}
+	}
+}
+
+#Austria denies
+country_event = {
+	id = bavariaevent.19
+	title = bavariaevent.19.t
+	desc = bavariaevent.19.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 100
+		}
+		
+		name = bavariaevent.19.a
 	}
 }
