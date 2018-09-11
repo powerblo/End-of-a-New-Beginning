@@ -3,6 +3,13 @@ focus_tree = {
 	id = industrialilzing_power_africa
 	country = {
 		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = ALZ
+				tag = EQA
+			}
+		}
 	}
 	
 	focus = {
@@ -1092,7 +1099,21 @@ focus_tree = {
 			has_idea = industrializing
 		}
 		completion_reward = {
-			add_political_power = 100
+			if = {
+				limit= {
+					has_political_power<-1999
+				}
+				add_political_power = 2000
+			}
+			else_if={
+				limit= {
+					has_political_power<-999
+				}
+				add_political_power = 1000
+			}
+			else={
+				add_political_power = 100
+			}
 			custom_effect_tooltip = afr_advance_to_victorian
 			hidden_effect = {
 				load_focus_tree = industrialised_african_formed_nation

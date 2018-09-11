@@ -818,6 +818,12 @@ focus_tree = {
 				add_idea = afr_reforming_kingdom
 				remove_idea = AF_T_small_kingdom
 			}
+			if ={
+				limit = {
+					has_political_power < -999
+				}
+				add_political_power = 1000
+			}
 		}
 		x = 8
 		y = 7
