@@ -152,6 +152,32 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = BEL_absurd_opium_war
 		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+		}
 		x = 8
 		y = 1
 
@@ -978,6 +1004,9 @@ focus_tree = {
 		}
 		x = 38
 		y = 1
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = mechanical_engineering_tech }
+		}
 
 	}
 	focus = {
@@ -989,6 +1018,24 @@ focus_tree = {
 		}
 		x = 36
 		y = 2
+		completion_reward = {
+			6={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			34={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1000,6 +1047,16 @@ focus_tree = {
 		}
 		x = 34
 		y = 3
+		completion_reward = {
+			6={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1011,6 +1068,16 @@ focus_tree = {
 		}
 		x = 36
 		y = 3
+		completion_reward = {
+			6={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1033,6 +1100,29 @@ focus_tree = {
 		}
 		x = 38
 		y = 2
+		completion_reward={
+			6={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			34={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			977={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1044,6 +1134,13 @@ focus_tree = {
 		}
 		x = 38
 		y = 3
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 34
+			}
+		}
 
 	}
 	focus = {
@@ -1055,6 +1152,16 @@ focus_tree = {
 		}
 		x = 40
 		y = 2
+		completion_reward = {
+			34={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1066,6 +1173,16 @@ focus_tree = {
 		}
 		x = 40
 		y = 3
+		completion_reward = {
+			6={
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 516
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1079,6 +1196,9 @@ focus_tree = {
 		}
 		x = 38
 		y = 4
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = mechanical_engineering_tech }
+		}
 
 	}
 	focus = {
@@ -1091,9 +1211,14 @@ focus_tree = {
 		prerequisite = {
 			focus = BEL_thinking_with_machines
 		}
+		available = {
+			num_of_factories > 49
+		}
 		x = 36
 		y = 5
-
+		completion_reward={
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = BEL_protect_seas
@@ -1390,6 +1515,9 @@ focus_tree = {
 		}
 		x = 38
 		y = 5
+		completion_reward={
+			add_research_slot = 1
+		}
 
 	}
 	focus = {
@@ -1401,6 +1529,16 @@ focus_tree = {
 		}
 		x = 42
 		y = 3
+		completion_reward={
+			6={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
