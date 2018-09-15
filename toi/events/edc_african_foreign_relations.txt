@@ -1598,6 +1598,9 @@ country_event = { #A tribal state is in dispute
 	#hidden = yes
 	option = { # flatly refuse to deal
 		name = EDC_afr.26.a
+		event_target:contested_state={
+			add_claim_by = ROOT
+		}
 	}
 	option = { # agree to settle it
 		name = EDC_afr.26.b

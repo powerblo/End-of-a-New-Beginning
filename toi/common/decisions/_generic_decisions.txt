@@ -25,32 +25,50 @@ scientific_advancement_decisions = {
 					has_tech = food_preserving_icebox
 					has_tech = electrical_engineering
 				}
-				AND = {
-					date > 1875.1.1
-					custom_trigger_tooltip = {
-						tooltip = eoanb_trigger_tt_law_african_all
-					}
-					hidden_trigger = {
-						NOT = {
-							OR = {
-								has_idea = AF_T_unorganized_tribal_nation
-								has_idea = AF_T_unorganized_tribal_nation_2
-								has_idea = AF_T_unorganized_tribal_nation_3
-								has_idea = AF_T_unorganized_tribal_nation_4
-								has_idea = AF_T_unorganized_tribal_nation_5
-								has_idea = AF_T_organized_tribal_nation
-								has_idea = AF_T_organized_tribal_nation_2
-								has_idea = AF_T_organized_tribal_nation_3
-								has_idea = AF_T_small_kingdom
-							}
-						}
+				date > 1875.1.1
+			}
+			custom_trigger_tooltip = {
+				tooltip = eoanb_trigger_tt_law_african_all
+				hidden_trigger = {
+				NOT = {
+					OR = {
+						has_idea = AF_T_unorganized_tribal_nation
+						has_idea = AF_T_unorganized_tribal_nation_2
+						has_idea = AF_T_unorganized_tribal_nation_3
+						has_idea = AF_T_unorganized_tribal_nation_4
+						has_idea = AF_T_unorganized_tribal_nation_5
+						has_idea = AF_T_organized_tribal_nation
+						has_idea = AF_T_organized_tribal_nation_2
+						has_idea = AF_T_organized_tribal_nation_3
+						has_idea = AF_T_small_kingdom
+						has_idea = afr_reforming_kingdom
 					}
 				}
+			}
 			}
 		}
 
 		visible = {
 			has_idea = pre_industrial_era
+			custom_trigger_tooltip = {
+				tooltip = eoanb_trigger_tt_law_african_all
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+							has_idea = AF_T_organized_tribal_nation
+							has_idea = AF_T_organized_tribal_nation_2
+							has_idea = AF_T_organized_tribal_nation_3
+							has_idea = AF_T_small_kingdom
+							has_idea = afr_reforming_kingdom
+						}
+					}
+				}
+			}
 		}
 
 		fire_only_once = no
@@ -1431,6 +1449,48 @@ foreign_politics = {
 		
 		ai_will_do = {
 			base = 1000
+		}
+	}
+	
+	#Greece sends help to Crete(move this if greece gets a file to its self)
+	eoanb_decision_gre_help_cet = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_war = no
+			has_manpower > 999
+			OR = {
+				has_equipment = {
+					infantry_equipment_rifle_0 > 99
+				}
+				has_equipment = {
+					infantry_equipment_rifle_1 > 99
+				}
+			}
+		}
+		
+		visible = {
+			TAG = GRE
+			CET = {
+				has_war_with = OTO
+				exists = yes
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		complete_effect = {
+			CET= {
+				country_event = {id =greek_events.3}
+			}
+			add_manpower = -1000
+		}
+		
+		ai_will_do = {
+			base = 1
 		}
 	}
 	

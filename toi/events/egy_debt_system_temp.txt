@@ -1,4 +1,4 @@
-add_namespace =egy_debt_system
+﻿add_namespace =egy_debt_system
 
 country_event = { #national debt hits conserning levels, public confedence starts to drop
 	id = egy_debt_system.1
@@ -179,7 +179,7 @@ country_event = { #a creditor demands payment
 		ai_chance = { factor = 100 }
 		trigger = {
 			NOT = {
-				has_idea = industry_cuts
+				has_idea = egy_industry_cuts
 			}
 		}
 		add_timed_idea = {
@@ -210,7 +210,7 @@ country_event = { #a creditor demands payment
 		ai_chance = { factor = 100 }
 		trigger = {
 			has_idea = one_percent
-			has_idea = industry_cuts
+			has_idea = egy_industry_cuts
 			has_idea = very_high_taxes
 		}
 		custom_effect_tooltip = EGY_afr_increase_debt_1
@@ -243,7 +243,7 @@ country_event = { #the national debt hits unpayable high, we are forced to decla
 		set_variable = {debt_level = 0}
 		custom_effect_tooltip = remove_debt_effects
 		hidden_effect = {
-			remove_ideas={
+			remove_ideas = {
 				egy_vic_debt
 				egy_public_consered_debt_1`
 				egy_public_consered_debt_2

@@ -166,13 +166,13 @@ country_event = {
 	option = {
 		name = generic.8.b
 		ai_chance = { factor = 0 }
-		country_event = { id = generic.10 }
+		country_event = { id = generic.11 }
 	}
 	
 	option = {
 		name = generic.8.c
 		ai_chance = { factor = 0 }
-		country_event = { id = generic.11 }
+		country_event = { id = generic.13 }
 	}
 	
 	option = {
@@ -223,7 +223,7 @@ country_event = {
 	option = {
 		name = generic.10.a
 		ai_chance = { factor = 0 }
-		country_event = { id = generic.8 }
+		country_event = { id = generic.13 }
 		custom_effect_tooltip = eoanb_tt_generic_10_a
 		hidden_effect = {
 			set_global_flag = is_eoanb_controversy_custom_true
@@ -233,7 +233,7 @@ country_event = {
 	option = {
 		name = generic.10.b
 		ai_chance = { factor = 100 }
-		country_event = { id = generic.8 }
+		country_event = { id = generic.13 }
 		custom_effect_tooltip = eoanb_tt_generic_10_b
 		hidden_effect = {
 			clr_global_flag = is_eoanb_controversy_custom_true
@@ -296,6 +296,100 @@ country_event = {
 		custom_effect_tooltip = eoanb_tt_generic_12_b
 		hidden_effect = {
 			complete_national_focus = generic_focus_gov_decentralized
+		}
+	}
+	
+}
+
+#Options Menu - Page #2
+country_event = {
+	id = generic.13
+	title = generic.13.t
+	desc = generic.13.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.13.a
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.10 }
+	}
+	
+	option = {
+		name = generic.13.b
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.14 }
+	}
+	
+	option = {
+		name = generic.13.c
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.15 }
+	}
+	
+	option = {
+		name = generic.13.e
+		ai_chance = { factor = 100 }
+		country_event = { id = generic.8 }
+	}
+	
+}
+
+#Custom Tutorial Options
+country_event = {
+	id = generic.14
+	title = generic.14.t
+	desc = generic.14.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.14.a
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.13 }
+		custom_effect_tooltip = eoanb_tt_generic_14_a
+		hidden_effect = {
+			set_global_flag = is_eoanb_tutorial_custom_true
+		}
+	}
+	
+	option = {
+		name = generic.14.b
+		ai_chance = { factor = 100 }
+		country_event = { id = generic.13 }
+		custom_effect_tooltip = eoanb_tt_generic_14_b
+		hidden_effect = {
+			clr_global_flag = is_eoanb_tutorial_custom_true
+		}
+	}
+	
+}
+
+#Easter Egg Options
+country_event = {
+	id = generic.15
+	title = generic.15.t
+	desc = generic.15.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.15.a
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.13 }
+		custom_effect_tooltip = eoanb_tt_generic_15_a
+		hidden_effect = {
+			set_global_flag = is_eoanb_jokes_custom_true
+		}
+	}
+	
+	option = {
+		name = generic.15.b
+		ai_chance = { factor = 100 }
+		country_event = { id = generic.13 }
+		custom_effect_tooltip = eoanb_tt_generic_15_b
+		hidden_effect = {
+			clr_global_flag = is_eoanb_jokes_custom_true
 		}
 	}
 	

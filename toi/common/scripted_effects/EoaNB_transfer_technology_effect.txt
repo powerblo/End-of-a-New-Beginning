@@ -1758,28 +1758,6 @@ transfer_technology = {
 		if = {
 			limit = {
 				PREV = {
-					has_tech = standardised_handguns
-				}
-			}
-			set_technology = {
-				standardised_handguns = 1
-			}
-		}
-
-		if = {
-			limit = {
-				PREV = {
-					has_tech = semi_automatic_pistols
-				}
-			}
-			set_technology = {
-				semi_automatic_pistols = 1
-			}
-		}
-
-		if = {
-			limit = {
-				PREV = {
 					has_tech = socket_bayonet
 				}
 			}

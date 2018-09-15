@@ -791,12 +791,22 @@ focus_tree = {
 			focus = afr_wes_emulation_of_the_western_militaries
 		}
 		available = {
+			#set_temp_variable = {country_pop_toal = max_manpower}
 			OR = {
 				num_of_controlled_states > 3
 				AND = {
 					num_of_controlled_states > 2
 					num_of_factories > 2
 				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = has_more_than_1M_pop	
+						set_temp_variable = {a = max_manpower}
+						check_variable = {a>1000000}
+					}
+					num_of_factories > 1
+				}
+				#check_variable = {max_available_manpower > 1000000}
 			}
 		}
 		completion_reward={
@@ -807,6 +817,12 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = afr_reforming_kingdom
 				remove_idea = AF_T_small_kingdom
+			}
+			if ={
+				limit = {
+					has_political_power < -999
+				}
+				add_political_power = 1000
 			}
 		}
 		x = 8

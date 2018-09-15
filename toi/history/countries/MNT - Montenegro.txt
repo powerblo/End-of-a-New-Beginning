@@ -1,11 +1,11 @@
 ﻿1857.1.1 = {
   capital = 942
 
-  oob = "MON_1857"
+  oob = "MNT_1857"
 
   set_convoys = 0
   
-  set_research_slots = 2
+  set_research_slots = 1
 
   add_ideas = { 
     #POLITICS 
@@ -25,7 +25,7 @@
 
     stagnation_growth
     border_control
-	volunteer_only
+	limited_conscription
     limited_equality
     absolutism
 
@@ -34,7 +34,7 @@
 
     privileged_education
     state_religion
-	religion_secular
+	religion_orthodox
         #NATIONAL SPIRITS
 	
   }
@@ -67,10 +67,10 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 55
+        popularity = 100 
       }
       fundamentalism = {
-        popularity = 45
+        popularity = 0
       }
     }
 
@@ -92,6 +92,7 @@
 
   set_technology = {
 	infantry_weapons = 1
+	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
 	tech_naval_1812_frigate = 1
 	gw_artillery = 1
@@ -106,22 +107,6 @@
   }
 
   # POLITICAL LEADERS
-
-create_country_leader = {
-  name = "Petar II"
-  desc = ""
-  picture = "Portrait_MNT_Petar_II.dds"
-  expire = "1953.3.1"
-  ideology = christian
-}
-
-create_country_leader = {
-  name = "Nikola I"
-  desc = ""
-  picture = "Portrait_MNT_Nikola_I.dds"
-  expire = "1953.3.1"
-  ideology = despotism
-}
 
 create_country_leader = {
 	name = "Danilo I"

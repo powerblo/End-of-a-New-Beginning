@@ -299,3 +299,152 @@ country_event = {
 	}
 	
 }
+
+#EGY - wins against eth
+country_event = {
+	id = afr_EGY_vic.8
+	title = afr_EGY_vic.8.t
+	desc = afr_EGY_vic.8.d
+	#picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = EGY_ETH_war
+		OR = {
+			AND = {
+				controls_state = 817
+				if={
+					limit = {
+						MED = {
+							OVERLORD = {tag = ROOT}
+						}
+					}
+					OR = {
+						controls_state = 815
+						MED = {controls_state = 815}
+					}
+				}
+			}
+			any_enemy_country = {
+				tag = ETH
+				surrender_progress > 0.33
+			}
+		}
+		tag = EGY
+	}
+	mean_time_to_happen={
+		days = 7
+	}
+	
+	option = { #take what we want
+		name = afr_EGY_vic.8.a
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = ETH
+		set_state_owner = 817
+		if = {
+			limit = {
+				MED = {
+					OVERLORD = {tag = ROOT}
+				}
+			}
+			MED = {
+				set_state_owner = 815
+			}
+		}
+		set_truce = {
+			target = ETH
+			days = 200
+		}
+		clr_country_flag = EGY_ETH_war
+	}
+	option = { #annex them all
+		name = afr_EGY_vic.8.b
+		ai_chance = {
+			factor = 0
+		}
+		add_threat = 2.5
+	}
+	
+}
+
+country_event = {#EGY loses against ETH
+	id = afr_EGY_vic.9
+	title = afr_EGY_vic.9.t
+	desc = afr_EGY_vic.9.d
+	#picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = EGY_ETH_war
+		tag = EGY
+		surrender_progress > 0.33
+		any_enemy_country = {
+			tag = ETH
+		}
+	}
+	mean_time_to_happen={
+		days = 7
+	}
+	
+	option = { #we will make peace
+		name = afr_EGY_vic.9.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.2
+		white_peace = ETH
+		clr_country_flag = EGY_ETH_war
+	}
+	option = { #never, this is just a minor set back
+		name = afr_EGY_vic.9.b
+		ai_chance = {
+			factor = 0
+		}
+		add_threat = 2.5
+	}
+	
+}
+
+#ETH cotton sales are bolstered by usa civil war
+country_event = {
+	id = afr_EGY_vic.10
+	title = afr_EGY_vic.10.t
+	desc = afr_EGY_vic.10.d
+	#picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	
+	trigger = {
+		USA = {
+			has_war_with = CSA
+		}
+		tag = EGY
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = { #look at all this money
+		name = afr_EGY_vic.10.a
+		ai_chance = { factor = 75 }
+		add_stability = 0.05
+		add_political_power = 50
+		add_timed_idea = { idea = eoanb_random_event_22_idea days = 360 }
+	}
+	
+	option = {#pay our debt
+		name = afr_EGY_vic.10.b
+		ai_chance = { factor = 25 }
+		custom_effect_tooltip = EGY_afr_decrease_debt_1
+		subtract_from_variable = {var = debt_level value = 1}
+	}
+}
+
+
+
+
