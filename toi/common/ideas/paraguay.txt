@@ -1,0 +1,47 @@
+ideas = {
+
+	country = {
+	
+		PAR_militarization = {
+			
+			allowed = {
+				original_tag = PAR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.02
+				war_support_factor = 0.15
+				offensive_war_stability_factor = 0.2
+				training_time_factor = -0.35
+			}
+		}
+		
+		PAR_agrarian_reforms = {
+			
+			allowed = {
+				original_tag = PAR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = agrarian
+
+			modifier = {
+				MONTHLY_POPULATION = 0.35
+				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+				local_resources_factor = 0.05
+			}
+		}
+	}
+}	
