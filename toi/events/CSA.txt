@@ -25,7 +25,20 @@ country_event = {
         	}
         	remove_state_core = 370
         	add_state_claim = 370
-			hidden_effect = { USA = { country_event = { days = 1 id = csa.2 } } }
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							SEM = { controls_state = 366 }
+							SEM = { owns_state = 366 }
+						}
+					}
+					country_event = { id = csa.3 days = 2 }
+				}
+				else = {
+					country_event = { days = 1 id = csa.2 }
+				}
+			}
 			hidden_effect = { CSA = { country_event = { id = csa.1 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
 		}
@@ -53,12 +66,29 @@ country_event = {
 			ai_chance = {
                 factor = 100
             }
-            CSA = {
+            if = {
+            	limit = {
+            		SEM = { exists = no }
+            	}
+            	CSA = {
         			transfer_state = 366
         			366 = {
             			add_core_of = CSA
-        			}  
+        			}
+        			transfer_state = 1210
+        			1210 = {
+        				add_core_of = CSA
+        			}
         		}
+            }
+            else = {
+            	CSA = {
+        			transfer_state = 366
+        			366 = {
+            			add_core_of = CSA
+        			}
+        		}
+            }
         	remove_state_core = 366
         	add_state_claim = 366
 			hidden_effect = { USA = { country_event = { days = 1 id = csa.3 } } }
