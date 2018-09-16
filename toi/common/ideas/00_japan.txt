@@ -62,6 +62,34 @@ ideas = {
 				stability_weekly = -0.0025
 			}
 		}
+		JAP_boshin_war_offensive = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			modifier = {
+				planning_speed = 0.15
+				army_attack_factor = 0.002
+			}
+		}
+		JAP_boshin_war_defend_shogunate = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			modifier = {
+				army_core_defence_factor = 0.25
+				war_support_factor = 0.1
+			}
+		}
 	}
 }
 	
