@@ -530,7 +530,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = arms_factory
+						building = dockyard
 						size > 0
 						include_locked = yes
 					}
@@ -540,7 +540,7 @@ focus_tree = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
-										building = arms_factory
+										building = dockyard
 										size > 0
 										include_locked = yes
 									}
@@ -1218,7 +1218,7 @@ focus_tree = {
 		}
 		completion_reward={
 			add_political_power = 25
-			##tech boost
+			##tech 
 		}
 		bypass = {
 			has_country_flag = JAP_boshin_war
@@ -1906,7 +1906,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = JAP_vic_USA_industrial_techniques
+		id = JAP_vic_armstrong_gun_manufactoring
 		icon = GFX_focus_
 		cost = 10
 		available_if_capitulated = no
@@ -2375,7 +2375,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = JAP_vic_currency_debasement
+		id = JAP_vic_resolve_the_gold_trade_debacle
 		icon = GFX_focus_
 		cost = 10
 		available_if_capitulated = no
@@ -2463,6 +2463,223 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			#add_stability = 0.02
+		}
+	}
+	focus = {
+		id = JAP_vic_army_of_the_bakufu
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		#prerequisite = {
+			#focus = JAP_vic_a_new_era
+		#}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 7
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = JAP_vic_samurai_never_surrender
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_army_of_the_bakufu
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 8
+		completion_reward = {
+			army_experience = 20
+			add_ideas={
+				JAP_samurai_dont_surrender
+			}
+		}
+	}
+	focus = {
+		id = JAP_vic_katana_production
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_samurai_never_surrender
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 23
+		y = 9
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_vic_samurai_tactics
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_samurai_never_surrender
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 9
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	focus = {
+		id = JAP_vic_troops_from_fudai
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_samurai_never_surrender
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 27
+		y = 9
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = JAP_vic_respect_bushido_code
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_troops_from_fudai
+		}
+		prerequisite = {
+			focus = JAP_vic_samurai_tactics
+		}
+		prerequisite = {
+			focus = JAP_vic_katana_production
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 10
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = JAP_vic_jules_brnets_millitary_mission
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_respect_bushido_code
+		}
+		available={
+			has_completed_focus = JAP_vic_request_military_mission_FRA
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 11
+		completion_reward = {
+			add_manpower = 5000
+			army_experience = 100
+		}
+	}
+	focus = {
+		id = JAP_vic_modern_military_tactics
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_jules_brnets_millitary_mission
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 24
+		y = 12
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+	focus = {
+		id = JAP_vic_french_weaponry
+		icon = GFX_focus_
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = JAP_vic_jules_brnets_millitary_mission
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+			custom_effect_tooltip = afr_rifling.effect
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = infantry_weapons
+						}
+					}
+					set_technology = {infantry_weapons=1}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							has_tech = infantry_weapons
+							NOT = {
+								has_tech = rifle_equipment1
+							}
+						}
+					}
+					set_technology = {rifle_equipment1=1}
+				}
+			}
 		}
 	}
 }
