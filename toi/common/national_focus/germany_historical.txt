@@ -1664,4 +1664,612 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = GER_focus_historical_germany_under_bismarck
+		icon = GFX_goal_focus_reform_administration
+		x = 56
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = eoanb_flag_GER_bismarck_dead
+			}
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_foreign_policy
+		icon = GFX_goal_focus_international_investments
+		x = 52
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_germany_under_bismarck }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_european_policy
+		icon = GFX_goal_focus_continent_west_europe
+		x = 49
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_foreign_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_isolate_france
+		icon = GFX_goal_focus_franco_prussian_war
+		x = 49
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_european_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_mission_radowitz
+		icon = GFX_goal_focus_negotiate_russia
+		x = 46
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_isolate_france }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_the_three_emperors
+		icon = GFX_goal_focus_support_conservatism
+		x = 46
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_mission_radowitz }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_kissingen_dictation
+		icon = GFX_goal_focus_newspapers
+		x = 48
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_isolate_france }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_repair_austrian_relations
+		icon = GFX_goal_focus_ally_AUS
+		x = 48
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_kissingen_dictation }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_dual_alliance
+		icon = GFX_goal_focus_popularize
+		x = 48
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_repair_austrian_relations }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_delegation_to_rome
+		icon = GFX_goal_focus_napoleonic_tactics
+		x = 50
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_isolate_france }
+		available = {
+			ITA = {
+				owns_state = 751
+			}
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_triple_alliance
+		icon = GFX_goal_focus_decentralisation_power
+		x = 50
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_delegation_to_rome }
+		available = {
+			has_completed_focus = GER_focus_historical_dual_alliance
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_non_european_policy
+		icon = GFX_goal_focus_military_reforms
+		x = 54
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_foreign_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_german_korean_treaty_1883
+		icon = GFX_goal_focus_enact_law
+		x = 52
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_non_european_policy }
+		available = {
+			date > 1883.1.1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_military_in_china
+		icon = GFX_goal_focus_opium_war
+		x = 52
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_korean_treaty_1883 }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_german_persian_treaty
+		icon = GFX_goal_focus_republican_spirit
+		x = 53
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_non_european_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_establish_mexican_relations
+		icon = GFX_goal_focus_continent_north_america
+		x = 54
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_non_european_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_domestic_policy
+		icon = GFX_goal_focus_increase_wages
+		x = 60
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_germany_under_bismarck }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_social_security_laws
+		icon = GFX_goal_focus_increase_wages
+		x = 60
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_domestic_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_pensions_old_age
+		icon = GFX_goal_focus_banks
+		x = 58
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_social_security_laws }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_insurance_invalidity
+		icon = GFX_goal_focus_the_workers
+		x = 60
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_social_security_laws }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_insurance_accidents
+		icon = GFX_goal_focus_stop_fund_partisans
+		x = 60
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_insurance_invalidity }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_insurance_sickness
+		icon = GFX_goal_focus_working_hours
+		x = 60
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_insurance_accidents }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_fight_social_democrats
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 62
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_domestic_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_law_of_1878
+		icon = GFX_goal_focus_imperialism
+		x = 62
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_fight_social_democrats }
+		available = {
+			date > 1878.1.1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_court_cases_socialists
+		icon = GFX_goal_focus_the_elite
+		x = 62
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_law_of_1878 }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_kulturkampf
+		icon = GFX_goal_focus_opium_war_lost
+		x = 67
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_domestic_policy }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_church_strikes
+		icon = GFX_goal_focus_gerrymandering
+		x = 66
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_kulturkampf }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_side_with_catholics
+		icon = GFX_goal_focus_ally_pope
+		x = 65
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_church_strikes }
+		mutually_exclusive = { focus = GER_focus_historical_side_with_protestants }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_side_with_protestants
+		icon = GFX_goal_focus_christianity_state_religion
+		x = 67
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_church_strikes }
+		mutually_exclusive = { focus = GER_focus_historical_side_with_catholics }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_our_culture
+		icon = GFX_goal_focus_invite_prussian_diplomats
+		x = 68
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_kulturkampf }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_begin_germanization
+		icon = GFX_goal_focus_king_army_prs
+		x = 68
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_our_culture }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_germanization_in_poland
+		icon = GFX_goal_generic_dangerous_deal
+		x = 67
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_begin_germanization }
+		available = {
+			owns_state = 85
+			owns_state = 86
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_germanization_in_france
+		icon = GFX_goal_generic_dangerous_deal
+		x = 68
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_begin_germanization }
+		available = {
+			owns_state = 28
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_germanization_in_denmark
+		icon = GFX_goal_generic_dangerous_deal
+		x = 69
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_begin_germanization }
+		available = {
+			owns_state = 58
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
 }

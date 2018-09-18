@@ -1087,6 +1087,55 @@ political_actions = {
 		}
 	}
 	
+	#Decision to get troops out of Hohenzollern-Sigmaringen after SWW
+	eoanb_decision_PRS_ask_access_hohzolsigrin = {
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				OR = {
+					has_war_with = FRA
+					has_war_with = ENG
+					has_war_with = RUS
+					has_war_with = AUS
+					has_war_with = USA
+				}
+			}
+		}
+
+		visible = {
+			TAG = PRS
+			country_exists = BAD
+			country_exists = WUR
+			country_exists = HSD
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			PRS = { owns_state = 1033 }
+			divisions_in_state = {
+				size > 0
+				state = 1033
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			BAD = { give_military_access = PRS }
+			WUR = { give_military_access = PRS }
+			HSD = { give_military_access = PRS }
+			custom_effect_tooltip = eoanb_tt_decision_PRS_southern_access
+			hidden_effect = {
+				PRS = { country_event = { days = 30 id = prussia.18 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }
 
 economic_decisions = {
