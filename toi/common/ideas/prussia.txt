@@ -674,7 +674,12 @@ ideas = {
 				original_tag = PRS
 			}
 			available = {
-				has_completed_focus = PRS_minister_albrecht
+				OR = {
+					has_completed_focus = PRS_minister_albrecht
+					has_cosmetic_tag = PRS_GER_liberal
+					has_cosmetic_tag = PRS_GER_bismarck
+					has_cosmetic_tag = PRS_GER_socialist
+				}
 			}
 
 			cost = 50

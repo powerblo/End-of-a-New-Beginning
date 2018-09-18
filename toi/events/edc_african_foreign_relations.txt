@@ -1410,7 +1410,7 @@ country_event = {##territorial disputes on tribal border
 	mean_time_to_happen = {
 		days = 720
 		modifier = {
-			factor = 1.5 # If true multiply 720 by 1.5 = 1080
+			factor = 1.25 # If true multiply 720 by 1.5 = 1080
 			OR = {
 				AND = {
 					OR = {
@@ -1424,7 +1424,7 @@ country_event = {##territorial disputes on tribal border
 			}
 		}
 		modifier = {
-			factor = 2.5 # If true multiply 200 by 0.4 = 40
+			factor = 1.5 # If true multiply 200 by 0.4 = 40
 			AND = {
 				OR = {
 					has_idea = AF_T_unorganized_tribal_nation
@@ -1437,7 +1437,7 @@ country_event = {##territorial disputes on tribal border
 			}
 		}
 		modifier = {
-			factor = 0.8 # If true multiply 720 by 0.8 = 576
+			factor = 0.65 # If true multiply 720 by 0.8 = 576
 			has_idea = AF_T_small_kingdom
 			has_idea = afr_large_kingdom
 		}

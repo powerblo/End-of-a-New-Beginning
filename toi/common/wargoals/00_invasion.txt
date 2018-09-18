@@ -335,4 +335,56 @@ wargoal_types = {
 
 		threat = 0.7
 	}
+
+	conquest_of_desert = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_CONQUEST_OF_DESERT
+		
+		allowed = {
+			always = no
+		}
+		
+		take_states = {
+			is_core_of = ROOT
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+
+		puppet = {
+			always = no
+		}
+
+		liberate = {
+			always = yes
+		}
+
+		take_states_cost = -80
+		
+		
+		threat = 0.1
+		puppet_cost = 10000
+	}
+
+	third_seminole_war = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = THIRD_SEMINOLE_WAR
+		
+		allowed = {
+			always = no
+		}
+		
+		take_states = {
+			is_core_of = ROOT
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+
+		take_states_cost = -80
+		
+		threat = 0.1
+	}
 }
