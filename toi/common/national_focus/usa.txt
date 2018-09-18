@@ -147,7 +147,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_anaconda_plan
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_goal_focus_us_anaconda_plan
 		cost = 4.00
 		prerequisite = {
 			focus = USA_defend_washington
@@ -1827,6 +1827,8 @@ focus_tree = {
 				target = SEM
 				type = annex_everything
 			}
+			add_state_core = 1211
+			remove_state_claim = 1211
 		}
 	}
 	focus = {
@@ -4015,7 +4017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_pig_war
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_goal_focus_us_resolve_pig_war
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_uk
@@ -4041,7 +4043,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_russia
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_goal_focus_negotiate_russia
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_europe
@@ -4063,7 +4065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_alaska
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_goal_focus_us_purchase_alaska
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_russia
@@ -4136,7 +4138,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_argentina
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_focus_negotiate_argentina
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_monroe
