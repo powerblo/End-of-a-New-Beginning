@@ -1609,11 +1609,11 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
 			random_owned_controlled_state = {
-				custom_effect_tooltip = EGY_afr_increase_debt_1
-				hidden_effect = {
-					add_to_variable = {var = debt_level value = 1}
-				}
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -1659,11 +1659,11 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
 			random_owned_controlled_state = {
-				custom_effect_tooltip = EGY_afr_increase_debt_1
-				hidden_effect = {
-					add_to_variable = {var = debt_level value = 1}
-				}
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
