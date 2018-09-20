@@ -31,5 +31,17 @@ autonomy_state = {
 
 	allowed = {
 		has_dlc = "Together for Victory"
+		NOT = {
+			OR = {
+				tag = HJZ
+				tag = LBA
+				tag = KUW
+				tag = EGY
+				tag = TUN
+			}
+			OVERLORD = { tag = OTO }
+		}
+	}
+}
 
           

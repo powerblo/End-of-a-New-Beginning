@@ -418,3 +418,39 @@ country_event = {
 		}
 	}
 }
+
+#Hidden Event to revoke access
+country_event = {
+	id = prussia.18
+	title = prussia.18.t
+	desc = prussia.18.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.18.a
+		ai_chance = { factor = 100 }
+		BAD = {
+			diplomatic_relation = {
+				country = PRS
+				relation = military_access
+				active = no
+			}
+		}
+		WUR = {
+			diplomatic_relation = {
+				country = PRS
+				relation = military_access
+				active = no
+			}
+		}
+		HSD = {
+			diplomatic_relation = {
+				country = PRS
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	
+}

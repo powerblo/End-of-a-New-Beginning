@@ -109,7 +109,7 @@ focus_tree = {
 				has_country_flag = USA_Civil_War_Avoided
 			}
 		}
-		x = 24
+		x = 27
 		y = 13
 		completion_reward = {
 			add_political_power = 25
@@ -147,7 +147,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_anaconda_plan
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_goal_focus_us_anaconda_plan
 		cost = 4.00
 		prerequisite = {
 			focus = USA_defend_washington
@@ -1656,6 +1656,226 @@ focus_tree = {
 				}
 				country_event = { id = acw.42 }
 			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_natives
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 2.00
+		prerequisite = {
+			focus = USA_foreign_diplomacy
+		}
+		x = 33
+		y = 14
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = USA_diplomacy_sioux
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 2.00
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			SIX = { exists = no }
+		}
+		x = 31
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SIX
+				modifier = usa_bad_relations
+			}
+			SIX = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_attack_sioux
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 4.00
+		prerequisite = {
+			focus = USA_diplomacy_sioux
+		}
+		bypass = {
+			SIX = { exists = no }
+		}
+		x = 31
+		y = 16
+		completion_reward = {
+			declare_war_on = {
+				target = SIX
+				type = take_claimed_state
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_cheyenne
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 2.00
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			CHY = { exists = no }
+		}
+		x = 33
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+				target = CHY
+				modifier = usa_bad_relations
+			}
+			CHY = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_attack_cheyenne
+		icon = GFX_goal_generic_military_deal
+		cost = 4.00
+		prerequisite = {
+			focus = USA_diplomacy_cheyenne
+		}
+		bypass = {
+			CHY = { exists = no }
+		}
+		x = 33
+		y = 16
+		completion_reward = {
+			declare_war_on = {
+				target = CHY
+				type = take_claimed_state
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_nez
+		icon = GFX_goal_generic_military_sphere
+		cost = 2.00
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			NEZ = { exists = no }
+		}
+		x = 35
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+				target = NEZ
+				modifier = usa_bad_relations
+			}
+			NEZ = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_attack_nez
+		icon = GFX_goal_generic_major_war
+		cost = 4.00
+		prerequisite = {
+			focus = USA_diplomacy_nez
+		}
+		bypass = {
+			NEZ = { exists = no }
+		}
+		x = 35
+		y = 16
+		completion_reward = {
+			declare_war_on = {
+				target = NEZ
+				type = take_claimed_state
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_attack_seminole
+		icon = GFX_goal_generic_attack_allies
+		cost = 6.00
+		prerequisite = {
+			focus = USA_diplomacy_attack_sioux
+			focus = USA_diplomacy_attack_cheyenne
+			focus = USA_diplomacy_attack_nez
+		}
+		bypass = {
+			SEM = { exists = no }
+		}
+		available = {
+			USA = {
+				is_neighbor_of = SEM
+			}
+		}
+		x = 31
+		y = 17
+		completion_reward = {
+			declare_war_on = {
+				target = SEM
+				type = annex_everything
+			}
+			add_state_core = 1211
+			remove_state_claim = 1211
+		}
+	}
+	focus = {
+		id = USA_diplomacy_attack_utah
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_attack_nez
+			focus = USA_diplomacy_attack_cheyenne
+			focus = USA_diplomacy_attack_sioux
+		}
+		bypass = {
+			UTA = { exists = no }
+		}
+		x = 35
+		y = 17
+		completion_reward = {
+			declare_war_on = {
+				target = UTA
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_diplomacy_native_cleaning
+		icon = GFX_goal_focus_continent_north_america
+		cost = 10.00
+		prerequisite = {
+			focus = USA_diplomacy_attack_sioux
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_cheyenne
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_nez
+		}
+		available = {
+			AND = {
+				SIX = { exists = no }
+				CHY = { exists = no }
+				NEZ = { exists = no }
+			}
+		}
+		x = 33
+		y = 17
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 	focus = {
@@ -3797,7 +4017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_pig_war
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_goal_focus_us_resolve_pig_war
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_uk
@@ -3823,7 +4043,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_russia
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_goal_focus_negotiate_russia
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_europe
@@ -3845,7 +4065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_alaska
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_goal_focus_us_purchase_alaska
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_russia
@@ -3918,7 +4138,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_diplomacy_argentina
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_focus_negotiate_argentina
 		cost = 5.00
 		prerequisite = {
 			focus = USA_diplomacy_monroe

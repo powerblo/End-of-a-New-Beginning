@@ -227,25 +227,7 @@ ideas = {
 			modifier = {
 				production_factory_start_efficiency_factor = -0.10
 			}
-		}	
-		RUS_idea_ban_les_miserables = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_les_miserables
-			
-			modifier = {
-				political_power_gain = -0.01
-				stability_factor = 0.05
-			}
-		}	
+		}		
 		RUS_idea_aleksander_barantsov = {
 			allowed = {
 				always = yes
@@ -770,6 +752,62 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
+		
+		RUS_idea_iskra = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_idea_iskra
+
+			modifier = {
+			anarchism_drift = 0.02
+			collectivist_socialism_drift = 0.01
+			}	
+		}	
+		
+		RUS_idea_miserables = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_idea_miserables
+
+			modifier = {
+			collectivist_socialism_drift = 0.01
+			}	
+		}
+		
+		RUS_idea_gorky_library = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ?
+
+			modifier = {
+			planning_speed = 0.02
+			}		
+		}
+		
 	}
 	political_advisor = {
 		RUS_alexander_gorchakov = {
