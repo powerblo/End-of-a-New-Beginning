@@ -2272,4 +2272,261 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = GER_focus_historical_german_colonial_society
+		icon = GFX_goal_focus_international_investments
+		x = 76
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = eoanb_flag_GER_can_colonize
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_ostafrika
+		icon = GFX_focus_ger_oppose_hitler
+		x = 74
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_colonial_society }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_denhardt_mission
+		icon = GFX_goal_focus_popularize
+		x = 72
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_ostafrika }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_deutsche_ostafrika_gesellschaft
+		icon = GFX_goal_focus_reform_administration
+		x = 74
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_ostafrika }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_expansion_missions
+		icon = GFX_goal_focus_military_reforms
+		x = 74
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_deutsche_ostafrika_gesellschaft }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_suedwestafrika
+		icon = GFX_focus_ger_oppose_hitler
+		x = 76
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_colonial_society }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_luderitz_mission
+		icon = GFX_goal_focus_popularize
+		x = 76
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_suedwestafrika }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_southwestafrica_company
+		icon = GFX_goal_focus_reform_administration
+		x = 76
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_luderitz_mission }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_koloniale_schutztruppen
+		icon = GFX_goal_focus_military_reforms
+		x = 76
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_southwestafrica_company }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_westafrika
+		icon = GFX_focus_ger_oppose_hitler
+		x = 78
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_colonial_society }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_nachtigal_mission
+		icon = GFX_goal_focus_popularize
+		x = 78
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_westafrika }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_wettlauf_zum_niger
+		icon = GFX_goal_focus_reform_administration
+		x = 78
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_nachtigal_mission }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_the_pacific
+		icon = GFX_focus_ger_oppose_hitler
+		x = 80
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_german_colonial_society }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_finsch_expedition
+		icon = GFX_goal_focus_popularize
+		x = 80
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_the_pacific }
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_deutsch_neu_guinea
+		icon = GFX_goal_focus_reform_administration
+		x = 80
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_finsch_expedition }
+		
+		completion_reward = {
+			
+		}
+	}
+	
 }
