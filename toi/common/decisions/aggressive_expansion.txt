@@ -43,14 +43,6 @@ aggressive_expansion_category = {
 
 		complete_effect = {
 			add_war_support = 0.05
-			declare_war_on = {
-				target = FROM
-				type = contain_wargoal
-			}
-			add_named_threat = {
-				threat = -5
-				name = containment_joined_war
-			}
 			if = {
 				limit = {
 					FROM = {
@@ -61,7 +53,25 @@ aggressive_expansion_category = {
 				}
 				FROM = { set_country_flag = containment_target }
 				FROM = { save_global_event_target_as = contain_target_news }
+				set_country_flag = containment_starter
 				news_event = { id = contain_news.1 }
+				declare_war_on = {
+					target = FROM
+					type = contain_wargoal
+				}
+			}
+			else = {
+				hidden_effect = {
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								has_country_flag = containment_starter
+							}
+							country_event = contain.6
+						}
+					}
+				}
+				custom_effect_tooltip = join_containment_war
 			}
 		}
 
@@ -100,6 +110,7 @@ aggressive_expansion_category = {
 						tag = PIE
 						tag = ITA
 						tag = GER
+						tag = USA
 					}
 				}
 			}

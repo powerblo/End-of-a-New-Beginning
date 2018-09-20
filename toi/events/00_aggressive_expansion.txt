@@ -21,6 +21,9 @@ country_event = {
 		name = contain.1.a
 		clr_country_flag = containment_target
 		clr_global_flag = containment_successful
+		all_country = {
+			clr_country_flag = containment_starter
+		}
 		set_country_flag = containment_reperations
 		add_timed_idea = { idea = containment_reperations days = 1825 }
 		add_political_power = -150
@@ -126,6 +129,26 @@ country_event = { #everyone loses suspicion
 	option = {
 		name = contain.5.a
 		clr_country_flag = containment_warning_1
+	}
+}
+country_event = { #nation joins coalition war
+	id = contain.6
+	title = contain.6.t
+	desc = contain.6.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+
+	hidden = yes
+	
+	option = {
+		name = contain.6.a
+		FROM = {
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = FROM
+			}
+		}
 	}
 }
 
