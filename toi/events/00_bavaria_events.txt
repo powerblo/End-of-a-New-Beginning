@@ -519,34 +519,40 @@ country_event = {
 		
 		custom_effect_tooltip = BAV_customeffect_staatenbund_puppet
 		
-		create_faction = BAV_german_schutzbund
-		
-		#PRS allies
-		every_country = {
-			limit = {	
-				has_country_flag = eoanb_flag_PRS_ally_sww
+		hidden_effect = {
+			create_faction = BAV_german_schutzbund
+			
+			#PRS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_PRS_ally_sww
+				}
+				AUS = {
+					add_to_faction = PREV
+					puppet = PREV
+				}
 			}
+			
+			#AUS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				AUS = {
+					add_to_faction = PREV
+					puppet = PREV
+				}
+			}
+			
+			#Neutral Thuringia and Hessen + Prussia
 			AUS = {
-				add_to_faction = PREV
-				puppet = PREV
+				add_to_faction = THU
+				puppet = THU
+				add_to_faction = HES
+				puppet = HES
+				add_to_faction = PRS
+				puppet = PRS
 			}
-		}
-		
-		#AUS allies
-		every_country = {
-			limit = {	
-				has_country_flag = eoanb_flag_AUS_ally_sww
-			}
-			AUS = {
-				add_to_faction = PREV
-				puppet = PREV
-			}
-		}
-		
-		#Neutral Thuringia
-		AUS = {
-			add_to_faction = THU
-			puppet = THU
 		}
 	}
 	
@@ -559,31 +565,35 @@ country_event = {
 		
 		custom_effect_tooltip = BAV_customeffect_staatenbund_faction
 		
-		create_faction = BAV_german_schutzbund
-		
-		#PRS allies
-		every_country = {
-			limit = {	
-				has_country_flag = eoanb_flag_PRS_ally_sww
+		hidden_effect = {
+			create_faction = BAV_german_schutzbund
+			
+			#PRS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_PRS_ally_sww
+				}
+				AUS = {
+					add_to_faction = PREV
+				}
 			}
+			
+			#AUS allies
+			every_country = {
+				limit = {	
+					has_country_flag = eoanb_flag_AUS_ally_sww
+				}
+				AUS = {
+					add_to_faction = PREV
+				}
+			}
+			
+			#Neutral Thuringia and Hessen + Prussia
 			AUS = {
-				add_to_faction = PREV
+				add_to_faction = THU
+				add_to_faction = HES
+				add_to_faction = PRS
 			}
-		}
-		
-		#AUS allies
-		every_country = {
-			limit = {	
-				has_country_flag = eoanb_flag_AUS_ally_sww
-			}
-			AUS = {
-				add_to_faction = PREV
-			}
-		}
-		
-		#Neutral Thuringia
-		AUS = {
-			add_to_faction = THU
 		}
 	}
 }
@@ -992,5 +1002,34 @@ country_event = {
 		}
 		
 		name = bavariaevent.19.a
+	}
+}
+
+country_event = {
+	id = bavariaevent.20
+	title = bavariaevent.20.t
+	desc = bavariaevent.20.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { 
+			factor = 100
+		}
+		
+		#clear_variable = num
+		#
+		#set_variable = {
+		#	var = num
+		#	value = 10
+		#}
+		
+		#add_offsite_building = {
+		#	type = grain_consumer_positive
+		#	level = num
+		#}
+		
+		name = bavariaevent.20.a
 	}
 }

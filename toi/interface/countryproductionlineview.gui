@@ -222,6 +222,26 @@ guiTypes = {
 						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
 					}
 
+					#buttonType = {
+					#	name = "grain_icon"
+					#	position = { x=350 y=2 }
+					#	spriteType = "GFX_resources_strip"
+					#	frame = 11
+					#}
+
+					#instantTextboxType = {
+					#	name = "grain_value"
+					#	position = { x = 382 y = 5 }
+					#	textureFile = ""
+					#	font = "hoi_18mbs"
+					#	borderSize = {x = 0 y = 0}
+					#	text = "999"
+					#	maxWidth = 50
+					#	maxHeight = 20
+					#	format = left
+					#	#pdx_tooltip = "PRODUCTION_MATERIALS_GRAIN"
+					#}
+					
 					buttonType = {
 						name = "coal_icon"
 						position = { x=0 y=38 }
@@ -884,8 +904,8 @@ guiTypes = {
 				name = "Background"
 				position = { x = -2 y = -2 }				
 				quadTextureSprite ="GFX_generic_bg2"
-			}			
-				
+			}
+			
 			iconType = {
 				name = "oil_icon"
 				position = { x=0 y=2 }
@@ -1041,6 +1061,22 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
 			}
+			
+			#iconType = {
+			#	name = "grain_icon"
+			#	position = { x=558 y=2 }
+			#	spriteType = "GFX_resources_strip"
+			#	frame = 1
+			#	#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+			#}
+			
+			#buttonType = {
+			#	name = "grain_checkbox"
+			#	position = { x = 603 y = 1 }
+			#	quadTextureSprite ="GFX_generic_checkbox"
+			#	Orientation = "UPPER_LEFT"
+			#	clicksound = click_checkbox
+			#}
 		}
 		
 		buttonType = {
@@ -1134,7 +1170,7 @@ guiTypes = {
 				name = "Background"
 				position = { x = -2 y = -2 }				
 				quadTextureSprite ="GFX_generic_bg2"
-			}				
+			}
 				
 			iconType = {
 				name = "oil_icon"
@@ -1291,6 +1327,22 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
 			}
+			
+			#iconType = {
+			#	name = "grain_icon"
+			#	position = { x=558 y=2 }
+			#	spriteType = "GFX_resources_strip"
+			#	frame = 1
+			#	#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+			#}
+			
+			#buttonType = {
+			#	name = "grain_checkbox"
+			#	position = { x = 603 y = 1 }
+			#	quadTextureSprite ="GFX_generic_checkbox"
+			#	Orientation = "UPPER_LEFT"
+			#	clicksound = click_checkbox
+			#}	
 		}
 		
 		buttonType = {
