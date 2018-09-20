@@ -1,0 +1,52 @@
+﻿add_namespace = germany
+
+#Picking flag (Historical Unification)
+country_event = {
+	id = germany.1
+	title = germany.1.t
+	desc = germany.1.d
+	picture = GFX_report_event_ger_select_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_a
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_imperial
+		}
+	}
+	
+	option = {
+		name = germany.1.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_b
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_standard
+		}
+	}
+	
+	option = {
+		name = germany.1.c
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_c
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_hre
+		}
+	}
+	
+	option = {
+		name = germany.1.e
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_e
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_national
+		}
+	}
+	
+}
