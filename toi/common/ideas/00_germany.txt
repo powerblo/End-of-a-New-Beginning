@@ -33,5 +33,54 @@ ideas = {
 				planning_speed = -0.2
 			}
 		}
+		GER_idea_decentralized_deutsches_heer = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = ger_revive_the_kaiserreich
+			
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+			
+			modifier = {
+				army_org_Factor = 0.1
+			}
+		}
+		GER_idea_decentralized_deutsches_heer_2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = ger_revive_the_kaiserreich
+			
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+			
+			modifier = {
+				army_org_Factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		GER_idea_german_general_staff = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = GER_general_staff_first
+			
+			modifier = {
+				max_planning = 0.1
+				planning_speed = 0.1
+			}
+		}
 	}
 }

@@ -19,7 +19,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			army_experience = 25
 		}
 	}
 	
@@ -37,7 +37,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_focus_historical_centralized_army }
 		
 		completion_reward = {
-			
+			add_ideas = GER_idea_decentralized_deutsches_heer
 		}
 	}
 	
@@ -57,7 +57,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			army_experience = 10
 		}
 	}
 	
@@ -74,7 +74,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_wurttemberg_contingent }
 		
 		completion_reward = {
-			
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
 		}
 	}
 	
@@ -96,7 +96,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_war_support = 0.05
 		}
 	}
 	
@@ -113,7 +113,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_bavarian_contingent }
 		
 		completion_reward = {
-			
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 	
@@ -133,7 +133,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			army_experience = 10
 		}
 	}
 	
@@ -153,7 +153,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			remove_ideas = GER_idea_army_organization_troubles
 		}
 	}
 	
@@ -170,7 +170,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_decentralized_army }
 		
 		completion_reward = {
-			
+			add_war_support = 0.05
 		}
 	}
 	
@@ -187,7 +187,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_prussian_contingent }
 		
 		completion_reward = {
-			
+			add_stability = 0.05
 		}
 	}
 	
@@ -204,7 +204,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_popularize_officers }
 		
 		completion_reward = {
-			
+			add_ideas = GER_idea_german_general_staff
 		}
 	}
 	
@@ -221,7 +221,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_general_staff }
 		
 		completion_reward = {
-			
+			army_experience = 10
+			add_tech_bonus = { bonus = 0.1 uses = 2 category = land_doctrine }
 		}
 	}
 	
@@ -238,7 +239,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_prussian_contingent }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_fortresses
+			hidden_effect = {
+				#CONTINUE HERE LATER
+			}
 		}
 	}
 	
@@ -253,9 +257,15 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = GER_focus_historical_fortress_status }
+		available = {
+			has_idea = GER_idea_decentralized_deutsches_heer
+		}
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = GER_idea_decentralized_deutsches_heer_2
+				remove_idea = GER_idea_decentralized_deutsches_heer
+			}
 		}
 	}
 	
