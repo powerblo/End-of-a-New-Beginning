@@ -2355,7 +2355,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_stability = 0.02
 		}
 	}
 	
@@ -2372,7 +2372,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_germany_under_bismarck }
 		
 		completion_reward = {
-			
+			add_political_power = 50
 		}
 	}
 	
@@ -2389,7 +2389,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_foreign_policy }
 		
 		completion_reward = {
-			
+			add_political_power = 25
 		}
 	}
 	
@@ -2406,7 +2406,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_european_policy }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_GER_isolates_FRA }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_GER_isolates_FRA }
 		}
 	}
 	
@@ -2423,7 +2424,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_isolate_france }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = RUS modifier = eoanb_om_GER_mission_radowitz }
+			reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_GER_mission_radowitz }
 		}
 	}
 	
@@ -2440,7 +2442,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_mission_radowitz }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_three_emperors }
+			reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_three_emperors }
+			add_opinion_modifier = { target = RUS modifier = eoanb_om_GER_three_emperors }
+			reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_GER_three_emperors }
 		}
 	}
 	
@@ -2457,7 +2462,16 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_isolate_france }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_kissingen_dictation
+			add_political_power = 50
+			add_stability = 0.02
+			add_war_support = -0.01
+			hidden_effect = {
+				add_named_threat = { 
+					threat = -2 
+					name = eoanb_threat_GER_kissingen_dictation
+				}
+			}
 		}
 	}
 	
@@ -2474,7 +2488,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_kissingen_dictation }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_reapproach_AUS }
+			reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_reapproach_AUS }
 		}
 	}
 	
@@ -2491,7 +2506,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_repair_austrian_relations }
 		
 		completion_reward = {
-			
+			AUS = { country_event = { id = germany.7 } }
 		}
 	}
 	
@@ -2507,13 +2522,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_focus_historical_isolate_france }
 		available = {
-			ITA = {
+			PIE = {
 				owns_state = 751
 			}
 		}
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_rome_delegation }
+			reverse_add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_rome_delegation }
 		}
 	}
 	
@@ -2530,10 +2546,11 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_delegation_to_rome }
 		available = {
 			has_completed_focus = GER_focus_historical_dual_alliance
+			is_in_faction_with = AUS
 		}
 		
 		completion_reward = {
-			
+			PIE = { country_event = { id = germany.10 } }
 		}
 	}
 	
@@ -2550,7 +2567,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_foreign_policy }
 		
 		completion_reward = {
-			
+			add_political_power = 25
 		}
 	}
 	
@@ -2570,7 +2587,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = KOR modifier = eoanb_om_GER_KOR_treaty }
+			reverse_add_opinion_modifier = { target = KOR modifier = eoanb_om_GER_KOR_treaty }
 		}
 	}
 	
@@ -2587,7 +2605,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_korean_treaty_1883 }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_china_military
+			hidden_effect = {
+				#Will later add decisions or events
+			}
 		}
 	}
 	
@@ -2604,7 +2625,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_non_european_policy }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = PER modifier = eoanb_om_GER_PER_treaty }
+			reverse_add_opinion_modifier = { target = PER modifier = eoanb_om_GER_PER_treaty }
 		}
 	}
 	
@@ -2621,7 +2643,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_non_european_policy }
 		
 		completion_reward = {
-			
+			add_opinion_modifier = { target = MEX modifier = eoanb_om_GER_approaches_MEX }
+			reverse_add_opinion_modifier = { target = MEX modifier = eoanb_om_GER_approaches_MEX }
 		}
 	}
 	
@@ -2638,7 +2661,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_germany_under_bismarck }
 		
 		completion_reward = {
-			
+			add_political_power = 50
 		}
 	}
 	
@@ -2655,7 +2678,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_domestic_policy }
 		
 		completion_reward = {
-			
+			add_ideas = GER_idea_social_security
 		}
 	}
 	
@@ -2672,7 +2695,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_social_security_laws }
 		
 		completion_reward = {
-			
+			add_political_power = 120
+			add_stability = 0.02
 		}
 	}
 	
@@ -2689,7 +2713,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_social_security_laws }
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = GER_idea_social_security_2
+				remove_idea = GER_idea_social_security
+			}
 		}
 	}
 	
@@ -2706,7 +2733,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_insurance_invalidity }
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = GER_idea_social_security_3
+				remove_idea = GER_idea_social_security_2
+			}
 		}
 	}
 	
@@ -2723,7 +2753,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_insurance_accidents }
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				add_idea = GER_idea_social_security_4
+				remove_idea = GER_idea_social_security_3
+			}
 		}
 	}
 	
@@ -2740,7 +2773,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_domestic_policy }
 		
 		completion_reward = {
-			
+			add_political_power = 50
+			add_popularity = { ideology = social_egalitarianism popularity = -0.1 }
 		}
 	}
 	
@@ -2760,7 +2794,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = GER_idea_law_of_1878
+				days = 3650
+			}
 		}
 	}
 	
@@ -2777,7 +2814,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_law_of_1878 }
 		
 		completion_reward = {
-			
+			add_political_power = 100
+			add_popularity = { ideology = social_egalitarianism popularity = -0.02 }
 		}
 	}
 	
@@ -2794,7 +2832,9 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_domestic_policy }
 		
 		completion_reward = {
-			
+			add_political_power = 50
+			add_stability = 0.02
+			add_war_support = 0.02
 		}
 	}
 	
@@ -2811,7 +2851,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_kulturkampf }
 		
 		completion_reward = {
-			
+			add_stability = -0.05
 		}
 	}
 	
@@ -2829,7 +2869,21 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_focus_historical_side_with_protestants }
 		
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = religion_catholic
+				}
+				add_stability = 0.1
+			}
+			else_if = {
+				limit = {
+					has_idea = religion_protestant
+				}
+				swap_ideas = {
+					add_idea = religion_catholic
+					remove_idea = religion_protestant
+				}
+			}
 		}
 	}
 	
@@ -2847,7 +2901,21 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_focus_historical_side_with_catholics }
 		
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = religion_catholic
+				}
+				swap_ideas = {
+					add_idea = religion_protestant
+					remove_idea = religion_catholic
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = religion_protestant
+				}
+				add_stability = 0.1
+			}
 		}
 	}
 	
@@ -2864,7 +2932,9 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_kulturkampf }
 		
 		completion_reward = {
-			
+			add_political_power = 150
+			add_stability = 0.01
+			add_war_support = 0.01
 		}
 	}
 	
@@ -2881,7 +2951,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_our_culture }
 		
 		completion_reward = {
-			
+			add_political_power = -50
+			add_stability = 0.01
 		}
 	}
 	
@@ -2902,7 +2973,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanize_poland
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanization_nonfunctional
+			hidden_effect = {
+				#Do something here later
+			}
 		}
 	}
 	
@@ -2922,7 +2997,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanize_france
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanization_nonfunctional
+			hidden_effect = {
+				#Do something here later
+			}
 		}
 	}
 	
@@ -2942,7 +3021,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanize_denmark
+			custom_effect_tooltip = eoanb_tt_GER_focus_germanization_nonfunctional
+			hidden_effect = {
+				#Do something here later
+			}
 		}
 	}
 	

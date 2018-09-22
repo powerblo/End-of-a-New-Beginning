@@ -32,10 +32,12 @@ GER_unite_liberal = {
 
 		complete_effect = {
 			custom_effect_tooltip = GER_decision_tt_unite_liberal
+			custom_effect_tooltip = GER_decision_tt_zollverein_removed
 			add_ideas = GER_idea_army_organization_troubles
 			hidden_effect = {
 				set_cosmetic_tag = PRS_GER_liberal
 				news_event = news.11
+				remove_ideas = PRS_Zollverein_3
 			}
 		}
 
@@ -84,11 +86,13 @@ GER_unite_bismarck = {
 
 		complete_effect = {
 			custom_effect_tooltip = GER_decision_tt_unite_bismarck
+			custom_effect_tooltip = GER_decision_tt_zollverein_removed
 			add_ideas = GER_idea_army_organization_troubles
 			hidden_effect = {
 				set_cosmetic_tag = PRS_GER_bismarck
 				news_event = news.11
 				country_event = { id = germany.1 }
+				remove_ideas = PRS_Zollverein_3
 			}
 		}
 
@@ -132,10 +136,12 @@ GER_unite_socialist = {
 
 		complete_effect = {
 			custom_effect_tooltip = GER_decision_tt_unite_socialist
+			custom_effect_tooltip = GER_decision_tt_zollverein_removed
 			add_ideas = GER_idea_army_organization_troubles
 			hidden_effect = {
 				set_cosmetic_tag = PRS_GER_socialist
 				news_event = news.11
+				remove_ideas = PRS_Zollverein_3
 			}
 		}
 

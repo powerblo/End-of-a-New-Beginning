@@ -250,3 +250,184 @@ country_event = {
 	}
 	
 }
+
+#AUS gets request for Dual Alliance
+country_event = {
+	id = germany.7
+	title = germany.7.t
+	desc = germany.7.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.7.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					target = PRS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					target = PRS
+					value = 100
+				}
+			}
+		}
+		PRS = { country_event = { id = germany.8 } }
+	}
+	
+	option = {
+		name = germany.7.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		PRS = { country_event = { id = germany.9 } }
+	}
+	
+}
+
+#PRS gets message AUS is cooperating
+country_event = {
+	id = germany.8
+	title = germany.8.t
+	desc = germany.8.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.8.a
+		ai_chance = { factor = 100 }
+		create_faction = faction_dual_alliance
+		AUS = { add_to_faction = faction_dual_alliance }
+	}
+	
+}
+
+#PRS gets message AUS isn't cooperating
+country_event = {
+	id = germany.9
+	title = germany.9.t
+	desc = germany.9.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.9.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_AUS_alliance_failed }
+		reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_AUS_alliance_failed }
+	}
+	
+}
+
+#ITA asked to join Dual Alliance
+country_event = {
+	id = germany.10
+	title = germany.10.t
+	desc = germany.10.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.10.a
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = PRS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = PRS
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = AUS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = AUS
+					value = 100
+				}
+			}
+		}
+		PRS = { country_event = { id = germany.11 } }
+	}
+	
+	option = {
+		name = germany.10.b
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		PRS = { country_event = { id = germany.12 } }
+	}
+	
+}
+
+#ITA says "Yes"
+country_event = {
+	id = germany.11
+	title = germany.11.t
+	desc = germany.11.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ger_event_11_a
+		hidden_effect = {
+			dismantle_faction = yes
+			create_faction = faction_triple_alliance
+			AUS = { add_to_faction = faction_triple_alliance }
+			PIE = { add_to_faction = faction_triple_alliance }
+		}
+	}
+	
+}
+
+#ITA says "No"
+country_event = {
+	id = germany.12
+	title = germany.12.t
+	desc = germany.12.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.12.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_alliance_failed }
+		reverse_add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_alliance_failed }
+	}
+	
+}
