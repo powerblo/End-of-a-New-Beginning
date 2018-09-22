@@ -7,24 +7,14 @@ country_event = {
 	desc = contain.1.d
 	picture = GFX_report_event_generic_riot
 	
-	trigger = {
-		has_country_flag = containment_target
-		has_global_flag = containment_successful
-		has_war = no
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = contain.1.a
 		clr_country_flag = containment_target
 		clr_global_flag = containment_successful
-		all_country = {
-			clr_country_flag = containment_starter
-		}
 		set_country_flag = containment_reperations
+		remove_ideas = containment_recent_target
 		add_timed_idea = { idea = containment_reperations days = 1825 }
 		add_political_power = -150
 		add_stability = -0.1
@@ -35,60 +25,35 @@ country_event = {
 		}
 	}
 }
-#Hidden trigger, about to win war
+#Containment War nation wants to leave
 country_event = {
 	id = contain.2
 	title = contain.2.t
 	desc = contain.2.d
 	picture = GFX_report_event_generic_riot
 	
-	trigger = {
-		has_country_flag = containment_target
-		NOT = { has_global_flag = containment_successful }
-		surrender_progress > 0.5
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
-
-	hidden = yes
-
-	immediate = {
-		set_global_flag = containment_successful
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = contain.2.a
 		
 	}
+	option = {
+		name = contain.2.a
+		
+	}
 }
-#Remove successful containment if winning
+#Usless event, ignore for now
 country_event = {
 	id = contain.3
 	title = contain.3.t
 	desc = contain.3.d
 	picture = GFX_report_event_generic_riot
-	
-	trigger = {
-		has_country_flag = containment_target
-		has_global_flag = containment_successful
-		surrender_progress < 0.5
-	}
 
-	mean_time_to_happen = {
-		days = 2
-	}
-
-	hidden = yes
-
-	immediate = {
-		clr_global_flag = containment_successful
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = contain.3.a
-		
 	}
 }
 country_event = { #everyone becomes suspicious

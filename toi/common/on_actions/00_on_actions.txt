@@ -135,6 +135,25 @@ on_actions = {
 	#}
 	
 	# ROOT is capitulated country, FROM is winner
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { has_country_flag = containment_target } #containment target defeated
+					FROM = {
+						NOT = {
+							has_country_flag = containment_reperations
+						}
+					}
+				}
+				FROM = { set_country_flag = containment_reperations }
+				FROM = { country_event = { id = contain.1 days = 0 } }
+				ROOT = { clr_country_flag = containment_starter }
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
 	#on_capitulation = {
 	#	effect = {
 	#		
