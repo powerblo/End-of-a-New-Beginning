@@ -50,3 +50,203 @@ country_event = {
 	}
 	
 }
+
+#Fortress Stettin
+country_event = {
+	id = germany.2
+	title = germany.2.t
+	desc = germany.2.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.2.a
+		ai_chance = { factor = 75 }
+		62 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 6282
+			}
+		}
+		62 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.2.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Minden
+country_event = {
+	id = germany.3
+	title = germany.3.t
+	desc = germany.3.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.3.a
+		ai_chance = { factor = 75 }
+		57 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 405
+			}
+		}
+		57 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.3.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Kosel
+country_event = {
+	id = germany.4
+	title = germany.4.t
+	desc = germany.4.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.4.a
+		ai_chance = { factor = 75 }
+		58 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 317
+			}
+		}
+		58 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.4.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Erfurt
+country_event = {
+	id = germany.5
+	title = germany.5.t
+	desc = germany.5.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.5.a
+		ai_chance = { factor = 75 }
+		948 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 13408
+			}
+		}
+		948 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.5.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Glatz
+country_event = {
+	id = germany.6
+	title = germany.6.t
+	desc = germany.6.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.6.a
+		ai_chance = { factor = 75 }
+		66 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 3485
+			}
+		}
+		66 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.6.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
