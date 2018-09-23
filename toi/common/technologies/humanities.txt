@@ -612,18 +612,11 @@ technologies = {
 	}
 	
 	tech_humanities_colonialism = {
-		
-		allow = {
-			#OR={
-				#is_major = yes
-				has_country_flag = is_historical_colonial_power
-			#}
-        }
 
 		#allow_branch = {
 			#OR={
 				#is_major = yes
-				has_country_flag = is_historical_colonial_power
+				#has_country_flag = is_historical_colonial_power
 			#}
         #}
 		path = {
@@ -701,8 +694,38 @@ technologies = {
 	}
 	tech_humanities_colonial_ambitions = {
 		on_research_complete = {
+			if={
+				limit ={
+					OR={
+						NOT = {has_global_flag = scramble_for_africa}
+						NOT = {has_country_flag = is_historical_colonial_power}
+					}
+				}
+				custom_effect_tooltip = eoanb_tt_technology_colonial_ambitions
+			}
+			if={
+				limit ={
+					NOT = {has_global_flag = scramble_for_africa}
+				}
+				custom_effect_tooltip = eoanb_tt_technology_colonial_ambitions_1
+			}
+			if={
+				limit ={
+					NOT = {has_country_flag = is_historical_colonial_power}
+				}
+				custom_effect_tooltip = eoanb_tt_technology_colonial_ambitions_2
+			}
 			afr_give_colonal_power = yes
+			
 		}
+		allow = {
+			NOT={
+				NOT={
+					has_country_flag = is_historical_colonial_power
+					has_global_flag = scramble_for_africa
+				}
+			}
+        }
 		
 		research_cost = 1
 		start_year = 1875
@@ -929,6 +952,7 @@ technologies = {
 	}
 	tech_humanities_colonial_administration = {
 		
+		political_power_gain = 0.05
 		research_cost = 1
 		start_year = 1885
 		folder = {
@@ -964,7 +988,9 @@ technologies = {
 	}
 	tech_humanities_gun_boat_diplomacy = {
 		
-		navy_max_range_factor = 0.5
+		#navy_max_range_factor = 0.5
+		subversive_activites_upkeep = -0.05
+		max_command_power = 20
 		research_cost = 1
 		start_year = 1875
 		folder = {
@@ -1153,6 +1179,7 @@ technologies = {
 			}
 	
 		}
+		on_core_manpower = 0.05
 		
 		categories = {
 			humanities_tech
