@@ -1,6 +1,6 @@
 focus_tree = {
 	id = germany_united_focus
-
+	continuous_focus_position = { x = 800 y = 1100 }
 	country = {
 		factor = 0
 	}
@@ -3044,7 +3044,9 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_branch_colonial_warning
+			add_stability = 0.02
+			add_ideas = GER_idea_colonial_society
 		}
 	}
 	
@@ -3061,7 +3063,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_colonial_society }
 		
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	
@@ -3078,7 +3080,33 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_ostafrika }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_denhardt_mission
+			hidden_effect = {
+				add_opinion_modifier = { target = MED modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = MED modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = HRR modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = HRR modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = AWS modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = AWS modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = ETH modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = ETH modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = SID modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = SID modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = ORO modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = ORO modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = WSG modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = WSG modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = MAJ modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = MAJ modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = GLD modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = GLD modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = RDL modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = RDL modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = OGD modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = OGD modifier = eoanb_om_GER_established_denhardt }
+				add_opinion_modifier = { target = BOR modifier = eoanb_om_GER_established_denhardt }
+				reverse_add_opinion_modifier = { target = BOR modifier = eoanb_om_GER_established_denhardt }
+			}
 		}
 	}
 	
@@ -3095,7 +3123,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_ostafrika }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_ostafrika_company
+			hidden_effect = {
+				#Add decisions and events here later
+			}
 		}
 	}
 	
@@ -3112,7 +3143,14 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_deutsche_ostafrika_gesellschaft }
 		
 		completion_reward = {
-			
+			add_war_support = 0.05
+			#Adds war support to the East Africa Company - later
+			#if = {
+			#	limit = {
+			#		country_exists = OAC
+			#	}
+			#	OAC = { add_war_support = 0.1 }
+			#}
 		}
 	}
 	
@@ -3129,7 +3167,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_colonial_society }
 		
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	
@@ -3146,7 +3184,90 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_suedwestafrika }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_luderitz_mission
+			hidden_effect = {
+				if = {
+					limit = {
+						PRS = { has_idea = religion_catholic }
+					}
+					HER = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_catholic
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+					BST = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_catholic
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+					OOR = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_catholic
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						PRS = { has_idea = religion_protestant }
+					}
+					HER = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_protestant
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+					BST = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_protestant
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+					OOR = {
+						random_list = {	
+							50 = {
+								add_ideas = religion_protestant
+							}
+							50 = {
+								add_political_power = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							OR = {
+								PRS = { has_idea = religion_catholic }
+								PRS = { has_idea = religion_protestant }
+							}
+						}
+					}
+					add_political_power = 1
+				}
+			}
 		}
 	}
 	
@@ -3163,7 +3284,10 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_luderitz_mission }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_southwestafrica_company
+			hidden_effect = {
+				#Add decisions and events here later
+			}
 		}
 	}
 	
@@ -3180,7 +3304,11 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_southwestafrica_company }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_koloniale_schutztruppen
+			custom_effect_tooltip = eoanb_tt_GER_focus_koloniale_schutztruppen_unfinished
+			hidden_effect = {
+				#Recruitment systems for Schutztruppen will be added later
+			}
 		}
 	}
 	
@@ -3197,7 +3325,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_colonial_society }
 		
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	
@@ -3214,7 +3342,19 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_westafrika }
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = eoanb_tt_GER_focus_nachtigal_mission
+			hidden_effect = {
+				add_opinion_modifier = { target = TRZ modifier = eoanb_om_GER_established_nachtigal }
+				reverse_add_opinion_modifier = { target = TRZ modifier = eoanb_om_GER_established_nachtigal }
+				add_opinion_modifier = { target = KAG modifier = eoanb_om_GER_established_nachtigal }
+				reverse_add_opinion_modifier = { target = KAG modifier = eoanb_om_GER_established_nachtigal }
+				add_opinion_modifier = { target = TUG modifier = eoanb_om_GER_established_nachtigal }
+				reverse_add_opinion_modifier = { target = TUG modifier = eoanb_om_GER_established_nachtigal }
+				add_opinion_modifier = { target = SNS modifier = eoanb_om_GER_established_nachtigal }
+				reverse_add_opinion_modifier = { target = SNS modifier = eoanb_om_GER_established_nachtigal }
+				add_opinion_modifier = { target = KBO modifier = eoanb_om_GER_established_nachtigal }
+				reverse_add_opinion_modifier = { target = KBO modifier = eoanb_om_GER_established_nachtigal }
+			}
 		}
 	}
 	
@@ -3231,7 +3371,30 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_nachtigal_mission }
 		
 		completion_reward = {
-			
+			if = {
+				limit = {
+					274 = { african_state_owned_by_colonizers = no }
+				}
+				PRS = { add_state_claim = 274 }
+			}
+			if = {
+				limit = {
+					846 = { african_state_owned_by_colonizers = no }
+				}
+				PRS = { add_state_claim = 846 }
+			}
+			if = {
+				limit = {
+					768 = { african_state_owned_by_colonizers = no }
+				}
+				PRS = { add_state_claim = 768 }
+			}
+			if = {
+				limit = {
+					769 = { african_state_owned_by_colonizers = no }
+				}
+				PRS = { add_state_claim = 769 }
+			}
 		}
 	}
 	
@@ -3248,7 +3411,7 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_german_colonial_society }
 		
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	
@@ -3265,7 +3428,12 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_the_pacific }
 		
 		completion_reward = {
-			
+			PRS = { add_state_claim = 634 }
+			PRS = { add_state_claim = 737 }
+			PRS = { add_state_claim = 633 }
+			PRS = { add_state_claim = 684 }
+			PRS = { add_state_claim = 638 }
+			PRS = { add_state_claim = 646 }
 		}
 	}
 	
@@ -3282,7 +3450,64 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_finsch_expedition }
 		
 		completion_reward = {
-			
+			PRS = { add_state_claim = 1136 }
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_next_focus
+		icon = GFX_goal_focus_unlock_germany
+		x = 28
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_crisis_is_over }
+		prerequisite = { focus = GER_focus_historical_imperial_navy }
+		available = {
+			has_completed_focus = GER_focus_historical_kulturkampf
+			PRS = { has_country_flag = eoanb_flag_GER_ready_move_ft_2 }
+			OR = {
+				has_completed_focus = GER_focus_historical_unified_national_ranks
+				has_completed_focus = GER_focus_historical_law_may_1874
+			}
+			OR = {
+				has_completed_focus = GER_focus_historical_technische_hochschulen
+				has_completed_focus = GER_focus_historical_feed_soldiers
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_next_focus
+			hidden_effect = {
+				#Switch to third FT later
+				if = {
+					limit = {
+						OR = {
+							has_government = centrism
+							has_government = traditional_conservatism
+							has_government = autocracy
+							has_government = chauvinist_populism
+							has_government = radical_democracy
+							has_government = fundamentalism
+						}
+					}   
+					load_focus_tree = germany_united_focus_second_historical
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_government = social_egalitarianism
+							has_government = collectivist_socialism
+							has_government = vanguard_communism
+							has_government = anarchism
+						}
+					}   
+					load_focus_tree = germany_united_focus_second_socialist
+				}
+			}
 		}
 	}
 	

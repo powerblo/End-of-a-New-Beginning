@@ -521,6 +521,19 @@ ideas = {
 				social_egalitarianism_drift = -0.02
 			}
 		}
+		GER_idea_colonial_society = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_sea_focused_navy
+			
+			modifier = {
+			
+			}
+		}
 	}
 	naval_manufacturer = {
 	
@@ -536,6 +549,10 @@ ideas = {
 			
 			available = {
 				has_completed_focus = GER_focus_historical_norddeutscher_lloyd
+			}
+			
+			visible = {
+				PRS_trigger_formed_germany = yes
 			}
 
 			cost = 250
@@ -560,6 +577,10 @@ ideas = {
 			available = {
 				has_completed_focus = GER_focus_historical_siemens
 			}
+			
+			visible = {
+				PRS_trigger_formed_germany = yes
+			}
 
 			cost = 200
 			removal_cost = 10
@@ -580,6 +601,10 @@ ideas = {
 			
 			available = {
 				has_completed_focus = GER_focus_historical_bayer
+			}
+			
+			visible = {
+				PRS_trigger_formed_germany = yes
 			}
 
 			cost = 200

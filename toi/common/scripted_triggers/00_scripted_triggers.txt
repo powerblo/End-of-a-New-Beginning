@@ -59,3 +59,33 @@ PRS_owns_all_ger_unify_state_socialist = {
 		}
 	}
 }
+
+african_state_owned_by_colonizers = {
+	OR = {
+		is_owned_by = SWE
+		is_owned_by = HOL
+		is_owned_by = BEL
+		is_owned_by = ENG
+		is_owned_by = PRS
+		is_owned_by = AUS
+		is_owned_by = PIE
+		is_owned_by = FRA
+		is_owned_by = SPR
+		is_owned_by = POR
+		is_owned_by = RUS
+	}
+}
+
+PRS_trigger_formed_germany = {
+	PRS = {
+		OR = {
+			has_cosmetic_tag = PRS_GER_liberal
+			has_cosmetic_tag = PRS_GER_bismarck
+			has_cosmetic_tag = PRS_GER_bismarck_hre
+			has_cosmetic_tag = PRS_GER_bismarck_national
+			has_cosmetic_tag = PRS_GER_bismarck_standard
+			has_cosmetic_tag = PRS_GER_bismarck_imperial
+			has_cosmetic_tag = PRS_GER_socialist		
+		}
+	}
+}
