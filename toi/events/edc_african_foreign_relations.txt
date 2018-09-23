@@ -351,17 +351,19 @@ country_event = { #add colonal power
 	hidden = no
 	
 	immediate = {
-		add_ideas = {
-			afr_colonial_power
-		}
-		set_variable = { colonial_power = 30 }
-        set_variable = { colonial_power_rate = 1 }
-		set_variable = { colonial_power_max = num_of_factories }
-		multiply_variable = { var = colonial_power_max value = 8 }
+		set_country_flag = is_historical_colonial_power
 	}
 	
 	option = {
 		name = EDC_afr.15.a
+	}
+	option = {
+		name = EDC_afr.15.b
+		set_technology = {
+			tech_humanities_colonialism = 1
+			tech_humanities_imperialism = 1
+			tech_humanities_colonial_ambitions = 1
+		}
 	}
 }
 country_event = { #selecting a colonal "master"
@@ -1441,6 +1443,14 @@ country_event = {##territorial disputes on tribal border
 			has_idea = AF_T_small_kingdom
 			has_idea = afr_large_kingdom
 		}
+		modifier = {
+			factor = 0.65 # If true multiply 720 by 0.8 = 576
+			divisions_in_border_state = {
+				size > 1
+				state = any_owned_state
+				border_state = any_neighbor_state
+			}
+		}
 	}
 	trigger = {
 		OR = {
@@ -1938,5 +1948,23 @@ country_event = {###EGY-ETH war, EGY wins
 	}
 	option = {#we will annex them
 		name = EDC_afr.40.b
+	}
+}
+country_event = {###A African Major offers us protection
+	id = EDC_afr.41
+	title = EDC_afr.41.t
+	desc = EDC_afr.41.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = EDC_afr.41.a
+		FROM = {
+			give_guarantee = ROOT
+		}
+	}
+	option = {#decline
+		name = EDC_afr.41.b
 	}
 }
