@@ -89,3 +89,14 @@ PRS_trigger_formed_germany = {
 		}
 	}
 }
+#############################################
+#for formed countries that use cosmetic tags#
+#############################################
+Country_formed_GER = {
+	OR={
+		PRS_trigger_formed_germany = yes
+	}
+}
+Country_formed_ITA = {
+	has_cosmetic_tag = PIE_focus_ITA
+}
