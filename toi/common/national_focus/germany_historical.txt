@@ -1,6 +1,6 @@
 focus_tree = {
 	id = germany_united_focus
-
+	continuous_focus_position = { x = 800 y = 1100 }
 	country = {
 		factor = 0
 	}
@@ -3451,6 +3451,63 @@ focus_tree = {
 		
 		completion_reward = {
 			PRS = { add_state_claim = 1136 }
+		}
+	}
+	
+	focus = {
+		id = GER_focus_historical_next_focus
+		icon = GFX_goal_focus_unlock_germany
+		x = 28
+		y = 12
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_focus_historical_crisis_is_over }
+		prerequisite = { focus = GER_focus_historical_imperial_navy }
+		available = {
+			has_completed_focus = GER_focus_historical_kulturkampf
+			PRS = { has_country_flag = eoanb_flag_GER_ready_move_ft_2 }
+			OR = {
+				has_completed_focus = GER_focus_historical_unified_national_ranks
+				has_completed_focus = GER_focus_historical_law_may_1874
+			}
+			OR = {
+				has_completed_focus = GER_focus_historical_technische_hochschulen
+				has_completed_focus = GER_focus_historical_feed_soldiers
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_next_focus
+			hidden_effect = {
+				#Switch to third FT later
+				if = {
+					limit = {
+						OR = {
+							has_government = centrism
+							has_government = traditional_conservatism
+							has_government = autocracy
+							has_government = chauvinist_populism
+							has_government = radical_democracy
+							has_government = fundamentalism
+						}
+					}   
+					load_focus_tree = germany_united_focus_second_historical
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_government = social_egalitarianism
+							has_government = collectivist_socialism
+							has_government = vanguard_communism
+							has_government = anarchism
+						}
+					}   
+					load_focus_tree = germany_united_focus_second_socialist
+				}
+			}
 		}
 	}
 	
