@@ -36,6 +36,7 @@ aggressive_expansion_category = {
 			}
 			NOT = {
 				has_idea = pre_industrial_era
+				has_war_with = FROM
 			}
 		}
 
@@ -43,14 +44,6 @@ aggressive_expansion_category = {
 
 		complete_effect = {
 			add_war_support = 0.05
-			declare_war_on = {
-				target = FROM
-				type = contain_wargoal
-			}
-			add_named_threat = {
-				threat = -5
-				name = containment_joined_war
-			}
 			if = {
 				limit = {
 					FROM = {
@@ -60,8 +53,32 @@ aggressive_expansion_category = {
 					}
 				}
 				FROM = { set_country_flag = containment_target }
+				FROM = {
+					add_timed_idea = {
+						idea = containment_recent_target
+						days = 1460
+					}
+				}
 				FROM = { save_global_event_target_as = contain_target_news }
+				set_country_flag = containment_starter
 				news_event = { id = contain_news.1 }
+				declare_war_on = {
+					target = FROM
+					type = contain_wargoal
+				}
+			}
+			else = {
+				hidden_effect = {
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								has_country_flag = containment_starter
+							}
+							country_event = contain.6
+						}
+					}
+				}
+				custom_effect_tooltip = join_containment_war
 			}
 		}
 
@@ -100,8 +117,75 @@ aggressive_expansion_category = {
 						tag = PIE
 						tag = ITA
 						tag = GER
+						tag = USA
 					}
 				}
+			}
+		}
+	}
+	#Leave Coalition War
+	eoanb_descision_leave_containment = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_war_with = FROM
+			surrender_progress < 0.5
+			is_puppet = no
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				has_country_flag = containment_target
+				has_war_with = ROOT
+			}
+		}
+
+		visible = {
+			has_war_with = FROM
+		}
+
+		cost = 0
+
+		complete_effect = {
+			add_war_support = -0.1
+			add_stability = -0.1
+			white_peace = FROM
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 4
+				FROM = {
+					NOT = {
+						has_idea = containment_recent_target
+					}
+					surrender_progress < 0.2
+				}
+				NOT = { has_country_flag = contianment_starter }
+			}
+			modifier = {
+				add = 6
+				FROM = {
+					NOT = {
+						has_idea = containment_recent_target
+					}
+					surrender_progress < 0.2
+				}
+				surrender_progress > 0
+				NOT = { has_country_flag = contianment_starter }
+			}
+			modifier = {
+				add = 4
+				FROM = {
+					NOT = {
+						has_idea = containment_recent_target
+					}
+					surrender_progress < 0
+				}
+				has_country_flag = contianment_starter
 			}
 		}
 	}
@@ -140,6 +224,7 @@ aggressive_expansion_category = {
 			}
 			NOT = {
 				has_idea = pre_industrial_era
+				has_war_with = FROM
 			}
 			NOT = {
 				has_country_flag = containment_denounced_them
@@ -212,6 +297,7 @@ aggressive_expansion_category = {
 
 		visible = {
 			has_country_flag = containment_denounced_them
+			has_war_with = FROM
 		}
 
 		cost = 0
@@ -292,6 +378,7 @@ aggressive_expansion_category = {
 			NOT = {
 				has_idea = pre_industrial_era
 				has_country_flag = containment_embargoed_them
+				has_war_with = FROM
 			}
 		}
 
@@ -361,6 +448,7 @@ aggressive_expansion_category = {
 
 		visible = {
 			has_country_flag = containment_embargoed_them
+			has_war_with = FROM
 		}
 
 		cost = 0

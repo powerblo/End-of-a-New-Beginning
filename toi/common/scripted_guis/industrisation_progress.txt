@@ -377,6 +377,9 @@ scripted_gui = {
  
        context_type = selected_state_context
 	   parent_window_token = selected_state_view 
+	   ai_enabled={
+		always = yes
+	   }
 		
        visible = {
 			ROOT = {
@@ -569,11 +572,35 @@ scripted_gui = {
 					is_claimed_by = ROOT
 				}
 			}
+			colonisation_stage_completed_1_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >0}
+			}
+			colonisation_stage_completed_2_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >1}
+			}
+			colonisation_stage_completed_3_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >2}
+			}
+			colonisation_stage_completed_4_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >3}
+			}
+			colonisation_stage_completed_5_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >4}
+			}
+			colonisation_stage_completed_6_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >5}
+			}
+			colonisation_stage_completed_7_visible={
+				check_variable = {ROOT.colonisation_progress_@THIS >6}
+			}
         }
+		ai_test_interval= 24
+		ai_test_variance = 24
+		ai_max_weight_taken_per_test = 2
 		ai_weights = {
 			colonisation_stage_1_bg_click = {
 				ai_will_do = {
-            		factor = -1
+            		factor = 0
             		modifier = {
             		    any_neighbor_state = {
 							owner = {tag = ROOT}
@@ -1032,6 +1059,12 @@ scripted_gui = {
             		}
 					
         		}
+				modifier = {
+            		any_state = {
+						check_variable = {ROOT.colonisation_progress_@THIS > 0}
+					}
+					add = -10
+            	}
 			}
 			colonisation_stage_2_bg_click = {
        			ai_will_do = {

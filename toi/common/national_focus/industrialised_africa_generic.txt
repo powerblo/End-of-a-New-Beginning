@@ -82,9 +82,14 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			army_experience = 10
-			swap_ideas = {
-				add_idea = law_victorian_army
-				remove_idea = law_pre_industrial_army
+			if={
+				limit = {
+					has_idea = law_pre_industrial_army
+				}
+				swap_ideas = {
+					add_idea = law_victorian_army
+					remove_idea = law_pre_industrial_army
+				}
 			}
 		}
 
@@ -491,7 +496,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = expand_the_main_rail_network
+		id = afr_expand_the_main_rail_network
 		icon = GFX_goal_focus_war_gauges
 		cost = 21.50
 		prerequisite = {
@@ -622,6 +627,53 @@ focus_tree = {
 		}
 		x = 15
 		y = 3
+
+	}
+	focus = {
+		id = afr_introduce_current_western_training_regimen
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = afr_innovation_in_the_military
+		}
+		completion_reward = {
+			army_experience = 20
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = afr_stir_up_military_support
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = afr_innovation_in_the_military
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = afr_military_use_of_railways
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = afr_expand_the_main_rail_network
+		}
+		prerequisite = {
+			focus = afr_innovation_in_the_military
+		}
+		completion_reward = {
+			add_ideas={
+				afr_rail_powered_troop_movement
+			}
+		}
+		x = 13
+		y = 5
 
 	}
 	focus = {
@@ -1503,6 +1555,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 11
+		completion_reward = {
+			every_country={
+				limit ={
+					afr_is_tribal = yes
+				}
+				country_event = {id = EDC_afr.41}
+			}
+		}
 
 	}
 	focus = {

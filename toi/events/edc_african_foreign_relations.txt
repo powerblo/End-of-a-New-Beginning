@@ -351,17 +351,19 @@ country_event = { #add colonal power
 	hidden = no
 	
 	immediate = {
-		add_ideas = {
-			afr_colonial_power
-		}
-		set_variable = { colonial_power = 30 }
-        set_variable = { colonial_power_rate = 1 }
-		set_variable = { colonial_power_max = num_of_factories }
-		multiply_variable = { var = colonial_power_max value = 8 }
+		set_country_flag = is_historical_colonial_power
 	}
 	
 	option = {
 		name = EDC_afr.15.a
+	}
+	option = {
+		name = EDC_afr.15.b
+		set_technology = {
+			tech_humanities_colonialism = 1
+			tech_humanities_imperialism = 1
+			tech_humanities_colonial_ambitions = 1
+		}
 	}
 }
 country_event = { #selecting a colonal "master"
@@ -1441,6 +1443,14 @@ country_event = {##territorial disputes on tribal border
 			has_idea = AF_T_small_kingdom
 			has_idea = afr_large_kingdom
 		}
+		modifier = {
+			factor = 0.65 # If true multiply 720 by 0.8 = 576
+			divisions_in_border_state = {
+				size > 1
+				state = any_owned_state
+				border_state = any_neighbor_state
+			}
+		}
 	}
 	trigger = {
 		OR = {
@@ -1938,5 +1948,137 @@ country_event = {###EGY-ETH war, EGY wins
 	}
 	option = {#we will annex them
 		name = EDC_afr.40.b
+	}
+}
+country_event = {###A African Major offers us protection
+	id = EDC_afr.41
+	title = EDC_afr.41.t
+	desc = EDC_afr.41.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = EDC_afr.41.a
+		FROM = {
+			give_guarantee = ROOT
+		}
+	}
+	option = {#decline
+		name = EDC_afr.41.b
+	}
+}
+##########################################################################################################################################################
+#####	######	#####	#		#########	####	#		#####		#####	#####	#####		#		#####	######	#########	#####		#
+#		#		#	   # #		#	#	#	#	#	#		#			#		#	#	#		   # #		#		#			#		#		   # #
+#####	#		#	  #####		#	#	#	#####	#		####		###		#	#	#		  #####		###		#			#		#		  #####
+	#	#		#	 #	   #	#	#	#	#	#	#		#			#		#	#	#		 #	   #	#		#			#		#		 #	   #
+#####	######	#	#		#	#		#	####	#####	#####		#		#####	#		#		#	#		#		#########	#####	#		#
+##########################################################################################################################################################
+news_event = { #the scramble begins
+	id = EDC_afr.42
+	title = EDC_afr.42.t
+	desc = EDC_afr.42.d
+	picture = GFX_news_event_scramble_africa
+	
+	#is_triggered_only = yes
+	#hidden = no
+	major = yes
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = scramble_for_africa
+	}
+	trigger ={
+		tag = ENG
+		OR={
+			AND = {
+				any_country={
+					has_tech=tech_humanities_colonial_ambitions
+				}
+			}
+			date>1881.01.01
+			AND ={
+				any_country={
+					has_tech=early_vaccination
+					has_tech=standardized_gauge
+				}
+				date>1879.01.01
+			}
+		}
+	}
+	
+	option = {#all this effort over africa?
+		name = EDC_afr.42.a
+		trigger={
+			NOT={
+				OR = {
+					is_in_colonial_region = yes
+					has_idea = afr_post_tribal
+
+					tag = ENG
+					tag = FRA
+					tag = BEL
+					tag = SPA
+					tag = POR
+					Country_formed_GER = yes
+					Country_formed_ITA = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EDC_afr.42.b#We must exploit the continent before the other powers get to it
+		trigger={
+			OR  = {
+				tag = ENG
+				tag = FRA
+				tag = BEL
+				tag = SPA
+				tag = POR
+				Country_formed_GER = yes
+				Country_formed_ITA = yes
+			}
+		}
+		set_country_flag = is_historical_colonial_power
+		if= {
+			limit = {
+				NOT = {
+					has_tech = tech_humanities_colonialism
+				}
+			}
+			set_technology = {
+				tech_humanities_colonialism = 1
+			}
+		}
+		if= {
+			limit = {
+				is_ai = yes
+				NOT = {
+					has_tech = tech_humanities_colonialism
+				}
+			}
+			set_technology = {
+				tech_humanities_colonialism = 1
+				tech_humanities_imperialism = 1
+				tech_humanities_colonial_ambitions = 1
+			}
+		}
+	}
+	option = {#The Hordes of Europe do decend apon us
+		name = EDC_afr.42.c
+		trigger={
+			is_in_colonial_region = yes
+			NOT = {
+				has_idea = afr_post_tribal
+			}
+		}
+	}
+	option = {#The Hordes of Europe do decend apon us
+		name = EDC_afr.42.c2
+		trigger={
+			is_in_colonial_region = yes
+			has_idea = afr_post_tribal
+		}
 	}
 }
