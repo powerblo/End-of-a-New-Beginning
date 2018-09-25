@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-  capital = 232
+  capital = 233
 
-  oob = "CAU_1857"
+  oob = "CIR_1857"
 
   set_convoys = 0
   
@@ -35,6 +35,7 @@
     state_religion
 	religion_shiite
          #NATIONAL SPIRITS
+	
   }
 
   set_politics = {
@@ -85,22 +86,22 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Imam Shamil"
+    name = "Haji Kirantukh Berzeg"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_CAU_Imam_Shamil.dds"
+    picture = ""
     expire = 1891.12.31
     ideology = despotism
 }
 
 create_corps_commander = {
-  name = "Imam Shamil"
-  picture = "Portrait_CAU_Imam_Shamil.dds"
+  name = "Haji Kirantukh Berzeg"
+  picture = ""
   traits = { }
-  skill = 4
-  attack_skill = 3
-  defense_skill = 4
-  planning_skill = 4
-  logistics_skill = 3
+  skill = 2
+  attack_skill = 2
+  defense_skill = 3
+  planning_skill = 3
+  logistics_skill = 2
 }
 
 
@@ -110,21 +111,20 @@ create_corps_commander = {
   traits = { }
   skill = 2
   attack_skill = 1
-  defense_skill = 2
-  planning_skill = 2
-  logistics_skill = 2
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
 }
 
 add_equipment_to_stockpile = {
     type = infantry_equipment_rifle_0
     amount = 10000
-    producer = CAU  
+    producer = CIR  
 }
 add_equipment_to_stockpile = {
     type = uniform_equipment_0
     amount = 10000
-    producer = CAU   
+    producer = CIR  
 }
-
 
 }

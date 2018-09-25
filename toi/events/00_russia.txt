@@ -167,8 +167,12 @@ add_namespace = russia_construction
 		fire_only_once = yes
 
 		trigger = {
+		AND = {
 		date > 1857.08.01
 		tag = RUS
+		234 = {
+		is_controlled_by = RUS	}
+		}
 		}
 
 		option = {
@@ -352,7 +356,7 @@ add_namespace = russia_construction
 		fire_only_once = yes	
 
 		trigger = {
-		date > 1857.3.1
+		date > 1857.8.1
 		tag = CAU
 		}
 
