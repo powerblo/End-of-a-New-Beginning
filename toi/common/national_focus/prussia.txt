@@ -2220,7 +2220,13 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_cosmetic_tag = PRS_GER_bismarck
+						OR = {
+							has_cosmetic_tag = PRS_GER_bismarck
+							has_cosmetic_tag = PRS_GER_bismarck_imperial
+							has_cosmetic_tag = PRS_GER_bismarck_standard
+							has_cosmetic_tag = PRS_GER_bismarck_hre
+							has_cosmetic_tag = PRS_GER_bismarck_national
+						}
 					}   
 					load_focus_tree = germany_united_focus
 				}
