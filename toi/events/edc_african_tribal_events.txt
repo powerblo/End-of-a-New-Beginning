@@ -296,6 +296,10 @@ country_event = {###if Pedro V Wins, switch tag back to avoid bugs
 	#is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
+		has_country_leader = {
+			name = "Pedro V Ndongo"
+			ruling_only = yes
+		}
 		has_war = no
 		owns_state = 1212
 		owns_state = 888
