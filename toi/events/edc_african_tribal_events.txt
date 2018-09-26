@@ -15,7 +15,6 @@ country_event = {###Henrique III dies, consel elects new king
 		}
 		tag= KON
 		date > 1857.09.01
-		has_idea = weak_heir
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -45,6 +44,33 @@ country_event = {###Henrique III dies, consel elects new king
 			add_idea = no_heir
 			remove_idea = weak_heir
 		}
+		trigger={
+			has_idea = weak_heir
+		}
+		
+	}
+	option = {#Alvaro XIII is the only choice
+		name = EDC_kongo.1.a2
+		create_country_leader = {
+			name = "Alvaro XIII Ndongo"
+			desc = "POLITICS_GEORGE_V_DESC"
+			picture = "gfx/leaders/Africa/generic_leader_king_3.dds"
+			expire = "1859.05.21"
+			ideology = despotism
+			traits = {
+
+			}
+		}
+		hidden_effect={
+			country_event = {id = EDC_kongo.2 days = 20 random = 20}
+		}
+		swap_ideas ={
+			add_idea = no_heir
+			remove_idea = weak_heir
+		}
+		trigger={
+			has_idea = strong_heir
+		}
 		
 	}
 	option = {#Side with Pedro V
@@ -65,11 +91,21 @@ country_event = {###Henrique III dies, consel elects new king
 			country_event = {id = EDC_kongo.10 days = 100 random = 200}
 			country_event = {id = EDC_kongo.8 days = 25}
 		}
-		swap_ideas ={
-			add_idea = no_heir
-			remove_idea = weak_heir
+		if={
+			limit = {
+				has_idea = weak_heir
+			}
+			swap_ideas ={
+				add_idea = no_heir
+				remove_idea = weak_heir
+			}
 		}
-		
+		trigger={
+			OR={
+				has_idea = weak_heir
+				has_idea = no_heir
+			}
+		}
 	}
 }
 country_event = {##Pedro V starts a civil war
@@ -198,7 +234,7 @@ country_event = {##ask portugal for help?
 		
 	}
 }
-country_event = {##POR- Pedro asks for help
+country_event = {##POR- Pedro V Ndongo asks for help
 	id = EDC_kongo.4
 	title = EDC_kongo.4.t
 	desc = EDC_kongo.4.d
@@ -225,7 +261,7 @@ country_event = {##POR- Pedro asks for help
 		}
 	}
 }
-country_event = {##Pedro V - Portugal sends aid
+country_event = {##Pedro V Ndongo - Portugal sends aid
 	id = EDC_kongo.5
 	title = EDC_kongo.5.t
 	desc = EDC_kongo.5.d
@@ -239,7 +275,7 @@ country_event = {##Pedro V - Portugal sends aid
 		set_country_flag = promised_POR_vassalage
 	}
 }
-country_event = {##Pedro V - Portugal refused
+country_event = {##Pedro V Ndongo - Portugal refused
 	id = EDC_kongo.6
 	title = EDC_kongo.6.t
 	desc = EDC_kongo.6.d
@@ -309,7 +345,7 @@ country_event = {###if Pedro V Wins, switch tag back to avoid bugs
 			}
 	}
 }
-country_event = {##Pedro V - Portugal requests us to submit
+country_event = {##Pedro V Ndongo - Portugal requests us to submit
 	id = EDC_kongo.8
 	title = EDC_kongo.8.t
 	desc = EDC_kongo.8.d
@@ -340,7 +376,7 @@ country_event = {##Pedro V - Portugal requests us to submit
 		name = EDC_kongo.8.c
 	}
 }
-country_event = {##Annex the god damn country
+country_event = {##Annex the god damn country damn it
 	id = EDC_kongo.9
 	title = EDC_kongo.9.t
 	desc = EDC_kongo.9.d

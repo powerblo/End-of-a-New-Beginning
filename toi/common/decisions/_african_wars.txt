@@ -35,10 +35,16 @@ tribal_decisions_eoanb = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 4
 			modifier = {
 				factor = 2
 				has_war_support > 0.5
+			}
+			modifier = {
+				factor = 0
+				any_state = {
+					is_claimed_by = ROOT
+				}
 			}
 		}
 	}
