@@ -296,7 +296,7 @@ NProduction = {
 	ANNEX_STOCKPILES_RATIO = 1.0,		-- How much stockpiled equipment will be transferred on annexation
 	ANNEX_FIELD_EQUIPMENT_RATIO = 0.25,	-- How much equipment from deployed divisions will be transferred on annexation
 	ANNEX_CONVOYS_RATIO = 0.15,			-- How many convoys will be transferred on annexation
-	MIN_POSSIBLE_TRAINING_MANPOWER = 100000,	-- How many deployment lines minimum can be training
+	MIN_POSSIBLE_TRAINING_MANPOWER = 50000,	-- How many deployment lines minimum can be training
 	MIN_FIELD_TO_TRAINING_MANPOWER_RATIO = 0.75,	-- Ratio which % of army in field can be trained
 	CAPITULATE_STOCKPILES_RATIO = 0.5, -- How much equipment from deployed divisions will be transferred on capitulation
 	INFRA_MAX_CONSTRUCTION_COST_EFFECT = 1, 		-- Building in a state with higher infrastructure will reduce the cost of shared buildings.
@@ -626,7 +626,7 @@ NMilitary = {
 	SLOWER_ORG_REGAIN_MULT = -0.5,
 	
 	DISBAND_MANPOWER_LOSS = 0.7,
-	MIN_DIVISION_DEPLOYMENT_TRAINING = 0.2,			-- Min level of division training
+	MIN_DIVISION_DEPLOYMENT_TRAINING = 0.05,			-- Min level of division training
 	
 	FRONT_MIN_PATH_TO_REDEPLOY = 8,					-- If a units path is at least this long to reach its front location, it will strategically redeploy.
 	ARMY_INITIATIVE_REINFORCE_FACTOR = 0.25,		-- scales initiative for reinforce chance
