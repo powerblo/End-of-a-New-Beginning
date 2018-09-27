@@ -69,7 +69,7 @@ country_event = {###Henrique III dies, consel elects new king
 			remove_idea = weak_heir
 		}
 		trigger={
-			has_idea = strong_heir
+			has_idea = has_heir
 		}
 		
 	}
@@ -345,7 +345,7 @@ country_event = {###if Pedro V Wins, switch tag back to avoid bugs
 						afr_trait_westerniser
 					}
 				}
-				country_event ={id = EDC_kongo.9 day = 2}
+				country_event ={id = EDC_kongo.9 days = 2}
 			}
 	}
 }

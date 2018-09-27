@@ -11,10 +11,12 @@ country_event = {
 	
 	option = {
 		name = EDC_afr.1.a
-		random_neighbor_state = {
-			limit = {
-				is_owned_by = FROM
-				is_claimed_by = ROOT
+		trigger = {
+			any_neighbor_state = {
+				limit = {
+					is_owned_by = FROM
+					is_claimed_by = ROOT
+				}
 			}
 		}
 		#ROOT ={ 
