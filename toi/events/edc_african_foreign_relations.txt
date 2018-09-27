@@ -11,14 +11,15 @@ country_event = {
 	
 	option = {
 		name = EDC_afr.1.a
-		trigger = {
-			any_neighbor_state = {
-				limit = {
-					is_owned_by = FROM
-					is_claimed_by = ROOT
-				}
-			}
-		}
+		#BROKEN
+		#trigger = {
+		#	any_neighbor_state = {
+		#		limit = {
+		#			is_owned_by = FROM
+		#			is_claimed_by = ROOT
+		#		}
+		#	}
+		#}
 		#ROOT ={ 
 			create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
 				type = take_state_focus
