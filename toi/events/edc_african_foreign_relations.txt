@@ -11,12 +11,15 @@ country_event = {
 	
 	option = {
 		name = EDC_afr.1.a
-		random_neighbor_state = {
-			limit = {
-				is_owned_by = FROM
-				is_claimed_by = ROOT
-			}
-		}
+		#BROKEN
+		#trigger = {
+		#	any_neighbor_state = {
+		#		limit = {
+		#			is_owned_by = FROM
+		#			is_claimed_by = ROOT
+		#		}
+		#	}
+		#}
 		#ROOT ={ 
 			create_wargoal ={ ##try this first, then try dynamic border war if effect not wanted
 				type = take_state_focus
@@ -1443,14 +1446,6 @@ country_event = {##territorial disputes on tribal border
 			has_idea = AF_T_small_kingdom
 			has_idea = afr_large_kingdom
 		}
-		modifier = {
-			factor = 0.65 # If true multiply 720 by 0.8 = 576
-			divisions_in_border_state = {
-				size > 1
-				state = any_owned_state
-				border_state = any_neighbor_state
-			}
-		}
 	}
 	trigger = {
 		OR = {
@@ -2074,7 +2069,7 @@ news_event = { #the scramble begins
 			}
 		}
 	}
-	option = {#The Hordes of Europe do decend apon us
+	option = {#The Hordes of Europe do decend apon us, And we are Ready
 		name = EDC_afr.42.c2
 		trigger={
 			is_in_colonial_region = yes

@@ -47,6 +47,15 @@
       #Colective guarantee of the 7 great power
   give_guarantee = ROM
   give_guarantee = MOL
+  
+ add_opinion_modifier = {
+    target = CIR
+    modifier = caucasian_war
+}
+ add_opinion_modifier = {
+    target = CAU 
+    modifier = caucasian_war
+}
 
 
 set_politics = {
@@ -85,11 +94,6 @@ set_politics = {
 
 	  ruling_party = autocracy
   }
-  
-declare_war_on= {
-    target = CAU
-    type = annex_everything
-}
 
   set_technology = {
 	infantry_weapons = 1

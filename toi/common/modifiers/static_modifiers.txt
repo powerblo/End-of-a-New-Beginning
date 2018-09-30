@@ -10,7 +10,6 @@ weather_rain_light = { # on Region
 	naval_strike = -0.2
 	air_accidents = 0.1
 	air_mission_efficiency = -0.1
-
 	local_org_regain = -0.05
 }
 weather_rain_heavy = { # on Region 
@@ -135,17 +134,29 @@ non_core = {
 	local_building_slots_factor = -0.5
 }
 
-
-
+#Doesn't get triggered for some reason
 lacking_consumer_goods = {
+	stability_weekly = -0.005
+	war_support_weekly = -0.005
+	political_power_factor = -0.1
+	army_org_Factor = -0.1
+	army_morale_factor = -0.1
+	attrition = 0.1
+	drift_defence_factor = -0.25
+	production_factory_max_efficiency_factor = -0.1
+	production_speed_buildings_factor = -0.25
+	industry_free_repair_factor = -0.5
+	research_time_factor = -0.1
+	MONTHLY_POPULATION = -0.5
 }
 
+#Doing a national focus
 gain_focus = {
 	political_power_cost = 1
 } 
 
 #license production
-
+#not sure if can delete
 ROM_license_german_equipment = {
 	valid_relation_trigger = {
 		FROM = {

@@ -142,15 +142,6 @@ on_actions = {
 	#	}
 	#}
 	
-	# ROOT is capitulated country, FROM is winner
-	on_capitulation = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
-	
 	on_peaceconference_ended = {
 		effect = {
 			if = {
@@ -166,6 +157,29 @@ on_actions = {
 				FROM = { country_event = { id = contain.1 days = 0 } }
 				ROOT = { clr_country_flag = containment_starter }
 			}
+		}
+	}
+	
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+	            if = {
+                    limit = {
+					    ROOT = { tag = CIR }
+						FROM = { tag = RUS }
+                    }   
+                        RUS = { country_event = { id = caucasus.2 } }
+                }   
+	            if = {
+                    limit = {
+					    ROOT = { tag = CAU }
+						FROM = { tag = RUS }
+                    }   
+                        RUS = { country_event = { id = caucasus.3 } }
+                }  
+				ROOT = {
+					decrease_ps_by_one = yes
+				}
 		}
 	}
 

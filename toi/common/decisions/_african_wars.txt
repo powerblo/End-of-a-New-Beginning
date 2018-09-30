@@ -16,10 +16,18 @@ tribal_decisions_eoanb = {
 		}
 		days_re_enable = 120
 
-		cost = 25
+		cost = 100
 		fire_only_once = no
 		
+		custom_cost_trigger = {
+
+			command_power > 99
+
+		}
+		custom_cost_text = command_power_more_than_99
+		
 		complete_effect = {
+			add_command_power = -100
 			add_equipment_to_stockpile = {
 				type = tribal_weapons_0
 				amount = 25
@@ -27,10 +35,16 @@ tribal_decisions_eoanb = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 4
 			modifier = {
 				factor = 2
 				has_war_support > 0.5
+			}
+			modifier = {
+				factor = 0
+				any_state = {
+					is_claimed_by = ROOT
+				}
 			}
 		}
 	}
