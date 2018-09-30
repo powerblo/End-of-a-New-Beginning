@@ -1,0 +1,720 @@
+focus_tree = {
+	id = qing
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+
+  focus = {
+		id = CHI_Self_Strengthening_Movement
+		icon = GFX_focus_generic_self_management
+		x = 15
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      #
+    }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+  focus = {
+		id = CHI_A_Modern_Army
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Self_Strengthening_Movement
+		x = -10
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Self_Strengthening_Movement
+    }
+		completion_reward = {
+      army_experience = 25
+		}
+	}
+  focus = {
+		id = CHI_An_Industry_to_Support_the_Army
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_A_Modern_Army
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_A_Modern_Army
+    }
+		completion_reward = {
+      add_tech_bonus = {
+        bonus = 0.5
+        uses = 1
+        category = industry
+      }
+		}
+	}
+  focus = {
+		id = CHI_Our_First_Steam_Engine
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_An_Industry_to_Support_the_Army
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_An_Industry_to_Support_the_Army
+    }
+		completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.5
+        uses = 1
+        category = industry
+        }
+		}
+	}
+  focus = {
+		id = CHI_The_Anqing_Arsenal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_An_Industry_to_Support_the_Army
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_An_Industry_to_Support_the_Army
+    }
+    available = {
+			CHI = {
+				controls_state = 606
+			}
+		}
+		completion_reward = {
+    606 = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+        }
+        }
+		}
+	}
+  focus = {
+		id = CHI_The_Anqing_Machine_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Anqing_Arsenal
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Anqing_Arsenal
+    }
+    available = {
+			CHI = {
+				controls_state = 606
+			}
+		}
+		completion_reward = {
+      606 = {
+			add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+      }
+		}
+	}
+  focus = {
+		id = CHI_Buy_Western_Manufacturing_Machines
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Anqing_Machine_Factory
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Anqing_Machine_Factory
+    }
+    prerequisite = {
+      focus = CHI_Our_First_Steam_Engine
+    }
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+  focus = {
+		id = CHI_Jin_Ling_Arsenal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Buy_Western_Manufacturing_Machines
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Buy_Western_Manufacturing_Machines
+    }
+    available = {
+			CHI = {
+				controls_state = 1056
+			}
+		}
+		completion_reward = {
+    1056 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+}
+		}
+	}
+  focus = {
+		id = CHI_Jin_Ling_Machine_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Jin_Ling_Arsenal
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Jin_Ling_Arsenal
+    }
+    available = {
+			CHI = {
+				controls_state = 1056
+			}
+		}
+		completion_reward = {
+    1056 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+}
+		}
+	}
+  focus = {
+		id = CHI_Jiangnan_Arsenal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Buy_Western_Manufacturing_Machines
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+    available = {
+			CHI = {
+				controls_state = 596
+			}
+		}
+		prerequisite = {
+      focus = CHI_Buy_Western_Manufacturing_Machines
+    }
+		completion_reward = {
+    596 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+}
+		}
+	}
+  focus = {
+		id = CHI_Expand_the_Jiangnan_Arsenal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Jiangnan_Arsenal
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+    available = {
+			CHI = {
+				controls_state = 596
+			}
+		}
+		prerequisite = {
+      focus = CHI_Jiangnan_Arsenal
+    }
+		completion_reward = {
+    596 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+		}
+	}
+  }
+  focus = {
+		id = CHI_Lanzhou_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Expand_the_Jiangnan_Arsenal
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Expand_the_Jiangnan_Arsenal
+    }
+    available = {
+			CHI = {
+				controls_state = 604
+			}
+		}
+		completion_reward = {
+    604 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+    }
+		}
+	}
+  focus = {
+		id = CHI_Xian_Machine_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Expand_the_Jiangnan_Arsenal
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Expand_the_Jiangnan_Arsenal focus = CHI_Jin_Ling_Machine_Factory
+    }
+    available = {
+			CHI = {
+				controls_state = 622
+			}
+		}
+		completion_reward = {
+    622 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+  type = arms_factory
+  level = 1
+  instant_build = yes
+}
+		}
+    }
+	}
+  focus = {
+		id = CHI_Jiangnan_Arsenal_Naval_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Jiangnan_Arsenal
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Jiangnan_Arsenal
+    }
+    available = {
+			CHI = {
+				controls_state = 596
+			}
+		}
+		completion_reward = {
+    622 = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+  type = dockyard
+  level = 2
+  instant_build = yes
+}
+    }
+		}
+	}
+  focus = {
+		id = CHI_Beiyang_Machine_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Buy_Western_Manufacturing_Machines
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Buy_Western_Manufacturing_Machines
+    }
+    available = {
+			CHI = {
+				controls_state = 608
+			}
+		}
+		completion_reward = {
+    608 = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+  type = arms_factory
+  level = 2
+  instant_build = yes
+}
+    }
+		}
+	}
+  focus = {
+		id = CHI_Beiyang_Machine_Factory_Dockyards
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Beiyang_Machine_Factory
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Beiyang_Machine_Factory
+    }
+    available = {
+			CHI = {
+				controls_state = 608
+			}
+		}
+		completion_reward = {
+    608 = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+  type = dockyard
+  level = 2
+  instant_build = yes
+}
+    }
+		}
+	}
+  focus = {
+		id = CHI_Steel_Factories
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Beiyang_Machine_Factory_Dockyards
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Beiyang_Machine_Factory_Dockyards
+    }
+    prerequisite = {
+      focus = CHI_Jiangnan_Arsenal_Naval_Factory
+    }
+    available = {
+			CHI = {
+				controls_state = 608
+			}
+      CHI = {
+				controls_state = 596
+			}
+		}
+		completion_reward = {
+			add_resource = { type = steel amount = 7 state = 596 }
+      add_resource = { type = steel amount = 4 state = 608 }
+		}
+	}
+  focus = {
+		id = CHI_Chonghou_Training_Guideline
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_A_Modern_Army
+		x = -3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_A_Modern_Army
+    }
+		completion_reward = {
+    add_tech_bonus = {
+  bonus = 0.5
+  uses = 2
+  category = land_doctrine
+}
+		}
+	}
+  focus = {
+		id = CHI_Men_for_the_Army
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Chonghou_Training_Guideline
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Chonghou_Training_Guideline
+    }
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+  focus = {
+		id = CHI_Train_Local_Officers
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Men_for_the_Army
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Men_for_the_Army
+    }
+		completion_reward = {
+			random_army_leader = {
+        add_skill_level = 1
+      }
+		}
+	}
+  focus = {
+		id = CHI_Employ_Western_Training_Officers
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Chonghou_Training_Guideline
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Chonghou_Training_Guideline
+    }
+		completion_reward = {
+			every_army_leader = {
+        boost_planning = 1
+      }
+		}
+	}
+  focus = {
+		id = CHI_Equipment_from_the_West
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Employ_Western_Training_Officers
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Employ_Western_Training_Officers
+    }
+		completion_reward = {
+    add_equipment_to_stockpile = {
+  type = infantry_equipment_rifle_0
+  amount = 600
+  producer = ENG
+}
+		}
+	}
+  focus = {
+		id = CHI_More_Guns
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Equipment_from_the_West
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Equipment_from_the_West
+    }
+		completion_reward = {
+    add_equipment_to_stockpile = {
+  type = infantry_equipment_rifle_0
+  amount = 1500
+  producer = FRA
+}
+		}
+	}
+  focus = {
+		id = CHI_More_Artillery
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Equipment_from_the_West
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Equipment_from_the_West
+    }
+		completion_reward = {
+    add_equipment_to_stockpile = {
+  type = cannon_equipment_0
+  amount = 1000
+  producer = FRA
+}
+		}
+	}
+  focus = {
+		id = CHI_Employ_Translators
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Employ_Western_Training_Officers
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Employ_Western_Training_Officers
+    }
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+  focus = {
+		id = CHI_Form_the_Huai_Army
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Employ_Translators
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Employ_Translators
+    }
+    prerequisite = {
+      focus = CHI_Train_Local_Officers
+    }
+		completion_reward = {
+    create_corps_commander = {
+name = "Li Hongzhang"
+picture = "Portrait_China_Li_Hongzhang.dds"
+traits = { brilliant_strategist }
+skill = 4
+attack_skill = 2
+defense_skill = 1
+planning_skill = 1
+logistics_skill = 3
+}
+		}
+	}
+  focus = {
+		id = CHI_Buy_Guns
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Form_the_Huai_Army
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Form_the_Huai_Army
+    }
+		completion_reward = {
+    add_equipment_to_stockpile = {
+  type = infantry_equipment_rifle_0
+  amount = 1000
+  producer = RUS
+}
+		}
+	}
+  focus = {
+		id = CHI_Expanding_the_Army
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Form_the_Huai_Army
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Form_the_Huai_Army
+    }
+		completion_reward = {
+			add_manpower = 10000
+      army_experience = 40
+		}
+	}
+  focus = {
+		id = CHI_Extensive_Conscription
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Expanding_the_Army
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Expanding_the_Army
+    }
+    prerequisite = {
+      focus = CHI_Buy_Guns
+    }
+		completion_reward = {
+			add_manpower = 40000
+		}
+	}
+  focus = {
+		id = CHI_Studying_Wars
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Extensive_Conscription
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Extensive_Conscription
+    }
+		completion_reward = {
+    add_tech_bonus = {
+  bonus = 0.5
+  uses = 2
+  category = land_doctrine
+}
+		}
+	}
+
+}
