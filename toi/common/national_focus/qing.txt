@@ -102,14 +102,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-    606 = {
-        add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-            type = arms_factory
-            level = 2
-            instant_build = yes
-        }
-        }
+		add_equipment_to_stockpile = {
+    type = infantry_equipment_rifle_0
+    amount = 100
+    producer = CHI
+}
 		}
 	}
   focus = {
@@ -134,7 +131,7 @@ focus_tree = {
       606 = {
 			add_extra_state_shared_building_slots = 1
       add_building_construction = {
-    type = arms_factory
+    type = infrastructure
     level = 1
     instant_build = yes
 }
@@ -209,13 +206,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-    1056 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
-}
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = industry
 }
 		}
 	}
@@ -296,14 +290,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-    604 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = artillery
 }
-    }
 		}
 	}
   focus = {
@@ -325,16 +316,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-    622 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = industry
 }
 		}
     }
-	}
+
   focus = {
 		id = CHI_Jiangnan_Arsenal_Naval_Factory
 		icon = GFX_focus_unknown
@@ -355,10 +344,10 @@ focus_tree = {
 		}
 		completion_reward = {
     622 = {
-    add_extra_state_shared_building_slots = 2
+    add_extra_state_shared_building_slots = 1
     add_building_construction = {
   type = dockyard
-  level = 2
+  level = 1
   instant_build = yes
 }
     }
@@ -384,10 +373,10 @@ focus_tree = {
 		}
 		completion_reward = {
     608 = {
-    add_extra_state_shared_building_slots = 2
+    add_extra_state_shared_building_slots = 1
     add_building_construction = {
   type = arms_factory
-  level = 2
+  level = 1
   instant_build = yes
 }
     }
@@ -413,10 +402,10 @@ focus_tree = {
 		}
 		completion_reward = {
     608 = {
-    add_extra_state_shared_building_slots = 2
+    add_extra_state_shared_building_slots = 1
     add_building_construction = {
   type = dockyard
-  level = 2
+  level = 1
   instant_build = yes
 }
     }
