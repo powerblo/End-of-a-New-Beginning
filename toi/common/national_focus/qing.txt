@@ -11,7 +11,7 @@ focus_tree = {
   focus = {
 		id = CHI_Self_Strengthening_Movement
 		icon = GFX_focus_generic_self_management
-		x = 15
+		x = 20
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -28,7 +28,7 @@ focus_tree = {
 		id = CHI_A_Modern_Army
 		icon = GFX_focus_unknown
     relative_position_id = CHI_Self_Strengthening_Movement
-		x = -10
+		x = -15
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -703,6 +703,713 @@ logistics_skill = 3
   uses = 2
   category = land_doctrine
 }
+		}
+	}
+	focus = {
+		id = CHI_The_Imperial_Navy
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Self_Strengthening_Movement
+		x = -5
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Self_Strengthening_Movement
+    }
+		completion_reward = {
+			#
+		}
+	}
+	focus = {
+		id = CHI_The_Foochow_Arsenal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Imperial_Navy
+		x = -3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Imperial_Navy
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Foochow_Shipbuilding_Institution
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Foochow_Arsenal
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Foochow_Arsenal
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Mawei_Shipyard
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Foochow_Arsenal
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Foochow_Arsenal
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Hire_Foreign_Teachers
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Foochow_Shipbuilding_Institution
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Foochow_Shipbuilding_Institution
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Bright_Young_Sailors
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Foochow_Shipbuilding_Institution
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Foochow_Shipbuilding_Institution
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Buy_Foreign_Steamers
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Imperial_Navy
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Imperial_Navy
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_The_Guangdong_Fleet
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Buy_Foreign_Steamers
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Buy_Foreign_Steamers
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_German_Torpedo_Boats
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Guangdong_Fleet
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Guangdong_Fleet
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Build_Wooden_Gunboats
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Hire_Foreign_Teachers
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Hire_Foreign_Teachers
+    }
+		prerequisite = {
+      focus = CHI_Bright_Young_Sailors
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Form_the_Fujian_Fleet
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Build_Wooden_Gunboats
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Build_Wooden_Gunboats
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_The_Japanese_in_Taiwan
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Imperial_Navy
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Imperial_Navy
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Form_the_Nanyang_Fleet
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Japanese_in_Taiwan
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Japanese_in_Taiwan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Boats_from_Jiangnan
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Form_the_Nanyang_Fleet
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Form_the_Nanyang_Fleet
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Form_the_Beiyang_Fleet
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_The_Japanese_in_Taiwan
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_The_Japanese_in_Taiwan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Foreign_Ironclads
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Form_the_Beiyang_Fleet
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Form_the_Beiyang_Fleet
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_A_Trade_of_Gunboats
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Boats_from_Jiangnan
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Boats_from_Jiangnan
+    }
+		prerequisite = {
+      focus = CHI_Foreign_Ironclads
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Patrolling_the_Eastern_Seas
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_A_Trade_of_Gunboats
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_A_Trade_of_Gunboats
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Our_Industry
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Self_Strengthening_Movement
+		x = 5
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Self_Strengthening_Movement
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Civilian_Industry
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Our_Industry
+		x = -3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Our_Industry
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_China_Merchants_Steam_Navigation_Company
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Civilian_Industry
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Civilian_Industry
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Chinese_Engineering_and_Mining_Company
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_China_Merchants_Steam_Navigation_Company
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_China_Merchants_Steam_Navigation_Company
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Lanzhou_Fabric_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Civilian_Industry
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Civilian_Industry
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Hubei_Fabric_Factory
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Lanzhou_Fabric_Factory
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Lanzhou_Fabric_Factory
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Trading_with_the_West
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Chinese_Engineering_and_Mining_Company
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Chinese_Engineering_and_Mining_Company
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Expanding_Local_Industry
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Hubei_Fabric_Factory
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Hubei_Fabric_Factory
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Infrastructure_Plans
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Our_Industry
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Our_Industry
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Suzhou_Shanghai_Railroad_Proposal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Infrastructure_Plans
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Infrastructure_Plans
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Hankou_to_Shanghai_Proposal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Suzhou_Shanghai_Railroad_Proposal
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Suzhou_Shanghai_Railroad_Proposal
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Fixing_and_Ugrading_our_Railroads
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Infrastructure_Plans
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Infrastructure_Plans
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Shanghai_to_Wuhao_Proposal
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Fixing_and_Ugrading_our_Railroads
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Fixing_and_Ugrading_our_Railroads
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Plans_Approved
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Shanghai_to_Wuhao_Proposal
+		x = -2
+		y = 1
+		cost = 10
+		allowed = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = { focus = CHI_Plans_Rejected }
+		prerequisite = {
+      focus = CHI_Shanghai_to_Wuhao_Proposal focus = CHI_Hankou_to_Shanghai_Proposal
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Plans_Rejected
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Shanghai_to_Wuhao_Proposal
+		x = 0
+		y = 1
+		cost = 10
+		allowed = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = { focus = CHI_Plans_Approved }
+		prerequisite = {
+      focus = CHI_Shanghai_to_Wuhao_Proposal focus = CHI_Hankou_to_Shanghai_Proposal
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Set_up_Zongli_Yamen
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Self_Strengthening_Movement
+		x = 15
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Self_Strengthening_Movement
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Chinese_Maritime_Custom_Service
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Set_up_Zongli_Yamen
+		x = -3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Set_up_Zongli_Yamen
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Build_Tongwen_Guan
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Set_up_Zongli_Yamen
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Set_up_Zongli_Yamen
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_British_Department
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Build_Tongwen_Guan
+		x = -3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Build_Tongwen_Guan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_French_Department
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Build_Tongwen_Guan
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Build_Tongwen_Guan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Russian_Department
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Build_Tongwen_Guan
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Build_Tongwen_Guan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_US_Department
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Build_Tongwen_Guan
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Build_Tongwen_Guan
+    }
+	 completion_reward = {
+				#
+		}
+	}
+	focus = {
+		id = CHI_Naval_Defence_Department
+		icon = GFX_focus_unknown
+    relative_position_id = CHI_Chinese_Maritime_Custom_Service
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+      focus = CHI_Chinese_Maritime_Custom_Service
+    }
+	 completion_reward = {
+				#
 		}
 	}
 
