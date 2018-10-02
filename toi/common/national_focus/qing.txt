@@ -574,7 +574,7 @@ focus_tree = {
 		completion_reward = {
     add_equipment_to_stockpile = {
   type = cannon_equipment_0
-  amount = 1000
+  amount = 50
   producer = FRA
 }
 		}
@@ -1245,7 +1245,9 @@ logistics_skill = 3
 		x = -2
 		y = 1
 		cost = 10
-		allowed = no
+		available = {
+			always = no
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1264,7 +1266,9 @@ logistics_skill = 3
 		x = 0
 		y = 1
 		cost = 10
-		allowed = no
+		available = {
+			always = no
+		}
 		ai_will_do = {
 			factor = 1
 		}

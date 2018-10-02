@@ -547,10 +547,11 @@ country_event = {
 		
 	}
 	
-	option = {decline
+	option = {#decline
 		name = ethiopia.38.b
 		ai_chance = { factor = 25 }
-		FROM = { country_event = { days = 1 id = ethiopia.39 } }
+		#Since ethiopia.39 is missing, this will crash. I commented it out for now.
+		#FROM = { country_event = { days = 1 id = ethiopia.39 } }
 	}
 	
 }
