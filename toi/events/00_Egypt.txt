@@ -134,9 +134,6 @@ country_event = {
 		}
 		set_country_flag = ETH_EGY_alliance
 		FROM = {
-			country_event = {
-				id = afr_EGY_vic.5
-			}
 			set_country_flag = ETH_EGY_alliance
 		}
 	}
@@ -145,6 +142,14 @@ country_event = {
 		name = afr_EGY_vic.4.b
 		ai_chance = { factor = 25 }
 		FROM = {
+			if={
+				limit={
+					tag = EGY
+				}
+				country_event = {
+					id = afr_EGY_vic.5
+				}
+			}
 			add_political_power = -20
 		}
 	}

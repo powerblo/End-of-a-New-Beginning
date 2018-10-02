@@ -17,9 +17,9 @@
     absolute_monarchy
 
     civilian_economy
-    limited_exports
+    closed_economy
     two_percent
-    normal_taxes
+    high_taxes
 	cl_legal
 
     stagnation_growth
@@ -35,6 +35,11 @@
     state_religion
 	religion_coptic
          #NATIONAL SPIRITS
+	
+			afr_reforming_kingdom
+			ETH_idea_isolated_villages
+			ETH_idea_internal_unrest
+			ETH_idea_northern_oromo_militias
 	
   }
 
@@ -77,7 +82,7 @@
 
   set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
+	vic_army_cloth = 1
 	tech_naval_1812_frigate = 1
 	start_build_tech = 1
   }
@@ -88,6 +93,9 @@
     name = "Tewodros II"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_ETH_Tewodros_II.dds"
+	traits ={
+		afr_trait_reformer
+	}
     expire = 1900.1.1
     ideology = despotism
 }
