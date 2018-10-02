@@ -1311,7 +1311,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_bismarck_cabinet
 			hidden_effect = {
-			
+				#
 			}
 		}
 	}
@@ -1458,7 +1458,9 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_realpolitik }
 		
 		completion_reward = {
-			custom_effect_tooltip = PRS_focus_tt_foreign_bismarck
+			add_political_power = 120
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_bismarck_foreign }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_bismarck_foreign }
 		}
 	}
 	
@@ -2203,15 +2205,7 @@ focus_tree = {
 				tooltip = eoanb_trigger_tt_unlock_GER_ft	
 			}
 			hidden_trigger = {
-				OR = {
-					has_cosmetic_tag = PRS_GER_bismarck
-					has_cosmetic_tag = PRS_GER_liberal
-					has_cosmetic_tag = PRS_GER_socialist
-					has_cosmetic_tag = PRS_GER_bismarck_imperial
-					has_cosmetic_tag = PRS_GER_bismarck_standard
-					has_cosmetic_tag = PRS_GER_bismarck_hre
-					has_cosmetic_tag = PRS_GER_bismarck_national
-				}
+				PRS_trigger_formed_germany = yes
 			}
 		}
 		

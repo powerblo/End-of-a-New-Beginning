@@ -624,6 +624,72 @@ ideas = {
 				social_egalitarianism_alignment
 			}
 		}
+		PRS_advisor_finance_carl_von_bodelschwingh = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_tt_idea_prussia_bismarck_minister
+				}
+				hidden_trigger = {
+					OR = {
+						has_completed_focus = PRS_focus_bismarck_cabinet
+						PRS_trigger_formed_germany = yes
+					}
+				}
+			}
+
+			traits = { 
+				captain_of_industry_1
+				efficient_administrator
+			}
+		}
+		PRS_advisor_law_leopold_biesterfeld_weissenfeld = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_tt_idea_prussia_bismarck_minister
+				}
+				hidden_trigger = {
+					OR = {
+						has_completed_focus = PRS_focus_bismarck_cabinet
+						PRS_trigger_formed_germany = yes
+					}
+				}
+			}
+
+			traits = { 
+				eoanb_trait_pol_author
+				smooth_talking_charmer				
+			}
+		}
+		PRS_advisor_internal_werner_ludolph_erdmann = {
+			allowed = {
+				original_tag = PRS
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_tt_idea_prussia_bismarck_minister
+				}
+				hidden_trigger = {
+					OR = {
+						has_completed_focus = PRS_focus_bismarck_cabinet
+						PRS_trigger_formed_germany = yes
+					}
+				}
+			}
+			
+			traits = { 
+				administrative_genius
+				industrial_promoter				
+			}
+		}
 	}
 	materiel_manufacturer = {
 		
