@@ -710,6 +710,42 @@ country_event = {
 					transfer_troops = no 
 				}
 				country_event = { id = bavariaevent.18 }
+				
+				set_politics = {
+					parties = {
+						anarchism = {
+							popularity = 0
+						}
+						vanguard_communism = {
+							popularity = 0
+						}
+						collectivist_socialism = {
+							popularity = 0
+						}
+						social_egalitarianism = {
+							popularity = 5
+						}
+						centrism = {
+							popularity = 0
+						}
+						traditional_conservatism = {
+							popularity = 40
+						}
+						radical_democracy = {
+							popularity = 5
+						}
+						chauvinist_populism = {
+							popularity = 5
+						}
+						autocracy = {
+							popularity = 45
+						}
+						fundamentalism = {
+							popularity = 0
+						}
+					}
+					ruling_party = autocracy
+				}
 			}
 		}
 	}
@@ -811,6 +847,42 @@ country_event = {
 					transfer_troops = no 
 				}
 				country_event = { id = bavariaevent.18 }
+				
+				set_politics = {
+					parties = {
+						anarchism = {
+							popularity = 0
+						}
+						vanguard_communism = {
+							popularity = 0
+						}
+						collectivist_socialism = {
+							popularity = 0
+						}
+						social_egalitarianism = {
+							popularity = 5
+						}
+						centrism = {
+							popularity = 0
+						}
+						traditional_conservatism = {
+							popularity = 40
+						}
+						radical_democracy = {
+							popularity = 5
+						}
+						chauvinist_populism = {
+							popularity = 5
+						}
+						autocracy = {
+							popularity = 45
+						}
+						fundamentalism = {
+							popularity = 0
+						}
+					}
+					ruling_party = autocracy
+				}
 			}
 		}
 	}
@@ -1018,17 +1090,40 @@ country_event = {
 			factor = 100
 		}
 		
-		#clear_variable = num
-		#
-		#set_variable = {
-		#	var = num
-		#	value = 10
-		#}
+		add_ideas = BAV_defenders_of_god_and_king
 		
-		#add_offsite_building = {
-		#	type = grain_consumer_positive
-		#	level = num
-		#}
+		custom_effect_tooltip = BAV_customeffect_rise_divs_against_soc_prussia
+		
+		hidden_effect = {
+			52 = {
+				create_unit = {
+					division = "name = \"1. Bayrischer Freiwilligenkorps\" division_template = \"Infanterie Division\" start_experience_factor = 0.07 start_equipment_factor = 0.2"
+					owner = BAV
+				}
+				
+				create_unit = {
+					division = "name = \"2. Bayrischer Freiwilligenkorps\" division_template = \"Infanterie Division\" start_experience_factor = 0.07 start_equipment_factor = 0.2"
+					owner = BAV
+				}
+				
+				create_unit = {
+					division = "name = \"3. Bayrischer Freiwilligenkorps\" division_template = \"Infanterie Division\" start_experience_factor = 0.07 start_equipment_factor = 0.2"
+					owner = BAV
+				}
+			}
+			
+			53 = {
+				create_unit = {
+					division = "name = \"4. Bayrischer Freiwilligenkorps\" division_template = \"Infanterie Division\" start_experience_factor = 0.07 start_equipment_factor = 0.2"
+					owner = BAV
+				}
+				
+				create_unit = {
+					division = "name = \"5. Bayrischer Freiwilligenkorps\" division_template = \"Infanterie Division\" start_experience_factor = 0.07 start_equipment_factor = 0.2"
+					owner = BAV
+				}
+			}
+		}
 		
 		name = bavariaevent.20.a
 	}

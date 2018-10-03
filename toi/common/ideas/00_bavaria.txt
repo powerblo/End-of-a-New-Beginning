@@ -386,6 +386,30 @@ ideas = {
 				consumer_goods_factor = -0.03
 			}
 		}
+		
+		BAV_defenders_of_god_and_king = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = AF_T_small_kingdom
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
 	}
 	
 	hidden_ideas = {
