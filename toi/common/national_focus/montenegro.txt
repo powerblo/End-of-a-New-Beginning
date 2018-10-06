@@ -92,7 +92,7 @@ focus_tree = {
 			add_stability = 0.05
             add_war_support = 0.05
             add_political_power = 50
-            remove_idea = MNT_Clans_Question2
+            remove_ideas = MNT_Clans_Question2
 		}
 	}
     
@@ -266,7 +266,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_FactoryOutput
             }
-            custom_effect_tooltip = factoryoutput
+            custom_effect_tooltip = eoanb_tt_MNT_focus_factoryoutput
             add_political_power = -75
 		}
 	}
@@ -301,7 +301,7 @@ focus_tree = {
     ## Economy ##
     focus = {
 		id = MNT_Montenegrin_Economy
-		icon = 
+		icon = GFX_goal_generic_construction2
 		cost = 5
 		x = 19
 		y = 0
@@ -318,11 +318,13 @@ focus_tree = {
 		y = 1
         prerequisite = { focus = MNT_Montenegrin_Economy }
 		completion_reward = {
-            add_building_construction = {
-            type = infrastructure
-            level = 1
-            instant_build = yes
-            }
+            942 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -334,17 +336,19 @@ focus_tree = {
 		y = 2
         prerequisite = { focus = MNT_Connect_The_Nahiyas }
 		completion_reward = {
-            add_building_construction = {
-            type = infrastructure
-            level = 1
-            instant_build = yes
-            }
+			942 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
     
     focus = {
 		id = MNT_Modern_Animal_Raising_Practices
-		icon = 
+		icon = GFX_goal_generic_construction2
 		cost = 5
 		x = 17
 		y = 1
@@ -353,7 +357,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_FactoryEf
             }
-            custom_effect_tooltip = factoryef
+            custom_effect_tooltip = eoanb_tt_MNT_focus_factoryef
 		}
 	} 
     
@@ -384,7 +388,7 @@ focus_tree = {
     
     focus = {
 		id = MNT_Forestry_Effort
-		icon = 
+		icon = GFX_goal_generic_construction2
 		cost = 5
 		x = 23
 		y = 1
@@ -393,7 +397,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_ResourceGain
             }
-            custom_effect_tooltip = resourcegain
+            custom_effect_tooltip = eoanb_tt_MNT_focus_resourcegain
 		}
 	}
     
@@ -409,7 +413,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_OutOfSupply
             }
-            custom_effect_tooltip = outofsupply
+            custom_effect_tooltip = eoanb_tt_MNT_focus_outofsupply
 		}
 	}
       
@@ -438,7 +442,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_FactoryOutput
             }
-            custom_effect_tooltip = factoryoutput
+            custom_effect_tooltip = eoanb_tt_MNT_focus_factoryoutput
 		}
 	}
     
@@ -455,7 +459,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_FactoryEf
             }
-            custom_effect_tooltip = factoryef
+            custom_effect_tooltip = eoanb_tt_MNT_focus_factoryef
 		}
 	}
     
@@ -496,7 +500,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_Morale
             }
-            custom_effect_tooltip = morale
+            custom_effect_tooltip = eoanb_tt_MNT_focus_morale
 		}
 	}
     
@@ -573,8 +577,8 @@ focus_tree = {
                 add_ideas = MNT_idea_DivisionAttack
                 add_ideas = MNT_idea_DivisionDefense
             }
-            custom_effect_tooltip = attack
-            custom_effect_tooltip = defense
+            custom_effect_tooltip = eoanb_tt_MNT_focus_attack
+            custom_effect_tooltip = eoanb_tt_MNT_focus_defense
 		}
 	}
     
@@ -633,7 +637,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_PlanningSpeed
             }
-            custom_effect_tooltip = planningspeed
+            custom_effect_tooltip = eoanb_tt_MNT_focus_planningspeed
 		}
 	}
     
@@ -648,7 +652,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_SupplyCo
             }
-            custom_effect_tooltip = supplyco
+            custom_effect_tooltip = eoanb_tt_MNT_focus_supplyco
 		}
 	}
     
@@ -714,7 +718,7 @@ focus_tree = {
             hidden_effect = {
                 add_ideas = MNT_idea_Attrition
             }
-            custom_effect_tooltip = attrition
+            custom_effect_tooltip = eoanb_tt_MNT_focus_attrition
 		}
 	}
     
@@ -725,15 +729,13 @@ focus_tree = {
 		x = 29
 		y = 8
         prerequisite = { focus = MNT_1871_Reform }
-		completion_reward = {
-            completion_reward = {
+        completion_reward = {
             hidden_effect = {
                 add_ideas = MNT_idea_Decryption
                 add_ideas = MNT_idea_Encryption
             }
-            custom_effect_tooltip = decryption
-            custom_effect_tooltip = encryption
-		}
+            custom_effect_tooltip = eoanb_tt_MNT_focus_decryption
+            custom_effect_tooltip = eoanb_tt_MNT_focus_encryption
 		}
 	}
     
