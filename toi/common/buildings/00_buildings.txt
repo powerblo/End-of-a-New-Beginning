@@ -12,37 +12,6 @@ buildings = {
 		max_level = 20
 		value = 2
 	}
-
-	#Standard "arms_factory" is victorian with vanilla ID so we don't have to redo the whole map
-	#Base Factory Speed is 5 for Civilian and Military (Victorian), and 2.5 for Dockyards (Victorian)
-	#Military Production = 1 means one times the Base Value (of Five) (I think it does, not confirmed)
-	#Using Values lower than 1 seems to not work
-	
-	#primitive_arms_factory = {
-	#	show_on_map = 0
-	#	base_cost = 4000
-	#	base_cost_conversion = 3000
-	#	icon_frame = 20
-	#	max_level = 20
-	#	shares_slots = yes
-	#	value = 2
-	#	infrastructure_construction_effect = yes
-	#	
-	#	military_production = 0.2
-	#}
-	
-	#pre_industrial_arms_factory = {
-	#	show_on_map = 0
-	#	base_cost = 7500
-	#	base_cost_conversion = 6000
-	#	icon_frame = 21
-	#	max_level = 20
-	#	shares_slots = yes
-	#	value = 3
-	#	infrastructure_construction_effect = yes
-	#	
-	#	military_production = 0.5
-	#}
 	
 	arms_factory = {
 		show_on_map = 6
@@ -217,10 +186,11 @@ buildings = {
 		value = 2
 		infrastructure_construction_effect = yes
 	}
+	
 	fabric_weavery = {
 		show_on_map = 0
 		base_cost = 6000
-		icon_frame = 20
+		icon_frame = 25
 		local_resources_cotton = -4
 		local_resources_fabric = 5
 		max_level = 15
@@ -265,10 +235,11 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	electronics_factory = {
 		show_on_map = 0
 		base_cost = 18000
-		icon_frame = 18
+		icon_frame = 21
 		local_resources_eletronics = 15
 		local_resources_silicates = -3
 		local_resources_plastics = -3
@@ -278,10 +249,11 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	plastics_refinery = {
 		show_on_map = 0
 		base_cost = 18000
-		icon_frame = 18
+		icon_frame = 22
 		local_resources_oil = -3
 		local_resources_plastics = 4
 		max_level = 5
@@ -289,10 +261,11 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	ceramic_buners = {
 		show_on_map = 0
 		base_cost = 18000
-		icon_frame = 18
+		icon_frame = 23
 		local_resources_ceramics = 5
 		local_resources_coal = -1
 		local_resources_silicates = -3
@@ -301,10 +274,11 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	generator_factory = {
 		show_on_map = 0
 		base_cost = 18000
-		icon_frame = 18
+		icon_frame = 24
 		local_resources_portable_power = 3
 		local_resources_rare_earth_metals = -2
 		max_level = 5
@@ -332,6 +306,7 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	steel_mill_inactive = {
 		show_on_map = 0
 		base_cost = 1500000
@@ -341,6 +316,7 @@ buildings = {
 		value = 4
 		infrastructure_construction_effect = yes
 	}
+	
 	fabric_weavery_inactive = {
 		show_on_map = 0
 		base_cost = 1500000
@@ -350,6 +326,7 @@ buildings = {
 		value = 2
 		infrastructure_construction_effect = yes
 	}
+	
 	ceramic_buners_inactive = {
 		show_on_map = 0
 		base_cost = 1500000
@@ -359,6 +336,7 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
+	
 	electronics_factory_inactive = {
 		show_on_map = 0
 		base_cost = 1500000
@@ -368,7 +346,8 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 	}
-	plastics_refinery = {
+
+	plastics_refinery_inactive = {
 		show_on_map = 0
 		base_cost = 1500000
 		icon_frame = 18
