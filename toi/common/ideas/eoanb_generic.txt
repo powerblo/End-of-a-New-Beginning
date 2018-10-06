@@ -137,5 +137,22 @@ ideas = {
 				drift_defence_factor = 0.5
 			}
 		}
+		eoanb_random_event_23_idea = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_coastal_defense_ships2
+			
+			modifier = {
+				industrial_capacity_dockyard = -0.1
+				navy_max_range_factor = -0.1
+				production_speed_naval_base_factor = -0.25 
+				production_speed_dockyard_factor = -0.25 
+				production_speed_coastal_bunker_factor = -0.25 
+			}
+		}
 	}
 }
