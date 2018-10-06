@@ -40,6 +40,7 @@
     #NATIONAL SPIRITS
 	
   }
+   give_guarantee = ADR 
 
   set_politics = {
     parties = {
@@ -205,5 +206,18 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
+}
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = SUL
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = SUL
+	}
 }
 }

@@ -174,7 +174,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = AF_T_small_kingdom
+			picture = reforming_regional_power
 
 			modifier = {
 				political_power_cost = 0.15
@@ -451,6 +451,20 @@ ideas = {
 
 			modifier = {
 				political_power_cost = -0.15
+			}
+		}
+		afr_rail_powered_troop_movement={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_rail_army
+
+			modifier = {
+				mobilization_speed = 0.1
+				army_speed_factor = 0.05
 			}
 		}
 	}

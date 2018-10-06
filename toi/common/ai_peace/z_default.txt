@@ -10,6 +10,7 @@
 default_peace = {
 	enable = {
 		NOT = { FROM = { has_country_flag = containment_target } }
+		NOT = { ROOT = {afr_is_tribal= yes}}
 	}
 
 	annex_randomness = 0
@@ -160,6 +161,11 @@ default_peace = {
 				TAG = OFS
 				TAG = TRV
 			}
+		}
+		#tribals should not puppet
+		modifier = {
+			factor = 0
+			afr_is_tribal = yes
 		}
 		modifier = { #Don't puppet nations in civil war... this is too buggy.
 			factor = 0

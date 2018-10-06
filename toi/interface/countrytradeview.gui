@@ -96,19 +96,45 @@ guiTypes = {
 			format = center	
 			alwaystransparent = yes
 		}
-
 		containerWindowType = {
 			name = "resources"
-			position = { x = 11 y = 75 }	
-			size = { width = 518 height = 156 }
-			verticalScrollbar = "right_vertical_slider"
-
+			position = { x = 100 y = 72 }	
+			size = { width = 770 height = 190 }
+			clipping = yes
+			horizontalScrollbar = "bottom_horizontal_slider"
+			margin = { top = 3 bottom = 2}
+			background = {
+				name = "Background"		
+				spriteType ="GFX_pol_piechart_bg"
+				position = { x = 37 y = 3 }
+			}
+			
 			iconType = {
 				name ="resources_bg"
 				spriteType = "GFX_trade_resource_bg"
 				position = {x=0 y=0}
 			}
 
+			gridBoxType = {
+				name = "resources_grid"
+				position = { x = -5 y = 0 }
+				size = { width = 100%% height = 100 }
+				slotsize = { width = 69 height = 156 }
+				max_slots = { x = 19 y = 1 }
+				format = "UPPER_LEFT"
+				horizontalScrollbar = "bottom_horizontal_slider"
+			}
+			
+		}
+		containerWindowType = {
+			name = "EDC_resources_text_box"
+			position = { x = 15 y = 75 }	
+			size = { width = 95 height = 158 }
+			background = {
+				name = "Background"		
+				spriteType ="GFX_trade_resource_text_bg"
+				position = { x = -5 y = 0 }
+			}
 			instantTextboxType = {
 				name = "produced_title"
 				position = { x=12 y=38 }
@@ -141,7 +167,6 @@ guiTypes = {
 				format = left
 				#alwaystransparent = yes
 			}
-
 			instantTextboxType = {
 				name = "needed_title"
 				position = { x=12 y=98 }
@@ -152,41 +177,39 @@ guiTypes = {
 				format = left
 				#alwaystransparent = yes
 			}
-
-			gridBoxType = {
-				name = "resources_grid"
-				position = { x = 90 y = 0 }
-				size = { width = 422 height = 100%% }
-				slotsize = { width = 68 height = 156 }
-				max_slots = { x = 10 y = 1 }
-				format = "UPPER_LEFT"
-			}
 		}
 
 		iconType ={
 			name ="trade_divider"
 			spriteType = "GFX_divider"
-			position = { x= 13 y = 267 }
+			position = { x= 13 y = 293 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType ={
+			name ="trade_divider_2"
+			spriteType = "GFX_divider"
+			position = { x= 365 y = 293 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType ={
 			name ="trade_filter_bg"
 			spriteType = "GFX_trade_filter_bg"
-			position = { x= 18 y = 278 }
+			#position = { x= 18 y = 278 }
+			position = { x= 18 y = 300 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		buttonType = {
 			name = "sort_country"
-			position = {x=17 y=400}
+			position = {x=17 y=305}
 			quadTextureSprite ="GFX_trade_filter_btn_country"
 			clicksound = click_scroll
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 21 y = 407 }
+			position = { x = 21 y = 312 }
 			font = "hoi_16mbs"
 			text = "TRADE_SORT_COUNTRY"
 			maxWidth = 160
@@ -197,14 +220,14 @@ guiTypes = {
 		
 		buttonType = {
 			name = "sort_export"
-			position = {x=187 y=400}
+			position = {x=187 y=305}
 			quadTextureSprite ="GFX_trade_filter_btn_export"
 			clicksound = click_scroll
 		}
 
 		instantTextboxType = {
 			name = "export_label"
-			position = { x = 190 y = 407 }
+			position = { x = 190 y = 312 }
 			font = "hoi_16mbs"
 			text = "TRADE_SORT_EXPORT"
 			maxWidth = 90
@@ -215,14 +238,14 @@ guiTypes = {
 		
 		buttonType = {
 			name = "sort_request"
-			position = {x=285 y=400}
+			position = {x=285 y=305}
 			quadTextureSprite ="GFX_trade_filter_btn_delivered"
 			clicksound = click_scroll
 		}
 
 		instantTextboxType = {
 			name = "request_label"
-			position = { x = 285 y = 407 }
+			position = { x = 285 y = 312 }
 			font = "hoi_16mbs"
 			text = "TRADE_SORT_REQUEST"
 			maxWidth = 100
@@ -233,14 +256,14 @@ guiTypes = {
 
 		buttonType = {
 			name = "sort_convoys"
-			position = {x=389 y=400}
+			position = {x=389 y=305}
 			quadTextureSprite ="GFX_trade_filter_btn_convoy"
 			clicksound = click_scroll
 		}
 
 		instantTextboxType = {
 			name = "convoys_label"
-			position = { x=403 y=407 }
+			position = { x=403 y=312 }
 			font = "hoi_16mbs"
 			text = "TRADE_SORT_CONVOYS"
 			maxWidth = 66
@@ -259,7 +282,7 @@ guiTypes = {
 				name = "resources_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 400 height = 100%% }
-				slotsize = { width = 85 height = 50 }
+				slotsize = { width = 45 height = 50 }
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"
 			}
@@ -267,24 +290,24 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "country_filters"
-			position = { x = 10 y = 278 }	
+			position = { x = 10 y = 378 }	
 			size = { width = 520 height = 50 }
 			verticalScrollbar = "right_vertical_slider"
 				
 			
 			gridBoxType = {
 				name = "country_filters_grid"
-				position = { x = 7 y = 12 }
+				position = { x = 580 y = 12 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 150 height = 35 }
-				max_slots_horizontal = 5
+				slotsize = { width = 150 height = 50 }
+				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
 		}
 		
 		containerWindowType = {
 			name = "trade"
-			position = { x = 15 y = 427 }	
+			position = { x = 15 y = 337 }	
 			size = { width = 535 height = 100%% }
 			verticalScrollbar = "right_vertical_slider"
 			margin = {top = 1 bottom = 13 }			
@@ -556,12 +579,13 @@ guiTypes = {
 			pdx_tooltip = "CANCEL"
 		}
 	}
-	
+		
 	containerWindowType = {
 		name = "resources_info_entry"
 		position = { x = 0 y = 0 }	
-		size = { width = 150 height = 100 }
+		size = { width = 500 height = 100 }
 		clipping = no
+		horizontalScrollbar = "bottom_horizontal_slider"
 		
 		buttonType ={
 			name ="resources_icon"
@@ -625,7 +649,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "resources_filter_entry"
-		position = { x = 0 y = 1 }
+		position = { x = 0 y = 28 }
 		size = { width = 75 height = 50 }
 		clipping = no
 		
@@ -639,16 +663,17 @@ guiTypes = {
 		iconType = {
 			name ="icon"
 			spriteType = "GFX_resources_strip"
-			position = { x= 32 y = 12 }
+			position = { x= 16 y = 12 }
 			alwaystransparent = yes
 		}
 	}
 	
 	containerWindowType = {
 		name = "filter_entry"
-		position = { x = 45 y = -04 }
+		position = { x = 45 y = 20 }
 		size = { width = 168 height = 50 }
 		clipping = no
+		horizontalScrollbar = "bottom_horizontal_slider"
 
 		background = {
 			name = "Background"

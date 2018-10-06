@@ -202,6 +202,8 @@ is_in_kongo = {
 		state = 884
 		state = 898
 		state = 935
+		state = 1212
+		state = 1213
 	}
 }
 is_in_angola = {
@@ -370,4 +372,19 @@ is_in_colonial_region = {
 }
 is_colonial_nation = {
 	has_idea = afr_colonial_power
+}
+afr_is_tribal = {
+	OR = {
+		has_idea = AF_T_unorganized_tribal_nation
+		has_idea = AF_T_unorganized_tribal_nation_2
+		has_idea = AF_T_unorganized_tribal_nation_3
+		has_idea = AF_T_unorganized_tribal_nation_4
+		has_idea = AF_T_unorganized_tribal_nation_5
+		has_idea = AF_T_organized_tribal_nation
+		has_idea = AF_T_organized_tribal_nation_2
+		has_idea = AF_T_organized_tribal_nation_3
+		has_idea = AF_T_small_kingdom
+		has_idea = afr_large_kingdom
+		has_idea = afr_reforming_kingdom
+	}
 }

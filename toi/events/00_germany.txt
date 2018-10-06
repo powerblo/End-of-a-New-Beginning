@@ -1,0 +1,433 @@
+﻿add_namespace = germany
+
+#Picking flag (Historical Unification)
+country_event = {
+	id = germany.1
+	title = germany.1.t
+	desc = germany.1.d
+	picture = GFX_report_event_ger_select_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_a
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_imperial
+		}
+	}
+	
+	option = {
+		name = germany.1.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_b
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_standard
+		}
+	}
+	
+	option = {
+		name = germany.1.c
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_c
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_hre
+		}
+	}
+	
+	option = {
+		name = germany.1.e
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_ger_event_1_e
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRS_GER_bismarck_national
+		}
+	}
+	
+}
+
+#Fortress Stettin
+country_event = {
+	id = germany.2
+	title = germany.2.t
+	desc = germany.2.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.2.a
+		ai_chance = { factor = 75 }
+		62 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 6282
+			}
+		}
+		62 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.2.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Minden
+country_event = {
+	id = germany.3
+	title = germany.3.t
+	desc = germany.3.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.3.a
+		ai_chance = { factor = 75 }
+		57 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 405
+			}
+		}
+		57 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.3.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Kosel
+country_event = {
+	id = germany.4
+	title = germany.4.t
+	desc = germany.4.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.4.a
+		ai_chance = { factor = 75 }
+		58 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 317
+			}
+		}
+		58 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.4.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Erfurt
+country_event = {
+	id = germany.5
+	title = germany.5.t
+	desc = germany.5.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.5.a
+		ai_chance = { factor = 75 }
+		948 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 13408
+			}
+		}
+		948 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.5.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#Fortress Glatz
+country_event = {
+	id = germany.6
+	title = germany.6.t
+	desc = germany.6.d
+	picture = GFX_report_event_ger_fortress_old
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.6.a
+		ai_chance = { factor = 75 }
+		66 = {
+			set_building_level = {
+				type = bunker
+				level = 0
+				province = 3485
+			}
+		}
+		66 = {
+			add_manpower = 3000
+		}
+		add_manpower = 250
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = germany.6.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+	}
+	
+}
+
+#AUS gets request for Dual Alliance
+country_event = {
+	id = germany.7
+	title = germany.7.t
+	desc = germany.7.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.7.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					target = PRS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.1
+				has_opinion = {
+					target = PRS
+					value = 100
+				}
+			}
+		}
+		PRS = { country_event = { id = germany.8 } }
+	}
+	
+	option = {
+		name = germany.7.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		PRS = { country_event = { id = germany.9 } }
+	}
+	
+}
+
+#PRS gets message AUS is cooperating
+country_event = {
+	id = germany.8
+	title = germany.8.t
+	desc = germany.8.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.8.a
+		ai_chance = { factor = 100 }
+		create_faction = faction_dual_alliance
+		AUS = { add_to_faction = faction_dual_alliance }
+	}
+	
+}
+
+#PRS gets message AUS isn't cooperating
+country_event = {
+	id = germany.9
+	title = germany.9.t
+	desc = germany.9.d
+	picture = GFX_report_event_ger_dual_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.9.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_AUS_alliance_failed }
+		reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_GER_AUS_alliance_failed }
+	}
+	
+}
+
+#ITA asked to join Dual Alliance
+country_event = {
+	id = germany.10
+	title = germany.10.t
+	desc = germany.10.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.10.a
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = PRS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = PRS
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = AUS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_opinion = {
+					target = AUS
+					value = 100
+				}
+			}
+		}
+		PRS = { country_event = { id = germany.11 } }
+	}
+	
+	option = {
+		name = germany.10.b
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		PRS = { country_event = { id = germany.12 } }
+	}
+	
+}
+
+#ITA says "Yes"
+country_event = {
+	id = germany.11
+	title = germany.11.t
+	desc = germany.11.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ger_event_11_a
+		hidden_effect = {
+			dismantle_faction = yes
+			create_faction = faction_triple_alliance
+			AUS = { add_to_faction = faction_triple_alliance }
+			PIE = { add_to_faction = faction_triple_alliance }
+		}
+	}
+	
+}
+
+#ITA says "No"
+country_event = {
+	id = germany.12
+	title = germany.12.t
+	desc = germany.12.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.12.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_alliance_failed }
+		reverse_add_opinion_modifier = { target = PIE modifier = eoanb_om_GER_ITA_alliance_failed }
+	}
+	
+}

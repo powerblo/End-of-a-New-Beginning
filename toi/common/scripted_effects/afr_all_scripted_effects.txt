@@ -1011,6 +1011,9 @@ afr_give_colonal_power={
 		set_variable = { colonial_power_rate = 1 }
 		set_variable = { colonial_power_max = num_of_factories }
 		multiply_variable = { var = colonial_power_max value = 8 }
+		set_variable = { colonial_power_max_add = 0}
+		add_to_variable = { colonial_power_max = colonial_power_max_add }
+		set_variable = { colonial_power_rate_factor = 1}
 	}
 }
 afr_add_cores_home_region_tribal={

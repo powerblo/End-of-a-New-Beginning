@@ -47,6 +47,20 @@
       #Colective guarantee of the 7 great power
   give_guarantee = ROM
   give_guarantee = MOL
+  
+ add_opinion_modifier = {
+    target = CIR
+    modifier = caucasian_war
+}
+ add_opinion_modifier = {
+    target = CAU 
+    modifier = caucasian_war
+}
+ create_import = {
+    resource = cotton
+    amount = 8
+    exporter = USA
+  }
 
 
 set_politics = {
@@ -85,11 +99,6 @@ set_politics = {
 
 	  ruling_party = autocracy
   }
-  
-declare_war_on= {
-    target = CAU
-    type = annex_everything
-}
 
   set_technology = {
 	infantry_weapons = 1
@@ -111,9 +120,9 @@ declare_war_on= {
   # POLITICAL LEADERS
 
 create_country_leader = {
-  name = "Karl Nesselrode"
-  desc = "POLITICS_KARL_NESSELRODE_DESC"
-  picture = "Portrait_RUS_Karl_Nesselrode.dds"
+  name = "Alexandr Gorchakov"
+  desc = "POLITICS_GEORGI_PLEKHANOV_DESC"
+  picture = "Portrait_RUS_Alexandr_Gorchakov.dds"
   expire = "1900.1.1"
   ideology = despotism
   traits = {
