@@ -1,0 +1,200 @@
+political_actions = {
+	GRE_decision_pick_monarchist_a = { #Pick Monarchy
+
+		visible = {
+		  tag = GRE 
+		  NOT = { has_country_flag = GRE_pick_republican_a }
+	      has_country_flag = GRE_pick_monarchy_or_republic_a
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            set_country_flag = GRE_pick_monarchist_a
+		}
+
+		ai_will_do = {
+			base = 80
+		}
+	}
+	
+	GRE_decision_pick_republic_a = { #Pick Republic
+
+		visible = {
+		  tag = GRE 
+		  NOT = { has_country_flag = GRE_pick_monarchist_a }
+	      has_country_flag = GRE_pick_monarchy_or_republic_a
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            set_country_flag = GRE_pick_republican_a
+		}
+
+		ai_will_do = {
+			base = 20 
+		}
+	}
+	
+}
+
+ GRE_influence_referendum_monarchist_a = {
+  
+   	GRE_decision_fraud_a = { #Electoral fraud 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_1 = yes 
+		}
+
+		ai_will_do = {
+			base = 100  
+		}
+	}
+
+    GRE_decision_censorship_a = { #Electoral censorship 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_1 = yes 
+		}
+
+		ai_will_do = {
+			base = 100  
+		}
+	}
+	
+    GRE_decision_discredit_a = { #Discredit opponents 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_1 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+	
+    GRE_decision_open_ballots_a = { #Discredit opponents 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_1 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+
+ }
+ 
+ GRE_influence_referendum_republican_a = {
+ 
+   	GRE_decision_fraud_b = { #Electoral fraud 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_2 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+
+    GRE_decision_censorship_b = { #Electoral censorship 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_2 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+	
+    GRE_decision_discredit_b = { #Discredit opponents 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_2 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+	
+    GRE_decision_open_ballots_b = { #Discredit opponents 
+
+		visible = {
+		  tag = GRE 
+		}
+		
+		cost = 100 
+
+		fire_only_once = yes
+
+		complete_effect = {
+           GRE_referenduma_2 = yes 
+		}
+
+		ai_will_do = {
+			base = 50  
+		}
+	}
+
+ }

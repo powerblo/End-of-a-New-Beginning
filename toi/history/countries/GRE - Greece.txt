@@ -22,6 +22,7 @@
     two_percent
     normal_taxes
 	cl_legal
+	lp_land_estates
 
     stagnation_growth
     border_control
@@ -99,6 +100,9 @@ create_country_leader = {
     picture = "Portrait_GRE_Dimitrios_Voulgaris.dds"
     expire = 1877.10.01
     ideology = despotism
+    traits = {
+        controversial_figure
+    }
 }
 
 create_country_leader = {
@@ -107,6 +111,9 @@ create_country_leader = {
     picture = "Portrait_GRE_Constantine_Kanaris"
     expire = 1867.7.6
     ideology = revolutionary
+    traits = {
+        war_veteran
+    }
 }
 
 add_ideas = GRE_Otto_I

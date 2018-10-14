@@ -43,35 +43,35 @@ country_event = {
 	
 	option = {
 	     name = Greecemisc.2.a #do fraud 
-		 ai_chance = {factor = 50}
+		 
 		 
 		 hidden_effect = {
-		 GRE = {
-		 add_to_variable = {
-         var = gre_electiona
-         value = 2
-        }
-	country_event = { id = Greecemisc.3 days = 25 }
-    }
+		    GRE = {
+		        add_to_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+	           country_event = { id = Greecemisc.3 days = 25 }
+            }
 	
-}
-}
+        }
+    }
 
 	option = {
 	     name = Greecemisc.2.b #no fraud 
 		 ai_chance = {factor = 50}
 		 
 		 hidden_effect = {
-		 GRE = {
-		 subtract_from_variable = {
-         var = gre_electiona
-         value = 2
-        }
-	country_event = { id = Greecemisc.3 days = 25 }
-    }
+		    GRE = {
+		        subtract_from_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+	            country_event = { id = Greecemisc.3 days = 25 }
+            }
 	
-}
-}
+        }
+    }
 }
 
 country_event = {
@@ -88,33 +88,32 @@ country_event = {
 	     name = Greecemisc.3.a #arrest journalist 
 		 ai_chance = {factor = 50}
 		 
-		 hidden_effect = {
-		 GRE = {
-		 add_to_variable = {
-         var = gre_electiona
-         value = 2
-        }
-	country_event = { id = Greecemisc.4 days = 25 }
-    }
+		hidden_effect = {
+		    GRE = {
+		        add_to_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+	            country_event = { id = Greecemisc.4 days = 25 }
+            }
 	
-}
-}
+        }
+    }
 
 	option = {
 	     name = Greecemisc.3.b #do not arrest  
 		 ai_chance = {factor = 50}
 		 
 		 hidden_effect = {
-		 GRE = {
-		 subtract_from_variable = {
-         var = gre_electiona
-         value = 2
+		    GRE = {
+		        subtract_from_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+	            country_event = { id = Greecemisc.4 days = 25 }
+            }
         }
-	     country_event = { id = Greecemisc.4 days = 25 }
-        }
-	
-       }
-}
+    }
 }
 
 country_event = {
@@ -131,29 +130,29 @@ country_event = {
 	     name = Greecemisc.4.a #ban protests 
 		 ai_chance = {factor = 50}
 		 
-		 hidden_effect = {
-		 GRE = {
-		 add_to_variable = {
-         var = gre_electiona
-         value = 2
+		hidden_effect = {
+		    GRE = {
+		        add_to_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+            }
         }
     }
-}
-}
 
 	option = {
 	     name = Greecemisc.4.b #do not ban  
 		 ai_chance = {factor = 50}
 		 
-		 hidden_effect = {
-		 GRE = {
-		 subtract_from_variable = {
-         var = gre_electiona
-         value = 2
+		hidden_effect = {
+		    GRE = {
+		        subtract_from_variable = {
+                    var = gre_electiona
+                    value = 2
+                }
+            }
         }
     }
-}
-}
 }
 
 country_event = {
@@ -164,7 +163,7 @@ country_event = {
 	
 	trigger = {
 	    TAG = GRE
-        date > 1862.11.25
+        date > 1862.05.16 
 		}
 
 	fire_only_once = yes
@@ -173,7 +172,21 @@ country_event = {
 	     name = Greecemisc.5.a #Remove Miaoulis  
 		 ai_chance = {factor = 95}
 		 
-		 hidden_effect = {
+		GRE = { 
+		    retire_country_leader = yes
+            create_country_leader = {
+                name = "Gennaios Kolokotronis"
+                desc = "POLITICS_TEMP_DESC"
+                picture = "Portrait_GRE_Gennaios_Kolokotronis.dds"
+                expire = 1868.05.23 
+                ideology = despotism
+                traits = {
+                    war_veteran
+                }
+            }			
+		}
+		 
+		hidden_effect = {
 		    GRE = {
 		        add_to_variable = {
                     var = var_otto
@@ -424,13 +437,46 @@ country_event = { #Otto abdicates
 		} 
 		hidden_effect = {
 		    GRE = {
+				set_politics = {
+                    parties = {
+		                autocracy = { 
+			            popularity = 0
+		                }
+
+		                centrism = {
+    			        popularity = 40  
+    		            }
+		
+    		            traditional_conservatism = {
+    			        popularity = 30 
+    		            }
+						
+    		            radical_democracy = { 
+    			        popularity = 30 
+    		            }
+		
+    	            }
+	
+	                ruling_party = centrism
+		        }
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Dimitrios Voulgaris"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_GRE_Dimitrios_Voulgaris.dds"
+                    expire = 1877.10.01
+                    ideology = conserv_liberal
+                    traits = {
+                        controversial_figure
+                    }
+                }
                 set_country_flag = otto_removed 
 			    clr_country_flag = otto_lose
 		    	clr_country_flag = otto_win 
 		    	clear_variable = var_otto
                 country_event = {
                     id = GREpolitics.4 #Elect a King 
-                    days = 50 
+                    days = 55  
                 }			
             }
 	    }
@@ -522,22 +568,55 @@ country_event = { #Conduct a referendum - start
 	option = { 
 		name = GREpolitics.4.a #Conduct 
 		
+		ai_chance = { 
+            factor = 60 
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }
+		
+		hidden_effect = {
         GRE = {
             country_event = {
                 id = GREpolitics.5
-                days = 50 
-            }		
+                days = 200  
+				random = 50 
+            }
+            hidden_effect = { 
+			    GRE = {
+				    set_variable = {
+                        var = GRE_referenduma #x < 0 republic x > 0 monarchy 
+                        value = 1  
+                    }
+					set_country_flag = GRE_pick_monarchy_or_republic_a
+				}  
+			}			
 		}
+		}
+       custom_effect_tooltip = GRE_tt_conduct_referenduma
 	}
 	option = { 
-		name = GREpolitics.4.a #Do not  
+		name = GREpolitics.4.b #Do not  
 		
+		ai_chance = { 
+            factor = 40 
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }			
+		}
+		
+		hidden_effect = {
         GRE = {
             country_event = {
                 id = GREpolitics.11 #Coup d'Etat 
-                days = 50 
+                days = 100
+				random = 200 
             }		
 		}
+		}
+	    custom_effect_tooltip = GRE_tt_not_conduct_referenduma
 	}
 }
 
@@ -553,6 +632,16 @@ country_event = { #Conduct a referendum - end
 	option = { 
 		name = GREpolitics.5.a #King Alfred elected  
 		
+		trigger = {
+		        GRE = {
+		            check_variable = {
+                        var = GRE_referenduma
+                        value = 0
+                        compare = greater_than_or_equals
+                    }
+	            }
+        }
+		
         ENG = {
             country_event = {
                 id = GREpolitics.6 #Alfred 
@@ -561,31 +650,23 @@ country_event = { #Conduct a referendum - end
 		}
 	}
 	option = { 
-		name = GREpolitics.5.a #Republic elected   
+		name = GREpolitics.5.b #Republic elected   
+		
+		trigger = {
+		        GRE = {
+		            check_variable = {
+                        var = GRE_referenduma
+                        value = 0
+                        compare = less_than
+                    }
+	            }
+        }
 		
         GRE = {    
 		    set_cosmetic_tag = GRE_republic
 	        set_politics = {
-                parties = {
-		            autocracy = { 
-			        popularity = 0
-		            }
-
-		            centrism = {
-			        popularity = 30 
-		            }
-		
-		            traditional_conservatism = {
-			        popularity = 40 
-		            }
-						
-		            radical_democracy = { 
-			        popularity = 30 
-		            }
-		
-	            }
 	
-	                ruling_party = traditional_conservatism
+	                ruling_party = centrism
 		    }
 					set_country_flag = GRE_Republic 
 					complete_national_focus = GRE_greek_republic
@@ -605,6 +686,14 @@ country_event = { #Alfred for King - UK
 	option = { #Allow Alfred to become King 
 		name = GREpolitics.6.a 
 		
+		ai_chance = { 
+            factor = 50
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+		
         GRE = {
             country_event = {
                 id = GREpolitics.7 #Alfred becomes King 
@@ -613,7 +702,15 @@ country_event = { #Alfred for King - UK
 		}
 	}
 	option = { #Do not allow Alfred to become King
-		name = GREpolitics.6.a    
+		name = GREpolitics.6.b   
+		
+		ai_chance = { 
+            factor = 50
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }
 		
         GRE = {    
             country_event = {
@@ -792,5 +889,43 @@ country_event = { #Coup D'Etat
 					complete_national_focus = GRE_greek_republic
                 
         }
+	}
+}
+
+
+
+
+
+
+add_namespace = GREdiplo 
+
+country_event = { #UK cedes Ionian islands to Greece        
+	id = GREdiplo.1
+	title = GREdiplo.1.t
+	desc = GREdiplo.1.d
+	picture = placeholder
+	
+	is_triggered_only = yes 	
+
+	option = { #Ionian Islands ceded     
+		name = GREdiplo.1.a  
+		
+        GRE = { 
+            annex_country = {
+                target = ION 
+            }		
+            complete_national_focus = GRE_ionian_islands
+        }
+		hidden_effect = {
+		GRE = {
+            add_opinion_modifier = {
+                target = ENG
+                modifier = GRE_Ionian_Islands_modifier 
+            }		
+		}
+		ION = {
+        remove_state_core = 809
+		}
+		}
 	}
 }

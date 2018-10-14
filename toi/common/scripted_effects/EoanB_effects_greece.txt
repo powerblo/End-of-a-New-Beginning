@@ -39,3 +39,45 @@ var_ottoa_value = {
 			                                    }
 		    }
  }
+ 
+GRE_referenduma_1 = { #monarchy 
+            random_list = {
+                    25 = {
+						    GRE = {
+                                    subtract_from_variable = {
+                                     var = GRE_referenduma
+                                     value = 1
+                                        }
+				                           	}			
+			                                     }
+		            75 = {
+					        GRE = {
+                                     add_to_variable = {
+                                     var = GRE_referenduma
+                                     value = 1
+                                         }
+			 	                          	}			
+			                                    }
+		    }
+ }
+ 
+GRE_referenduma_2 = { #republic 
+            random_list = {
+                    70 = {
+						    GRE = {
+                                    subtract_from_variable = {
+                                     var = GRE_referenduma
+                                     value = 1
+                                        }
+				                           	}			
+			                                     }
+		            30 = {
+					        GRE = {
+                                     add_to_variable = {
+                                     var = GRE_referenduma
+                                     value = 1
+                                         }
+			 	                          	}			
+			                                    }
+		    }
+ }

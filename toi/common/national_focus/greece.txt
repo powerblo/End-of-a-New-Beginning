@@ -462,15 +462,19 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		available = {
+        always = no
+        }
+		
 		prerequisite = { focus = 
 		GRE_king_george }
         prerequisite = { focus = 
 		GRE_king_alfred }		
 		
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100 
 			add_stability = 0.05
-			
 		}
 	}
 	

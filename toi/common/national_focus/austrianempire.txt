@@ -19,7 +19,7 @@ focus_tree = {
 
 	focus = { 
 		id = AUS_Franz_den_Kaiser
-		icon = GFX_AUS_focus_Franz_den_Kaiser
+		icon = GFX_goal_focus_franz_den_kaiser
 		x = 4
 		y = 0
 		cost = 10
@@ -208,7 +208,12 @@ focus_tree = {
         }
 		
 		completion_reward = {
-
+		    AUS = {
+		    swap_ideas = {
+			    add_idea = lp_land_estates
+				remove_idea = lp_serfdom
+			}
+            }
 		}
 	}
 	
