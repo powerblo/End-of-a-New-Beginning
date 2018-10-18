@@ -5,7 +5,7 @@ scientific_advancement_decisions = {
 	#Advance to the Victorian Era
 	eoanb_decision_advance_to_victorian_era = {
 
-		icon = generic_political_discourse
+		icon = generic_decision
 
 		available = {
 			OR = {
@@ -90,7 +90,7 @@ scientific_advancement_decisions = {
 	#Advance to the Machine Era
 	eoanb_decision_advance_to_machine_era = {
 
-		icon = generic_political_discourse
+		icon = generic_decision
 
 		available = {
 			OR = {
@@ -157,7 +157,7 @@ scientific_advancement_decisions = {
 	#Advance to the Oil Era
 	eoanb_decision_advance_to_oil_era = {
 
-		icon = generic_political_discourse
+		icon = generic_decision
 
 		available = {
 			OR = {
@@ -224,7 +224,7 @@ scientific_advancement_decisions = {
 	#Pursue the Dream of Flight (Victorian Era)
 	eoanb_decision_pursue_dream_flight = {
 	
-		icon = generic_political_discourse
+		icon = generic_research
 
 		available = {
 			num_of_factories > 5
@@ -261,7 +261,7 @@ war_measures = {
 	#Promote Austerity
 	eoanb_decision_war_austerity = {
 	
-		icon = generic_political_discourse
+		icon = generic_civil_support
 
 		available = {
 			ROOT = { surrender_progress > 0.25 }
@@ -292,7 +292,7 @@ war_measures = {
 	#Inspire Troops
 	eoanb_decision_war_troops_inspire = {
 		
-		icon = generic_political_discourse 
+		icon = generic_nationalism
 		
 		available = {
 			num_divisions > 5
@@ -332,7 +332,7 @@ war_measures = {
 	#Mobilize Men (desperate)
 	eoanb_decision_war_mobilize_men = {
 	
-		icon = generic_political_discourse
+		icon = generic_industry
 		
 		available = {
 			NOT = { has_idea = scraping_the_barrel }
@@ -373,7 +373,7 @@ economic_decisions = {
 	#Expand Building Area
 	eoanb_decision_building_slot_victorian = {
 	
-		icon = generic_political_discourse
+		icon = generic_construction
 		
 		available = {
 			has_stability > 0.5
@@ -406,7 +406,7 @@ economic_decisions = {
 	#Promote the Shipbuilding Industry
 	eoanb_decision_promote_shipbuilding = {
 		
-		icon = generic_political_discourse
+		icon = generic_naval
 		
 		available = {
 			has_navy_experience > 10
@@ -450,7 +450,7 @@ economic_decisions = {
 	#Start Industrializing
 	eoanb_decision_generic_start_industrializing = {
 	
-		icon = generic_political_discourse
+		icon = generic_industry
 		
 		available = {
 			has_stability > 0.5
@@ -495,7 +495,7 @@ economic_decisions = {
 	#Provide Public Education
 	eoanb_decision_generic_public_schools = {
 		
-		icon = generic_political_discourse
+		icon = generic_research
 		
 		available = {
 			has_stability > 0.5
@@ -536,7 +536,7 @@ economic_decisions = {
 	#Holland: Amsterdam Area Land Reclamation
 	eoanb_decision_land_reclamation_amsterdam = {
 		
-		icon = generic_political_discourse
+		icon = generic_operation
 		
 		available = {
 			HOL = { has_tech = industrial_era_tools_1 }
@@ -572,7 +572,7 @@ internal_politics_eoanb = {
 	#Encourage Centrism
 	eoanb_decision_drift_centrism = {
 		
-		icon = generic_political_discourse
+		icon = generic_break_treaty
 		
 		available = {
 			has_stability > 0.6
@@ -608,7 +608,7 @@ internal_politics_eoanb = {
 	#Look for an heir
 	eoanb_decision_generic_seek_heir = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			always = yes
@@ -642,7 +642,7 @@ internal_politics_eoanb = {
 	#Make heir more legitimate
 	eoanb_decision_generic_strengthen_heir = {
 	
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			has_stability > 0.5
@@ -675,7 +675,7 @@ internal_politics_eoanb = {
 	#Abolish the Hereditary System
 	eoanb_decision_generic_abolish_heir_system = {
 	
-		icon = generic_political_discourse
+		icon = generic_break_treaty
 		
 		available = {
 			always = yes
@@ -714,7 +714,7 @@ internal_politics_eoanb = {
 	#(Re-)introduce the Hereditary System
 	eoanb_decision_generic_reintroduce_heir_system = {
 	
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			always = yes
@@ -751,7 +751,7 @@ internal_politics_eoanb = {
 	#Disinherit Current Heir
 	eoanb_decision_generic_disinherit_heir = {
 	
-		icon = generic_political_discourse
+		icon = generic_independence
 		
 		available = {
 			OR = {
@@ -801,7 +801,7 @@ internal_politics_eoanb = {
 	#Raise Stability (Victorian Era)
 	eoanb_decision_raise_stability_victorian = {
 		
-		icon = generic_political_discourse
+		icon = generic_form_nation
 		
 		available = {
 			has_war = no
@@ -850,7 +850,7 @@ internal_politics_eoanb = {
 	#Raise War Support in Peacetime (Victorian Era)
 	eoanb_decision_gather_warsupport_victorian = {
 		
-		icon = generic_political_discourse
+		icon = generic_prepare_civil_war
 		
 		available = {
 			OR = {
@@ -902,10 +902,16 @@ eoanb_religious_affairs = {
 	eoanb_decision_generic_change_protestant = {
 		
 		
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			has_stability > 0.5
+			NOT = {
+				OR = {
+					has_government = fundamentalism
+					TAG = PAP
+				}
+			}
 		}
 		
 		visible = {
@@ -950,10 +956,13 @@ eoanb_religious_affairs = {
 	eoanb_decision_generic_change_catholic = {
 		
 		
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			has_stability > 0.5
+			NOT = {
+				has_government = fundamentalism
+			}
 		}
 		
 		visible = {
@@ -998,10 +1007,13 @@ eoanb_religious_affairs = {
 	eoanb_decision_generic_change_secular = {
 		
 		
-		icon = generic_political_discourse
+		icon = generic_nationalism
 		
 		available = {
 			has_stability > 0.5
+			NOT = {
+				has_government = fundamentalism
+			}
 		}
 		
 		visible = {
@@ -1046,7 +1058,7 @@ eoanb_religious_affairs = {
 	#Jihad - Sunni/Shia/Ibadi against Orthodox/Protestant/Catholic
 	eoanb_decision_generic_jiahd_against_christianity = {
 		
-		icon = generic_political_discourse
+		icon = generic_prepare_civil_war
 		
 		available = {
 			has_war_support > 0.5
@@ -1087,7 +1099,7 @@ eoanb_religious_affairs = {
 	
 	eoanb_decision_generic_hold_animist_festival = {
 		
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			has_stability > 0.05
@@ -1124,7 +1136,7 @@ political_actions = {
 	
 	eoanb_decision_generic_independence_struggle = {
 		
-		icon = generic_political_discourse
+		icon = generic_independence
 		
 		available = {
 			OR = {
@@ -1190,7 +1202,7 @@ political_actions = {
 	
 	eoanb_decision_generic_increase_own_autonomy = {
 		
-		icon = generic_political_discourse
+		icon = generic_break_treaty
 		
 		available = {
 			has_stability > 0.35
@@ -1246,7 +1258,7 @@ foreign_politics = {
 	#Rename Istanbul to Constantinople
 	eoanb_decision_generic_rename_constantinople = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1280,7 +1292,7 @@ foreign_politics = {
 	#Rename Constantinople to Istanbul
 	eoanb_decision_generic_rename_istanbul = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1315,7 +1327,7 @@ foreign_politics = {
 	#Rename New York to New Amsterdam
 	eoanb_decision_generic_rename_new_amsterdam = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1354,7 +1366,7 @@ foreign_politics = {
 	#Rename New Amsterdam to New York
 	eoanb_decision_generic_rename_new_york = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1386,7 +1398,7 @@ foreign_politics = {
 	#Rename Königsberg to Kaliningrad
 	eoanb_decision_generic_rename_kaliningrad = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1417,7 +1429,7 @@ foreign_politics = {
 	#Rename Kaliningrad to Königsberg
 	eoanb_decision_generic_rename_konigsberg = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1455,7 +1467,7 @@ foreign_politics = {
 	#Greece sends help to Crete(move this if greece gets a file to its self)
 	eoanb_decision_gre_help_cet = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_war = no
@@ -1500,7 +1512,7 @@ tribal_decisions_eoanb = {
 	
 	eoanb_decision_generic_recruit_tribal_warriors = {
 		
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			NOT = { has_idea = disarmed_nation }
@@ -1535,7 +1547,7 @@ eoanb_category_options = {
 	
 	eoanb_decision_open_options = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			always = yes
@@ -1563,7 +1575,7 @@ eoanb_category_options = {
 	
 	eoanb_decision_disable_options = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			always = yes
@@ -1598,7 +1610,7 @@ eoanb_category_military = {
 	
 	eoanb_decision_generic_recruit_colonial_troops = {
 		
-		icon = generic_political_discourse
+		icon = generic_prepare_civil_war
 		
 		available = {
 			NOT = {
@@ -1743,7 +1755,7 @@ eoanb_category_military = {
 	
 	eoanb_decision_generic_recruit_colonial_troops_2 = {
 		
-		icon = generic_political_discourse
+		icon = generic_prepare_civil_war
 		
 		available = {
 			NOT = {
@@ -1888,7 +1900,7 @@ eoanb_category_military = {
 	
 	eoanb_decision_generic_recruit_colonial_troops_3 = {
 		
-		icon = generic_political_discourse
+		icon = generic_prepare_civil_war
 		
 		available = {
 			NOT = {

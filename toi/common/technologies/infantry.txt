@@ -3159,8 +3159,9 @@ technologies = {
 	
 	tech_infantry_colonial_marines = {
 
-		army_core_attack_factor = 0.05
-		army_core_defence_factor = 0.05
+		enable_subunits = {
+			early_marine
+		}
 	
 		path = {
 			leads_to_tech = tech_infantry_improved_landing_gear
