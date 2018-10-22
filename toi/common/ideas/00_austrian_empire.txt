@@ -125,6 +125,62 @@ ideas = {
 			}
 		}
 		
+		AUS_HUN_Separatism1a = { #Absolutist path
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+	            stability_factor = -0.14 
+			}
+		}
+		AUS_HUN_Separatism2a = { #Help Hungarians - Abolutism
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+	            stability_factor = -0.08 
+			}
+		}
+		
+		AUS_HUN_Separatism2b = { #Supress Hungarians - Abolutism
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+	            stability_factor = -0.18
+			}
+		}
+		
 		AUS_SLA_Separatism = {
 
 			allowed = {
@@ -163,7 +219,141 @@ ideas = {
 			}
 		}
 		
+		AUS_SLA_Separatism1a = { #If Austria goes absolutist
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+	            stability_factor = -0.12 
+			}
+		}
 		
+		AUS_SLA_Separatism2a = { #Supress Slavic minorities - Absolutist 
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+	            stability_factor = -0.15 
+			}
+		}
+
+		
+		AUS_lost_italy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = -0.15 
+			}
+		}
+		
+		AUS_lost_italy1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = -0.1 
+			}
+		}
+		
+		AUS_win_italy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = 0.1
+			}
+		}	
+		AUS_neues_absolutist = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            political_power_factor = 0.1 
+				drift_defence_factor = 0.2 
+				stability_factor = -0.10
+			}
+		}		
+		AUS_neues_absolutist1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            political_power_factor = 0.15  
+				drift_defence_factor = 0.5 
+				stability_factor = -0.15
+			}
+		}
 	}
     political_advisor = {
 		AUS_advisor_hermann_dietrich_lindheim = {
