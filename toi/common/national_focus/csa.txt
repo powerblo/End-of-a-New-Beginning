@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = CSA_proclaim_confederacy
 		icon = GFX_goal_focus_confederate_collaboration
-		cost = 10.00
+		cost = 75
 		x = 7
 		y = 0
 			completion_reward = {
@@ -23,7 +23,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_sumter
 		icon = GFX_goal_focus_american_civil_war
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = CSA_proclaim_confederacy
 		}
@@ -43,7 +43,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_address_issues
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_sumter
 		}
@@ -60,7 +60,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_military
 		icon = GFX_focus_generic_military_mission
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_address_issues
 		}
@@ -81,7 +81,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_research
 		icon = GFX_goal_generic_army_doctrines
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_military
 		}
@@ -105,7 +105,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_johnathan_laird
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_military
 		}
@@ -130,7 +130,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_industry
 		icon = GFX_goal_generic_construction
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_address_issues
 		}
@@ -153,7 +153,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_tredegar_iron
 		icon = GFX_focus_generic_steel
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_industry
 		}
@@ -183,7 +183,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_tradition
 		icon = GFX_goal_continuous_def_against_influence
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_tredegar_iron
 		}
@@ -216,7 +216,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_industry_war
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_industry
 		}
@@ -242,7 +242,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_palmetto_arsenal
 		icon = GFX_goal_generic_build_tank
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_industry_war
 		}
@@ -267,7 +267,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_rails
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_industry
 		}
@@ -314,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_civilian
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_rails
 		}
@@ -351,7 +351,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_might
 		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = CSA_civil_war_tradition
 		}
@@ -380,7 +380,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_capital
 		icon = GFX_focus_generic_self_management
-		cost = 4.00
+		cost = 30
 		prerequisite = {
 			focus = CSA_civil_war_sumter
 		}
@@ -400,7 +400,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_support
 		icon = GFX_goal_continuous_increase_nu
-		cost = 6.00
+		cost = 50
 		prerequisite = {
 			focus = CSA_civil_war_capital
 		}
@@ -420,7 +420,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_invite
 		icon = GFX_goal_generic_military_deal
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_support
 		}
@@ -491,7 +491,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_volunteers
 		icon = GFX_focus_generic_little_entente
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_invite
 		}
@@ -511,7 +511,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_downplay
 		icon = GFX_goal_continuous_restrict_freedom
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_volunteers
 		}
@@ -532,7 +532,7 @@ focus_tree = {
 	focus = {
 		id = CSA_hire_james_bulloch
 		icon = GFX_goal_generic_occupy_states_coastal
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_support
 		}
@@ -556,7 +556,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_commission_laird
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_hire_james_bulloch
 		}
@@ -581,7 +581,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_plead
 		icon = GFX_focus_generic_concessions
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = CSA_civil_war_downplay
 		}
@@ -606,7 +606,7 @@ focus_tree = {
 	focus = {
 		id = CSA_military_john_porter
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_johnathan_laird
 		}
@@ -630,7 +630,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_recruit
 		icon = GFX_focus_generic_military_academy
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_research
 		}
@@ -650,7 +650,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_css_virginia
 		icon = GFX_goal_generic_navy_battleship
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_recruit
 		}
@@ -679,7 +679,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_scouting
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_recruit
 		}
@@ -702,7 +702,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_scouting_yes
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_scouting
 		}
@@ -728,7 +728,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_scouting_no
 		icon = GFX_goal_generic_small_arms
-		cost = 5.00
+		cost = 40
 		prerequisite = {
 			focus = CSA_civil_war_scouting
 		}
@@ -751,7 +751,7 @@ focus_tree = {
 	focus = {
 		id = CSA_military_total_war
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = CSA_civil_war_scouting_no
 			focus = CSA_civil_war_scouting_yes
@@ -802,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = CSA_civil_war_defeat
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 0.00
+		cost = 5
 		prerequisite = {
 			focus = CSA_civil_war_plead
 		}

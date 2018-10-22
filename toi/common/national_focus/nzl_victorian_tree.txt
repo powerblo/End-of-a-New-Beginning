@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_captial_debate
 		icon = GFX_goal_focus_enact_law
-		cost = 10.00
+		cost = 70
 		x = 3
 		y = 0
 		completion_reward = {
@@ -23,7 +23,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_quell_the_natives
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 70
 		mutually_exclusive = {
 			focus = nzl_vic_work_with_the_kingitanga
 		}
@@ -46,7 +46,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_work_with_the_kingitanga
 		icon = GFX_nzl_goal_kingitanga
-		cost = 10.00
+		cost = 70
 		mutually_exclusive = {
 			focus = nzl_vic_quell_the_natives
 		}
@@ -64,7 +64,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_we_need_an_army
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10.00
+		cost = 70
 		x = 17
 		y = 0
 		completion_reward = {
@@ -75,7 +75,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_our_industries
 		icon = GFX_goal_focus_the_workers
-		cost = 10.00
+		cost = 70
 		x = 28
 		y = 0
 		completion_reward = {
@@ -86,7 +86,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_sedifice_is_unfit
 		icon = GFX_goal_focus_reform_administration
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_a_captial_debate
 		}
@@ -101,7 +101,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_hold_a_govermental_session_in_wellington
 		icon = GFX_goal_focus_reform_administration
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_sedifice_is_unfit
 		}
@@ -118,7 +118,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_agatate_for_moving
 		icon = GFX_goal_focus_reform_administration
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_hold_a_govermental_session_in_wellington
 		}
@@ -137,7 +137,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_auckland_is_where_the_people_are
 		icon = GFX_goal_focus_the_elite
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_hold_a_govermental_session_in_wellington
 		}
@@ -156,7 +156,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_better_capital_building
 		icon = GFX_goal_focus_the_elite
-		cost = 20.00
+		cost = 140
 		prerequisite = {
 			focus = nzl_vic_auckland_is_where_the_people_are
 		}
@@ -177,7 +177,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_encorage_faster_land_purchases
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_quell_the_natives
 		}
@@ -202,7 +202,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_confiscate_hostile_maori_land
 		icon = GFX_goal_demand_sudetenland
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_encorage_faster_land_purchases
 		}
@@ -229,7 +229,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ignore_TAA_warnings
 		icon = GFX_goal_anti_comintern_pact
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_confiscate_hostile_maori_land
 		}
@@ -247,7 +247,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_purcase_land_in_taranaki
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_ignore_TAA_warnings
 		}
@@ -276,7 +276,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_status_quo_in_taranaki
 		icon = GFX_goal_generic_alliance
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_purcase_land_in_taranaki
 		}
@@ -330,7 +330,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_taranaki_peace_deliberations
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_status_quo_in_taranaki
 		}
@@ -349,7 +349,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_opiose_the_kingitanga_movement
 		icon = GFX_nzl_goal_oppose_kingitanga
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_confiscate_hostile_maori_land
 		}
@@ -374,7 +374,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_root_out_information_in_the_waikato
 		icon = GFX_nzl_goal_investigate_waikato
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_opiose_the_kingitanga_movement
 		}
@@ -389,7 +389,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_build_the_northern_half_of_the_great_south_road
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_root_out_information_in_the_waikato
 		}
@@ -410,7 +410,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_fortify_the_waikato_border
 		icon = GFX_goal_generic_fortify_city
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_build_the_northern_half_of_the_great_south_road
 		}
@@ -432,7 +432,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_push_the_great_south_road_further_south
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_fortify_the_waikato_border
 		}
@@ -460,7 +460,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_push_into_the_waikato_heartlands
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_push_the_great_south_road_further_south
 		}
@@ -478,7 +478,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_breaking_the_waikato
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_push_into_the_waikato_heartlands
 		}
@@ -496,7 +496,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_reduce_reliance_on_local_iwi
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 20.00
+		cost = 140
 		prerequisite = {
 			focus = nzl_vic_we_need_an_army
 		}
@@ -512,7 +512,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_petion_the_british_for_troops
 		icon = GFX_goal_focus_ally_ENG
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_reduce_reliance_on_local_iwi
 		}
@@ -530,7 +530,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ask_NSW_for_troops
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_reduce_reliance_on_local_iwi
 		}
@@ -547,7 +547,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_draft_some_troops
 		icon = GFX_goal_focus_military_reforms
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_petion_the_british_for_troops
 		}
@@ -568,7 +568,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_request_even_more_british_troops
 		icon = GFX_goal_focus_ally_ENG
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_draft_some_troops
 		}
@@ -595,7 +595,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_our_own_troops_must_do
 		icon = GFX_focus_generic_little_entente
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_draft_some_troops
 		}
@@ -613,7 +613,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_arms_research
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_request_even_more_british_troops
 			focus = nzl_vic_our_own_troops_must_do
@@ -629,7 +629,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_obatain_artillery
 		icon = GFX_goal_generic_build_tank
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_we_need_an_army
 		}
@@ -653,7 +653,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_cannon_works
 		icon = GFX_goal_generic_build_tank
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_obatain_artillery
 		}
@@ -668,7 +668,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_conventional_british_army_tactics
 		icon = GFX_goal_generic_air_doctrine
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_we_need_an_army
 		}
@@ -683,7 +683,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_request_a_general_to_deal_with_the_maori
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 5.00
+		cost = 35
 		prerequisite = {
 			focus = nzl_vic_we_need_an_army
 		}
@@ -711,7 +711,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_british_gun_making_standards
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_conventional_british_army_tactics
 		}
@@ -729,7 +729,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_anti_gunfighter_pa_warfare
 		icon = GFX_goal_generic_build_tank
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_british_gun_making_standards
 		}
@@ -749,7 +749,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_adapt_gunfighter_pa_building
 		icon = GFX_goal_generic_fortify_city
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_anti_gunfighter_pa_warfare
 		}
@@ -769,7 +769,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_conventional_stratergems
 		icon = GFX_goal_generic_cavalry
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_anti_gunfighter_pa_warfare
 		}
@@ -789,7 +789,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_northern_industrailising
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_industries
 		}
@@ -819,7 +819,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_aucklands_industrial_expansion
 		icon = GFX_nzl_goal_auckland_wealth
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_northern_industrailising
 		}
@@ -841,7 +841,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_expand_auckland_harbour
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_aucklands_industrial_expansion
 		}
@@ -863,7 +863,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_gum_mining
 		icon = GFX_nzl_goal_gum_diggers
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_northern_industrailising
 		}
@@ -878,7 +878,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_northern_mineral_wealth
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_northern_industrailising
 		}
@@ -892,7 +892,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_wealth_of_the_waikato
 		icon = GFX_nzl_goal_waikato_wealth
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_northern_mineral_wealth
 		}
@@ -918,7 +918,7 @@ focus_tree = {
 	focus = {
 		id = nzl_waikato_coal_mines
 		icon = GFX_goal_focus_coal_mines
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_of_the_waikato
 		}
@@ -937,7 +937,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_waikato_ironsands
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_waikato_coal_mines
 		}
@@ -958,7 +958,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_wealth_of_the_taranaki
 		icon = GFX_nzl_goal_taranaki_wealth
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_northern_mineral_wealth
 		}
@@ -984,7 +984,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_taranaki_coal_mines
 		icon = GFX_goal_focus_coal_mines
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_of_the_taranaki
 		}
@@ -1003,7 +1003,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_kiwi_indunity_dedicated_to_our_industry
 		icon = GFX_goal_focus_industrial_revolution
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_industries
 		}
@@ -1025,7 +1025,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_native_lumber_exporting
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_industries
 		}
@@ -1059,7 +1059,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_exploit_the_forest
 		icon = GFX_AUS_focus_deforestation
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_native_lumber_exporting
 		}
@@ -1100,7 +1100,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_renewable_pine_forestry
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_exploit_the_forest
 		}
@@ -1119,7 +1119,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_alpha_well
 		icon = GFX_nzl_goal_alpha_well_nz
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_of_the_taranaki
 		}
@@ -1141,7 +1141,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_found_moturoa_refineries
 		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_alpha_well
 		}
@@ -1172,7 +1172,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_protect_the_forest
 		icon = GFX_nzl_goal_nz_fern
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_native_lumber_exporting
 		}
@@ -1193,7 +1193,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_southern_farmlands
 		icon = GFX_nzl_goal_farmlands
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_industries
 		}
@@ -1208,7 +1208,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_wealth_in_the_south
 		icon = GFX_nzl_goal_southern_wealth
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_southern_farmlands
 		}
@@ -1225,7 +1225,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_expolit_otago_gold_rush
 		icon = GFX_nzl_goal_gold_otago
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1248,7 +1248,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_iron_mines
 		icon = GFX_focus_generic_steel
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1267,7 +1267,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_more_central_location
 		icon = GFX_nzl_goal_generic_government
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_agatate_for_moving
 		}
@@ -1282,7 +1282,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ask_the_austrailian_governers_for_placement_recomendations
 		icon = GFX_nzl_goal_new_zealand
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_a_more_central_location
 		}
@@ -1323,7 +1323,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_distrabute_land_to_colonists
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_crush_the_taranaki_rebelion
 		}
@@ -1341,7 +1341,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_our_central_capital
 		icon = GFX_nzl_goal_wellington_capital
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_ask_the_austrailian_governers_for_placement_recomendations
 			focus = nzl_vic_directly_move_the_capital
@@ -1360,7 +1360,7 @@ focus_tree = {
 	focus = {
 		id = nzzl_vic_our_populus_capital
 		icon = GFX_nzl_goal_auckland_capital
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_a_better_capital_building
 			focus = nzl_vic_ask_the_austrailian_governers_for_placement_recomendations
@@ -1382,7 +1382,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_expand_capital_dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_central_capital
 		}
@@ -1404,7 +1404,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_capital_industrailisation
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzzl_vic_our_populus_capital
 		}
@@ -1426,7 +1426,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_finish_off_the_taranaki_rebels
 		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_breaking_the_waikato
 		}
@@ -1452,7 +1452,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_small_but_deadly
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_adapt_gunfighter_pa_building
 		}
@@ -1464,7 +1464,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_expand_gold_mining_operations
 		icon = GFX_goal_generic_construction2
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_expolit_otago_gold_rush
 		}
@@ -1486,7 +1486,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_southland_coal_mines
 		icon = GFX_goal_focus_coal_mines
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1504,7 +1504,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_capital_is_established
 		icon = GFX_nzl_goal_generic_government
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_capital_industrailisation
 			focus = nzl_vic_expand_capital_dockyards
@@ -1519,7 +1519,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_country_of_wonders
 		icon = GFX_nzl_goal_natural_beauty
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1540,7 +1540,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_land_confescations
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_finish_off_the_taranaki_rebels
 		}
@@ -1563,7 +1563,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_kingitanga_fallout
 		icon = GFX_nzl_goal_kingitanga_deal
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1588,7 +1588,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ignore_him
 		icon = GFX_nzl_goal_generic_government
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1605,7 +1605,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_offer_him_land
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1622,7 +1622,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_industrialising_the_south
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1645,7 +1645,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_industrialising_the_north
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_industrialising_the_south
 		}
@@ -1676,7 +1676,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_confirm_our_industrial_might
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_industrialising_the_north
 		}
@@ -1696,7 +1696,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_nation_of_innovation
 		icon = GFX_focus_research
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1722,7 +1722,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_our_own_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1763,7 +1763,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_expand_our_naval_bases
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_our_own_navy
 		}
@@ -1802,7 +1802,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_a_port_worthy_of_the_capital
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_expand_our_naval_bases
 		}
@@ -1828,7 +1828,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_great_dockyards_of_the_north
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_a_port_worthy_of_the_capital
 		}
@@ -1857,7 +1857,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_adopt_secret_ballots
 		icon = GFX_goal_focus_elections
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_capital_is_established
 		}
@@ -1883,7 +1883,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ideals_of_freedom
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_adopt_secret_ballots
 		}
@@ -1898,7 +1898,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_building_a_railway
 		icon = GFX_goal_focus_railroad_development
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1915,7 +1915,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_open_a_passenger_railway_in_christchurch
 		icon = GFX_goal_focus_railroad_development
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1935,7 +1935,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_southern_cromite_mines
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_iron_mines
 		}
@@ -1974,7 +1974,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_establish_mosgiel_woollen_factory_company
 		icon = GFX_nzl_goal_mosgiel_woollen
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_wealth_in_the_south
 		}
@@ -1997,7 +1997,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_otagos_industrial_base
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_expand_gold_mining_operations
 		}
@@ -2050,7 +2050,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_slower_land_buying
 		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 20.00
+		cost = 140
 		prerequisite = {
 			focus = nzl_vic_reconise_the_kingitanga
 		}
@@ -2084,7 +2084,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_deals_in_the_taranaki
 		icon = GFX_goal_generic_improve_relations
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_deal
 		}
@@ -2100,7 +2100,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_deals_in_the_waikato
 		icon = GFX_goal_generic_improve_relations
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_deal
 		}
@@ -2116,7 +2116,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_kingitanga_backing_for_crushing_bay_of_plenty_radicals
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_deal
 		}
@@ -2131,7 +2131,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_settling_the_kingitanga
 		icon = GFX_nzl_goal_kingitanga_deal
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_offer_him_land
 		}
@@ -2148,7 +2148,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_our_land_now
 		icon = GFX_goal_focus_gerrymandering
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_offer_him_land
 			focus = nzl_vic_ignore_him
@@ -2168,7 +2168,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_the_rights_of_the_maori
 		icon = GFX_nzl_goal_maori
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_deals_in_the_taranaki
 			focus = nzl_vic_deals_in_the_waikato
@@ -2190,7 +2190,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_encorage_maori_population_growth
 		icon = GFX_nzl_goal_maori
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_rights_of_the_maori
 		}
@@ -2210,7 +2210,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_start_land_clearing_projects
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_rights_of_the_maori
 		}

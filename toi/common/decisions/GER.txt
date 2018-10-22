@@ -746,6 +746,7 @@ GER_category_war_in_sight = {
 		
 		#Unless stopped, crisis will lead to war
 		timeout_effect = {
+			PRS = { add_stability = -0.02 }
 			if = {
 				limit = {
 					has_war_support < 0.8
@@ -793,12 +794,6 @@ GER_category_war_in_sight = {
 			hidden_effect = {
 				clr_country_flag = eoanb_flag_GER_defused_warinsight
 			}
-		}
-		
-		#After the crisis, these modifiers apply to Germany temporarily
-		modifier = {
-			stability_weekly = -0.01
-			political_power_gain = -0.1
 		}
 		
 		#AI will always avoid the crisis if possible, unless historical mode is off in which case it decides itself

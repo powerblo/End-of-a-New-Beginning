@@ -32,7 +32,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_government_traditionalism
 		icon = GFX_goal_generic_military_deal
-		cost = 15.00
+		cost = 100
 		mutually_exclusive = {
 			focus = afr_wes_govermental_westernisation
 		}
@@ -47,7 +47,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_govermental_westernisation
 		icon = GFX_focus_generic_treaty
-		cost = 15.00
+		cost = 100
 		mutually_exclusive = {
 			focus = afr_wes_government_traditionalism
 		}
@@ -67,7 +67,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_internal_reforms
 		icon = GFX_goal_focus_reform_administration
-		cost = 13.00
+		cost = 100
 		prerequisite = {
 			focus = afr_wes_govermental_westernisation
 		}
@@ -81,7 +81,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_a_western_civilian_economy
 		icon = GFX_goal_focus_the_workers
-		cost = 28.60
+		cost = 200
 		prerequisite = {
 			focus = afr_wes_internal_reforms
 		}
@@ -124,7 +124,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_resorce_exstraction
 		icon = GFX_goal_generic_construction2
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_western_civilian_economy
 		}
@@ -147,7 +147,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_rare_resorce_mining
 		icon = GFX_goal_generic_construction
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_resorce_exstraction
 		}
@@ -166,7 +166,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_cocoa_growing
 		icon = GFX_goal_generic_construction
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_rare_resorce_mining
 		}
@@ -185,7 +185,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_dirtroads
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_western_civilian_economy
 		}
@@ -225,7 +225,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_road_matinace
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_dirtroads
 		}
@@ -239,7 +239,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_inspire_technological_boom
 		icon = GFX_focus_research2
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_western_civilian_economy
 		}
@@ -253,7 +253,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_western_technological_pracitises
 		icon = GFX_focus_research2
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_inspire_technological_boom
 		}
@@ -267,7 +267,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_research_into_new_roads
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_road_matinace
 		}
@@ -284,7 +284,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_army_funding
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_internal_reforms
 		}
@@ -298,7 +298,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_western_arms
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_army_funding
 		}
@@ -312,7 +312,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_western_tatics
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_army_funding
 		}
@@ -326,7 +326,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_emulation_of_the_western_militaries
 		icon = GFX_focus_generic_little_entente
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_western_arms
 		}
@@ -358,7 +358,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_write_a_constitution
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 25.00
+		cost = 175
 		prerequisite = {
 			focus = afr_wes_internal_reforms_2
 		}
@@ -376,7 +376,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_enforce_borders
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_write_a_constitution
 		}
@@ -390,7 +390,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_increase_taxes
 		icon = GFX_goal_focus_increase_wages
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_write_a_constitution
 		}
@@ -415,7 +415,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_government_reforms_3
 		icon = GFX_goal_focus_enact_law
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_enforce_borders
 			focus = afr_wes_increase_taxes
@@ -433,7 +433,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_european_politics_focus
 		icon = GFX_goal_focus_continent_west_europe
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_govermental_westernisation
 		}
@@ -457,7 +457,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_western_protection
 		icon = GFX_focus_generic_self_management
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_government_traditionalism
 		}
@@ -484,7 +484,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_choose_a_side
 		icon = GFX_goal_generic_major_alliance
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_european_politics_focus
 			focus = afr_wes_western_protection
@@ -507,7 +507,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_draw_even_closer_to_our_benefactor
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_choose_a_side
 		}
@@ -527,7 +527,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_traditional_western_blend
 		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_government_traditionalism
 		}
@@ -544,7 +544,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_a_true_guarantee
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_western_protection
 		}
@@ -561,7 +561,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_building_a_society_on_mixed_values
 		icon = GFX_goal_focus_reform_administration
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_traditional_western_blend
 		}
@@ -575,7 +575,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_western_influence
 		icon = GFX_goal_focus_newspapers
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_true_guarantee
 		}
@@ -624,7 +624,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_colonial_miltia
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_colonial_propasision
 		}
@@ -638,7 +638,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_our_noble_traditions
 		icon = GFX_goal_focus_tribal_hut
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_traditional_western_blend
 		}
@@ -652,7 +652,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_small_yet_strong
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_our_noble_traditions
 		}
@@ -669,7 +669,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_encorage_myths_of_the_noble_savage
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_small_yet_strong
 		}
@@ -685,7 +685,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_milita_training
 		icon = GFX_goal_focus_the_elite
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_small_yet_strong
 		}
@@ -699,7 +699,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_mixed_inflence_in_arms
 		icon = GFX_goal_focus_military_reforms
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_milita_training
 		}
@@ -713,7 +713,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_increase_iron_mining
 		icon = GFX_focus_generic_steel
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_resorce_exstraction
 		}
@@ -732,7 +732,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_slave_mines
 		icon = GFX_goal_focus_tribal_slavery
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_increase_iron_mining
 		}
@@ -761,7 +761,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_roaded_mines
 		icon = GFX_goal_generic_construction2
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_increase_iron_mining
 		}
@@ -778,7 +778,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_attempt_industrialisation
 		icon = GFX_focus_generic_industry_2
-		cost = 20.00
+		cost = 150
 		prerequisite = {
 			focus = afr_wes_research_into_new_roads
 		}
@@ -833,7 +833,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_turn_back
 		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_revise_progress
 		}
@@ -847,7 +847,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_our_way_not_thiers
 		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_government_traditionalism
 		}
@@ -876,7 +876,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_revise_progress
 		icon = GFX_goal_focus_enact_law
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_our_way_not_thiers
 		}
@@ -890,7 +890,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_colonal_ventures
 		icon = GFX_goal_focus_international_investments
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_a_colonial_propasision
 		}
@@ -901,7 +901,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_ask_for_colonial_grants
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_colonial_miltia
 		}
@@ -915,7 +915,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_investments_from_our_master
 		icon = GFX_goal_focus_increase_wages
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_colonal_ventures
 		}
@@ -926,7 +926,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_colonial_explotation
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_investments_from_our_master
 		}
@@ -937,7 +937,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_from_tribe_to_colony
 		icon = GFX_goal_focus_tribal_hut
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_ask_for_colonial_grants
 		}
@@ -948,7 +948,7 @@ focus_tree = {
 	focus = {
 		id = afr_wes_stablity_and_prosperity
 		icon = GFX_goal_focus_the_workers
-		cost = 10.00
+		cost = 75
 		prerequisite = {
 			focus = afr_wes_small_yet_strong
 		}

@@ -13,7 +13,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		available_if_capitulated = yes
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -34,7 +34,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_ec_ref_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = { factor = 1 }
 		available_if_capitulated = no
 		completion_reward = {
@@ -51,7 +51,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_land_to_farms_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -73,7 +73,7 @@ focus_tree = {
 		ai_will_do = { 
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {	
 			203 = { add_extra_state_shared_building_slots = 1 }
@@ -93,7 +93,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		prerequisite = {
 			focus = RUS_ec_ref_1857
@@ -114,7 +114,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		prerequisite = {
 			focus = RUS_mine_eff_1857
@@ -140,7 +140,7 @@ focus_tree = {
 			focus = RUS_steel_1857
 		}
 		available_if_capitulated = no
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_resource = {
 				type = coal
@@ -162,7 +162,7 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = no
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_timed_idea = {
 				idea = RUS_idea_construction
@@ -183,7 +183,7 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = no
-		cost = 20
+		cost = 140
 		completion_reward = {
 			add_political_power = -150
 			195 = { add_extra_state_shared_building_slots = 2 }
@@ -210,7 +210,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -50
@@ -236,7 +236,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -50
@@ -260,7 +260,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -100
@@ -276,7 +276,7 @@ focus_tree = {
 			focus = RUS_ec_ref_1857
 		}
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -302,7 +302,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -50
@@ -324,7 +324,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -50
@@ -347,7 +347,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_construct_mil_factory
 		available_if_capitulated = no
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_political_power = -50
 			random_owned_controlled_state = {
@@ -365,7 +365,7 @@ focus_tree = {
 			focus = RUS_ec_ref_1857
 		}
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -404,7 +404,7 @@ focus_tree = {
 			focus = RUS_ind_cities_1857
 		}
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 70
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
@@ -421,7 +421,7 @@ focus_tree = {
 		id = RUS_wars_civ_1857
 		x = 9
 		y = 3
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = RUS_moscow_civ_1857
 		}
@@ -442,7 +442,7 @@ focus_tree = {
 		id = RUS_tsar_civ_1857
 		x = 9
 		y = 4
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = RUS_wars_civ_1857
 		}
@@ -474,7 +474,7 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = yes
-		cost = 20
+		cost = 140
 		completion_reward = {
 			remove_ideas = RUS_idea_agrarian3
 			swap_ideas = {
@@ -491,7 +491,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = yes
 		available = {
 			has_war = no
@@ -514,7 +514,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			137 = {
@@ -541,7 +541,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 		}
-		cost = 10
+		cost = 70
 	}
 	
 	focus = {
@@ -558,7 +558,7 @@ focus_tree = {
 			focus = RUS_study_land_1857
 		}
 		available_if_capitulated = yes
-		cost = 10
+		cost = 70
 		completion_reward = {
 			navy_experience = 25
 		}
@@ -574,7 +574,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -592,7 +592,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_study_sea_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -613,7 +613,7 @@ focus_tree = {
 			focus = RUS_sea_research_1857
 			focus = RUS_land_research_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -639,7 +639,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_milyutin_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -660,7 +660,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_eu_army_1857
 		}
-		cost = 10
+		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
@@ -681,7 +681,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		available = {
 			has_war = no
@@ -700,7 +700,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_implement_greater_military_reforms
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = infantry_tech }
@@ -716,7 +716,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_implement_greater_military_reforms
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -738,7 +738,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reinstate_levy_conscription
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -756,7 +756,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reduce_conscription_years_from_25_to_6
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
@@ -775,7 +775,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_build_better_barracks_for_troops
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -793,7 +793,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_abolish_nobility_only_officers
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
@@ -812,7 +812,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_abolish_inhumane_punishment
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			army_experience = 25
@@ -828,7 +828,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_research_better_long_rifles
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
@@ -847,7 +847,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_appoint_aleksander_barantsov_as_arillery_director
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
@@ -863,7 +863,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_research_better_long_rifles
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 1.00 uses = 1 category = infantry_weapons }
@@ -879,7 +879,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_test_6_lines_rifles
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = land_doctrine }
@@ -895,7 +895,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_fund_nicholas_academy
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		available = {
 			date > 1865.01.01
@@ -916,7 +916,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_develop_berdan_rifle
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
@@ -932,7 +932,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_implement_greater_military_reforms
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -950,7 +950,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_introduce_longer_sabers
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
@@ -969,7 +969,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_increase_saddles_production
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
@@ -985,7 +985,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		available = {
 			has_war = no
@@ -1004,7 +1004,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_end_of_the_nesselrode_administration
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 49
 		}
@@ -1026,7 +1026,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_promote_gorchakov_to_foreign_minister
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 49
 		}
@@ -1080,7 +1080,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_la_russie_ne_boude_pas_elle_se_recueille
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			##do alska event chain
@@ -1096,7 +1096,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_end_of_the_nesselrode_administration
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 49
 		}
@@ -1118,7 +1118,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_promote_mikhail_to_finance_minister
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		available = {
 			has_political_power > 49
@@ -1141,7 +1141,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_promote_mikhail_to_finance_minister
 		}
-		cost = 10	
+		cost = 70	
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = 50
@@ -1160,7 +1160,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_re-introduce_brandy_excise_tax
 		}
-		cost = 10	
+		cost = 70	
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1178,7 +1178,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_end_of_the_nesselrode_administration
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1196,7 +1196,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_give_viktor_panin_title_of_count
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 149
 		}
@@ -1216,7 +1216,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_give_viktor_panin_title_of_count
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 149
 		}
@@ -1242,7 +1242,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_educate_the_serfs
 		}
-		cost = 10	
+		cost = 70	
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1266,7 +1266,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_push_for_alaska_sale
 		}
-		cost = 10	
+		cost = 70	
 		available_if_capitulated = no
 		completion_reward = {
 			add_timed_idea = {
@@ -1285,7 +1285,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_consolidate_foreign_ministry
 		}
-		cost = 10	
+		cost = 70	
 		available_if_capitulated = no
 		completion_reward = {
 		}
@@ -1300,7 +1300,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_begin_implementing_societal_reforms
 		}
-		cost = 20	
+		cost = 140	
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = 350
@@ -1316,7 +1316,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforming_the_imperial_government
 		}
-		cost = 10
+		cost = 70
 		available = {
 			NOT = {
 				has_idea = RUS_pushed_reforms
@@ -1341,7 +1341,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforms_pushed_by_finance
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 49
 		}
@@ -1363,7 +1363,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_establish_state_bank
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			
@@ -1386,7 +1386,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_finance_minister_fund_railroad_construction
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			
@@ -1407,7 +1407,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforms_pushed_by_finance
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1425,7 +1425,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_expand_silver_and_gold_reserves
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1443,7 +1443,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_use_reserves_to_increase_military_spending
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			every_owned_state = {
@@ -1461,7 +1461,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforming_the_imperial_government
 		}
-		cost = 10
+		cost = 70
 		available = {
 			NOT = {
 				has_idea = RUS_pushed_reforms
@@ -1486,7 +1486,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_rehabilitate_judicial_system
 		}
-		cost = 10
+		cost = 70
 		available = {
 			has_political_power > 99
 		}
@@ -1508,7 +1508,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_form_the_zemstva
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 		}
@@ -1523,7 +1523,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reform_court_systems_separate_jurisdiction
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = -100
@@ -1542,7 +1542,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforming_the_imperial_government
 		}
-		cost = 10
+		cost = 70
 		available = {
 			NOT = {
 				has_idea = RUS_pushed_reforms
@@ -1589,7 +1589,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_remove_trial_by_jury_for_political_crimes
 		}
-		cost = 10
+		cost = 70
 		available = {
 		}
 		available_if_capitulated = no
@@ -1610,7 +1610,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_reforming_the_imperial_government
 		}
-		cost = 10
+		cost = 70
 		available = {
 			NOT = {
 				has_idea = RUS_pushed_reforms
@@ -1635,7 +1635,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_push_education_reforms
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {
@@ -1657,7 +1657,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_vic_allow_universities_to_self_govern
 		}
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = {

@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Risorgimento
 		icon = GFX_goal_focus_resorgimento
-		cost = 10.00
+		cost = 70
 		bypass = { has_country_flag = PIE_Plombieres_Starts_Focus_Clear }
 		x = 8
 		y = 0
@@ -27,7 +27,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Political_Structure_Planning_FT
 		icon = GFX_focus_PIE_Politica_Structure
-		cost = 10.00
+		cost = 70
 		available = {
 			always = no
 		}
@@ -42,7 +42,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Accept_Confederation
 		icon = GFX_focus_PIE_Italian_Confederation
-		cost = 2.00
+		cost = 15.00
 		prerequisite = {
 			focus = PIE_Political_Structure_Planning_FT
 		}
@@ -60,7 +60,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Napoleon3_Help
 		icon = GFX_goal_generic_improve_relations
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = PIE_Risorgimento
 		}
@@ -87,7 +87,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Plombieres_Meeting
 		icon = GFX_focus_PIE_French_Ally
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = PIE_Napoleon3_Help
 		}
@@ -106,7 +106,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Casus_Belli_ft
 		icon = GFX_focus_PIE_Casus_Belli
-		cost = 10.00
+		cost = 70
 		available = {
 			always = no
 		}
@@ -120,7 +120,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Maintain_Control
 		icon = GFX_focus_PIE_Maintain_Control
-		cost = 2.00
+		cost = 15.00
 		prerequisite = {
 			focus = PIE_Political_Structure_Planning_FT
 		}
@@ -137,7 +137,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Start_Border_Operations
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 2.00
+		cost = 15.00
 		prerequisite = {
 			focus = PIE_Casus_Belli_ft
 		}
@@ -153,7 +153,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Military_Plan_FT
 		icon = GFX_focus_PIE_Military_Plan
-		cost = 10.00
+		cost = 70
 		available = {
 			always = no
 		}
@@ -167,7 +167,7 @@ focus_tree = {
 	focus = {
 		id = PIE_French_Aid
 		icon = GFX_focus_generic_little_entente
-		cost = 2.00
+		cost = 15.00
 		prerequisite = {
 			focus = PIE_Military_Plan_FT
 		}
@@ -183,7 +183,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Recruit_Nationalists
 		icon = GFX_focus_generic_military_academy
-		cost = 2.00
+		cost = 15.00
 		prerequisite = {
 			focus = PIE_Military_Plan_FT
 		}
@@ -199,7 +199,7 @@ focus_tree = {
 	focus = {
 		id = PIE_The_War_Starts
 		icon = GFX_focus_PIE_War_Starts
-		cost = 10.00
+		cost = 70
 		available = {
 			always = no
 		}
@@ -223,7 +223,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Annex_Central_Italian_States
 		icon = GFX_focus_PIE_Army_Officer
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = PIE_The_War_Ends
 		}
@@ -243,7 +243,7 @@ focus_tree = {
 	focus = {
 		id = PIE_The_War_Ends
 		icon = GFX_focus_PIE_War_Ends
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = PIE_French_Army_Arrives
 		}
@@ -281,7 +281,7 @@ focus_tree = {
 	focus = {
 		id = PIE_French_Army_Arrives
 		icon = GFX_focus_PIE_French_Army
-		cost = 1.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_The_War_Starts
 		}
@@ -297,7 +297,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Occupy_Central_Italy
 		icon = GFX_focus_PIE_Maintain_Control
-		cost = 1.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_The_War_Starts
 		}
@@ -314,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Garibali_Sicily_Expedition 
 		icon = GFX_focus_PIE_Garibaldi_Expedition
-		cost = 1.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Annex_Central_Italian_States
 		}
@@ -343,7 +343,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Form_Italy
 		icon = GFX_goal_focus_form_italy
-		cost = 10.00
+		cost = 70
 		prerequisite = {
 			focus = PIE_Garibali_Sicily_Expedition
 		}
@@ -462,7 +462,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Agricultural_Focus
 		icon = GFX_focus_ITA_Farms
-		cost = 5.00
+		cost = 35.00
 		x = 19
 		y = 0
 
@@ -508,7 +508,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Military_Focus
 		icon = GFX_focus_generic_military_mission
-		cost = 5.00
+		cost = 35.00
 		x = 25
 		y = 0
 
@@ -522,7 +522,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Reliance_on_Farming
 		icon = GFX_focus_ITA_Wheat
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Agricultural_Focus
 		}
@@ -537,7 +537,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Industrializing 
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Reliance_on_Farming
 		}
@@ -555,7 +555,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Develop_Mines
 		icon = GFX_goal_generic_construction2
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Industrializing 
 		}
@@ -575,7 +575,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Exports_to_America
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Industrializing 
 		}
@@ -591,7 +591,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Increased_Exports
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Exports_to_America
 		}
@@ -607,7 +607,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Army_Focus
 		icon = GFX_focus_generic_commonwealth_build_infantry
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Military_Focus
 		}
@@ -651,7 +651,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Lessons_from_the_Crimean_War
 		icon = GFX_focus_chi_army_reform
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Army_Focus
 		}
@@ -675,7 +675,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Increased_Conscription 
 		icon = GFX_focus_generic_military_mission
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Lessons_from_the_Crimean_War
 		}
@@ -690,7 +690,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Develop_Lumber
 		icon = GFX_goal_generic_construct_civilian
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Develop_Mines
 		}
@@ -715,7 +715,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Develop_Iron_Works
 		icon = GFX_focus_generic_steel
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Develop_Lumber
 		}
@@ -740,7 +740,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Naval_Focus
 		icon = GFX_focus_generic_navy_battleship2
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Military_Focus
 		}
@@ -784,7 +784,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Naval_Research
 		icon = GFX_focus_research
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Naval_Focus
 		}
@@ -803,7 +803,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Increase_Naval_Production
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Naval_Research
 		}
@@ -847,7 +847,7 @@ focus_tree = {
 	focus = {
 		id = PIE_Increased_Military_Production
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5.00
+		cost = 35.00
 		prerequisite = {
 			focus = PIE_Increased_Conscription 
 		}
