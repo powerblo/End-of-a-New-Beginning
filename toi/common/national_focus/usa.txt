@@ -73,15 +73,17 @@ focus_tree = {
 		cost = 10.00
 		x = 25
 		y = 0
-			available = {
-					OR = {
-							has_country_flag = USASoaring_Eagle
-							has_country_flag = USABroken_Eagle
-						}
-				}
-			completion_reward = {
-					add_political_power = 50
-				}
+		available = {
+			OR = {
+				has_country_flag = USASoaring_Eagle
+				has_country_flag = USABroken_Eagle
+			}
+			has_war = no
+			has_completed_focus = USA_reform_the_union_army
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
 
 	}
 	focus = {
@@ -267,22 +269,6 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-					random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
 				}
 
 	}
@@ -354,22 +340,6 @@ focus_tree = {
 						}
 				}
 			completion_reward = {
-					random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = arms_factory
-									level = 1
-									instant_build = yes
-								}
-						}
-					random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = arms_factory
-									level = 1
-									instant_build = yes
-								}
-						}
 					random_owned_controlled_state = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
@@ -1205,9 +1175,9 @@ focus_tree = {
 		}
 		x = 21
 		y = 1
-			available = {
-					has_country_flag = USABroken_Eagle
-				}
+		available = {
+				has_country_flag = USABroken_Eagle
+			}
 
 	}
 	focus = {
@@ -2398,7 +2368,7 @@ focus_tree = {
 		x = 8
 		y = 6
 			completion_reward = {
-					358 = {
+					954 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = dockyard
@@ -3345,18 +3315,21 @@ focus_tree = {
 		x = 29
 		y = 8
 			completion_reward = {
-					add_political_power = 25
-					if = {
-							limit = {
-									369 = {
-											NOT = {
-													is_core_of = USA
-												}
-										}
-								}
-							add_state_core = 369
-						}
+				add_political_power = 25
+				if = {
+					limit = {
+						has_country_flag = USA_Radical_Coup
+					}
+					remove_state_claim = 369
+					add_state_core = 369
+					remove_state_claim = 373
+					add_state_core = 373
+					remove_state_claim = 746
+					add_state_core = 746
+					remove_state_claim = 361
+					add_state_core = 361
 				}
+			}
 
 	}
 	focus = {
@@ -3702,14 +3675,6 @@ focus_tree = {
 		}
 		x = 23
 		y = 11
-			available = {
-					NOT = {
-							has_country_flag = USA_loss_social
-						}
-					NOT = {
-							has_country_flag = USA_loss_monarch
-						}
-				}
 			completion_reward = {
 					add_popularity = {
 							ideology = centrism
@@ -3727,14 +3692,6 @@ focus_tree = {
 		}
 		x = 19
 		y = 11
-			available = {
-					NOT = {
-							has_country_flag = USA_loss_social
-						}
-					NOT = {
-							has_country_flag = USA_loss_monarch
-						}
-				}
 			completion_reward = {
 					add_popularity = {
 							ideology = centrism
@@ -3755,14 +3712,6 @@ focus_tree = {
 		}
 		x = 21
 		y = 12
-			available = {
-					NOT = {
-							has_country_flag = USA_loss_social
-						}
-					NOT = {
-							has_country_flag = USA_loss_monarch
-						}
-				}
 			completion_reward = {
 					custom_effect_tooltip = 12_USA_tt
 					custom_effect_tooltip = 16_USA_tt
@@ -3924,12 +3873,6 @@ focus_tree = {
 		x = 21
 		y = 10
 			available = {
-					NOT = {
-							has_country_flag = USA_loss_social
-						}
-					NOT = {
-							has_country_flag = USA_loss_monarch
-						}
 				}
 			completion_reward = {
 					add_political_power = 25

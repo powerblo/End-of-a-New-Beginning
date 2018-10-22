@@ -1,6 +1,6 @@
 ﻿add_namespace = usa_election
 #THE 1860 AND 1864 ELECTIONS ARE IN THE REGULAR USA EVENTS
-#Election of 1860
+#Election of 1868
 country_event = {
 		id = usa_election.1
 		title = usa_election.1.t
@@ -19,6 +19,12 @@ country_event = {
 		trigger = {
 			TAG = USA
 			date > 1868.11.2
+			NOT = {
+				has_government = autocracy
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				has_government = anarchism
+			}
 		}
 
 		mean_time_to_happen = { days = 2 }

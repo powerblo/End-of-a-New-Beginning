@@ -1737,7 +1737,7 @@ country_event = {
 		option = {
 				name = usa.10.a
 				ai_chance = {
-					factor = 75
+					factor = 60
 				}
 				swap_ideas = {
 					remove_idea = american_slavery_tension_6
@@ -1774,7 +1774,7 @@ country_event = {
 		option = {
 				name = usa.10.c
 				ai_chance = {
-					factor = 15
+					factor = 30
 					modifier = {
                     	factor = 0
                     	is_historical_focus_on = yes
@@ -1848,10 +1848,7 @@ country_event = {
 		
 		trigger = {
 			tag = USA
-			OR = {
-				has_country_flag = USA_LincolnElected
-				has_country_flag = USA_BreckinridgeElected
-			}
+			has_country_flag = USA_LincolnElected
 			date > 1861.3.4
 			NOT = { has_country_flag = CheaterDefeater }
 			NOT = { has_country_flag = CheaterDefeated }
@@ -1914,7 +1911,15 @@ country_event = {
 		
 		option = {
 			name = usa.14.a
-			load_oob = USA_CIVIL_WAR
+			if = {
+				limit = {
+					has_country_flag = USA_Radical_Coup
+				}
+				load_oob = USA_CIVIL_WAR_RADICAL
+			}
+			else = {
+				load_oob = USA_CIVIL_WAR
+			}
 		}
 }
 #Plead for Peace
@@ -2560,7 +2565,11 @@ country_event = {
         }
         desc =  {
             text = usa.36.d_b
-            trigger = { has_country_flag = USA_BreckinridgeElected }
+            trigger = { has_country_flag = USA_Radical_Coup }
+        }
+        desc =  {
+            text = usa.36.d_c
+            trigger = { has_government = radical_democracy }
         }
 		picture = report_event_election_vote
 
@@ -2570,6 +2579,12 @@ country_event = {
 			TAG = USA
 			has_war_with = CSA
 			CSA = { exists = yes }
+			NOT = {
+				has_government = autocracy
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				has_government = anarchism
+			}
 			date > 1864.11.8
 		}
 		
@@ -2696,6 +2711,24 @@ country_event = {
 			set_party_name = { ideology = traditional_conservatism long_name = USA_copperhead_democrats name = USA_copperhead_democrats }
 			hidden_effect = { USA = { country_event = { days = 175 id = usa.37 } } }
 		}
+		option = {
+			name = usa.36.e
+			trigger = {
+				has_country_flag = USA_Radical_Coup
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+		option = {
+			name = usa.36.f
+			trigger = {
+				has_government = radical_democracy
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
 }
 #McClellan Inaugerated
 country_event = {
@@ -2725,18 +2758,7 @@ country_event = {
 country_event = {
 		id = usa.38
 		title = usa.38.t
-		desc = {
-            text = usa.38.d
-            trigger = { has_country_flag = USA_LincolnElected }
-        }
-        desc =  {
-            text = usa.38.d_a
-            trigger = { has_country_flag = USA_DouglasElected }
-        }
-        desc =  {
-            text = usa.36.d_b
-            trigger = { has_country_flag = USA_BreckinridgeElected }
-        }
+		desc = usa.38.d
 		picture = GFX_report_event_election_vote
 		
 		fire_only_once = yes
@@ -2746,6 +2768,12 @@ country_event = {
 			OR = {
 				CSA = { exists = no }
 				NOT = { has_war_with = CSA }
+			}
+			NOT = {
+				has_government = autocracy
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				has_government = anarchism
 			}
 			date > 1864.11.8
 		}
@@ -2790,6 +2818,24 @@ country_event = {
             set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
             set_country_flag = USA_Pendleton_Elected
             hidden_effect = { USA = { country_event = { days = 175 id = usa.39 } } }
+		}
+		option = {
+			name = usa.38.e
+			trigger = {
+				has_country_flag = USA_Radical_Coup
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+		option = {
+			name = usa.38.f
+			trigger = {
+				has_government = radical_democracy
+			}
+			ai_chance = {
+				factor = 1000
+            }
 		}
 }
 #Pendleton Inaugerated
@@ -2927,8 +2973,18 @@ country_event = {
 			add_political_power = -5
 			add_popularity = {
 				ideology = autocracy
+				popularity = 0.02
+			}
+		}
+		option = {
+			name = usa.43.b
+			add_political_power = -25
+			add_manpower = -1000
+			add_popularity = {
+				ideology = autocracy
 				popularity = 0.01
 			}
+			hidden_effect = { country_event = { id = usa.70 days = 80 } }
 		}
 }
 ##Reconstruction Era##
@@ -3932,6 +3988,299 @@ country_event = {
 			remove_ideas = USA_UtahWar_2
 		}
 }
+#USA Anti-Irish Sentiment goes down ACW
+country_event = {
+		id = usa.67
+		title = usa.67.t
+		desc = {
+			text = usa.67.d
+			trigger = { has_war_with = CSA }
+		}
+		desc = {
+			text = usa.67.d_nowar
+			trigger = { date > 1870.1.1 }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			has_idea = USA_Anti_Irish
+			OR = {
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+				AND = {
+					tag = USA
+					date > 1870.1.1
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.67.a
+			if = {
+				limit = {
+					has_war_with = CSA
+				}
+				swap_ideas = {
+					remove_idea = USA_Anti_Irish
+					add_idea = USA_Anti_Irish_ACW
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = USA_Anti_Irish
+					add_idea = USA_Anti_Irish_2
+				}
+			}
+		}
+}
+#USA Anti-Irish Sentiment returns to normal
+country_event = {
+		id = usa.68
+		title = usa.68.t
+		desc = usa.68.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_Anti_Irish_ACW
+			has_war = no
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.67.a
+			swap_ideas = {
+				remove_idea = USA_Anti_Irish_ACW
+				add_idea = USA_Anti_Irish_2
+			}
+		}
+}
+#USA Anti-Irish Sentiment not an issue anymore
+country_event = {
+		id = usa.69
+		title = usa.69.t
+		desc = usa.69.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_Anti_Irish_2
+			date > 1890.1.1
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.69.a
+			remove_ideas = USA_Anti_Irish_2
+		}
+}
+#Norton Event Chain - Mutinies?
+country_event = {
+		id = usa.70
+		title = usa.70.t
+		desc = usa.70.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.70.a
+			hidden_effect = { country_event = { id = usa.71 days = 40 } }
+		}
+		option = {
+			name = usa.70.b
+			add_political_power = -25
+			hidden_effect = { country_event = { id = usa.72 days = 40 } }
+		}
+}
+#Army Mutinies!
+country_event = {
+		id = usa.71
+		title = usa.71.t
+		desc = usa.71.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.71.a
+			add_political_power = -5
+			add_stability = -0.05
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.77 days = 30 } }
+		}
+		option = {
+			name = usa.71.b
+			add_political_power = -50
+			add_stability = -0.05
+			add_manpower = -1000
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			set_country_flag = USA_Norton_Mutiny
+			hidden_effect = { country_event = { id = usa.72 days = 80 } }
+		}
+}
+#Norton Mutiny No Longer an Issue
+country_event = {
+		id = usa.72
+		title = usa.72.t
+		desc = {
+			text = usa.72.d
+			trigger = { NOT = { has_country_flag = USA_Norton_Mutiny } }
+		}
+		desc = {
+			text = usa.72.d_mutiny
+			trigger = { has_country_flag = USA_Norton_Mutiny }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.72.a
+			add_political_power = 10
+			add_manpower = 500
+			add_popularity = {
+				ideology = autocracy
+				popularity = -0.01
+			}
+		}
+}
+#Modern Times suffers from Panic of 1857
+country_event = {
+		id = usa.73
+		title = usa.73.t
+		desc = usa.73.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_1857Panic
+		}
+
+		mean_time_to_happen = {
+			days = 50
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.73.a
+			add_political_power = -10
+		}
+		option = {
+			name = usa.73.b
+			hidden_effect = { country_event = { id = usa.74 days = 460 } }
+		}
+}
+#Modern Times community complains about restriction to work
+country_event = {
+		id = usa.74
+		title = usa.74.t
+		desc = usa.74.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.74.a
+			add_political_power = -20
+			hidden_effect = { country_event = { id = usa.76 days = 40 } }
+		}
+		option = {
+			name = usa.74.b
+			hidden_effect = { country_event = { id = usa.75 days = 80 } }
+		}
+}
+#Modern Times Community radicalizes
+country_event = {
+		id = usa.75
+		title = usa.75.t
+		desc = usa.75.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.75.a
+			add_political_power = -5
+			add_stability = -0.05
+			set_country_flag = USA_Manhattan_Marked_ACW
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.78 days = 30 } }
+		}
+		option = {
+			name = usa.75.b
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.76 days = 150 } }
+		}
+}
+#Modern Times Community calms
+country_event = {
+		id = usa.76
+		title = usa.76.t
+		desc = usa.76.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.76.a
+			add_political_power = 10
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.01
+			}
+		}
+}
+#Norton Grows Powerful
+country_event = {
+		id = usa.77
+		title = usa.77.t
+		desc = usa.77.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.77.a
+			set_country_flag = USA_Norton_Marked_ACW
+		}
+}
+#Modern Times Grows Powerful
+country_event = {
+		id = usa.78
+		title = usa.78.t
+		desc = usa.78.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.78.a
+			set_country_flag = USA_Manhattan_Marked_ACW
+		}
+}
+
 
 #News Events
 
@@ -4021,6 +4370,15 @@ news_event = {
     			  eoanb_trait_patriotic_orator
     			}
   			}
+  			create_country_leader = {
+			    name = "John C. Frémont"
+			    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+			    picture = "Portrait_USA_John_C_Fremont.dds"
+			    expire = "1886.5.2"
+			    ideology = liberal_social
+			    traits = {
+			    }
+			  }
 		}
 }
 #1860 Election - Lincoln
@@ -4109,7 +4467,7 @@ news_event = {
 		title = usa_news.7.t
 		desc = usa_news.7.d
 
-		picture = GFX_news_event_south_carolina
+		picture = GFX_news_event_acw_radical_coup
 
 		major = yes
 

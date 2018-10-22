@@ -44,12 +44,13 @@
     USA_UtahWar
     USA_Buchanan_Corruption
     USA_Westpoint1
+    USA_Anti_Irish
   }
 
   set_politics = {
     parties = {
       anarchism = {
-        popularity = 0
+        popularity = 1
       }
       vanguard_communism = {
         popularity = 0
@@ -64,7 +65,7 @@
         popularity = 30
       }
       traditional_conservatism = {
-        popularity = 66
+        popularity = 65
       }
       radical_democracy = {
         popularity = 0
@@ -198,9 +199,19 @@
   create_country_leader = {
     name = "John C. Frémont"
     desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    picture = "Portrait_USA_Abraham_Lincoln.dds"
+    picture = "Portrait_USA_John_C_Fremont.dds"
     expire = "1886.5.2"
     ideology = conserv_liberal
+    traits = {
+    }
+  }
+
+  create_country_leader = {
+    name = "Joshua Warren"
+    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    picture = ""
+    expire = "1886.5.2"
+    ideology = anarchism_sub
     traits = {
     }
   }
