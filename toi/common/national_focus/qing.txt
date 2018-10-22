@@ -719,7 +719,11 @@ logistics_skill = 3
       focus = CHI_Self_Strengthening_Movement
     }
 		completion_reward = {
-			#
+		add_tech_bonus = {
+	bonus = 0.5
+	uses = 1
+	category = naval_doctrine
+}
 		}
 	}
 	focus = {
@@ -787,7 +791,11 @@ logistics_skill = 3
       focus = CHI_Foochow_Shipbuilding_Institution
     }
 	 completion_reward = {
-				#
+	 add_tech_bonus = {
+ bonus = 0.5
+ uses = 2
+ category = naval_doctrine
+}
 		}
 	}
 	focus = {

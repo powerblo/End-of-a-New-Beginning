@@ -7,7 +7,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -26,7 +30,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -45,7 +53,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -64,7 +76,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -82,7 +98,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -101,7 +121,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -120,7 +144,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -139,7 +167,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -158,7 +190,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -177,7 +213,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -189,15 +229,76 @@ ideas = {
 				generate_wargoal_tension = 0.15
 			}
 		}
+		USA_Anti_Irish = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+			
+			modifier = {
+				stability_factor = -0.04
+				conscription_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		USA_Anti_Irish_2 = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = saf_history_of_segregation
+			
+			modifier = {
+				stability_factor = -0.02
+				conscription_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+		USA_Anti_Irish_ACW = {
+
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+			}
+		}
 		USA_Westpoint1 = {
 
 			allowed = {
 				TAG = USA
 			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
 
-			picture = generic_infantry_bonus
+			picture = USA_westpoint_napoleonic_thought
 			
 			modifier = {
 				experience_gain_army = -0.01
@@ -210,9 +311,13 @@ ideas = {
 				TAG = USA
 			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
 
-			picture = generic_infantry_bonus
+			picture = USA_westpoint_napoleonic_thought
 			
 			modifier = {
 				experience_gain_army = -0.005
@@ -220,8 +325,13 @@ ideas = {
 			}
 		}
 		USA_UtahWar = {
+
 			allowed = {
 				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = no
 			}
 			
 			removal_cost = -1
@@ -237,6 +347,10 @@ ideas = {
 			allowed = {
 				TAG = USA
 			}
+
+			allowed_civil_war = {
+				always = no
+			}
 			
 			removal_cost = -1
 			
@@ -250,6 +364,10 @@ ideas = {
 		USA_Buchanan_Corruption = {
 			allowed = {
 				TAG = USA
+			}
+
+			allowed_civil_war = {
+				has_government = traditional_conservatism
 			}
 			
 			removal_cost = -1
@@ -267,6 +385,14 @@ ideas = {
 			allowed = {
 				TAG = USA
 			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
+			}
 			
 			removal_cost = -1
 			
@@ -283,6 +409,10 @@ ideas = {
 			allowed = {
 				TAG = USA
 			}
+
+			allowed_civil_war = {
+				always = yes
+			}
 			
 			removal_cost = -1
 			
@@ -296,6 +426,10 @@ ideas = {
 		USA_first_recoveries_2 = {
 			allowed = {
 				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -315,7 +449,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -336,7 +474,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -357,7 +499,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -378,7 +524,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -398,7 +548,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -418,7 +572,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -438,7 +596,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -456,7 +618,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -476,7 +642,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -495,7 +665,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -516,7 +690,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -535,7 +713,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -555,7 +737,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -575,7 +761,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -595,7 +785,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -618,7 +812,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -638,7 +836,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -658,7 +860,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -681,7 +887,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -699,7 +909,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -718,7 +932,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -738,7 +956,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -757,7 +979,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -777,7 +1003,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -798,7 +1028,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -818,7 +1052,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -842,7 +1080,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -863,7 +1105,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -884,7 +1130,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -905,7 +1155,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -925,7 +1179,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -945,7 +1203,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -965,7 +1227,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -985,7 +1251,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1005,7 +1275,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1025,7 +1299,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1044,7 +1322,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1064,7 +1346,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1083,7 +1369,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1102,7 +1392,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1121,7 +1415,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1140,7 +1438,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1159,7 +1461,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1181,7 +1487,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1199,7 +1509,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1217,7 +1531,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1238,7 +1556,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1255,7 +1577,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1273,7 +1599,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1291,7 +1621,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1309,7 +1643,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1327,7 +1665,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1
@@ -1345,7 +1687,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = autocracy
+					has_government = radical_democracy
+					has_government = national_populism
+				}
 			}
 
 			removal_cost = -1

@@ -94,3 +94,31 @@ USA_ACW_incompetent_military = {
 	}
 
 }
+USA_ACW_fsa_isa_mhc = {
+	enable = {
+		has_war_with = USA
+		USA = { has_country_flag = USA_Radical_Coup }
+		has_war_together_with = ROOT
+	}
+
+	abort = {
+		NOT = {
+			has_war_with = USA
+			USA = { has_country_flag = USA_Radical_Coup }
+			has_war_together_with = ROOT
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ROOT
+		value = -50
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = ROOT
+		value = -50
+	}
+
+}

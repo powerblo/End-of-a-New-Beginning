@@ -3,7 +3,7 @@ GER_unite_liberal = {
 	#Unite Germany (Liberal)
 	eoanb_decision_GER_liberal_unite = {
 
-		icon = generic_political_discourse
+		icon = generic_form_nation
 
 		available = {
 			custom_trigger_tooltip = {
@@ -57,7 +57,7 @@ GER_unite_bismarck = {
 	#Unite Germany (Bismarck)
 	eoanb_decision_GER_bismarck_unite = {
 
-		icon = generic_political_discourse
+		icon = generic_form_nation
 
 		available = {
 			custom_trigger_tooltip = {
@@ -108,7 +108,7 @@ GER_unite_socialist = {
 	#Unite Germany (Socialist)
 	eoanb_decision_GER_socialist_unite = {
 
-		icon = generic_political_discourse
+		icon = generic_form_nation
 
 		available = {
 			custom_trigger_tooltip = {
@@ -161,7 +161,7 @@ political_actions = {
 	#Core Land that is not German after unification
 	eoanb_decision_GER_core_united_reich = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -236,7 +236,7 @@ political_actions = {
 	#Unify Germany (Non FT Version)
 	eoanb_decision_GER_unify_germany_alternative = {
 
-		icon = generic_political_discourse
+		icon = generic_form_nation
 
 		available = {
 			date > 1870.1.1
@@ -377,12 +377,13 @@ political_actions = {
 	}
 
 }
+
 GER_category_kiel_canal = {
 	
 	#Start preparations for a canal
 	eoanb_decision_GER_kiel_canal_preparations = {
 
-		icon = generic_political_discourse
+		icon = generic_construction
 
 		available = {
 			has_tech = tech_projects_kiel_canal_preparations
@@ -437,7 +438,7 @@ GER_category_kiel_canal = {
 	#Kiel - Rendsburg Section
 	eoanb_decision_GER_kiel_canal_section1 = {
 
-		icon = generic_political_discourse
+		icon = generic_construction
 
 		available = {
 			has_tech = tech_projects_kiel_canal_kiel_rendsburg
@@ -478,7 +479,7 @@ GER_category_kiel_canal = {
 	#Rendsburg - Cuxhaven Section
 	eoanb_decision_GER_kiel_canal_section2 = {
 
-		icon = generic_political_discourse
+		icon = generic_construction
 
 		available = {
 			has_tech = tech_projects_kiel_canal_rendsburg_cuxhaven
@@ -518,12 +519,13 @@ GER_category_kiel_canal = {
 	}
 	
 }
+
 GER_category_fortress_status = {
 	
 	#Fortress in Stettin
 	eoanb_decision_GER_fortress_stettin = {
 
-		icon = generic_political_discourse
+		icon = generic_industry
 
 		available = {
 			owns_state = 62
@@ -559,7 +561,7 @@ GER_category_fortress_status = {
 	#Fortress in Minden
 	eoanb_decision_GER_fortress_minden = {
 
-		icon = generic_political_discourse
+		icon = generic_industry
 
 		available = {
 			owns_state = 57
@@ -595,7 +597,7 @@ GER_category_fortress_status = {
 	#Fortress in Kosel
 	eoanb_decision_GER_fortress_kosel = {
 
-		icon = generic_political_discourse
+		icon = generic_industry
 
 		available = {
 			owns_state = 58
@@ -631,7 +633,7 @@ GER_category_fortress_status = {
 	#Fortress in Erfurt
 	eoanb_decision_GER_fortress_erfurt = {
 
-		icon = generic_political_discourse
+		icon = generic_industry
 
 		available = {
 			owns_state = 948
@@ -667,7 +669,7 @@ GER_category_fortress_status = {
 	#Fortress in Glatz
 	eoanb_decision_GER_fortress_glatz = {
 
-		icon = generic_political_discourse
+		icon = generic_industry
 
 		available = {
 			owns_state = 66
@@ -698,6 +700,148 @@ GER_category_fortress_status = {
 		ai_will_do = {
 			base = 1000
 		}
+	}
+	
+}
+
+GER_category_war_in_sight = {
+	
+	#The Crisis
+	eoanb_decision_GER_crisis_warinsight = {
+		
+		icon = generic_operation
+		
+		#Only Germany can see this crisis
+		allowed = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+		}
+		
+		#The Conditions to avoid the war
+		available = {
+			has_country_flag = eoanb_flag_GER_defused_warinsight
+			OR = {
+				has_war_support < 0.8
+				threat > 0.25
+			}
+		}
+		
+		#Crisis appears under these conditions
+		activation = {
+			date > 1875.4.7
+			country_exists = FRA
+			PRS_trigger_formed_germany = yes
+			TAG = PRS
+			NOT = { PRS = { has_war_with = FRA } }
+			NOT = { PRS = { has_non_aggression_pact_with = FRA } }
+			NOT = { PRS = { is_subject_of = FRA } }
+			NOT = { FRA = { is_subject_of = PRS } }
+		}
+		
+		#Crisis, not a mission
+		is_good = no
+		
+		#Crisis will escalate after 90 days unless defused
+		days_mission_timeout = 90
+		
+		#Unless stopped, crisis will lead to war
+		timeout_effect = {
+			if = {
+				limit = {
+					has_war_support < 0.8
+				}
+				add_war_support = 0.1
+			}
+			if = {
+				limit = {
+					country_exists = ENG
+					ENG = { has_stability > 0.2 }
+					ENG = { has_war_support > 0.2 }
+					NOT = { ENG = { has_war_with = FRA } }
+				}
+				ENG = { give_guarantee = FRA }
+			}
+			if = {
+				limit = {
+					country_exists = RUS
+					RUS = { has_stability > 0.2 }
+					RUS = { has_war_support > 0.2 }
+					NOT = { RUS = { has_war_with = FRA } }
+				}
+				RUS = { give_guarantee = FRA }
+			}
+			declare_war_on = {
+				target = FRA
+				type = contain_wargoal
+			}
+			add_named_threat = { 
+				threat = 10 
+				name = eoanb_threat_germany_expanding_rapidly
+			}
+		}
+		
+		#Germany gains stability if war is avoided, relations improve a bit
+		complete_effect = {
+			add_political_power = 20
+			add_stability = 0.05
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_GER_crisis_warinsight_goodover }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_GER_crisis_warinsight_goodover }
+			add_named_threat = { 
+				threat = -2
+				name = eoanb_threat_germany_nonaggressive_france
+			}
+			hidden_effect = {
+				clr_country_flag = eoanb_flag_GER_defused_warinsight
+			}
+		}
+		
+		#After the crisis, these modifiers apply to Germany temporarily
+		modifier = {
+			stability_weekly = -0.01
+			political_power_gain = -0.1
+		}
+		
+		#AI will always avoid the crisis if possible, unless historical mode is off in which case it decides itself
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0.001
+				is_historical_focus_on = no
+			}
+		}
+		
+	}
+	
+	#Defuse the Crisis
+	eoanb_decision_GER_defuse_warinsight = {
+		
+		icon = generic_decision
+
+		available = {
+			has_active_mission = eoanb_decision_GER_crisis_warinsight
+		}
+
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			has_active_mission = eoanb_decision_GER_crisis_warinsight
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_GER_defuse_warinsight
+			hidden_effect = {
+				set_country_flag = eoanb_flag_GER_defused_warinsight
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		
 	}
 	
 }
