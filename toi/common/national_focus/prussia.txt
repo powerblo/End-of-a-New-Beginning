@@ -345,7 +345,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_resource = { type = steel amount = 16 state = 51 }
+			add_resource = { type = iron amount = 12 state = 51 }
 		}
 	}
 	
@@ -368,8 +368,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_resource = { type = steel amount = 8 state = 66 }
-			add_resource = { type = steel amount = 8 state = 67 }
+			add_resource = { type = iron amount = 6 state = 66 }
+			add_resource = { type = iron amount = 6 state = 67 }
 		}
 	}
 	
@@ -809,7 +809,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_war_theory
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_focus_prussian_militarism
 		x = 20
 		y = 5
 		cost = 10
@@ -1311,7 +1311,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_bismarck_cabinet
 			hidden_effect = {
-			
+				#
 			}
 		}
 	}
@@ -1458,7 +1458,9 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_realpolitik }
 		
 		completion_reward = {
-			custom_effect_tooltip = PRS_focus_tt_foreign_bismarck
+			add_political_power = 120
+			add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_bismarck_foreign }
+			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_PRS_focus_bismarck_foreign }
 		}
 	}
 	
@@ -2203,15 +2205,7 @@ focus_tree = {
 				tooltip = eoanb_trigger_tt_unlock_GER_ft	
 			}
 			hidden_trigger = {
-				OR = {
-					has_cosmetic_tag = PRS_GER_bismarck
-					has_cosmetic_tag = PRS_GER_liberal
-					has_cosmetic_tag = PRS_GER_socialist
-					has_cosmetic_tag = PRS_GER_bismarck_imperial
-					has_cosmetic_tag = PRS_GER_bismarck_standard
-					has_cosmetic_tag = PRS_GER_bismarck_hre
-					has_cosmetic_tag = PRS_GER_bismarck_national
-				}
+				PRS_trigger_formed_germany = yes
 			}
 		}
 		

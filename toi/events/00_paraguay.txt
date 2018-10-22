@@ -112,7 +112,6 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-			date > 1863.8.4
 		     ARG = {
 			has_government = centrism
 			}
@@ -131,4 +130,118 @@ country_event = {
  }
 			
 		}
+		
+country_event = {
+		id = par.5
+		title = par.5.t
+		desc = par.5.d
+		picture = GFX_report_event_governmentpar
+		fire_only_once = yes
+		
+		trigger = {
+            BRA = {
+			has_completed_focus	= BRA_challenge_the_blanco_government
+			}
+			}
+
+		
+		option = {
+			name = par.5.a
+		   trigger = {
+				tag = PAR
+			}
+			custom_effect_tooltip = PAR_custom_effect_paraguay4
+			hidden_effect = {
+			load_oob = PAR_reinforcements2
+			add_state_claim = 1036
+			add_state_claim = 503
+			add_state_claim = 502
+			add_war_support = 0.05
+			add_opinion_modifier = {
+    target = BRA
+    modifier = protest_action_strong
+}
+			}
+ }
+ 
+option = {
+			name = par.5.b
+			trigger = {
+				tag = BRA
+			}
+			add_war_support = 0.02
+			add_opinion_modifier = {
+    target = PAR
+    modifier = protest_action_strong
+}
+			}
+ }
+ 
+ country_event = {
+		id = par.6
+		title = par.6.t
+		desc = par.6.d
+		fire_only_once = yes
+		
+		trigger = {
+            BRA = {
+			has_completed_focus	= BRA_direct_intervention
+			}
+			}
+
+		
+		option = {
+			name = par.6.a
+			every_country = { country_event = par.7 }
+			}
+ }
+ 
+
+ 
+ 
+ country_event = {
+		id = par.7
+		title = par.7.t
+		desc = par.7.d
+		picture = GFX_report_event_parwar
+		fire_only_once = yes
+		
+		
+		option = {
+			name = par.7.a
+		   trigger = {
+				tag = PAR
+			}
+			custom_effect_tooltip = PAR_custom_effect_paraguay5
+			hidden_effect = {
+			load_oob = PAR_reinforcements3
+	declare_war_on = {
+    target = BRA
+    type = annex_everything
+}
+add_ideas = PAR_not_one_step_back
+}
+			}
+ 
+ 
+option = {
+			name = par.7.b
+			trigger = {
+				tag = BRA
+			}
+			add_war_support = 0.02
+		    
+			}
+	option = {
+			name = par.7.c
+			trigger = {
+			NOT = {	tag = BRA
+			tag = PAR
+			}
+			}
+			}		
+			
+ }
+			
+
 

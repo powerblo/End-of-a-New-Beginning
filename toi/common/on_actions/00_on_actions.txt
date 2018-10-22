@@ -157,6 +157,123 @@ on_actions = {
 				FROM = { country_event = { id = contain.1 days = 0 } }
 				ROOT = { clr_country_flag = containment_starter }
 			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = no }
+					MHC = { exists = no }
+				}
+				ROOT = { drop_cosmetic_tag = yes }
+				CAL = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.47 }
+				news_event = { id = acw_news.13 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = yes }
+				}
+				declare_war_on = {
+					target = CAL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					MHC = { exists = yes }
+				}
+				declare_war_on = {
+					target = MHC
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = no }
+					MHC = { exists = no }
+				}
+				ROOT = { drop_cosmetic_tag = yes }
+				NEG = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.55 }
+				news_event = { id = acw_news.15 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = yes }
+				}
+				declare_war_on = {
+					target = NEG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					MHC = { exists = yes }
+				}
+				declare_war_on = {
+					target = MHC
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = no }
+					CAL = { exists = no }
+				}
+				CAL = { drop_cosmetic_tag = yes }
+				NEG = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.56 }
+				news_event = { id = acw_news.16 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = yes }
+				}
+				declare_war_on = {
+					target = NEG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = yes }
+				}
+				declare_war_on = {
+					target = CAL
+					type = annex_everything
+				}
+			}
 		}
 	}
 	

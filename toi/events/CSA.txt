@@ -237,7 +237,17 @@ country_event = {
         	add_state_claim = 375
         	hidden_effect = { CSA = { country_event = { id = csa.6 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
-			hidden_effect = { CSA = { country_event = { days = 5 id = csa.7 } } }
+			hidden_effect = {
+				if = {
+					limit = {
+						USA = { has_country_flag = USA_Radical_Coup }
+					}
+					USA = { country_event = { days = 2 id = acw.45 } }
+				}
+				else = {
+					USA = { country_event = { days = 5 id = csa.7 } }
+				}
+			}
 		}
 		option = {
 			trigger = {
@@ -298,15 +308,6 @@ country_event = {
         	remove_state_core = 363
         	add_state_claim = 363
         	363 = { add_core_of = CSA }
-        	if = {
-        		limit = {
-        			USA = { has_country_flag = USA_BreckinridgeElected }
-        		}
-        		CSA = { transfer_state = 369 }
-        		remove_state_core = 369
-        		add_state_claim = 369
-        		add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
-        	}
 			name = csa.1.a
 			hidden_effect = { CSA = { country_event = { id = csa.8 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.20 }
@@ -356,7 +357,15 @@ country_event = {
 		
 		option = {
 			name = csa.9.a
-			load_oob = CSA_AFTER_SUMTER
+			if = {
+				limit = {
+					USA = { has_country_flag = USA_Radical_Coup }
+				}
+				load_oob = CSA_AFTER_SUMTER_RADICAL
+			}
+			else = {
+				load_oob = CSA_AFTER_SUMTER
+			}
 			add_ideas = CSA_Civil_War_Scout_Dependency
        	}
 }
@@ -392,4 +401,62 @@ country_event = {
        	option = {
 			name = csa.11.e
        	}
+}
+#More States Join in Response to Coup
+country_event = {
+		id = csa.12
+		title = csa.12.t
+		desc = csa.12.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.12.a
+			trigger = {
+				tag = USA
+			}
+			CSA = { transfer_state = 362 }
+        	remove_state_core = 362
+        	add_state_claim = 362
+        	362 = { add_core_of = CSA }
+        	CSA = { transfer_state = 372 }
+        	remove_state_core = 372
+        	add_state_claim = 372
+        	372 = { add_core_of = CSA }
+        	CSA = { transfer_state = 368 }
+        	remove_state_core = 368
+        	add_state_claim = 368
+        	368 = { add_core_of = CSA }
+        	CSA = { transfer_state = 363 }
+        	remove_state_core = 363
+        	add_state_claim = 363
+        	363 = { add_core_of = CSA }
+        	CSA = { transfer_state = 369 }
+        	remove_state_core = 369
+        	add_state_claim = 369
+        	369 = { add_core_of = CSA }
+        	CSA = { transfer_state = 373 }
+        	remove_state_core = 373
+        	add_state_claim = 373
+        	373 = { add_core_of = CSA }
+        	CSA = { transfer_state = 374 }
+        	remove_state_core = 374
+        	add_state_claim = 374
+        	374 = { add_core_of = CSA }
+        	CSA = { transfer_state = 746 }
+        	remove_state_core = 746
+        	add_state_claim = 746
+        	746 = { add_core_of = CSA }
+        	hidden_effect = { CSA = { country_event = { id = csa.12 } } }
+        	add_popularity = { ideology = traditional_conservatism popularity = -0.35 }
+       	}
+       	option = {
+			trigger = {
+				tag = CSA
+			}
+			name = csa.12.b
+		}
 }

@@ -61,20 +61,7 @@ ideas = {
 			}
 		}
 		
-	BRA_recovery_effort1 = {
-			allowed = {
-				TAG = BRA
-			}
-			
-			removal_cost = -1
-			
-			picture = ENG_poor_worker_conditions
-			
-			modifier = {
-            stability_weekly = 0.001
-            local_resources_factor = 0.08
-			}
-		}
+
 		
 	BRA_golden_prosperity = {
 			allowed = {
@@ -86,8 +73,7 @@ ideas = {
 			picture = normal_taxes
 			
 			modifier = {
-            stability_weekly = 0.001
-            political_power_gain = 0.2
+            political_power_gain = 0.40
 			research_time_factor = -0.05
 			}
 		}
@@ -317,33 +303,7 @@ ideas = {
 			}
 		}
 
-	BRA_massive_industrial_loans = {
-			allowed = {
-				TAG = BRA
-			}
-			
-			removal_cost = -1
-			
-			picture = FRA_profits_gold_rush
-			
-			modifier = {
-			consumer_goods_factor = 0.04
-			}
-		}
 
-	BRA_agrarian_influence = {
-			allowed = {
-				TAG = BRA
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_agrarian
-			
-			modifier = {
-			production_speed_buildings_factor = -0.09
-			}
-		}
 
 	BRA_new_army = {
 			allowed = {
@@ -389,7 +349,52 @@ hidden_ideas = {
 				naval_coordination = 0.2
 				experience_gain_navy_factor = 0.1
 			}
-		}		
+		}
 		
+		BRA_massive_industrial_loans = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_profits_gold_rush
+			
+			modifier = {
+			consumer_goods_factor = 0.04
+			}
+		}
+
+	BRA_agrarian_influence = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+			production_speed_buildings_factor = -0.09
+			}
+		}
+		
+	BRA_recovery_effort1 = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+            stability_factor = 0.05
+            local_resources_factor = 0.08
+			}
+		}
+
+	}	
 }		
+		
 		

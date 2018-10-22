@@ -1,0 +1,169 @@
+﻿add_namespace = AUSpolitics
+
+#Fall of Freiharr von Bach 
+country_event = {
+	id = AUSpolitics.1 
+	title = AUSpolitics.1.t
+	desc = AUSpolitics.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes 
+	
+	option = {
+		name = AUSpolitics.1.a  #Appoint Gołuchowski - Reform Empire 
+		ai_chance = { 
+            factor = 60 
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }
+		
+			AUS = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Agenor Gołuchowski"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Agenor_Goluchwoski.dds"
+                    expire = 1875.08.03
+                    ideology = despotism 
+                }
+			}
+			custom_effect_tooltip = AUS_tt_appoint_goluchowski	
+	}
+	
+	option = {
+		name = AUSpolitics.1.b  #Appoint Archduke Rainier - Absolutism  
+		ai_chance = { 
+            factor = 40 
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+        }
+		    
+			AUS = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Archduke Rainier"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Archduke_Rainer.dds"
+                    expire = 1913.01.27
+                    ideology = despotism 
+                }
+            }		
+            custom_effect_tooltip = AUS_tt_appoint_archduke_rainier		
+	}
+	
+}
+
+#Discard the October Dipoma  
+country_event = {
+	id = AUSpolitics.2 
+	title = AUSpolitics.2.t
+	desc = AUSpolitics.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes 
+	
+	option = {
+		name = AUSpolitics.2.a  #Unlocks the February Patent 
+		ai_chance = { factor = 100 }
+		
+	    hidden_effect = {
+		AUS = { set_country_flag = AUS_flag_unlock_October_Diploma }
+		}	
+		add_political_power = -100 
+	}
+}
+
+###################
+#Liberal Reactions#
+###################
+
+country_event = { #Austrian Liberals Protest 
+	id = AUSpolitics.3 
+	title = AUSpolitics.3.t
+	desc = AUSpolitics.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.3 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.3.a  #Arrest them
+		ai_chance = { factor = 100 }
+
+			add_political_power = -50
+            add_stability = -0.02 			
+	}
+}
+
+country_event = { #Bohemians Protests stopped  
+	id = AUSpolitics.4
+	title = AUSpolitics.4.t
+	desc = AUSpolitics.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.5 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.4.a  
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            swap_ideas = {
+			    remove_idea = AUS_SLA_Separatism1 
+				add_idea = AUS_SLA_Separatism1a 
+			}
+		}
+	}
+}
+
+country_event = { #Hungarian Liberals Angered   
+	id = AUSpolitics.5
+	title = AUSpolitics.5.t
+	desc = AUSpolitics.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.8 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.5.a  
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            swap_ideas = {
+			    remove_idea = AUS_HUN_Separatism1 
+				add_idea = AUS_HUN_Separatism1a 
+			}
+		}
+	}
+}

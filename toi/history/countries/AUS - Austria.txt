@@ -9,7 +9,7 @@
 
   add_ideas = { 
           #POLITICS
-    hos_is_leader
+    AUS_Franz_Joseph_I
     victorian_era
 	law_victorian_army
     industrializing
@@ -22,6 +22,7 @@
     normal_taxes
 	cl_restricted
 	fourteen_hour_work_day
+	lp_serfdom
 
     stagnation_growth
     border_control
@@ -29,7 +30,7 @@
     volunteer_only
     absolutism
 
-    constitution_adopted
+    human_rights
     no_elections
 
     open_schools
@@ -39,7 +40,8 @@
     
   GER_general_idea_ger_confed
   AUS_hungarian_revolution
-  AUS_economy_1_1857
+  AUS_HUN_Separatism
+  AUS_SLA_Separatism
   }
   
       #Colective guarantee of the 7 great power
@@ -51,7 +53,7 @@
   set_politics = {
     parties = {
       anarchism = {
-        popularity = 0
+        popularity = 2
       }
       vanguard_communism = {
         popularity = 0
@@ -60,13 +62,13 @@
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 2
+        popularity = 3
       }
       centrism = {
-        popularity = 4.4
+        popularity = 6
       }
       traditional_conservatism = {
-        popularity = 8.6
+        popularity = 9
       }
       radical_democracy = {
         popularity = 0
@@ -75,7 +77,7 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 85
+        popularity = 80
       }
       fundamentalism = {
         popularity = 0
@@ -118,9 +120,9 @@
   }
 
   create_country_leader = {
-	name = "Franz Joseph I"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Portrait_AUS_Franz_Joseph_I.dds"
+	name = "Alexander von Bach"
+	desc = "POLITICS_ALEXANDER_BACH_DESC"
+	picture = "Portrait_AUS_Alexander_von_Bach.dds"
 	ideology = despotism
 	traits = {
 		#
@@ -245,4 +247,5 @@ create_navy_leader = {
   traits = { }
   skill = 3
 }
+
 }

@@ -22,7 +22,8 @@ ideas = {
 				stability_factor = -0.20
 			}
 		}
-		AUS_economy_1_1857 = {
+		
+		AUS_kaiser_franz = {
 
 			allowed = {
 				always = no
@@ -34,18 +35,15 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				consumer_goods_factor = 0.20
-				production_speed_buildings_factor = -0.50
-				industrial_capacity_factory = -0.50
-				industrial_capacity_dockyard = -0.50
-				political_power_factor = -0.50
-				ai_focus_aggressive_factor = -0.50
+	            stability_factor = 0.10
+				political_power_gain = 0.1 
 			}
 		}
-		AUS_economy_2_1857 = {
+		
+		AUS_Klerikalabsolutist = {
 
 			allowed = {
 				always = no
@@ -57,18 +55,17 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				production_speed_buildings_factor = -0.25
-				industrial_capacity_factory = -0.25
-				industrial_capacity_dockyard = -0.25
-				political_power_factor = -0.40
-				ai_focus_aggressive_factor = -0.40
+	            stability_factor = -0.1 
+				political_power_gain = 0.1 
+                production_speed_buildings_factor = 0.1 
+				consumer_goods_factor = -0.05 
 			}
 		}
-		AUS_economy_3_1857 = {
+		
+		AUS_Klerikalabsolutist1 = {
 
 			allowed = {
 				always = no
@@ -80,18 +77,17 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				consumer_goods_factor = 0.05
-				production_speed_buildings_factor = -0.15
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-				political_power_factor = -0.30
-				ai_focus_aggressive_factor = -0.30
+	            stability_factor = -0.05 
+				political_power_gain = 0.1 
+                production_speed_buildings_factor = 0.1 
+				consumer_goods_factor = -0.05 
 			}
 		}
-		AUS_mil_buildup_1857 = {
+		
+		AUS_HUN_Separatism = {
 
 			allowed = {
 				always = no
@@ -103,14 +99,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				war_support_factor = 0.05
-				military_leader_cost_factor = -0.1
+	            stability_factor = -0.15 
 			}
 		}
-		AUS_shutdown_mines_1857 = {
+		
+		AUS_HUN_Separatism1 = {
 
 			allowed = {
 				always = no
@@ -122,13 +118,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				local_resources_factor = -0.20 
+	            stability_factor = -0.125 
 			}
 		}
-		AUS_parks_reserves_1857 = {
+		
+		AUS_HUN_Separatism1a = { #Absolutist path
 
 			allowed = {
 				always = no
@@ -140,14 +137,13 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = 0.10
-				war_support_factor = -0.05
+	            stability_factor = -0.14 
 			}
 		}
-		AUS_private_schools_1857 = {
+		AUS_HUN_Separatism2a = { #Help Hungarians - Abolutism
 
 			allowed = {
 				always = no
@@ -159,15 +155,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = -0.05
-				political_power_factor = 0.10
-				consumer_goods_factor = 0.01
+	            stability_factor = -0.08 
 			}
 		}
-		AUS_public_schools_1857 = {
+		
+		AUS_HUN_Separatism2b = { #Supress Hungarians - Abolutism
 
 			allowed = {
 				always = no
@@ -179,15 +174,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = 0.05
-				political_power_factor = -0.10
-				consumer_goods_factor = 0.02
+	            stability_factor = -0.18
 			}
 		}
-		AUS_heritage_sites_1857 = {
+		
+		AUS_SLA_Separatism = {
 
 			allowed = {
 				always = no
@@ -199,14 +193,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = 0.15
-				consumer_goods_factor = 0.02
+	            stability_factor = -0.1 
 			}
 		}
-		AUS_romantic_art_1857 = {
+		
+		AUS_SLA_Separatism1 = {
 
 			allowed = {
 				always = no
@@ -218,17 +212,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = 0.10
-				political_power_factor = -0.05
-				consumer_goods_factor = 0.01
-				conscription_factor = -0.10
-				research_time_factor = -0.01
+	            stability_factor = -0.09
 			}
 		}
-		AUS_parks_workers_1857 = {
+		
+		AUS_SLA_Separatism1a = { #If Austria goes absolutist
 
 			allowed = {
 				always = no
@@ -240,14 +231,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				stability_factor = 0.10
-				production_speed_buildings_factor = 0.15
+	            stability_factor = -0.12 
 			}
 		}
-		AUS_industry_industry_industry_1857 = {
+		
+		AUS_SLA_Separatism2a = { #Supress Slavic minorities - Absolutist 
 
 			allowed = {
 				always = no
@@ -259,94 +250,108 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_victorian_era
+			picture = AUS_hungarian_revolution
 			
 			modifier = {
+	            stability_factor = -0.15 
+			}
+		}
+
+		
+		AUS_lost_italy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = -0.15 
+			}
+		}
+		
+		AUS_lost_italy1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = -0.1 
+			}
+		}
+		
+		AUS_win_italy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            stability_factor = 0.1
+			}
+		}	
+		AUS_neues_absolutist = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            political_power_factor = 0.1 
+				drift_defence_factor = 0.2 
+				stability_factor = -0.10
+			}
+		}		
+		AUS_neues_absolutist1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            political_power_factor = 0.15  
+				drift_defence_factor = 0.5 
 				stability_factor = -0.15
-				consumer_goods_factor = -0.02
-				production_speed_buildings_factor = 0.05
-			}
-		}
-		AUS_additional_goods_1857 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = idea_victorian_era
-			
-			modifier = {
-				stability_factor = 0.05
-				consumer_goods_factor = -0.01
-				research_time_factor = 0.01
-				production_speed_industrial_complex_factor = 0.10
-			}
-		}
-		AUS_private_funding_1857 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = idea_victorian_era
-			
-			modifier = {
-				political_power_factor = -0.10
-				consumer_goods_factor = -0.02
-			}
-		}
-		AUS_credit_anstalt_1857 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = idea_victorian_era
-			
-			modifier = {
-				political_power_factor = -0.10
-				consumer_goods_factor = -0.02
-				research_time_factor = -0.01
-			}
-		}
-		AUS_minor_boom_1857 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = idea_victorian_era
-			
-			modifier = {
-				political_power_factor = -0.10
-				consumer_goods_factor = -0.02
-				research_time_factor = -0.01
-				stability_factor = 0.10
-				war_support_factor = 0.05
 			}
 		}
 	}
