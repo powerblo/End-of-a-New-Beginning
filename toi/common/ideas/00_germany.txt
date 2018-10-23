@@ -534,6 +534,25 @@ ideas = {
 			
 			}
 		}
+		GER_idea_CHI_military_presence = {
+			allowed = {
+				original_tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			picture = ger_revive_the_kaiserreich
+			
+			targeted_modifier = { 
+				tag = PRS 
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.05
+			}
+		}
 	}
 	naval_manufacturer = {
 	
@@ -615,6 +634,44 @@ ideas = {
 			}
 
 			traits = { GER_trait_concern_bayer }
+		}
+	}
+	high_command = {
+		GER_idea_naval_minister_stosch = {
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			available = {
+				has_completed_focus = GER_focus_historical_minister_von_stosch
+			}
+			
+			visible = {
+				PRS_trigger_formed_germany = yes
+			}
+			
+			cost = 50
+
+			traits = { eoanb_trait_GER_stosch }
+		}
+		GER_idea_naval_minister_caprivi = {
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			available = {
+				has_completed_focus = GER_focus_historical_minister_caprivi
+			}
+			
+			visible = {
+				PRS_trigger_formed_germany = yes
+			}
+			
+			cost = 50
+
+			traits = { eoanb_trait_GER_caprivi }
 		}
 	}
 }

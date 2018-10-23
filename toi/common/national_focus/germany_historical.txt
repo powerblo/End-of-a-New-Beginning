@@ -603,7 +603,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
-			#Will later add Von Stosch as a minister
+			custom_effect_tooltip = eoanb_tt_GER_focus_unlock_stosch
 		}
 	}
 	
@@ -821,7 +821,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
-			#Will later add Caprivi as a minister
+			custom_effect_tooltip = eoanb_tt_GER_focus_unlock_caprivi
 		}
 	}
 	
@@ -2607,11 +2607,16 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = GER_focus_historical_german_korean_treaty_1883 }
+		available = {
+			nation_owns_chinese_trade_port = yes
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_GER_focus_china_military
 			hidden_effect = {
-				#Will later add decisions or events
+				CHI = { add_ideas = GER_idea_CHI_military_presence }
+				#Add a way for China to kick them out if they want to later
+				#Add an event for notifying China this is happening later
 			}
 		}
 	}
@@ -3486,7 +3491,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_GER_focus_next_focus
 			hidden_effect = {
-				#Switch to third FT later
 				if = {
 					limit = {
 						OR = {
