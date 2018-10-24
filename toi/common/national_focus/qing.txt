@@ -914,13 +914,19 @@ logistics_skill = 3
 		prerequisite = {
       focus = CHI_Bright_Young_Sailors
     }
-#	 completion_reward = {
-#				#equipment_1857_gunboat
-#				add_equipment_to_stockpile = {
-#    			type = equipment_1857_gunboat
-#    			amount = 100
-#				}
-#		}
+		available = {
+			has_tech = tech_naval_1830_gunboat
+		}
+	 completion_reward = {
+add_equipment_production = {
+equipment = {
+type = equipment_1830_gunboat
+}
+requested_factories = 1
+progress = 0.95
+amount = 5
+}
+	}
 	}
 	focus = {
 		id = CHI_Form_the_Fujian_Fleet
@@ -936,7 +942,11 @@ logistics_skill = 3
       focus = CHI_Build_Wooden_Gunboats
     }
 	 completion_reward = {
-				#
+				navy_experience = 100
+				swap_ideas = {
+    remove_idea = CHI_foochow_arsenal_2
+    add_idea = CHI_foochow_arsenal_3
+}
 		}
 	}
 	focus = {
@@ -953,7 +963,10 @@ logistics_skill = 3
       focus = CHI_The_Imperial_Navy
     }
 	 completion_reward = {
-				#
+				add_political_power = 50
+				country_event = {
+    id = qing.1
+}
 		}
 	}
 	focus = {

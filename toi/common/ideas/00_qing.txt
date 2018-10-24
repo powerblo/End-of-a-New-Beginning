@@ -15,7 +15,7 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
-				equipment_conversion_speed = 0.15
+				equipment_conversion_speed = 0.1
 			}
 		}
 
@@ -34,8 +34,29 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
-				equipment_conversion_speed = 0.1
+				equipment_conversion_speed = 0.15
         production_speed_dockyard_factor = 0.1
+			}
+		}
+
+    CHI_foochow_arsenal_3 = {
+      allowed = {
+        always = yes
+      }
+
+      allowed_civil_war = {
+        always = no
+      }
+
+			removal_cost = -1
+
+#			picture = great_depression
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				equipment_conversion_speed = 0.15
+        production_speed_dockyard_factor = 0.1
+        ships_at_battle_start = 0.25
 			}
 		}
 

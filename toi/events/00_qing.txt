@@ -1,9 +1,11 @@
 ﻿add_namespace = opium_war
+add_namespace = qing
+
 country_event = {
-    id = opium_war.1 
-    title = opium_war.1 
-    desc = opium_war.1 
-    
+    id = opium_war.1
+    title = opium_war.1.t
+    desc = opium_war.1.d
+
     picture = GFX_report_event_election_vote
 
     trigger = {
@@ -15,20 +17,36 @@ country_event = {
             days = 2
         }
 
-    hidden = no 
+    hidden = no
 
-    fire_only_once = yes 
+    fire_only_once = yes
 
     immediate = {
         news_event = { id = opium_war.1 days = 1 }
     }
 
     option = { # This is an example of an option that has a function
-        name = opium_war.1.b 
+        name = opium_war.1.b
         add_political_power = -200
         white_peace = ENG
         white_peace = FRA
 		white_peace = KIN
 		white_peace = BCO
+    }
+}
+
+country_event = { #Japanese in Taiwan
+    id = qing.1
+    title = qing.1.t
+    desc = qing.1.d
+
+#    picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = { #oh shit we gotta act FAST
+        name = qing.1.a
     }
 }
