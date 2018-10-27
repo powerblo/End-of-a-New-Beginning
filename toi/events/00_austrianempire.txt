@@ -167,3 +167,221 @@ country_event = { #Hungarian Liberals Angered
 		}
 	}
 }
+
+add_namespace = AUSdiplo 
+
+country_event = { #Future of Lombardy Venetia    
+	id = AUSdiplo.1
+	title = AUSdiplo.1.t
+	desc = AUSdiplo.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes 
+	
+	option = { #Annex only Venetia   
+		name = AUSdiplo.1.a
+		ai_chance = { factor = 20 }
+		
+		AUS = {
+          transfer_state = 160             
+		}
+		160 = {
+            remove_core_of = LVN  
+		}
+		LVN = {
+		set_cosmetic_tag = LVN_Lombardy
+		}
+	}
+
+	option = { #Keep the Puppet   
+		name = AUSdiplo.1.b 
+		ai_chance = { factor = 80 }
+
+	}
+	
+	option = { #TfV - Give more freedom    
+		name = AUSdiplo.1.c 
+		ai_chance = { factor = 80 }
+		
+		if ={
+		    limit = {
+			    has_dlc = "Together for Victory"
+			}
+            set_autonomy = {
+                target = LVN 
+                autonomy_state = dominion
+            }			
+		}
+		else = {
+		    AUS = {
+			end_puppet = LVN
+			}
+		}
+	}
+}
+
+country_event = { #Future of Modena, Parma and Tuscany    
+	id = AUSdiplo.2
+	title = AUSdiplo.2.t
+	desc = AUSdiplo.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes 
+	
+	option = { #TfV - Make Puppets     
+		name = AUSdiplo.2.a 
+		ai_chance = { factor = 60 }
+		
+		if ={
+		    limit = {
+			    has_dlc = "Together for Victory"
+			}
+            set_autonomy = {
+                target = MOD 
+                autonomy_state = puppet
+            }	
+            set_autonomy = {
+                target = PRM 
+                autonomy_state = puppet
+            }
+            set_autonomy = {
+                target = TUS  
+                autonomy_state = puppet
+            }			
+		}
+		else = {
+		    AUS = {
+			    puppet = MOD
+                puppet = PRM
+                puppet = TUS
+			}
+		}
+		
+		custom_effect_tooltip = AUS_tt_ITA_league 
+		
+		hidden_effect = {
+		    MOD = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS 
+                    modifier = AUS_ITA_League
+		        }
+            }
+		    PRM = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS 
+                    modifier = AUS_ITA_League
+		        }
+            }
+	 	    TUS = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS  
+                    modifier = AUS_ITA_League
+		        }
+            }
+		    AUS = {
+		        add_opinion_modifier = {
+                    target = MOD  
+                    modifier = AUS_ITA_League
+		        }
+		        add_opinion_modifier = {
+                    target = PRM  
+                    modifier = AUS_ITA_League
+		        }
+		        add_opinion_modifier = {
+                    target = TUS  
+                    modifier = AUS_ITA_League
+		        }		    
+		    }
+		}
+	}
+	
+	option = { #Status Quo    
+		name = AUSdiplo.2.b 
+		ai_chance = { factor = 40 }
+		
+	}
+}
+
+country_event = { #Cede Savoy and Nice to France     
+	id = AUSdiplo.3
+	title = AUSdiplo.3.t
+	desc = AUSdiplo.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes 
+	
+	option = { #Give Savoy and Nice to France      
+		name = AUSdiplo.3.a 
+		ai_chance = { factor = 60 }
+		
+		custom_effect_tooltip = AUS_tt_FRA_savoy_nice  
+		
+		hidden_effect = {
+		    FRA = { country_event = AUSdiplo.4 }
+		}
+	}
+	
+	option = { #Let Piedmont keep them     
+		name = AUSdiplo.3.b 
+		ai_chance = { factor = 40 }
+		
+	}
+}
+
+country_event = { #FRA - Savoy and Nice ceded     
+	id = AUSdiplo.4
+	title = AUSdiplo.4.t
+	desc = AUSdiplo.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes 
+	
+		immediate = {
+		    hidden_effect = {
+			    if = {
+			        limit = {
+			     	    OR = {
+			     		    tag = PRS 
+			     			tag = BEL 
+			      			tag = SPR 
+			     			tag = ENG 
+			      			tag = BAV
+			       			tag = PAP
+			      			tag = NSC 
+					    }
+				    }
+					    news_event = AUSdiplo.5
+				}
+		    }
+		}
+	
+	option = { #Give Savoy and Nice to France      
+		name = AUSdiplo.4.a 
+		ai_chance = { factor = 60 }
+		
+		custom_effect_tooltip = AUS_tt_ITA_league 
+		
+		FRA = {
+		    transfer_state = 735
+			transfer_state = 822 
+		}
+		735 = { add_core_of = FRA remove_core_of = PIE }
+		822 = { add_core_of = FRA remove_core_of = PIE }
+	}
+}
+
+news_event = { #News event for Savoy ceded      
+	id = AUSdiplo.5
+	title = AUSdiplo.5.t
+	desc = AUSdiplo.5.d 
+	picture = GFX_news_event_contain_coalition_vic
+	
+	is_triggered_only = yes 
+	
+	option = {      
+		name = AUSdiplo.5.a
+	}
+}

@@ -101,7 +101,7 @@ focus_tree = {
 	
 	focus = { 
 		id = AUS_Viceroy_Maximilian
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_viceroy_maximilian
 		x = 1
 		y = 1
 		cost = 35
@@ -374,6 +374,26 @@ focus_tree = {
                 days = 800
             }
 		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Future_Italy
+		icon = GFX_AUS_placeholder
+		x = 10 
+		y = 6
+		cost = 505
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+       
+	    prerequisite = {
+		    focus = AUS_Victory_Italy
+		}
+		
+		completion_reward = {
+		    custom_effect_tooltip = AUS_tt_italian_lands_decisions
 		}
 	}
 	
@@ -788,7 +808,7 @@ focus_tree = {
 	
 	focus = { 
 		id = AUS_Reform_Empire
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_reform_the_empire
 		x = 5
 		y = 12
 		cost = 505
@@ -814,7 +834,7 @@ focus_tree = {
     	focus = { 
 		id = AUS_The_Austrian_Army
 		icon = GFX_AUS_placeholder
-		x = 18
+		x = 17
 		y = 0
 		cost = 10
 		available_if_capitulated = no
@@ -828,7 +848,7 @@ focus_tree = {
 		focus = { 
 		id = AUS_Abolish_The_Landswehr
 		icon = GFX_AUS_placeholder
-		x = 16
+		x = 16  
 		y = 1
 		cost = 10
 		available_if_capitulated = no
@@ -839,6 +859,9 @@ focus_tree = {
         prerequisite = {
 		focus = AUS_The_Austrian_Army 
 	   }
+	   
+       mutually_exclusive = { focus = AUS_Reform_The_Landwehr }
+	   
          completion_reward = {
 				#
 		}
@@ -848,7 +871,7 @@ focus_tree = {
 		focus = { 
 		id = AUS_Reform_The_Landwehr
 		icon = GFX_AUS_placeholder
-		x = 20
+		x = 18  
 		y = 1
 		cost = 10
 		available_if_capitulated = no
@@ -859,6 +882,8 @@ focus_tree = {
         prerequisite = {
 	   focus = AUS_The_Austrian_Army 
 	  }
+      mutually_exclusive = { focus = AUS_Abolish_The_Landswehr }
+	  
               completion_reward = {
 				#
 		}
@@ -867,8 +892,8 @@ focus_tree = {
 		focus = { 
 		id = AUS_Learn_From_The_Old_Guard
 		icon = GFX_AUS_placeholder
-		x = 17
-		y = 2
+		x = 16
+		y = 3
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
@@ -876,7 +901,7 @@ focus_tree = {
 		}
 		   		mutually_exclusive = { focus = AUS_New_Generals_New_Tatics }
         		prerequisite = {
-      focus = AUS_Abolish_The_Landswehr focus = AUS_Reform_The_Landwehr
+      focus = AUS_Italian_Lessons
     }
               completion_reward = {
 				#
@@ -886,8 +911,8 @@ focus_tree = {
 	    		focus = { 
 		id = AUS_New_Generals_New_Tatics
 		icon = GFX_AUS_placeholder
-		x = 19
-		y = 2
+		x = 18
+		y = 3
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
@@ -895,7 +920,7 @@ focus_tree = {
 		}
 		   		mutually_exclusive = { focus = AUS_Learn_From_The_Old_Guard }
         		prerequisite = {
-      focus = AUS_Abolish_The_Landswehr focus = AUS_Reform_The_Landwehr
+      focus = AUS_Italian_Lessons
     }
               completion_reward = {
 				#
@@ -905,15 +930,15 @@ focus_tree = {
 	            focus = { 
 		id = AUS_The_Fight_For_Dominance
 		icon = GFX_AUS_placeholder
-		x = 15
-		y = 3
+		x = 13  
+		y = 1  
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Learn_From_The_Old_Guard focus = AUS_New_Generals_New_Tatics
+      focus = AUS_The_Austrian_Army 
     }
     
               completion_reward = {
@@ -924,14 +949,14 @@ focus_tree = {
                 focus = { 
 		id = AUS_Recover_From_The_Revolution
 		icon = GFX_AUS_placeholder
-		x = 18
-		y = 3
+		x = 21  
+		y = 1 
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
-        		prerequisite = { focus =  AUS_Learn_From_The_Old_Guard focus = AUS_New_Generals_New_Tatics }
+        		prerequisite = { focus =  AUS_The_Austrian_Army }
     
     
               completion_reward = {
@@ -942,8 +967,8 @@ focus_tree = {
                 focus = { 
 		id = AUS_Protect_The_Border_Forts
 		icon = GFX_AUS_placeholder
-		x = 15
-		y = 4
+		x = 14    
+		y = 2
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
@@ -961,8 +986,8 @@ focus_tree = {
 	            focus = { 
 		id = AUS_New_Recruits_From_The_Honved
 		icon = GFX_AUS_placeholder
-		x = 18
-		y = 4
+		x = 20  
+		y = 2
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
@@ -980,15 +1005,15 @@ focus_tree = {
 	            focus = { 
 		id = AUS_Fast_To_The_Border
 		icon = GFX_AUS_placeholder
-		x = 15
-		y = 5
+		x = 12   
+		y = 2
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Protect_The_Border_Forts
+      focus = AUS_The_Fight_For_Dominance
     }
     
               completion_reward = {
@@ -999,15 +1024,15 @@ focus_tree = {
                 focus = { 
 		id = AUS_Modernize_The_General_Staff
 		icon = GFX_AUS_placeholder
-		x = 18
-		y = 5
+		x = 22    
+		y = 2
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_New_Recruits_From_The_Honved
+      focus = AUS_Recover_From_The_Revolution
     }
     
               completion_reward = {
@@ -1018,15 +1043,15 @@ focus_tree = {
 	     	    focus = { 
 		id = AUS_Halt_Und_Verstarken
 		icon = GFX_AUS_placeholder
-		x = 15
-		y = 6
+		x = 12  
+		y = 3
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Fast_To_The_Border
+      focus = AUS_Fast_To_The_Border focus = AUS_Protect_The_Border_Forts
     }
     
               completion_reward = {
@@ -1036,16 +1061,16 @@ focus_tree = {
 	  
 	            focus = { 
 		id = AUS_Heinrich_Von_Hess's_Ideas
-		icon = GFX_AUS_placeholder
-		x = 18
-		y = 6
+		icon = GFX_goal_AUS_heinrich_von_hesse
+		x = 22  
+		y = 3 
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Modernize_The_General_Staff
+      focus = AUS_Modernize_The_General_Staff focus = AUS_New_Recruits_From_The_Honved
     }
     
               completion_reward = {
@@ -1056,15 +1081,15 @@ focus_tree = {
 	      	    focus = { 
 		id = AUS_The_Strongest_Of_The_Confederation
 		icon = GFX_AUS_placeholder
-		x = 15
-		y = 7
+		x = 14   
+		y = 3
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Halt_Und_Verstarken
+      focus = AUS_Fast_To_The_Border focus = AUS_Protect_The_Border_Forts
     }
     
               completion_reward = {
@@ -1075,34 +1100,15 @@ focus_tree = {
 	  	        focus = { 
 		id = AUS_Recruits_From_The_Last_Town_Of_The_Empire
 		icon = GFX_AUS_placeholder
-		x = 18
-		y = 7
+		x = 20    
+		y = 3
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
         		 prerequisite = {
-      focus = AUS_Modernize_The_General_Staff
-    }
-    
-              completion_reward = {
-				#
-		}
-	  }	
-	  
-	     	  	        focus = { 
-		id = AUS_Fur_Den_Kaiser!
-		icon = GFX_AUS_placeholder
-		x = 18
-		y = 8
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-        		 prerequisite = {
-      focus = AUS_Recruits_From_The_Last_Town_Of_The_Empire
+      focus = AUS_Modernize_The_General_Staff focus = AUS_New_Recruits_From_The_Honved
     }
     
               completion_reward = {
@@ -1110,5 +1116,283 @@ focus_tree = {
 		}
 	  }	
 
+	focus = { 
+		id = AUS_Italian_Lessons
+		icon = GFX_AUS_placeholder
+		x = 17   
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available = {
+            date > 1859.10.05
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_The_Landwehr focus = AUS_Abolish_The_Landswehr
+        }
+    
+        completion_reward = {
+				#
+		}
+	}	 
+
+	focus = { 
+		id = AUS_Archduke_Albrecht
+		icon = GFX_AUS_placeholder
+		x = 16     
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Learn_From_The_Old_Guard
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+
+	focus = { 
+		id = AUS_Professional_Military 
+		icon = GFX_AUS_placeholder
+		x = 18      
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_New_Generals_New_Tatics
+        }
+    
+        completion_reward = {
+				#
+		}
+	}	
+
+#####################################
+#             Navy Tree             #
+#               Start               #
+#####################################	
+
+	focus = { 
+		id = AUS_Kaiser_Navy
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 0 
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Reform_Triest_Navy
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 1  
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Kaiser_Navy
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Maximilian_Lessons
+		icon = GFX_AUS_placeholder
+		x = 31             
+		y = 2  
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Recover_Italy_Navy 
+		icon = GFX_AUS_placeholder
+		x = 27                  
+		y = 2  
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Emperor_Adriatic_Navy 
+		icon = GFX_AUS_placeholder
+		x = 33                 
+		y = 2  
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy 
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Ironclads_Navy 
+		icon = GFX_AUS_placeholder
+		x = 25                  
+		y = 3   
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Austro_Italian_Race_Navy focus = AUS_Recover_Italy_Navy
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Austro_Italian_Race_Navy
+		icon = GFX_AUS_placeholder
+		x = 25                  
+		y = 2  
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy 
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Patrol_Italy_Coast 
+		icon = GFX_AUS_placeholder
+		x = 27                  
+		y = 3    
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Austro_Italian_Race_Navy  focus = AUS_Recover_Italy_Navy
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_New_Leadership 
+		icon = GFX_AUS_placeholder
+		x = 31                  
+		y = 3    
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Emperor_Adriatic_Navy  focus = AUS_Maximilian_Lessons
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
+	focus = { 
+		id = AUS_Wilhelm_von_Tegetthoff  
+		icon = GFX_AUS_placeholder
+		x = 33                   
+		y = 3   
+		cost = 10
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Emperor_Adriatic_Navy focus = AUS_Maximilian_Lessons
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+	
 }
 
