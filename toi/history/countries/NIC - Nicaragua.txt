@@ -13,8 +13,8 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -25,11 +25,12 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    segregation
     absolutism
 
-    no_constitution
-    no_elections
+    human_rights
+    limited_elections
+
 
     privileged_education
     state_religion
@@ -56,13 +57,13 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 40
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 100
+        popularity = 60
       }
       autocracy = {
         popularity = 0
@@ -88,7 +89,7 @@ create_country_leader = {
     name = "William Walker"
     desc = "#"
     picture = "Portrait_NIC_William_Walker.dds"
-    expire = 1900.1.1
-    ideology = tropical
+    expire = 1857.10.12
+    ideology = dictator
 }
 }
