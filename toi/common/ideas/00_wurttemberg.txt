@@ -1,0 +1,67 @@
+ideas = {
+	country = {
+		WUR_agrarian_society_idea_1 = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.02
+				production_speed_buildings_factor = -0.02
+			}
+		}
+		
+		WUR_agrarian_society_idea_2 = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.02
+				production_speed_buildings_factor = -0.02
+				trade_laws_cost_factor = 0.02
+				trade_opinion_factor = 0.02
+			}
+		}
+	}
+	
+	hidden_ideas = {
+		
+	}
+	
+	political_advisor = {
+		#BAV_advisor_friedrich_von_hegnenberg_dux = {
+		#	allowed = {
+		#		original_tag = WUR
+		#	}
+		#	
+		#	allowed_civil_war = {
+		#		OR = {
+		#			has_government = autocracy
+		#			has_government = centrism
+		#			has_government = traditional_conservatism
+		#		}
+		#	}
+		#
+		#	traits = { 
+		#		clever_buisnessman 
+		#	}
+		#}
+	}
+}
