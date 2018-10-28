@@ -190,7 +190,7 @@ country_event = {
 		    GRE = {
 		        add_to_variable = {
                     var = var_otto
-                    value = 2
+                    value = 1 
                 }
             }
         }
@@ -259,6 +259,40 @@ country_event = {
                     value = 1
                 }
 				add_stability = -0.02 
+            }
+        }	
+    } 
+}
+
+country_event = {
+    id = Greecemisc.8
+	title = Greecemisc.8.t #Assasination Attempt on Queen Amalia  
+	desc = Greecemisc.8.d 
+	picture = GFX_report_event_election_vote 
+
+	fire_only_once = yes
+	
+	trigger = {
+	    TAG = GRE
+        date > 1861.08.29 
+        GRE = {
+		    check_variable = {
+                var = var_otto
+                value = 0
+                compare = greater_than_or_equals 
+            }     
+	    }		
+	}	
+	
+	option = {
+	     name = Greecemisc.8.a #  
+		 
+		 hidden_effect = {
+		    GRE = {
+		        subtract_from_variable = {
+                    var = var_otto
+                    value = 1
+                }
             }
         }	
     } 
@@ -414,19 +448,7 @@ country_event = { #Otto abdicates
 	desc = GREpolitics.1.d
 	picture = placeholder
 	
-	fire_only_once = yes
-	
-	trigger = {
-		TAG = GRE
-		date > 1862.10.02
-        GRE = {
-		    check_variable = {
-                var = var_otto
-                value = 0
-                compare = greater_than_or_equals 
-            }     
-	    }	
-	}
+	is_triggered_only = yes
 	
 	option = { 
 		name = GREpolitics.1.a
@@ -889,6 +911,38 @@ country_event = { #Coup D'Etat
 					complete_national_focus = GRE_greek_republic
                 
         }
+	}
+}
+
+country_event = { #Revolutions against Otto  
+	id = GREpolitics.12
+	title = GREpolitics.12.t
+	desc = GREpolitics.12.d
+	picture = placeholder
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1862.09.15  
+        GRE = {
+		    check_variable = {
+                var = var_otto
+                value = 0
+                compare = greater_than_or_equals 
+            }     
+	    }	
+	}
+	
+	option = { 
+		name = GREpolitics.12.a
+
+		add_stability = -0.02 
+		hidden_effect = {
+		    GRE = {
+                country_event = { id = GREpolitics.1 days = 15 }			
+            }
+	    }
 	}
 }
 

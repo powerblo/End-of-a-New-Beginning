@@ -13,23 +13,23 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    presidential_republic
 
     civilian_economy
     limited_exports
-    two_percent
+    five_percent
     normal_taxes
 	cl_legal
 
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
-    absolutism
+    segregation
+    universal_male_suffrage
 
-    no_constitution
-    no_elections
+    human_rights
+    limited_elections
 
     privileged_education
     state_religion
@@ -56,13 +56,13 @@
         popularity = 20
       }
       traditional_conservatism = {
-        popularity = 15
+        popularity = 65
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 65
+        popularity = 15
       }
       autocracy = {
         popularity = 0
@@ -72,7 +72,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -89,6 +89,6 @@
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_COS_Juan_Rafael_Mora.dds"
     expire = 1859.8.14
-    ideology = tropical
+    ideology = conserv
 }
 }

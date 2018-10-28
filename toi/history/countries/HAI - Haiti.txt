@@ -13,7 +13,7 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
+    weak_heir
     absolute_monarchy
 
     civilian_economy
@@ -25,10 +25,10 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    full_equality
     absolutism
 
-    no_constitution
+    human_rights
     no_elections
 
     privileged_education
@@ -56,16 +56,16 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 20
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 0
+        popularity = 10
       }
       autocracy = {
-        popularity = 100
+        popularity = 70
       }
       fundamentalism = {
         popularity = 0
@@ -85,7 +85,7 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-	name = "Faustin I Soulouque"
+	name = "Faustin I"
 	desc = "POLITICS_STENIO_VINCENT_DESC"
 	picture = "Portrait_HAI_Faustin_Soulouque.dds"
 	expire = "1965.1.1"

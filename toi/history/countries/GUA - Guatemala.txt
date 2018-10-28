@@ -13,19 +13,19 @@
     hos_is_leader
     pre_industrial_era
     agrarian
-    no_heir
-    absolute_monarchy
+    non_monarchical_system
+    military_junta
 
     civilian_economy
     limited_exports
-    two_percent
+    five_percent
     normal_taxes
 	cl_legal
 
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    segregation
     absolutism
 
     no_constitution
@@ -53,16 +53,16 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 25
       }
       traditional_conservatism = {
-        popularity = 15
+        popularity = 20
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 85
+        popularity = 55
       }
       autocracy = {
         popularity = 0
@@ -72,7 +72,7 @@
       }
     }
 
-	  ruling_party = traditional_conservatism
+	  ruling_party = chauvinist_populism
   }
 
   set_technology = {
@@ -88,7 +88,7 @@
     name = "Rafael Carrera"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_GUA_Rafael_Carrera.dds"
-    expire = 1900.1.1
+    expire = 1865.4.14
     ideology = tropical
 }
 

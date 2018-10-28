@@ -13,7 +13,7 @@ focus_tree = {
 	focus = {
 		id = MNT_Status_of_Principality
 		icon = GFX_focus_hun_elect_a_king
-		cost = 2
+		cost = 15
 		x = 8
 		y = 0
 		completion_reward = {
@@ -24,7 +24,7 @@ focus_tree = {
     focus = {
 		id = MNT_Danilo's_Code
 		icon = GFX_goal_focus_enact_law
-		cost = 2
+		cost = 15
 		x = 8
 		y = 1
         prerequisite = { focus = MNT_Status_of_Principality }
@@ -56,7 +56,7 @@ focus_tree = {
     focus = {
 		id = MNT_Rivalries_Between_Clans
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 5
+		cost = 35
 		x = 4
 		y = 3
         prerequisite = { focus = MNT_Montenegrin_Clans }
@@ -70,7 +70,7 @@ focus_tree = {
     focus = {
 		id = MNT_Increase_Control_Over_Clans
 		icon = GFX_goal_generic_improve_relations
-		cost = 5
+		cost = 35
 		x = 6
 		y = 3
         prerequisite = { focus = MNT_Montenegrin_Clans } 
@@ -84,7 +84,7 @@ focus_tree = {
     focus = {
 		id = MNT_Clan_Question_Resolved
 		icon = GFX_goal_generic_national_unity
-		cost = 10
+		cost = 70
 		x = 5
 		y = 4
         prerequisite = { focus = MNT_Rivalries_Between_Clans focus = MNT_Increase_Control_Over_Clans }      
@@ -115,7 +115,7 @@ focus_tree = {
     focus = {
 		id = MNT_Nikola's_Royal_Wedding
 		icon = GFX_focus_hun_elect_a_king
-		cost = 10
+		cost = 70
 		x = 7
 		y = 5
         prerequisite = { focus = MNT_Assassination_Of_Knez_Danilo }
@@ -127,7 +127,7 @@ focus_tree = {
     focus = {
 		id = MNT_Situation_Stabilized
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 70
 		x = 8
 		y = 7
         prerequisite = { focus = MNT_Nikola's_Royal_Wedding }
@@ -141,7 +141,7 @@ focus_tree = {
     focus = {
 		id = MNT_National_Anthem
 		icon = GFX_focus_PIE_Coring
-		cost = 10
+		cost = 70
 		x = 5
 		y = 8
         prerequisite = { focus = MNT_Situation_Stabilized }
@@ -154,7 +154,7 @@ focus_tree = {
     focus = {
 		id = MNT_First_Montenegrin_Newspaper
 		icon = GFX_focus_newspapers
-		cost = 10
+		cost = 70
 		x = 7
 		y = 9
         prerequisite = { focus = MNT_Visit_Russian_Tsar }
@@ -167,7 +167,7 @@ focus_tree = {
     focus = {
 		id = MNT_Visit_Russian_Tsar
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 10
+		cost = 70
 		x = 8
 		y = 8
         prerequisite = { focus = MNT_Situation_Stabilized }
@@ -180,7 +180,7 @@ focus_tree = {
     focus = {
 		id = MNT_Build_Schools
 		icon = GFX_focus_ITA_Schools
-		cost = 10
+		cost = 70
 		x = 9
 		y = 9
         prerequisite = { focus = MNT_Visit_Russian_Tsar }
@@ -193,7 +193,7 @@ focus_tree = {
     focus = {
 		id = MNT_United_Serb_Youth
 		icon = GFX_goal_generic_demand_territory
-		cost = 5
+		cost = 35
 		x = 11
 		y = 8
         prerequisite = { focus = MNT_Situation_Stabilized }
@@ -206,7 +206,7 @@ focus_tree = {
     focus = {
 		id = MNT_Make_Another_Movement
 		icon = GFX_focus_generic_treaty
-		cost = 5
+		cost = 35
 		x = 11
 		y = 9
         available = { always = no }
@@ -220,7 +220,7 @@ focus_tree = {
     focus = {
 		id = MNT_Punish_Clan_Bjelopavlic
 		icon = GFX_goal_continuous_suppression
-		cost = 5
+		cost = 35
 		x = 9
 		y = 5
         prerequisite = { focus = MNT_Assassination_Of_Knez_Danilo }
@@ -233,7 +233,7 @@ focus_tree = {
     focus = {
 		id = MNT_Execute_Todor_Kadic
 		icon = GFX_goal_generic_political_pressure
-		cost = 5
+		cost = 35
 		x = 9
 		y = 6
         prerequisite = { focus = MNT_Punish_Clan_Bjelopavlic }
@@ -246,7 +246,7 @@ focus_tree = {
     focus = {
 		id = MNT_Strengthen_Political_Position
 		icon = GFX_goal_continuous_increase_nu
-		cost = 5
+		cost = 35
 		x = 11
 		y = 2
         prerequisite = { focus = MNT_Danilo's_Code }
@@ -258,7 +258,7 @@ focus_tree = {
     focus = {
 		id = MNT_Encourage_Society_Modernization
 		icon = GFX_goal_focus_the_elite
-		cost = 10
+		cost = 70
 		x = 9
 		y = 3
         prerequisite = { focus = MNT_Strengthen_Political_Position }
@@ -274,7 +274,7 @@ focus_tree = {
     focus = {
 		id = MNT_Abolish_Cruel_Practices
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		cost = 10
+		cost = 70
 		x = 11
 		y = 3
         prerequisite = { focus = MNT_Strengthen_Political_Position }
@@ -288,7 +288,7 @@ focus_tree = {
     focus = {
 		id = MNT_Freedom_Of_South_Slavs
 		icon = GFX_goal_generic_propaganda
-		cost = 10
+		cost = 70
 		x = 13
 		y = 3
         prerequisite = { focus = MNT_Strengthen_Political_Position }
@@ -302,7 +302,7 @@ focus_tree = {
     focus = {
 		id = MNT_Montenegrin_Economy
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 35
 		x = 19
 		y = 0
 		completion_reward = {
@@ -313,7 +313,7 @@ focus_tree = {
     focus = {
 		id = MNT_Connect_The_Nahiyas
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 35
 		x = 15
 		y = 1
         prerequisite = { focus = MNT_Montenegrin_Economy }
@@ -331,7 +331,7 @@ focus_tree = {
     focus = {
 		id = MNT_Improve_Cetinje's_Infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5
+		cost = 35
 		x = 15
 		y = 2
         prerequisite = { focus = MNT_Connect_The_Nahiyas }
@@ -349,7 +349,7 @@ focus_tree = {
     focus = {
 		id = MNT_Modern_Animal_Raising_Practices
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 35
 		x = 17
 		y = 1
         prerequisite = { focus = MNT_Montenegrin_Economy }
@@ -364,7 +364,7 @@ focus_tree = {
     focus = {
 		id = MNT_Expand_Research_Potential
 		icon = GFX_goal_continuous_research
-		cost = 5
+		cost = 35
 		x = 20
 		y = 3
         prerequisite = { focus = MNT_Modern_Animal_Raising_Practices }
@@ -377,7 +377,7 @@ focus_tree = {
     focus = {
 		id = MNT_Promote_Agriculture
 		icon = GFX_focus_ITA_Wheat
-		cost = 5
+		cost = 35
 		x = 21
 		y = 1
         prerequisite = { focus = MNT_Montenegrin_Economy }
@@ -389,7 +389,7 @@ focus_tree = {
     focus = {
 		id = MNT_Forestry_Effort
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 35
 		x = 23
 		y = 1
         prerequisite = { focus = MNT_Montenegrin_Economy }
@@ -404,7 +404,7 @@ focus_tree = {
     focus = {
 		id = MNT_New_Agriculture_Techniques
 		icon = GFX_focus_ITA_Farms
-		cost = 5
+		cost = 35
 		x = 22
 		y = 2
         prerequisite = { focus = MNT_Forestry_Effort }
@@ -420,7 +420,7 @@ focus_tree = {
     focus = {
 		id = MNT_Improve_Farming_Methods
 		icon = GFX_goal_focus_tomato_farming
-		cost = 5
+		cost = 35
 		x = 22
 		y = 3
         prerequisite = { focus = MNT_New_Agriculture_Techniques }
@@ -432,7 +432,7 @@ focus_tree = {
     focus = {
 		id = MNT_Faster_Modernization
 		icon = GFX_goal_focus_the_workers
-		cost = 5
+		cost = 35
 		x = 18
 		y = 3
         prerequisite = { focus = MNT_Modern_Animal_Raising_Practices }
@@ -449,7 +449,7 @@ focus_tree = {
     focus = {
 		id = MNT_More_Productive_Economy
 		icon = GFX_goal_generic_trade
-		cost = 5
+		cost = 35
 		x = 19
 		y = 4
         prerequisite = { focus = MNT_Expand_Research_Potential }
@@ -467,7 +467,7 @@ focus_tree = {
     focus = {
 		id = MNT_Reorganized_Army
 		icon = GFX_goal_focus_military_reforms
-		cost = 5
+		cost = 35
 		x = 29
 		y = 0
 		completion_reward = {
@@ -479,7 +479,7 @@ focus_tree = {
     focus = {
 		id = MNT_Define_Chain_Of_Command
 		icon = GFX_focus_generic_military_mission
-		cost = 10
+		cost = 70
 		x = 29
 		y = 1
         prerequisite = { focus = MNT_Reorganized_Army }
@@ -492,7 +492,7 @@ focus_tree = {
     focus = {
 		id = MNT_Improve_Troops'_Morale
 		icon = GFX_focus_Make_a_Man_Out_Of_You
-		cost = 10
+		cost = 70
 		x = 26
 		y = 2
         prerequisite = { focus = MNT_Define_Chain_Of_Command }
@@ -507,7 +507,7 @@ focus_tree = {
     focus = {
 		id = MNT_Study_Land_Doctrines
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 70
 		x = 28
 		y = 2
         prerequisite = { focus = MNT_Define_Chain_Of_Command }
@@ -519,7 +519,7 @@ focus_tree = {
     focus = {
 		id = MNT_New_Strategies
 		icon = GFX_focus_prc_infiltration
-		cost = 10
+		cost = 70
 		x = 28
 		y = 3
         prerequisite = { focus = MNT_Study_Land_Doctrines }
@@ -531,7 +531,7 @@ focus_tree = {
     focus = {
 		id = MNT_Improve_Army_Tactics
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10
+		cost = 70
 		x = 28
 		y = 4
         prerequisite = { focus = MNT_New_Strategies }
@@ -544,7 +544,7 @@ focus_tree = {
     focus = {
 		id = MNT_New_Infantry_Weaponry
 		icon = GFX_goal_generic_small_arms
-		cost = 10
+		cost = 70
 		x = 30
 		y = 2
         prerequisite = { focus = MNT_Define_Chain_Of_Command }
@@ -556,7 +556,7 @@ focus_tree = {
     focus = {
 		id = MNT_Artillery
 		icon = GFX_goal_generic_army_artillery2
-		cost = 10
+		cost = 70
 		x = 32
 		y = 2
         prerequisite = { focus = MNT_Define_Chain_Of_Command }
@@ -568,7 +568,7 @@ focus_tree = {
     focus = {
 		id = MNT_Train_Our_Brave_Fighters
 		icon = GFX_goal_continuous_reduce_training_time
-		cost = 10
+		cost = 70
 		x = 31
 		y = 3
         prerequisite = { focus = MNT_Artillery focus = MNT_New_Infantry_Weaponry }
@@ -585,7 +585,7 @@ focus_tree = {
     focus = {
 		id = MNT_Modernizing_Army_Equipment
 		icon = GFX_goal_generic_military_sphere
-		cost = 10
+		cost = 70
 		x = 31
 		y = 4
         prerequisite = { focus = MNT_Train_Our_Brave_Fighters }
@@ -598,7 +598,7 @@ focus_tree = {
     focus = {
 		id = MNT_New_Recruits
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10
+		cost = 70
 		x = 33
 		y = 4
         prerequisite = { focus = MNT_Train_Our_Brave_Fighters }
@@ -626,7 +626,7 @@ focus_tree = {
     focus = {
 		id = MNT_Military_Cooperation_With_Serbia
 		icon = GFX_goal_generic_major_alliance
-		cost = 5
+		cost = 35
 		x = 26
 		y = 6        
         available = {
@@ -644,7 +644,7 @@ focus_tree = {
     focus = {
 		id = MNT_1866_Officer_Training
 		icon = GFX_focus_generic_military_academy
-		cost = 10
+		cost = 70
 		x = 29
 		y = 6
         prerequisite = { focus = MNT_After_War_Period }
@@ -659,7 +659,7 @@ focus_tree = {
     focus = {
 		id = MNT_Improve_Quality_Of_Strategies
 		icon = GFX_goal_generic_defence
-		cost = 10
+		cost = 70
 		x = 27
 		y = 8
         prerequisite = { focus = MNT_1866_Officer_Training focus = MNT_Military_Cooperation_With_Serbia }
@@ -671,7 +671,7 @@ focus_tree = {
     focus = {
 		id = MNT_Better_Artillery_Quality
 		icon = GFX_goal_generic_army_artillery
-		cost = 10
+		cost = 70
 		x = 31
 		y = 6
         prerequisite = { focus = MNT_After_War_Period }
@@ -683,7 +683,7 @@ focus_tree = {
     focus = {
 		id = MNT_Equipment_For_Infantry
 		icon = GFX_focus_secret_rearmament
-		cost = 10
+		cost = 70
 		x = 33
 		y = 6
         prerequisite = { focus = MNT_After_War_Period }
@@ -695,7 +695,7 @@ focus_tree = {
     focus = {
 		id = MNT_More_Recruits
 		icon = GFX_goal_rhineland
-		cost = 10
+		cost = 70
 		x = 32
 		y = 7
         prerequisite = { focus = MNT_Better_Artillery_Quality }
@@ -708,7 +708,7 @@ focus_tree = {
     focus = {
 		id = MNT_1871_Reform
 		icon = GFX_focus_chi_army_reform
-		cost = 5
+		cost = 35
 		x = 29
 		y = 7
         prerequisite = { focus = MNT_1866_Officer_Training }
@@ -725,7 +725,7 @@ focus_tree = {
     focus = {
 		id = MNT_Department_Of_Military_Affairs
 		icon = GFX_focus_generic_home_defense
-		cost = 5
+		cost = 35
 		x = 29
 		y = 8
         prerequisite = { focus = MNT_1871_Reform }
@@ -742,7 +742,7 @@ focus_tree = {
     focus = {
 		id = MNT_Prepare_For_War
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 5
+		cost = 35
 		x = 29
 		y = 9
         prerequisite = { focus = MNT_Department_Of_Military_Affairs }

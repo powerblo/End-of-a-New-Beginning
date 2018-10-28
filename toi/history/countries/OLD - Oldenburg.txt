@@ -10,7 +10,7 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    OLD_Peter_II
     victorian_era
 	law_victorian_army
     agrarian
@@ -60,7 +60,7 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 100
       }
       radical_democracy = {
         popularity = 0
@@ -69,14 +69,14 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 0
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -98,11 +98,11 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-  name = "Peter II"
+  name = "Peter von Rossing"
   desc = "POLITICS_PETER_II_DESC"
-  picture = "Portrait_OLD_Peter_II_of_Oldenburg.dds"
+  picture = "Portrait_OLD_Peter_von_Rossing.dds"
   expire = "1900.1.1"
-  ideology = despotism
+  ideology = conserv
   traits = {
 
   }
