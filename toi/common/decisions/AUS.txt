@@ -151,5 +151,92 @@ political_actions = {
 			base = 1
 		}
 	}
-
+}
+	
+eoanb_category_diplomatic_actions = {
+	eoanb_decision_AUS_reform_ita1 = { #Future of Lombardy-Venetia 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS
+			AUS = { has_completed_focus = AUS_Future_Italy }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50 
+		
+		is_good = yes
+		
+		complete_effect = {
+		    country_event = AUSdiplo.1
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	eoanb_decision_AUS_reform_ita2 = { #Future of Modena, Parma and Tuscany 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS
+			AUS = { has_completed_focus = AUS_Future_Italy }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50 
+		
+		is_good = yes
+		
+		complete_effect = {
+		    country_event = AUSdiplo.2 
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_reform_ita3 = { #Give Savoy and Nice to France  
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+			PIE = { is_puppet_of = AUS }
+			735 = { is_owned_by = PIE }
+			822 = { is_owned_by = PIE }
+		}
+		
+		visible = {
+			TAG = AUS
+			AUS = { has_completed_focus = AUS_Future_Italy }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50 
+		
+		is_good = yes
+		
+		complete_effect = {
+		    country_event = AUSdiplo.3  
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
 }
