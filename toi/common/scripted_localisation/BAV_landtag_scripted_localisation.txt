@@ -1,4 +1,33 @@
 defined_text = {
+	name = LANDTAG_NAME
+	
+	text = {
+		trigger = {
+			tag = WUR
+		}
+		localization_key = "WUR_LANDTAG"
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = BAV
+				tag = PRS
+				tag = WUR
+				tag = BAD
+				tag = HSD
+				tag = FRK
+				tag = HES
+				tag = THU
+				tag = SAX
+				tag = HAN
+				tag = MCK
+			}
+		}
+		localization_key = "GENERIC_LANDTAG"
+	}
+}
+
+defined_text = {
 	name = I_PRES_ENDPOINT
 	
 	text = {

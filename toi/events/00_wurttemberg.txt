@@ -20,7 +20,7 @@ country_event = {
 			create_country_leader = { 
 				name = "Karl I" 
 				desc = "POLITICS_KARL_I_DESC"
-				picture = "Portrait_WUR_Charles_of_Wurttemberg.dds" 
+				picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds" 
 				ideology = despotism
 				traits = { }
 			}
@@ -45,6 +45,8 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.1.a
+		
+		remove_ideas = WUR_victorian_emigration_1
 	}
 }
 
@@ -60,6 +62,11 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_2
+		}
 	}
 }
 
@@ -75,6 +82,11 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.1.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_good
+		}
 	}
 }
 
@@ -90,5 +102,10 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_bad
+		}
 	}
 }

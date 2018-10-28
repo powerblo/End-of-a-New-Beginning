@@ -21,7 +21,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { } 
 		prerequisite = { }
-		cost = 5
+		cost = 35
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -38,7 +38,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_agrarian_society }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -58,7 +58,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_agrarian_society }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		
 		available = {
@@ -87,11 +87,24 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { focus = WUR_stop_emigration } 
 		prerequisite = { focus = WUR_agrarian_society }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			random_list = {
+				30 = {
+					custom_effect_tooltip = WUR_victorian_emigration_recover
+					hidden_effect = {
+						country_event = { id = wurttem.3 days = 7 }
+					}
+				}
+				70 = {
+					custom_effect_tooltip = WUR_victorian_emigration_continues
+					hidden_effect = {
+						country_event = { id = wurttem.4 days = 7 }
+					}
+				}
+			}
 		}
 	}
 	
@@ -104,11 +117,24 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { focus = WUR_draw_in_people } 
 		prerequisite = { focus = WUR_agrarian_society }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			random_list = {
+				60 = {
+					custom_effect_tooltip = WUR_victorian_emigration_stops
+					hidden_effect = {
+						country_event = { id = wurttem.1 days = 7 }
+					}
+				}
+				40 = {
+					custom_effect_tooltip = WUR_victorian_emigration_continues
+					hidden_effect = {
+						country_event = { id = wurttem.2 days = 7 }
+					}
+				}
+			}
 		}
 	}
 	
@@ -122,11 +148,11 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_geo_disadvantage }
 		prerequisite = { focus = WUR_stop_emigration focus = WUR_draw_in_people }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			remove_ideas = WUR_victorian_inflation
 		}
 	}
 	
@@ -139,7 +165,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_recover_from_inflation }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -156,7 +182,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_address_unemployment }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -173,7 +199,7 @@ focus_tree = {
 		y = 5
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_wurttemburgian_craft }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -190,7 +216,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_recover_from_inflation }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -207,7 +233,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_stuttgarter_boerse }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -224,7 +250,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_wurttemburgian_roads }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		available = {
@@ -253,7 +279,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_steamboats }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		available = {
@@ -290,7 +316,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_staats_eisenbahnen }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -309,7 +335,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_architecture_techniques }
 		prerequisite = { focus = WUR_hofbank }
 		prerequisite = { focus = WUR_textile_focus }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -328,7 +354,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_architecture_techniques }
 		prerequisite = { focus = WUR_hofbank }
 		prerequisite = { focus = WUR_textile_focus }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -345,7 +371,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { } 
 		prerequisite = { }
-		cost = 5
+		cost = 35
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -362,7 +388,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_wurttemburgian_army }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -379,7 +405,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_strengthen_gendarmerie }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -396,7 +422,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_popularize_landjaeger }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -413,7 +439,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_wurttemburgian_army }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -430,7 +456,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_strengthen_army }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -447,7 +473,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = WUR_kriegsministerium } 
 		prerequisite = { focus = WUR_reestablish_landmiliz }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -465,7 +491,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_reestablish_kriegsrat }
 		prerequisite = { focus = WUR_equip_landjaeger }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -483,7 +509,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_reestablish_kriegsrat }
 		prerequisite = { focus = WUR_equip_landjaeger }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -501,7 +527,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_felddivisionen }
 		prerequisite = { focus = WUR_local_authorities }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -518,7 +544,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = WUR_reestablish_kriegsrat } 
 		prerequisite = { focus = WUR_reestablish_landmiliz }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -535,7 +561,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_kriegsministerium }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -552,7 +578,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_kriegsministerium }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -569,7 +595,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_kriegsministerium }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -588,7 +614,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_centralbureau }
 		prerequisite = { focus = WUR_militaerabteilung }
 		prerequisite = { focus = WUR_oekonomieabteilung }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -605,7 +631,7 @@ focus_tree = {
 		y = 6
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_reorganized_army focus = WUR_traditional_army }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -622,7 +648,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { focus = WUR_suppress_wurttembergian_liberalism } 
 		prerequisite = {  }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -639,7 +665,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_integrate_wurttembergian_liberalism }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -656,7 +682,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { focus = WUR_integrate_wurttembergian_liberalism } 
 		prerequisite = {  }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -673,7 +699,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_suppress_wurttembergian_liberalism }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -690,7 +716,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_joseph_von_linden focus = WUR_friedrich_von_roemer }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -707,7 +733,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { } 
 		prerequisite = {  }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -724,7 +750,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_regierungskreise }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -741,7 +767,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_kommunalverwaltung }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -759,7 +785,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_enforce_the_schultheiss }
 		prerequisite = { focus = WUR_the_liberal_struggle }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -776,7 +802,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_aftermath_of_the_rumpfparlament }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -793,7 +819,7 @@ focus_tree = {
 		y = 5
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_shifting_flow }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -810,7 +836,7 @@ focus_tree = {
 		y = 5
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_shifting_flow }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -828,7 +854,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_napoleon_iii }
 		prerequisite = { focus = WUR_alexander_ii }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -845,7 +871,7 @@ focus_tree = {
 		y = 7
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_zweikaisertreffen }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -862,7 +888,7 @@ focus_tree = {
 		y = 7
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_zweikaisertreffen }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -879,7 +905,7 @@ focus_tree = {
 		y = 0
 		mutually_exclusive = { } 
 		prerequisite = {  }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -896,7 +922,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { focus = WUR_conservative_norms } 
 		prerequisite = { focus = WUR_karl_i }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -913,7 +939,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_liberal_reforms }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -930,7 +956,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_liberal_reforms }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -947,7 +973,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_liberal_reforms }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -964,7 +990,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_repeal_marriage_restrictions }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -981,7 +1007,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_civil_rights_for_the_jews }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -998,7 +1024,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_freedom_of_association }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1016,7 +1042,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_freedom_of_association }
 		prerequisite = { focus = WUR_freedom_of_press }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1035,7 +1061,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_economic_freedom }
 		prerequisite = { focus = WUR_right_of_abode }
 		prerequisite = { focus = WUR_karl_von_varnbueler }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1052,7 +1078,7 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = { focus = WUR_liberal_reforms } 
 		prerequisite = { focus = WUR_karl_i }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1069,7 +1095,7 @@ focus_tree = {
 		y = 2
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_conservative_norms }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1086,7 +1112,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_continue_suppression }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1103,7 +1129,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_continue_suppression }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1120,7 +1146,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_continue_suppression }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1137,7 +1163,7 @@ focus_tree = {
 		y = 4
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_conservative_ministers }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1155,7 +1181,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_rally_neighbours_against_liberalism }
 		prerequisite = { focus = WUR_speak_against_liberalism }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1173,7 +1199,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_rally_neighbours_against_liberalism }
 		prerequisite = { focus = WUR_speak_against_liberalism }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1192,7 +1218,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_support_autocrats }
 		prerequisite = { focus = WUR_support_conservatives }
 		prerequisite = { focus = WUR_autocratic_ministers }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1209,7 +1235,7 @@ focus_tree = {
 		y = 6
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_reaffirm_landtag_influence focus = WUR_reform_second_chamber }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1226,7 +1252,7 @@ focus_tree = {
 		y = 7
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_our_stance_on_germany }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1243,7 +1269,7 @@ focus_tree = {
 		y = 8
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_the_north }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1260,7 +1286,7 @@ focus_tree = {
 		y = 7
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_our_stance_on_germany }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1277,7 +1303,7 @@ focus_tree = {
 		y = 8
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_the_south }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1294,7 +1320,7 @@ focus_tree = {
 		y = 8
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_our_stance_on_germany }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1311,7 +1337,7 @@ focus_tree = {
 		y = 9
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_the_southern_states }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1328,7 +1354,7 @@ focus_tree = {
 		y = 10
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_old_friends }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1345,7 +1371,7 @@ focus_tree = {
 		y = 10
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_old_friends }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1363,7 +1389,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_befriend_bavaria }
 		prerequisite = { focus = WUR_befriend_baden }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1381,7 +1407,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_befriend_bavaria }
 		prerequisite = { focus = WUR_befriend_baden }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1400,7 +1426,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_propose_trias }
 		prerequisite = { focus = WUR_befriend_middle_states }
 		prerequisite = { focus = WUR_prussian_relations }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1418,7 +1444,7 @@ focus_tree = {
 		mutually_exclusive = { focus = WUR_push_for_pro_prussian_approach focus = WUR_push_for_pro_austrian_approach }
 		prerequisite = { focus = WUR_propose_trias }
 		prerequisite = { focus = WUR_befriend_middle_states }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {
@@ -1437,7 +1463,7 @@ focus_tree = {
 		prerequisite = { focus = WUR_propose_trias }
 		prerequisite = { focus = WUR_befriend_middle_states }
 		prerequisite = { focus = WUR_austrian_relations }
-		cost = 10
+		cost = 70
 		available_if_capitulated = no  
 		
 		completion_reward = {

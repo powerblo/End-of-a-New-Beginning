@@ -133,6 +133,7 @@ scripted_gui = {
 		window_name = "local_landtag_pres_II_menu_container"
 		
 		visible={
+			NOT = { tag = WUR }
 			check_variable = { show_local_landtag_II_pres > 0.00 }
 		}
 		
