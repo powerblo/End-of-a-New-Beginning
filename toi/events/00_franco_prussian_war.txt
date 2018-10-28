@@ -372,6 +372,14 @@ country_event = {
 					remove_ideas = PRS_idea_fp_mil_boost
 				}
 			}
+			if = {
+				limit = {
+					PRS = {
+						has_idea = PRS_idea_rapid_expansion
+					}
+				}
+				remove_ideas = PRS_idea_rapid_expansion
+			}
 		}
 	}
 	
@@ -475,6 +483,18 @@ country_event = {
 				}
 				PRS = {
 					remove_ideas = PRS_idea_fp_mil_boost
+				}
+			}
+			if = {
+				limit = {
+					PRS = {
+						has_idea = PRS_idea_rapid_expansion
+					}
+				}
+				remove_ideas = PRS_idea_rapid_expansion
+				add_timed_idea = {
+					idea = PRS_idea_rapid_expansion
+					days = 1825
 				}
 			}
 		}

@@ -387,4 +387,88 @@ wargoal_types = {
 		
 		threat = 0.1
 	}
+	
+	wargoal_religious_war = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = RELIGIOUS_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		threat = 1.1
+	}
+	
+	wargoal_stop_revolution = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = AGAINST_REVOLUTION_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		threat = 0.4
+	}
+	
+	wargoal_spread_revolution = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = PRO_REVOLUTION_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		threat = 1.4
+	}
+	
+	wargoal_diplomatic_humiliation = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = HUMILIATE_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		threat = 0.2
+	}
 }

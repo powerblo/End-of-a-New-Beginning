@@ -483,7 +483,7 @@ country_event = {
 		name = sevenweekswar.18.a
 		ai_chance = { factor = 100 }
 		PRS = { 
-			add_opinion_modifier = { target = AUS modifier = embargo } 
+			add_opinion_modifier = { target = AUS modifier = eoanb_embargo } 
 		}
 		hidden_effect = {
 			AUS = { country_event = { days = 3 id = sevenweekswar.20 } }
@@ -513,7 +513,7 @@ country_event = {
 		name = sevenweekswar.19.a
 		ai_chance = { factor = 100 }
 		AUS = { 
-			add_opinion_modifier = { target = PRS modifier = embargo } 
+			add_opinion_modifier = { target = PRS modifier = eoanb_embargo } 
 		}
 		hidden_effect = {
 			PRS = { country_event = { days = 5 id = sevenweekswar.23 } }
