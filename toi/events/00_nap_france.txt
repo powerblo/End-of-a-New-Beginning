@@ -4331,7 +4331,7 @@ country_event = { # Resentment in Paris
           }
         }
         hidden_effect = {
-          country_event = { day = 10 id = third_rep_france.19 }
+          country_event = { days = 10 id = third_rep_france.19 }
         }
       }
     }
@@ -4350,7 +4350,7 @@ country_event = { # The [GetDateText] Uprising
   option = { # It has begun
     name = third_rep_france.16.a
     hidden_effect = {
-      country_event = { day = 1 id = third_rep_france.100 }
+      country_event = { days = 1 id = third_rep_france.100 }
     }
   }
 }
@@ -4474,14 +4474,14 @@ country_event = { # The Meeting
   option = { # We'll be sure to put Mac-Mahon aside
     name = third_rep_france.18.a
     hidden_effect = {
-      country_event = { day = 4 id = third_rep_france.17 }
+      country_event = { days = 4 id = third_rep_france.17 }
     }
   }
 
   option = { # We don't want to make our military weaker than it already is
     name = third_rep_france.18.a
     hidden_effect = {
-      country_event = { day = 10 id = third_rep_france.19 }
+      country_event = { days = 10 id = third_rep_france.19 }
     }
   }
 }
@@ -4708,7 +4708,7 @@ country_event = { # General strike in Paris
     clear_variable = FRA_flag_army_thoughts
     clear_variable = FRA_flag_socialist_thoughts
     hidden_effect = {
-      country_event = { day = 10 id = third_rep_france.100 }
+      country_event = { days = 10 id = third_rep_france.100 }
     }
   }
 }
@@ -4804,7 +4804,7 @@ country_event = { # Military demonstrations in Paris
     clear_variable = FRA_flag_army_thoughts
     clear_variable = FRA_flag_socialist_thoughts
     hidden_effect = {
-      country_event = { day = 10 id = third_rep_france.19 }
+      country_event = { days = 10 id = third_rep_france.19 }
     }
   }
 }
