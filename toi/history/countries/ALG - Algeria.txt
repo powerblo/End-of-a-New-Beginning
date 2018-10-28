@@ -1,8 +1,6 @@
 ﻿1857.1.1 = {
   capital = 459
 
-  set_cosmetic_tag = ALG_FRENCH_COLONY
-
   oob = "ALG_1857"
 
   set_convoys = 0
@@ -40,6 +38,8 @@
 	
   }
 
+  add_ideas = FRA_ALG_french_colonial_rule
+
   set_politics = {
     parties = {
       anarchism = {
@@ -76,6 +76,25 @@
 
 	  ruling_party = autocracy
   }
+
+  FRA = {
+    if = {
+      limit = {
+        has_dlc = "Together for Victory"
+      }
+      set_autonomy = {
+        target = ALG
+        autonomous_state = autonomy_colony
+        freedom_level = 0.01
+      }
+      else = {
+        puppet = ALG
+      }
+    }
+  }
+
+  set_cosmetic_tag = ALG_FRENCH_COLONY
+
   add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = ALG }
   add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = ALG }
 
