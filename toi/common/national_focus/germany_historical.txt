@@ -2615,8 +2615,9 @@ focus_tree = {
 			custom_effect_tooltip = eoanb_tt_GER_focus_china_military
 			hidden_effect = {
 				CHI = { add_ideas = GER_idea_CHI_military_presence }
-				#Add a way for China to kick them out if they want to later
-				#Add an event for notifying China this is happening later
+				hidden_effect = {
+					CHI = { country_event = { id = germany.13 } }
+				}
 			}
 		}
 	}

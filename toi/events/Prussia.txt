@@ -2,191 +2,169 @@
 
 #Marriage of Prince Friedrich Wilhelm and Princess Victoria 
 country_event = {
-		id = prussia.1 
-		title = prussia.1.t
-		desc = prussia.1.d
-		picture = GFX_event_prussia_wedding
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1858.1.25
-		}
-		
-		option = {
-			name = prussia.1.a
-			ai_chance = { factor = 100 }
-			add_political_power = 30
-			ENG = { add_opinion_modifier = { target = PRS modifier = PRS_ENG_WEDDING } }
-			add_opinion_modifier = { target = ENG modifier = PRS_ENG_WEDDING }
-		}
+	id = prussia.1 
+	title = prussia.1.t
+	desc = prussia.1.d
+	picture = GFX_event_prussia_wedding
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1858.1.25
+	}
+	
+	option = {
+		name = prussia.1.a
+		ai_chance = { factor = 100 }
+		add_political_power = 30
+		ENG = { add_opinion_modifier = { target = PRS modifier = PRS_ENG_WEDDING } }
+		add_opinion_modifier = { target = ENG modifier = PRS_ENG_WEDDING }
+	}
 }
 
 #Museum für polnisches und slawisches Altertum (Posen) 
 country_event = {
-		id = prussia.2
-		title = prussia.2.t
-		desc = prussia.2.d
-		picture = GFX_event_posen_museum
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1857.6.25
-		}
-		
-		option = {
-			name = prussia.2.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.d
+	picture = GFX_event_posen_museum
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1857.6.25
+	}
+	
+	option = {
+		name = prussia.2.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 }
 
 #Establishing König Brewery 
 country_event = {
-		id = prussia.3
-		title = prussia.3.t
-		desc = prussia.3.d
-		picture = GFX_report_event_merchant_ship_01
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1858.7.25
-		}
-		
-		option = {
-			name = prussia.3.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.3
+	title = prussia.3.t
+	desc = prussia.3.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1858.7.25
+	}
+	
+	option = {
+		name = prussia.3.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 } 
 
 #Kölner Zoo
 country_event = {
-		id = prussia.4
-		title = prussia.4.t
-		desc = prussia.4.d
-		picture = GFX_event_koelner_zoo
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1860.7.22
-		}
-		
-		option = {
-			name = prussia.4.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.4
+	title = prussia.4.t
+	desc = prussia.4.d
+	picture = GFX_event_koelner_zoo
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1860.7.22
+	}	
+	
+	option = {
+		name = prussia.4.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 } 
 #Deutsches Rotes Kreuz
 country_event = {
-		id = prussia.5
-		title = prussia.5.t
-		desc = prussia.5.d
-		picture = GFX_report_event_merchant_ship_01
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1860.2.22
-		}
-		
-		option = {
-			name = prussia.5.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1860.2.22
+	}
+	
+	option = {
+		name = prussia.5.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 } 
 #Berliner Entomologische Zeitschrift
 country_event = {
-		id = prussia.6
-		title = prussia.6.t
-		desc = prussia.6.d
-		picture = GFX_report_event_merchant_ship_01
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1857.9.22
-		}
-		
-		option = {
-			name = prussia.6.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1857.9.22
+	}
+	
+	option = {
+		name = prussia.6.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 } 
 #Katholischer Studentenverein Arminia Bonn
 country_event = {
-		id = prussia.7
-		title = prussia.7.t
-		desc = prussia.7.d
-		picture = GFX_event_arnima
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1863.10.23
-		}
-		
-		option = {
-			name = prussia.7.a 
-			ai_chance = { factor = 100 }
-			add_political_power = 10
-		}
+	id = prussia.7
+	title = prussia.7.t
+	desc = prussia.7.d
+	picture = GFX_event_arnima
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1863.10.23
+	}
+	
+	option = {
+		name = prussia.7.a 
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
 } 
 #Death of Alexander von Humboldt 
 country_event = {
-		id = prussia.8
-		title = prussia.8.t
-		desc = prussia.8.d
-		picture = GFX_event_death_von_humboldt
-		
-		fire_only_once = yes
-		
-		trigger = {
-			TAG = PRS
-			date > 1859.5.6
-		}
-		
-		option = {
-			name = prussia.8.a 
-			ai_chance = { factor = 100 }
-			add_political_power = -10
-		}
+	id = prussia.8
+	title = prussia.8.t
+	desc = prussia.8.d
+	picture = GFX_event_death_von_humboldt
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1859.5.6
+	}
+	
+	option = {
+		name = prussia.8.a 
+		ai_chance = { factor = 100 }
+		add_political_power = -10
+	}
 }
-#TOO IMPORTANT TO BE A FLAVOR EVENT LIKE THIS
-#NEEDS FIXING 
-#Das Kapital 
-#country_event = {
-#		id = prussia.9
-#		title = prussia.9.t
-#		desc = prussia.9.d
-#		picture = GFX_event_das_kapital
-#		
-#		fire_only_once = yes
-#		
-#		trigger = {
-#			TAG = PRS
-#			date > 1867.2.6
-#		}
-#		
-#		option = {
-#			name = prussia.9.a 
-#			ai_chance = { factor = 100 }
-#			add_political_power = -20
-#	}
-#} 
 
 #Hannover gets asked for access
 country_event = {
@@ -490,6 +468,7 @@ country_event = {
 	}
 }
 
+#Siemens-Halske telegraphic line - Event 2
 country_event = {
     id = prussia.20
 	title = prussia.20.t
@@ -510,6 +489,7 @@ country_event = {
 	}
 }
 
+#Siemens-Halske telegraphic line - Event 3
 country_event = {
     id = prussia.21
 	title = prussia.21.t
@@ -528,4 +508,167 @@ country_event = {
 		    }
 		}
 	}
+}
+
+#Regency of Prince Wilhelm
+country_event = {
+	id = prussia.22
+	title = prussia.22.t
+	desc = prussia.22.d
+	picture = GFX_report_event_hungary_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1858.1.19
+		OR = {
+			has_government = traditional_conservatism
+			has_government = autocracy
+		}
+		NOT = { has_idea = non_monarchical_system }
+	}
+	
+	option = {
+		name = prussia.22.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+		add_ideas = PRS_idea_prince_wilhelm_regency
+	}
+	
+}
+
+#Coronation of Prince Wilhelm
+country_event = {
+	id = prussia.23
+	title = prussia.23.t
+	desc = prussia.23.d
+	picture = GFX_report_event_prs_coronation_1861
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.23.a
+		ai_chance = { factor = 100 }
+		remove_ideas = PRS_idea_prince_wilhelm_regency
+		remove_ideas = PRS_Friedrich_Wilhelm_IV
+		add_ideas = PRS_Wilhelm_I
+	}
+	
+}
+
+#Prussian Postal Service
+country_event = {
+	id = prussia.24
+	title = prussia.24.t
+	desc = prussia.24.d
+	picture = GFX_report_event_prs_postal_stamp
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1857.7.4
+	}
+	
+	option = {
+		name = prussia.24.a
+		ai_chance = { factor = 100 }
+		add_political_power = 20
+	}
+	
+}
+
+#Death of Field Marshal Karl Friedrich Emil
+country_event = {
+	id = prussia.25
+	title = prussia.25.t
+	desc = prussia.25.d
+	picture = GFX_report_event_generic_funeral
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1859.2.20
+		has_unit_leader = 2000
+	}
+	
+	option = {
+		name = prussia.25.a
+		ai_chance = { factor = 100 }
+		remove_unit_leader = 2000
+	}
+	
+}
+
+#Wolin Excavations
+country_event = {
+	id = prussia.26
+	title = prussia.26.t
+	desc = prussia.26.d
+	picture = GFX_report_event_generic_ruins
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1871.2.2
+		owns_state = 63
+	}
+	
+	option = {
+		name = prussia.26.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+		63 = { add_manpower = 500 }
+	}
+	
+}
+
+#City Rights for Kattowitz
+country_event = {
+	id = prussia.27
+	title = prussia.27.t
+	desc = prussia.27.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PRS
+		date > 1865.9.10
+		owns_state = 1107
+	}
+	
+	option = {
+		name = prussia.27.a
+		ai_chance = { factor = 100 }
+		1107 = {
+			add_extra_state_shared_building_slots = 1 
+		}
+	}
+	
+}
+
+#Invited to the Zollverein by Prussia
+country_event = {
+	id = prussia.28
+	title = prussia.28.t
+	desc = prussia.28.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.28.a
+		ai_chance = { factor = 95 }
+		add_ideas = PRS_Zollverein
+	}
+	
+	option = {
+		name = prussia.28.b
+		ai_chance = { factor = 5 }
+	}
+	
 }

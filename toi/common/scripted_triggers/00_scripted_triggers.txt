@@ -117,6 +117,16 @@ nation_owns_chinese_trade_port = {
 		owns_state = 1174
 	}
 }
+
+nation_is_in_zollverein = {
+	OR = {	
+		has_idea = PRS_Zollverein
+		has_idea = PRS_Zollverein_1
+		has_idea = PRS_Zollverein_2
+		has_idea = PRS_Zollverein_3
+	}
+}
+
 #############################################
 #for formed countries that use cosmetic tags#
 #############################################

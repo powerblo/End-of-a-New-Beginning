@@ -431,3 +431,57 @@ country_event = {
 	}
 	
 }
+
+#CHI is notified of German Military Presence
+country_event = {
+	id = germany.13
+	title = germany.13.t
+	desc = germany.13.d
+	picture = GFX_report_event_saf_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.13.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ger_event_13_a
+	}
+
+}
+
+#GER kicked out by CHI
+country_event = {
+	id = germany.14
+	title = germany.14.t
+	desc = germany.14.d
+	picture = GFX_report_event_nationalist_china_machinegun_firing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.14.a
+		ai_chance = { factor = 100 }
+		add_political_power = -10
+		custom_effect_tooltip = eoanb_tt_ger_event_14_a
+		if = {
+			limit = {
+				GER = { has_military_access_to = CHI }
+			}
+			diplomatic_relation = {
+				country = CHI
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	
+	option = {
+		name = germany.14.b
+		ai_chance = { factor = 0 }
+		create_wargoal = {
+			type = wargoal_diplomatic_humiliation
+			target = CHI
+		}
+	}
+	
+}
