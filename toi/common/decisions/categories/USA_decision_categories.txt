@@ -24,3 +24,16 @@ USA_american_civil_war_descision = {
 		}
 	}
 }
+USA_reconstruction_period = {
+	icon = generic_independence
+
+	available = {
+		tag = USA
+		hidden_trigger = {
+			OR = {
+				has_country_flag = USA_first_kkk
+				has_country_flag = USA_enforcement_act
+			}
+		}
+	}
+}
