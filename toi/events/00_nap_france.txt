@@ -182,6 +182,32 @@ country_event = { # The Carbonari Revolt
     CBI = {
       transfer_state = 115
       transfer_state = 156
+
+      hidden_effect = {
+        add_state_core = 158
+        add_state_core = 981
+        add_state_core = 161
+        add_state_core = 2
+        add_state_core = 982
+        add_state_core = 159
+        add_state_core = 162
+        add_state_core = 751
+        add_state_core = 808
+        add_state_core = 813
+        add_state_core = 157
+        add_state_core = 85
+        add_state_core = 812
+        add_state_core = 117
+        add_state_core = 997
+        add_state_core = 156
+        add_state_core = 115
+        add_state_core = 114
+
+        add_state_claim = 979
+        add_state_claim = 160
+        add_state_claim = 1234
+        add_state_claim = 787
+      }
     }
     FRA = {
       clr_country_flag = fra_carbonari_ready
@@ -293,18 +319,18 @@ country_event = { # The Biarritz Meeting (Prussian vision)
   }
 }
 
-#country_event = { # Aftermath of the Orsini Tragedy
-#  id = nap_france.12
-#  title = nap_france.12.t
-#  desc = nap_france.12.d
-#  picture = GFX_report_event_nap_france_orsini_affair
-#
-#  is_triggered_only = yes
-#
-#  option = { # France is rebuilding itself
-#    name = nap_france.12.a
-#  }
-#}
+country_event = { # Aftermath of the Orsini Tragedy
+  id = nap_france.12
+  title = nap_france.12.t
+  desc = nap_france.12.d
+  picture = GFX_report_event_nap_france_orsini_affair
+
+  is_triggered_only = yes
+
+  option = { # France is rebuilding itself
+    name = nap_france.12.a
+  }
+}
 
 country_event = { # Savoy Rebellion
   id = nap_france.13
@@ -3749,7 +3775,7 @@ country_event = { # Orsini Affair
       picture = "Portrait_FRA_Regency_Council.dds"
       ideology = despotism
     }
-    set_country_flag = fra_orsini_tragedy_flag
+    set_country_flag = fra_orsini_success
     clr_country_flag = FRA_has_colonial_ambitions
     add_ideas = FRA_idea_orsini_tragedy
     complete_national_focus = FRA_the_unthinkable
