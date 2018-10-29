@@ -150,9 +150,11 @@ news_event = { # Discovery of Vulcan
   title = nap_france_flavor.7.t
   desc = nap_france_flavor.7.d
 
+  picture = france_news_discovery_vulcain
+
   fire_only_once = yes
 
-  major = no
+  major = yes
 
   trigger = {
     date > 1860.1.2
@@ -172,13 +174,11 @@ news_event = { # Premiere Internationale
   title = nap_france_flavor.8.t
   desc = nap_france_flavor.8.d
 
-  fire_only_once = yes
+  is_triggered_only = yes
 
   major = yes
 
-  trigger = {
-    date > 1860.1.2
-  }
+  picture = GFX_france_news_premiere_internationale
 
   mean_time_to_happen = {
     days = 2
@@ -226,7 +226,7 @@ news_event = { # The Proclamation of the Paris Commune
     title = nap_france_flavor.11.t
     desc = nap_france_flavor.11.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -242,7 +242,7 @@ news_event = { # The Savoy Rebellion
     title = nap_france_flavor.12.t
     desc = nap_france_flavor.12.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -258,7 +258,7 @@ news_event = { # The Kabyle Revolt
     title = nap_france_flavor.13.t
     desc = nap_france_flavor.13.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_mokhrani_revolt
 
     major = yes
 
@@ -274,7 +274,7 @@ news_event = { # Military takeover in the French Republic
     title = nap_france_flavor.14.t
     desc = nap_france_flavor.14.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -290,7 +290,7 @@ news_event = { # Military revolts against the French Republic
     title = nap_france_flavor.15.t
     desc = nap_france_flavor.15.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -322,7 +322,7 @@ news_event = { # The French Civil War (Early Commune Socialists vs Bonaparte Loy
     title = nap_france_flavor.17.t
     desc = nap_france_flavor.17.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -338,7 +338,7 @@ news_event = { # Socialist Coup in the French Empire
     title = nap_france_flavor.18.t
     desc = nap_france_flavor.18.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_paris_commune
 
     major = yes
 
@@ -354,7 +354,7 @@ news_event = { # Death of Napoleon III
     title = nap_france_flavor.19.t
     desc = nap_france_flavor.19.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_orsini_affair
 
     major = yes
 
@@ -370,7 +370,7 @@ news_event = { # Death of Napoleon III (both killed)
     title = nap_france_flavor.20.t
     desc = nap_france_flavor.20.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_orsini_affair
 
     major = yes
 
@@ -386,7 +386,7 @@ news_event = { # Orsini Affair (both survived)
     title = nap_france_flavor.21.t
     desc = nap_france_flavor.21.d
 
-    picture = GFX_france_news_suez_canal
+    picture = GFX_france_news_orsini_affair
 
     major = yes
 

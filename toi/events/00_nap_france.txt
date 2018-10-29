@@ -336,7 +336,7 @@ country_event = { # Savoy Rebellion
   id = nap_france.13
   title = nap_france.13.t
   desc = nap_france.13.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_paris_commune
 
   mean_time_to_happen = {
       days = 45
@@ -383,7 +383,7 @@ country_event = { # Savoy Independance
   id = nap_france.14
   title = nap_france.14.t
   desc = nap_france.14.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_paris_commune
 
   fire_only_once = yes
 
@@ -408,7 +408,7 @@ country_event = { # Franco-Monegasque Treaty
   id = nap_france.15
   title = nap_france.15.t
   desc = nap_france.15.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_franco_monegasque_treaty
 
   is_triggered_only = yes
 
@@ -437,7 +437,7 @@ country_event = { # Cobden-Chevalier Treaty
   id = nap_france.16
   title = nap_france.16.t
   desc = nap_france.16.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_cobden_chevalier_treaty
 
   is_triggered_only = yes
 
@@ -467,7 +467,7 @@ country_event = { # Cobden-Chevalier Treaty - France Notification - Yes
   id = nap_france.17
   title = nap_france.17.t
   desc = nap_france.17.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_cobden_chevalier_treaty
 
   is_triggered_only = yes
 
@@ -481,7 +481,7 @@ country_event = { # Cobden-Chevalier Treaty - France Notification - No
   id = nap_france.18
   title = nap_france.18.t
   desc = nap_france.18.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_cobden_chevalier_treaty
 
   is_triggered_only = yes
 
@@ -495,7 +495,7 @@ country_event = { # Reaction to the American Civil War
   id = nap_france.19
   title = nap_france.19.t
   desc = nap_france.19.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_american_civil_war
 
   is_triggered_only = yes
 
@@ -551,7 +551,7 @@ country_event = { # Monaco votes to join France
   id = nap_france.20
   title = nap_france.20.t
   desc = nap_france.20.d
-  picture = GFX_report_event_nap_france_carbonari
+  picture = GFX_report_event_franco_monegasque_treaty
 
   trigger = {
     date > 1860.1.1
@@ -601,6 +601,7 @@ country_event = { # Creation of the Compagnie universelle du canal maritime de S
   id = nap_france.101
   title = nap_france.101.t
   desc = nap_france.101.d
+  picture = GFX_report_event_suez_canal
 
   fire_only_once = yes
 
@@ -625,6 +626,7 @@ country_event = { # Henri Mouhot's death
   id = nap_france.102
   title = nap_france.102.t
   desc = nap_france.102.d
+  picture = GFX_report_event_henri_mouhot
 
   fire_only_once = yes
 
@@ -647,6 +649,7 @@ country_event = { # Pierre Bosquet's death
   id = nap_france.103
   title = nap_france.103.t
   desc = nap_france.103.d
+  picture = GFX_report_event_pierre_boquet
 
   fire_only_once = yes
 
@@ -669,6 +672,7 @@ country_event = { # Manifeste des Soixante
   id = nap_france.104
   title = nap_france.104.t
   desc = nap_france.104.d
+  picture = GFX_report_event_manifeste_des_soixantes
 
   fire_only_once = yes
 
@@ -695,17 +699,17 @@ country_event = { # Manifeste des Soixante
   }
 }
 
-country_event = { # Association internationale des travailleurs - France reaction
+country_event = { # Association internationale des travailleurs - Première Internationale
   id = nap_france.105
   title = nap_france.105.t
   desc = nap_france.105.d
+  picture = GFX_report_event_association_internationale_des_travailleurs
 
   fire_only_once = yes
 
   trigger = {
     date > 1864.9.24
     tag = FRA
-    has_global_flag = premiere_internationale
   }
 
   mean_time_to_happen = {
@@ -752,6 +756,7 @@ country_event = { # Protests in Paris
   id = nap_france.106
   title = nap_france.106.t
   desc = nap_france.106.d
+  picture = GFX_report_event_worker_strikes
 
   is_triggered_only = yes
 
@@ -789,6 +794,7 @@ country_event = { # Strikes in the Nord Mining Bassin
   id = nap_france.107
   title = nap_france.107.t
   desc = nap_france.107.d
+  picture = GFX_report_event_worker_strikes
 
   is_triggered_only = yes
 
