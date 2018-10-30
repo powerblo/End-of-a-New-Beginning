@@ -242,3 +242,20 @@ news_event = {
 	}
 	
 }
+
+#Otto von Bismarck is assasinated (during the 1874 event)
+news_event = {
+	id = news.15
+	title = news.15.t
+	desc = news.15.d
+	picture = GFX_news_event_generic_funeral
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.15.a
+	}
+	
+}

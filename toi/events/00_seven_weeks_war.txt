@@ -331,9 +331,17 @@ country_event = {
 			FRK = { country_event = { days = 5 id = sevenweekswar.13 } }
 			HAN = { country_event = { days = 7 id = sevenweekswar.13 } }
 			AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
+			if = {
+				limit = {
+					not = {
+						HLS =  { is_puppet_of = PRS }
+					}
+					HLS = { owns_state = 949 }
+				}
+				HLS = { country_event = { days = 8 id = sevenweekswar.13 } }
+			}
 		}
 	}
-	
 }
 
 #Invited by Austria
@@ -483,7 +491,7 @@ country_event = {
 		name = sevenweekswar.18.a
 		ai_chance = { factor = 100 }
 		PRS = { 
-			add_opinion_modifier = { target = AUS modifier = eoanb_embargo } 
+			add_opinion_modifier = { target = AUS modifier = embargo } 
 		}
 		hidden_effect = {
 			AUS = { country_event = { days = 3 id = sevenweekswar.20 } }
@@ -513,7 +521,7 @@ country_event = {
 		name = sevenweekswar.19.a
 		ai_chance = { factor = 100 }
 		AUS = { 
-			add_opinion_modifier = { target = PRS modifier = eoanb_embargo } 
+			add_opinion_modifier = { target = PRS modifier = embargo } 
 		}
 		hidden_effect = {
 			PRS = { country_event = { days = 5 id = sevenweekswar.23 } }
@@ -749,8 +757,8 @@ country_event = {
 			AUS = { dismantle_faction = yes }
 			clr_global_flag = eoanb_flag_seven_weeks_war_ongoing
 			PRS = { annex_country = { target = HAN transfer_troops = no } }
-			PRS = { transfer_state = 58 }
-			PRS = { transfer_state = 1032 }
+			PRS = { annex_country = { target = HLS transfer_troops = no } }
+			PRS = { annex_country = { target = SCH transfer_troops = no } }
 			PRS = { transfer_state = 1061 }
 			PRS = { set_country_flag = eoanb_flag_PRS_can_form_ngc }
 			PRS = { set_country_flag = eoanb_flag_won_7_weeks_war }

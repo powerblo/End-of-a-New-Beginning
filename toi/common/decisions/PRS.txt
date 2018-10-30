@@ -106,10 +106,10 @@ political_actions = {
 		
 	}
 	
-	#Core Land from Second Schleswig War
-	eoanb_decision_PRS_core_second_schleswig_war = {
+	#Core Land from Second Schleswig War Treaty Of Vienna
+	eoanb_decision_PRS_core_second_schleswig_war_vienna = {
 		
-		icon = generic_operation
+		icon = generic_political_discourse
 		
 		available = {
 			OR = {
@@ -145,6 +145,105 @@ political_actions = {
 				add_state_core = 58
 				add_state_core = 949
 				add_state_core = 1032
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Core Land from Second Schleswig War Russel
+	eoanb_decision_PRS_core_second_schleswig_war_russel = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1865.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			OR = {
+				PRS = {
+					owns_state = 949
+					not ={
+						owns_state = 58
+						owns_state = 1032
+					}
+				}
+				any_country = {
+					is_subject_of = PRS
+					owns_state = 949
+					not ={
+						owns_state = 58
+						owns_state = 1032
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 949
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Core Land from Second Schleswig War Bismarck
+	eoanb_decision_PRS_core_second_schleswig_war_bismarck = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1865.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			OR = {
+				PRS = {
+					owns_state = 58
+					owns_state = 949
+					not ={
+						owns_state = 1032
+					}
+				}
+				any_country = {
+					is_subject_of = PRS
+					owns_state = 58
+					owns_state = 949
+					not ={
+						owns_state = 1032
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 58
+				add_state_core = 949
 			}
 		}
 		
@@ -344,6 +443,59 @@ political_actions = {
 					remove_state_core = 58
 					remove_state_core = 949
 					remove_state_core = 1032
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Integrate Holstein
+	eoanb_decision_PRS_annex_puppet_HLS = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.4
+				HLS = { has_stability < 0.4 }
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			HLS = { is_subject_of = PRS }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 200
+		
+		days_remove = 100
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = HLS
+				modifier = eoanb_om_PRS_annexes_HLS
+			}
+			reverse_add_opinion_modifier = {
+				target = HLS
+				modifier = eoanb_om_PRS_annexes_HLS
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_HLS
+			hidden_effect = {
+				annex_country = {
+					target = HLS
+					transfer_troops = yes
+				}
+				HLS = {
+					remove_state_core = 949
 				}
 			}
 		}
@@ -1242,6 +1394,53 @@ eoanb_category_zollverein = {
 				factor = 0
 				date < 1863.6.1
 			}
+		}
+	}
+	
+}
+
+eoanb_category_projects = {
+	
+	#Inaugurate the Siegessäule
+	eoanb_decision_PRS_GER_siegessaeule = {
+		
+		icon = generic_form_nation
+		
+		available = {
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_won_fra_prs_war
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			owns_state = 951
+			num_of_available_civilian_factories > 2
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 30
+		
+		complete_effect = {
+			add_stability = 0.01
+		}
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			add_stability = 0.03
+			add_political_power = 30
+			custom_effect_tooltip = eoanb_tt_decision_PRS_GER_siegessaeule
+		}
+		
+		ai_will_do = {
+			base = 1000
 		}
 	}
 	
