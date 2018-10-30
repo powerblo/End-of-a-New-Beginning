@@ -840,3 +840,199 @@ GER_category_war_in_sight = {
 	}
 	
 }
+
+GER_category_southern_generals = {
+	
+	#Recruit Karl von Heygendorff (from SAX)
+	eoanb_decision_GER_southern_general_SAX_1 = {
+		
+		icon = generic_army_support
+		
+		available = {
+			has_army_experience > 10
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			NOT = { SAX = { exists = yes } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			army_experience = -10
+			create_corps_commander = {
+				name = "Karl von Heygendorff"
+				portrait_path = "gfx/leaders/Europe/Portrait_Europe_generic_military_general_1.dds"
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+				traits = {
+					organizer
+				}		
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Recruit Alfred Ludwig von Degenfeld (from BAD)
+	eoanb_decision_GER_southern_general_BAD_1 = {
+		
+		icon = generic_army_support
+		
+		available = {
+			has_army_experience > 10
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			NOT = { BAD = { exists = yes } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			army_experience = -10
+			create_corps_commander = {
+				name = "Alfred Ludwig von Degenfeld"
+				picture = "Portrait_BAD_Alfred_Ludwig_von_Degenfeld.dds"
+				traits = { }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Recruit Ferdinand von Zeppelin (from WUR)
+	eoanb_decision_GER_southern_general_WUR_1 = {
+		
+		icon = generic_army_support
+		
+		available = {
+			has_army_experience > 10
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			NOT = { WUR = { exists = yes } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			army_experience = -10
+			create_corps_commander = {
+				name = "Ferdinand von Zeppelin"
+				picture = "Portrait_WUR_Ferdinand_von_Zeppelin.dds"
+				traits = { }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Recruit Jakob von Hartmann (from BAV)
+	eoanb_decision_GER_southern_general_BAV_1 = {
+		
+		icon = generic_army_support
+		
+		available = {
+			has_army_experience > 10
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			NOT = { BAV = { exists = yes } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			army_experience = -10
+			create_corps_commander = {
+				name = "Jakob von Hartmann"
+				picture = "Portrait_BAV_Jakob_von_Hartmann.dds"
+				traits = { }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Recruit Karl Krazeisen (from BAV)
+	eoanb_decision_GER_southern_general_BAV_2 = {
+		
+		icon = generic_army_support
+		
+		available = {
+			has_army_experience > 10
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			NOT = { BAV = { exists = yes } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			army_experience = -10
+			create_corps_commander = {
+				name = "Karl Krazeisen"
+				picture = "Portrait_BAV_Karl_Krazeisen.dds"
+				traits = { }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+}
