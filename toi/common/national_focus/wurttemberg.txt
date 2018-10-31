@@ -747,7 +747,13 @@ focus_tree = {
 		mutually_exclusive = { focus = WUR_suppress_wurttembergian_liberalism } 
 		prerequisite = {  }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			add_timed_idea = {
@@ -772,10 +778,16 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_integrate_wurttembergian_liberalism }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_friedrich_roemer
 		}
 	}
 	
@@ -789,7 +801,13 @@ focus_tree = {
 		mutually_exclusive = { focus = WUR_integrate_wurttembergian_liberalism } 
 		prerequisite = {  }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			add_timed_idea = {
@@ -814,10 +832,16 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_suppress_wurttembergian_liberalism }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_joseph_linden
 		}
 	}
 	
@@ -831,10 +855,26 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_joseph_von_linden focus = WUR_friedrich_von_roemer }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			set_party_name = { 
+				ideology = centrism
+				long_name = WUR_victorian_centrism_liberal_struggle_long
+				name = WUR_victorian_centrism_liberal_struggle 
+			}
+			set_party_name = { 
+				ideology = traditional_conservatism
+				long_name = WUR_victorian_traditional_conservatism_liberal_struggle_long
+				name = WUR_victorian_traditional_conservatism_liberal_struggle 
+			}
+			add_political_power = 50
 		}
 	}
 	
@@ -848,10 +888,16 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = {  }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			add_political_power = 50
 		}
 	}
 	
@@ -865,14 +911,20 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_regierungskreise }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			add_political_power = 50
 		}
 	}
 	
-	#Enforce the Schultheiß
+	#Enforce the Schultheißwesen
 	focus = {
 		id = WUR_enforce_the_schultheiss
 		icon = GFX_goal_generic_dangerous_deal
@@ -882,10 +934,19 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_kommunalverwaltung }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_schultheisswesen
+			hidden_effect = {
+				country_event = { id = wurttem.8 days = 3 }
+			}
 		}
 	}
 	
@@ -900,7 +961,13 @@ focus_tree = {
 		prerequisite = { focus = WUR_enforce_the_schultheiss }
 		prerequisite = { focus = WUR_the_liberal_struggle }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -917,7 +984,13 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_aftermath_of_the_rumpfparlament }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -934,7 +1007,13 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_shifting_flow }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -951,7 +1030,13 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_shifting_flow }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -969,7 +1054,13 @@ focus_tree = {
 		prerequisite = { focus = WUR_napoleon_iii }
 		prerequisite = { focus = WUR_alexander_ii }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -986,7 +1077,13 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_zweikaisertreffen }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			
@@ -1003,7 +1100,13 @@ focus_tree = {
 		mutually_exclusive = { } 
 		prerequisite = { focus = WUR_zweikaisertreffen }
 		cost = 70
-		available_if_capitulated = no  
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
 		
 		completion_reward = {
 			

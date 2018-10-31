@@ -16,8 +16,11 @@
  WUR_address_unemployment_desc:0 "The most important things to look at when trying to improve our current economic state are the employment rates. A lot of people can not or do not want to find work, and we shall correct this as our first step to complete recovery."
  WUR_steamboats:0 "Steamboats"
  WUR_stuttgarter_boerse:0 "Stuttgarter Börse"
+ WUR_stuttgarter_boerse_desc:0 "Even if [WUR.GetNameDef] still does not house any major companies, forming a stock market could improve our economy. It could also help us finance smaller companies, maybe even eventually leading to them becoming major players in the market world."
  WUR_hofbank:0 "Württembergische Hofbank"
+ WUR_hofbank_desc:0 "The Hofbank in Stuttgart has been handling the financial transactions of the King for a long time now, even able to give out loans to those who wanted to form a company. We could help the Hofbank grow a little, which in the end would surely greatly benfit us."
  WUR_wurttemburgian_craft:0 "Wurttemburgian Craft"
+ WUR_wurttemburgian_craft_desc:0 "The craft of the [WUR.GetAdjective] people is known to be one of the best in the German areas. In fact, the various and numerous craft businesses in [WUR.GetName] are the main kind of businesses in our country. Helping them out is helping out the [WUR.GetAdjective] economy."
  WUR_staats_eisenbahnen:0 "Württembergische Staats-Eisenbahnen"
  WUR_architecture_techniques:0 "Architecture Techniques"
  WUR_textile_focus:0 "Textile Focus"
@@ -45,7 +48,7 @@
  WUR_the_liberal_struggle:0 "The Liberal Struggle"
  WUR_regierungskreise:0 "Regierungskreise"
  WUR_kommunalverwaltung:0 "Kommunalverwaltung"
- WUR_enforce_the_schultheiss:0 "Enforce the Schultheiß"
+ WUR_enforce_the_schultheiss:0 "Schultheißwesen"
  WUR_aftermath_of_the_rumpfparlament:0 "Aftermath of the Rumpfparlament"
  WUR_shifting_flow:0 "Shifting Flow"
  WUR_alexander_ii:0 "Alexander II"
@@ -126,6 +129,8 @@
  WUR_victorian_army_g_3:0 "Strengthen the Gendarmerie"
  WUR_victorian_suppress_liberalism:0 "Suppressed Liberalism"
  WUR_victorian_integrate_liberalism:0 "Integrated Liberalism"
+ WUR_victorian_schultheisswesen_enforce:0 "Reformed Schultheißwesen"
+ WUR_victorian_schultheisswesen_neglect:0 "Enforced Schultheißwesen"
  
  ###Tooltips###
  WUR_victorian_emigration_stops:0 "The §YWürttemberger§! emigration stops."
@@ -133,6 +138,9 @@
  WUR_victorian_emigration_recover:0 "§YWürttembergerg§! recovers from the emigration."
  WUR_traditional_army_replace_tooltip:0 "Replace current §YMilitary Structure & Tactics§! law with §YTraditional Army§!.\n"
  WUR_traditional_army_replace_victorian_tooltip:0 "Replace current §YMilitary Structure & Tactics§! law with §YVictorian Army§!.\n"
+ WUR_customeffect_friedrich_roemer:0 "§Y[WUR.GetName]§!: Unlocks §YFriedrich von Römer§! as advisor."
+ WUR_customeffect_joseph_linden:0 "§Y[WUR.GetName]§!: Unlocks §YJoseph von Linden§! as advisor."
+ WUR_customeffect_schultheisswesen:0 "§Y[WUR.GetNameDef]§! decides on how to handle the §YSchultheißwesen§!."
  
  ###Advisors###
  WUR_friedrich_von_roemer:0 "Friedrich von Römer"
@@ -142,6 +150,13 @@
  WUR_fidel_von_baur_breitenfeld:0 "Fidel von Baur-Breitenfeld"
  WUR_adolph_gottlieb_ferdinand_schoder:0 "Adolph Gottlieb Ferdinand Schoder"
  WUR_gottlob_tafel:0 "Gottlob Tafel"
+ 
+ ###Misc###
+ WUR_victorian_centrism_liberal_struggle_long:0 "Deutsche Partei"
+ WUR_victorian_centrism_liberal_struggle:0 "DP"
+ WUR_victorian_traditional_conservatism_liberal_struggle_long:0 "Demokratische Volkspartei"
+ WUR_victorian_traditional_conservatism_liberal_struggle:0 "DV"
+ WUR_victorian_wilhelm_dead:0 "Wilhelm I is Dead"
  
  ###Events###
  wurttem.0.t:0 ""
@@ -162,3 +177,8 @@
  wurttem.6.a:0 "This is the dawn of a new era for us."
  wurttem.6.b:0 "We should support their cause."
  wurttem.6.c:0 "Liberalism has no future in Europe."
+ 
+ wurttem.8.t:0 "The Schultheißwesen"
+ wurttem.8.d:0 "For a long time have we utilized the Schultheißwesen now, a decentralized political system describing how every city and village is required to elect a representative who then acts as a head of the said commune. While this system allows for self-administration, it still involves the Gemeinderat, the council of a commune led by the representative, having judicative power over the affiliated area. We either could let the Gemeinderat have its judicative, or reform this system in such a way that we have more influence over it."
+ wurttem.8.a:0 "We need to have more influence. Centralization is key now."
+ wurttem.8.b:0 "Enforce the current version of the system."

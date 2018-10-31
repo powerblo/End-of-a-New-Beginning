@@ -133,6 +133,30 @@ ideas = {
 			}
 		}
 		
+		PS_call_for_take_over = {
+			removal_cost = -1
+			
+			picture = anarchy
+			
+			modifier = {
+				army_org_factor = -0.20
+				stability_factor = -0.05
+				political_power_factor = -0.15
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+		
 		#double
 		PS_big_scale_protests_double = {
 			removal_cost = -1
@@ -204,9 +228,9 @@ ideas = {
 			picture = neutrality_idea
 			
 			modifier = {
-				political_power_factor = 0.10
+				political_power_factor = 0.05
 				political_advisor_cost_factor = -0.05
-				drift_defence_factor = 0.15
+				drift_defence_factor = 0.05
 			}
 			
 			allowed_civil_war = {
@@ -228,7 +252,7 @@ ideas = {
 			picture = neutrality_idea
 			
 			modifier = {
-				drift_defence_factor = 0.15
+				drift_defence_factor = 0.05
 				license_purchase_cost = -0.15
 				
 			}
@@ -252,9 +276,31 @@ ideas = {
 			picture = neutrality_idea
 			
 			modifier = {
-				political_advisor_cost_factor = -0.15
-				political_power_factor = 0.15
-				opinion_gain_monthly_factor = 0.10
+				political_advisor_cost_factor = -0.08
+				political_power_factor = 0.05
+				opinion_gain_monthly_factor = 0.05
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+					has_government = vanguard_communism
+					has_government = chauvinist_populism
+					has_government = anarchism
+					has_government = fundamentalism
+				}
+			}
+		}
+	}
+	
+	hidden_ideas = {
+		PS_take_over_identificator = {
+			removal_cost = -1
+			
+			modifier = {
+				
 			}
 			
 			allowed_civil_war = {

@@ -78,12 +78,26 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			random_list = {
-				50 = {
-					add_ideas = PS_big_scale_protests_single
+			if = {
+				limit = {
+					has_government = radical_democracy
 				}
-				50 = {
-					add_ideas = PS_big_scale_protests_double
+				add_ideas = PS_big_scale_protests_double
+			}
+			else_if = {
+				limit = {
+					has_government = collectivist_socialism
+				}
+				add_ideas = PS_big_scale_protests_single
+			}
+			else = {
+				random_list = {
+					50 = {
+						add_ideas = PS_big_scale_protests_single
+					}
+					50 = {
+						add_ideas = PS_big_scale_protests_double
+					}
 				}
 			}
 			set_variable = { ROOT.big_scale_protests_done = 1 }
@@ -117,19 +131,39 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = PS_big_scale_protests_single
+			random_list = {
+				0 = {
+					if = {
+						limit = {
+							has_idea = PS_big_scale_protests_single
+						}
+						add_ideas = PS_fighting_in_the_streets_single
+					}
+					else_if = {
+						limit = {
+							has_idea = PS_big_scale_protests_double
+						}
+						add_ideas = PS_fighting_in_the_streets_double
+					}
+					set_variable = { ROOT.fighting_in_the_streets_done = 1 }
 				}
-				add_ideas = PS_fighting_in_the_streets_single
-			}
-			else_if = {
-				limit = {
-					has_idea = PS_big_scale_protests_double
+				100 = {
+					if = {
+						limit = {
+							has_idea = PS_big_scale_protests_single
+						}
+						add_ideas = PS_fighting_in_the_streets_single
+					}
+					else_if = {
+						limit = {
+							has_idea = PS_big_scale_protests_double
+						}
+						add_ideas = PS_fighting_in_the_streets_double
+					}
+					set_variable = { ROOT.fighting_in_the_streets_done = 1 }
+					add_ideas = PS_take_over_identificator
 				}
-				add_ideas = PS_fighting_in_the_streets_double
 			}
-			set_variable = { ROOT.fighting_in_the_streets_done = 1 }
 		}
 	}
 	
@@ -139,7 +173,179 @@ country_event = {
 	}
 }
 
-#-5
+#-5 demilitarized zone
+#country_event = {
+#	id = pssystem.31
+#	title = pssystem.31.t
+#	desc = pssystem.31.d
+#	picture = GFX_report_wittelsbachs
+#	
+#	mean_time_to_happen = {
+#		days = 3
+#	}
+#	
+#	trigger = {
+#		PS_pol_stab_sank_minus_five = yes
+#		#has_idea = PS_dem_zone_identificator
+#		OR = {
+#			has_idea = PS_fighting_in_the_streets_single
+#			has_idea = PS_fighting_in_the_streets_double
+#		}
+#	}
+#	
+#	immediate = {
+#		hidden_effect = {
+#			random_owned_controlled_state = {
+#				set_demilitarized_zone = yes
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		ai_chance = { factor = 100 }
+#		name = pssystem.31.a
+#	}
+#}
+
+#-5 take over
+country_event = {
+	id = pssystem.25
+	title = pssystem.25.t
+	desc = pssystem.25.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_five = yes
+		has_idea = PS_take_over_identificator
+		OR = {
+			has_idea = PS_fighting_in_the_streets_single
+			has_idea = PS_fighting_in_the_streets_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = PS_call_for_take_over
+			set_variable = { ROOT.call_for_civil_war_done = 1 }
+			
+			country_event = { id = pssystem.27 days = 30 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.25.a
+	}
+}
+
+#takeover proxy
+country_event = {
+	id = pssystem.27
+	title = pssystem.27.t
+	desc = pssystem.27.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = PS_call_for_take_over
+				}
+				if = {
+					limit = {
+						has_idea = PS_fighting_in_the_streets_double
+					}
+					country_event = { id = pssystem.28 }
+				}
+				else_if = {
+					limit = {
+						has_idea = PS_fighting_in_the_streets_single
+					}
+					country_event = { id = pssystem.29 }
+				}
+			}
+			else = {
+				country_event = { id = pssystem.30 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.27.a
+	}
+}
+
+#takeover succeed colsoc
+country_event = {
+	id = pssystem.28
+	title = pssystem.28.t
+	desc = pssystem.28.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = collectivist_socialism
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.28.a
+	}
+}
+
+#takeover succeed raddem
+country_event = {
+	id = pssystem.29
+	title = pssystem.29.t
+	desc = pssystem.29.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = radical_democracy
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.29.a
+	}
+}
+
+#takeover avoided
+country_event = {
+	id = pssystem.30
+	title = pssystem.30.t
+	desc = pssystem.30.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.30.a
+	}
+}
+
+#-5 civil war
 country_event = {
 	id = pssystem.3
 	title = pssystem.3.t
@@ -152,6 +358,9 @@ country_event = {
 	
 	trigger = {
 		PS_pol_stab_sank_minus_five = yes
+		NOT = {
+			has_idea = PS_take_over_identificator
+		}
 		OR = {
 			has_idea = PS_fighting_in_the_streets_single
 			has_idea = PS_fighting_in_the_streets_double
@@ -198,7 +407,37 @@ country_event = {
 }
 
 #reverse
-#-5 reverse
+#-5 reverse takeover
+country_event = {
+	id = pssystem.26
+	title = pssystem.26.t
+	desc = pssystem.26.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_five = yes
+		has_idea = PS_call_for_take_over
+		has_idea = PS_take_over_identificator
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.call_for_civil_war_done = 0 }
+			remove_ideas = { PS_call_for_take_over }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.26.a
+	}
+}
+
+#-5 reverse civil war
 country_event = {
 	id = pssystem.4
 	title = pssystem.4.t

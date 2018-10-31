@@ -478,6 +478,40 @@ ideas = {
 				centrism_drift = -0.05
 			}
 		}
+		
+		WUR_victorian_schultheisswesen_enforce = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				political_power_factor = -0.05
+				political_advisor_cost_factor = -0.05
+			}
+		}
+		
+		WUR_victorian_schultheisswesen_neglect = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = 0.05
+			}
+		}
 	}
 	
 	political_advisor = {
