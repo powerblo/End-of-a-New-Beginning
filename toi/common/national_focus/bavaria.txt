@@ -80,7 +80,7 @@ focus_tree = {
 		}
 	}
  
-	#Focus for Maximilian II. 
+	#Focus for Maximilian II
 	focus = {
 		id = BAV_maximilianii
 		icon = GFX_focus_hun_elect_a_king
@@ -93,7 +93,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -115,7 +115,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -202,43 +202,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				news_event = { id = bavariafocus.36 days = 3 }
-				FRA = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				AUS = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				PRS = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				WUR = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				BAD = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				HSD = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				HES = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				HAN = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				SAX = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				THU = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				MCK = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				SCH = {
-					news_event = { id = bavariafocus.36 days = 3 }
-				}
-				DEN = {
+				every_country = {
 					news_event = { id = bavariafocus.36 days = 3 }
 				}
 			}
@@ -270,43 +234,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				news_event = { id = bavariafocus.37 days = 3 }
-				FRA = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				AUS = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				PRS = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				WUR = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				BAD = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				HSD = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				HES = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				HAN = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				SAX = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				THU = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				MCK = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				SCH = {
-					news_event = { id = bavariafocus.37 days = 3 }
-				}
-				DEN = {
+				every_country = {
 					news_event = { id = bavariafocus.37 days = 3 }
 				}
 			}
@@ -326,12 +254,12 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
 			add_ideas = BAV_triasidea
-			set_country_flag = "Triaspolitik of Maximilian II."
+			set_country_flag = "Triaspolitik of Maximilian II"
 			
 			custom_effect_tooltip = BAV_customeffect_trias
 			
@@ -354,7 +282,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -369,7 +297,7 @@ focus_tree = {
 	focus = { 
 		id = BAV_constitutionalmonarchy 
 		icon = GFX_focus_rom_handle_king 
-		ai_will_do = { factor = 1}
+		ai_will_do = { factor = 40 }
 		x = 23
 		y = 1 
 		mutually_exclusive = { }
@@ -378,7 +306,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -390,7 +318,7 @@ focus_tree = {
 	focus = { 
 		id = BAV_reassurepower
 		icon = GFX_goal_generic_neutrality_focus 
-		ai_will_do = { factor = 1}
+		ai_will_do = { factor = 40 }
 		x = 25
 		y = 1 
 		mutually_exclusive = { }
@@ -399,7 +327,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -411,7 +339,7 @@ focus_tree = {
 	focus = { 
 		id = BAV_bavariaandthegermanstates
 		icon = GFX_goal_generic_occupy_states_ongoing_war 
-		ai_will_do = { factor = 1}
+		ai_will_do = { factor = 40}
 		x = 25
 		y = 2 
 		mutually_exclusive = { }
@@ -420,7 +348,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -432,7 +360,7 @@ focus_tree = {
 	focus = { 
 		id = BAV_thegermanstrongest
 		icon = GFX_goal_generic_demand_territory 
-		ai_will_do = { factor = 1}
+		ai_will_do = { factor = 40}
 		x = 27
 		y = 1
 		mutually_exclusive = { }
@@ -442,7 +370,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -668,7 +596,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -689,7 +617,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = { has_country_flag = "Maximilian II. is Dead" }
+			NOT = { has_country_flag = "Maximilian II is Dead" }
 		}
 		
 		completion_reward = {
@@ -831,7 +759,7 @@ focus_tree = {
 	focus = { 
 		id = BAV_traingenerals 
 		icon = GFX_focus_generic_military_mission 
-		ai_will_do = { factor = 1}
+		ai_will_do = { factor = 40}
 		x = 12
 		y = 3 
 		mutually_exclusive = { }
@@ -1236,7 +1164,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			has_country_flag = "Maximilian II. is Dead"
+			has_country_flag = "Maximilian II is Dead"
 		}
 		
 		completion_reward = {
@@ -1245,7 +1173,7 @@ focus_tree = {
 			hidden_effect = {
 				retire_country_leader = yes
 				create_country_leader = {
-					name = "Ludwig II."
+					name = "Ludwig II"
 					desc = POLITICS_BAV_LUDWIG_II_DESC
 					picture = "gfx/leaders/BAV/Portrait_BAV_Ludwig_II.dds"
 					expire = "1900.1.1"
@@ -1279,7 +1207,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			has_country_flag = "Maximilian II. is Dead"
+			has_country_flag = "Maximilian II is Dead"
 		}
 		
 		completion_reward = {
@@ -1366,7 +1294,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			has_country_flag = "Legacy of Maximilian II."
+			has_country_flag = "Legacy of Maximilian II"
 		}
 		
 		completion_reward = {
@@ -1407,7 +1335,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_voicesofthepeople 
 		icon = GFX_goal_generic_political_pressure 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 5 
 		mutually_exclusive = { focus = BAV_newideasnewwinds }
@@ -1424,7 +1359,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_newideasnewwinds 
 		icon = GFX_goal_generic_more_territorial_claims 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 32
 		y = 5 
 		mutually_exclusive = { focus = BAV_voicesofthepeople } 
@@ -1461,7 +1403,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_militarystrength
 		icon = GFX_goal_generic_small_arms 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 18
 		y = 6 
 		mutually_exclusive = { }
@@ -1478,7 +1427,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_withdrawfromthezollverein 
 		icon = GFX_focus_renounce_the_treaty_of_trianon 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 20
 		y = 6 
 		mutually_exclusive = { }
@@ -1577,7 +1533,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_thenewrepublic 
 		icon = GFX_focus_generic_the_giant_wakes 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 6 
 		mutually_exclusive = { }
@@ -1602,7 +1565,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_reformthecountry 
 		icon = GFX_goal_focus_reform_administration 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 32
 		y = 6 
 		mutually_exclusive = { }
@@ -1641,7 +1611,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_bavariaspower 
 		icon = GFX_goal_unknown 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 18
 		y = 7 
 		mutually_exclusive = { }
@@ -1660,7 +1637,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_convincewuerttemberg
 		icon = GFX_goal_focus_convince_wurttemberg 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 20
 		y = 7 
 		mutually_exclusive = { }
@@ -1688,7 +1672,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_convincebaden
 		icon = GFX_goal_focus_convince_baden 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 20
 		y = 8 
 		mutually_exclusive = { }
@@ -1716,7 +1707,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_extendthetrias
 		icon = GFX_goal_focus_extend_trias 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 19
 		y = 9
 		mutually_exclusive = { }
@@ -1726,7 +1724,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			has_country_flag = "Triaspolitik of Maximilian II."
+			has_country_flag = "Triaspolitik of Maximilian II"
 		}
 		
 		completion_reward = {
@@ -1738,7 +1736,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_swayhessedarmstadt
 		icon = GFX_goal_focus_sway_hesse_darmstadt 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 20
 		y = 10
 		mutually_exclusive = { }
@@ -1766,7 +1771,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_swayfrankfurt
 		icon = GFX_goal_focus_sway_frankfurt 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 18
 		y = 10
 		mutually_exclusive = { }
@@ -1794,7 +1806,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_swaysachsen
 		icon = GFX_goal_focus_sway_sachsen 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 19
 		y = 11
 		mutually_exclusive = { }
@@ -1823,7 +1842,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_swaythueringen
 		icon = GFX_goal_focus_sway_thuringen 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 21
 		y = 11
 		mutually_exclusive = { }
@@ -1852,7 +1878,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_swayhannover
 		icon = GFX_goal_focus_sway_hannover 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 17
 		y = 11
 		mutually_exclusive = { }
@@ -1881,7 +1914,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_thegermantwo
 		icon = GFX_goal_unknown 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 18
 		y = 8
 		mutually_exclusive = { }
@@ -1905,7 +1945,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_sueddeutscherzollverein
 		icon = GFX_goal_generic_forceful_treaty 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 19
 		y = 12
 		mutually_exclusive = { }
@@ -2014,7 +2061,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_blueskiesofbavaria 
 		icon = GFX_goal_unknown 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 7 
 		mutually_exclusive = { }
@@ -2031,7 +2085,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_voting 
 		icon = GFX_goal_focus_elections 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 7 
 		mutually_exclusive = { }
@@ -2052,7 +2113,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_takeover 
 		icon = GFX_goal_focus_enact_law 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 31
 		y = 7 
 		mutually_exclusive = { focus = BAV_revolution} 
@@ -2081,7 +2149,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_revolution 
 		icon = GFX_goal_generic_attack_allies 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 33
 		y = 7 
 		mutually_exclusive = { focus = BAV_takeover} 
@@ -2110,7 +2185,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_athirddeutschland 
 		icon = GFX_goal_generic_major_alliance 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 19
 		y = 13
 		mutually_exclusive = { }
@@ -2157,7 +2239,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_jointhenorth 
 		icon = GFX_goal_generic_major_alliance 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 13
 		mutually_exclusive = { }
@@ -2232,7 +2321,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_anotherwaytounity
 		icon = GFX_goal_generic_position_armies 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 9
 		mutually_exclusive = { }
@@ -2254,7 +2350,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_austriasresigntowar
 		icon = GFX_goal_generic_attack_allies 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 8
 		mutually_exclusive = { }
@@ -2402,7 +2505,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_visionariesofeurope 
 		icon = GFX_goal_focus_continent_west_europe 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 8 
 		mutually_exclusive = { }
@@ -2419,7 +2529,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_democracy 
 		icon = GFX_goal_support_democracy 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 8 
 		mutually_exclusive = { }
@@ -2440,7 +2557,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_newmnchnerrte 
 		icon = GFX_goal_unknown 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 31
 		y = 8 
 		mutually_exclusive = { }
@@ -2457,7 +2581,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_menandwomenofbavaria 
 		icon = GFX_focus_generic_support_the_left_right 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 33
 		y = 8 
 		mutually_exclusive = { }
@@ -2474,7 +2605,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_newvolunteers 
 		icon = GFX_goal_generic_axis_build_infantry 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 36
 		y = 8 
 		mutually_exclusive = { }
@@ -2491,7 +2629,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_customs 
 		icon = GFX_goal_focus_burning_cross
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 9 
 		mutually_exclusive = { }
@@ -2510,7 +2655,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_agriculturalreforms 
 		icon = GFX_focus_generic_industry_3 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 30
 		y = 9 
 		mutually_exclusive = { }
@@ -2528,7 +2680,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_industrialreforms 
 		icon = GFX_goal_focus_industrial_revolution 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 32
 		y = 9 
 		mutually_exclusive = { }
@@ -2549,7 +2708,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_schoolreforms 
 		icon = GFX_focus_research 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 34
 		y = 9 
 		mutually_exclusive = { }
@@ -2570,7 +2736,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_therightcause 
 		icon = GFX_goal_generic_propaganda 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 36
 		y = 9 
 		mutually_exclusive = { }
@@ -2605,7 +2778,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_nomorenobles 
 		icon = GFX_focus_rom_abdicate 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 31
 		y = 10 
 		mutually_exclusive = { }
@@ -2624,7 +2804,14 @@ focus_tree = {
 	focus = { 
 		id = BAV_stateschools 
 		icon = GFX_focus_research2 
-		ai_will_do = { factor = 1}
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 33
 		y = 10 
 		mutually_exclusive = { }

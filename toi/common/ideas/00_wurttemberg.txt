@@ -112,6 +112,44 @@ ideas = {
 			}
 		}
 		
+		WUR_victorian_unemployment = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = unemployment
+			
+			modifier = {
+				local_resources_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		
+		WUR_victorian_unemployment_recover = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = unemployment
+			
+			modifier = {
+				local_resources_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
 		WUR_victorian_inflation = {
 			allowed = {
 				original_tag = WUR
@@ -130,29 +168,446 @@ ideas = {
 				line_change_production_efficiency_factor = -0.10
 			}
 		}
+		
+		WUR_russiancampaign = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_problems
+		
+			modifier = {
+				army_morale_factor = -0.25
+			}
+		}
 	}
 	
 	hidden_ideas = {
+		WUR_victorian_bank_1 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
 		
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		WUR_victorian_bank_2 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.03
+			}
+		}
+		
+		WUR_victorian_stimulate_export = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				trade_opinion_factor = 0.15
+				license_purchase_cost = -0.05
+			}
+		}
+		
+		WUR_victorian_stimulate_economy = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_1 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.02
+			}
+		}
+		
+		WUR_victorian_army_2 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.02
+				training_time_factor = -0.05
+			}
+		}
+		
+		WUR_victorian_army_3 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.02
+				training_time_factor = -0.05
+				army_org_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_3_milabteilung = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_morale_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_3_centralbur = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				land_reinforce_rate = 0.05
+				experience_gain_army_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_3_oekonomieabteilung = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				out_of_supply_factor = -0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		
+		WUR_victorian_army_3_trad = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.02
+				training_time_factor = -0.05
+				army_attack_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_4_trad = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.02
+				training_time_factor = -0.05
+				army_attack_factor = 0.05
+				army_org_factor = -0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		WUR_victorian_army_g_1 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				recon_factor = 0.02
+			}
+		}
+		
+		WUR_victorian_army_g_2 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				recon_factor = 0.02
+				conscription = 0.03
+			}
+		}
+		
+		WUR_victorian_army_g_3 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				recon_factor = 0.02
+				conscription = 0.03
+				equipment_conversion_speed = 0.10
+			}
+		}
+		
+		WUR_victorian_integrate_liberalism = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				centrism_drift = 0.05
+			}
+		}
+		
+		WUR_victorian_suppress_liberalism = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				centrism_drift = -0.05
+			}
+		}
 	}
 	
 	political_advisor = {
-		#BAV_advisor_friedrich_von_hegnenberg_dux = {
-		#	allowed = {
-		#		original_tag = WUR
-		#	}
-		#	
-		#	allowed_civil_war = {
-		#		OR = {
-		#			has_government = autocracy
-		#			has_government = centrism
-		#			has_government = traditional_conservatism
-		#		}
-		#	}
-		#
-		#	traits = { 
-		#		clever_buisnessman 
-		#	}
-		#}
+		WUR_friedrich_von_roemer = {
+			allowed = {
+				original_tag = WUR
+				has_completed_focus = WUR_friedrich_von_roemer
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+				}
+			}
+		
+			traits = { 
+				administrative_genius
+			}
+		}
+		
+		WUR_joseph_von_linden = {
+			allowed = {
+				original_tag = WUR
+				has_completed_focus = WUR_joseph_von_linden
+				NOT = {
+					has_completed_focus = WUR_karl_von_varnbueler
+				}
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				efficient_administrator
+			}
+		}
+		
+		WUR_johannes_von_kuhn = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				influencial_writer
+			}
+		}
+		
+		WUR_theodor_von_gessler = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				influencial_writer
+			}
+		}
+		
+		WUR_fidel_von_baur_breitenfeld = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				tax_collector
+			}
+		}
+		
+		WUR_adolph_gottlieb_ferdinand_schoder = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				controversial_figure
+			}
+		}
+		
+		WUR_gottlob_tafel = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = centrism
+					has_government = autocracy
+					has_government = traditional_conservatism
+				}
+			}
+		
+			traits = { 
+				friend_of_capitalism
+			}
+		}
 	}
 }

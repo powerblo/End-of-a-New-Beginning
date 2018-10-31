@@ -109,3 +109,92 @@ country_event = {
 		}
 	}
 }
+
+#Uneployment recover
+country_event = {
+	id = wurttem.5
+	title = wurttem.5.t
+	desc = wurttem.5.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.5.a
+	}
+}
+
+#Integrate Liberalism
+news_event = {
+	id = wurttem.6
+	title = wurttem.6.t
+	desc = wurttem.6.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.6.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.6.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.6.c
+	}
+}
+
+#Suppress Liberalism
+news_event = {
+	id = wurttem.7
+	title = wurttem.7.t
+	desc = wurttem.7.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.7.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.7.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.7.c
+	}
+}

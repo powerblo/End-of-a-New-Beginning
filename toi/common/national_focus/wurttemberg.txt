@@ -169,7 +169,15 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			remove_ideas = WUR_victorian_unemployment
+			add_timed_idea = {
+				idea = WUR_victorian_unemployment_recover
+				days = 365
+			}
 			
+			hidden_effect = {
+				country_event = { id = wurttem.5 days = 3 }
+			}
 		}
 	}
 	
@@ -186,7 +194,21 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = WUR_victorian_unemployment_recover
+				}
+				modify_timed_idea = {
+					idea = WUR_victorian_unemployment_recover
+					days = -50
+				}
+			}
 			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = process_engineering_tech
+			}
 		}
 	}
 	
@@ -202,8 +224,19 @@ focus_tree = {
 		cost = 70
 		available_if_capitulated = no  
 		
+		available = {
+			WUR = {
+				owns_state = 50
+			}
+		}
+		
 		completion_reward = {
-			
+			50 = {
+				add_resource = {
+					type = fabric
+					amount = 8
+				}
+			}
 		}
 	}
 	
@@ -220,7 +253,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_bank_1
 		}
 	}
 	
@@ -237,7 +270,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_bank_1
+				add_idea = WUR_victorian_bank_2
+			}
 		}
 	}
 	
@@ -320,7 +356,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = mechanical_engineering_tech
+			}
 		}
 	}
 	
@@ -339,7 +379,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_stimulate_economy
 		}
 	}
 	
@@ -358,7 +398,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_stimulate_export
 		}
 	}
 	
@@ -375,7 +415,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			army_experience = 15
 		}
 	}
 	
@@ -392,7 +432,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_army_g_1
 		}
 	}
 	
@@ -409,7 +449,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_g_1
+				add_idea = WUR_victorian_army_g_2
+			}
 		}
 	}
 	
@@ -426,7 +469,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_g_2
+				add_idea = WUR_victorian_army_g_3
+			}
 		}
 	}
 	
@@ -443,7 +489,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_army_1
 		}
 	}
 	
@@ -460,7 +506,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_1
+				add_idea = WUR_victorian_army_2
+			}
 		}
 	}
 	
@@ -468,7 +517,14 @@ focus_tree = {
 	focus = {
 		id = WUR_reestablish_kriegsrat
 		icon = GFX_goal_generic_air_doctrine
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
 		x = 11
 		y = 3
 		mutually_exclusive = { focus = WUR_kriegsministerium } 
@@ -477,7 +533,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_2
+				add_idea = WUR_victorian_army_3_trad
+			}
 		}
 	}
 	
@@ -495,7 +554,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
 		}
 	}
 	
@@ -513,7 +576,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_3_trad
+				add_idea = WUR_victorian_army_4_trad
+			}
 		}
 	}
 	
@@ -531,7 +597,18 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_traditional_army_replace_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = law_pre_industrial_army
+						}
+					}
+					add_ideas = law_pre_industrial_army
+				}
+			}
+			army_experience = 25
 		}
 	}
 	
@@ -539,7 +616,14 @@ focus_tree = {
 	focus = {
 		id = WUR_kriegsministerium
 		icon = GFX_goal_generic_army_doctrines
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 16
 		y = 3
 		mutually_exclusive = { focus = WUR_reestablish_kriegsrat } 
@@ -548,7 +632,10 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_2
+				add_idea = WUR_victorian_army_3
+			}
 		}
 	}
 	
@@ -565,7 +652,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_army_3_centralbur
 		}
 	}
 	
@@ -582,7 +669,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_army_3_oekonomieabteilung
 		}
 	}
 	
@@ -599,7 +686,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_ideas = WUR_victorian_army_3_milabteilung
 		}
 	}
 	
@@ -618,7 +705,18 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_traditional_army_replace_victorian_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = law_victorian_army
+						}
+					}
+					add_ideas = law_victorian_army
+				}
+			}
+			add_manpower = 5000
 		}
 	}
 	
@@ -635,7 +733,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			
+			remove_ideas = WUR_russiancampaign
 		}
 	}
 	
@@ -652,7 +750,15 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = WUR_victorian_integrate_liberalism
+				days = 60
+			}
+			hidden_effect = {
+				every_country = {
+					news_event = { id = wurttem.6 days = 3 }
+				}
+			}
 		}
 	}
 	
@@ -686,7 +792,15 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = WUR_victorian_suppress_liberalism
+				days = 60
+			}
+			hidden_effect = {
+				every_country = {
+					news_event = { id = wurttem.7 days = 3 }
+				}
+			}
 		}
 	}
 	
