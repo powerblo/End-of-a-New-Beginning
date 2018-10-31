@@ -2608,7 +2608,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_focus_historical_german_korean_treaty_1883 }
 		available = {
-			nation_owns_chinese_trade_port = yes
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_GER_focus_military_china		
+			}
+			hidden_trigger = {
+				nation_owns_chinese_trade_port = yes
+			}
 		}
 		
 		completion_reward = {

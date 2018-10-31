@@ -111,16 +111,6 @@ eoanb_category_formables = {
 	
 }
 
-eoanb_category_options = {
-	icon = generic_political_actions
-	
-	visible = {
-		NOT = {
-			has_country_flag = eoanb_flag_options_disabled
-		}
-	}
-}
-
 eoanb_category_military = {
 	icon = generic_political_actions
 	
@@ -169,4 +159,20 @@ eoanb_category_zollverein = {
 eoanb_category_projects = {
 	icon = generic_economy
 	
+}
+
+eoanb_category_traditions_celebrations = {
+	icon = generic_democracy
+	
+}
+
+#Should always be at the very bottom for interface useability purposes
+eoanb_category_options = {
+	icon = generic_political_actions
+	
+	visible = {
+		NOT = {
+			has_country_flag = eoanb_flag_options_disabled
+		}
+	}
 }
