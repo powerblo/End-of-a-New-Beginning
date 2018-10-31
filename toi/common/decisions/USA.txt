@@ -669,3 +669,291 @@ USA_american_civil_war_descision = {
 		}
 	}
 }
+USA_reconstruction_period = {
+	eoanb_descision_USA_enforcement_act = {
+		visible = {
+			has_country_flag = USA_first_kkk
+			NOT = {
+				has_country_flag = USA_enforcement_act
+			}
+		}
+
+		icon = GFX_decision_generic_independence
+
+		cost = 50
+
+		available = {
+			date > 1871.1.1
+			has_country_flag = USA_first_kkk
+		}
+
+		complete_effect = {
+			set_country_flag = USA_enforcement_act
+			country_event = { id = usa.93 }
+		}
+
+	}
+	eoanb_descision_USA_patrol_streets = {
+		visible = {
+			OR = {
+				has_country_flag = USA_enforcement_act
+				has_country_flag = USA_first_kkk
+			}
+		}
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		cost = 25
+
+		available = {
+			OR = {
+				has_country_flag = USA_enforcement_act
+				has_country_flag = USA_first_kkk
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -500
+		}
+
+		days_remove = 100
+
+		remove_effect = {
+			add_manpower = 500
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = centrism
+					check_variable = {
+						var = reconstruction_points
+						value < 60
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 100
+					}
+					is_historical_focus_on = no
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 70
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+
+		days_re_enable = 10
+
+	}
+	eoanb_descision_USA_anti_klan_legislation = {
+		visible = {
+			has_country_flag = USA_first_kkk
+			has_country_flag = USA_enforcement_act
+		}
+
+		icon = GFX_decision_generic_political_discourse
+
+		cost = 50
+
+		available = {
+			has_country_flag = USA_enforcement_act
+			has_country_flag = USA_first_kkk
+		}
+
+		days_remove = 100
+
+		remove_effect = {
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = centrism
+					check_variable = {
+						var = reconstruction_points
+						value < 60
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 100
+					}
+					is_historical_focus_on = no
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 70
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+
+		days_re_enable = 10
+
+	}
+	eoanb_descision_USA_arrest_klan_leaders = {
+
+		visible = {
+			has_country_flag = USA_enforcement_act
+			has_country_flag = USA_first_kkk
+		}
+
+		icon = GFX_decision_generic_scorched_earth
+
+		cost = 100
+
+		available = {
+			has_country_flag = USA_enforcement_act
+			has_country_flag = USA_first_kkk
+			check_variable = {
+				var = reconstruction_points
+				value > 50
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 100
+
+		remove_effect = {
+			add_to_variable = {
+				var = reconstruction_points
+				value = 5
+			}
+			custom_effect_tooltip = USA_reconstruction_add_5
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_government = traditional_conservatism
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 90
+					}
+					is_historical_focus_on = no
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 70
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+
+	}
+	eoanb_descision_USA_destroy_the_klan = {
+		visible = {
+			has_country_flag = USA_enforcement_act
+			has_country_flag = USA_first_kkk
+		}
+
+		icon = GFX_decision_oppression
+
+		cost = 100
+
+		available = {
+			has_country_flag = USA_enforcement_act
+			has_country_flag = USA_first_kkk
+			check_variable = {
+				var = reconstruction_points
+				value > 64
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 300
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_government = centrism
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					has_government = social_egalitarianism
+					check_variable = {
+						var = reconstruction_points
+						value < 90
+					}
+					is_historical_focus_on = no
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					check_variable = {
+						var = reconstruction_points
+						value < 70
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = reconstruction_points
+				value = 5
+			}
+			custom_effect_tooltip = USA_reconstruction_add_5
+			clr_country_flag = USA_first_kkk
+			custom_effect_tooltip = USA_destroy_the_klan_custom_tt
+		}
+
+	}
+}

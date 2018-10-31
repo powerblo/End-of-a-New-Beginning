@@ -644,6 +644,11 @@ country_event = {
 
 		option = {
 				name = sardinia.30.a
+				country_event = {
+					id = sardinia.31
+					days = 1
+						}
+
 				hidden_effect = {
 				TUS = { 
 					annex_country = {
@@ -655,6 +660,7 @@ country_event = {
     				transfer_troops = yes
 				}
 				transfer_state = 161
+				transfer_state = 157
 				add_popularity = {
     				ideology = centrism
    					 popularity = 0.78
@@ -665,6 +671,18 @@ country_event = {
 				}						
 			}
 		}
+	}
+}
+country_event = {
+		id = sardinia.31
+		title = sardinia.31.t
+		desc = sardinia.31.d
+
+		is_triggered_only = yes
+
+		option = {
+				name = sardinia.31.a
+				
 	}
 }
 

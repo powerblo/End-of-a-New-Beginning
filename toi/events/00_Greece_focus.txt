@@ -4,7 +4,7 @@ country_event = {
     id = Greecemisc.1 
 	title = Greecemisc.1.t #Voulgaris resigns 
 	desc = Greecemisc.1.d 
-	picture = GFX_report_event_election_vote 
+	picture = GFX_report_event_gre_athens_1 
 	
 	trigger = {
 	    TAG = GRE
@@ -159,7 +159,7 @@ country_event = {
     id = Greecemisc.5
 	title = Greecemisc.5.t #Miaoulis Resigns 
 	desc = Greecemisc.5.d 
-	picture = GFX_report_event_election_vote 
+	picture = GFX_report_event_gre_athens_2 
 	
 	trigger = {
 	    TAG = GRE
@@ -207,7 +207,7 @@ country_event = {
     id = Greecemisc.6
 	title = Greecemisc.6.t #Nauplian Revolution  
 	desc = Greecemisc.6.d 
-	picture = GFX_report_event_election_vote 
+	picture = GFX_report_event_gre_nauplion_1 
 
 	fire_only_once = yes
 	
@@ -240,7 +240,7 @@ country_event = {
     id = Greecemisc.7
 	title = Greecemisc.7.t #Skiadika  
 	desc = Greecemisc.7.d 
-	picture = GFX_report_event_election_vote 
+	picture = GFX_report_event_gre_athens_2 
 
 	fire_only_once = yes
 	
@@ -268,7 +268,7 @@ country_event = {
     id = Greecemisc.8
 	title = Greecemisc.8.t #Assasination Attempt on Queen Amalia  
 	desc = Greecemisc.8.d 
-	picture = GFX_report_event_election_vote 
+	picture = GFX_report_event_gre_amalia_1 
 
 	fire_only_once = yes
 	
@@ -446,7 +446,7 @@ country_event = { #Otto abdicates
 	id = GREpolitics.1
 	title = GREpolitics.1.t
 	desc = GREpolitics.1.d
-	picture = placeholder
+	picture = GFX_report_event_gre_otto_1
 	
 	is_triggered_only = yes
 	
@@ -957,7 +957,7 @@ country_event = { #UK cedes Ionian islands to Greece
 	id = GREdiplo.1
 	title = GREdiplo.1.t
 	desc = GREdiplo.1.d
-	picture = placeholder
+	picture = GFX_report_event_gre_ionian_islands_1
 	
 	is_triggered_only = yes 	
 
@@ -981,5 +981,37 @@ country_event = { #UK cedes Ionian islands to Greece
         remove_state_core = 809
 		}
 		}
+	}
+}
+
+add_namespace = GREeconomy  
+
+country_event = { #Begin Construction of the Athens-Piraeus Railway        
+	id = GREeconomy.1
+	title = GREeconomy.1.t
+	desc = GREeconomy.1.d
+	picture = GFX_report_event_gre_isap_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Construction begins     
+		name = GREeconomy.1.a  
+		
+		add_political_power = 5 
+	}
+}
+
+country_event = { #Begin Construction of the Athens-Piraeus Railway        
+	id = GREeconomy.2
+	title = GREeconomy.2.t
+	desc = GREeconomy.2.d
+	picture = GFX_report_event_gre_isap_2
+	
+	is_triggered_only = yes 	
+
+	option = { #Inaugurated      
+		name = GREeconomy.2.a  
+		
+		add_political_power = 5
 	}
 }

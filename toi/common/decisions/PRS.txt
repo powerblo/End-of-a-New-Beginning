@@ -3,7 +3,7 @@ political_actions = {
 	#Ask Hannover for military access
 	eoanb_decision_PRS_ask_HAN_access = {
 
-		icon = generic_political_discourse
+		icon = generic_decision
 
 		available = {
 			has_stability > 0.3
@@ -37,7 +37,7 @@ political_actions = {
 	#The Prussian Reforms
 	eoanb_decision_PRS_gerconfed_reforms1 = {
 		
-		icon = generic_political_discourse
+		icon = generic_break_treaty
 		
 		available = {
 			has_stability > 0.25
@@ -78,7 +78,7 @@ political_actions = {
 	#Sending Scheibert as an observer to ACW
 	eoanb_decision_PRS_sending_scheibert = {
 	    
-		icon = generic_political_discourse
+		icon = generic_army_support
 		
 		available = {
 		    has_global_flag = ACWAmerican_Civil_War
@@ -106,8 +106,8 @@ political_actions = {
 		
 	}
 	
-	#Core Land from Second Schleswig War
-	eoanb_decision_PRS_core_second_schleswig_war = {
+	#Core Land from Second Schleswig War Treaty Of Vienna
+	eoanb_decision_PRS_core_second_schleswig_war_vienna = {
 		
 		icon = generic_political_discourse
 		
@@ -153,10 +153,109 @@ political_actions = {
 		}
 	}
 	
+	#Core Land from Second Schleswig War Russel
+	eoanb_decision_PRS_core_second_schleswig_war_russel = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1865.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			OR = {
+				PRS = {
+					owns_state = 949
+					not ={
+						owns_state = 58
+						owns_state = 1032
+					}
+				}
+				any_country = {
+					is_subject_of = PRS
+					owns_state = 949
+					not ={
+						owns_state = 58
+						owns_state = 1032
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 949
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Core Land from Second Schleswig War Bismarck
+	eoanb_decision_PRS_core_second_schleswig_war_bismarck = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.5
+				date > 1865.1.1
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			OR = {
+				PRS = {
+					owns_state = 58
+					owns_state = 949
+					not ={
+						owns_state = 1032
+					}
+				}
+				any_country = {
+					is_subject_of = PRS
+					owns_state = 58
+					owns_state = 949
+					not ={
+						owns_state = 1032
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		complete_effect = {
+			PRS = {
+				add_state_core = 58
+				add_state_core = 949
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 	#Core Land from Seven Weeks War
 	eoanb_decision_PRS_core_seven_weeks_war = {
 		
-		icon = generic_political_discourse
+		icon = generic_operation
 		
 		available = {
 			OR = {
@@ -243,7 +342,7 @@ political_actions = {
 	#Second Eisenach Declaration
 	eoanb_decision_PRS_second_eisenach = {
 		
-		icon = generic_political_discourse
+		icon = generic_form_nation
 		
 		available = {
 			any_country = {
@@ -301,7 +400,7 @@ political_actions = {
 	#Integrate Schleswig
 	eoanb_decision_PRS_annex_puppet_SCH = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			OR = {
@@ -353,10 +452,63 @@ political_actions = {
 		}
 	}
 	
+	#Integrate Holstein
+	eoanb_decision_PRS_annex_puppet_HLS = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				has_stability > 0.4
+				HLS = { has_stability < 0.4 }
+			}
+		}
+		
+		visible = {
+			TAG = PRS
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			HLS = { is_subject_of = PRS }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 200
+		
+		days_remove = 100
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = HLS
+				modifier = eoanb_om_PRS_annexes_HLS
+			}
+			reverse_add_opinion_modifier = {
+				target = HLS
+				modifier = eoanb_om_PRS_annexes_HLS
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_HLS
+			hidden_effect = {
+				annex_country = {
+					target = HLS
+					transfer_troops = yes
+				}
+				HLS = {
+					remove_state_core = 949
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 	#Integrate Mecklenburg
 	eoanb_decision_PRS_annex_NGC_MCK = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -413,7 +565,7 @@ political_actions = {
 	#Integrate Lubeck
 	eoanb_decision_PRS_annex_NGC_LCK = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -469,7 +621,7 @@ political_actions = {
 	#Integrate Hamburg
 	eoanb_decision_PRS_annex_NGC_HAM = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -525,7 +677,7 @@ political_actions = {
 	#Integrate Bremen
 	eoanb_decision_PRS_annex_NGC_BRE = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -581,7 +733,7 @@ political_actions = {
 	#Integrate Oldenburg
 	eoanb_decision_PRS_annex_NGC_OLD = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -637,7 +789,7 @@ political_actions = {
 	#Integrate Saxony
 	eoanb_decision_PRS_annex_NGC_SAX = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -693,7 +845,7 @@ political_actions = {
 	#Integrate Thuringia
 	eoanb_decision_PRS_annex_NGC_THU = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -749,7 +901,7 @@ political_actions = {
 	#Integrate Hesse
 	eoanb_decision_PRS_annex_NGC_HES = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -805,7 +957,7 @@ political_actions = {
 	#Integrate Frankfurt
 	eoanb_decision_PRS_annex_NGC_FRK = {
 		
-		icon = generic_political_discourse
+		icon = generic_decision
 		
 		available = {
 			has_stability > 0.25
@@ -861,7 +1013,7 @@ political_actions = {
 	#Intervene against Socialist Prussia (FRA)
 	eoanb_decision_PRS_intervention_by_FRA = {
 		
-		icon = generic_political_discourse
+		icon = generic_ignite_civil_war
 		
 		available = {
 			has_war_support > 0.25
@@ -900,7 +1052,7 @@ political_actions = {
 	#Intervene against Socialist Prussia (AUS)
 	eoanb_decision_PRS_intervention_by_AUS = {
 		
-		icon = generic_political_discourse
+		icon = generic_ignite_civil_war
 		
 		available = {
 			has_war_support > 0.25
@@ -939,7 +1091,7 @@ political_actions = {
 	#Intervene against Socialist Prussia (RUS)
 	eoanb_decision_PRS_intervention_by_RUS = {
 		
-		icon = generic_political_discourse
+		icon = generic_ignite_civil_war
 		
 		available = {
 			has_war_support > 0.25
@@ -978,7 +1130,7 @@ political_actions = {
 	#Intervene for Socialist Prussia (FRA)
 	eoanb_decision_PRS_help_by_FRA = {
 		
-		icon = generic_political_discourse
+		icon = generic_nationalism
 		
 		available = {
 			has_war_support > 0.25
@@ -1015,7 +1167,7 @@ political_actions = {
 	#Blockade Prussia (ENG)
 	eoanb_decision_ENG_blockade_PRS = {
 		
-		icon = generic_political_discourse
+		icon = generic_naval
 		
 		available = {
 			ships_in_area = { area = 9 size > 9 }
@@ -1056,7 +1208,7 @@ political_actions = {
 	#Landsturmregimente (PRS)
 	eoanb_decision_PRS_sgw_landsturm = {
 		
-		icon = generic_political_discourse
+		icon = generic_civil_support
 		
 		available = {
 			PRS = {
@@ -1090,7 +1242,7 @@ political_actions = {
 	#Decision to get troops out of Hohenzollern-Sigmaringen after SWW
 	eoanb_decision_PRS_ask_access_hohzolsigrin = {
 
-		icon = generic_political_discourse
+		icon = generic_decision
 
 		available = {
 			NOT = {
@@ -1143,7 +1295,7 @@ economic_decisions = {
 	#Fund Coal Mining in Brandenburg
 	eoanb_decision_GER_brandenburg_coal = {
 	
-		icon = generic_political_discourse
+		icon = generic_operation
 		
 		available = {
 			has_tech = machine_tools_1
@@ -1175,4 +1327,121 @@ economic_decisions = {
 		}
 	}
 
+}
+
+eoanb_category_zollverein = {
+	
+	#Add the Ionian Islands to the Zollverein
+	eoanb_decision_PRS_zollverein_add_ION = {
+	
+		icon = generic_operation
+		
+		available = {
+			PRS = { has_war = no }
+			ION = { has_war = no }
+		}
+		
+		visible = {
+			TAG = PRS
+			ION = { exists = yes }
+			ION = { nation_is_in_zollverein = no }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		complete_effect = {
+			ION = { country_event = { days = 1 id = prussia.28 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1859.6.1
+			}
+		}
+	}
+	
+	#Add Greece to the Zollverein
+	eoanb_decision_PRS_zollverein_add_GRE = {
+	
+		icon = generic_operation
+		
+		available = {
+			PRS = { has_war = no }
+			GRE = { has_war = no }
+		}
+		
+		visible = {
+			TAG = PRS
+			GRE = { exists = yes }
+			GRE = { nation_is_in_zollverein = no }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		complete_effect = {
+			GRE = { country_event = { days = 1 id = prussia.28 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1863.6.1
+			}
+		}
+	}
+	
+}
+
+eoanb_category_projects = {
+	
+	#Inaugurate the Siegessäule
+	eoanb_decision_PRS_GER_siegessaeule = {
+		
+		icon = generic_form_nation
+		
+		available = {
+			has_country_flag = eoanb_flag_won_2_schleswig_war
+			has_country_flag = eoanb_flag_won_7_weeks_war
+			has_country_flag = eoanb_flag_won_fra_prs_war
+		}
+		
+		visible = {
+			TAG = PRS
+			PRS_trigger_formed_germany = yes
+			owns_state = 951
+			num_of_available_civilian_factories > 2
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 30
+		
+		complete_effect = {
+			add_stability = 0.01
+		}
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			add_stability = 0.03
+			add_political_power = 30
+			custom_effect_tooltip = eoanb_tt_decision_PRS_GER_siegessaeule
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
 }

@@ -273,6 +273,41 @@ political_actions = {
       add_to_war = { targeted_alliance = PIE enemy = NSC }
     }
   }
+
+  FRA_decision_sign_treaty_turin = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+      NOT = {
+        country_exists = MOD
+      }
+      NOT = {
+        country_exists = PRM
+      }
+      NOT = {
+        country_exists = TUS
+      }
+      NOT = {
+        country_exists = NSC
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_italian_campaign
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      country_event = {
+        id = nap_france.340
+      }
+    }
+  }
 }
 
 eoanb_category_suez_canal = {
@@ -290,7 +325,7 @@ eoanb_category_suez_canal = {
       has_country_flag = FRA_suez_company
     }
 
-    days_remove = 365
+    days_remove = 1280
 
     modifier = {
       civilian_factory_use = 5
@@ -321,7 +356,7 @@ eoanb_category_suez_canal = {
       has_country_flag = FRA_suez_company
     }
 
-    days_remove = 365
+    days_remove = 1280
 
     modifier = {
       civilian_factory_use = 7
@@ -352,7 +387,7 @@ eoanb_category_suez_canal = {
       has_country_flag = FRA_suez_company
     }
 
-    days_remove = 365
+    days_remove = 1280
 
     modifier = {
       civilian_factory_use = 6
@@ -365,6 +400,230 @@ eoanb_category_suez_canal = {
     remove_effect = {
       country_event = {
         id = nap_france.121
+      }
+    }
+  }
+}
+
+FRA_decision_category_continental_system = {
+  FRA_decision_continental_system_BEL = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = BEL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = BEL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = BEL
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
+      }
+    }
+  }
+
+  FRA_decision_continental_system_LUX = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = LUX
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = LUX
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = LUX
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
+      }
+    }
+  }
+
+  FRA_decision_continental_system_AUS = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = AUS
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = AUS
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = AUS
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
+      }
+    }
+  }
+
+  FRA_decision_continental_system_SWI = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = SWI
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = SWI
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = SWI
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
+      }
+    }
+  }
+
+  FRA_decision_continental_system_HOL = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = HOL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = HOL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = HOL
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
+      }
+    }
+  }
+
+  FRA_decision_continental_system_POL = {
+
+    available = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = POL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    visible = {
+      tag = FRA
+      has_completed_focus = FRA_contain_prussia
+      country_exists = POL
+      NOT = {
+        is_puppet_of = PRS
+      }
+    }
+
+    target_trigger = {
+      FROM = {
+        tag = POL
+      }
+    }
+
+    fire_only_once = yes
+
+    cost = 50
+
+    complete_effect = {
+      FROM = {
+        country_event = { id = nap_france.139 }
       }
     }
   }

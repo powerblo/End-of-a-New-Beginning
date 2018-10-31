@@ -1,21 +1,168 @@
 ideas = {
 	country = {
-	GRE_Crimeanwar = {
-	allowed = { always = yes }
-	removal_cost = -1
-	picture = placeholder
-	modifier = { army_attack_factor  = -0.2 }
-	}
+	    GRE_idea_occupation_athens = {
 	
-	GRE_Greekpolitics = {
-	allowed = {
-	TAG = GRE
-	}
-	removal_cost = -1
-	picture = placeholder
-	modifier = { political_power_gain = -0.2
-                 political_advisor_cost_factor = 0.2
-                 drift_defence_factor = 0.15	 }
-            }
+	        allowed = { 
+			    always = no 
+			}
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+	
+	        picture = GRE_occupation_athens
+	
+	        modifier = { 
+			    army_org_Factor = -0.1 
+			}
+	    }
+	
+	    GRE_idea_Greekpolitics = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
+	    GRE_idea_rule_majority = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
+	    GRE_idea_merchant_marine = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
+	    GRE_idea_national_benefactors = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
+	    GRE_idea_euvelpidon_academy = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
+	    GRE_idea_general_staff = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			    political_power_gain = -0.2
+                political_advisor_cost_factor = 0.2
+                drift_defence_factor = 0.15	 
+			}
+        }
+		
     }
+	
+	political_advisor = {
+
+		GRE_Queen_Amalia = {
+
+			allowed = {
+				original_tag = GRE 
+				OR = {
+				date < 1875.01.01
+				has_idea = GRE_Otto_I 
+				}
+			}
+			
+			picture = GFX_GRE_Queen_Amalia
+
+			traits = { eoanb_trait_popular_figure }
+		}
+	}
+
 }

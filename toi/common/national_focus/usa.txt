@@ -81,8 +81,12 @@ focus_tree = {
 			has_war = no
 			has_completed_focus = USA_reform_the_union_army
 		}
+		ai_will_do = {
+			factor = 1000
+		}
 		completion_reward = {
 			add_political_power = 50
+			custom_effect_tooltip = USA_reconstruction_tooltip
 		}
 
 	}
@@ -526,7 +530,7 @@ focus_tree = {
 	focus = {
 		id = USA_soaring_eagle
 		icon = GFX_goal_focus_eagle_soaring
-		cost = 15
+		cost = 0
 		prerequisite = {
 			focus = USA_emancipation_proclaimation
 		}
@@ -1166,7 +1170,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_reconstruction
 		icon = GFX_goal_continuous_suppression
-		cost = 75
+		cost = 35
 		prerequisite = {
 			focus = USA_reconstruction
 		}
@@ -1176,8 +1180,11 @@ focus_tree = {
 		x = 21
 		y = 1
 		available = {
-				has_country_flag = USABroken_Eagle
-			}
+			has_country_flag = USABroken_Eagle
+		}
+		completion_reward = {
+			custom_effect_tooltip = USA_reconstruction_lose_tooltip
+		}
 
 	}
 	focus = {
@@ -1536,7 +1543,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_reconstruction
 		icon = GFX_goal_support_democracy
-		cost = 75
+		cost = 35
 		prerequisite = {
 			focus = USA_reconstruction
 		}
@@ -1545,10 +1552,15 @@ focus_tree = {
 		}
 		x = 29
 		y = 1
-			available = {
-					has_country_flag = USASoaring_Eagle
-				}
-
+		available = {
+			has_country_flag = USASoaring_Eagle
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = USA_reconstruction_win_tooltip
+		}
 	}
 	focus = {
 		id = USA_both_pass_13th
@@ -1892,11 +1904,12 @@ focus_tree = {
 		}
 		x = 27
 		y = 2
-			completion_reward = {
-					country_event = {
-							id = usa.25
-						}
-				}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			country_event = { id = usa.25 }
+		}
 
 	}
 	focus = {
@@ -1908,12 +1921,9 @@ focus_tree = {
 		}
 		x = 27
 		y = 3
-			completion_reward = {
-					add_timed_idea = {
-							idea = USA_seize_plantations
-							days = 400
-						}
-				}
+		completion_reward = {
+			country_event = { id = usa.80 }
+		}
 
 	}
 	focus = {
@@ -1925,10 +1935,9 @@ focus_tree = {
 		}
 		x = 27
 		y = 4
-			completion_reward = {
-					add_stability = 0.05
-					add_political_power = 25
-				}
+		completion_reward = {
+			country_event = { id = usa.81 }
+		}
 
 	}
 	focus = {
@@ -1940,9 +1949,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 2
-			completion_reward = {
-					add_stability = -0.05
-				}
+		completion_reward = {
+			country_event = { id = usa.84 }
+		}
 
 	}
 	focus = {
@@ -1954,10 +1963,10 @@ focus_tree = {
 		}
 		x = 29
 		y = 3
-			completion_reward = {
-					remove_ideas = USA_martial_law_civil_war
-					add_political_power = 25
-				}
+		completion_reward = {
+			remove_ideas = USA_martial_law_civil_war
+			country_event = { id = usa.85 }
+		}
 
 	}
 	focus = {
@@ -1969,9 +1978,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 4
-			completion_reward = {
-					add_ideas = USA_freedman_bureau
-				}
+		completion_reward = {
+			country_event = { id = usa.79 }
+		}
 
 	}
 	focus = {
@@ -1983,10 +1992,9 @@ focus_tree = {
 		}
 		x = 31
 		y = 2
-			completion_reward = {
-					add_political_power = 25
-					add_stability = -0.05
-				}
+		completion_reward = {
+			country_event = { id = usa.82 }
+		}
 
 	}
 	focus = {
@@ -1998,12 +2006,9 @@ focus_tree = {
 		}
 		x = 31
 		y = 3
-			completion_reward = {
-					add_timed_idea = {
-							idea = USA_black_wages
-							days = 365
-						}
-				}
+		completion_reward = {
+			country_event = { id = usa.83 }
+		}
 
 	}
 	focus = {
@@ -2494,7 +2499,7 @@ focus_tree = {
 	focus = {
 		id = USA_broken_eagle
 		icon = GFX_goal_focus_eagle_shattered
-		cost = 15
+		cost = 0
 		prerequisite = {
 			focus = USA_emancipation_proclaimation
 		}
@@ -3537,14 +3542,30 @@ focus_tree = {
 		}
 		x = 29
 		y = 12
-			completion_reward = {
-					add_stability = 0.1
-					add_war_support = 0.1
-					remove_ideas = USA_recovery
-					custom_effect_tooltip = 16_USA_tt
-					set_country_flag = USA_Reconstruction_Ended
+		available = {
+			has_completed_focus = USA_both_pass_15th
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				AND = {
+					has_completed_focus = USA_diplomacy_alaska
+					has_completed_focus = USA_diplomacy_pig_war
+					has_completed_focus = USA_research_wartime_finish
+					has_completed_focus = USA_research_civilian_finish
+					has_completed_focus = USA_diplomacy_native_cleaning
 				}
-
+			}
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			remove_ideas = USA_recovery
+			custom_effect_tooltip = 16_USA_tt
+			custom_effect_tooltip = USA_reconstruction_end
+			set_country_flag = USA_Reconstruction_Ended
+		}
 	}
 	focus = {
 		id = USA_loss_rebuild_kansas
@@ -4499,7 +4520,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_wartime_finish
 		icon = GFX_focus_secret_rearmament
-		cost = 18.00
+		cost = 60
 		prerequisite = {
 			focus = USA_research_wartime_navy_reform
 		}
