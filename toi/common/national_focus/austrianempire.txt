@@ -842,7 +842,9 @@ focus_tree = {
 			factor = 1
 		}
 		 completion_reward = {
-				#
+			 army_experience = 10
+			 add_political_power = 40
+             add_war_support = 0.03			 
 		}
 	  }
 		focus = { 
@@ -863,7 +865,9 @@ focus_tree = {
        mutually_exclusive = { focus = AUS_Reform_The_Landwehr }
 	   
          completion_reward = {
-				#
+			       AUS = {
+		           add_ideas = AUS_abolish_landwehr
+			}
 		}
 	  }
 		
@@ -885,7 +889,9 @@ focus_tree = {
       mutually_exclusive = { focus = AUS_Abolish_The_Landswehr }
 	  
               completion_reward = {
-				#
+				        AUS = {
+		                add_ideas = AUS_reform_landwehr
+			}
 		}
 	 }
 		
@@ -904,7 +910,8 @@ focus_tree = {
       focus = AUS_Italian_Lessons
     }
               completion_reward = {
-				#
+				army_experience = 5
+				add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 		}
 	 }
 	 
@@ -923,7 +930,8 @@ focus_tree = {
       focus = AUS_Italian_Lessons
     }
               completion_reward = {
-				#
+				army_experience = 5
+				
 		}
 	 }
 	 
@@ -960,7 +968,9 @@ focus_tree = {
     
     
               completion_reward = {
-				#
+				        AUS = {
+		                remove_ideas = AUS_lack_of_recruits
+			}
 		}
 	  }	  
 		   
@@ -979,9 +989,25 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				69 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 11401
+            }           
 		}
-	  }		    
+		
+		1232 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 9427
+            }           
+		}
+	}
+}		    
 	  
 	            focus = { 
 		id = AUS_New_Recruits_From_The_Honved
@@ -998,7 +1024,7 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				add_manpower = 10000
 		}
 	  }
 	  
@@ -1017,7 +1043,9 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				        AUS = {
+		                add_ideas = AUS_austrian_railways
+			}
 		}
 	  }	
 
@@ -1036,7 +1064,11 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+	add_tech_bonus = {
+   bonus = 0.25
+   uses = 1
+   category = land_doctrine
+}
 		}
 	  }	  
 	  
@@ -1055,7 +1087,9 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				        AUS = {
+		                add_ideas = AUS_halt_und_verstarken
+			}
 		}
 	  }	
 	  
@@ -1093,7 +1127,9 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				        AUS = {
+		                add_ideas = AUS_strongest_confederation
+			}
 		}
 	  }	
 	  
@@ -1112,7 +1148,7 @@ focus_tree = {
     }
     
               completion_reward = {
-				#
+				  add_manpower = 10000
 		}
 	  }	
 
