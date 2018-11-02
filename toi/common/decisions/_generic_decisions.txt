@@ -1253,7 +1253,7 @@ political_actions = {
 }
 
 #Foreign Politics
-foreign_politics = {
+eoanb_category_diplomatic_actions = {
 	
 	#Rename Istanbul to Constantinople
 	eoanb_decision_generic_rename_constantinople = {
@@ -1539,69 +1539,6 @@ tribal_decisions_eoanb = {
 		ai_will_do = {
 			base = 1
 		}
-	}
-	
-}
-
-eoanb_category_options = {
-	
-	eoanb_decision_open_options = {
-		
-		icon = generic_decision
-		
-		available = {
-			always = yes
-		}
-		
-		visible = {
-			NOT = {
-				has_country_flag = eoanb_flag_options_disabled
-			}
-		}
-		
-		fire_only_once = no
-		
-		cost = 0
-		
-		complete_effect = {
-			country_event = { id = generic.8 }
-		}
-		
-		ai_will_do = {
-			base = 0
-		}
-		
-	}
-	
-	eoanb_decision_disable_options = {
-		
-		icon = generic_decision
-		
-		available = {
-			always = yes
-		}
-		
-		visible = {
-			NOT = {
-				has_country_flag = eoanb_flag_options_disabled
-			}
-		}
-		
-		fire_only_once = no
-		
-		cost = 0
-		
-		complete_effect = {
-			custom_effect_tooltip = eoanb_tt_decision_disable_options
-			hidden_effect = {
-				set_country_flag = eoanb_flag_options_disabled
-			}
-		}
-		
-		ai_will_do = {
-			base = 0
-		}
-		
 	}
 	
 }
@@ -2037,6 +1974,115 @@ eoanb_category_military = {
 		}
 		
 		#Might make the AI do this later
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+}
+
+eoanb_category_traditions_celebrations = {
+	
+	#Celebrate regional traditions - this started from ITA but was expanded to other tags
+	eoanb_decision_ITA_regional_celebration_tradition = {
+		
+		icon = generic_nationalism
+		
+		available = {
+			has_stability > 0.1
+		}
+		
+		visible = {
+			OR = {
+				TAG = PIE
+				TAG = TUS
+				TAG = BAV
+				TAG = SPR
+				TAG = NSC
+				TAG = HOL
+				TAG = PRS
+				TAG = SWI
+				TAG = BAD
+				TAG = LVN
+				TAG = PRM
+				TAG = MOD
+			}
+		}
+		
+		fire_only_once = no
+
+		days_re_enable = 365
+		
+		cost = 25
+		
+		complete_effect = {
+			add_stability = 0.005
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+}
+
+eoanb_category_options = {
+	
+	eoanb_decision_open_options = {
+		
+		icon = generic_decision
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			country_event = { id = generic.8 }
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
+	
+	eoanb_decision_disable_options = {
+		
+		icon = generic_decision
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_disable_options
+			hidden_effect = {
+				set_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
 		ai_will_do = {
 			base = 0
 		}

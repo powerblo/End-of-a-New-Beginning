@@ -196,5 +196,38 @@ political_actions = {
 			base = 50  
 		}
 	}
+}
+	
+  economic_decisions  = {
 
- }
+    GRE_decision_start_athens_piraeus_railway = { #Begin Construction - takes two years  
+
+		visible = {
+		  tag = GRE 
+		  has_completed_focus = GRE_athens-piraeus_rail 
+		}
+		
+		cost = 150  
+
+		fire_only_once = yes
+		days_remove = 720 
+
+		remove_effect = {
+		    47 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2   
+                    instant_build = yes
+                }			
+			}        
+		    hidden_effect = {
+			    country_event = { id = GREeconomy.2 days = 10 }
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}
+	}
+	
+}
