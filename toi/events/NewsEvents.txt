@@ -259,3 +259,26 @@ news_event = {
 	}
 	
 }
+news_event = {
+	id = news.16
+	title = news.16.t
+	desc = news.16.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.16.a
+		trigger = {
+			NOT = {
+				TAG = PIE
+			}
+		}
+	}
+	option = {
+		name = news.16.b
+		trigger = { TAG = PIE }
+	}
+}

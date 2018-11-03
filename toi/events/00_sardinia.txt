@@ -686,4 +686,35 @@ country_event = {
 				
 	}
 }
+country_event = {
+		id = sardinia.32
+		title = sardinia.32.t
+		desc = sardinia.32.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = PIE
+			controls_state = 156
+			controls_state = 115
+
+			
+		}
+		
+		option = {
+				name = sardinia.32.a
+				PIE = { 
+					annex_country = {
+    					target = NSC
+    					transfer_troops = yes
+					}
+				}
+				custom_effect_tooltip = PIE_NSC_Peace
+				hidden_effect = {
+					news_event = news.16
+
+
+				}
+		}
+}
 
