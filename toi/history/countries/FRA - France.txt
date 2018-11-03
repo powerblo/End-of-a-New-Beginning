@@ -288,6 +288,22 @@
     id = 10101
   }
 
+  # https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Certain_de_Canrobert
+  create_field_marshal = {
+    name = "François Certain de Canrobert"
+    picture = "Portrait_FRA_François_Certain_de_Canrobert.dds"
+    traits = { 
+      career_officer
+      infantry_leader
+	  infantry_expert
+    }
+    skill = 2
+    attack_skill = 2
+  	defense_skill = 2
+  	planning_skill = 2
+  	logistics_skill = 2
+  }
+
   create_corps_commander = {
     name = "François Achille Bazaine"
     picture = "Portrait_FRA_Francois_Achille_Bazaine.dds"
@@ -404,6 +420,112 @@
   	defense_skill = 2
   	planning_skill = 1
   	logistics_skill = 2
+  }
+
+  # https://fr.wikipedia.org/wiki/Barth%C3%A9l%C3%A9my_Louis_Joseph_Lebrun
+  create_corps_commander = {
+    name = "Louis Joseph Lebrun"
+    picture = "Portrait_FRA_Louis_Joseph_Lebrun.dds"
+    traits = {
+		career_officer
+		skilled_staffer
+	}
+    skill = 1
+    attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/Charles_Auguste_Frossard
+  create_corps_commander = {
+    name = "Charles Auguste Frossard"
+    picture = "Portrait_FRA_Charles_Auguste_Frossard.dds"
+    traits = {
+		career_officer
+		trait_engineer
+		cavalry_officer
+	}
+    skill = 2
+    attack_skill = 2
+  	defense_skill = 2
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/Paul_de_Ladmirault
+  create_corps_commander = {
+    name = "Paul de Ladmirault"
+    picture = "Portrait_FRA_Paul_de_Ladmirault.dds"
+    traits = {
+		career_officer
+		trait_reckless
+		politically_connected
+	}
+    skill = 2
+    attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/Pierre_Louis_Charles_de_Failly
+  create_corps_commander = {
+    name = "Pierre Louis Charles de Failly"
+    picture = "Portrait_FRA_Pierre_Louis_Charles_de_Failly.dds"
+    traits = {
+		career_officer
+	}
+    skill = 1
+    attack_skill = 1
+  	defense_skill = 2
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/F%C3%A9lix_Charles_Douay
+  create_corps_commander = {
+    name = "Félix Charles Douay"
+    picture = "Portrait_FRA_Felix_Charles_Douay.dds"
+    traits = {
+		trait_reckless
+	}
+    skill = 1
+    attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/Auguste_Regnaud_de_Saint-Jean_d%27Ang%C3%A9ly
+  create_corps_commander = {
+    name = "Auguste Regnaud de Saint-Jean d'Angély"
+    picture = "Portrait_FRA_Auguste_Regnaud_de_Saint_Jean_d_Angely.dds"
+    traits = {
+		career_officer
+		cavalry_officer
+	}
+    skill = 2
+    attack_skill = 1
+  	defense_skill = 2
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/%C3%89lie_Fr%C3%A9d%C3%A9ric_Forey
+  create_corps_commander = {
+    name = "Élie Frédéric Forey"
+    picture = "Portrait_FRA_Elie_Frederic_Forey.dds"
+    traits = {
+		career_officer
+		trait_reckless
+		politically_connected
+	}
+    skill = 1
+    attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
   }
 
   create_navy_leader = {
