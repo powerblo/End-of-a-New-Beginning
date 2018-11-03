@@ -626,6 +626,14 @@ country_event = {
 				AUS = { add_ideas = PRS_idea_weakened_sww }
 				SAX = { add_ideas = PRS_idea_weakened_sww }
 			}
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+					PRS = { is_ai = yes }
+					AUS = { is_ai = yes }
+				}
+				PRS = { add_ideas = hidden_idea_historical_PRS_victory }
+			}
 			else_if = {
 				limit = {
 					is_historical_focus_on = no
@@ -714,6 +722,12 @@ country_event = {
 			SAX = {
 				remove_ideas = PRS_idea_weakened_sww
 			}
+			if = {
+				limit = {
+					PRS = { has_idea = hidden_idea_historical_PRS_victory }
+				}
+				PRS = { remove_ideas = hidden_idea_historical_PRS_victory }
+			}
 		}
 	}
 	
@@ -767,6 +781,12 @@ country_event = {
 			}
 			SAX = {
 				remove_ideas = PRS_idea_weakened_sww
+			}
+			if = {
+				limit = {
+					PRS = { has_idea = hidden_idea_historical_PRS_victory }
+				}
+				PRS = { remove_ideas = hidden_idea_historical_PRS_victory }
 			}
 		}
 	}
