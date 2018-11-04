@@ -1860,6 +1860,46 @@ country_event = { # The integration of Southern Algeria into our colony
   }
 }
 
+country_event = { # Félix Charles Douay become general
+  id = nap_france.160
+  title = nap_france.160.t
+  desc = nap_france.160.d
+  picture = GFX_ITA_War_Event
+
+  trigger = {
+    tag = FRA
+	has_war = yes
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 500
+	modifier = {
+		factor = 0.3
+		has_war_with = AUS
+	}
+  }
+
+  option = {
+    name = nap_france.160.a
+	# https://fr.wikipedia.org/wiki/F%C3%A9lix_Charles_Douay
+	create_corps_commander = {
+		name = "Félix Charles Douay"
+		picture = "Portrait_FRA_Felix_Charles_Douay.dds"
+		id = 178920
+		traits = {
+			trait_reckless
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+  }
+}
+
 #----------------------------------------------------------------------------------------------
 # ORSINI TRAGEDY AND CONSEQUENCES EVENTS
 #----------------------------------------------------------------------------------------------
