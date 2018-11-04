@@ -13,6 +13,7 @@ country_event = {
 		name = contain.1.a
 		clr_country_flag = containment_target
 		clr_global_flag = containment_successful
+		clr_country_flag = containment_possible_target
 		set_country_flag = containment_reperations
 		remove_ideas = containment_recent_target
 		add_timed_idea = { idea = containment_reperations days = 1825 }
@@ -22,6 +23,26 @@ country_event = {
 		add_named_threat = {
 			threat = -50
 			name = contain_capitulated
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = containment_starter
+				has_offensive_war = no
+			}
+			clr_country_flag = containment_starter
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = containment_declined_peace
+				has_offensive_war = no
+			}
+			clr_country_flag = containment_declined_peace
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = left_containment_war
+			}
+			clr_country_flag = left_containment_war
 		}
 	}
 }
@@ -36,14 +57,18 @@ country_event = {
 	
 	option = {
 		name = contain.2.a
-		
+		add_political_power = 25
+		FROM = {
+			white_peace = ROOT
+		}
+		FROM = { set_country_flag = left_containment_war }
 	}
 	option = {
-		name = contain.2.a
-		
+		name = contain.2.b
+		FROM = { set_country_flag = containment_declined_peace }
 	}
 }
-#Usless event, ignore for now
+#Target wins containment war
 country_event = {
 	id = contain.3
 	title = contain.3.t
@@ -54,6 +79,79 @@ country_event = {
 	
 	option = {
 		name = contain.3.a
+		clr_country_flag = containment_target_won
+		remove_ideas = containment_recent_target
+		every_other_country = {
+			limit = {
+				has_country_flag = containment_starter
+				has_offensive_war = no
+			}
+			clr_country_flag = containment_starter
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = containment_declined_peace
+				has_offensive_war = no
+			}
+			clr_country_flag = containment_declined_peace
+		}
+		every_other_country = {
+			limit = {
+				has_country_flag = left_containment_war
+			}
+			clr_country_flag = left_containment_war
+		}
+		ROOT = {
+			if = {
+				limit = {
+					has_added_tension_amount > 39
+					has_added_tension_amount < 49
+				}
+				add_named_threat = {
+					threat = -20
+					name = containment_target_won_name
+				}
+			}
+			else_if = {
+				limit = {
+					has_added_tension_amount > 49
+					has_added_tension_amount < 69
+				}
+				add_named_threat = {
+					threat = -40
+					name = containment_target_won_name
+				}
+			}
+			else_if = {
+				limit = {
+					has_added_tension_amount > 69
+					has_added_tension_amount < 89
+				}
+				add_named_threat = {
+					threat = -60
+					name = containment_target_won_name
+				}
+			}
+			else_if = {
+				limit = {
+					has_added_tension_amount > 89
+					has_added_tension_amount < 99
+				}
+				add_named_threat = {
+					threat = -80
+					name = containment_target_won_name
+				}
+			}
+			else_if = {
+				limit = {
+					has_added_tension_amount > 99
+				}
+				add_named_threat = {
+					threat = -90
+					name = containment_target_won_name
+				}
+			}
+		}
 	}
 }
 country_event = { #everyone becomes suspicious
@@ -94,26 +192,6 @@ country_event = { #everyone loses suspicion
 	option = {
 		name = contain.5.a
 		clr_country_flag = containment_warning_1
-	}
-}
-country_event = { #nation joins coalition war
-	id = contain.6
-	title = contain.6.t
-	desc = contain.6.d
-	picture = GFX_report_event_generic_riot
-	
-	is_triggered_only = yes
-
-	hidden = yes
-	
-	option = {
-		name = contain.6.a
-		FROM = {
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = FROM
-			}
-		}
 	}
 }
 

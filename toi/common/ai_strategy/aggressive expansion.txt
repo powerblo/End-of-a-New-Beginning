@@ -1,13 +1,13 @@
 contain_aggressive_expansion = {
 	enable = {
 		any_other_country = {
-			has_added_tension_amount > 24.99
+			has_added_tension_amount > 29.99
 		}
 	}
 	abort = {
 		NOT = {
 			any_other_country = {
-				has_added_tension_amount > 24.99
+				has_added_tension_amount > 29.99
 			}
 		}
 	}
@@ -15,13 +15,31 @@ contain_aggressive_expansion = {
 	ai_strategy = {
 		type = contain
 		id = ROOT
-		value = 100
+		value = 200
 	}
 
 	ai_strategy = {
 		type = antagonize
 		id = ROOT
-		value = 100
+		value = 200
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = ROOT
+		value = 250
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = ROOT
+		value = -100
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ROOT
+		value = -100
 	}
 	
 }
