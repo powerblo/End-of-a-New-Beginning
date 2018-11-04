@@ -213,6 +213,7 @@ country_event = {
 		id = sardinia.12
 		title = sardinia.12.t
 		desc = sardinia.12.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -257,6 +258,7 @@ country_event = {
 		id = sardinia.13
 		title = sardinia.13.t
 		desc = sardinia.13.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -290,6 +292,7 @@ country_event = {
 		id = sardinia.15
 		title = sardinia.15.t
 		desc = sardinia.15.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -312,6 +315,7 @@ country_event = {
 		id = sardinia.16
 		title = sardinia.16.t
 		desc = sardinia.16.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -333,6 +337,7 @@ country_event = {
 		id = sardinia.14
 		title = sardinia.14.t
 		desc = sardinia.14.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -365,6 +370,7 @@ country_event = {
 		id = sardinia.17
 		title = sardinia.17.t
 		desc = sardinia.17.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -387,6 +393,7 @@ country_event = {
 		id = sardinia.18
 		title = sardinia.18.t
 		desc = sardinia.18.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 		
 		is_triggered_only = yes
 		
@@ -420,6 +427,7 @@ country_event = {
 		id = sardinia.19
 		title = sardinia.19.t
 		desc = sardinia.19.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 
 		is_triggered_only = yes
 
@@ -442,6 +450,7 @@ country_event = {
 		id = sardinia.20
 		title = sardinia.20.t
 		desc = sardinia.20.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 
 		is_triggered_only = yes
 
@@ -462,6 +471,7 @@ country_event = {
 		id = sardinia.21
 		title = sardinia.21.t
 		desc = sardinia.21.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 
 		is_triggered_only = yes
 
@@ -495,6 +505,7 @@ country_event = {
 		id = sardinia.23
 		title = sardinia.23.t
 		desc = sardinia.23.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 
 		is_triggered_only = yes
 
@@ -539,6 +550,7 @@ country_event = {
 		id = sardinia.26
 		title = sardinia.26.t
 		desc = sardinia.26.d
+		picture = GFX_event_PIE_Plombieres_Agreement
 
 		is_triggered_only = yes
 
@@ -718,3 +730,30 @@ country_event = {
 		}
 }
 
+
+
+
+
+
+
+###Flavor Events###
+country_event = {
+		id = sardinia.33
+		title = sardinia.33.t
+		desc = sardinia.33.d
+		picture = GFX_event_PIE_Confezione_di_Pastiglie_Leone
+
+		fire_only_once = yes
+
+		trigger = {
+			tag = PIE
+			date > 1857.6.10
+		}
+
+		option = {
+				name = sardinia.33.a
+				add_political_power = 5
+				add_stability = 0.005
+				
+	}
+}
