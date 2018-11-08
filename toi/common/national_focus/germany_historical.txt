@@ -950,16 +950,13 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
 		prerequisite = { focus = GER_focus_historical_gruenderzeit }
 		mutually_exclusive = { focus = GER_focus_historical_bimetalism }
 		mutually_exclusive = { focus = GER_focus_historical_silver_standard }
 		
 		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_gold_standard
 			add_ideas = GER_idea_gold_standard
 			hidden_effect = {
 				#Add Effect on Economic crisis later
@@ -1108,6 +1105,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = GER_focus_historical_gruenderzeit }
 		mutually_exclusive = { focus = GER_focus_historical_gold_standard }
@@ -1203,6 +1204,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_zusammenbruch
 			add_stability = -0.1
 		}
 	}
