@@ -428,6 +428,9 @@ country_event = {
 		name = fraprswar.12.a
 		ai_chance = { factor = 100 }
 		add_to_war = { targeted_alliance = PRS enemy = FRA }
+		PRS = {
+			add_to_faction = ROOT
+		}
 	}
 	
 	option = {
@@ -492,14 +495,14 @@ country_event = {
 			}
 			PRS = {
 				add_timed_idea = {
-				idea = PRS_idea_reparations_from_FRA
-				days = 365
+					idea = PRS_idea_reparations_from_FRA
+					days = 365
 				}
 			}
 			FRA = {
 				add_timed_idea = {
-				idea = PRS_idea_reparations_to_PRS
-				days = 365
+					idea = PRS_idea_reparations_to_PRS
+					days = 365
 				}
 			}
 			PRS = {
