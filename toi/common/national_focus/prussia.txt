@@ -801,7 +801,11 @@ focus_tree = {
 					name = "General von Moltke"
 					picture = "Portrait_PRS_Helmuth_Karl_Bernhard_von_Moltke.dds"
 					traits = { } 
-					skill = 3
+					skill = 5
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 5
+					logistics_skill = 1
 				}
 			}
 		}
@@ -2643,6 +2647,7 @@ focus_tree = {
 			}
 		}
 		available = {
+			NOT = { has_global_flag = eoanb_flag_second_schleswig_war }
 			OR = {
 				PRS = { has_navy_size = { size > 24 } }
 				PRS = { has_tech = tech_naval_1857_troops }

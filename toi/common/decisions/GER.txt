@@ -38,6 +38,36 @@ GER_unite_liberal = {
 				set_cosmetic_tag = PRS_GER_liberal
 				news_event = news.11
 				remove_ideas = PRS_Zollverein_3
+				if = {
+					limit = {
+						NOR = { has_idea = PRS_Zollverein_2 }
+					}
+					NOR = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						SWE = { has_idea = PRS_Zollverein_2 }
+					}
+					SWE = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						LUX = { has_idea = PRS_Zollverein }
+					}
+					LUX = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						ION = { has_idea = PRS_Zollverein }
+					}
+					ION = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						GRE = { has_idea = PRS_Zollverein }
+					}
+					GRE = { remove_ideas = PRS_Zollverein }
+				}
 			}
 		}
 
@@ -93,6 +123,36 @@ GER_unite_bismarck = {
 				news_event = news.11
 				country_event = { id = germany.1 }
 				remove_ideas = PRS_Zollverein_3
+				if = {
+					limit = {
+						NOR = { has_idea = PRS_Zollverein_2 }
+					}
+					NOR = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						SWE = { has_idea = PRS_Zollverein_2 }
+					}
+					SWE = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						LUX = { has_idea = PRS_Zollverein }
+					}
+					LUX = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						ION = { has_idea = PRS_Zollverein }
+					}
+					ION = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						GRE = { has_idea = PRS_Zollverein }
+					}
+					GRE = { remove_ideas = PRS_Zollverein }
+				}
 			}
 		}
 
@@ -142,6 +202,36 @@ GER_unite_socialist = {
 				set_cosmetic_tag = PRS_GER_socialist
 				news_event = news.11
 				remove_ideas = PRS_Zollverein_3
+				if = {
+					limit = {
+						NOR = { has_idea = PRS_Zollverein_2 }
+					}
+					NOR = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						SWE = { has_idea = PRS_Zollverein_2 }
+					}
+					SWE = { remove_ideas = PRS_Zollverein_2 }
+				}
+				if = {
+					limit = {
+						LUX = { has_idea = PRS_Zollverein }
+					}
+					LUX = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						ION = { has_idea = PRS_Zollverein }
+					}
+					ION = { remove_ideas = PRS_Zollverein }
+				}
+				if = {
+					limit = {
+						GRE = { has_idea = PRS_Zollverein }
+					}
+					GRE = { remove_ideas = PRS_Zollverein }
+				}
 			}
 		}
 
