@@ -311,9 +311,6 @@ country_event = {        #1859 elections start
 		TAG = GRE
 		date > 1859.07.1
 	}
-	mean_time_to_happen = {
-	days = 10
-	}
 	
 	fire_only_once = yes 
 	
@@ -366,7 +363,6 @@ country_event = { #1859 elections results
 		
 		hidden_effect = {
 		    GRE = {
-    			complete_national_focus = GRE_1859_elections
     			clr_country_flag = gre_election_1859
     			set_country_flag = otto_win  
     	            set_politics = {
@@ -410,7 +406,6 @@ country_event = { #1859 elections results
         }  
 		hidden_effect = {
 		    GRE = {
-			    complete_national_focus = GRE_1859_elections
 		    	clr_country_flag = gre_election_1859
 		    	set_country_flag = otto_lose 
 	                set_politics = {
@@ -454,7 +449,11 @@ country_event = { #Otto abdicates
 		name = GREpolitics.1.a
 
         GRE = { 
-            remove_ideas = GRE_Otto_I
+		    swap_ideas = {
+				add_idea = hos_is_leader  
+                remove_idea = GRE_Otto_I
+            }
+            remove_ideas = GRE_Queen_Amalia
 			complete_national_focus = GRE_otto_abdication 
 		} 
 		hidden_effect = {
@@ -550,7 +549,7 @@ country_event = { #Otto dies
 	
 	trigger = {
 		TAG = GRE
-		date > 1870.07.06 
+		date > 1868.07.06 
 		has_country_flag = otto_remain 
     }	
 
@@ -566,8 +565,7 @@ country_event = { #Otto dies
 		    complete_national_focus = GRE_otto_succession
 		}
 		hidden_effect = {
-		    GRE = {
-                set_country_flag = gre_king_luitpold  
+		    GRE = {   
 		    	clr_country_flag = otto_remain	
 		    	country_event = {
                     id = GREpolitics.10 #Luitpold becomes King 
@@ -686,12 +684,8 @@ country_event = { #Conduct a referendum - end
 		
         GRE = {    
 		    set_cosmetic_tag = GRE_republic
-	        set_politics = {
-	
-	                ruling_party = centrism
-		    }
-					set_country_flag = GRE_Republic 
-					complete_national_focus = GRE_greek_republic
+			set_country_flag = GRE_flag_Republic 
+			complete_national_focus = GRE_greek_republic
         }      
     }            			
 }
@@ -756,30 +750,8 @@ country_event = { #Alfred for King - GRE
 		name = GREpolitics.7.a 
 		
         GRE = {    
-	        set_politics = {
-                parties = {
-		            autocracy = { 
-			        popularity = 0
-		            }
-
-		            centrism = {
-			        popularity = 30 
-		            }
-		
-		            traditional_conservatism = {
-			        popularity = 50  
-		            }
-						
-		            radical_democracy = { 
-			        popularity = 20 
-		            }
-		
-	            }
-	  
-	                ruling_party = traditional_conservatism
-				}
 					add_ideas = GRE_Alfred_I
-					set_country_flag = GRE_Alfred_I
+					set_country_flag = GRE_flag_Alfred_I
 					complete_national_focus = GRE_king_alfred
             }      
         }
@@ -819,31 +791,9 @@ country_event = { #George for King - GRE
 		name = GREpolitics.9.a 
 		
         GRE = {    
-	        set_politics = {
-                parties = {
-		            autocracy = { 
-			        popularity = 0
-		            }
-
-		            centrism = {
-			        popularity = 30 
-		            }
-		
-		            traditional_conservatism = {
-			        popularity = 50  
-		            }
-						
-		            radical_democracy = { 
-			        popularity = 20 
-		            }
-		
-	            }
-	  
-	                ruling_party = traditional_conservatism
-			} 
-					add_ideas = GRE_George_I
-					set_country_flag = GRE_George_I 
-					complete_national_focus = GRE_king_george      
+			add_ideas = GRE_George_I
+			set_country_flag = GRE_flag_George_I 
+			complete_national_focus = GRE_king_george      
         }
 	}
 }
@@ -866,7 +816,7 @@ country_event = { #Luitpold for King - GRE
                 add_idea = GRE_Luitpold_I
                 remove_idea = GRE_Regency
             }
-		    set_country_flag = GRE_Luitpold_I 
+		    set_country_flag = GRE_flag_Luitpold_I 
 			complete_national_focus = GRE_king_luitpold            
         }
 	}
@@ -885,31 +835,8 @@ country_event = { #Coup D'Etat
 		
         GRE = {    
 		    set_cosmetic_tag = GRE_republic
-	        set_politics = {
-                parties = {
-		            autocracy = { 
-			        popularity = 0
-		            }
-
-		            centrism = {
-			        popularity = 30 
-		            }
-		
-		            traditional_conservatism = {
-			        popularity = 40 
-		            }
-						
-		            radical_democracy = { 
-			        popularity = 30 
-		            }
-		
-	            }
-	
-	                ruling_party = traditional_conservatism
-		    }
-					set_country_flag = GRE_Republic 
-					complete_national_focus = GRE_greek_republic
-                
+			set_country_flag = GRE_flag_Republic 
+			complete_national_focus = GRE_greek_republic           
         }
 	}
 }
@@ -943,6 +870,106 @@ country_event = { #Revolutions against Otto
                 country_event = { id = GREpolitics.1 days = 15 }			
             }
 	    }
+	}
+}
+
+country_event = { #Elections of 1865    
+	id = GREpolitics.13
+	title = GREpolitics.13.t
+	
+	desc = {
+	    text = GREpolitics.13.d_george
+		trigger = { GRE = { has_country_flag =  GRE_flag_George_I } } 
+	}
+	desc = {
+	    text = GREpolitics.13.d_alfred
+		trigger = { GRE = { has_country_flag =  GRE_flag_Alfred_I } } 
+	}
+	desc = {
+	    text = GREpolitics.13.d_republic
+		trigger = { GRE = { has_country_flag =  GRE_flag_Republic } } 
+	}
+	
+	picture = placeholder
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = GRE
+		date > 1865.04.20  
+        GRE = {
+		   OR = {
+		        has_country_flag = GRE_flag_Alfred_I
+				has_country_flag = GRE_flag_George_I
+				has_country_flag = GRE_flag_Republic
+		   }    
+	    }	
+	}
+	
+	option = { #Koumoundouros Wins 
+		name = GREpolitics.13.a
+
+		GRE = {
+                create_country_leader = {
+                    name = "Alexandros Koumoundouros"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_GRE_Alexandros_Koumoundouros.dds"
+                    expire = 1877.10.01
+                    ideology = moderatism 
+                    traits = {
+                        eoanb_trait_patriotic_orator
+                    }
+                }
+		set_politics = {
+            ruling_party = traditional_conservatism					
+		}
+            add_popularity = {
+                    ideology = traditional_conservatism
+                    popularity = 0.1 
+            }
+	    }
+	}
+	
+	option = { #Voulgaris Wins 
+		name = GREpolitics.13.b
+
+		GRE = {
+                create_country_leader = {
+                    name = "Dimitrios Voulgaris"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_GRE_Dimitrios_Voulgaris.dds"
+                    expire = 1877.10.01
+                    ideology = conserv_liberal
+                    traits = {
+                        controversial_figure
+                    }
+                }	
+            }
+	}
+	
+	option = { #Deligiorgis Wins  
+		name = GREpolitics.13.c 
+		trigger = {
+		    GRE = {
+			    OR = {
+			    has_country_flag = GRE_flag_Alfred_I
+				has_country_flag = GRE_flag_Republic
+				}
+			}
+		}
+
+		GRE = {
+                create_country_leader = {
+                    name = "Epameinondas Deligiorgis"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_GRE_Epameinondas_Deligiorgis.dds"
+                    expire = 1877.10.01
+                    ideology = radical_liberal 
+                    traits = {
+                        
+                    }
+                }
+            }
 	}
 }
 
@@ -980,6 +1007,195 @@ country_event = { #UK cedes Ionian islands to Greece
 		ION = {
         remove_state_core = 809
 		}
+		}
+	}
+}
+
+country_event = { #Turkey finds out about the Greek support         
+	id = GREdiplo.2
+	title = GREdiplo.2.t
+	desc = GREdiplo.2.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Threaten War      
+		name = GREdiplo.2.a  
+		
+		
+		hidden_effect = {
+        GRE = { country_event = { id = GREdiplo.4 days = 20 } }
+		}
+	}
+}
+
+country_event = { #Turkey threatens war to Greece          
+	id = GREdiplo.3
+	title = GREdiplo.3.t
+	desc = GREdiplo.3.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Continue the support       
+		name = GREdiplo.3.a  
+		ai_chance = { 
+            factor = 75  
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }		
+		
+		hidden_effect = {
+        OTO = { country_event = { id = GREdiplo.4 days = 100 } } 	
+		GRE = { set_country_flag = GRE_Crete_Support_Yes }
+		}
+	}
+	option = { #Back down        
+		name = GREdiplo.3.b  
+		ai_chance = { 
+            factor = 25  
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+        }		
+		
+		hidden_effect = {
+        OTO = { country_event = { id = GREdiplo.5 days = 20 } } 	
+		}
+	}
+}
+
+country_event = { #Inform Turkey of the decision to continue the support     
+	id = GREdiplo.4
+	title = GREdiplo.4.t
+	desc = GREdiplo.4.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Threaten War      
+		name = GREdiplo.4.a  
+		
+		
+		hidden_effect = {
+        OTO = { set_country_flag = OTO_Crete_Greece_Support_Yes } 	
+		}
+	}
+}
+
+country_event = { #Turkey is informed of our backing down     
+	id = GREdiplo.5 
+	title = GREdiplo.5.t
+	desc = GREdiplo.5.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Good       
+		name = GREdiplo.5.a  
+		
+		
+		hidden_effect = { 	
+		GRE = { set_country_flag = GRE_Crete_Support_No }
+		}
+	}
+}
+
+country_event = { #ENG - Greece requests mediation over Crete      
+	id = GREdiplo.6 
+	title = GREdiplo.6.t
+	desc = GREdiplo.6.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Support Turkey        
+		name = GREdiplo.6.a  
+		ai_chance = { 
+            factor = 70  
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }		
+		
+		hidden_effect = { 	
+        GRE = { country_event = { id = GREdiplo.7 days = 40 } }
+		}
+	}
+	option = { #Support Greece        
+		name = GREdiplo.6.b  
+		ai_chance = { 
+            factor = 30 
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 50 
+                GRE = { has_country_flag = GRE_flag_Alfred_I }
+            }
+        }		
+		
+		hidden_effect = { 	
+        OTO = { country_event = { id = GREdiplo.8 days = 40 } }
+		}
+	}
+}
+
+country_event = { #Greece - Informed of Britain supporting Turkey       
+	id = GREdiplo.7
+	title = GREdiplo.7.t
+	desc = GREdiplo.7.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Accept British demands        
+		name = GREdiplo.7.a  
+		
+		
+		hidden_effect = { 	
+		GRE = { set_country_flag = GRE_Crete_Support_No }
+		}
+	}
+	option = { #Reject British demands        
+		name = GREdiplo.7.b  
+		
+		
+		hidden_effect = { 	
+		
+		}
+	}
+}
+
+country_event = { #Turkey - Informed of Britain supporting Greece       
+	id = GREdiplo.8
+	title = GREdiplo.8.t
+	desc = GREdiplo.8.d
+	picture = GFX_report_event_gre_ionian_islands_1
+	
+	is_triggered_only = yes 	
+
+	option = { #Accept British demands        
+		name = GREdiplo.8.a  
+		
+		
+		hidden_effect = { 	
+		OTO = {
+		    white_peace = CET 
+		}
+		}
+	}
+	option = { #Reject British demands        
+		name = GREdiplo.8.a  
+		
+		
+		hidden_effect = { 	
+		
 		}
 	}
 }

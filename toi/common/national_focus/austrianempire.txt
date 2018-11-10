@@ -76,6 +76,8 @@ focus_tree = {
         focus = AUS_Italian_Question
         }
 		
+		cancel_if_invalid = no
+		
 		completion_reward = {
 		LVN = {
 		159 = {
@@ -339,6 +341,8 @@ focus_tree = {
         }
         }		
 		
+		cancel_if_invalid = no  
+		
 		mutually_exclusive = { focus = AUS_Victory_Italy }
 		
 		completion_reward = {
@@ -364,6 +368,8 @@ focus_tree = {
 		    NOT = { PIE = { owns_state = 159 } }
         }
         }		
+		
+		cancel_if_invalid = no
 		
 		mutually_exclusive = { focus = AUS_Disaster_Italy }
 		
@@ -1237,7 +1243,7 @@ focus_tree = {
 		}
     
         completion_reward = {
-				#
+		    navy_experience = 5 
 		}
 	}
 	
@@ -1258,7 +1264,39 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+            add_tech_bonus = {
+                bonus = 0.25 
+                uses = 1
+                category = naval_doctrine 
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Pola_Base
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 2   
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+		1236 = {
+            add_building_construction = {
+                type = naval_base 
+                level = 2 
+                instant_build = yes
+                province = 11735 
+            } 
+		}
 		}
 	}
 	
@@ -1279,7 +1317,7 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+				navy_experience = 25 
 		}
 	}
 	
@@ -1300,7 +1338,9 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+				AUS = {
+				    add_ideas = AUS_New_Navy_1 
+				}
 		}
 	}
 	
@@ -1309,7 +1349,7 @@ focus_tree = {
 		icon = GFX_AUS_placeholder
 		x = 33                 
 		y = 2  
-		cost = 70
+		cost = 70 
 		available_if_capitulated = no
 		
 		ai_will_do = {
@@ -1321,7 +1361,14 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+		    add_political_power = 50 
+		1236 = {
+            add_building_construction = {
+                type = dockyard 
+                level = 1  
+                instant_build = yes
+            } 
+		}	
 		}
 	}
 	
@@ -1342,7 +1389,12 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+            add_tech_bonus = {
+                bonus = 0.4  
+                uses = 1
+                category = monitor_tech 
+                category = lineship_tech 
+            }
 		}
 	}
 	
@@ -1363,7 +1415,12 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+		    AUS = {
+			    swap_ideas = {
+				    add_idea = AUS_New_Navy_2 
+					remove_idea = AUS_New_Navy_1
+				}
+			}
 		}
 	}
 	
@@ -1384,7 +1441,11 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+            add_tech_bonus = {
+                bonus = 0.25   
+                uses = 1
+                category = sloop_tech 
+            }
 		}
 	}
 	
@@ -1405,15 +1466,17 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+				AUS = {
+				    add_ideas = AUS_theorist_naval_ludwig_von_fautz
+				}
 		}
 	}
 	
 	focus = { 
 		id = AUS_Wilhelm_von_Tegetthoff  
 		icon = GFX_AUS_placeholder
-		x = 33                   
-		y = 3   
+		x = 31                    
+		y = 4   
 		cost = 70
 		available_if_capitulated = no
 		
@@ -1422,11 +1485,19 @@ focus_tree = {
 		}
 		
         prerequisite = {
-            focus = AUS_Emperor_Adriatic_Navy focus = AUS_Maximilian_Lessons
+            focus = AUS_New_Leadership
         }
     
         completion_reward = {
-				#
+				AUS = {
+                    create_navy_leader = {
+                        name = "Wilhelm von Tegetthoff"
+                        picture = "Portrait_AUS_Wilhelm_von_Tegetthoff.dds"
+                        traits = { }
+                        skill = 4 
+						id = 168304  
+                }
+				}
 		}
 	}
 	

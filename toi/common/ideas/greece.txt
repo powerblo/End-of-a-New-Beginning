@@ -55,9 +55,8 @@ ideas = {
 	        picture = placeholder
 	
 	        modifier = { 
-			    political_power_gain = -0.2
-                political_advisor_cost_factor = 0.2
-                drift_defence_factor = 0.15	 
+			    political_power_gain = 0.1 
+				stability_factor = 0.05 
 			}
         }
 		
@@ -76,9 +75,7 @@ ideas = {
 	        picture = placeholder
 	
 	        modifier = { 
-			    political_power_gain = -0.2
-                political_advisor_cost_factor = 0.2
-                drift_defence_factor = 0.15	 
+			    industrial_capacity_dockyard = 0.1 
 			}
         }
 		
@@ -97,9 +94,8 @@ ideas = {
 	        picture = placeholder
 	
 	        modifier = { 
-			    political_power_gain = -0.2
-                political_advisor_cost_factor = 0.2
-                drift_defence_factor = 0.15	 
+			    consumer_goods_factor = -0.05 
+				production_factory_max_efficiency_factor = 0.05 
 			}
         }
 		
@@ -118,9 +114,8 @@ ideas = {
 	        picture = placeholder
 	
 	        modifier = { 
-			    political_power_gain = -0.2
-                political_advisor_cost_factor = 0.2
-                drift_defence_factor = 0.15	 
+			    experience_gain_army_factor = 0.15 
+			    training_time_army_factor = 0.05 
 			}
         }
 		
@@ -139,9 +134,30 @@ ideas = {
 	        picture = placeholder
 	
 	        modifier = { 
-			    political_power_gain = -0.2
-                political_advisor_cost_factor = 0.2
-                drift_defence_factor = 0.15	 
+			    planning_speed = 0.05 
+                army_org_Factor = 0.025
+			}
+        }
+		
+		CET_idea_cretan_fighters = {
+	
+	        allowed = {
+	            always = no 
+	        }
+			
+			allowed_civil_war = {
+				always = no 
+			}
+	
+	        removal_cost = -1
+			
+	        picture = placeholder
+	
+	        modifier = { 
+			   targeted_modifier = { tag = OTT attack_bonus_against = 0.8 } 
+                army_org_Factor = 0.5 
+				army_core_attack_factor = 0.5 
+				conscription = 0.35 
 			}
         }
 		
@@ -153,15 +169,50 @@ ideas = {
 
 			allowed = {
 				original_tag = GRE 
-				OR = {
-				date < 1875.01.01
-				has_idea = GRE_Otto_I 
-				}
 			}
 			
-			picture = GFX_GRE_Queen_Amalia
+			picture = GRE_Advisor_Queen_Amalia
 
 			traits = { eoanb_trait_popular_figure }
+		}
+		
+		GRE_Dimitrios_Kallergis = {
+
+			allowed = {
+				original_tag = GRE 
+				date < 1867.01.01
+			}
+			
+			picture = GRE_Advisor_Dimitrios_Kallergis
+
+			traits = { eoanb_trait_experienced_diplomat }
+		}
+		
+		GRE_Epameinondas_Deligiorgis = {
+
+			allowed = {
+				original_tag = GRE 
+				date < 1879.01.01
+			}
+			
+			picture = GRE_Advisor_Epaminondas_Deligiorgis
+
+			traits = { centrism_alignment }
+		}
+	}
+	
+	army_chief = {
+	
+		GRE_Panos_Koronaios = {
+
+			allowed = {
+				original_tag = GRE 
+				date < 1899.01.01
+			}
+			
+			picture = GRE_theorist_Panos_Koronaios
+
+			traits = { army_chief_defensive_1 }
 		}
 	}
 

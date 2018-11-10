@@ -231,3 +231,224 @@ political_actions = {
 	}
 	
 }
+
+    eoanb_category_diplomatic_actions = {
+	
+	GRE_decision_help_crete_1 = { #Send men 
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+          NOT = { GRE = { has_country_flag = CET_cretan_revolt_no_help } } 	  
+		}
+		
+		cost = 100   
+
+		fire_only_once = yes
+
+		complete_effect = {
+            custom_effect_tooltip = GRE_tt_help_crete_1        
+			army_experience = -15 
+			add_manpower = -2500 
+			CET = {
+                army_experience = 10  	
+                add_manpower = 2500 
+			}
+		    hidden_effect = {
+			    CET = { country_event = { id = GREcrete.2 days = 20 } } 
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	GRE_decision_help_crete_2 = { #Send guns  
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+          NOT = { GRE = { has_country_flag = CET_cretan_revolt_no_help } } 	  
+		}
+		
+		cost = 100   
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    custom_effect_tooltip = GRE_tt_help_crete_1    
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 500 
+                target = CET 
+            }			
+		    hidden_effect = {
+			    CET = { country_event = { id = GREcrete.7 days = 20 } } 
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	GRE_decision_help_crete_3 = { #Escalate the aid   
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+          NOT = { GRE = { has_country_flag = CET_cretan_revolt_no_help } }
+          date > 1867.08.21  		  
+		}
+		
+		cost = 150    
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    custom_effect_tooltip = GRE_tt_help_crete_1      
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 750  
+                target = CET 
+            }		 
+			add_manpower = -1000  
+			CET = {	
+                add_manpower = 1000  
+			}			
+		    hidden_effect = {
+			    CET = { country_event = { id = GREcrete.8 days = 20 } } 
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	GRE_decision_help_crete_4 = { #Escalate the aid by a lot    
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+          NOT = { GRE = { has_country_flag = CET_cretan_revolt_no_help } } 	  
+		}
+		
+		cost = 150    
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    custom_effect_tooltip = GRE_tt_help_crete_1       
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 1500   
+                target = CET 
+            }		 
+			add_manpower = -1000  
+			CET = {	
+                add_manpower = 1000  
+			}			
+		    hidden_effect = {
+			    CET = { country_event = { id = GREcrete.9 days = 20 } } 
+			    OTO = { country_event = { id = GREdiplo.2 days = 200 } } 				
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	OTO_decision_war_greece_crete_revolt = { #Request British help     
+
+		visible = {
+		  tag = OTO 
+		  CET = { has_country_flag = CET_cretan_revolt }
+		  GRE = { 
+		        has_country_flag = GRE_Crete_Support_Yes
+		  }
+          OTO = { has_country_flag = OTO_Crete_Greece_Support_Yes }	  
+		}
+		
+		cost = 150    
+
+		fire_only_once = yes
+
+		complete_effect = {      		
+		    declare_war_on = {
+                target = GRE
+                type = annex_everything
+            }
+			
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	GRE_decision_request_british_mediation = { #Request British help     
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+		  GRE = { 
+		        has_country_flag = GRE_Crete_Support_Yes
+                OR = {
+				    has_country_flag = GRE_flag_George_I
+				    has_country_flag = GRE_flag_Alfred_I
+				}
+		  }
+          NOT = { GRE = { has_country_flag = GRE_Crete_Support_No } } 	  
+		}
+		
+		cost = 150    
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    custom_effect_tooltip = GRE_tt_eng_help_crete_1        		
+		    hidden_effect = {
+			    ENG = { country_event = { id = GREdiplo.6 days = 20 } } 				
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+	GRE_decision_request_austrian_mediation = { #Request Austrian help     
+
+		visible = {
+		  tag = GRE 
+		  CET = { has_country_flag = CET_cretan_revolt }
+		  GRE = { 
+		        has_country_flag = GRE_Crete_Support_Yes
+                OR = {
+				    has_country_flag = GRE_flag_Luitpold_I
+				    has_country_flag = GRE_flag_Otto_I
+				}
+		  }
+          NOT = { GRE = { has_country_flag = GRE_Crete_Support_No } } 	  
+		}
+		
+		cost = 150    
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    custom_effect_tooltip = GRE_tt_aus_help_crete_1        		
+		    hidden_effect = {
+			    AUS = { country_event = { id = GREcrete.2 days = 20 } } 			
+			}
+		}
+
+		ai_will_do = {
+			base = 100   
+		}	
+	}
+	
+}
