@@ -1,28 +1,32 @@
+
 state={
 	id=87
 	name="STATE_87"
-	manpower = 2632000
 
-	state_category = town
 	history={
 		owner = RUS
+		add_core_of = RUS
 		buildings = {
-			infrastructure = 6
-			industrial_complex = 2
+			infrastructure = 4
+			industrial_complex = 1
+
 		}
 		victory_points = {
-			9508 1
+			9508 3 
 		}
-		add_core_of = RUS
+		victory_points = {
+			9439 3 
+		}
+		victory_points = {
+			9546 3 
+		}
 
-		1939.1.1 = {
-			buildings = {
-				
-			}
-		}
 	}
 
 	provinces={
-		493 584 9439 9508 9546 11428 11515 11558
+		493 584 9439 9508 9546 11428 11515 
 	}
+	manpower=1832000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

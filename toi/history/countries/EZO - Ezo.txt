@@ -1,54 +1,90 @@
-﻿capital = 536
+﻿1857.1.1 = {
+  capital = 536
 
-# Starting tech
-set_technology = {
-  infantry_weapons = 1
-  basic_cavalry = 1
-  gw_artillery = 1
-  vic_army_cloth = 1
-}
+  oob = "EZO_1857"
 
-set_politics = {
+  set_convoys = 0
+  
+  set_research_slots = 2
+
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    pre_industrial_era
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+	cl_legal
+
+    stagnation_growth
+    border_control
+	limited_conscription
+    slavery
+    absolutism
+
+    no_constitution
+    no_elections
+
+    privileged_education
+    state_religion
+	religion_animist
+         #NATIONAL SPIRITS
+	
+  }
+
+  set_politics = {
     parties = {
-		economic_liberalism = {
-			popularity = 100
-		}
-		traditional_conservatism = {
-			popularity = 0
-		}
-		social_democracy = {
-			popularity = 0
-		}
-		radical_socialism = {
-			popularity = 0
-		}
-		marxism_leninism = {
-			popularity = 0
-		}
-		despotic_autocracy = {
-			popularity = 0
-		}
-		parliamental_oligarchy = {
-			popularity = 0
-		}
-		totalitarian_nationalism = {
-			popularity = 0
-		}
-		rexism_falangism = {
-			popularity = 0
-		}
-		theocracy = {
-			popularity = 0
-		}
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 100
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
     }
 
-    ruling_party = economic_liberalism
-    last_election = "1860.1.1"
-    election_frequency = 48
-    elections_allowed = no
-}
+	  ruling_party = centrism
+  }
 
-create_country_leader = {
+  set_technology = {
+	infantry_weapons = 1
+	tech_infantry_napoleonic_uniform = 1
+	start_build_tech = 1
+	tech_naval_1812_frigate = 1
+  }
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
   name = "Enomoto Takeaki"
   desc = "POLITICS_GEORGE_V_DESC"
   picture = "Portrait_EZO_Enomoto_Takeaki.dds"
@@ -57,4 +93,5 @@ create_country_leader = {
   traits = {
 
   }
+}
 }

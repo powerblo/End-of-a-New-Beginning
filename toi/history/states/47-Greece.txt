@@ -1,31 +1,22 @@
 
 state={
 	id=47
-	name="STATE_47" # Thessaly
-	manpower=2312500
+	name="STATE_47" # Central Greece 
+	manpower=299789
 	resources={
-		steel=4
-		chromium=22
-		aluminium=58
-		tungsten = 20
+		iron=6
+		chromium=4
+		aluminium=4
+		tungsten =6
+		wood = 2
 	}
 
 	state_category = city
 
 	history={
 		owner = GRE
-		victory_points = {
-			4109 20
-		}
 		buildings = {
-			infrastructure = 5
-			arms_factory = 2
-			industrial_complex = 4
-			
-			4109 = {
-				naval_base = 9
-
-			}
+			infrastructure = 3 
 
 		}
 		add_core_of = GRE
@@ -33,6 +24,6 @@ state={
 	}
 
 	provinces={
-		976 1109 3988 4109 7127 3401 
+		976 1109 3988 7127 3401 
 	}
 }

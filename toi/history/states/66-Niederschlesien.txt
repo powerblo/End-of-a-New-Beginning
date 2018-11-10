@@ -2,10 +2,11 @@
 state={
 	id=66
 	name="STATE_66"
-	manpower = 3052726
+	manpower = 2052726
 	resources={
-		steel=110
-		aluminium=38
+		iron=48
+		aluminium=12
+		wood = 4
 	}
 
 	state_category = large_city
@@ -16,20 +17,22 @@ state={
 			9570 10
 		}
 		buildings = {
-			infrastructure = 6
-			arms_factory = 1
+			infrastructure = 4
 			industrial_complex = 1
-			
-		}
-		add_core_of = PRS
+			9570 = {
+				bunker = 2
 
-		1939.1.1 = {
-			buildings = {
+			}
+			9470 = {
+				bunker = 2
+
+			}
+			3485 = {
+				bunker = 2
 				
-				arms_factory = 3
-				industrial_complex = 3
 			}
 		}
+		add_core_of = PRS
 	}
 
 	provinces={

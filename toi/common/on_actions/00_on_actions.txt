@@ -1,7 +1,434 @@
 on_actions = {
+
+	#Designed with 1857 start in mind
 	on_startup = {
 		effect = {
-			SRS = { country_event = { days = 1 id = sepoy.1 } }
+			SRS = { country_event = { days = 5 id = sepoy.1 } }
+			every_country = { country_event = { id = generic.4 } }
+			ENG = { country_event = { id = system.1 } }
+			USA = { country_event = { id = usa.0 days = 1 } }
 		}
 	}
+	
+	# country 
+	#on_new_term_election = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	# Ace pilots
+	# country, FROM = ace
+	on_ace_promoted = {
+		random_events = {
+			100 = ace_promoted.1
+			5 = ace_promoted.2
+		}
+	}
+	
+	# country, FROM = ace, PREV = enemy ace 
+	# This event fires twice, once for each ace.
+	on_aces_killed_each_other = {
+		random_events = {
+			100 = aces_killed_each_other.1
+		}
+	}
+	
+	# country, FROM = our ace, 
+	# PREV = enemy ace, has killed FROM
+	on_ace_killed_by_ace = {
+		random_events = {
+			100 = ace_killed_by_ace.1
+		}
+	}
+
+	# country, FROM = our ace, 
+	# PREV = enemy ace, killed by FROM
+	on_ace_killed_other_ace = {
+		random_events = {
+			100 = ace_killed_other_ace.1
+		}
+	}
+
+	# country, FROM = ace
+	on_ace_killed = {
+		random_events = {
+			100 = ace_died.1
+		}
+	}
+
+	# During justifying wargoals
+	# triggered daily, so make sure there is a sink somewhere not firing events
+	# country, FROM = target nation
+	#on_justifying_wargoal_pulse = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#on_wargoal_expire = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#on_nuke_drop = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	# country random events
+	#on_bi_yearly_pulse = {
+	#
+	#}
+
+	#on_five_year_pulse = {
+	#
+	#}
+
+	#on_border_war_lost = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	#on_leave_faction = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#FROM is the one that joins the faction
+	#on_create_faction = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#FROM is country getting invited.
+	#on_offer_join_faction = {
+	#	effect = {
+	#				
+	#	}
+	#}
+
+	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
+	#on_join_faction = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#FROM is war target
+	#on_declare_war = {
+	#	effect = {
+	#
+	#	}
+	#}
+	
+	# When a new faction is formed
+	#on_faction_formed = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	# ROOT is capitulated country, FROM is winner #Wrong, this is backwards according to testing.
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { has_country_flag = containment_target } #containment target defeated
+					FROM = {
+						NOT = {
+							has_country_flag = containment_reperations
+						}
+					}
+				}
+				FROM = { set_country_flag = containment_reperations }
+				FROM = { country_event = { id = contain.1 days = 0 } }
+				ROOT = { clr_country_flag = containment_starter }
+			}
+			if = {
+				limit = {
+					ROOT = { has_country_flag = containment_target } #containment defeated
+					ROOT = { has_defensive_war = no }
+				}
+				ROOT = { set_country_flag = containment_target_won }
+				FROM = { clr_country_flag = containment_starter }
+				ROOT = { country_event = { id = contain.3 days = 0 } }
+				ROOT = { clr_country_flag = containment_target }
+			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = no }
+					MHC = { exists = no }
+				}
+				ROOT = { drop_cosmetic_tag = yes }
+				CAL = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.47 hours = 1 }
+				news_event = { id = acw_news.13 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = yes }
+				}
+				declare_war_on = {
+					target = CAL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = NEG
+					USA = { has_country_flag = USA_Radical_Coup }
+					MHC = { exists = yes }
+				}
+				declare_war_on = {
+					target = MHC
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = no }
+					MHC = { exists = no }
+				}
+				ROOT = { drop_cosmetic_tag = yes }
+				NEG = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.55 hours = 1 }
+				news_event = { id = acw_news.15 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = yes }
+				}
+				declare_war_on = {
+					target = NEG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = CAL
+					USA = { has_country_flag = USA_Radical_Coup }
+					MHC = { exists = yes }
+				}
+				declare_war_on = {
+					target = MHC
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = no }
+					CAL = { exists = no }
+				}
+				CAL = { drop_cosmetic_tag = yes }
+				NEG = { drop_cosmetic_tag = yes }
+				country_event = { id = acw.56 hours = 1 }
+				news_event = { id = acw_news.16 }
+				every_state = {
+					remove_core_of = MHC
+	                remove_core_of = CAL
+	                remove_core_of = NEG
+	            }
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					NEG = { exists = yes }
+				}
+				declare_war_on = {
+					target = NEG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					tag = MHC
+					USA = { has_country_flag = USA_Radical_Coup }
+					CAL = { exists = yes }
+				}
+				declare_war_on = {
+					target = CAL
+					type = annex_everything
+				}
+			}
+		}
+	}
+	
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = RUS }
+					ROOT = { tag = CIR }
+				}
+				FROM = { country_event = { id = caucasus.2 } }
+			}
+			if = {
+				limit = {
+					FROM = { tag = RUS }
+					ROOT = { tag = CAU }
+				}
+				FROM = { country_event = { id = caucasus.3 } }
+			}
+		}
+	}
+
+	# ROOT is previously capitulated country
+	#on_uncapitulation = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#on_government_change = {
+	#	effect = {			
+	#		
+	#	}
+	#}
+
+	#on_coup_succeeded = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#ROOT is winner #FROM gets annexed - This will also fire on_annex
+	#on_civil_war_end = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	
+	#on_puppet = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	
+	#on_release_as_puppet = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	#on_annex = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	#on_unit_leader_created = {
+	#	effect = {
+	#	}
+	#}
+
+	
+	#on_unit_leader_level_up = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	# From is owner country
+	#on_army_leader_daily = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	# From is owner country
+	#on_army_leader_won_combat = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	# From is owner country
+	#on_army_leader_lost_combat = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	
+	#on_army_leader_promoted = {
+	#	effect = {
+	#		
+	#	}
+	#}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						FROM.FROM = { is_owned_by = USA }
+						FROM.FROM = { is_owned_by = CSA }
+						FROM.FROM = { is_owned_by = CAL }
+						FROM.FROM = { is_owned_by = NEG }
+						FROM.FROM = { is_owned_by = MHC }
+					}
+					has_global_flag = ACWAmerican_Civil_War
+				}
+		        random_list = {
+		        	25 = {
+		        		FROM.FROM = { remove_building = { type = infrastructure level = 1 } }
+		        	}
+		        	25 = {
+		        		FROM.FROM = { remove_building = { type = industrial_complex level = 1 } }
+		        	}
+		        	25 = {
+		        		FROM.FROM = { remove_building = { type = arms_factory level = 1 } }
+		        	}
+		        	25 = {
+		        		FROM.FROM = { remove_building = { type = arms_factory level = 1 } }
+		        		FROM.FROM = { remove_building = { type = industrial_complex level = 1 } }
+		        		FROM.FROM = { remove_building = { type = infrastructure level = 1 } }
+		        	}
+		        }
+		        FROM.FROM = { damage_building = { type = infrastructure damage = 0.9 } }
+		        FROM.FROM = { damage_building = { type = industrial_complex damage = 0.7 } }
+		        FROM.FROM = { damage_building = { type = arms_factory damage = 0.5 } }
+		        ROOT = { add_equipment_to_stockpile = { type = infantry_equipment amount = 500 } }
+		        ROOT = { add_equipment_to_stockpile = { type = uniform_equipment amount = 500 } }
+		        ROOT = { add_equipment_to_stockpile = { type = cavalry_equipment amount = 50 } }
+		        FROM = { add_stability = -0.05 }
+        		FROM = { add_war_support = -0.05 }
+			}
+		}
+	}
+	
 }

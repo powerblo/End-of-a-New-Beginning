@@ -3,21 +3,18 @@ state={
 	id=719
 	name="STATE_719"
 	resources={
-		chromium=116.000
+		chromium=10
 	}
 
 	history={
-		owner = ENG
+		owner = NAT
 		buildings = {
-			infrastructure = 5
-			industrial_complex = 2
+			infrastructure = 3
+			industrial_complex = 1
+			cotton_farm=1
 			
 			1468 = {
-				naval_base = 2
-
-			}
-			4696 = {
-				naval_base = 2
+				naval_base = 1
 
 			}
 
@@ -25,17 +22,15 @@ state={
 		victory_points = {
 			1468 3 
 		}
-		victory_points = {
-			4696 1 
-		}
 		add_core_of = SAF
+		add_core_of = NAT
 
 	}
 
 	provinces={
-		1468 1494 7576 7900 8178 
+		1468 1494 7576 
 	}
-	manpower=3962157
+	manpower=195215
 	buildings_max_level_factor=1.000
 	state_category=city
 }

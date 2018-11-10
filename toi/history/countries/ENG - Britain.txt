@@ -1,9 +1,454 @@
-﻿capital = 126
+﻿1857.1.1 = {
+  capital = 952
 
-1857.5.11 = {
-	oob = "ENG_1857"
+  oob = "ENG_1857" 
 
-	if = {
+  set_convoys = 200
+  
+  set_research_slots = 4
+
+  declare_war_on = {
+    target = CHI
+    type = annex_everything
+  }
+
+  FRA = {
+    add_to_war = { 
+    	targeted_alliance = ENG 
+    	enemy = CHI 
+    }
+  }
+  create_import = {
+    resource = cotton
+    amount = 8
+    exporter = USA
+  }
+  create_import = {
+    resource = cotton
+    amount = 8
+    exporter = RAJ
+  }
+
+  give_guarantee = BEL
+  give_guarantee = POR
+  
+      #Colective guarantee of the 7 great power
+  give_guarantee = ROM
+  give_guarantee = MOL
+  
+
+  add_ideas = { 
+          #POLITICS
+    hos_is_leader
+    victorian_era
+	law_victorian_army
+    industrializing
+	has_heir
+    parliamentary_monarchy
+
+    civilian_economy
+    export_focus
+    three_percent
+    normal_taxes
+	cl_restricted
+	twelve_hour_work_day
+
+    stagnation_growth
+    border_control
+    limited_equality
+    volunteer_only
+    parliamentary_suffrage
+
+    constitution_adopted
+    limited_elections
+
+    open_schools
+    state_religion
+	religion_protestant
+    #NATIONAL SPIRITS
+	
+	ENG_Victoria
+  }
+  
+  set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 65
+      }
+      traditional_conservatism = {
+        popularity = 35
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	  ruling_party = centrism
+  }
+  
+  #Whig/Liberal
+	create_country_leader = {
+		name = "Lord Palmerston"
+		picture = "Portrait_ENG_Lord_Palmerston.dds"
+		expire = "1858.2.19"
+		ideology = market_liberal
+	}
+
+	#Conservative
+	create_country_leader = {
+		name = "Edward Smith-Stanley"
+		picture = "Portrait_ENG_Edward_Smith_Stanley.dds"
+		expire = "1859.6.11"
+		ideology = conserv
+	}
+
+	#Chartist
+	create_country_leader = {
+		name = "William Lovett"
+		picture = "Portrait_ENG_William_Lovett.dds"
+		expire = "1877.1.1"
+		ideology = anarchism_sub
+		traits = {
+
+		}
+	}
+
+	create_country_leader = {
+		name = "George Julian Harney"
+		picture = "Portrait_ENG_George_Julian_Harney.dds"
+		expire = "1877.1.1"
+		ideology = marxism
+		traits = {
+
+		}
+	}
+
+	create_country_leader = {
+		name = "Henry David 'Harry' Jones"
+		picture = "Portrait_ENG_Henry_David_Jones.dds"
+		expire = "1900.1.1"
+		ideology = fascism
+		traits = {
+
+		}
+	}
+
+	create_country_leader = {
+		name = "Victoria"
+		picture = "Portrait_ENG_Queen_Victoria.dds"
+		expire = "1900.1.1"
+		ideology = despotism
+		traits = {
+
+		}
+	}
+
+	create_country_leader = {
+		name = "Henry Edward Manning"
+		picture = "Portrait_ENG_Henry_Edward_Manning.dds"
+		expire = "1900.1.1"
+		ideology = christian
+		traits = {
+
+		}
+	}
+
+	create_corps_commander = {
+		name = "Charles George Gordon"
+		picture = "Portrait_ENG_Charles_George_Gordon.dds"
+		traits = { }
+		skill = 3	
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Colin Campbell"
+		picture = "Portrait_ENG_Colin_Campbell.dds"
+		traits = { }
+		id = 18570000
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Garnet Wolseley"
+		picture = "Portrait_ENG_Garnet_Wolseley.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "George Brown"
+		picture = "Portrait_ENG_George_Brown.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Patrick Grant"
+		picture = "Portrait_ENG_Patrick_Grant.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Richard Airey"
+		picture = "Portrait_ENG_Richard_Airey.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Samuel Benjamin Auchmuty"
+		picture = "Portrait_ENG_Samuel_Benjamin_Auchmuty.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Prince George, Duke of Cambridge"
+		picture = "Portrait_ENG_Prince_George_Duke_of_Cambridge.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "James Brudenell"
+		picture = "Portrait_ENG_James_Brudenell.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Hugh Gough"
+		picture = "Portrait_ENG_Hugh_Gough.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Henry Havelock"
+		picture = "Portrait_ENG_Henry_Havelock.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_corps_commander = {
+        name = "Samuel Benjamin Auchmuty"
+  		picture = ""
+  		traits = { }
+  		skill = 2
+  		attack_skill = 1
+  		defense_skill = 1
+  		planning_skill = 1
+ 		 logistics_skill = 1
+	}
+	create_corps_commander = {
+        name = "Prince George Duke of Cambridge"
+  		picture = ""
+  		traits = { }
+  		skill = 2
+  		attack_skill = 1
+  		defense_skill = 1
+  		planning_skill = 1
+ 		 logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "George Bingham"
+		picture = "Portrait_ENG_George_Bingham.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Robert Napier"
+		picture = "Portrait_ENG_Robert_Napier.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Sir Harry Smith"
+		picture = "Portrait_ENG_Sir_Harry_Smith.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Edward Seymour"
+		picture = "Portrait_ENG_Edward_Seymour.dds"
+		traits = { }
+		skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Francis Austen"
+		picture = "Portrait_ENG_Francis_Austen.dds"
+		traits = { }
+		skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Harry Rawson"
+		picture = "Portrait_ENG_Harry_Rawson.dds"
+		traits = { }
+		skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Sir William Parker"
+		picture = "Portrait_ENG_William_Parker.dds"
+		traits = { }
+		skill = 3
+	}
+
+  set_technology = {
+	infantry_weapons = 1
+	tech_infantry_napoleonic_uniform = 1
+	vic_army_cloth = 1
+	tech_naval_1812_frigate = 1
+	gw_artillery = 1
+	iron_railways = 1
+	steam_engine = 1
+	manufactories = 1
+	hot_blast_furnaces = 1
+	food_preserving_icebox = 1
+	early_artificial_fertilizer = 1
+	electrical_engineering = 1
+	tech_infantry_flintlock_pistol = 1
+	tech_infantry_caplock_pistol = 1
+	tech_infantry_infantry_swords = 1
+	tech_infantry_practical_rifling = 1
+	socket_bayonet = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	mounted_infantry = 1
+	tech_support = 1
+	early_howitzer = 1
+	tech_naval_1830_frigate = 1
+	mongolfiere = 1
+	ornithopter = 1
+	start_build_tech = 1
+	screw_propeller = 1
+  }
+  
+  if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_colony
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = CAN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = NZL
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = NAT
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = IOM
+		autonomous_state = autonomy_integrated_puppet
+	}
+	else = {
+		puppet = RAJ
+		puppet = IOM
+		puppet = NAT
+	}
+}
+
+if = {
 		limit = {
 			has_dlc = "Together for Victory"
 		}
@@ -83,7 +528,12 @@
 			freedom_level = 0.2
 		}
 		set_autonomy = {
-			target = TAS
+			target = SRC
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = TSM
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
@@ -92,16 +542,6 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
-		set_autonomy = {
-			target = VIC
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		#set_autonomy = {
-		#	target = SRW
-		#	autonomous_state = autonomy_colony
-		#	freedom_level = 0.2
-		#}
 		set_autonomy = {
 			target = HYD
 			autonomous_state = autonomy_princely_state
@@ -112,252 +552,46 @@
 			autonomous_state = autonomy_colony
 			freedom_level = 0.1
 		}
+		set_autonomy = {
+			target = QCI
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = VAN
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = HBC
+			autonomous_state = autonomy_colony
+			freedom_level = 0.1
+		}
 		else = {
 			puppet = RAJ
+			puppet = NEP
+			puppet = HYD
+			puppet = KAS
+			puppet = KAR
+			puppet = BIK
+			puppet = REW
+			puppet = CAN
+			puppet = NFL
+			puppet = BRK
+			puppet = AST
+			puppet = NZL
+			puppet = ION
+			puppet = NSW
+			puppet = TSM
+			puppet = SAS
+			puppet = HYD
+			puppet = TCS
+			puppet = HBC
+			puppet = NVS
+			puppet = VAN
+			puppet = SRC
+			puppet = QCI
+			puppet = NAT
 		}
 	}
-
-	#Whig/Liberal
-	create_country_leader = {
-		name = "Lord Palmerston"
-		picture = "Portrait_ENG_Lord_Palmerston.dds"
-		expire = "1858.2.19"
-		ideology = market_liberal
-	}
-
-	#Conservative
-	create_country_leader = {
-		name = "Edward Smith-Stanley"
-		picture = "Portrait_ENG_Edward_Smith-Stanley.dds"
-		expire = "1859.6.11"
-		ideology = conserv
-	}
-
-	#Chartist
-	create_country_leader = {
-		name = "William Lovett"
-		picture = "Portrait_ENG_William_Lovett.dds"
-		expire = "1877.1.1"
-		ideology = anarchism
-		traits = {
-
-		}
-	}
-
-	create_country_leader = {
-		name = "Queen Victoria"
-		picture = "Queen_Victoria.dds"
-		expire = "1900.1.1"
-		ideology = despotism
-		traits = {
-
-		}
-	}
-
-	create_corps_commander = {
-	  name = "Charles George Gordon"
-	  picture = "Portrait_ENG_Charles_George_Gordon.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_corps_commander = {
-	  name = "Colin Campbell"
-	  picture = "Portrait_ENG_Colin_Campbell.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_corps_commander = {
-	  name = "Garnet Wolseley"
-	  picture = "Portrait_ENG_Garnet_Wolseley.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_corps_commander = {
-	  name = "George Brown"
-	  picture = "Portrait_ENG_George_Brown.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_corps_commander = {
-	  name = "Patrick Grant"
-	  picture = "Portrait_ENG_Patrick_Grant.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_corps_commander = {
-	  name = "Richard Airey"
-	  picture = "Portrait_ENG_Richard_Airey.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_navy_leader = {
-	  name = "Edward Seymour"
-	  picture = "Portrait_ENG_Edward_Seymour.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_navy_leader = {
-	  name = "Francis Austen"
-	  picture = "Portrait_ENG_Francis_Austen.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_navy_leader = {
-	  name = "Harry Rawson"
-	  picture = "Portrait_ENG_Harry_Rawson.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	create_navy_leader = {
-	  name = "Sir William Parker"
-	  picture = "Portrait_ENG_William_Parker.dds"
-	  traits = { }
-	  skill = 3
-	}
-
-	set_technology = {
-		infantry_weapons = 1
-		rifle_equipment1 = 1
-
-		hand_revolvers = 1
-		socket_bayonet = 1
-		vic_army_cloth = 1
-		civil_army_cloth = 1
-		basic_cavalry = 1
-		horse_transport = 1
-		horse_artillery = 1
-		gw_artillery = 1
-		improved_smoothbore = 1
-		early_howitzer = 1
-		foureight_frigate = 1
-		#early_rockets = 1
-		early_destroyer = 1 transport = 1
-		fivesix_frigate = 1
-	}
-
-	set_politics = {
-    parties = {
-      economic_liberalism = {
-        popularity = 66
-      }
-      traditional_conservatism = {
-        popularity = 34
-      }
-      social_democracy = {
-        popularity = 0
-      }
-      radical_socialism = {
-        popularity = 0
-      }
-      marxism_leninism = {
-        popularity = 0
-      }
-      despotic_autocracy = {
-        popularity = 0
-      }
-      parliamental_oligarchy = {
-        popularity = 0
-      }
-      totalitarian_nationalism = {
-        popularity = 0
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
-        popularity = 0
-      }
-    }
-
-    	ruling_party = economic_liberalism
-	}
-
-
-}
-
-oob = "ENG_1861"
-
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = RAJ
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
-	}
-	set_autonomy = {
-		target = CAN
-		autonomous_state = autonomy_colony
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_colony
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_colony
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = RAJ
-	}
-}
-
-set_research_slots = 4
-
-set_national_unity = 0.6
-
-set_convoys = 100
-
-set_politics = {
-
-	parties = {
-	economic_liberalism = {
-		popularity = 66
-	}
-	traditional_conservatism = {
-		popularity = 34
-	}
-	social_democracy = {
-		popularity = 0
-	}
-	radical_socialism = {
-		popularity = 0
-	}
-	marxism_leninism = {
-		popularity = 0
-	}
-	despotic_autocracy = {
-		popularity = 0
-	}
-	parliamental_oligarchy = {
-		popularity = 0
-	}
-	totalitarian_nationalism = {
-		popularity = 0
-	}
-	rexism_falangism = {
-		popularity = 0
-	}
-	theocracy = {
-		popularity = 0
-	}
-	}
-
-	ruling_party = economic_liberalism
-	last_election = "1835.11.14"
-	election_frequency = 48
-	elections_allowed = no
 }

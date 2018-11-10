@@ -1,60 +1,101 @@
-﻿capital = 870
+﻿1857.1.1 = {
+  capital = 870
 
-set_politics = {
+  oob = "HSD_1857"
+
+  set_convoys = 0
+  
+  set_research_slots = 3
+
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    victorian_era
+	law_victorian_army
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+	cl_legal
+
+    stagnation_growth
+    border_control
+	volunteer_only
+    limited_equality
+    absolutism
+
+    no_constitution
+    no_elections
+
+    privileged_education
+    state_religion
+	religion_protestant
+        #NATIONAL SPIRITS
+	GER_general_idea_ger_confed
+	PRS_Zollverein
+	
+  }
+
+
+  set_politics = {
     parties = {
-      economic_liberalism = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
         popularity = 0
       }
       traditional_conservatism = {
         popularity = 0
       }
-      social_democracy = {
+      radical_democracy = {
         popularity = 0
       }
-      radical_socialism = {
+      chauvinist_populism = {
         popularity = 0
       }
-      marxism_leninism = {
-        popularity = 0
-      }
-      despotic_autocracy = {
+      autocracy = {
         popularity = 100
       }
-      parliamental_oligarchy = {
-        popularity = 0
-      }
-      totalitarian_nationalism = {
-        popularity = 0
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
+      fundamentalism = {
         popularity = 0
       }
     }
 
-	ruling_party = despotic_autocracy
-}
+	  ruling_party = autocracy
+  }
 
-set_technology = {
+  set_technology = {
 	infantry_weapons = 1
-	rifle_equipment1 = 1
-
-	hand_revolvers = 1
-	socket_bayonet = 1
+	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	civil_army_cloth = 1
-	basic_cavalry = 1
-	horse_transport = 1
-	horse_artillery = 1
+	tech_naval_1812_frigate = 1
 	gw_artillery = 1
-	improved_smoothbore = 1
-	early_howitzer = 1
-	foureight_frigate = 1
-	#early_rockets = 1
-	early_destroyer = 1 transport = 1
-}
+	iron_railways = 1
+	steam_engine = 1
+	start_build_tech = 1
+	manufactories = 1
+	hot_blast_furnaces = 1
+	food_preserving_icebox = 1
+	early_artificial_fertilizer = 1
+	electrical_engineering = 1
+  }
+
+  # POLITICAL LEADERS
 
 create_country_leader = {
   name = "Ludwig III"
@@ -67,60 +108,4 @@ create_country_leader = {
   }
 }
 
-1857.5.11 = {
-
-set_politics = {
-    parties = {
-      economic_liberalism = {
-        popularity = 0
-      }
-      traditional_conservatism = {
-        popularity = 0
-      }
-      social_democracy = {
-        popularity = 0
-      }
-      radical_socialism = {
-        popularity = 0
-      }
-      marxism_leninism = {
-        popularity = 0
-      }
-      despotic_autocracy = {
-        popularity = 100
-      }
-      parliamental_oligarchy = {
-        popularity = 0
-      }
-      totalitarian_nationalism = {
-        popularity = 0
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
-        popularity = 0
-      }
-    }
-
-	ruling_party = despotic_autocracy
-}
-
-set_technology = {
-  infantry_weapons = 1
-  basic_cavalry = 1
-  gw_artillery = 1
-  vic_army_cloth = 1
-}
-
-create_country_leader = {
-  name = "Ludwig III"
-  desc = "POLITICS_GEORGE_V_DESC"
-  picture = "Portrait_HSD_Ludwig_III.dds"
-  expire = "1900.1.1"
-  ideology = despotism
-  traits = {
-
-  }
-}
 }

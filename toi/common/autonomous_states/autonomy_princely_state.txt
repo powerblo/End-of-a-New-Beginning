@@ -3,7 +3,7 @@ autonomy_state = {
 
 	is_puppet = yes
 
-	min_freedom_level = 0.50
+	min_freedom_level = 0.60
 
 	rule = {
 		can_not_declare_war = yes
@@ -33,8 +33,10 @@ autonomy_state = {
 
 		if = {
 			limit = { has_dlc = "Death or Dishonor" }
-			NOT = { has_government = fascism }
+			NOT = { has_government = autocracy }
 		}
+
+		OVERLORD = { tag = ENG }
 	}
 
 	can_take_level = {

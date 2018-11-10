@@ -2,20 +2,22 @@
 state={
 	id=150
 	name="STATE_150" # Savo
-	manpower = 611100
+	manpower = 411100
 
 	state_category = town
 
 	resources={
-		steel=4
+		iron=2
+		wood = 2
 	}
 	history={
-		owner = RUS
+		owner = FIN
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = RUS
+		add_core_of = FIN
+		add_claim_by = SWE
 	}
 
 	provinces={

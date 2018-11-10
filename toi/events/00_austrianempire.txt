@@ -1,0 +1,540 @@
+﻿add_namespace = AUSpolitics
+
+#Fall of Freiharr von Bach 
+country_event = {
+	id = AUSpolitics.1 
+	title = AUSpolitics.1.t
+	desc = AUSpolitics.1.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes 
+	
+	option = {
+		name = AUSpolitics.1.a  #Appoint Gołuchowski - Reform Empire 
+		ai_chance = { 
+            factor = 60 
+            modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+        }
+		
+			AUS = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Agenor Gołuchowski"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Agenor_Goluchwoski.dds"
+                    expire = 1875.08.03
+                    ideology = despotism 
+                }
+			}
+			custom_effect_tooltip = AUS_tt_appoint_goluchowski	
+	}
+	
+	option = {
+		name = AUSpolitics.1.b  #Appoint Archduke Rainier - Absolutism  
+		ai_chance = { 
+            factor = 40 
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+        }
+		    
+			AUS = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Archduke Rainier"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Archduke_Rainer.dds"
+                    expire = 1913.01.27
+                    ideology = despotism 
+                }
+            }		
+            custom_effect_tooltip = AUS_tt_appoint_archduke_rainier		
+	}
+	
+}
+
+#Discard the October Dipoma  
+country_event = {
+	id = AUSpolitics.2 
+	title = AUSpolitics.2.t
+	desc = AUSpolitics.2.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes 
+	
+	option = {
+		name = AUSpolitics.2.a  #Unlocks the February Patent 
+		ai_chance = { factor = 100 }
+		
+	    hidden_effect = {
+		AUS = { set_country_flag = AUS_flag_unlock_October_Diploma }
+		}	
+		add_political_power = -100 
+	}
+}
+
+###################
+#Liberal Reactions#
+###################
+
+country_event = { #Austrian Liberals Protest 
+	id = AUSpolitics.3 
+	title = AUSpolitics.3.t
+	desc = AUSpolitics.3.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.3 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.3.a  #Arrest them
+		ai_chance = { factor = 100 }
+
+			add_political_power = -50
+            add_stability = -0.02 			
+	}
+}
+
+country_event = { #Bohemians Protests stopped  
+	id = AUSpolitics.4
+	title = AUSpolitics.4.t
+	desc = AUSpolitics.4.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.5 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.4.a  
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            swap_ideas = {
+			    remove_idea = AUS_SLA_Separatism1 
+				add_idea = AUS_SLA_Separatism1a 
+			}
+		}
+	}
+}
+
+country_event = { #Hungarian Liberals Angered   
+	id = AUSpolitics.5
+	title = AUSpolitics.5.t
+	desc = AUSpolitics.5.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            focus_progress = {
+                focus = AUS_Imprison_Dissenters
+                progress > 0.8 
+            }			 
+		}
+	
+	option = {
+		name = AUSpolitics.5.a  
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            swap_ideas = {
+			    remove_idea = AUS_HUN_Separatism1 
+				add_idea = AUS_HUN_Separatism1a 
+			}
+		}
+	}
+}
+
+add_namespace = AUSdiplo 
+
+country_event = { #Future of Lombardy Venetia    
+	id = AUSdiplo.1
+	title = AUSdiplo.1.t
+	desc = AUSdiplo.1.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	is_triggered_only = yes 
+	
+	option = { #Annex only Venetia   
+		name = AUSdiplo.1.a
+		ai_chance = { factor = 20 }
+		
+		AUS = {
+          transfer_state = 160             
+		}
+		160 = {
+            remove_core_of = LVN  
+		}
+		LVN = {
+		set_cosmetic_tag = LVN_Lombardy
+		}
+	}
+
+	option = { #Keep the Puppet   
+		name = AUSdiplo.1.b 
+		ai_chance = { factor = 80 }
+
+	}
+	
+	option = { #TfV - Give more freedom    
+		name = AUSdiplo.1.c 
+		ai_chance = { factor = 80 }
+		
+		if ={
+		    limit = {
+			    has_dlc = "Together for Victory"
+			}
+            set_autonomy = {
+                target = LVN 
+                autonomy_state = dominion
+            }			
+		}
+		else = {
+		    AUS = {
+			end_puppet = LVN
+			}
+		}
+	}
+}
+
+country_event = { #Future of Modena, Parma and Tuscany    
+	id = AUSdiplo.2
+	title = AUSdiplo.2.t
+	desc = AUSdiplo.2.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	is_triggered_only = yes 
+	
+	option = { #TfV - Make Puppets     
+		name = AUSdiplo.2.a 
+		ai_chance = { factor = 60 }
+		
+		if ={
+		    limit = {
+			    has_dlc = "Together for Victory"
+			}
+            set_autonomy = {
+                target = MOD 
+                autonomy_state = puppet
+            }	
+            set_autonomy = {
+                target = PRM 
+                autonomy_state = puppet
+            }
+            set_autonomy = {
+                target = TUS  
+                autonomy_state = puppet
+            }			
+		}
+		else = {
+		    AUS = {
+			    puppet = MOD
+                puppet = PRM
+                puppet = TUS
+			}
+		}
+		
+		custom_effect_tooltip = AUS_tt_ITA_league 
+		
+		hidden_effect = {
+		    MOD = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS 
+                    modifier = AUS_ITA_League
+		        }
+            }
+		    PRM = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS 
+                    modifier = AUS_ITA_League
+		        }
+            }
+	 	    TUS = {
+		        add_ideas = AUS_ITA_Alliance
+		        add_opinion_modifier = {
+                    target = AUS  
+                    modifier = AUS_ITA_League
+		        }
+            }
+		    AUS = {
+		        add_opinion_modifier = {
+                    target = MOD  
+                    modifier = AUS_ITA_League
+		        }
+		        add_opinion_modifier = {
+                    target = PRM  
+                    modifier = AUS_ITA_League
+		        }
+		        add_opinion_modifier = {
+                    target = TUS  
+                    modifier = AUS_ITA_League
+		        }		    
+		    }
+		}
+	}
+	
+	option = { #Status Quo    
+		name = AUSdiplo.2.b 
+		ai_chance = { factor = 40 }
+		
+	}
+}
+
+country_event = { #Cede Savoy and Nice to France     
+	id = AUSdiplo.3
+	title = AUSdiplo.3.t
+	desc = AUSdiplo.3.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	is_triggered_only = yes 
+	
+	option = { #Give Savoy and Nice to France      
+		name = AUSdiplo.3.a 
+		ai_chance = { factor = 60 }
+		
+		custom_effect_tooltip = AUS_tt_FRA_savoy_nice  
+		
+		hidden_effect = {
+		    FRA = { country_event = AUSdiplo.4 }
+		}
+	}
+	
+	option = { #Let Piedmont keep them     
+		name = AUSdiplo.3.b 
+		ai_chance = { factor = 40 }
+		
+	}
+}
+
+country_event = { #FRA - Savoy and Nice ceded     
+	id = AUSdiplo.4
+	title = AUSdiplo.4.t
+	desc = AUSdiplo.4.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	is_triggered_only = yes 
+	
+		immediate = {
+		    hidden_effect = {
+			    if = {
+			        limit = {
+			     	    OR = {
+			     		    tag = PRS 
+			     			tag = BEL 
+			      			tag = SPR 
+			     			tag = ENG 
+			      			tag = BAV
+			       			tag = PAP
+			      			tag = NSC 
+					    }
+				    }
+					    news_event = AUSdiplo.5
+				}
+		    }
+		}
+	
+	option = { #Give Savoy and Nice to France      
+		name = AUSdiplo.4.a 
+		ai_chance = { factor = 60 }
+		
+		custom_effect_tooltip = AUS_tt_ITA_league 
+		
+		FRA = {
+		    transfer_state = 735
+			transfer_state = 822 
+		}
+		735 = { add_core_of = FRA remove_core_of = PIE }
+		822 = { add_core_of = FRA remove_core_of = PIE }
+	}
+}
+
+news_event = { #News event for Savoy ceded      
+	id = AUSdiplo.5
+	title = AUSdiplo.5.t
+	desc = AUSdiplo.5.d 
+	picture = GFX_news_event_contain_coalition_vic
+	
+	is_triggered_only = yes 
+	
+	option = {      
+		name = AUSdiplo.5.a
+	}
+}
+
+add_namespace = AUSgenerals
+
+country_event = { #Retire Ferenc Gyulay     
+	id = AUSgenerals.1
+	title = AUSgenerals.1.t
+	desc = AUSgenerals.1.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1859.05.15 
+		AUS = {
+		any_war_score < 2 
+		}
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.1.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 168305
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.1.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+		    add_stability = -0.05 
+			add_political_power = -50 
+		}
+	
+	}
+}
+
+country_event = { #Retire Heinrich von Hess      
+	id = AUSgenerals.2
+	title = AUSgenerals.2.t
+	desc = AUSgenerals.2.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1861.02.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.2.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 168306
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.2.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+			add_command_power = -50   
+		}
+	
+	}
+}
+
+country_event = { #Retire Eduard Clam-Gallas       
+	id = AUSgenerals.3
+	title = AUSgenerals.3.t
+	desc = AUSgenerals.3.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.08.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.3.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 16832
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.3.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+			add_command_power = -75    
+		}
+	
+	}
+}
+
+country_event = { #Make Leopold Gondrecourt Tutor of Rudolf         
+	id = AUSgenerals.4
+	title = AUSgenerals.4.t
+	desc = AUSgenerals.4.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1864.07.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.4.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 16833
+	}     
+}
+
+country_event = { #Retire Leopold Gondrecourt as Tutor        
+	id = AUSgenerals.5
+	title = AUSgenerals.5.t
+	desc = AUSgenerals.5.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.08.20  
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.5.a 
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+            create_corps_commander = {
+            name = "Leopold Gondrecourt"
+            picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
+            traits = { }
+            skill = 3
+            attack_skill = 1
+	        defense_skill = 1
+	        planning_skill = 1
+	        logistics_skill = 1
+	        id = 16833
+		    }
+	    }
+    }		     
+}

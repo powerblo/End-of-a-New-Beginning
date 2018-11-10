@@ -1,0 +1,247 @@
+﻿add_namespace = par
+
+country_event = {
+		id = par.1
+		title = par.1.t
+		desc = par.1.d
+		picture = GFX_report_event_carlos_dies
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1862.9.10
+		}
+
+		
+		option = {
+			name = par.1.a
+			custom_effect_tooltip = PAR_custom_effect_paraguay
+hidden_effect = { kill_country_leader = yes
+			set_politics = {
+			ruling_party = chauvinist_populism
+			}
+  add_popularity = {
+    ideology = chauvinist_populism
+    popularity = 0.35
+   }
+   swap_ideas = {
+   add_idea = totalitarian_dictatorship 
+   remove_idea = semi_presidential_republic 
+   }
+   swap_ideas = {
+   add_idea = no_elections  
+   remove_idea = limited_elections  
+   }
+   swap_ideas = {
+   add_idea = has_heir   
+   remove_idea = no_heir 
+   }
+    swap_ideas = {
+   add_idea = industrializing   
+   remove_idea = agrarian 
+   }
+    swap_ideas = {
+   add_idea = victorian_era
+   remove_idea = pre_industrial_era 
+   }
+ }
+			
+		}
+
+}
+
+
+country_event = {
+		id = par.2
+		title = par.2.t
+		desc = par.2.d
+		picture = GFX_report_event_militarization
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1863.1.1
+			ARG = {
+			has_government = centrism
+			}
+		}
+
+		
+		option = {
+			name = par.2.a
+			custom_effect_tooltip = PAR_custom_effect_paraguay2
+hidden_effect = { 
+   swap_ideas = {
+   add_idea = law_victorian_army 
+   remove_idea = law_pre_industrial_army
+   }
+   add_ideas = par_militarization
+   
+   
+ }
+			
+		}
+
+}
+
+country_event = {
+		id = par.3
+		title = par.3.t
+		desc = par.3.d
+		picture = GFX_report_event_agrarian
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1863.5.3
+			}
+
+		
+		option = {
+			name = par.3.a
+			add_ideas = PAR_agrarian_reforms
+ }
+			
+		}
+
+country_event = {
+		id = par.4
+		title = par.4.t
+		desc = par.4.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+		     ARG = {
+			has_government = centrism
+			}
+            BRA = {
+			has_completed_focus	= BRA_uruguayan_intervention
+			}
+			}
+
+		
+		option = {
+			name = par.4.a
+			custom_effect_tooltip = PAR_custom_effect_paraguay3
+			hidden_effect = {
+			load_oob = PAR_reinforcements
+			}
+ }
+			
+		}
+		
+country_event = {
+		id = par.5
+		title = par.5.t
+		desc = par.5.d
+		picture = GFX_report_event_governmentpar
+		fire_only_once = yes
+		
+		trigger = {
+            BRA = {
+			has_completed_focus	= BRA_challenge_the_blanco_government
+			}
+			}
+
+		
+		option = {
+			name = par.5.a
+		   trigger = {
+				tag = PAR
+			}
+			custom_effect_tooltip = PAR_custom_effect_paraguay4
+			hidden_effect = {
+			load_oob = PAR_reinforcements2
+			add_state_claim = 1036
+			add_state_claim = 503
+			add_state_claim = 502
+			add_war_support = 0.05
+			add_opinion_modifier = {
+    target = BRA
+    modifier = protest_action_strong
+}
+			}
+ }
+ 
+option = {
+			name = par.5.b
+			trigger = {
+				tag = BRA
+			}
+			add_war_support = 0.02
+			add_opinion_modifier = {
+    target = PAR
+    modifier = protest_action_strong
+}
+			}
+ }
+ 
+ country_event = {
+		id = par.6
+		title = par.6.t
+		desc = par.6.d
+		fire_only_once = yes
+		
+		trigger = {
+            BRA = {
+			has_completed_focus	= BRA_direct_intervention
+			}
+			}
+
+		
+		option = {
+			name = par.6.a
+			every_country = { country_event = par.7 }
+			}
+ }
+ 
+
+ 
+ 
+ country_event = {
+		id = par.7
+		title = par.7.t
+		desc = par.7.d
+		picture = GFX_report_event_parwar
+		fire_only_once = yes
+		
+		
+		option = {
+			name = par.7.a
+		   trigger = {
+				tag = PAR
+			}
+			custom_effect_tooltip = PAR_custom_effect_paraguay5
+			hidden_effect = {
+			load_oob = PAR_reinforcements3
+	declare_war_on = {
+    target = BRA
+    type = annex_everything
+}
+add_ideas = PAR_not_one_step_back
+}
+			}
+ 
+ 
+option = {
+			name = par.7.b
+			trigger = {
+				tag = BRA
+			}
+			add_war_support = 0.02
+		    
+			}
+	option = {
+			name = par.7.c
+			trigger = {
+			NOT = {	tag = BRA
+			tag = PAR
+			}
+			}
+			}		
+			
+ }
+			
+
+

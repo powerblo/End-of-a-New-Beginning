@@ -1,5 +1,20 @@
 ﻿add_namespace = usa
-
+#Intro
+country_event = {
+		id = usa.0
+		title = usa.0.t
+		desc = usa.0.d
+		picture = GFX_report_event_usa_election_generic
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.0.a
+			add_political_power = -5
+		}
+}
 #Panic of 1857
 country_event = {
 		id = usa.1
@@ -16,12 +31,12 @@ country_event = {
 		
 		option = {
 				name = usa.1.a
-				add_timed_idea = { idea = USA_1857Panic days = 240 }
+				hidden_effect = { USA = { set_country_flag = USAPanic_Of_1857 } }
+				add_ideas = USA_1857Panic
 				hidden_effect = { USA = { country_event = { days = 14 id = usa.2 } } }
+				hidden_effect = { news_event = { id = usa_news.0 } }
 		}
 }
-
-#SS Central America crashes
 country_event = {
 		id = usa.2
 		title = usa.2.t
@@ -32,6 +47,5963 @@ country_event = {
 		
 		option = {
 				name = usa.2.a
-				add_political_power = -100
+				add_political_power = -50
+		}
+}
+#Pre-Civil War Events
+country_event = {
+		id = usa.3
+		title = usa.3.t
+		desc = usa.3.d
+		picture = GFX_report_event_generic_riot
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1857.7.1
+		}
+		
+		option = {
+				name = usa.3.a
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.b
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.c
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+			}
+		option = {
+				name = usa.3.e
+				ai_chance = {
+					factor = 25
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_1
+					add_idea = american_slavery_2
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -50
+				hidden_effect = { USA = { set_country_flag = USASlavery_Debate } }
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_1 } }
+			}
+}
+#Uncle Tom
+country_event = {
+		id = usa.4
+		title = usa.4.t
+		desc = usa.4.d
+		picture = GFX_report_event_generic_read_write
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 250
+		}
+		
+		option = {
+				name = usa.4.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_popularity = { ideology = fundamentalism popularity = 0.01 }
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_2 } }
+		}
+		option = {
+				name = usa.4.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.4.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_popularity = { ideology = fundamentalism popularity = 0.02 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.4.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = fundamentalism popularity = 0.01 }
+				add_political_power = -25
+		}
+}
+#Dred Scott
+country_event = {
+		id = usa.5
+		title = usa.5.t
+		desc = usa.5.d
+		picture = GFX_report_event_generic_rally
+
+		fire_only_once = yes
+
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 500
+		}
+		
+		option = {
+				name = usa.5.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.5.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.5.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_3 } }
+		}
+		option = {
+				name = usa.5.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+				add_political_power = -25
+		}
+}
+#Bleeding Kansas
+country_event = {
+		id = usa.6
+		title = usa.6.t
+		desc = usa.6.d
+		picture = GFX_report_event_dead_soldiers
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1858.5.19
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.6.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -50
+				add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+		}
+		option = {
+				name = usa.6.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -50
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_4 } }
+		}
+		option = {
+				name = usa.6.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -50
+		}
+		option = {
+				name = usa.6.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_popularity = { ideology = anarchism popularity = 0.01 }
+				add_political_power = -50
+		}
+}
+#Raid on Harper Ferry
+country_event = {
+		id = usa.7
+		title = usa.7.t
+		desc = usa.7.d
+		picture = GFX_report_event_yugoslavian_cavalry
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1859.8.18
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.7.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.7.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.7.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_5 } }
+		}
+		option = {
+				name = usa.7.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				add_political_power = -25
+		}
+}
+#John Brown Executed
+country_event = {
+		id = usa.8
+		title = usa.8.t
+		desc = usa.8.d
+		picture = GFX_report_event_generic_riot
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1859.12.2
+			has_country_flag = USASlavery_Debate
+		}
+		
+		option = {
+				name = usa.8.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_6 } }
+		}
+		option = {
+				name = usa.8.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.8.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.8.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_political_power = -25
+		}
+}
+#Fugitive Slave Act
+country_event = {
+		id = usa.9
+		title = usa.9.t
+		desc = usa.9.d
+		picture = GFX_report_event_generic_rally_3
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = USASlavery_Debate
+		}
+
+		mean_time_to_happen = {
+			days = 600
+		}
+		
+		option = {
+				name = usa.9.a
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+				add_political_power = -25
+		}
+		option = {
+				name = usa.9.b
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+				add_popularity = { ideology = centrism popularity = 0.01 }
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+				hidden_effect = { USA = { set_country_flag = USA_Civil_War_Avoid_Attempt_7 } }
+		}
+		option = {
+				name = usa.9.c
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_political_power = -25
+		}
+		option = {
+				name = usa.9.e
+				ai_chance = {
+					factor = 25
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_5
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_6
+						remove_idea = american_slavery_tension_5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_4
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_5
+						remove_idea = american_slavery_tension_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_3
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_4
+						remove_idea = american_slavery_tension_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_3
+						remove_idea = american_slavery_tension_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_tension_1
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_2
+						remove_idea = american_slavery_tension_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = american_slavery_2
+					}
+					swap_ideas = {
+						add_idea = american_slavery_tension_1
+						remove_idea = american_slavery_2
+					}
+				}
+				add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+				add_political_power = -25
+		}
+}
+#Election of 1860
+country_event = {
+		id = usa.10
+		title = usa.10.t
+		desc = usa.10.d
+		picture = GFX_report_event_election_vote
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			date > 1860.11.5
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+				name = usa.10.a
+				ai_chance = {
+					factor = 60
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_tension_6
+					add_idea = american_slavery_3
+				}
+				hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
+				hidden_effect = { news_event = { id = usa_news.3 } }
+				hidden_effect = { USA = { set_country_flag = USA_LincolnElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 01_ACW_tt
+				add_popularity = { ideology = centrism popularity = 0.05 }
+		}
+		option = {
+				name = usa.10.b
+				ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                    	is_historical_focus_on = yes
+                	}
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_tension_6
+					add_idea = american_slavery_3
+				}
+				hidden_effect = { USA = { country_event = { days = 44 id = acw.0 } } }
+				hidden_effect = { news_event = { id = usa_news.4 } }
+				hidden_effect = { USA = { set_country_flag = USA_BreckinridgeElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 02_ACW_tt
+				add_popularity = { ideology = traditional_conservatism popularity = 0.05 }
+				add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
+		}
+		option = {
+				name = usa.10.c
+				ai_chance = {
+					factor = 30
+					modifier = {
+                    	factor = 0
+                    	is_historical_focus_on = yes
+                	}
+				}
+				swap_ideas = {
+					remove_idea = american_slavery_tension_6
+					add_idea = american_slavery_3
+				}
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								has_country_flag = USA_Civil_War_Avoid_Attempt_1
+								has_country_flag = USA_Civil_War_Avoid_Attempt_2
+								has_country_flag = USA_Civil_War_Avoid_Attempt_3
+								has_country_flag = USA_Civil_War_Avoid_Attempt_4
+								has_country_flag = USA_Civil_War_Avoid_Attempt_5
+								has_country_flag = USA_Civil_War_Avoid_Attempt_6
+								has_country_flag = USA_Civil_War_Avoid_Attempt_7
+							}
+						}
+					}
+					hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_2 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_3 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_4 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_5 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_6 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_7 }
+					}
+				if = {
+					limit = {
+						AND = {
+							has_country_flag = USA_Civil_War_Avoid_Attempt_1
+							has_country_flag = USA_Civil_War_Avoid_Attempt_2
+							has_country_flag = USA_Civil_War_Avoid_Attempt_3
+							has_country_flag = USA_Civil_War_Avoid_Attempt_4
+							has_country_flag = USA_Civil_War_Avoid_Attempt_5
+							has_country_flag = USA_Civil_War_Avoid_Attempt_6
+							has_country_flag = USA_Civil_War_Avoid_Attempt_7
+						}
+					}
+					hidden_effect = { USA = { country_event = { days = 30 id = usa.15 } } }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_2 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_3 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_4 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_5 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_6 }
+					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_7 }
+					}
+				hidden_effect = { news_event = { id = usa_news.5 } }
+				hidden_effect = { USA = { set_country_flag = USA_DouglasElected } }
+				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
+				custom_effect_tooltip = 05_ACW_tt
+				add_popularity = { ideology = centrism popularity = 0.02 }
+				add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			}
+}
+#Lincoln Inaugerated
+country_event = {
+		id = usa.11
+		title = usa.11.t
+		desc = usa.11.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_LincolnElected
+			date > 1861.3.4
+			NOT = { has_country_flag = CheaterDefeater }
+			NOT = { has_country_flag = CheaterDefeated }
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+			name = usa.11.a
+			retire_country_leader = yes
+			set_politics = { ruling_party = centrism }
+			hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
+		}
+}
+#Stephen Inaugerated
+country_event = {
+		id = usa.12
+		title = usa.12.t
+		desc = usa.12.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_DouglasElected
+			date > 1861.3.4
+			NOT = { has_country_flag = CheaterDefeater }
+			NOT = { has_country_flag = CheaterDefeated }
+		}
+
+		mean_time_to_happen = { days = 2 }
+		
+		option = {
+				name = usa.12.a
+				retire_country_leader = yes
+				set_politics = { ruling_party = centrism }
+				set_party_name = { ideology = centrism long_name = USA_northern_democrats name = USA_northern_democrats }
+				set_party_name = { ideology = traditional_conservatism long_name = USA_southern_democrats name = USA_southern_democrats }
+				create_country_leader = {
+    				name = "Stephen A. Douglas"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Stephen_Douglas.dds"
+    				expire = "1947.1.1"
+    				ideology = conserv_liberal
+  				}
+				hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
+		}
+}
+#Call Up to Arms
+country_event = {
+		id = usa.14
+		title = usa.14.t
+		desc = usa.14.d
+		picture = GFX_report_event_generic_military_parade
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.14.a
+			if = {
+				limit = {
+					has_country_flag = USA_Radical_Coup
+				}
+				load_oob = USA_CIVIL_WAR_RADICAL
+			}
+			else = {
+				load_oob = USA_CIVIL_WAR
+			}
+		}
+}
+#Plead for Peace
+country_event = {
+		id = usa.15
+		title = usa.15.t
+		desc = usa.15.d
+		picture = GFX_report_event_worker_protests
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.15.a
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.b
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.c
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.16 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.15.e
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Plan for Peace
+country_event = {
+		id = usa.16
+		title = usa.16.t
+		desc = usa.16.d
+		picture = GFX_report_event_crowd_in_prague
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.16.a
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.b
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.c
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.16.e
+				hidden_effect = { USA = { country_event = { days = 10 id = usa.17 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Vote for Peace
+country_event = {
+		id = usa.17
+		title = usa.17.t
+		desc = usa.17.d
+		picture = GFX_report_event_election_vote
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.17.a
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.b
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.c
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.18 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+		option = {
+				name = usa.17.e
+				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
+				ai_chance = {
+					factor = 25
+				}
+		}
+}
+#Peace!
+country_event = {
+		id = usa.18
+		title = usa.18.t
+		desc = usa.18.d
+		picture = GFX_report_event_generic_rally_3
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.18.a
+				ai_chance = {
+					factor = 100
+				}
+				remove_ideas = american_slavery_3
+				add_political_power = 250
+				add_timed_idea = { idea = usa_thirty_year_plan_1 days = 3650 }
+				hidden_effect = { USA = { country_event = { days = 3650 id = usa.21 } } }
+				hidden_effect = { news_event = { id = usa_news.8 } }
+				set_country_flag = USA_Civil_War_Avoided
+				set_global_flag = ACW_Civil_War_Avoided
+		}
+}
+#Failure!
+country_event = {
+		id = usa.19
+		title = usa.19.t
+		desc = usa.19.d
+		picture = GFX_report_event_worker_protests
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.19.a
+				ai_chance = {
+					factor = 100
+				}
+				hidden_effect = { USA = { country_event = { days = 10 id = acw.1 } } }
+		}
+}
+#Oil Creek Pennsylvania
+country_event = {
+		id = usa.20
+		title = usa.20.t
+		desc = usa.20.d
+		picture = GFX_report_event_royal_visit
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		trigger = {
+			owns_state = 360
+			controls_state = 360
+			date > 1857.8.25
+		}
+		
+		option = {
+			name = usa.20.a
+			360 = {
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+			}
+			hidden_effect = { news_event = { id = usa_news.9 } }
+		}
+}
+#Thirty Year Plan 2
+country_event = {
+		id = usa.21
+		title = usa.21.t
+		desc = usa.21.d
+		picture = GFX_report_event_generic_rally_3
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.21.a
+			add_political_power = 50
+			add_timed_idea = { idea = usa_thirty_year_plan_2 days = 3650 }
+			hidden_effect = { USA = { country_event = { days = 3650 id = usa.22 } } }
+		}
+}
+#Thirty Year Plan 3
+country_event = {
+		id = usa.22
+		title = usa.22.t
+		desc = usa.22.d
+		picture = GFX_report_event_generic_rally_3
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.22.a
+			add_political_power = 50
+			add_timed_idea = { idea = usa_thirty_year_plan_3 days = 3650 }
+			hidden_effect = { USA = { country_event = { days = 3650 id = usa.23 } } }
+		}
+}
+#Thirty Year Plan Finished
+country_event = {
+		id = usa.23
+		title = usa.23.t
+		desc = usa.23.d
+		picture = GFX_report_event_generic_rally_3
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.23.a
+			add_political_power = 100
+			swap_ideas = { remove_idea = usa_slavery_law add_idea = limited_equality }
+		}
+}
+#Escapee Policy
+country_event = {
+		id = usa.24
+		title = usa.24.t
+		desc = usa.24.d
+		picture = GFX_report_event_german_politician_speech
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.24.a
+			add_political_power = 25
+			CSA = { add_opinion_modifier = { target = USA modifier = USA_escape_yes } }
+		}
+		option = {
+			name = usa.24.b
+			add_political_power = -50
+			CSA = { add_opinion_modifier = { target = USA modifier = USA_escape_no } }
+		}
+}
+#Persecute Confederates
+country_event = {
+		id = usa.25
+		title = usa.25.t
+		desc = usa.25.d
+		picture = GFX_report_event_worker_protests
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.25.a
+			add_political_power = 10
+		}
+		option = {
+			name = usa.25.b
+			add_political_power = -10
+			if = {
+				limit = {
+					NOT = { has_global_flag = Davis_Flees }
+				}
+				hidden_effect = { USA = { country_event = { id = usa.47 days = 20 } } }
+			}
+			set_country_flag = USA_Confederate_Investigation
+		}
+		option = {
+			name = usa.25.c
+			add_political_power = -25
+			if = {
+				limit = {
+					NOT = { has_global_flag = Davis_Flees }
+				}
+				hidden_effect = { USA = { country_event = { id = usa.47 days = 10 } } }
+			}
+			set_country_flag = USA_Confederate_Investigation
+		}
+}
+#Pig War haha take that hogthra
+country_event = {
+		id = usa.26
+		title = usa.26.t
+		desc = usa.26.d
+		picture = GFX_report_event_soldiers_marching
+		
+		trigger = {
+			OR = {
+				TAG = USA
+				TAG = ENG
+			}
+			USA = { owns_state = 386 }
+			VAN = { owns_state = 740 }
+			date > 1859.6.15
+			NOT = {
+				USA = { has_war_with = ENG }
+			}
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa.26.a
+		}
+		option = {
+			trigger = {
+				TAG = ENG
+			}
+			name = usa.26.b
+		}	
+	}
+#Revitalization of Pig War in 1871
+country_event = {
+		id = usa.27
+		title = usa.27.t
+		desc = usa.27.d
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa.27.a
+			if = {
+				limit = {
+					PRS = { exists = yes }
+					GER = { exists = no }
+				}
+				PRS = { country_event = { days = 30 id = usa.28 } }
+			}
+			if = {
+				limit = {
+					GER = { exists = yes }
+				}
+				GER = { country_event = { days = 30 id = usa.28 } }
+			}
+		}
+		option = {
+			trigger = {
+				TAG = ENG
+			}
+			name = usa.27.b
+		}
+	}
+#Prussian Response
+country_event = {
+		id = usa.28
+		title = usa.28.t
+		desc = usa.28.d
+		picture = GFX_GFX_report_event_royal_visit
+
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.28.a
+			USA = { country_event = { days = 30 id = usa.29 } }
+			ENG = { country_event = { days = 30 id = usa.29 } }
+			CAN = { country_event = { days = 30 id = usa.29 } }
+			hidden_effect = {
+				HBC = { country_event = { days = 30 id = usa.29 } }
+				BRK = { country_event = { days = 30 id = usa.29 } }
+				NVS = { country_event = { days = 30 id = usa.29 } }
+				NFL = { country_event = { days = 30 id = usa.29 } }
+				VAN = { country_event = { days = 30 id = usa.29 } }
+				BCO = { country_event = { days = 30 id = usa.29 } }
+				NWT = { country_event = { days = 30 id = usa.29 } }
+			}
+		}
+		option = {
+			name = usa.28.b
+			USA = { country_event = { days = 30 id = usa.30 } }
+			ENG = { country_event = { days = 30 id = usa.30 } }
+			CAN = { country_event = { days = 30 id = usa.30 } }
+			hidden_effect = {
+				HBC = { country_event = { days = 30 id = usa.30 } }
+				BRK = { country_event = { days = 30 id = usa.30 } }
+				NVS = { country_event = { days = 30 id = usa.30 } }
+				NFL = { country_event = { days = 30 id = usa.30 } }
+				VAN = { country_event = { days = 30 id = usa.30 } }
+				BCO = { country_event = { days = 30 id = usa.30 } }
+				NWT = { country_event = { days = 30 id = usa.30 } }
+			}
+		}	
+	}
+#Pig War - America
+country_event = {
+		id = usa.29
+		title = usa.29.t
+		desc = usa.29.d
+		picture = GFX_report_event_generic_sign_treaty2
+		
+		is_triggered_only = yes
+		
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa.29.a
+			add_political_power = 10
+		}
+		option = {
+			trigger = {
+				TAG = ENG
+			}
+			name = usa.29.b
+			add_political_power = -10
+		}
+		option = {
+			trigger = {
+				OR = {
+					TAG = CAN
+					TAG = HBC
+					TAG = BRK
+					TAG = NVS
+					TAG = NFL
+					TAG = VAN
+					TAG = BCO
+					TAG = NWT
+				}
+			}
+			name = usa.29.c
+			add_autonomy_ratio = {
+				value = 0.05
+			}
+		}
+	}
+#Pig War - Britain
+country_event = {
+		id = usa.30
+		title = usa.30.t
+		desc = usa.30.d
+		picture = GFX_report_event_generic_sign_treaty2
+		
+		is_triggered_only = yes
+		
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa.30.a
+			add_political_power = -10
+		}
+		option = {
+			trigger = {
+				TAG = ENG
+			}
+			name = usa.30.b
+			add_political_power = 10
+		}
+		option = {
+			trigger = {
+				OR = {
+					TAG = CAN
+					TAG = HBC
+					TAG = BRK
+					TAG = NVS
+					TAG = NFL
+					TAG = VAN
+					TAG = BCO
+					TAG = NWT
+				}
+			}
+			name = usa.30.c
+			add_autonomy_ratio = {
+				value = -0.05
+			}
+		}
+	}
+#George Washington Parke Custis
+country_event = {
+		id = usa.31
+		title = usa.31.t
+		desc = usa.31.d
+		picture = GFX_report_event_generic_funeral
+
+		fire_only_once = yes
+		
+		trigger = {
+			tag = USA
+			date > 1857.10.10
+		}
+		
+		option = {
+			name = usa.31.a
+			add_political_power = -10
+		}
+	}
+#Utah Annexation
+country_event = {
+		id = usa.32
+		title = usa.32.t
+		desc = usa.32.d
+		picture = report_event_generic_conference
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.32.a
+			annex_country = {
+				target = UTA
+			}
+			swap_ideas = {
+				remove_idea = state_religion
+				add_idea = secular_state
+			}
+			hidden_effect = {
+				set_country_flag = USAUtah_War_Over
+			}
+			hidden_effect = { news_event = { id = utah_news.1 } }
+			remove_ideas = USA_UtahWar_2
+		}
+	}
+#Utah Refused Annexation
+country_event = {
+		id = usa.33
+		title = usa.33.t
+		desc = usa.33.d
+		picture = report_event_generic_riot
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.33.a
+			ai_chance = {
+				factor = 100
+			}
+			declare_war_on = {
+    			target = UTA
+    			type = annex_everything
+			}
+			set_country_flag = USA_UtahWar_Escalated
+		}
+		option = {
+			name = usa.33.b
+			add_political_power = -100
+			add_stability = -0.05
+			ai_chance = {
+				factor = 0
+			}
+			release_puppet = UTA
+			set_country_flag = USA_Utah_LetGo
+		}
+	}
+#Socialist Revolution
+country_event = {
+		id = usa.34
+		title = usa.34.t
+		desc = usa.34.d
+		picture = GFX_report_event_generic_military_parade
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.34.a
+			set_politics = { ruling_party = social_egalitarianism }
+			hidden_effect = { 
+				swap_ideas = {
+					remove_idea = presidential_republic
+					add_idea = socialist_republic
+				}
+			}
+			remove_ideas = USA_recovery
+			hidden_effect = { news_event = { id = usa_news.10 } }
+			custom_effect_tooltip = 14_USA_tt
+		}
+	}
+#Monarchist Revolution
+country_event = {
+		id = usa.35
+		title = usa.35.t
+		desc = usa.35.d
+		picture = GFX_report_event_generic_military_parade
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.35.a
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = non_monarchical_system
+					add_idea = no_heir
+				}
+				swap_ideas = {
+					remove_idea = presidential_republic
+					add_idea = constitutional_monarchy
+				}
+			}
+			hidden_effect = { remove_ideas = USA_recovery }
+			set_politics = { ruling_party = autocracy }
+			remove_ideas = USA_recovery
+			custom_effect_tooltip = 15_USA_tt
+			hidden_effect = { news_event = { id = usa_news.11 } }
+		}
+	}
+#Election of 1864
+country_event = {
+		id = usa.36
+		title = usa.36.t
+		desc = {
+            text = usa.36.d
+            trigger = { has_country_flag = USA_LincolnElected }
+        }
+        desc =  {
+            text = usa.36.d_a
+            trigger = { has_country_flag = USA_DouglasElected }
+        }
+        desc =  {
+            text = usa.36.d_b
+            trigger = { has_country_flag = USA_Radical_Coup }
+        }
+        desc =  {
+            text = usa.36.d_c
+            trigger = { has_government = radical_democracy }
+        }
+		picture = report_event_election_vote
+
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			has_war_with = CSA
+			CSA = { exists = yes }
+			NOT = {
+				has_government = autocracy
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				has_government = anarchism
+			}
+			date > 1864.11.8
+		}
+		
+		option = {
+			name = usa.36.a
+			trigger = {
+				NOT = { has_country_flag = USA_DouglasElected }
+			}
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                    	is_historical_focus_on = yes
+                	}
+					modifier = {
+                    	factor = 0
+                    	has_war_support > 0.8
+                	}
+                	modifier = {
+                    	factor = 95
+                    	has_war_support < 0.8
+                	}
+                	modifier = {
+                    	factor = 80
+                    	has_war_support < 0.75
+                	}
+                	modifier = {
+                    	factor = 60
+                    	has_war_support < 0.65
+                	}
+                	modifier = {
+                    	factor = 40
+                    	has_war_support < 0.5
+                	}
+                	modifier = {
+                    	factor = 20
+                    	has_war_support < 0.4
+                	}
+                	modifier = {
+                    	factor = 0
+                    	has_war_support < 0.25
+                	}
+				}
+			set_country_flag = USA_Lincoln1864
+		}
+		option = {
+			name = usa.36.b
+			trigger = {
+				has_country_flag = USA_DouglasElected
+			}
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 0
+                    	has_war_support > 0.8
+                	}
+                	modifier = {
+                    	factor = 95
+                    	has_war_support < 0.8
+                	}
+                	modifier = {
+                    	factor = 80
+                    	has_war_support < 0.75
+                	}
+                	modifier = {
+                    	factor = 60
+                    	has_war_support < 0.65
+                	}
+                	modifier = {
+                    	factor = 40
+                    	has_war_support < 0.5
+                	}
+                	modifier = {
+                    	factor = 20
+                    	has_war_support < 0.4
+                	}
+                	modifier = {
+                    	factor = 0
+                    	has_war_support < 0.25
+                	}
+				}
+			set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
+			set_country_flag = USA_Douglas1864
+
+		}
+		option = {
+			name = usa.36.c
+			ai_chance = {
+					factor = 30
+					modifier = {
+                    	factor = 0
+                    	is_historical_focus_on = yes
+                	}
+                	modifier = {
+                    	factor = 0
+                    	has_war_support > 0.8
+                	}
+                	modifier = {
+                    	factor = 5
+                    	has_war_support < 0.8
+                	}
+                	modifier = {
+                    	factor = 20
+                    	has_war_support < 0.75
+                	}
+                	modifier = {
+                    	factor = 40
+                    	has_war_support < 0.65
+                	}
+                	modifier = {
+                    	factor = 60
+                    	has_war_support < 0.5
+                	}
+                	modifier = {
+                    	factor = 80
+                    	has_war_support < 0.4
+                	}
+                	modifier = {
+                    	factor = 100
+                    	has_war_support < 0.25
+                	}
+				}
+			set_country_flag = USA_McClellanElected
+			set_party_name = { ideology = traditional_conservatism long_name = USA_copperhead_democrats name = USA_copperhead_democrats }
+			hidden_effect = { USA = { country_event = { days = 175 id = usa.37 } } }
+		}
+		option = {
+			name = usa.36.e
+			trigger = {
+				has_country_flag = USA_Radical_Coup
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+		option = {
+			name = usa.36.f
+			trigger = {
+				has_government = radical_democracy
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+}
+#McClellan Inaugerated
+country_event = {
+		id = usa.37
+		title = usa.37.t
+		desc = usa.37.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.37.a
+				retire_country_leader = yes
+				set_politics = { ruling_party = traditional_conservatism }
+				create_country_leader = {
+    				name = "George B. McClellan"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_George_McClellan.dds"
+    				expire = "1947.1.1"
+    				ideology = federal
+  				}
+		}
+}
+#Election of 1864 - No War
+country_event = {
+		id = usa.38
+		title = usa.38.t
+		desc = usa.38.d
+		picture = GFX_report_event_election_vote
+		
+		fire_only_once = yes
+		
+		trigger = {
+			TAG = USA
+			OR = {
+				CSA = { exists = no }
+				NOT = { has_war_with = CSA }
+			}
+			NOT = {
+				has_government = autocracy
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				has_government = anarchism
+			}
+			date > 1864.11.8
+		}
+		
+		option = {
+			name = usa.38.a
+			trigger = {
+				NOT = { has_country_flag = USA_DouglasElected }
+			}
+			set_country_flag = USA_Lincoln1864
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                    	is_historical_focus_on = yes
+                	}
+            }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
+		}
+		option = {
+			name = usa.38.b
+			trigger = {
+				has_country_flag = USA_DouglasElected
+			}
+			set_country_flag = USA_Douglas1864
+			ai_chance = {
+					factor = 50
+            }
+            set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
+		}
+		option = {
+			name = usa.38.c
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
+            set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
+            set_country_flag = USA_Pendleton_Elected
+            hidden_effect = { USA = { country_event = { days = 175 id = usa.39 } } }
+		}
+		option = {
+			name = usa.38.e
+			trigger = {
+				has_country_flag = USA_Radical_Coup
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+		option = {
+			name = usa.38.f
+			trigger = {
+				has_government = radical_democracy
+			}
+			ai_chance = {
+				factor = 1000
+            }
+		}
+}
+#Pendleton Inaugerated
+country_event = {
+		id = usa.39
+		title = usa.39.t
+		desc = usa.39.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+				name = usa.39.a
+				retire_country_leader = yes
+				set_politics = { ruling_party = traditional_conservatism }
+				create_country_leader = {
+    				name = "George H. Pendleton"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_George_Pendleton.dds"
+    				expire = "1947.1.1"
+    				ideology = federal
+  				}
+		}
+}
+#Alaska Purchase
+country_event = {
+		id = usa.40
+		title = usa.40.t
+		desc = usa.40.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.40.a
+			ai_chance = {
+					factor = 90
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+			RUS = { country_event = { id = usa.41 hours = 1 } }
+		}
+}
+#Alaska Russia
+country_event = {
+		id = usa.41
+		title = usa.41.t
+		desc = usa.41.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.41.a
+			USA = { country_event = { id = usa.42 hours = 1 } }
+			RUS = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			set_global_flag = USAAlaska_Purchased
+			ai_chance = {
+					factor = 90
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+		}
+		option = {
+			name = usa.41.b
+			add_political_power = -25
+			USA = { country_event = { id = usa.42 hours = 1 } }
+			ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+		}
+}
+#Alaska Result
+country_event = {
+		id = usa.42
+		title = usa.42.t
+		desc = {
+			text = usa.42.d
+			trigger = { has_global_flag = USAAlaska_Purchased }
+		}
+		desc = {
+			text = usa.42.d_a
+			trigger = { NOT { has_global_flag = USAAlaska_Purchased } }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			trigger = {
+				has_global_flag = USAAlaska_Purchased
+			}
+			name = usa.42.a
+			USA = { add_timed_idea = { idea = USA_alaska_purchase_usa days = 365 } }
+			USA = { transfer_state = 463 }
+			news_event = { id = usa_news.17 }
+		}
+		option = {
+			trigger = {
+				NOT = { has_global_flag = USAAlaska_Purchased }
+			}
+			name = usa.42.b
+		}
+}
+#Norton xd
+country_event = {
+		id = usa.43
+		title = usa.43.t
+		desc = usa.43.d
+		picture = GFX_report_event_royal_visit
+		
+		trigger = {
+			tag = USA
+			date > 1859.6.6
+		}
+
+		mean_time_to_happen = {
+			days = 45
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.43.a
+			add_political_power = -5
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.02
+			}
+		}
+		option = {
+			name = usa.43.b
+			add_political_power = -25
+			add_manpower = -1000
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.70 days = 80 } }
+		}
+}
+#Integration Plan/ Reconstruction
+country_event = {
+		id = usa.44
+		title = usa.44.t
+		desc = usa.44.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = USASoaring_Eagle
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 3
+    	}
+		
+		option = {
+			trigger = {
+				has_country_flag = USASoaring_Eagle
+			}
+			name = usa.44.a
+			set_variable = {
+				var = reconstruction_points
+				value = 0
+			}
+			clamp_variable = {
+				var = reconstruction_points
+				min = 0
+				max = 125
+			}
+		}
+		option = {
+			trigger = {
+				has_country_flag = USASoaring_Eagle
+			}
+			name = usa.44.b
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			set_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			clamp_variable = {
+				var = reconstruction_points
+				min = 0
+				max = 125
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+		}
+		option = {
+			trigger = {
+				has_country_flag = USASoaring_Eagle
+			}
+			name = usa.44.c
+			add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
+			set_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			clamp_variable = {
+				var = reconstruction_points
+				min = 0
+				max = 125
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+		}
+		option = {
+			trigger = {
+				has_country_flag = USASoaring_Eagle
+			}
+			name = usa.44.e
+			add_popularity = { ideology = social_egalitarianism popularity = 0.03 }
+			set_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			clamp_variable = {
+				var = reconstruction_points
+				min = 0
+				max = 125
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+		}
+}
+#Lincoln Assassination
+country_event = {
+		id = usa.45
+		title = usa.45.t
+		desc = usa.45.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			AND = {
+				has_country_flag = USASoaring_Eagle
+				has_country_leader = {
+					name = "Abraham Lincoln"
+					ruling_only = yes
+				}
+			}
+		}
+
+		mean_time_to_happen = {
+			days = 4
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.45.a
+			ai_chance = {
+				factor = 70
+				modifier = {
+					factor = 100
+					is_historical_focus_on = yes
+				}
+			}
+			custom_effect_tooltip = 01_lincoln_tt
+			kill_country_leader = yes
+			hidden_effect = { news_event = { id = usa_news.18 } }
+			hidden_effect = {
+				create_country_leader = {
+    				name = "Andrew Johnson"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Andrew_Johnson.dds"
+    				expire = "1947.1.1"
+    				ideology = federal
+  				}
+			}
+			set_politics = { ruling_party = traditional_conservatism }
+			add_stability = -0.2
+			set_global_flag = Lincoln_Assassinated
+			set_country_flag = Lincoln_Assassinated
+		}
+		option = {
+			name = usa.45.b
+			ai_chance = {
+				factor = 30
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+			}
+			custom_effect_tooltip = 02_lincoln_tt
+			hidden_effect = { news_event = { id = usa_news.19 } }
+			set_global_flag = Lincoln_Survived
+			set_country_flag = Lincoln_Survived
+		}
+}
+#Lincoln Assassination Investigations
+country_event = {
+		id = usa.46
+		title = usa.46.t
+		desc = usa.46.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			has_country_flag = Lincoln_Assassinated
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 3
+    	}
+		
+		option = {
+			name = usa.46.a
+			add_political_power = -50
+			add_stability = 0.05
+		}
+		option = {
+			name = usa.46.b
+			add_political_power = -5
+		}
+}
+#Jefferson Davis captured
+country_event = {
+		id = usa.47
+		title = usa.47.t
+		desc = usa.47.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.47.a
+			add_political_power = 25
+			set_country_flag = Davis_Captured
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+		}
+}
+#Jefferson Davis flees the Union
+country_event = {
+		id = usa.48
+		title = usa.48.t
+		desc = usa.48.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = USA
+			NOT = { has_country_flag = USA_Confederate_Investigation }
+			NOT = { has_country_flag = Davis_Captured }
+			has_global_flag = USAWins_Civil_War
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 200
+		}
+		
+		option = {
+			name = usa.48.a
+			add_political_power = -50
+			set_global_flag = Davis_Flees
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_1
+		}
+}
+#Davis flees to Brazil
+country_event = {
+		id = usa.49
+		title = usa.49.t
+		desc = usa.49.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			TAG = BRA
+			has_global_flag = Davis_Flees
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 7
+    	}
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_Brazil
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			FRA = { country_event = { id = usa.50 days = 10 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = BRA_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis flees to France
+country_event = {
+		id = usa.50
+		title = usa.50.t
+		desc = usa.50.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_France
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			ENG = { country_event = { id = usa.51 days = 3 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = FRA_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis flees to UK
+country_event = {
+		id = usa.51
+		title = usa.51.t
+		desc = usa.51.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.49.a
+			set_global_flag = Davis_Flees_UK
+			clr_global_flag = Davis_Flees
+			USA = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = usa_davis_held
+				}
+			}
+			capital_scope = { add_manpower = 146 }
+		}
+		option = {
+			name = usa.49.b
+			USA = { country_event = { id = usa.52 days = 4 } }
+		}
+		option = {
+			name = usa.49.c
+			clr_global_flag = Davis_Flees
+			USA = { country_event = { id = usa.53 days = 5 } }
+			USA = { set_country_flag = ENG_Davis_Returned }
+			USA = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = usa_davis_returned
+				}
+			}
+		}
+}
+#Davis found and captured after escape
+country_event = {
+		id = usa.52
+		title = usa.52.t
+		desc = usa.52.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.52.a
+			clr_global_flag = Davis_Flees
+			add_political_power = 50
+			USA = { country_event = { id = usa.55 days = 30 } }
+		}
+}
+#Davis returned
+country_event = {
+		id = usa.53
+		title = usa.53.t
+		desc = {
+			text = usa.53.d_brazil
+			trigger = { has_country_flag = BRA_Davis_Returned }
+		}
+		desc = {
+			text = usa.53.d_france
+			trigger = { has_country_flag = FRA_Davis_Returned }
+		}
+		desc = {
+			text = usa.53.d_uk
+			trigger = { has_country_flag = ENG_Davis_Returned }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.53.a
+			add_political_power = 10
+			USA = { country_event = { id = usa.55 days = 30 } }
+		}
+}
+#Davis given sancturary
+country_event = {
+		id = usa.54
+		title = usa.54.t
+		desc = {
+			text = usa.54.d_brazil
+			trigger = { has_global_flag = Davis_Flees_Brazil }
+		}
+		desc = {
+			text = usa.54.d_france
+			trigger = { has_global_flag = Davis_Flees_France }
+		}
+		desc = {
+			text = usa.54.d_uk
+			trigger = { has_global_flag = Davis_Flees_UK }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.54.a
+			clr_global_flag = Davis_Flees
+			add_political_power = -50
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_1
+		}
+}
+#What to do with Davis
+country_event = {
+		id = usa.55
+		title = usa.55.t
+		desc = usa.55.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.55.a
+			add_political_power = 25
+			add_popularity = { ideology = social_egalitarianism popularity = -0.01 }
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+		}
+		option = {
+			name = usa.55.b
+			add_political_power = -25
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+		}
+		option = {
+			name = usa.55.c
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+		}
+}
+#Convince Lincoln to Egalitarianism
+country_event = {
+		id = usa.56
+		title = usa.56.t
+		desc = usa.56.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_country_flag = Lincoln_Survived
+		}
+
+		mean_time_to_happen = {
+			days = 45
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.56.a
+			add_political_power = 25
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+		option = {
+			name = usa.56.b
+			add_political_power = -100
+			add_stability = -0.1
+			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
+			create_country_leader = {
+    				name = "Abraham Lincoln"
+    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    				picture = "Portrait_USA_Abraham_Lincoln.dds"
+    				expire = "1947.1.1"
+    				ideology = liberal_social
+  				}
+  			set_politics = { ruling_party = social_egalitarianism }
+  			set_country_flag = USA_Radical_Lincoln
+		}
+}
+#vacant please adopt me
+country_event = {
+		id = usa.57
+		title = usa.57.t
+		desc = usa.57.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		mean_time_to_happen = {
+		}
+		
+		option = {
+			name = usa.57.a
+		}
+}
+#Liberia Emigration
+country_event = {
+		id = usa.58
+		title = usa.58.t
+		desc = usa.58.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			NOT = { has_country_flag = USA_Reconstruction_Ended }
+			has_country_flag = USASoaring_Eagle
+			NOT = { has_idea = full_equality }
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 75
+		}
+		
+		option = {
+			name = usa.58.a
+			add_political_power = -10
+			add_popularity = { ideology = social_egalitarianism popularity = 0.05 }
+			set_global_flag = USA_Liberia_No_Intervention
+			LIB = { country_event = { id = usa.59 days = 4 } }
+			add_timed_idea = { idea = USA_liberia_emigration_1 days = 1000 }
+			366 = {
+				add_manpower = -1000
+			}
+			365 = {
+				add_manpower = -1000
+			}
+			364 = {
+				add_manpower = -1000
+			}
+			363 = {
+				add_manpower = -1000
+			}
+			364 = {
+				add_manpower = -2000
+			}
+			367 = {
+				add_manpower = -1000
+			}
+			370 = {
+				add_manpower = -1000
+			}
+			371 = {
+				add_manpower = -1000
+			}
+			372 = {
+				add_manpower = -1000
+			}
+			375 = {
+				add_manpower = -1000
+			}
+			368 = {
+				add_manpower = -1000
+			}
+			373 = {
+				add_manpower = -500
+			}
+			369 = {
+				add_manpower = -500
+			}
+			361 = {
+				add_manpower = -500
+			}
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+		}
+		option = {
+			name = usa.58.b
+			add_political_power = -25
+			366 = {
+				add_manpower = -5000
+			}
+			365 = {
+				add_manpower = -5000
+			}
+			364 = {
+				add_manpower = -5000
+			}
+			363 = {
+				add_manpower = -5000
+			}
+			364 = {
+				add_manpower = -10000
+			}
+			367 = {
+				add_manpower = -5000
+			}
+			370 = {
+				add_manpower = -5000
+			}
+			371 = {
+				add_manpower = -5000
+			}
+			372 = {
+				add_manpower = -5000
+			}
+			375 = {
+				add_manpower = -5000
+			}
+			368 = {
+				add_manpower = -5000
+			}
+			373 = {
+				add_manpower = -2500
+			}
+			369 = {
+				add_manpower = -2500
+			}
+			361 = {
+				add_manpower = -2500
+			}
+			set_global_flag = USA_Liberia_Encouraged
+			LIB = { country_event = { id = usa.59 days = 4 } }
+			add_timed_idea = { idea = USA_liberia_emigration_2 days = 1000 }
+		}
+		option = {
+			name = usa.58.c
+			add_political_power = -50
+			366 = {
+				add_manpower = -10000
+			}
+			365 = {
+				add_manpower = -10000
+			}
+			364 = {
+				add_manpower = -10000
+			}
+			363 = {
+				add_manpower = -10000
+			}
+			364 = {
+				add_manpower = -20000
+			}
+			367 = {
+				add_manpower = -10000
+			}
+			370 = {
+				add_manpower = -10000
+			}
+			371 = {
+				add_manpower = -10000
+			}
+			372 = {
+				add_manpower = -10000
+			}
+			375 = {
+				add_manpower = -10000
+			}
+			368 = {
+				add_manpower = -10000
+			}
+			373 = {
+				add_manpower = -5000
+			}
+			369 = {
+				add_manpower = -5000
+			}
+			361 = {
+				add_manpower = -5000
+			}
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_1
+			add_popularity = { ideology = social_egalitarianism popularity = -0.05 }
+			LIB = { country_event = { id = usa.59 days = 4 } }
+			set_global_flag = USA_Liberia_Mandatory
+			add_timed_idea = { idea = USA_liberia_emigration_3 days = 1000 }
+		}
+}
+#Liberia Immigration
+country_event = {
+		id = usa.59
+		title = usa.59.t
+		desc = usa.59.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.59.a
+			add_political_power = -10
+			trigger = { has_global_flag = USA_Liberia_No_Intervention }
+			298 = {
+				add_manpower = 13000
+			}
+			add_timed_idea = { idea = Liberia_immigration_1 days = 1000 }
+		}
+		option = {
+			name = usa.59.b
+			add_political_power = -50
+			trigger = { has_global_flag = USA_Liberia_Encouraged }
+			298 = {
+				add_manpower = 65000
+			}
+			add_timed_idea = { idea = Liberia_immigration_2 days = 1000 }
+		}
+		option = {
+			name = usa.59.c
+			trigger = { has_global_flag = USA_Liberia_Mandatory }
+			add_political_power = -100
+			298 = {
+				add_manpower = 130000
+			}
+			add_timed_idea = { idea = Liberia_immigration_3 days = 1000 }
+		}
+}
+#Granted Support
+country_event = {
+		id = usa.60
+		title = usa.60.t
+		desc = usa.60.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.60.a
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 3000
+    			producer = USA
+			}
+			add_equipment_to_stockpile = {
+    			type = uniform_equipment
+    			amount = 3000
+    			producer = USA
+			}
+			add_manpower = 5000
+		}
+}
+#Mend Relations - UK
+country_event = {
+		id = usa.61
+		title = usa.61.t
+		desc = usa.61.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.61.a
+			ENG = { set_country_flag = USA_Mend_Relations }
+			ENG = { country_event = { id = usa.62 } }
+		}
+		option = {
+			name = usa.61.b
+			trigger = {
+				NOT = {
+					has_war_with = ENG
+					is_in_faction = yes
+					ENG = { is_in_faction = yes }
+				}
+			}
+			ENG = { set_country_flag = USA_Mend_Alliance }
+			ENG = { country_event = { id = usa.62 } }
+		}
+}
+#Mend Relations - UK Response
+country_event = {
+		id = usa.62
+		title = usa.62.t
+		desc = {
+			text = usa.62.d
+			trigger = { has_country_flag = USA_Mend_Relations }
+		}
+		desc = {
+			text = usa.62.d_ally
+			trigger = { has_country_flag = USA_Mend_Alliance }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.62.a
+			trigger = { has_country_flag = USA_Mend_Relations }
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		option = {
+			name = usa.62.a
+			trigger = { 
+				AND = {
+					has_country_flag = USA_Mend_Alliance 
+					is_ai = no
+				}
+			}
+			ENG = { create_faction = "Anglosphere" }
+			add_to_faction = USA
+		}
+		option = {
+			ai_chance = {
+				factor = 40
+				#modifier = {
+				#	add = 60
+				#	ROOT = {
+				#		has_opinion = {
+				#			USA = ENG
+				#			value = 50
+				#		}
+				#	}
+				#}
+			}
+			name = usa.62.a
+			trigger = { 
+				AND = {
+					has_country_flag = USA_Mend_Alliance
+					is_ai = yes 
+				}
+			}
+			USA = { create_faction = "Anglosphere" }
+			USA = { add_to_faction = ENG }
+		}
+		option = {
+			ai_chance = {
+				factor = 50
+				#modifier = {
+				#	add = 50
+				#	ROOT = {
+				#		has_opinion = {
+				#			USA = ENG
+				#			value = 0
+				#		}
+				#	}
+				#}
+			}
+			name = usa.62.b
+		}
+}
+#USA Requests Non Aggression Pact
+country_event = {
+		id = usa.63
+		title = usa.63.t
+		desc = usa.63.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.63.a
+			add_political_power = 25
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		option = {
+			name = usa.63.b
+			add_political_power = -25
+		}
+}
+country_event = {
+		id = usa.64
+		title = usa.64.t
+		desc = usa.64.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.64.a
+		}
+		option = {
+			name = usa.64.b
+		}
+}
+#USA Utah reclaimed
+country_event = {
+		id = usa.65
+		title = usa.65.t
+		desc = usa.65.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_UtahWar_Escalated
+			OR = {
+				NOT = { country_exists = UTA }
+				UTA = { is_puppet_of = USA }
+			}
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = usa.65.a
+			remove_ideas = USA_UtahWar_2
+			swap_ideas = {
+				remove_idea = state_religion
+				add_idea = secular_state
+			}
+			if = {
+				limit = {
+					UTA = { is_puppet_of = USA }
+				}
+				annex_country = {
+					target = UTA
+				}
+			}
+			hidden_effect = { news_event = { id = utah_news.3 } }
+			clr_country_flag = USA_UtahWar_Escalated
+		}
+		option = {
+			name = usa.65.b
+			remove_ideas = USA_UtahWar_2
+			clr_country_flag = USA_UtahWar_Escalated
+			if = {
+				limit = {
+					UTA = { is_puppet_of = USA }
+				}
+				annex_country = {
+					target = UTA
+				}
+			}
+			hidden_effect = { news_event = { id = utah_news.3 } }
+			add_political_power = -25
+		}
+}
+#USA Utah lost
+country_event = {
+		id = usa.66
+		title = usa.66.t
+		desc = usa.66.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_country_flag = USA_UtahWar_Escalated
+			UTA = { exists = yes }
+			NOT = { has_war_with = UTA }
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.66.a
+			add_political_power = -100
+			clr_country_flag = USA_UtahWar_Escalated
+			remove_ideas = USA_UtahWar_2
+		}
+}
+#USA Anti-Irish Sentiment goes down ACW
+country_event = {
+		id = usa.67
+		title = usa.67.t
+		desc = {
+			text = usa.67.d
+			trigger = { has_war_with = CSA }
+		}
+		desc = {
+			text = usa.67.d_nowar
+			trigger = { date > 1870.1.1 }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			has_idea = USA_Anti_Irish
+			OR = {
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+				AND = {
+					tag = USA
+					date > 1870.1.1
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.67.a
+			if = {
+				limit = {
+					has_war_with = CSA
+				}
+				swap_ideas = {
+					remove_idea = USA_Anti_Irish
+					add_idea = USA_Anti_Irish_ACW
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = USA_Anti_Irish
+					add_idea = USA_Anti_Irish_2
+				}
+			}
+		}
+}
+#USA Anti-Irish Sentiment returns to normal
+country_event = {
+		id = usa.68
+		title = usa.68.t
+		desc = usa.68.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_Anti_Irish_ACW
+			has_war = no
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.67.a
+			swap_ideas = {
+				remove_idea = USA_Anti_Irish_ACW
+				add_idea = USA_Anti_Irish_2
+			}
+		}
+}
+#USA Anti-Irish Sentiment not an issue anymore
+country_event = {
+		id = usa.69
+		title = usa.69.t
+		desc = usa.69.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_Anti_Irish_2
+			date > 1890.1.1
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.69.a
+			remove_ideas = USA_Anti_Irish_2
+		}
+}
+#Norton Event Chain - Mutinies?
+country_event = {
+		id = usa.70
+		title = usa.70.t
+		desc = usa.70.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.70.a
+			hidden_effect = { country_event = { id = usa.71 days = 40 } }
+		}
+		option = {
+			name = usa.70.b
+			add_political_power = -25
+			hidden_effect = { country_event = { id = usa.72 days = 40 } }
+		}
+}
+#Army Mutinies!
+country_event = {
+		id = usa.71
+		title = usa.71.t
+		desc = usa.71.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.71.a
+			add_political_power = -5
+			add_stability = -0.05
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.77 days = 30 } }
+		}
+		option = {
+			name = usa.71.b
+			add_political_power = -50
+			add_stability = -0.05
+			add_manpower = -1000
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			set_country_flag = USA_Norton_Mutiny
+			hidden_effect = { country_event = { id = usa.72 days = 80 } }
+		}
+}
+#Norton Mutiny No Longer an Issue
+country_event = {
+		id = usa.72
+		title = usa.72.t
+		desc = {
+			text = usa.72.d
+			trigger = { NOT = { has_country_flag = USA_Norton_Mutiny } }
+		}
+		desc = {
+			text = usa.72.d_mutiny
+			trigger = { has_country_flag = USA_Norton_Mutiny }
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.72.a
+			add_political_power = 10
+			add_manpower = 500
+			add_popularity = {
+				ideology = autocracy
+				popularity = -0.01
+			}
+		}
+}
+#Modern Times suffers from Panic of 1857
+country_event = {
+		id = usa.73
+		title = usa.73.t
+		desc = usa.73.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_1857Panic
+		}
+
+		mean_time_to_happen = {
+			days = 50
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.73.a
+			add_political_power = -10
+		}
+		option = {
+			name = usa.73.b
+			hidden_effect = { country_event = { id = usa.74 days = 460 } }
+		}
+}
+#Modern Times community complains about restriction to work
+country_event = {
+		id = usa.74
+		title = usa.74.t
+		desc = usa.74.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.74.a
+			add_political_power = -20
+			hidden_effect = { country_event = { id = usa.76 days = 40 } }
+		}
+		option = {
+			name = usa.74.b
+			hidden_effect = { country_event = { id = usa.75 days = 80 } }
+		}
+}
+#Modern Times Community radicalizes
+country_event = {
+		id = usa.75
+		title = usa.75.t
+		desc = usa.75.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.75.a
+			add_political_power = -5
+			add_stability = -0.05
+			set_country_flag = USA_Manhattan_Marked_ACW
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.78 days = 30 } }
+		}
+		option = {
+			name = usa.75.b
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+			hidden_effect = { country_event = { id = usa.76 days = 150 } }
+		}
+}
+#Modern Times Community calms
+country_event = {
+		id = usa.76
+		title = usa.76.t
+		desc = usa.76.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.76.a
+			add_political_power = 10
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.01
+			}
+		}
+}
+#Norton Grows Powerful
+country_event = {
+		id = usa.77
+		title = usa.77.t
+		desc = usa.77.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.77.a
+			set_country_flag = USA_Norton_Marked_ACW
+		}
+}
+#Modern Times Grows Powerful
+country_event = {
+		id = usa.78
+		title = usa.78.t
+		desc = usa.78.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.78.a
+			set_country_flag = USA_Manhattan_Marked_ACW
+		}
+}
+#Reconstruction Events#
+#Freedmans Bureau
+country_event = {
+		id = usa.79
+		title = usa.79.t
+		desc = usa.79.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.79.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 5
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.03
+			}
+			add_ideas = USA_freedman_bureau
+			custom_effect_tooltip = USA_reconstruction_add_5
+			add_political_power = -50
+			ai_chance = {
+				factor = 70
+				modifier = {
+					factor = 0
+					has_government = traditional_conservatism
+				}
+			}
+		}
+		option = {
+			name = usa.79.b
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_ideas = USA_freedman_bureau
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.02
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+			add_political_power = -25
+			ai_chance = {
+				factor = 30
+				modifier = {
+					factor = 0
+					has_government = traditional_conservatism
+				}
+			}
+		}
+		option = {
+			name = usa.79.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 4
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.02
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_4
+			add_political_power = 25
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#Seizing Plantations
+country_event = {
+		id = usa.80
+		title = usa.80.t
+		desc = usa.80.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.80.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			random_owned_state = {
+				limit = {
+					cotton_farm > 0
+				}
+				remove_building = {
+					type = cotton_farm
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					cotton_farm > 0
+				}
+				remove_building = {
+					type = cotton_farm
+					level = 1
+				}
+			}
+			add_timed_idea = {
+				idea = USA_seize_plantations
+				days = 400
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.04
+			}
+			add_political_power = -50
+			custom_effect_tooltip = USA_reconstruction_add_2
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.80.b
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			add_political_power = -25
+			random_owned_state = {
+				limit = {
+					cotton_farm > 0
+				}
+				remove_building = {
+					type = cotton_farm
+					level = 1
+				}
+			}
+			add_timed_idea = {
+				idea = USA_seize_plantations
+				days = 400
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.02
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = centrism
+				}
+				modifier = {
+					factor = 50
+					has_government = traditional_conservatism
+				}
+			}
+		}
+		option = {
+			name = usa.80.c
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+				modifier = {
+					factor = 50
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#Oath of Loyalty
+country_event = {
+		id = usa.81
+		title = usa.81.t
+		desc = usa.81.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.81.a
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.81.b
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.02
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 25
+					has_government = centrism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+		}
+		option = {
+			name = usa.81.c
+			add_stability = 0.05
+			add_war_support = 0.05
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.04
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 25
+					has_government = centrism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_2
+		}
+		option = {
+			name = usa.81.e
+			add_stability = 0.1
+			add_war_support = 0.1
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.08
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_3
+		}
+}
+#Occupy the South
+country_event = {
+		id = usa.82
+		title = usa.82.t
+		desc = usa.82.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.82.a
+			add_stability = -0.05
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.05
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+		}
+		option = {
+			name = usa.82.b
+			add_political_power = 10
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.04
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+			}
+		}
+		option = {
+			name = usa.82.c
+			add_political_power = 20
+			add_stability = 0.05
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.03
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_3
+		}
+}
+#Black Wages
+country_event = {
+		id = usa.83
+		title = usa.83.t
+		desc = usa.83.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.83.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			custom_effect_tooltip = USA_reconstruction_add_3
+			add_timed_idea = {
+				idea = USA_black_wages
+				days = 750
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.02
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.83.b
+			add_political_power = -25
+			add_timed_idea = {
+				idea = USA_black_wages
+				days = 365
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = traditional_conservatism
+				}
+			}
+		}
+		option = {
+			name = usa.83.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = traditional_conservatism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_3
+		}
+}
+#Olklahoma Issue
+country_event = {
+		id = usa.84
+		title = usa.84.t
+		desc = usa.84.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.84.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.84.b
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#Lift Northern Matrial Law
+country_event = {
+		id = usa.85
+		title = usa.85.t
+		desc = usa.85.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.85.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+			add_stability = -0.05
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.02
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.85.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_2
+			add_stability = 0.05
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.02
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#People Complain about Policies
+country_event = {
+		id = usa.86
+		title = usa.86.t
+		desc = usa.86.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 14
+			}
+		}
+
+		mean_time_to_happen = {
+			days = 50
+		}
+		
+		option = {
+			name = usa.86.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_political_power = -50
+			custom_effect_tooltip = USA_reconstruction_add_3
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.86.b
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_3
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#KKK forms (hooray controversy)
+country_event = {
+		id = usa.87
+		title = usa.87.t
+		desc = usa.87.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 19
+			}
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 30
+		}
+		
+		option = {
+			name = usa.87.a
+			set_country_flag = USA_first_kkk
+		}
+}
+#KKK becomes violent (kotaku article incoming)
+country_event = {
+		id = usa.88
+		title = usa.88.t
+		desc = usa.88.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 24
+			}
+			has_country_flag = USA_first_kkk
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 60
+		}
+		
+		option = {
+			name = usa.88.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			add_political_power = -75
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 90
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.88.b
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 4
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_4
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 10
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#KKK intimidates voters
+country_event = {
+		id = usa.89
+		title = usa.89.t
+		desc = usa.89.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			has_country_flag = USA_first_kkk
+			date > 1868.11.1
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 2
+		}
+		
+		option = {
+			name = usa.89.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			add_manpower = -2500
+			add_political_power = -50
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.89.b
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 4
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.03
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_4
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#KKK disrupts southern factory
+country_event = {
+		id = usa.90
+		title = usa.90.t
+		desc = usa.90.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 24
+			}
+			any_owned_state = {
+				industrial_complex > 0
+				OR = {
+					state = 362
+					state = 363
+					state = 364
+					state = 365
+					state = 366
+					state = 367
+					state = 368
+					state = 370
+					state = 371
+					state = 372
+					state = 375
+				}
+			}
+			has_country_flag = USA_first_kkk
+		}
+
+		mean_time_to_happen = {
+			days = 400
+		}
+		
+		option = {
+			name = usa.90.a
+			add_political_power = -50
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					AND = {
+						has_government = social_egalitarianism
+						is_historical_focus_on = no
+					}
+				}
+				modifier = {
+					factor = 100
+					AND = {
+						check_variable = {
+							var = reconstruction_points
+							value < 70
+						}
+						is_historical_focus_on = yes
+					}
+				}
+			}
+		}
+		option = {
+			name = usa.90.b
+			add_political_power = -25
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+					OR = {
+						state = 362
+						state = 363
+						state = 364
+						state = 365
+						state = 366
+						state = 367
+						state = 368
+						state = 370
+						state = 371
+						state = 372
+						state = 375
+					}
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
+			}
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_1
+		}
+		option = {
+			name = usa.90.c
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+					OR = {
+						state = 362
+						state = 363
+						state = 364
+						state = 365
+						state = 366
+						state = 367
+						state = 368
+						state = 370
+						state = 371
+						state = 372
+						state = 375
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_2
+		}
+}
+#KKK 'ghosts of Confederate soldiers'
+country_event = {
+		id = usa.91
+		title = usa.91.t
+		desc = usa.91.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 24
+			}
+			has_country_flag = USA_first_kkk
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 250
+		}
+		
+		option = {
+			name = usa.91.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			add_political_power = -40
+			custom_effect_tooltip = USA_reconstruction_add_2
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.91.b
+			add_political_power = -20
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 50
+					has_government = centrism
+				}
+			}
+		}
+		option = {
+			name = usa.91.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_2
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#KKK attacks Loyal Leagues
+country_event = {
+		id = usa.92
+		title = usa.92.t
+		desc = usa.92.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			check_variable = {
+				var = reconstruction_points
+				value > 24
+			}
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 500
+		}
+		
+		option = {
+			name = usa.92.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			add_manpower = -4000
+			custom_effect_tooltip = USA_reconstruction_add_3
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 33
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+		}
+		option = {
+			name = usa.92.b
+			add_to_variable = {
+				var = reconstruction_points
+				value = 1
+			}
+			add_manpower = -2000
+			custom_effect_tooltip = USA_reconstruction_add_1
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 66
+					has_government = centrism
+				}
+			}
+		}
+		option = {
+			name = usa.92.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 3
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 10
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_3
+		}
+}
+#Third Enforcement Act
+country_event = {
+		id = usa.93
+		title = usa.93.t
+		desc = usa.93.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.93.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 5
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.02
+			}
+			custom_effect_tooltip = USA_reconstruction_add_5
+		}
+}
+#Southern Plantations don't pay black workers actual money
+country_event = {
+		id = usa.94
+		title = usa.94.t
+		desc = usa.94.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			has_idea = USA_recovery
+			has_idea = USA_black_wages
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 40
+		}
+		
+		option = {
+			name = usa.94.a
+			add_to_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 10
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = social_egalitarianism
+				}
+			}
+			custom_effect_tooltip = USA_reconstruction_add_2
+			add_political_power = -40
+		}
+		option = {
+			name = usa.94.b
+			add_political_power = -20
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 70
+					has_government = centrism
+				}
+			}
+		}
+		option = {
+			name = usa.94.c
+			subtract_from_variable = {
+				var = reconstruction_points
+				value = 2
+			}
+			custom_effect_tooltip = USA_reconstruction_remove_2
+			remove_ideas = USA_black_wages
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 20
+					has_government = centrism
+				}
+				modifier = {
+					factor = 100
+					has_government = traditional_conservatism
+				}
+			}
+		}
+}
+#Reconstruction is Over
+country_event = {
+		id = usa.95
+		title = usa.95.t
+		desc = usa.95.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.95.a
+			trigger = {
+				check_variable = {
+					var = reconstruction_points
+					value > 99
+				}
+			}
+			swap_ideas = {
+				remove_idea = limited_equality
+				add_idea = full_equality
+			}
+			clr_country_flag = USA_enforcement_act
+		}
+		option = {
+			name = usa.95.a
+			trigger = {
+				check_variable = {
+					var = reconstruction_points
+					value < 100
+				}
+				check_variable = {
+					var = reconstruction_points
+					value > 79
+				}
+			}
+			clr_country_flag = USA_enforcement_act
+		}
+		option = {
+			name = usa.95.a
+			trigger = {
+				check_variable = {
+					var = reconstruction_points
+					value < 80
+				}
+				check_variable = {
+					var = reconstruction_points
+					value > 19
+				}
+			}
+			swap_ideas = {
+				remove_idea = limited_equality
+				add_idea = segregation
+			}
+			clr_country_flag = USA_enforcement_act
+		}
+		option = {
+			name = usa.95.a
+			trigger = {
+				check_variable = {
+					var = reconstruction_points
+					value < 20
+				}
+			}
+			swap_ideas = {
+				remove_idea = limited_equality
+				add_idea = racial_laws
+			}
+			clr_country_flag = USA_enforcement_act
+		}
+}
+
+
+#News Events
+
+add_namespace = usa_news
+#Panic of 1857
+news_event = {
+		id = usa_news.0
+		title = usa_news.0.t
+		desc = usa_news.0.d
+		picture = GFX_news_event_panic_eighteen_fifty
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.0.a
+			trigger = {
+				NOT = { tag = USA }
+			}
+		}
+		option = {
+			name = usa_news.0.b
+			trigger = {
+				tag = USA
+			}
+			set_global_flag = Panic_of_1857
+		}
+}
+#Lincoln-Douglas debate
+news_event = {
+		id = usa_news.1
+		title = usa_news.1.t
+		desc = usa_news.1.d
+		picture = GFX_news_event_lincoln_douglas
+
+		fire_only_once = yes
+
+		major = no
+		
+		trigger = {
+			TAG = USA
+			date > 1858.10.20
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		option = {
+				name = usa_news.1.a
+				add_popularity = { ideology = centrism popularity = 0.1 }
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+}
+#1860 Campaigning
+news_event = {
+		id = usa_news.2
+		title = usa_news.2.t
+		desc = usa_news.2.d
+		picture = GFX_news_event_1860_campaigning
+
+		fire_only_once = yes
+
+		major = no
+		
+		trigger = {
+			TAG = USA
+			date > 1860.5.18
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		option = {
+			name = usa_news.2.a
+			add_popularity = { ideology = centrism popularity = 0.05 }
+			create_country_leader = {
+    			name = "Abraham Lincoln"
+    			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    			picture = "Portrait_USA_Abraham_Lincoln.dds"
+    			expire = "1886.5.2"
+    			ideology = conserv_liberal
+    			traits = {
+    			  controversial_figure
+    			  eoanb_trait_patriotic_orator
+    			}
+  			}
+  			create_country_leader = {
+			    name = "John C. Frémont"
+			    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+			    picture = "Portrait_USA_John_C_Fremont.dds"
+			    expire = "1886.5.2"
+			    ideology = liberal_social
+			    traits = {
+			    }
+			  }
+		}
+}
+#1860 Election - Lincoln
+news_event = {
+		id = usa_news.3
+		title = usa_news.3.t
+		desc = usa_news.3.d
+
+		picture = GFX_news_event_lincoln_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.3.a
+		}
+}
+#1860 Election - Breckinridge
+news_event = {
+		id = usa_news.4
+		title = usa_news.4.t
+		desc = usa_news.4.d
+
+		picture = GFX_news_event_breckenridge_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.4.a
+		}
+}
+#1860 Election - Douglas
+news_event = {
+		id = usa_news.5
+		title = usa_news.5.t
+		desc = usa_news.5.d
+
+		picture = GFX_news_event_douglas_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.5.a
+		}
+}
+#South Carolina Independent
+news_event = {
+		id = usa_news.6
+		title = usa_news.6.t
+		desc = usa_news.6.d
+
+		picture = GFX_news_event_south_carolina
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { TAG = USA }
+				NOT = { TAG = CSA }
+			}
+				name = usa_news.6.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.6.b
+		}
+		option = {
+			trigger = {
+				TAG = CSA
+			}
+			name = usa_news.6.c
+		}
+}
+#Northern Coup
+news_event = {
+		id = usa_news.7
+		title = usa_news.7.t
+		desc = usa_news.7.d
+
+		picture = GFX_news_event_acw_radical_coup
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { TAG = USA }
+				NOT = { TAG = CSA }
+			}
+				name = usa_news.7.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.7.b
+		}
+		option = {
+			trigger = {
+				TAG = CSA
+			}
+			name = usa_news.7.c
+		}
+}
+#Civil War Avoided
+news_event = {
+		id = usa_news.8
+		title = usa_news.8.t
+		desc = usa_news.8.d
+		picture = GFX_news_event_acw_avoided
+
+		major = no
+		
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA 
+				}
+			}
+			name = usa_news.8.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.8.b
+		}
+}
+#Drake Well
+news_event = {
+		id = usa_news.9
+		title = usa_news.9.t
+		desc = usa_news.9.d
+		picture = GFX_news_event_drake_well
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA 
+				}
+			}
+			name = usa_news.9.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.9.b
+		}
+}
+#Socialist Revolution
+news_event = {
+		id = usa_news.10
+		title = usa_news.10.t
+		desc = usa_news.10.d
+		picture = GFX_news_event_usa_socialist_revolution
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA
+					has_government = social_egalitarianism
+					has_government = vanguard_communism
+					has_government = collectivist_socialism
+				}
+			}
+			name = usa_news.10.a
+		}
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA
+				}
+				has_government = social_egalitarianism
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+				}
+			name = usa_news.10.b
+			}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.10.c
+		}
+}
+#Monarchist Revolution
+news_event = {
+		id = usa_news.11
+		title = usa_news.11.t
+		desc = usa_news.11.d
+		picture = GFX_news_event_usa_monarchist_revolution
+
+		major = yes
+		
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA
+					has_government = autocracy
+				}
+			}
+			name = usa_news.11.a
+		}
+		option = {
+			trigger = {
+				NOT = { 
+					TAG = USA
+				}
+				has_government = autocracy
+				}
+			name = usa_news.11.b
+			}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.11.c
+		}
+}
+#Election of 1864
+news_event = {
+		id = usa_news.12
+		title = usa_news.12.t
+		desc = {
+            text = usa_news.12.d
+            trigger = { NOT = { has_country_flag = USA_DouglasElected } }
+            trigger = { has_war_with = CSA }
+        }
+        desc =  {
+            text = usa_news.12.d_a
+            trigger = { has_country_flag = USA_DouglasElected }
+            trigger = { has_war_with = CSA }
+        }
+        desc = {
+            text = usa_news.12.d_b
+            trigger = { NOT = { has_country_flag = USA_DouglasElected } }
+            trigger = { NOT = { has_war_with = CSA } }
+        }
+        desc =  {
+            text = usa_news.12.d_c
+            trigger = { has_country_flag = USA_DouglasElected }
+            trigger = { NOT = { has_war_with = CSA } }
+        }
+		picture = GFX_news_event_usa_election_of_1864
+
+		fire_only_once = yes
+
+		major = no
+		
+		trigger = {
+			TAG = USA
+			date > 1864.1.20
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		option = {
+				name = usa_news.12.a
+		}
+}
+#1864 Election - Lincoln
+news_event = {
+		id = usa_news.13
+		title = usa_news.13.t
+		desc = {
+            text = usa_news.13.d
+            trigger = { has_war_with = CSA }
+        }
+        desc = {
+            text = usa_news.13.d_a
+            trigger = { CSA = { exists = yes } }
+            trigger = { NOT = { has_war_with = CSA } }
+        }
+        desc = {
+            text = usa_news.13.d_b
+            trigger = { CSA = { exists = no } }
+        }
+
+		picture = GFX_news_event_usa_lincoln_2
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.13.a
+		}
+}
+#1864 Election - Stephen
+news_event = {
+		id = usa_news.14
+		title = usa_news.14.t
+		desc = {
+            text = usa_news.14.d
+            trigger = { has_war_with = CSA }
+        }
+        desc = {
+            text = usa_news.14.d_a
+            trigger = { CSA = { exists = yes } }
+            trigger = { NOT = { has_war_with = CSA } }
+        }
+        desc = {
+            text = usa_news.14.d_b
+            trigger = { CSA = { exists = no } }
+        }
+
+		picture = GFX_news_event_usa_douglas_2
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.14.a
+		}
+}
+#1864 Election - McClellan
+news_event = {
+		id = usa_news.15
+		title = usa_news.15.t
+		desc = usa_news.15.d
+
+		picture = GFX_news_event_usa_mcclellan_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.15.a
+		}
+}
+#1864 Election - Pendelton
+news_event = {
+		id = usa_news.16
+		title = usa_news.16.t
+		desc = usa_news.16.d
+
+		picture = GFX_news_event_usa_pendelton_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.16.a
+		}
+}
+#Alaska Purchase
+news_event = {
+		id = usa_news.17
+		title = usa_news.17.t
+		desc = usa_news.17.d
+
+		picture = GFX_news_event_usa_alaska
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.17.a
+		}
+		option = {
+			trigger = {
+				tag = RUS
+			}
+			name = usa_news.17.b
+		}
+		option = {
+			trigger = {
+				NOT = { tag = USA }
+				NOT = { tag = RUS }
+			}
+			name = usa_news.17.c
+		}
+}
+#Lincoln Assassinated
+news_event = {
+		id = usa_news.18
+		title = usa_news.18.t
+		desc = usa_news.18.d
+
+		picture = GFX_news_event_usa_lincoln_ford
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.18.a
+		}
+		option = {
+			trigger = {
+				NOT = { tag = USA }
+			}
+			name = usa_news.18.b
+		}
+}
+#Lincoln Saved
+news_event = {
+		id = usa_news.19
+		title = usa_news.19.t
+		desc = usa_news.19.d
+
+		picture = GFX_news_event_usa_lincoln_ford
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.19.a
+		}
+		option = {
+			trigger = {
+				NOT = { tag = USA }
+			}
+			name = usa_news.19.b
 		}
 }

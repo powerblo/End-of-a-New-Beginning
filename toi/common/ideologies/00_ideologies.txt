@@ -1,7 +1,7 @@
 ideologies = {
 
 	#Liberalist side of Democracy
-	economic_liberalism = {
+	centrism = {
 
 		types = {
 
@@ -30,16 +30,27 @@ ideologies = {
 			"FACTION_NAME_ECOLIB_5"
 		}
 
-		color = { 0 250 255 }
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
+		color = { 109 151 101 }
 
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_puppet = no
 			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
 		}
+
+		modifiers = {
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 0.45
+		faction_impact_on_world_tension = 0.1
 
 		ai_democratic = yes
 
@@ -58,11 +69,8 @@ ideologies = {
 
 				}
 
-				reactionary ={
-
-				}
-
 				neoconserv = {
+
 				}
 
 				conserv = {
@@ -81,23 +89,34 @@ ideologies = {
 			"FACTION_NAME_TRADCON_5"
 		}
 
-		color = { 0 180 255 }
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
-
+		color = { 64 89 137 }
+		
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_puppet = no
 			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
 		}
+
+		modifiers = {
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 0.45
+		faction_impact_on_world_tension = 0.1
 
 		ai_democratic = yes
 
 	}
 
 	#Docile version of socialism
-	social_democracy = {
+	social_egalitarianism = {
 
 		types = {
 			bernstein = {
@@ -121,46 +140,50 @@ ideologies = {
 			"FACTION_NAME_SOCDEM_5"
 		}
 
-		color = { 255 0 0 }
-
-		war_impact_on_world_tension = 0.75		#Commie less threatening
-		faction_impact_on_world_tension = 0.5
+		color = { 153 76 101 }
 
 		ai_communist = yes # uses the commie AI behaviour
 
 		rules = {
-			can_force_government = no
-			can_send_volunteers = yes
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
 			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
 
 		modifiers = {
-			puppet_cost_factor = -0.3
-		}
-
-		faction_modifiers = {
-
-		}
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 1
+		faction_impact_on_world_tension = 0.25
 
 	}
 
-	#Radicalism
-	radical_socialism = {
+	#classical socialism, syndicalism
+	collectivist_socialism = {
 
 		types = {
-			stalinism = {
+			syndicalism = {
+
 			}
 
-			trotskyism = {
+			anti_revisionism = {
+
 			}
 
 			owensim = {
-			}
 
-			anarchism = {
 			}
 
 			religious_social = {
+
 			}
 		}
 
@@ -172,44 +195,54 @@ ideologies = {
 			"FACTION_NAME_RADSOC_5"
 		}
 
-		color = { 168 0 0 }
-
-		war_impact_on_world_tension = 0.75		#Commie less threatening
-		faction_impact_on_world_tension = 0.5
+		color = { 204 75 75 }
 
 		ai_communist = yes # uses the commie AI behaviour
 
 		rules = {
-			can_force_government = no
-			can_send_volunteers = yes
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
 			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
 
 		modifiers = {
-			puppet_cost_factor = -0.3
-		}
-
-		faction_modifiers = {
-
-		}
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 1.2
+		faction_impact_on_world_tension = 0.25
 
 	}
 
 	#Out of radicalism, ideologies that are especially marxist or leninist
-	marxism_leninism = {
+	vanguard_communism = {
 
 		types = {
-
 			marxism = {
+
 			}
 
 			leninism = {
+
 			}
 
 			maoism = {
+
 			}
 
-			anti_revisionism = {
+			stalinism = {
+
+			}
+
+			trotskyism = {
+
 			}
 		}
 
@@ -221,47 +254,63 @@ ideologies = {
 			"FACTION_NAME_MARXLEN_5"
 		}
 
-		color = { 168 0 0 }
-
-		war_impact_on_world_tension = 0.75		#Commie less threatening
-		faction_impact_on_world_tension = 0.5
+		color = { 96 35 35 }
 
 		ai_communist = yes # uses the commie AI behaviour
 
 		rules = {
-			can_force_government = no
-			can_send_volunteers = yes
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
 			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
 
 		modifiers = {
-			puppet_cost_factor = -0.3
-		}
-
-		faction_modifiers = {
-
-		}
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 0.95
+		faction_impact_on_world_tension = 0.4
 
 	}
 
 	#All forms of traditional monarchies
-	despotic_autocracy = {
+	autocracy = {
 
 		types = {
 
 			despotism = {
+
 			}
 
 			tribe = {
+
 			}
 
 			statocratism = {
+
 			}
 
 			absolutism = {
+
 			}
 
 			constit_monarch = {
+
+			}
+
+			oligarchism = {
+
+			}
+
+			parlia_repub = {
+
 			}
 		}
 
@@ -273,51 +322,50 @@ ideologies = {
 			"FACTION_NAME_DESPAUTO_5"
 		}
 
-		color = { 165 25 210 }
-
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
+		color = { 118 85 130 }
 
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_puppet = no
 			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
 		}
 
 		modifiers = {
-			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
-			lend_lease_tension = 0.4
-			send_volunteers_tension = 0.4
-			guarantee_tension = 0.4
-			drift_defence_factor = -0.3
-		}
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 0.8
+		faction_impact_on_world_tension = 0.25
 
-		faction_modifiers = {
-		}
-
-		can_be_boosted = no
-
-		ai_neutral = yes #
+		ai_neutral = yes
 
 	}
 
- 	#Oligarchies with principally different ideas to despotism
-	parliamental_oligarchy = {
+ 	#autoritarian democracies
+	radical_democracy = {
 
 		types = {
-			oligarchism = {
+			military_junta = {
+
 			}
 
-			parlia_repub = {
+			reactionary ={
+
 			}
 
 			plutocracy = {
-			}
 
-			military_junta = {
+			}
+			
+			revolutionary ={
+
 			}
 		}
 
@@ -329,52 +377,80 @@ ideologies = {
 			"FACTION_NAME_PARLOLIG_5"
 		}
 
-		color = { 220 220 180 }
+		color = { 159 166 181 }
 
-
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
 
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_puppet = no
 			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
 		}
 
 		modifiers = {
-			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
-			lend_lease_tension = 0.4
-			send_volunteers_tension = 0.4
-			guarantee_tension = 0.4
-			drift_defence_factor = -0.3
-		}
-
-		faction_modifiers = {
-		}
-
-		can_be_boosted = no
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 0.45
+		faction_impact_on_world_tension = 0.1
 
 		ai_neutral = yes #
 
 	}
 
 	#
-	totalitarian_nationalism = {
+	chauvinist_populism = {
 
 		types = {
 
 			nazism = {
+
 			}
 
 			fascism = {
+
 			}
 
 			neofascism = {
+
 			}
 
 			cleric_fascism = {
+
+			}
+
+			rexism = {
+
+			}
+
+			falangism = {
+
+			}
+
+			francoism = {
+
+			}
+
+			tropical = {
+
+			}
+
+			social_fascism = {
+
+			}
+
+			dictator = {
+
+			}
+
+			military_goverment = {
+
 			}
 
 		}
@@ -387,45 +463,37 @@ ideologies = {
 			"FACTION_NAME_TOTNAT_5"
 		}
 
-		color = { 45 45 45 }
-
-		war_impact_on_world_tension = 1.0			#evil!
-		faction_impact_on_world_tension = 1.0
+		color = { 76 66 63 }
 
 		rules = {
-			can_force_government = no
-			can_send_volunteers = yes
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = no
 			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
 
 		modifiers = {
-			justify_war_goal_when_in_major_war_time = -0.80
-		}
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 1.5
+		faction_impact_on_world_tension = 1.5
 
 		ai_fascist = yes # uses the fascist AI behaviour
 
 	}
 
 	#Any totalitarian ideas without heavy ideological alignment (usually slightly left-wing)
-	rexism_falangism = {
+	anarchism = {
 
 		types = {
-			rexism = {
-			}
-
-			falangism = {
-			}
-
-			francoism = {
-			}
-
-			tropical = {
-			}
-
-			social_fascism = {
-			}
-
-			dictator = {
+			anarchism_sub = {
 
 			}
 
@@ -439,30 +507,41 @@ ideologies = {
 			"FACTION_NAME_REXFAL_5"
 		}
 
-		color = { 85 35 0 }
-
-		war_impact_on_world_tension = 1.0			#evil!
-		faction_impact_on_world_tension = 1.0
+		color = { 255 0 0 }
 
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_send_volunteers = yes
+			can_send_volunteers = no
 			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
 
 		modifiers = {
-			justify_war_goal_when_in_major_war_time = -0.80
-		}
+			generate_wargoal_tension = 1
+			join_faction_tension = 1
+			lend_lease_tension = 1
+			send_volunteers_tension = 1
+			guarantee_tension = 1
+		}	
+		
+		war_impact_on_world_tension = 1.2
+		faction_impact_on_world_tension = 0.75
 
 		ai_fascist = yes # uses the fascist AI behaviour
 
 	}
 
 	#Ideology entirely based on teachings of religion
-	theocracy = {
+	fundamentalism = {
 
 		types = {
-
+			shogunate = {
+			
+			}
+			
 			christian = {
 
 			}
@@ -485,16 +564,27 @@ ideologies = {
 			"FACTION_NAME_THEO_5"
 		}
 
-		color = { 255 255 75 }
-
-		war_impact_on_world_tension = 0.8			#religion!
-		faction_impact_on_world_tension = 0.8
+		color = { 175 166 117 }
 
 		rules = {
+			can_declare_war_on_same_ideology = yes
 			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = no
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
 		}
+
+		modifiers = {
+			join_faction_tension = 0.1
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.2
+		}	
+		
+		war_impact_on_world_tension = 1.1
+		faction_impact_on_world_tension = 0.5
 
 		ai_neutral = yes
 

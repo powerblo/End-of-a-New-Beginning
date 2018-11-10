@@ -1,7 +1,7 @@
 equipments = {
 
 	convoy = {
-		year = 1910
+		year = 1850
 
 		is_archetype = yes
 		type = convoy
@@ -37,11 +37,15 @@ equipments = {
 		# (Describes combat behaviour - hidden stat)
 		offensive_weapons = no
 
-		build_cost_ic = 70
+		build_cost_ic = 150
+		resources = {
+			wood = 1
+			iron = 1
+		}
 	}
 
 	convoy_1 = {
-		year = 1910
+		year = 1850
 
 		archetype = convoy
 		type = {
@@ -50,4 +54,5 @@ equipments = {
 		active = yes
 		priority = 10
 	}
+	
 }

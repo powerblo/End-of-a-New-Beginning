@@ -1,0 +1,367 @@
+﻿add_namespace = wurttem
+
+#Wilhelm I dies + Karl I takes over
+country_event = {
+	id = wurttem.0
+	title = wurttem.0.t
+	desc = wurttem.0.d
+	picture = GFX_report_wittelsbachs
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = WUR
+		date > 1864.07.01
+	}
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = { 
+				name = "Karl I" 
+				desc = "POLITICS_KARL_I_DESC"
+				picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds" 
+				ideology = despotism
+				traits = { }
+			}
+			set_country_flag = WUR_victorian_wilhelm_dead
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.0.a
+	}
+}
+
+#Force stop emigration good
+country_event = {
+	id = wurttem.1
+	title = wurttem.1.t
+	desc = wurttem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.1.a
+		
+		remove_ideas = WUR_victorian_emigration_1
+	}
+}
+
+#Force stop emigration bad
+country_event = {
+	id = wurttem.2
+	title = wurttem.2.t
+	desc = wurttem.2.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_2
+		}
+	}
+}
+
+#Try to draw people in good
+country_event = {
+	id = wurttem.3
+	title = wurttem.1.t
+	desc = wurttem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.1.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_good
+		}
+	}
+}
+
+#Try to draw people in bad
+country_event = {
+	id = wurttem.4
+	title = wurttem.2.t
+	desc = wurttem.4.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_bad
+		}
+	}
+}
+
+#Uneployment recover
+country_event = {
+	id = wurttem.5
+	title = wurttem.5.t
+	desc = wurttem.5.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.5.a
+	}
+}
+
+#Integrate Liberalism
+news_event = {
+	id = wurttem.6
+	title = wurttem.6.t
+	desc = wurttem.6.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.6.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.6.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.6.c
+	}
+}
+
+#Suppress Liberalism
+news_event = {
+	id = wurttem.7
+	title = wurttem.7.t
+	desc = wurttem.7.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.7.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.7.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.7.c
+	}
+}
+
+#Decide on Schultheißwesen
+country_event = {
+	id = wurttem.8
+	title = wurttem.8.t
+	desc = wurttem.8.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.8.a
+		add_ideas = WUR_victorian_schultheisswesen_neglect
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.8.b
+		add_ideas = WUR_victorian_schultheisswesen_enforce
+	}
+}
+
+#Decide on Shifting Flow
+country_event = {
+	id = wurttem.9
+	title = wurttem.9.t
+	desc = wurttem.9.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.9.a
+		custom_effect_tooltip = WUR_customeffect_allow_shitftin_flow
+		hidden_effect = {
+			set_country_flag = WUR_pursue_shifting_flow
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.9.b
+		custom_effect_tooltip = WUR_customeffect_deny_shitftin_flow
+		hidden_effect = {
+			set_country_flag = WUR_pursue_foreign_policy
+		}
+	}
+}
+
+#Foreign Policy proxy
+country_event = {
+	id = wurttem.10
+	title = wurttem.10.t
+	desc = wurttem.10.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.10.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = WUR
+				modifier = wur_foreign_policy
+			}
+			WUR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = wur_foreign_policy 
+				}
+				
+				country_event = { id = wurttem.11 days = 1 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.10.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			set_country_flag = WUR_foreign_policy_deny
+			WUR = {
+				country_event = { id = wurttem.12 days = 1 }
+			}
+		}
+	}
+}
+
+#Foreign Policy good
+country_event = {
+	id = wurttem.11
+	title = wurttem.11.t
+	desc = wurttem.11.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = wurttem.11.a
+	}
+}
+
+#Foreign Policy bad
+country_event = {
+	id = wurttem.12
+	title = wurttem.12.t
+	desc = wurttem.12.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = wurttem.12.a
+	}
+}

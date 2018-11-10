@@ -1,23 +1,30 @@
 state={
 	id=10
 	name="STATE_10"
-	manpower = 3089000
+	manpower = 1767000
 
 	state_category = large_city
 
 	history={
 		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			3544 20
 		}
-		buildings = {
-			infrastructure = 7
-			arms_factory = 6
-			industrial_complex = 2
-			#anti_air_building = 2
-			
+		victory_points = {
+			402 3
 		}
-		add_core_of = RUS
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			logging_camp = 1
+		}
+	}
+	
+	resources = {
+		wood = 2
+		coal = 2
 	}
 
 	provinces={
