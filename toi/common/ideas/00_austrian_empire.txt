@@ -373,7 +373,165 @@ ideas = {
 	            ai_join_ally_desire_factor = 100 
 			}
 		}
-	}
+		
+		 AUS_abolish_landwehr = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = placeholder
+			
+			modifier = {
+	            training_time_factor = -0.1
+                experience_gain_army_factor = -0.1				
+			}
+		}
+		
+		AUS_reform_landwehr = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           training_time_factor = +0.1
+               experience_gain_army_factor = +0.1				
+			}
+		}
+		
+		AUS_strongest_confederation = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           industrial_capacity_factory = 0.05
+               production_speed_arms_factory_factor = 0.05			   
+			}
+		}
+		
+		AUS_austrian_railways = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           production_speed_infrastructure_factor = 0.05			   
+			}
+		}
+		
+		AUS_halt_und_verstarken = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           supply_consumption_factor = -0.05
+               consumer_goods_factor = 0.01			   
+			}
+		}
+		
+		AUS_lack_of_recruits = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           conscription_factor = -0.05
+			}
+	    }
+		
+		AUS_New_Navy_1 = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           industrial_capacity_dockyard = 0.1 
+			}
+	    }
+		
+		AUS_New_Navy_2 = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           industrial_capacity_dockyard = 0.15 
+			}
+	    }
+
+
+	}	
     political_advisor = {
 		AUS_advisor_hermann_dietrich_lindheim = {
 			allowed = {
@@ -445,5 +603,23 @@ ideas = {
 				neutral_party
 			}
 		}	
+	}
+	theorist = {
+		AUS_theorist_naval_ludwig_von_fautz = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			picture = placeholder 
+			
+			cost = 250
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		}
 	}
 }

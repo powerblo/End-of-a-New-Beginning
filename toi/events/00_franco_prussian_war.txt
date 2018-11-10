@@ -156,6 +156,14 @@ country_event = {
 			BAD = { country_event = { days = 1 id = fraprswar.12 } }
 			WUR = { country_event = { days = 1 id = fraprswar.12 } }
 			HSD = { country_event = { days = 1 id = fraprswar.12 } }
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+					PRS = { is_ai = yes }
+					FRA = { is_ai = yes }
+				}
+				PRS = { add_ideas = hidden_idea_historical_PRS_victory }
+			}
 		}
 	}
 	
@@ -247,6 +255,14 @@ country_event = {
 				threat = 5 
 				name = eoanb_threat_fp_war
 			}
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+					PRS = { is_ai = yes }
+					FRA = { is_ai = yes }
+				}
+				PRS = { add_ideas = hidden_idea_historical_PRS_victory }
+			}
 			news_event = news.10
 			set_global_flag = eoanb_flag_franco_prussian_war_ongoing
 			BAV = { country_event = { days = 1 id = fraprswar.12 } }
@@ -311,6 +327,14 @@ country_event = {
 			add_named_threat = { 
 				threat = 5 
 				name = eoanb_threat_fp_war
+			}
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+					PRS = { is_ai = yes }
+					FRA = { is_ai = yes }
+				}
+				PRS = { add_ideas = hidden_idea_historical_PRS_victory }
 			}
 			news_event = news.10
 			set_global_flag = eoanb_flag_franco_prussian_war_ongoing
@@ -380,6 +404,12 @@ country_event = {
 				}
 				remove_ideas = PRS_idea_rapid_expansion
 			}
+			if = {
+				limit = {
+					PRS = { has_idea = hidden_idea_historical_PRS_victory }
+				}
+				PRS = { remove_ideas = hidden_idea_historical_PRS_victory }
+			}
 		}
 	}
 	
@@ -398,6 +428,9 @@ country_event = {
 		name = fraprswar.12.a
 		ai_chance = { factor = 100 }
 		add_to_war = { targeted_alliance = PRS enemy = FRA }
+		PRS = {
+			add_to_faction = ROOT
+		}
 	}
 	
 	option = {
@@ -462,14 +495,14 @@ country_event = {
 			}
 			PRS = {
 				add_timed_idea = {
-				idea = PRS_idea_reparations_from_FRA
-				days = 365
+					idea = PRS_idea_reparations_from_FRA
+					days = 365
 				}
 			}
 			FRA = {
 				add_timed_idea = {
-				idea = PRS_idea_reparations_to_PRS
-				days = 365
+					idea = PRS_idea_reparations_to_PRS
+					days = 365
 				}
 			}
 			PRS = {
@@ -496,6 +529,12 @@ country_event = {
 					idea = PRS_idea_rapid_expansion
 					days = 1825
 				}
+			}
+			if = {
+				limit = {
+					PRS = { has_idea = hidden_idea_historical_PRS_victory }
+				}
+				PRS = { remove_ideas = hidden_idea_historical_PRS_victory }
 			}
 		}
 	}

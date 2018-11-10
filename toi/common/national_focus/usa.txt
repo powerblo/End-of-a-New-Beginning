@@ -11,24 +11,24 @@ focus_tree = {
 	focus = {
 		id = USA_american_civil_war
 		icon = GFX_goal_focus_american_civil_war
-		cost = 75
+		cost = 70
 		x = 3
 		y = 0
-			available = {
-					has_country_flag = USAAmerican_Civil_War
-				}
-			bypass = {
-					has_country_flag = USAAmerican_Civil_War
-				}
-			completion_reward = {
+		available = {
+				has_country_flag = USAAmerican_Civil_War
+			}
+		bypass = {
+				has_country_flag = USAAmerican_Civil_War
+			}
+		completion_reward = {
 
-}
+		}
 
 	}
 	focus = {
 		id = USA_under_panic
 		icon = GFX_focus_generic_concessions
-		cost = 75
+		cost = 70
 		x = 10
 		y = 0
 			available = {
@@ -45,11 +45,11 @@ focus_tree = {
 	focus = {
 		id = USA_buchanan_presidency
 		icon = GFX_goal_focus_president_buchanan
-		cost = 75
+		cost = 70
 		x = 15
 		y = 0
 			completion_reward = {
-					add_political_power = 25
+					add_political_power = 50
 				}
 
 	}
@@ -70,7 +70,7 @@ focus_tree = {
 	focus = {
 		id = USA_reconstruction
 		icon = GFX_goal_focus_industrial_revolution
-		cost = 75
+		cost = 70
 		x = 25
 		y = 0
 		available = {
@@ -93,7 +93,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_integrate
 		icon = GFX_goal_focus_enact_law
-		cost = 75
+		cost = 70
 		x = 12
 		y = 9
 			available = {
@@ -107,7 +107,7 @@ focus_tree = {
 	focus = {
 		id = USA_foreign_diplomacy
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 40
+		cost = 35
 		available = {
 			OR = {
 				has_country_flag = USASoaring_Eagle
@@ -266,6 +266,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					random_owned_controlled_state = {
+						limit = {
+							is_core_of = USA
+						}
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = industrial_complex
@@ -273,6 +276,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
@@ -345,6 +349,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					random_owned_controlled_state = {
+						limit = {
+							is_core_of = USA
+						}
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = arms_factory
@@ -352,6 +359,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
@@ -464,7 +472,7 @@ focus_tree = {
 	focus = {
 		id = USA_march_to_the_coast
 		icon = GFX_goal_generic_position_armies
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_cannot_stand
 		}
@@ -501,7 +509,7 @@ focus_tree = {
 	focus = {
 		id = USA_emancipation_proclaimation
 		icon = GFX_focus_generic_treaty
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_cannot_stand
 		}
@@ -556,7 +564,7 @@ focus_tree = {
 	focus = {
 		id = USA_meade_plan
 		icon = GFX_goal_focus_general_meade
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_defensive_tactics
 		}
@@ -576,7 +584,7 @@ focus_tree = {
 	focus = {
 		id = USA_meade_ground
 		icon = GFX_goal_generic_military_sphere
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_meade_plan
 		}
@@ -606,7 +614,7 @@ focus_tree = {
 	focus = {
 		id = USA_panic_control
 		icon = GFX_goal_generic_consumer_goods
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_under_panic
 		}
@@ -620,7 +628,7 @@ focus_tree = {
 	focus = {
 		id = USA_specie_payments
 		icon = GFX_goal_focus_banks
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_panic_control
 		}
@@ -644,13 +652,14 @@ focus_tree = {
 									add_idea = USA_first_recoveries_2
 								}
 						}
+					add_political_power = 25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_economy
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_integrate
 		}
@@ -664,7 +673,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_food
 		icon = GFX_goal_generic_construction2
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_economy
 		}
@@ -702,7 +711,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_railroads
 		icon = GFX_goal_focus_railroad_development
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_economy
 		}
@@ -744,13 +753,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_indust
 		icon = GFX_goal_generic_production
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_food
 		}
@@ -770,7 +780,7 @@ focus_tree = {
 	focus = {
 		id = USA_confiscate_twenty_bills
 		icon = GFX_goal_focus_increase_wages
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_panic_control
 		}
@@ -794,13 +804,14 @@ focus_tree = {
 									add_idea = USA_first_recoveries_2
 								}
 						}
+					add_political_power = 25
 				}
 
 	}
 	focus = {
 		id = USA_northern_focus
 		icon = GFX_goal_generic_production
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_specie_payments
 		}
@@ -819,23 +830,24 @@ focus_tree = {
 					360 = {
 							add_building_construction = {
 									type = infrastructure
-									level = 2
+									level = 1
 									instant_build = yes
 								}
-							add_extra_state_shared_building_slots = 2
+							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = industrial_complex
-									level = 2
+									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_southern_focus
 		icon = GFX_goal_generic_production2
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_confiscate_twenty_bills
 		}
@@ -851,16 +863,17 @@ focus_tree = {
 					362 = {
 							add_building_construction = {
 									type = infrastructure
-									level = 2
+									level = 1
 									instant_build = yes
 								}
-							add_extra_state_shared_building_slots = 2
+							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = industrial_complex
-									level = 2
+									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
@@ -870,7 +883,7 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_southern_focus
 		}
-		cost = 75
+		cost = 70
 		x = 12
 		y = 4
 			completion_reward = {
@@ -887,13 +900,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_military_armament_s
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_texas_plantations
 		}
@@ -908,13 +922,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_port_construction_s
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_military_armament_s
 		}
@@ -929,13 +944,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_utah_war
 		icon = GFX_goal_focus_utah_sword
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_buchanan_presidency
 		}
@@ -950,7 +966,7 @@ focus_tree = {
 	focus = {
 		id = USA_Respond_Mount_Mead
 		icon = GFX_goal_generic_military_sphere
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_utah_war
 		}
@@ -965,7 +981,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_culture
 		icon = GFX_goal_continuous_increase_nu
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_integrate
 		}
@@ -979,7 +995,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_wages
 		icon = GFX_goal_focus_increase_wages
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_culture
 		}
@@ -993,7 +1009,7 @@ focus_tree = {
 	focus = {
 		id = USA_Utah_Martial_Law
 		icon = GFX_goal_continuous_suppression
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_utah_war
 		}
@@ -1004,13 +1020,14 @@ focus_tree = {
 					add_idea = USA_UtahWar_2
 					remove_idea = USA_UtahWar
 				}
+				add_political_power = 10
 			}
 
 	}
 	focus = {
 		id = USA_pacify_utah
 		icon = GFX_goal_focus_utah_agreement
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_Utah_Martial_Law
 		}
@@ -1025,6 +1042,7 @@ focus_tree = {
 		completion_reward = {
 			UTA = { country_event = { id = utah.1 } }
 			remove_ideas = USA_UtahWar
+			add_political_power = 25
 		}
 
 	}
@@ -1042,13 +1060,14 @@ focus_tree = {
 				}
 			completion_reward = {
 					remove_ideas = USA_Buchanan_Corruption
+					add_political_power = 50
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_relation
 		icon = GFX_goal_generic_improve_relations
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_culture
 		}
@@ -1063,7 +1082,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_society
 		icon = GFX_goal_generic_propaganda
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_relation
 		}
@@ -1084,7 +1103,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_music
 		icon = GFX_goal_continuous_def_against_influence
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_society
 		}
@@ -1099,7 +1118,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_trade
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_music
 		}
@@ -1117,7 +1136,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_ideas
 		icon = GFX_goal_generic_radar
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_society
 		}
@@ -1132,7 +1151,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_state
 		icon = GFX_goal_generic_national_unity
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_ideas
 		}
@@ -1150,7 +1169,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_cult
 		icon = GFX_goal_anschluss
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_trade
 		}
@@ -1190,7 +1209,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_establish_relations
 		icon = GFX_goal_focus_recognize_csa
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_reconstruction
 		}
@@ -1216,7 +1235,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_trade_relations
 		icon = GFX_goal_generic_trade
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_establish_relations
 		}
@@ -1242,7 +1261,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_escapee_policy
 		icon = GFX_goal_continuous_restrict_freedom
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_trade_relations
 		}
@@ -1263,7 +1282,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_political_reform
 		icon = GFX_goal_focus_reform_administration
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_reconstruction
 		}
@@ -1277,7 +1296,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_suppress_riots
 		icon = GFX_goal_continuous_suppression
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_political_reform
 		}
@@ -1295,7 +1314,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_stabilize_congress
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_suppress_riots
 		}
@@ -1313,7 +1332,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_plea_for_order
 		icon = GFX_goal_continuous_def_against_influence
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_reconstruction
 		}
@@ -1327,7 +1346,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_healing_wounded
 		icon = GFX_focus_generic_concessions
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_plea_for_order
 		}
@@ -1344,7 +1363,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_employment_programs
 		icon = GFX_goal_generic_construction2
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_healing_wounded
 		}
@@ -1361,7 +1380,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_rebuild_maryland
 		icon = GFX_goal_continuous_repairments
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_stabilize_congress
 		}
@@ -1382,23 +1401,19 @@ focus_tree = {
 					361 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_illinois
 		icon = GFX_goal_focus_banks
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_stabilize_congress
 		}
@@ -1419,23 +1434,19 @@ focus_tree = {
 					395 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_ohio
 		icon = GFX_goal_focus_coal_mines
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_stabilize_congress
 		}
@@ -1459,23 +1470,19 @@ focus_tree = {
 					261 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_penn
 		icon = GFX_goal_focus_telegraph_lines
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_stabilize_congress
 		}
@@ -1496,23 +1503,19 @@ focus_tree = {
 					360 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_kentucky
 		icon = GFX_goal_focus_the_workers
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rebuild_penn
 		}
@@ -1527,16 +1530,12 @@ focus_tree = {
 					369 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -1624,7 +1623,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_monroe
 		icon = GFX_goal_focus_continent_north_america
-		cost = 15
+		cost = 35
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
@@ -1643,7 +1642,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_natives
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		cost = 15
+		cost = 35
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
@@ -1816,7 +1815,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_attack_utah
 		icon = GFX_focus_generic_strike_at_democracy2
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_attack_nez
 			focus = USA_diplomacy_attack_cheyenne
@@ -1837,7 +1836,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_native_cleaning
 		icon = GFX_goal_focus_continent_north_america
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_attack_sioux
 		}
@@ -1898,7 +1897,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_persecute_confederates
 		icon = GFX_focus_prc_infiltration
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_reconstruction
 		}
@@ -1915,7 +1914,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_seize_plantations
 		icon = GFX_goal_focus_the_elite
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_persecute_confederates
 		}
@@ -1929,7 +1928,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_oath_of_loyalty
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_seize_plantations
 		}
@@ -1943,7 +1942,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_olklahoma
 		icon = GFX_goal_generic_military_deal
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_reconstruction
 		}
@@ -1957,7 +1956,7 @@ focus_tree = {
 	focus = {
 		id = USA_lift_north_martial_law
 		icon = GFX_focus_generic_little_entente
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_olklahoma
 		}
@@ -1972,7 +1971,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_freedmans_bureau
 		icon = GFX_focus_generic_concessions
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_lift_north_martial_law
 		}
@@ -1986,7 +1985,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_occupy_south
 		icon = GFX_goal_continuous_suppression
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_reconstruction
 		}
@@ -2000,7 +1999,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_black_wages
 		icon = GFX_goal_focus_increase_wages
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_occupy_south
 		}
@@ -2014,7 +2013,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_respond_resistance
 		icon = GFX_focus_generic_little_entente
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_black_wages
 		}
@@ -2050,16 +2049,12 @@ focus_tree = {
 					362 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2087,16 +2082,12 @@ focus_tree = {
 					375 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2124,16 +2115,12 @@ focus_tree = {
 					363 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2161,16 +2148,12 @@ focus_tree = {
 					365 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2198,16 +2181,12 @@ focus_tree = {
 					368 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2235,16 +2214,12 @@ focus_tree = {
 					371 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2272,16 +2247,12 @@ focus_tree = {
 					372 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -2303,23 +2274,19 @@ focus_tree = {
 					370 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_great_lakes_expansion
 		icon = GFX_goal_focus_industrial_revolution
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_northern_focus
 		}
@@ -2339,13 +2306,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_military_armament
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_great_lakes_expansion
 		}
@@ -2360,13 +2328,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_port_construction
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_military_armament
 		}
@@ -2381,13 +2350,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_tame_the_west
 		icon = GFX_goal_focus_railroad_development
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_port_construction
 			focus = USA_port_construction_s
@@ -2423,13 +2393,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_california_railway
 		icon = GFX_goal_focus_telegraph_lines
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_port_construction
 			focus = USA_port_construction_s
@@ -2458,6 +2429,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
@@ -2525,7 +2497,7 @@ focus_tree = {
 	focus = {
 		id = USA_reuse_crash_railroads
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_port_construction_s
 			focus = USA_port_construction
@@ -2589,13 +2561,14 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_ulysses_plan
 		icon = GFX_goal_focus_general_grant
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_aggressive_tactics
 		}
@@ -2615,7 +2588,7 @@ focus_tree = {
 	focus = {
 		id = USA_sherman_plan
 		icon = GFX_goal_focus_general_sherman
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_aggressive_tactics
 		}
@@ -2635,7 +2608,7 @@ focus_tree = {
 	focus = {
 		id = USA_mcclellan_plan
 		icon = GFX_goal_focus_general_mcclellan
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_defensive_tactics
 		}
@@ -2655,7 +2628,7 @@ focus_tree = {
 	focus = {
 		id = USA_aggressive_tactics
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_civil_war_tactics
 		}
@@ -2672,7 +2645,7 @@ focus_tree = {
 	focus = {
 		id = USA_grant_butcher
 		icon = GFX_goal_continuous_suppression
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_ulysses_plan
 		}
@@ -2702,7 +2675,7 @@ focus_tree = {
 	focus = {
 		id = USA_sherman_scorch
 		icon = GFX_goal_generic_secret_weapon
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_sherman_plan
 		}
@@ -2732,7 +2705,7 @@ focus_tree = {
 	focus = {
 		id = USA_mcclellan_tactics
 		icon = GFX_goal_generic_army_doctrines
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_mcclellan_plan
 		}
@@ -2762,7 +2735,7 @@ focus_tree = {
 	focus = {
 		id = USA_strike_at_csa
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_grant_butcher
 		}
@@ -2782,7 +2755,7 @@ focus_tree = {
 	focus = {
 		id = USA_defend_the_union
 		icon = GFX_focus_secret_rearmament
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_mcclellan_tactics
 		}
@@ -2802,7 +2775,7 @@ focus_tree = {
 	focus = {
 		id = USA_reform_the_union_army
 		icon = GFX_focus_generic_military_mission
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_strike_at_csa
 			focus = USA_defend_the_union
@@ -2817,7 +2790,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_carolina
 		icon = GFX_goal_generic_construct_civilian
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_indust
 		}
@@ -2846,13 +2819,20 @@ focus_tree = {
 									level = 1
 								}
 						}
+					364 = {
+							remove_building = {
+									type = cotton_farm
+									level = 1
+								}
+						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_virginia
 		icon = GFX_goal_generic_construct_civilian
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_carolina
 		}
@@ -2881,27 +2861,26 @@ focus_tree = {
 									level = 1
 								}
 						}
+					746 = {
+							remove_building = {
+									type = cotton_farm
+									level = 1
+								}
+						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_river
 		icon = GFX_goal_continuous_non_factory_construct
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_indust
 		}
 		x = 10
 		y = 13
 			completion_reward = {
-					370 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
 					371 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
@@ -2910,14 +2889,6 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					372 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
 					373 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
@@ -2926,7 +2897,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					370 = {
+					371 = {
 							remove_building = {
 									type = cotton_farm
 									level = 1
@@ -2938,13 +2909,14 @@ focus_tree = {
 									level = 1
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_deep
 		icon = GFX_goal_continuous_non_factory_construct
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_river
 		}
@@ -2959,23 +2931,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					366 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
 					375 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-					367 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = industrial_complex
@@ -2995,13 +2951,14 @@ focus_tree = {
 									level = 1
 								}
 						}
+					add_political_power = -25
 				}
 
 	}
 	focus = {
 		id = USA_nocivilwar_industrialized
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_deep
 		}
@@ -3021,7 +2978,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_politics
 		icon = GFX_focus_generic_self_management
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_integrate
 		}
@@ -3035,7 +2992,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_congress
 		icon = GFX_goal_generic_demand_territory
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_politics
 		}
@@ -3049,7 +3006,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_repub
 		icon = GFX_goal_focus_us_republican_party
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_congress
 		}
@@ -3071,7 +3028,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_northdem
 		icon = GFX_goal_focus_us_democratic_party
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_congress
 		}
@@ -3092,7 +3049,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_democrats
 		icon = GFX_goal_focus_us_republican_democrat_agree
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_repub
 		}
@@ -3120,7 +3077,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_deslave
 		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_democrats
 		}
@@ -3137,7 +3094,7 @@ focus_tree = {
 	focus = {
 		id = USA_nocivilwar_deslaverize
 		icon = GFX_goal_generic_improve_relations
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_deslave
 		}
@@ -3173,16 +3130,12 @@ focus_tree = {
 					364 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -3204,16 +3157,12 @@ focus_tree = {
 					746 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -3238,16 +3187,12 @@ focus_tree = {
 					366 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
@@ -3269,23 +3214,19 @@ focus_tree = {
 					367 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_win_begin_readmission
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_rebuild_westvirginia
 		}
@@ -3340,7 +3281,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_texas
 		icon = GFX_focus_generic_treaty
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_arkansas
 		}
@@ -3357,7 +3298,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_virginia
 		icon = GFX_goal_focus_enact_law
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_begin_readmission
 		}
@@ -3371,7 +3312,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_ncarolina
 		icon = GFX_focus_generic_self_management
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_begin_readmission
 		}
@@ -3385,7 +3326,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_georgia
 		icon = GFX_goal_anschluss
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_ncarolina
 		}
@@ -3399,7 +3340,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_alabama
 		icon = GFX_goal_generic_improve_relations
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_tennessee
 		}
@@ -3413,7 +3354,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_louisiana
 		icon = GFX_goal_tripartite_pact
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_begin_readmission
 		}
@@ -3427,7 +3368,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_mississippi
 		icon = GFX_goal_focus_enact_law
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_alabama
 		}
@@ -3444,7 +3385,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_flordia
 		icon = GFX_focus_generic_self_management
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_louisiana
 		}
@@ -3458,7 +3399,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_arkansas
 		icon = GFX_goal_focus_newspapers
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_virginia
 		}
@@ -3472,7 +3413,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_scarolina
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_georgia
 		}
@@ -3489,7 +3430,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_readmin_tennessee
 		icon = GFX_focus_generic_treaty
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_begin_readmission
 		}
@@ -3503,7 +3444,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_end_reconstruction
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_win_readmin_texas
 		}
@@ -3570,7 +3511,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_rebuild_kansas
 		icon = GFX_goal_continuous_non_factory_construct
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rebuild_illinois
 		}
@@ -3585,23 +3526,19 @@ focus_tree = {
 					383 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_missouri
 		icon = GFX_goal_generic_construction
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rebuild_ohio
 		}
@@ -3616,23 +3553,19 @@ focus_tree = {
 					373 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_loss_rebuild_new_york
 		icon = GFX_goal_continuous_naval_production
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rebuild_maryland
 		}
@@ -3647,23 +3580,19 @@ focus_tree = {
 					358 = {
 							add_extra_state_shared_building_slots = 1
 							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-							add_building_construction = {
 									type = infrastructure
 									level = 1
 									instant_build = yes
 								}
 						}
+					add_political_power = -20
 				}
 
 	}
 	focus = {
 		id = USA_no_civil_war
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_nocivilwar_industrialized
 		}
@@ -3690,7 +3619,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_firm_republican
 		icon = GFX_goal_focus_us_republican_party
-		cost = 140
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_cooperate_push
 		}
@@ -3707,7 +3636,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_firm_democrat
 		icon = GFX_goal_focus_us_democratic_party
-		cost = 140
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_cooperate_push
 		}
@@ -3724,7 +3653,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_firm_stability
 		icon = GFX_goal_focus_us_republican_democrat_agree
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_firm_democrat
 		}
@@ -3755,7 +3684,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_rethink_republicans
 		icon = GFX_goal_focus_us_republican_party
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_break
 		}
@@ -3772,7 +3701,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_rethink_democratic
 		icon = GFX_goal_focus_us_democratic_party
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_break
 		}
@@ -3789,7 +3718,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_rethink_break
 		icon = GFX_goal_focus_us_republican_democrat_disagree
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rebuild_new_york
 		}
@@ -3813,7 +3742,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_democrats_farms
 		icon = GFX_goal_focus_increase_wages
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_democratic
 		}
@@ -3827,7 +3756,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_democrats_plant
 		icon = GFX_goal_focus_the_elite
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_democratic
 		}
@@ -3878,7 +3807,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_cooperate_push
 		icon = GFX_goal_generic_improve_relations
-		cost = 140
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_democrats_farms
 		}
@@ -3904,7 +3833,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_republicans_rights
 		icon = GFX_goal_continuous_boost_freedom
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_republicans
 		}
@@ -3918,7 +3847,7 @@ focus_tree = {
 	focus = {
 		id = USA_loss_republicans_urban
 		icon = GFX_goal_generic_construct_civilian
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_loss_rethink_republicans
 		}
@@ -3947,7 +3876,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_europe
 		icon = GFX_goal_focus_continent_west_europe
-		cost = 15
+		cost = 35
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
@@ -4125,7 +4054,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_liberals
 		icon = GFX_goal_focus_victory_mexico
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_culture
 		}
@@ -4141,7 +4070,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_conservatives
 		icon = GFX_goal_focus_crown_maximilian_austria
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_ideals
 		}
@@ -4220,7 +4149,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_pick_brazil
 		icon = GFX_goal_generic_major_alliance
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_visit
 		}
@@ -4236,7 +4165,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_pick_argentina
 		icon = GFX_goal_continuous_def_against_influence
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_support
 		}
@@ -4252,7 +4181,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_mend
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_pig_war
 		}
@@ -4283,7 +4212,7 @@ focus_tree = {
 	focus = {
 		id = USA_diplomacy_counter
 		icon = GFX_goal_focus_the_great_game
-		cost = 75
+		cost = 70
 		prerequisite = {
 			focus = USA_diplomacy_alaska
 		}
@@ -4396,7 +4325,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_westpoint_abandon
 		icon = GFX_goal_generic_army_doctrines
-		cost = 100
+		cost = 70
 		prerequisite = {
 			focus = USA_research_westpoint_restructure
 		}
@@ -4448,7 +4377,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_wartime_organization
 		icon = GFX_goal_generic_position_armies
-		cost = 85
+		cost = 70
 		prerequisite = {
 			focus = USA_research_wartime_artillery
 		}
@@ -4497,7 +4426,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_wartime_navy_reform
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 50
+		cost = 70
 		prerequisite = {
 			focus = USA_research_wartime_naval_thought
 		}
@@ -4520,7 +4449,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_wartime_finish
 		icon = GFX_focus_secret_rearmament
-		cost = 60
+		cost = 35
 		prerequisite = {
 			focus = USA_research_wartime_navy_reform
 		}
@@ -4550,7 +4479,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_engineer
 		icon = GFX_goal_generic_production2
-		cost = 60
+		cost = 40
 		prerequisite = {
 			focus = USA_research_civilian
 		}
@@ -4573,7 +4502,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_train
 		icon = GFX_goal_focus_railroad_development
-		cost = 50
+		cost = 40
 		prerequisite = {
 			focus = USA_research_civilian
 		}
@@ -4591,7 +4520,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_excavation
 		icon = GFX_goal_generic_construction2
-		cost = 50
+		cost = 40
 		prerequisite = {
 			focus = USA_research_civilian
 		}
@@ -4656,7 +4585,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_electronics
 		icon = GFX_goal_generic_production
-		cost = 80
+		cost = 50
 		prerequisite = {
 			focus = USA_research_civilian_chemistry
 		}
@@ -4677,7 +4606,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_aviation
 		icon = GFX_goal_generic_air_doctrine
-		cost = 85
+		cost = 50
 		prerequisite = {
 			focus = USA_research_civilian_chemistry
 		}
@@ -4698,7 +4627,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_air_equipment
 		icon = GFX_goal_generic_air_production
-		cost = 85
+		cost = 50
 		prerequisite = {
 			focus = USA_research_civilian_chemistry
 		}
@@ -4719,7 +4648,7 @@ focus_tree = {
 	focus = {
 		id = USA_research_civilian_finish
 		icon = GFX_focus_research2
-		cost = 100
+		cost = 70
 		prerequisite = {
 			focus = USA_research_civilian_electronics
 		}

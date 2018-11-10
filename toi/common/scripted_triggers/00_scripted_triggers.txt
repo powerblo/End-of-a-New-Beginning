@@ -127,14 +127,17 @@ nation_is_in_zollverein = {
 	}
 }
 
+PRS_is_in_1873_crisis = {
+	TAG = PRS
+	PRS_trigger_formed_germany = yes
+	OR = {
+		has_idea = GER_idea_1873_crash_gold
+	}
+}
+
 #############################################
 #for formed countries that use cosmetic tags#
 #############################################
-Country_formed_GER = {
-	#OR={
-		PRS_trigger_formed_germany = yes
-	#}
-}
 Country_formed_ITA = {
 	has_cosmetic_tag = PIE_focus_ITA
 }

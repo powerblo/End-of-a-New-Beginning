@@ -15,7 +15,6 @@ aggressive_expansion_category = {
 				has_war_with = FROM
 				has_war_together_with = FROM
 				is_in_faction_with = FROM
-				has_global_flag = containment_successful
 			}
 			is_puppet = no
 		}
@@ -56,11 +55,10 @@ aggressive_expansion_category = {
 				FROM = {
 					add_timed_idea = {
 						idea = containment_recent_target
-						days = 1460
+						days = 200
 					}
 				}
 				FROM = { save_global_event_target_as = contain_target_news }
-				set_country_flag = containment_starter
 				news_event = { id = contain_news.1 }
 				declare_war_on = {
 					target = FROM
@@ -68,22 +66,15 @@ aggressive_expansion_category = {
 				}
 			}
 			else = {
-				hidden_effect = {
-					FROM = {
-						every_enemy_country = {
-							limit = {
-								has_country_flag = containment_starter
-							}
-							country_event = contain.6
-						}
-					}
+				declare_war_on = {
+					target = FROM
+					type = contain_wargoal
 				}
-				custom_effect_tooltip = join_containment_war
 			}
 		}
 
 		ai_will_do = {
-			base = 10
+			base = 0
 			modifier = {
 				factor = 0
 				OR = {
@@ -105,20 +96,23 @@ aggressive_expansion_category = {
 				tag = SWI
 			}
 			modifier = {
+				add = 1
+				is_neighbor_of = FROM
+			}
+			modifier = {
+				add = 5
+				is_neighbor_of = FROM
+				FROM = { has_defensive_war = yes  }
+			}
+			modifier = {
 				factor = 0
-				NOT = {
-					OR = {
-						is_neighbor_of = FROM
-						tag = ENG
-						tag = FRA
-						tag = PRS
-						tag = AUS
-						tag = RUS
-						tag = PIE
-						tag = ITA
-						tag = GER
-						tag = USA
-					}
+				FROM = { has_defensive_war = yes }
+				NOT = { FROM = { has_idea = containment_recent_target } }
+			}
+			modifier = {
+				add = 1
+				FROM = {
+					num_of_factories > 29
 				}
 			}
 		}
@@ -130,8 +124,8 @@ aggressive_expansion_category = {
 
 		available = {
 			has_war_with = FROM
-			surrender_progress < 0.5
 			is_puppet = no
+			NOT { has_country_flag = containment_declined_peace }
 		}
 
 		target_trigger = {
@@ -151,13 +145,14 @@ aggressive_expansion_category = {
 		complete_effect = {
 			add_war_support = -0.1
 			add_stability = -0.1
-			white_peace = FROM
+			ROOT = { save_global_event_target_as = offered_peace_containment }
+			FROM = { country_event = { id = contain.2 hours = 1 } }
 		}
 
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 4
+				add = 2
 				FROM = {
 					NOT = {
 						has_idea = containment_recent_target
@@ -167,7 +162,7 @@ aggressive_expansion_category = {
 				NOT = { has_country_flag = contianment_starter }
 			}
 			modifier = {
-				add = 6
+				add = 2
 				FROM = {
 					NOT = {
 						has_idea = containment_recent_target
@@ -178,7 +173,7 @@ aggressive_expansion_category = {
 				NOT = { has_country_flag = contianment_starter }
 			}
 			modifier = {
-				add = 4
+				add = 1
 				FROM = {
 					NOT = {
 						has_idea = containment_recent_target

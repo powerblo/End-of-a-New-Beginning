@@ -1395,6 +1395,11 @@ technologies = {
 			leads_to_tech = tech_infantry_circular_magazines
 			research_cost_coeff = 1
 		}
+		
+		path = {
+			leads_to_tech = tech_infantry_shotgun_0
+			research_cost_coeff = 1
+		}
 
 		research_cost = 1.5
 		start_year = 1898
@@ -1747,6 +1752,60 @@ technologies = {
 		}
 	}
 	
+	#Shotguns
+	
+	tech_infantry_shotgun_0 = {
+
+		research_cost = 1.1
+		start_year = 1900
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1900}
+		}
+
+		enable_equipments = {
+			infantry_equipment_shotgun_0
+		}
+
+		path = {
+			leads_to_tech = tech_infantry_shotgun_1
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	tech_infantry_shotgun_1 = {
+
+		research_cost = 1.2
+		start_year = 1914
+		folder = {
+			name = infantry_folder
+			position = { x = 6 y = @1914}
+		}
+
+		enable_equipments = {
+			infantry_equipment_shotgun_1
+		}
+
+		path = {
+			leads_to_tech = tech_infantry_shotgun_1
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
 	#### Automatic Weaps.
 
 	gatling_gun = {
@@ -1755,7 +1814,7 @@ technologies = {
 		start_year = 1865
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1865}
+			position = { x = 8 y = @1865}
 		}
 
 		enable_equipments = {
@@ -1785,7 +1844,7 @@ technologies = {
 		start_year = 1868
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1868}
+			position = { x = 8 y = @1868}
 		}
 
 		path = {
@@ -1811,7 +1870,7 @@ technologies = {
 		start_year = 1870
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1870}
+			position = { x = 8 y = @1870}
 		}
 		
 		path = {
@@ -1837,7 +1896,7 @@ technologies = {
 		start_year = 1874
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1874}
+			position = { x = 8 y = @1874}
 		}
 
 		path = {
@@ -1864,7 +1923,7 @@ technologies = {
 		start_year = 1876
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1876}
+			position = { x = 8 y = @1876}
 		}
 
 		path = {
@@ -1891,7 +1950,7 @@ technologies = {
 		start_year = 1880
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1880}
+			position = { x = 8 y = @1880}
 		}
 
 		path = {
@@ -1917,7 +1976,7 @@ technologies = {
 		start_year = 1885
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1885}
+			position = { x = 8 y = @1885}
 		}
 
 		enable_equipments = {
@@ -1952,7 +2011,7 @@ technologies = {
 		start_year = 1892
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1892}
+			position = { x = 8 y = @1892}
 		}
 
 		categories = {
@@ -1979,7 +2038,7 @@ technologies = {
 		start_year = 1900
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1900}
+			position = { x = 8 y = @1900}
 		}
 
 		categories = {
@@ -2005,7 +2064,7 @@ technologies = {
 		start_year = 1912
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1912}
+			position = { x = 8 y = @1912}
 		}
 
 		categories = {
@@ -2035,7 +2094,7 @@ technologies = {
 		start_year = 1915
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1915}
+			position = { x = 8 y = @1915}
 		}
 
 		categories = {
@@ -2059,7 +2118,7 @@ technologies = {
 		start_year = 1916
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1916}
+			position = { x = 8 y = @1916}
 		}
 
 		categories = {
@@ -2081,7 +2140,7 @@ technologies = {
 		start_year = 1918
 		folder = {
 			name = infantry_folder
-			position = { x = 6 y = @1918}
+			position = { x = 8 y = @1918}
 		}
 
 		categories = {

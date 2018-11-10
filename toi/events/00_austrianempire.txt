@@ -5,7 +5,7 @@ country_event = {
 	id = AUSpolitics.1 
 	title = AUSpolitics.1.t
 	desc = AUSpolitics.1.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	fire_only_once = yes
 	
@@ -64,7 +64,7 @@ country_event = {
 	id = AUSpolitics.2 
 	title = AUSpolitics.2.t
 	desc = AUSpolitics.2.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	fire_only_once = yes
 	
@@ -89,7 +89,7 @@ country_event = { #Austrian Liberals Protest
 	id = AUSpolitics.3 
 	title = AUSpolitics.3.t
 	desc = AUSpolitics.3.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	fire_only_once = yes
 	
@@ -114,7 +114,7 @@ country_event = { #Bohemians Protests stopped
 	id = AUSpolitics.4
 	title = AUSpolitics.4.t
 	desc = AUSpolitics.4.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	fire_only_once = yes
 	
@@ -143,7 +143,7 @@ country_event = { #Hungarian Liberals Angered
 	id = AUSpolitics.5
 	title = AUSpolitics.5.t
 	desc = AUSpolitics.5.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	fire_only_once = yes
 	
@@ -174,7 +174,7 @@ country_event = { #Future of Lombardy Venetia
 	id = AUSdiplo.1
 	title = AUSdiplo.1.t
 	desc = AUSdiplo.1.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	is_triggered_only = yes 
 	
@@ -224,7 +224,7 @@ country_event = { #Future of Modena, Parma and Tuscany
 	id = AUSdiplo.2
 	title = AUSdiplo.2.t
 	desc = AUSdiplo.2.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	is_triggered_only = yes 
 	
@@ -309,7 +309,7 @@ country_event = { #Cede Savoy and Nice to France
 	id = AUSdiplo.3
 	title = AUSdiplo.3.t
 	desc = AUSdiplo.3.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	is_triggered_only = yes 
 	
@@ -335,7 +335,7 @@ country_event = { #FRA - Savoy and Nice ceded
 	id = AUSdiplo.4
 	title = AUSdiplo.4.t
 	desc = AUSdiplo.4.d
-	picture = GFX_report_event_second_vienna_award_pact
+	picture = GFX_report_event_AUS_wien_1
 	
 	is_triggered_only = yes 
 	
@@ -384,4 +384,157 @@ news_event = { #News event for Savoy ceded
 	option = {      
 		name = AUSdiplo.5.a
 	}
+}
+
+add_namespace = AUSgenerals
+
+country_event = { #Retire Ferenc Gyulay     
+	id = AUSgenerals.1
+	title = AUSgenerals.1.t
+	desc = AUSgenerals.1.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1859.05.15 
+		AUS = {
+		any_war_score < 2 
+		}
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.1.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 168305
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.1.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+		    add_stability = -0.05 
+			add_political_power = -50 
+		}
+	
+	}
+}
+
+country_event = { #Retire Heinrich von Hess      
+	id = AUSgenerals.2
+	title = AUSgenerals.2.t
+	desc = AUSgenerals.2.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1861.02.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.2.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 168306
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.2.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+			add_command_power = -50   
+		}
+	
+	}
+}
+
+country_event = { #Retire Eduard Clam-Gallas       
+	id = AUSgenerals.3
+	title = AUSgenerals.3.t
+	desc = AUSgenerals.3.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.08.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.3.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 16832
+	}
+	
+	option = { #Do not Retire him      
+		name = AUSgenerals.3.b 
+		ai_chance = { factor = 0 }
+	
+	    AUS = {
+			add_command_power = -75    
+		}
+	
+	}
+}
+
+country_event = { #Make Leopold Gondrecourt Tutor of Rudolf         
+	id = AUSgenerals.4
+	title = AUSgenerals.4.t
+	desc = AUSgenerals.4.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1864.07.15 
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.4.a 
+		ai_chance = { factor = 100 }
+		
+	    remove_unit_leader = 16833
+	}     
+}
+
+country_event = { #Retire Leopold Gondrecourt as Tutor        
+	id = AUSgenerals.5
+	title = AUSgenerals.5.t
+	desc = AUSgenerals.5.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.08.20  
+	}
+	
+	option = { #Retire him      
+		name = AUSgenerals.5.a 
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+            create_corps_commander = {
+            name = "Leopold Gondrecourt"
+            picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
+            traits = { }
+            skill = 3
+            attack_skill = 1
+	        defense_skill = 1
+	        planning_skill = 1
+	        logistics_skill = 1
+	        id = 16833
+		    }
+	    }
+    }		     
 }

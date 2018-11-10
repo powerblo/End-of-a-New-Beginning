@@ -227,6 +227,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 10
 			add_tech_bonus = { bonus = 0.1 uses = 2 category = land_doctrine }
+			remove_ideas = GER_idea_winners_of_fp
 		}
 	}
 	
@@ -453,15 +454,17 @@ focus_tree = {
 				limit = {
 					has_idea = prussian_military_spendage
 				}
-				add_political_power = 150
-				add_stability = 0.05
+				add_political_power = 120
+				add_stability = 0.02
+				add_war_support = 0.02
 			}
 			else_if = {
 				limit = {
 					has_idea = ten_percent
 				}
-				add_political_power = 150
-				add_stability = 0.05
+				add_political_power = 100
+				add_stability = 0.01
+				add_war_support = 0.01
 			}
 			else_if = {
 				limit = {
@@ -550,6 +553,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			remove_ideas = GER_idea_winners_of_fp
 		}
 	}
 	
@@ -950,16 +954,13 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
 		prerequisite = { focus = GER_focus_historical_gruenderzeit }
 		mutually_exclusive = { focus = GER_focus_historical_bimetalism }
 		mutually_exclusive = { focus = GER_focus_historical_silver_standard }
 		
 		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_gold_standard
 			add_ideas = GER_idea_gold_standard
 			hidden_effect = {
 				#Add Effect on Economic crisis later
@@ -1108,6 +1109,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = GER_focus_historical_gruenderzeit }
 		mutually_exclusive = { focus = GER_focus_historical_gold_standard }
@@ -1203,6 +1208,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_GER_focus_zusammenbruch
 			add_stability = -0.1
 		}
 	}
@@ -2608,7 +2614,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_focus_historical_german_korean_treaty_1883 }
 		available = {
-			nation_owns_chinese_trade_port = yes
+			custom_trigger_tooltip = {
+				tooltip = eoanb_tt_GER_focus_military_china		
+			}
+			hidden_trigger = {
+				nation_owns_chinese_trade_port = yes
+			}
 		}
 		
 		completion_reward = {
@@ -3487,6 +3498,7 @@ focus_tree = {
 				has_completed_focus = GER_focus_historical_technische_hochschulen
 				has_completed_focus = GER_focus_historical_feed_soldiers
 			}
+			NOT = { has_idea = GER_idea_winners_of_fp }
 		}
 		
 		completion_reward = {
