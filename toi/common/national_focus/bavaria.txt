@@ -2385,6 +2385,15 @@ focus_tree = {
 		cost = 35
 		available_if_capitulated = no
 		
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = BAV_customeffect_commoncontempt
 			hidden_effect = {

@@ -14,7 +14,10 @@ WUR_shifting_flow = {
 			has_country_flag = WUR_pursue_shifting_flow
 			NOT = {
 				OR = {
-					AUS = { has_opinion_modifier = wur_foreign_policy }
+					AUS = {
+						has_opinion_modifier = wur_foreign_policy
+						has_country_flag = WUR_foreign_policy_deny
+					}
 				}
 			}
 		}
@@ -28,7 +31,7 @@ WUR_shifting_flow = {
 			
 			hidden_effect = {
 				AUS = {
-					country_event = { id = wurttem.10 days = 3 }
+					country_event = { id = wurttem.10 days = 3}
 				}
 			}
 		}
@@ -52,7 +55,10 @@ WUR_shifting_flow = {
 			has_country_flag = WUR_pursue_shifting_flow
 			NOT = {
 				OR = {
-					FRA = { has_opinion_modifier = wur_foreign_policy }
+					FRA = {
+						has_opinion_modifier = wur_foreign_policy
+						has_country_flag = WUR_foreign_policy_deny
+					}
 				}
 			}
 		}
@@ -90,7 +96,10 @@ WUR_shifting_flow = {
 			has_country_flag = WUR_pursue_shifting_flow
 			NOT = {
 				OR = {
-					RUS = { has_opinion_modifier = wur_foreign_policy }
+					RUS = { 
+						has_opinion_modifier = wur_foreign_policy
+						has_country_flag = WUR_foreign_policy_deny
+					}
 				}
 			}
 		}

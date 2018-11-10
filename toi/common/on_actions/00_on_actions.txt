@@ -72,13 +72,11 @@ on_actions = {
 	#	}
 	#}
 
-	on_nuke_drop = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
+	#on_nuke_drop = {
+	#	effect = {
+	#		
+	#	}
+	#}
 
 	# country random events
 	#on_bi_yearly_pulse = {
@@ -89,21 +87,17 @@ on_actions = {
 	#
 	#}
 
-	on_border_war_lost = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
+	#on_border_war_lost = {
+	#	effect = {
+	#		
+	#	}
+	#}
 	
-	on_leave_faction = {
-		effect = {
-			#ROOT = {
-			#	decrease_ps_by_one = yes
-			#}
-		}
-	}
+	#on_leave_faction = {
+	#	effect = {
+	#		
+	#	}
+	#}
 
 	#FROM is the one that joins the faction
 	#on_create_faction = {
@@ -127,13 +121,11 @@ on_actions = {
 	#}
 
 	#FROM is war target
-	on_declare_war = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
+	#on_declare_war = {
+	#	effect = {
+	#		
+	#	}
+	#}
 	
 	# When a new faction is formed
 	#on_faction_formed = {
@@ -294,9 +286,6 @@ on_actions = {
 				}
 				FROM = { country_event = { id = caucasus.3 } }
 			}
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
 		}
 	}
 
@@ -307,42 +296,33 @@ on_actions = {
 	#	}
 	#}
 
-	on_government_change = {
-		effect = {			
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
+	#on_government_change = {
+	#	effect = {			
+	#		
+	#	}
+	#}
 
-	on_coup_succeeded = {
-		effect = {
-			set_variable = { ROOT.pol_stability = FROM.pol_stability }
-		}
-	}
+	#on_coup_succeeded = {
+	#	effect = {
+	#		
+	#	}
+	#}
 
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
-	on_civil_war_end = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-		}
-	}
+	#on_civil_war_end = {
+	#	effect = {
+	#		
+	#	}
+	#}
 
 	#used when puppeting in a peace conference
 	#ROOT = nation being puppeted, FROM = overlord
 	
-	on_puppet = {
-		effect = {
-			ROOT = {
-				decrease_ps_by_one = yes
-			}
-			#FROM = {
-			#	decrease_ps_by_one = yes
-			#}
-		}
-	}
+	#on_puppet = {
+	#	effect = {
+	#		
+	#	}
+	#}
 	
 	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
 	#ROOT = nation being released, FROM = overlord
@@ -354,13 +334,11 @@ on_actions = {
 	#}
 	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
-	on_annex = {
-		#effect = {
-		#	ROOT = {
-		#		decrease_ps_by_one = yes
-		#	}
-		#}
-	}
+	#on_annex = {
+	#	effect = {
+	#		
+	#	}
+	#}
 	
 	#on_unit_leader_created = {
 	#	effect = {
