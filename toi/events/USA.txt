@@ -3196,7 +3196,6 @@ country_event = {
 			TAG = USA
 			NOT = { has_country_flag = USA_Confederate_Investigation }
 			NOT = { has_country_flag = Davis_Captured }
-			has_global_flag = USAWins_Civil_War
 		}
 
 		fire_only_once = yes
@@ -5451,6 +5450,776 @@ country_event = {
 				add_idea = racial_laws
 			}
 			clr_country_flag = USA_enforcement_act
+		}
+}
+##Norton Events##
+#Districts
+country_event = {
+		id = usa.96
+		title = usa.96.t
+		desc = usa.96.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.96.a
+			swap_ideas = {
+				remove_idea = lp_land_purchase
+				add_idea = lp_land_estates
+			}
+		}
+		option = {
+			name = usa.96.b
+			add_political_power = 25
+		}
+}
+#Religion
+country_event = {
+		id = usa.97
+		title = usa.97.t
+		desc = usa.97.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.97.a
+			swap_ideas = {
+				remove_idea = secular_state
+				add_idea = state_religion
+			}
+		}
+		option = {
+			name = usa.97.b
+			add_political_power = 25
+		}
+}
+#Recognize Emperor Norton?
+country_event = {
+		id = usa.98
+		title = usa.98.t
+		desc = usa.98.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.98.a
+			add_opinion_modifier = {
+			    target = USA
+			    modifier = usa_recognize_norton
+			}
+			reverse_add_opinion_modifier = {
+			    target = USA
+			    modifier = usa_recognize_norton
+			}
+		}
+		option = {
+			name = usa.98.b
+			add_opinion_modifier = {
+			    target = USA
+			    modifier = usa_refuse_norton
+			}
+			reverse_add_opinion_modifier = {
+			    target = USA
+			    modifier = usa_refuse_norton
+			}
+		}
+}
+#Sending in National Guard
+country_event = {
+		id = usa.99
+		title = usa.99.t
+		desc = usa.99.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.99.a
+			add_manpower = -5000
+			add_political_power = -25
+			subtract_from_variable = {
+				var = USA_norton_rebels
+				value = 1
+			}
+		}
+		option = {
+			name = usa.99.b
+		}
+}
+#Norton Martial Law
+country_event = {
+		id = usa.100
+		title = usa.100.t
+		desc = usa.100.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.101.a
+			add_ideas = USA_norton_martial_law
+			subtract_from_variable = {
+				var = USA_norton_rebels
+				value = 1
+			}
+		}
+		option = {
+			name = usa.101.b
+		}
+}
+#Sons of Liberty Investigation
+country_event = {
+		id = usa.101
+		title = usa.101.t
+		desc = usa.101.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.102.a
+			add_stability = -0.05
+			add_political_power = -25
+			subtract_from_variable = {
+				var = USA_norton_rebels
+				value = 1
+			}
+		}
+		option = {
+			name = usa.102.b
+		}
+}
+#Arrest Leaders
+country_event = {
+		id = usa.102
+		title = usa.102.t
+		desc = usa.102.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.102.a
+			add_political_power = -75
+			subtract_from_variable = {
+				var = USA_norton_rebels
+				value = 1
+			}
+		}
+		option = {
+			name = usa.102.b
+		}
+}
+#Declare the Government
+country_event = {
+		id = usa.103
+		title = usa.103.t
+		desc = usa.103.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.103.a #Absolutism
+			set_country_flag = USA_norton_absolute
+		}
+		option = {
+			name = usa.103.b #Constitutional
+			set_country_flag = USA_norton_constitutional
+		}
+		option = {
+			name = usa.103.c #Parliament
+			set_country_flag = USA_norton_parliament
+		}
+}
+#Sons of Liberty Revolt
+country_event = {
+		id = usa.104
+		title = usa.104.t
+		desc = usa.104.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.104.a
+			trigger = {
+				has_completed_focus = USA_norton_promise_rights
+			}
+			start_civil_war = {
+			    ideology = centrism
+			    size = 0.4
+			    only_own_territory = yes
+			    capital = 1091
+			    states = { 
+			        357 1031 958 954
+			    }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = USA
+					has_government = centrism
+				}
+				create_country_leader = {
+                    name = "Ulysses S. Grant"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Ulysses_grant.dds"
+                    expire = "1947.1.1"
+                    ideology = radical_liberal
+                }
+                set_stability = 0.9
+                set_war_support = 0.9
+                set_cosmetic_tag = USA_free_states_of_america
+                every_state = {
+                	limit = {
+                		is_core_of = USA
+                	}
+                	add_core_of = PREV
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment
+                    amount = 500
+                    producer = USA
+                }
+                add_ideas = {
+                    hos_is_leader
+                    victorian_era
+                    law_victorian_army
+                    industrializing
+                    non_monarchical_system
+                    presidential_republic
+
+                    civilian_economy
+                    export_focus
+                    two_percent
+                    normal_taxes
+                    cl_restricted
+                    twelve_hour_work_day
+
+                    stagnation_growth
+                    border_control
+                    volunteer_only
+                    racial_laws
+                    universal_male_suffrage
+
+                    constitution_adopted
+                    free_elections
+
+                    privileged_education
+                    state_religion
+                    religion_protestant
+                }
+			}
+		}
+		option = {
+			name = usa.104.a
+			trigger = {
+				has_variable = USA_norton_rebels
+				check_variable = {
+					var = USA_norton_rebels
+					value = 4
+					compare = equals
+				}
+			}
+			start_civil_war = {
+			    ideology = centrism
+			    size = 0.3
+			    only_own_territory = yes
+			    capital = 1091
+			    states = { 
+			        357 1031 958 954
+			    }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = USA
+					has_government = centrism
+				}
+				create_country_leader = {
+                    name = "Ulysses S. Grant"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Ulysses_grant.dds"
+                    expire = "1947.1.1"
+                    ideology = radical_liberal
+                }
+                set_stability = 0.9
+                set_war_support = 0.9
+                set_cosmetic_tag = USA_free_states_of_america
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment
+                    amount = 500
+                    producer = USA
+                }
+                add_ideas = {
+                    hos_is_leader
+                    victorian_era
+                    law_victorian_army
+                    industrializing
+                    non_monarchical_system
+                    presidential_republic
+
+                    civilian_economy
+                    export_focus
+                    two_percent
+                    normal_taxes
+                    cl_restricted
+                    twelve_hour_work_day
+
+                    stagnation_growth
+                    border_control
+                    volunteer_only
+                    racial_laws
+                    universal_male_suffrage
+
+                    constitution_adopted
+                    free_elections
+
+                    privileged_education
+                    state_religion
+                    religion_protestant
+                }
+			}
+		}
+		option = {
+			name = usa.104.a
+			trigger = {
+				has_variable = USA_norton_rebels
+				check_variable = {
+					var = USA_norton_rebels
+					value = 3
+					compare = equals
+				}
+			}
+			start_civil_war = {
+			    ideology = centrism
+			    size = 0.2
+			    only_own_territory = yes
+			    capital = 1091
+			    states = { 
+			        357 1031 958 954
+			    }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = USA
+					has_government = centrism
+				}
+				create_country_leader = {
+                    name = "Ulysses S. Grant"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Ulysses_grant.dds"
+                    expire = "1947.1.1"
+                    ideology = radical_liberal
+                }
+                set_stability = 0.9
+                set_war_support = 0.9
+                set_cosmetic_tag = USA_free_states_of_america
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment
+                    amount = 500
+                    producer = USA
+                }
+                add_ideas = {
+                    hos_is_leader
+                    victorian_era
+                    law_victorian_army
+                    industrializing
+                    non_monarchical_system
+                    presidential_republic
+
+                    civilian_economy
+                    export_focus
+                    two_percent
+                    normal_taxes
+                    cl_restricted
+                    twelve_hour_work_day
+
+                    stagnation_growth
+                    border_control
+                    volunteer_only
+                    racial_laws
+                    universal_male_suffrage
+
+                    constitution_adopted
+                    free_elections
+
+                    privileged_education
+                    state_religion
+                    religion_protestant
+                }
+			}
+		}
+		option = {
+			name = usa.104.a
+			trigger = {
+				has_variable = USA_norton_rebels
+				check_variable = {
+					var = USA_norton_rebels
+					value = 2
+					compare = equals
+				}
+			}
+			start_civil_war = {
+			    ideology = centrism
+			    size = 0.15
+			    only_own_territory = yes
+			    capital = 1091
+			    states = { 
+			        357 1031 958 954
+			    }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = USA
+					has_government = centrism
+				}
+				create_country_leader = {
+                    name = "Ulysses S. Grant"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Ulysses_grant.dds"
+                    expire = "1947.1.1"
+                    ideology = radical_liberal
+                }
+                set_stability = 0.9
+                set_war_support = 0.9
+                set_cosmetic_tag = USA_free_states_of_america
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment
+                    amount = 500
+                    producer = USA
+                }
+                add_ideas = {
+                    hos_is_leader
+                    victorian_era
+                    law_victorian_army
+                    industrializing
+                    non_monarchical_system
+                    presidential_republic
+
+                    civilian_economy
+                    export_focus
+                    two_percent
+                    normal_taxes
+                    cl_restricted
+                    twelve_hour_work_day
+
+                    stagnation_growth
+                    border_control
+                    volunteer_only
+                    racial_laws
+                    universal_male_suffrage
+
+                    constitution_adopted
+                    free_elections
+
+                    privileged_education
+                    state_religion
+                    religion_protestant
+                }
+			}
+		}
+		option = {
+			name = usa.104.a
+			trigger = {
+				has_variable = USA_norton_rebels
+				check_variable = {
+					var = USA_norton_rebels
+					value = 1
+					compare = equals
+				}
+			}
+			start_civil_war = {
+			    ideology = centrism
+			    size = 0.1
+			    only_own_territory = yes
+			    capital = 1091
+			    states = { 
+			        357 1031 958 954
+			    }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = USA
+					has_government = centrism
+				}
+				create_country_leader = {
+                    name = "Ulysses S. Grant"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Ulysses_grant.dds"
+                    expire = "1947.1.1"
+                    ideology = radical_liberal
+                }
+                set_stability = 0.9
+                set_war_support = 0.9
+                set_cosmetic_tag = USA_free_states_of_america
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment
+                    amount = 2500
+                    producer = USA
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment
+                    amount = 500
+                    producer = USA
+                }
+                add_ideas = {
+                    hos_is_leader
+                    victorian_era
+                    law_victorian_army
+                    industrializing
+                    non_monarchical_system
+                    presidential_republic
+
+                    civilian_economy
+                    export_focus
+                    two_percent
+                    normal_taxes
+                    cl_restricted
+                    twelve_hour_work_day
+
+                    stagnation_growth
+                    border_control
+                    volunteer_only
+                    racial_laws
+                    universal_male_suffrage
+
+                    constitution_adopted
+                    free_elections
+
+                    privileged_education
+                    state_religion
+                    religion_protestant
+                }
+			}
+		}
+}
+#West Virginia Ultimatum
+country_event = {
+		id = usa.105
+		title = usa.105.t
+		desc = usa.105.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.105.a
+			ai_chance = {
+				factor = 40
+				modifier = {
+					factor = 0.5
+					strength_ratio = { tag = USA ratio > 1.5 }
+				}
+				modifier = {
+					factor = 0.2
+					strength_ratio = { tag = USA ratio > 3 }
+				}
+				modifier = {
+					factor = 0
+					strength_ratio = { tag = USA ratio > 5 }
+				}
+			}
+			USA = {
+				set_country_flag = USA_CSA_westvirginia
+				country_event = { id = usa.108 }
+			}
+		}
+		option = {
+			name = usa.105.b
+			ai_chance = {
+				factor = 60
+				modifier = {
+					factor = 0.5
+					strength_ratio = { tag = USA ratio < 1 }
+				}
+				modifier = {
+					factor = 0.2
+					strength_ratio = { tag = USA ratio < 0.5 }
+				}
+				modifier = {
+					factor = 0
+					strength_ratio = { tag = USA ratio < 0.2 }
+				}
+			}
+			USA = {
+				country_event = { id = usa.107 }
+			}
+		}
+}
+#Arizona Ultimatum
+country_event = {
+		id = usa.106
+		title = usa.106.t
+		desc = usa.106.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.106.a
+			ai_chance = {
+				factor = 40
+				modifier = {
+					factor = 0.5
+					strength_ratio = { tag = USA ratio > 1.5 }
+				}
+				modifier = {
+					factor = 0.2
+					strength_ratio = { tag = USA ratio > 3 }
+				}
+				modifier = {
+					factor = 0
+					strength_ratio = { tag = USA ratio > 5 }
+				}
+			}
+			USA = {
+				set_country_flag = USA_CSA_arizona
+				country_event = { id = usa.108 }
+			}
+		}
+		option = {
+			name = usa.106.b
+			ai_chance = {
+				factor = 60
+				modifier = {
+					factor = 0.5
+					strength_ratio = { tag = USA ratio < 1 }
+				}
+				modifier = {
+					factor = 0.2
+					strength_ratio = { tag = USA ratio < 0.5 }
+				}
+				modifier = {
+					factor = 0
+					strength_ratio = { tag = USA ratio < 0.2 }
+				}
+			}
+			USA = {
+				country_event = { id = usa.107 }
+			}
+		}
+}
+#Ultimatum Refused
+country_event = {
+		id = usa.107
+		title = usa.107.t
+		desc = usa.107.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.107.a
+			ai_chance = {
+				factor = 90
+			}
+		}
+		option = {
+			name = usa.107.b
+			ai_chance = {
+				factor = 10
+			}
+			declare_war_on = {
+				target = CSA
+				type = annex_everything
+			}
+		}
+}
+#Ultimatum Accepted
+country_event = {
+		id = usa.108
+		title = usa.108.t
+		desc = usa.108.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.108.a
+			if = {
+				limit = {
+					has_country_flag = USA_CSA_westvirginia
+				}
+				transfer_state = 746
+				add_state_core = 746
+			}
+			if = {
+				limit = {
+					has_country_flag = USA_CSA_arizona
+				}
+				transfer_state = 377
+				transfer_state = 376
+			}
 		}
 }
 
