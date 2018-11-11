@@ -1782,8 +1782,8 @@ country_event = { # The Kabyle manage to hold their lands
     tag = ALG
     has_war_with = KBY
     NOT = {
-      has_full_control_of_state = 459
-      has_full_control_of_state = 460
+      controls_state = 459
+      controls_state = 460
     }
   }
 
@@ -1796,8 +1796,17 @@ country_event = { # The Kabyle manage to hold their lands
     }
     KBY = {
       country_event = { id = nap_france.152 }
-      white_peace = FRA
-      white_peace = ALG
+      white_peace = {
+        tag = ALG
+      }
+      if = {
+        limit = {
+          has_war_with = FRA
+        }
+        white_peace = {
+          tag = FRA
+        }
+      }
       transfer_state = 459
       transfer_state = 460
       transfer_state = 513
