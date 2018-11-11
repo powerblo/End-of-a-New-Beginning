@@ -1081,26 +1081,16 @@ focus = {
         select_effect = {
         add_political_power = -25  
         }
-		
+
 		completion_reward = {
-		    random_owned_state = {
-			    limit = { NOT = { state = 1251 } } 
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1  
-                    instant_build = yes
-                }			
-			}
-		}
-		completion_reward = {
-		    random_owned_state = {
-			    limit = { NOT = { state = 1251 } } 
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1  
-                    instant_build = yes
-                }			
-			}
+		    # random_owned_state = {
+			    # limit = { NOT = { state = 1251 } } 
+                # add_building_construction = {
+                    # type = infrastructure
+                    # level = 1  
+                    # instant_build = yes
+                # }			
+			# }
 		}
 	}
 	
@@ -1195,18 +1185,18 @@ focus = {
 		prerequisite = { focus = GRE_industrialization }
 		
 		completion_reward = {
-			if = {
-			    limit = {
-			        1251 = { industrial_complex < 3 }
-				}
-		        1251 = {
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1    
-                        instant_build = yes
-                    }			
-			    }			
-			} 
+			# if = {
+			    # limit = {
+			        # 1251 = { industrial_complex < 3 }
+				# }
+		        # 1251 = {
+                    # add_building_construction = {
+                        # type = industrial_complex
+                        # level = 1    
+                        # instant_build = yes
+                    # }			
+			    # }			
+			# } 
 		}
 	}
 	
@@ -1255,7 +1245,7 @@ focus = {
         }
 		
 		completion_reward = {
-			add_political_power = 50
+			# add_political_power = 50
 		}
 	}
 	
@@ -1273,26 +1263,26 @@ focus = {
 			factor = 1
 		}	
 		
-		available = {
-        GRE = { has_political_power > 50 }
-        } 
+		#available = {
+        #GRE = { has_political_power > 50 }
+        #} 
 		
 		cancel_if_invalid = no
 		
-        select_effect = {
-        add_political_power = -50    
-        }
+        #select_effect = {
+        #add_political_power = -50    
+        #}
 		
 		prerequisite = { focus = GRE_industrialization }
 		
 		completion_reward = {
-		    47 = {
-                add_building_construction = {
-                    type = dockyard 
-                    level = 1  
-                    instant_build = yes
-                }			
-			}
+		#    47 = {
+        #        add_building_construction = {
+        #            type = dockyard 
+        #            level = 1  
+        #            instant_build = yes
+        #        }			
+		#	}
 		}
 	}
 	
