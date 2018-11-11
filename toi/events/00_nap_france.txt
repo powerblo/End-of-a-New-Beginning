@@ -1883,6 +1883,7 @@ country_event = { # Félix Charles Douay become general
 
   option = {
     name = nap_france.160.a
+	ai_chance = { factor = 100 }
 	# https://fr.wikipedia.org/wiki/F%C3%A9lix_Charles_Douay
 	create_corps_commander = {
 		name = "Félix Charles Douay"
@@ -1897,6 +1898,12 @@ country_event = { # Félix Charles Douay become general
 		planning_skill = 1
 		logistics_skill = 1
 	}
+	add_command_power = -20 
+  }
+
+  option = {
+    name = nap_france.160.b
+	ai_chance = { factor = 0 }
   }
 }
 
