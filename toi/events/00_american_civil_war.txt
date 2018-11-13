@@ -564,6 +564,9 @@ country_event = {
                 has_global_flag = Trent_Affair_ENG_Yes
             }
         }
+        ai_chance = {
+            factor = 60
+        }
         name = acw.12.a
         hidden_effect = { news_event = { id = acw_news.9 } }
         custom_effect_tooltip = 11_ACW_tt
@@ -571,6 +574,13 @@ country_event = {
     option = {
         trigger = {
             has_global_flag = Trent_Affair_ENG_Yes
+        }
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
         }
         name = acw.12.b
         set_global_flag = Trent_Affair_USA_Firm
@@ -2880,7 +2890,10 @@ country_event = {
         }
         USA = {
             add_ideas = {
-                racial_laws
+                Norton_legitimacy_5
+                USA_sons_of_liberty
+                no_elections
+                no_heir
             }
             set_politics = {
                 ruling_party = autocracy
@@ -2889,6 +2902,7 @@ country_event = {
                 ideology = autocracy
                 popularity = 0.4
             }
+            load_focus_tree = usa_norton
             if = {
                 limit = {
                     country_exists = CSA

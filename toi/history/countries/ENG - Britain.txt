@@ -66,9 +66,17 @@
     state_religion
 	religion_protestant
     #NATIONAL SPIRITS
-	
+	ENG_idea_sun_never_sets
+	ENG_idea_working_class_exploitation
+	ENG_idea_british_industrial_revolution
+	ENG_idea_european_isolationism
 	ENG_Victoria
   }
+  
+  set_variable = {
+    var = ENG_worker_unrest
+    value = 8
+}
   
   set_politics = {
     parties = {
@@ -379,8 +387,11 @@
 
   set_technology = {
 	infantry_weapons = 1
+	rifle_equipment1 = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
+	horse_artillery = 1
+	tech_infantry_special_infantry_corps = 1
 	tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
@@ -394,6 +405,8 @@
 	tech_infantry_caplock_pistol = 1
 	tech_infantry_infantry_swords = 1
 	tech_infantry_practical_rifling = 1
+	tech_infantry_colonial_marines = 1
+	tech_infantry_navy_revolver = 1
 	socket_bayonet = 1
 	civil_army_cloth = 1
 	basic_cavalry = 1
@@ -406,6 +419,30 @@
 	ornithopter = 1
 	start_build_tech = 1
 	screw_propeller = 1
+	land_doctrine_victorian = 1
+	naval_doctrine_victorian = 1
+	doctrine_victorian_naval_heavy = 1
+	air_doctrine_victorian = 1
+	tech_naval_1812_sloop = 1
+	tech_naval_1812_lineship = 1
+	tech_naval_1812_corvette = 1
+	tech_naval_1840_corvette = 1
+	tech_naval_1812_troops = 1
+	interchange_parts = 1
+	corliss_steam_engine = 1
+	refining = 1
+	industrial_finery_forge = 1
+	industrial_blast_furnace = 1
+	inorganic_chemistry = 1
+	wohler_synthesis = 1
+	early_medicine = 1
+	hygiene = 1
+	food_canning = 1
+	pre_industrial_farms = 1
+	pyroglycerine_synthesis = 1
+	voltas_battery = 1
+	tech_humanities_mercantilism = 1
+	tech_humanities_capitalism = 1
   }
   
   if = {

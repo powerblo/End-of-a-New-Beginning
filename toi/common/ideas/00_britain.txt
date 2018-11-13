@@ -26,5 +26,131 @@ ideas = {
 				research_time_factor = 0.05
 			}
 		}
+		ENG_idea_sun_never_sets = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = stiff_upper_lip
+			
+			modifier = {
+				stability_weekly = 0.001
+				surrender_limit = 0.1
+				justify_war_goal_time = -0.2
+				navy_max_range_factor = 0.2
+			}
+		}
+		ENG_idea_working_class_exploitation = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_oppression
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				stability_weekly = -0.001
+			}
+		}
+		ENG_idea_british_industrial_revolution = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				research_time_factor = -0.02
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		ENG_idea_european_isolationism = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_fortification_focus
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				join_faction_tension = 1.00
+				#ai_get_ally_desire_factor = -100
+			}
+		}
+		ENG_idea_defend_RAJ = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			cancel = { NOT = { has_war_with = SRS } }
+			
+			modifier = {
+				conscription = 0.01
+				army_core_defence_factor = 0.2
+			}
+		}
+		ENG_idea_RAJ_central_campaign = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = CZE_planning_bonus
+			
+			cancel = { NOT = { has_war_with = SRS } }
+			
+			targeted_modifier = { 
+				tag = SRS
+				attack_bonus_against = 0.15
+			}
+			
+			modifier = {
+				planning_speed = 0.30
+			}
+		}
+		ENG_idea_RAJ_preliminary_suppression = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_all_india_forward_bloc
+			
+			modifier = {	
+				stability_factor = 0.1
+				political_power_gain = -0.1
+			}
+		}
+		ENG_idea_RAJ_gse_act = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.005
+				stability_factor = -0.05
+			}
+		}
 	}
 }

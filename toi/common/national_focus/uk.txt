@@ -1,1 +1,311 @@
-#PURGED - SHOULD YOU EVER NEED TO RESTORE THIS, GET IT FROM A GITHUB VERSION PRIOR TO OCTOBER 22, 2018
+focus_tree = {
+	id = brtain_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = ENG_focus_sepoy_rebellion
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = 7
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = { RAJ = { has_war_with = SRS } }
+		
+		completion_reward = {
+			#Nothing and is always bypassed at game start
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_defend_jewel
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		x = 5
+		y = 1
+		cost = 25
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_sepoy_rebellion }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_defend_jewel
+			RAJ = { add_ideas = ENG_idea_defend_RAJ }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_cause_of_sepoy
+		icon = GFX_goal_focus_popularize
+		x = 3
+		y = 2
+		cost = 30
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_defend_jewel }
+		
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_blame_muslims
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_cause_of_sepoy }
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RAJ = { has_idea = religion_sikh }
+				}
+				add_stability = 0.05
+				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
+			}
+			if = {
+				limit = {
+					RAJ = { has_idea = religion_sunni }
+				}
+				add_stability = -0.05
+				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_blame_sikhs
+		icon = GFX_focus_RAJ_indian_gurkhas
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_cause_of_sepoy }
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RAJ = { has_idea = religion_sikh }
+				}
+				add_stability = -0.05
+				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
+			}
+			if = {
+				limit = {
+					RAJ = { has_idea = religion_sunni }
+				}
+				add_stability = 0.05
+				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_lessons_cawnpore
+		icon = GFX_focus_RAJ_indianisation_of_army
+		x = 7
+		y = 2
+		cost = 30
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_defend_jewel }
+		
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = { bonus = 0.2 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_colin_campbell_india
+		icon = GFX_goal_focus_military_reforms
+		x = 6
+		y = 3
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_lessons_cawnpore }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_colin_campbell
+			hidden_effect = {
+				RAJ = {
+					create_corps_commander = {
+						name = "Colin Campbell"
+						picture = "Portrait_ENG_Colin_Campbell.dds"
+						traits = { }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_central_indian_campaign
+		icon = GFX_focus_RAJ_two_nation_theory
+		x = 6
+		y = 4
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_colin_campbell_india }
+		bypass = { NOT = { RAJ = { has_war_with = SRS } } }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_defend_jewel
+			RAJ = { add_ideas = ENG_idea_RAJ_central_campaign }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_restore_peace_india
+		icon = GFX_goal_focus_ally_ENG
+		x = 6
+		y = 5
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_central_indian_campaign }
+		available = { SRS = { exists = no } }
+		
+		completion_reward = {
+			add_stability = 0.05
+			RAJ = { add_stability = 0.05 }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_preliminary_suppression
+		icon = GFX_goal_focus_controlled_press
+		x = 8
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_lessons_cawnpore }
+		
+		completion_reward = {
+			RAJ = { add_ideas = ENG_idea_RAJ_preliminary_suppression }
+			custom_effect_tooltip = eoanb_tt_focus_ENG_preliminary_suppression
+			hidden_effect = {
+				set_variable = {
+					var = ENG_RAJ_revolt_risk
+					value = 0
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_repeal_gse_act
+		icon = GFX_goal_focus_enact_law
+		x = 11
+		y = 1
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_sepoy_rebellion }
+		bypass = { NOT = { RAJ = { has_idea = ENG_idea_RAJ_gse_act } } }
+		
+		completion_reward = {
+			RAJ = { remove_ideas = ENG_idea_RAJ_gse_act }
+			add_opinion_modifier = { target = RAJ modifier = eoanb_om_repealed_gse_act_ENG_RAJ }
+			reverse_add_opinion_modifier = { target = RAJ modifier = eoanb_om_repealed_gse_act_ENG_RAJ }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_prepare_negotiations
+		icon = GFX_goal_focus_decentralisation_power
+		x = 9
+		y = 2
+		cost = 15
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_repeal_gse_act }
+		bypass = { NOT = { RAJ = { has_war_with = SRS } } }
+		
+		completion_reward = {
+			add_political_power = 50
+			RAJ = { add_political_power = 50 }
+			add_opinion_modifier = { target = RAJ modifier = eoanb_om_prepared_negotiations_ENG_RAJ }
+			reverse_add_opinion_modifier = { target = RAJ modifier = eoanb_om_prepared_negotiations_ENG_RAJ }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_repeal_regulatory_act
+		icon = GFX_goal_focus_support_liberalism
+		x = 11
+		y = 2
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_repeal_gse_act }
+		
+		completion_reward = {
+			add_stability = 0.02
+			custom_effect_tooltip = eoanb_tt_focus_ENG_repeal_regulatory_act
+			hidden_effect = {
+				RAJ = {
+					add_autonomy_score = {
+						value = 100
+					}
+				}
+			}
+		}
+	}
+	
+}

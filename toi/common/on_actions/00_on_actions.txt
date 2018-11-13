@@ -123,7 +123,7 @@ on_actions = {
 	#FROM is war target
 	#on_declare_war = {
 	#	effect = {
-	#
+	#		
 	#	}
 	#}
 	
@@ -134,7 +134,7 @@ on_actions = {
 	#	}
 	#}
 	
-	# ROOT is capitulated country, FROM is winner #Wrong, this is backwards according to testing.
+	# ROOT is capitulated country, FROM is winner... Wrong, this is backwards according to testing.
 	on_peaceconference_ended = {
 		effect = {
 			if = {
@@ -320,11 +320,107 @@ on_actions = {
 	#}
 
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
-	#on_civil_war_end = {
-	#	effect = {
-	#	
-	#	}
-	#}
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = USA
+						has_government = centrism
+						has_cosmetic_tag = USA_free_states_of_america
+					}
+					FROM = {
+						original_tag = USA
+						has_government = autocracy
+					}
+				}
+				every_state = {
+					remove_core_of = ROOT
+				}
+				drop_cosmetic_tag = yes
+				USA = {
+		            annex_country = {
+		                target = ROOT
+		                transfer_troops = yes
+		            }
+		            add_ideas = {
+	                    hos_is_leader
+	                    victorian_era
+	                    law_victorian_army
+	                    industrializing
+	                    non_monarchical_system
+	                    presidential_republic
+
+	                    civilian_economy
+	                    export_focus
+	                    two_percent
+	                    normal_taxes
+	                    cl_restricted
+	                    twelve_hour_work_day
+
+	                    stagnation_growth
+	                    border_control
+	                    volunteer_only
+	                    racial_laws
+	                    universal_male_suffrage
+
+	                    constitution_adopted
+	                    free_elections
+
+	                    privileged_education
+	                    state_religion
+	                    religion_protestant
+	                }
+		            set_politics = {
+		                ruling_party = centrism
+		            }
+		            create_country_leader = {
+	                    name = "Ulysses S. Grant"
+	                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	                    picture = "Portrait_USA_Ulysses_grant.dds"
+	                    expire = "1947.1.1"
+	                    ideology = radical_liberal
+	                }
+		            add_ideas = {
+	                    hos_is_leader
+	                    victorian_era
+	                    law_victorian_army
+	                    industrializing
+	                    non_monarchical_system
+	                    presidential_republic
+
+	                    civilian_economy
+	                    export_focus
+	                    two_percent
+	                    normal_taxes
+	                    cl_restricted
+	                    twelve_hour_work_day
+
+	                    stagnation_growth
+	                    border_control
+	                    volunteer_only
+	                    racial_laws
+	                    universal_male_suffrage
+
+	                    constitution_adopted
+	                    free_elections
+
+	                    privileged_education
+	                    secular_state
+	                    religion_protestant
+	                }
+		            add_popularity = {
+		                ideology = centrism
+		                popularity = 0.6
+		            }
+		            add_popularity = {
+		                ideology = traditional_conservatism
+		                popularity = 0.4
+		            }
+		        }
+			}
+		}
+	}
 
 	#used when puppeting in a peace conference
 	#ROOT = nation being puppeted, FROM = overlord
