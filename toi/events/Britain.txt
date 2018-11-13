@@ -1,4 +1,7 @@
 ﻿add_namespace = britain
+add_namespace = britainworkerunrest
+
+### NORMAL BRITISH EVENTS BELOW ###
 
 #The "Great Stink" of 1858
 country_event = {
@@ -24,6 +27,43 @@ country_event = {
 		hidden_effect = {
 			ENG = { set_country_flag = eoanb_flag_ENG_thames_polluted_stink }
 		}
+	}
+	
+}
+
+### WORKER UNREST RELATED EVENTS BELOW ###
+
+#Hidden Event that prevents unrest from going below 0% or above 100%
+country_event = {
+	id = britainworkerunrest.1
+	title = britainworkerunrest.1.t
+	desc = britainworkerunrest.1.d
+	
+	trigger = {
+		TAG = ENG
+		OR = {
+			check_variable = { ENG_worker_unrest > 100 }
+			check_variable = { ENG_worker_unrest < 0 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	hidden = yes
+	
+	immediate = {
+		clamp_variable = {
+			var = ENG_worker_unrest
+			min = 0
+			max = 100
+		}
+	}
+	
+	option = {
+		name = britainworkerunrest.1.a
+		ai_chance = { factor = 100 }
 	}
 	
 }
