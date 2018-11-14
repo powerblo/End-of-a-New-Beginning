@@ -186,3 +186,65 @@ country_event = {
 	}
 	
 }
+
+#Fixed Peace for if the Sepoy win the war
+country_event = {
+	id = britainindia.4
+	title = britainindia.4.t
+	desc = britainindia.4.d
+	picture = GFX_report_event_yugoslavian_cavalry
+	
+	fire_only_once = yes
+	
+	trigger = {	
+		TAG = SRS
+		has_global_flag = eoanb_flag_sepoy_rebellion_ongoing
+		OR = {
+			AND = {
+				431 = { is_controlled_by = SRS }
+				435 = { is_controlled_by = SRS }
+				433 = { is_controlled_by = SRS }
+				436 = { is_controlled_by = SRS }
+				1006 = { is_controlled_by = SRS }
+			}
+			AND = {
+				431 = { is_controlled_by = OUD }
+				435 = { is_controlled_by = OUD }
+				433 = { is_controlled_by = OUD }
+				436 = { is_controlled_by = OUD }
+				1006 = { is_controlled_by = OUD }
+			}
+			AND = {
+				431 = { is_controlled_by = GWA }
+				435 = { is_controlled_by = GWA }
+				433 = { is_controlled_by = GWA }
+				436 = { is_controlled_by = GWA }
+				1006 = { is_controlled_by = GWA }
+			}
+		}
+	}
+	
+	option = {
+		name = britainindia.4.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_4_a
+		hidden_effect = {
+			SRS = { transfer_state = 754 }
+			SRS = { transfer_state = 756 }
+			SRS = { transfer_state = 759 }
+			SRS = { transfer_state = 433 }
+			SRS = { transfer_state = 1006 }
+			SRS = { transfer_state = 435 }
+			SRS = { transfer_state = 436 }
+			white_peace = ENG
+			white_peace = RAJ
+			ENG = { complete_national_focus = ENG_focus_humiliation_by_sepoy }
+		}
+	}
+	
+	option = {
+		name = britainindia.4.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
