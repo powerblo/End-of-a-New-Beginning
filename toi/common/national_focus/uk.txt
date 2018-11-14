@@ -1,5 +1,5 @@
 focus_tree = {
-	id = brtain_focus
+	id = britain_focus
 	country = {
 		factor = 0
 		
@@ -59,7 +59,10 @@ focus_tree = {
 		prerequisite = { focus = ENG_focus_defend_jewel }
 		
 		completion_reward = {
-			add_war_support = 0.05
+			add_war_support = 0.02
+			RAJ = { add_stability = 0.02 }
+			RAJ = { add_war_support = 0.02 }
+			custom_effect_tooltip = eoanb_tt_focus_ENG_cause_of_sepoy
 		}
 	}
 	
@@ -74,8 +77,10 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = ENG_focus_cause_of_sepoy }
+		mutually_exclusive = { focus = ENG_focus_blame_sikhs }
 		
 		completion_reward = {
+			#Add consequences for states with muslim majority later, when religion system is implemented
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
@@ -108,8 +113,10 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = ENG_focus_cause_of_sepoy }
+		mutually_exclusive = { focus = ENG_focus_blame_muslims }
 		
 		completion_reward = {
+			#Add consequences for states with muslim majority later, when religion system is implemented
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
@@ -210,11 +217,19 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = ENG_focus_central_indian_campaign }
+		mutually_exclusive = { focus = ENG_focus_humiliation_by_sepoy }
 		available = { SRS = { exists = no } }
 		
 		completion_reward = {
 			add_stability = 0.05
 			RAJ = { add_stability = 0.05 }
+			custom_effect_tooltip = eoanb_tt_focus_ENG_RAJ_peace
+			hidden_effect = {
+				clr_global_flag = eoanb_flag_sepoy_rebellion_ongoing
+				SRS = { remove_state_core = 437 }
+				SRS = { remove_state_core = 438 }
+				SRS = { remove_state_core = 439 }
+			}
 		}
 	}
 	
@@ -234,10 +249,58 @@ focus_tree = {
 			RAJ = { add_ideas = ENG_idea_RAJ_preliminary_suppression }
 			custom_effect_tooltip = eoanb_tt_focus_ENG_preliminary_suppression
 			hidden_effect = {
-				set_variable = {
-					var = ENG_RAJ_revolt_risk
-					value = 0
+				if = {
+					limit = {
+						RAJ = {
+							check_variable = {
+								var = ENG_RAJ_revolt_risk
+								value = 2
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					RAJ = {
+						subtract_from_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 2
+						}
+					}
 				}
+				else = {
+					RAJ = { add_political_power = 25 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_humiliation_by_sepoy
+		icon = GFX_goal_focus_stop_fund_partisans
+		x = 8
+		y = 5
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = { focus = ENG_focus_restore_peace_india }
+		available = {
+			always = no
+		}
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			RAJ = { add_stability = -0.1 }
+			custom_effect_tooltip = eoanb_tt_focus_ENG_humiliation_SRS
+			hidden_effect = {
+				RAJ = {
+					add_to_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 5
+					}
+				}
+				clr_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			}
 		}
 	}
@@ -254,6 +317,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_sepoy_rebellion }
 		bypass = { NOT = { RAJ = { has_idea = ENG_idea_RAJ_gse_act } } }
+		available = {
+			has_completed_focus= ENG_focus_cause_of_sepoy
+		}
 		
 		completion_reward = {
 			RAJ = { remove_ideas = ENG_idea_RAJ_gse_act }
@@ -304,6 +370,287 @@ focus_tree = {
 						value = 100
 					}
 				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_stop_lapse_doctrine
+		icon = GFX_goal_focus_princely_local_governments
+		x = 10
+		y = 4
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
+		mutually_exclusive = { focus = ENG_focus_continue_annex_policy }
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_stop_lapse_doctrine
+			hidden_effect = {
+				RAJ = {
+					add_autonomy_score = {
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_continue_annex_policy
+		icon = GFX_goal_focus_british_colonial_empire
+		x = 12
+		y = 4
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
+		mutually_exclusive = { focus = ENG_focus_stop_lapse_doctrine }
+		available = { TRA = { exists = yes } }
+		bypass = { TRA = { has_war_with = RAJ } }
+		
+		select_effect = {
+			hidden_effect = {
+				RAJ = {
+					add_autonomy_score = {
+						value = -50
+					}
+				}
+			}
+			RAJ = {
+				add_to_variable = {
+					var = ENG_RAJ_revolt_risk
+					value = 1
+				}
+			}
+			TRA = { country_event = { id = britainindia.2 days = 1 } }
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_continue_annex_policy
+			if = {
+				limit = {
+					TRA = { exists = yes }
+				}
+				RAJ = {
+					annex_country = {
+						target = TRA
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_direct_RAJ_control
+		icon = GFX_goal_focus_british_military_government
+		x = 9
+		y = 6
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
+		mutually_exclusive = { focus = ENG_focus_the_RAJ_compromise focus = ENG_focus_grant_RAJ_autonomy }
+		
+		completion_reward = {
+			RAJ = {
+				add_to_variable = {
+					var = ENG_RAJ_revolt_risk
+					value = 3
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_direct_RAJ_control
+			hidden_effect = {
+				set_autonomy = {
+					target = RAJ
+					autonomy_state = autonomy_puppet
+				}
+				RAJ = { drop_cosmetic_tag = yes }
+				RAJ = { set_cosmetic_tag = RAJ_ENG_british_puppet }
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_the_RAJ_compromise
+		icon = GFX_goal_focus_form_british_raj
+		x = 11
+		y = 6
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
+		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_grant_RAJ_autonomy }
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_RAJ_compromise
+			hidden_effect = {
+				RAJ = { drop_cosmetic_tag = yes }
+				RAJ = { set_cosmetic_tag = RAJ_ENG_british_raj }
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_grant_RAJ_autonomy
+		icon = GFX_goal_focus_government_glass
+		x = 13
+		y = 6
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
+		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_the_RAJ_compromise }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_grant_RAJ_autonomy_rr
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+							compare = equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 2
+							compare = equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 3
+							compare = equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 4
+							compare = equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 4
+					}
+				}
+			}
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 5
+							compare = equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 5
+					}
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_grant_RAJ_autonomy
+			hidden_effect = {
+				set_autonomy = {
+					target = RAJ
+					autonomy_state = autonomy_dominion
+				}
+				RAJ = { drop_cosmetic_tag = yes }
+				RAJ = { set_cosmetic_tag = RAJ_ENG_british_dominion }
 			}
 		}
 	}

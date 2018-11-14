@@ -1,12 +1,15 @@
 on_actions = {
 
-	#Designed with 1857 start in mind
+	#Designed with 1857 start in mind - EFFECTS APPLY TO ALL START DATES, REMOVE EVERYTHING BUT GENERIC CONTENT WHEN SECOND DATE IS ADDED
 	on_startup = {
 		effect = {
 			SRS = { country_event = { days = 5 id = sepoy.1 } }
 			every_country = { country_event = { id = generic.4 } }
 			ENG = { country_event = { id = system.1 } }
 			USA = { country_event = { id = usa.0 days = 1 } }
+			OUD = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
+			GWA = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
+			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 		}
 	}
 	
