@@ -128,3 +128,61 @@ country_event = {
 	}
 	
 }
+
+#Revolt Risk above 5: Small riots in capital state
+country_event = {
+	id = britainindia.3
+	title = britainindia.3.t
+	desc = britainindia.3.d
+	picture = GFX_report_event_generic_rally2
+	
+	trigger = {
+		TAG = RAJ
+		check_variable = { ENG_RAJ_revolt_risk > 5 }
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+	}
+	
+	option = {
+		name = britainindia.3.a
+		ai_chance = { factor = 20 }
+		add_stability = -0.01
+		add_political_power = -40
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_3_a
+		hidden_effect = {
+			subtract_from_variable = {
+				var = ENG_RAJ_revolt_risk
+				value = 1
+			}
+		}
+	}
+	
+	option = {	
+		name = britainindia.3.b
+		ai_chance = { factor = 78 }
+		add_political_power = -20
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_3_b
+		hidden_effect = {
+			add_to_variable = {
+				var = ENG_RAJ_revolt_risk
+				value = 1
+			}
+		}
+	}
+	
+	option = {
+		name = britainindia.3.c
+		ai_chance = { factor = 2 }
+		add_stability = 0.05
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_3_c
+		hidden_effect = {
+			add_to_variable = {
+				var = ENG_RAJ_revolt_risk
+				value = 3
+			}
+		}
+	}
+	
+}
