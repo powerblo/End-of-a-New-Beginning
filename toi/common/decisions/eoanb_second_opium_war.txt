@@ -5,13 +5,13 @@ second_opium_war_decisions = {
 
 		available = {
 			tag = ENG
-			has_completed_focus = ENG_occupy_canton
 			command_power > 25
 		}
 
 		visible = {
+			#DISABLED FOR REWORK
+			always = no
 			tag = ENG
-			has_completed_focus = ENG_occupy_canton
 			ENG = { 
 				has_war_with = CHI 
 			}
@@ -43,13 +43,13 @@ second_opium_war_decisions = {
 
 		available = {
 			tag = ENG
-			has_completed_focus = ENG_offensive_taku_forts
 			command_power > 25
 		}
 
 		visible = {
+			#DISABLED FOR REWORK
+			always = no
 			tag = ENG
-			has_completed_focus = ENG_offensive_taku_forts
 			ENG = { 
 				has_war_with = CHI 
 			}
@@ -96,6 +96,8 @@ second_opium_war_decisions = {
 		}
 
 		visible = {
+			#DISABLED FOR REWORK
+			always = no
 			tag = FRA
 			has_offensive_war_with = CHI
 			has_offensive_war_with = VIN
@@ -128,16 +130,16 @@ second_opium_war_decisions = {
 		available = {
 			tag = ENG
 			ENG = {
-				has_completed_focus = ENG_victory_second_opium_war
 				has_war_support > 0.4
 				date < 1860.1.1
 			}
 		}
 
 		visible = {
+			#DISABLED FOR REWORK
+			always = no
 			tag = ENG
 			ENG = {
-				has_completed_focus = ENG_victory_second_opium_war
 				has_war_support > 0.4
 				date < 1860.1.1
 			}
