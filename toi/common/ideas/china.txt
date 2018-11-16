@@ -28,5 +28,22 @@ ideas = {
 				attack_bonus_against = 0.3
 			}
 		}
+		CHI_idea_TAI_defense = {
+			allowed = {
+				original_tag = TAI
+			}
+			
+			cancel = {
+				NOT = { has_global_flag = eoanb_flag_sow_ongoing }
+			}
+			
+			removal_cost = -1
+			
+			picture = ast_naval_auxiliary_patrol
+			
+			modifier = {
+				ai_focus_defense_factor = 1
+			}
+		}
 	}
 }
