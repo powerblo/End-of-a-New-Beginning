@@ -158,6 +158,12 @@ country_event = {
 	option = {
 		name = secondopiumwar.6.a
 		ai_chance = { factor = 100 }
+		FRA = {
+			add_to_war = { 
+				targeted_alliance = ENG 
+				enemy = CHI 
+			}
+		}
 		hidden_effect = {
 			set_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
 		}
@@ -196,7 +202,22 @@ country_event = {
 	option = {
 		name = secondopiumwar.8.a
 		ai_chance = { factor = 95 }
-		
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
+			}
+			ENG = { country_event = { id = secondopiumwar.10 days = 1 } }
+			FRA = { country_event = { id = secondopiumwar.10 days = 1 } }
+		}
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate_not
+			}
+			ENG = { country_event = { id = secondopiumwar.10 days = 1 } }
+		}
+		hidden_effect = {
+			ENG = { set_country_flag = eoanb_flag_sow_ENG_can_assault_canton }
+		}
 	}
 	
 	option = {
@@ -255,7 +276,223 @@ country_event = {
 	
 }
 
-#TO BE ADDED LATER HERE: ALTERNATE TREATY OF AIGUN FOR RUS
+#Coalition Members are notified CHI rejected ultimatum
+country_event = {
+	id = secondopiumwar.10
+	title = secondopiumwar.10.t
+	desc = secondopiumwar.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.10.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+		}
+	}
+	
+	option = {
+		name = secondopiumwar.10.b
+		ai_chance = { factor = 100 }
+		trigger = { TAG = ENG }
+		custom_effect_tooltip = eoanb_tt_sow_event_10_b
+	}
+	
+}
+
+#Battle for Canton starts
+country_event = {
+	id = secondopiumwar.11
+	title = secondopiumwar.11.t
+	desc = secondopiumwar.11.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.11.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_sow_event_11
+	}
+	
+	option = {
+		name = secondopiumwar.11.b
+		ai_chance = { factor = 100 }
+		trigger = { TAG = CHI }
+		custom_effect_tooltip = eoanb_tt_sow_event_11
+	}
+	
+}
+
+#Hidden Event that checks if China still controls Guangzhou after the Battle lasted for one month
+country_event = {
+	id = secondopiumwar.12
+	title = secondopiumwar.12.t
+	desc = secondopiumwar.12.d
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				CHI = { controls_state = 592 }
+			}
+			CHI = { country_event = { id = secondopiumwar.13 } }
+			ENG = { country_event = { id = secondopiumwar.14 } }
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
+				}
+				FRA = { country_event = { id = secondopiumwar.14 } }
+			}
+			592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
+		}
+		if = {
+			limit = {
+				NOT = { 592 = { has_state_flag = eoanb_flag_battle_for_canton_ongoing } }
+			}
+			#Do Nothing
+		}
+		if = {
+			limit = {
+				CHI = { controls_state = 592 }
+				CHI = { is_ai = yes }
+				ENG = { is_ai = yes }
+				FRA = { is_ai = yes }
+				is_historical_focus_on = yes
+			}
+			CHI = { country_event = { id = secondopiumwar.15 } }
+			ENG = { country_event = { id = secondopiumwar.16 } }
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
+				}
+				FRA = { country_event = { id = secondopiumwar.16 } }
+			}
+			592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
+		}
+	}
+	
+	option = {
+		name = secondopiumwar.12.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#CHI: Victory at Guangzhou
+country_event = {
+	id = secondopiumwar.13
+	title = secondopiumwar.13.t
+	desc = secondopiumwar.13.d
+	picture = GFX_report_event_ger_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.13.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_sow_event_decision_may_appear
+		hidden_effect = {
+			CHI = { set_country_flag = eoanb_flag_sow_CHI_won_at_canton }
+		}
+	}
+}
+
+#Coalition: Defeat at Guangzhou
+country_event = {
+	id = secondopiumwar.14
+	title = secondopiumwar.14.t
+	desc = secondopiumwar.14.d
+	picture = GFX_report_event_ger_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.14.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+		}
+	}
+	
+	option = {
+		name = secondopiumwar.14.b
+		ai_chance = { factor = 100 }
+		trigger = { TAG = ENG }
+		custom_effect_tooltip = eoanb_tt_sow_event_decision_may_appear
+		hidden_effect = {
+			ENG = { set_country_flag = eoanb_flag_sow_ENG_lost_at_canton }
+		}
+	}
+	
+}
+
+#CHI: Defeat at Guangzhou
+country_event = {
+	id = secondopiumwar.15
+	title = secondopiumwar.15.t
+	desc = secondopiumwar.15.d
+	picture = GFX_report_event_ger_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.15.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_sow_event_decision_may_appear
+		hidden_effect = {
+			CHI = { set_country_flag = eoanb_flag_sow_CHI_lost_at_canton }
+		}
+	}
+	
+}
+
+#Coalition: Victory at Guangzhou
+country_event = {
+	id = secondopiumwar.16
+	title = secondopiumwar.16.t
+	desc = secondopiumwar.16.d
+	picture = GFX_report_event_ger_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.16.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+		}
+	}
+	
+	option = {
+		name = secondopiumwar.16.b
+		ai_chance = { factor = 100 }
+		trigger = { TAG = ENG }
+		custom_effect_tooltip = eoanb_tt_sow_event_decision_may_appear
+		hidden_effect = {
+			ENG = { set_country_flag = eoanb_flag_sow_ENG_won_at_canton }
+		}
+	}
+	
+}
+
+#TO BE ADDED LATER HERE: ALTERNATE TREATY OF AIGUN FOR RUS (IF CHI ACCEPTS ULTIMATUM)
 
 ### NEWS EVENTS BELOW ###
 

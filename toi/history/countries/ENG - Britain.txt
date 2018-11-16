@@ -6,18 +6,12 @@
   set_convoys = 200
   
   set_research_slots = 4
-
-  declare_war_on = {
+  
+   declare_war_on = {
     target = CHI
     type = annex_everything
   }
-
-  FRA = {
-    add_to_war = { 
-    	targeted_alliance = ENG 
-    	enemy = CHI 
-    }
-  }
+  
   create_import = {
     resource = cotton
     amount = 8

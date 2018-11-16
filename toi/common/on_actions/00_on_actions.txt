@@ -1,6 +1,7 @@
 on_actions = {
 
 	#Designed with 1857 start in mind - EFFECTS APPLY TO ALL START DATES, REMOVE EVERYTHING BUT GENERIC CONTENT WHEN SECOND DATE IS ADDED
+	#MAYBE HAVE THIS TRIGGER A SEPERATE HIDDEN STARTING EVENT WITH AN IF TRIGGER ASKING WHICH DATE IT IS
 	on_startup = {
 		effect = {
 			SRS = { country_event = { days = 5 id = sepoy.1 } }
@@ -11,6 +12,10 @@ on_actions = {
 			GWA = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			set_global_flag = eoanb_flag_sow_ongoing
+			add_named_threat = { 
+				threat = 3
+				name = eoanb_threat_starting_threat
+			}
 		}
 	}
 	
@@ -527,6 +532,29 @@ on_actions = {
 		        ROOT = { add_equipment_to_stockpile = { type = cavalry_equipment amount = 50 } }
 		        FROM = { add_stability = -0.05 }
         		FROM = { add_war_support = -0.05 }
+			}
+			#Triggers "Capture of Guangzhou" Event if true
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = ENG
+							tag = FRA
+						}
+					}
+					FROM = { tag = CHI }
+					FROM.FROM = { has_state_flag = eoanb_flag_battle_for_canton_ongoing }
+					has_global_flag = eoanb_flag_sow_ongoing
+				}
+				CHI = { country_event = { id = secondopiumwar.15 } }
+				ENG = { country_event = { id = secondopiumwar.16 } }
+				if = {
+					limit = {
+						has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
+					}
+					FRA = { country_event = { id = secondopiumwar.16 } }
+				}
+				592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
 			}
 		}
 	}
