@@ -776,48 +776,6 @@ country_event = {
 				add_political_power = 5
 				add_stability = 0.005
 				add_ideas = Owner_of_University_Garden1
-				hidden_effect = {
-					set_country_flag = owner_of_the_botanical_university 
-				}
-				
-
-				
-	}
-}
-###Loss of the University Botanical Grounds###
-country_event = {
-		id = sardinia.35
-		title = sardinia.35.t
-		desc = sardinia.35.d
-		picture = GFX_event_NSC_University_Garden1
-
-		fire_only_once = no
-
-		trigger = {
-		
-				AND = {
-					any_country = {
-						AND = {
-							NOT = { has_country_flag = owner_of_the_botanical_university }
-							has_full_control_of_state = 115
-						}
-
-				}
-			date > 1858.4.1
-
-			}
-			
-		}
-
-		option = {
-				name = sardinia.35.a
-				add_political_power = -5
-				add_stability = -0.005
-				remove_ideas = Owner_of_University_Garden1
-				hidden_effect = {
-					clr_country_flag = owner_of_the_botanical_university 
-				}
-				
 
 				
 	}
