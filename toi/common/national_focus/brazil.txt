@@ -887,13 +887,13 @@ focus = {
 		ENG = {
       add_opinion_modifier = {
         target = BRA
-        modifier = fra_cobden_chevalier_treaty
+        modifier = FRA_cobden_chevalier_treaty
       }
     }
     BRA = {
       add_opinion_modifier = {
         target = ENG
-        modifier = fra_cobden_chevalier_treaty
+        modifier = FRA_cobden_chevalier_treaty
       }
     }
 		}
@@ -953,13 +953,13 @@ focus = {
 		FRA = {
       add_opinion_modifier = {
         target = BRA
-        modifier = fra_cobden_chevalier_treaty
+        modifier = FRA_cobden_chevalier_treaty
       }
     }
     BRA = {
       add_opinion_modifier = {
         target = FRA
-        modifier = fra_cobden_chevalier_treaty
+        modifier = FRA_cobden_chevalier_treaty
       }
     }
 	}
@@ -1471,47 +1471,47 @@ focus = {
 	BOL = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 	ARG = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 
 	URG = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 	hidden_effect = {
 	URC = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}	
      }
 	VEN = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}	
 	COL = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 
 	PRU = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}			
 			
@@ -1536,13 +1536,13 @@ focus = {
 	USA = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 	MEX = {
 				add_opinion_modifier = {
 					target = BRA
-					modifier = fra_cobden_chevalier_treaty
+					modifier = FRA_cobden_chevalier_treaty
 				}
 			}
 			
@@ -1720,32 +1720,10 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-	add_to_faction = ARG
-	add_to_faction = URG
-	hidden_effect = { add_to_faction = URC } 
+	add_to_faction = URC
 	}
 	}
 	
-	focus = {
-		id = BRA_expand_the_alliance_on_our_east
-		icon = GFX_goal_focus_newspapers
-		cost = 70
-		x = 39
-		y = 16
-        
-		available = {
-		is_in_faction = yes
-		}
-		prerequisite = {
-		focus = BRA_expand_the_alliance_on_the_platine
-		}
-		
-		
-	completion_reward = {
-	add_to_faction = PRU
-	add_to_faction = BOL
-	}
-	}
 	
     focus = {
 		id = BRA_expand_the_alliance_on_our_north
@@ -1758,13 +1736,12 @@ USA = { country_event =  brazil.7  }
 		is_in_faction = yes
 		}
 		prerequisite = {
-		focus = BRA_expand_the_alliance_on_our_east
+		focus = BRA_expand_the_alliance_on_the_platine
 		}
 		
 		
 	completion_reward = {
 	add_to_faction = VEN
-	add_to_faction = COL
 	}
 	}
 	
@@ -3536,6 +3513,167 @@ focus = {
 	}	
 		
 }
+
+
+	focus = {
+		id = BRA_american_civil_war
+		icon = GFX_goal_focus_american_civil_war
+		cost = 70
+		x = 48
+		y = 0
+		available = {
+			OR = {
+				USA = {
+					has_offensive_war_with = CSA
+				}
+				CSA = {
+					has_offensive_war_with = USA
+				}
+			}
+		}
+		completion_reward = {
+		add_political_power = -50
+		add_stability = -0.01
+		}
+	}
+	focus = {
+		id = BRA_honor_our_alliance
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 70
+		
+		available = {
+	NOT = { has_idea = BRA_marques_de_monte_alegre  }
+	NOT = { has_idea = BRA_marques_de_olinda }
+	}
+		prerequisite = {
+			focus = BRA_american_civil_war
+		}
+		mutually_exclusive = {
+			focus = BRA_recognize_csa
+		}
+		x = 47
+		y = 1
+		completion_reward = {
+			CSA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = CSA_negative_civil_war_support
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = offered_support
+				}
+			}
+		add_stability = 0.01	
+		}
+	}
+	focus = {
+		id = BRA_ensure_our_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 70
+		prerequisite = {
+			focus = BRA_honor_our_alliance
+		}
+		completion_reward = {
+		add_political_power = -5
+		add_stability = 0.01
+		}
+		x = 47
+		y = 2
+
+	}
+	
+	focus = {
+		id = BRA_take_in_refugees
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 70
+		prerequisite = {
+			focus = BRA_ensure_our_neutrality
+		}
+		completion_reward = {
+	  501 = {
+		add_manpower = 15000
+		}
+		}
+		x = 47
+		y = 3
+
+	}
+	focus = {
+		id = BRA_recognize_csa
+		icon = GFX_goal_focus_recognize_csa
+		cost = 70
+		prerequisite = {
+			focus = BRA_american_civil_war
+		}
+		mutually_exclusive = {
+			focus = BRA_honor_our_alliance
+		}
+	available = {
+    has_idea = BRA_marques_de_monte_alegre 
+}
+		x = 49
+		y = 1
+		
+		completion_reward = {
+			CSA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = FRA_recognition_csa
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = FRA_recognition_csa_us_view
+				}
+			}
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = BRA_support_the_south
+		icon = GFX_goal_focus_confederate_collaboration
+		cost = 70
+		prerequisite = {
+			focus = BRA_recognize_csa
+		}
+		x = 49
+		y = 2
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			CSA = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = CSA_positive_civil_war_support
+				}
+			}
+			add_political_power = 100
+			add_stability = -0.01
+		}
+	}
+	
+	focus = {
+		id = BRA_covert_slave_trade
+		icon = GFX_goal_focus_confederate_slave_trade
+		cost = 70
+		prerequisite = {
+			focus = BRA_support_the_south
+		}
+		x = 49
+		y = 3
+		completion_reward = {
+			CSA = {
+		    add_manpower = 5000
+			}
+			add_manpower = 5000
+			add_political_power = 50
+			add_stability = -0.01
+		}
+	}
 	
 
 	
