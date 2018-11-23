@@ -283,10 +283,12 @@ focus_tree = {
 		
 		completion_reward = {
 		AUS = {
-            swap_ideas = {
-			    add_idea = AUS_SLA_Separatism1
-				remove_idea = AUS_SLA_Separatism
-			}
+            subtract_from_variable = {
+                var = SLA_REVOLT_RISK
+                value = 1 
+            }
+            custom_effect_tooltip = AUS_tt_remove_sla_revolt_risk 				
+            add_stability = -0.025 			
 		}
 		}
 	}
@@ -311,10 +313,12 @@ focus_tree = {
 		
 		completion_reward = {
 		AUS = {
-            swap_ideas = {
-			    add_idea = AUS_HUN_Separatism1
-				remove_idea = AUS_HUN_Separatism
-			}
+            subtract_from_variable = {
+                var = HUN_REVOLT_RISK
+                value = 1 
+            }
+            custom_effect_tooltip = AUS_tt_remove_hun_revolt_risk 				
+            add_stability = -0.05 			
 		}
 		}
 	}
@@ -335,10 +339,7 @@ focus_tree = {
 			factor = 1
 		}
         available = {
-		AND = {
-            date > 1859.10.05
-		    PIE = { owns_state = 159 }
-        }
+		has_global_flag = PIE_2IW_Victory
         }		
 		
 		cancel_if_invalid = no  
@@ -363,10 +364,8 @@ focus_tree = {
 			factor = 1
 		}
         available = {
-		AND = {
             date > 1859.10.05
-		    NOT = { PIE = { owns_state = 159 } }
-        }
+		    NOT = { has_global_flag = PIE_2IW_Victory }
         }		
 		
 		cancel_if_invalid = no
@@ -515,10 +514,20 @@ focus_tree = {
 				        remove_idea = no_elections
 					    add_idea = limited_elections
 				    }
+                    subtract_from_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 1 
+                    }
+                    subtract_from_variable = {
+                        var = SLA_REVOLT_RISK
+                        value = 1 
+                    }
 			    }
 			    country_event = {  id = AUSpolitics.2  days = 50  } 				
 			}
 			custom_effect_tooltip = AUS_tt_october_diploma 
+			custom_effect_tooltip = AUS_tt_remove_hun_revolt_risk 			
+			custom_effect_tooltip = AUS_tt_remove_sla_revolt_risk 
 		}
 	}
 	
@@ -629,10 +638,19 @@ focus_tree = {
 				        remove_idea = limited_constitution
 					    add_idea = constitution_adopted
 				    }
+                    add_to_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 1 
+                    }
+                    add_to_variable = {
+                        var = SLA_REVOLT_RISK
+                        value = 1 
+                    }
 			    }
 			}
 			custom_effect_tooltip = AUS_tt_february_patent
-
+			custom_effect_tooltip = AUS_tt_add_hun_revolt_risk
+			custom_effect_tooltip = AUS_tt_add_sla_revolt_risk
 		}
 	}
 	
@@ -808,18 +826,19 @@ focus_tree = {
         }
 		
 		completion_reward = {
-            AUS = {
-			    swap_ideas = {
-				    remove_idea = AUS_HUN_Separatism1a
-					add_idea = AUS_HUN_Separatism2a
-				} 
-			}
-            AUS = {
-			    swap_ideas = {
-				    remove_idea = AUS_SLA_Separatism1a
-					add_idea = AUS_SLA_Separatism2a
-				} 
-			}
+		AUS = {
+            add_to_variable = {
+                var = SLA_REVOLT_RISK
+                value = 2  
+            }
+            subtract_from_variable = {
+                var = HUN_REVOLT_RISK
+                value = 1   
+            }
+            custom_effect_tooltip = AUS_tt_add_two_sla_revolt_risk 
+            custom_effect_tooltip = AUS_tt_remove_hun_revolt_risk 				
+            add_stability = 0.05    			
+		}
 		}
 	}
 	
@@ -843,12 +862,19 @@ focus_tree = {
         }
 		
 		completion_reward = {
-            AUS = {
-			    swap_ideas = {
-				    remove_idea = AUS_HUN_Separatism1a
-					add_idea = AUS_HUN_Separatism2b
-				} 
-			}
+		AUS = {
+            add_to_variable = {
+                var = HUN_REVOLT_RISK
+                value = 2   
+            }
+            add_to_variable = {
+                var = SLA_REVOLT_RISK
+                value = 2  
+            }
+            custom_effect_tooltip = AUS_tt_add_two_hun_revolt_risk 
+            custom_effect_tooltip = AUS_tt_add_two_sla_revolt_risk 				
+            add_stability = 0.10   			
+		}
 		}
 	}
 	
@@ -869,7 +895,7 @@ focus_tree = {
         }
 		
 		completion_reward = {
-
+            custom_effect_tooltip = AUS_tt_reform_empire_compromise
 		}
 	}
 	
@@ -889,7 +915,7 @@ focus_tree = {
         }
 		
 		completion_reward = {
-
+            custom_effect_tooltip = AUS_tt_not_reform_empire
 		}
 	}
    
