@@ -10,6 +10,9 @@ country_event = {
 		trigger = {
 			tag = ARG
 			BUE = { exists = no }
+			NOT = {
+				has_global_flag = BUE_won_arg_civwar
+			}
 		}
 
 		mean_time_to_happen = {
@@ -70,12 +73,15 @@ country_event = {
 				factor = 100
 			}
 			remove_ideas = ARG_civil_war_war
+			remove_ideas = ARG_civil_war_calm
+			BUE = { ARG = { transfer_technology = yes } }
 			ARG = { drop_cosmetic_tag = yes }
 			ARG = {
 				annex_country = {
 					target = BUE
 					transfer_troops = yes
 				}
+				hidden_effect = { load_oob = ARG_END_CIVIL_WAR }
 				remove_ideas = ARG_civil_war_war
 				remove_ideas = ARG_decentral_military_2
 				remove_ideas = ARG_decentral_military_1
