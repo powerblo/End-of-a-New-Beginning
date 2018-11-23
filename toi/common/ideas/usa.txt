@@ -699,7 +699,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_war_preparation
+			picture = civil_war_idea
 			
 			modifier = {
 				conscription_factor = 0.2
@@ -1701,6 +1701,210 @@ ideas = {
 			modifier = {
 				MONTHLY_POPULATION = 0.2
 				consumer_goods_factor = 0.05
+			}
+		}
+		Norton_legitimacy_5 = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_war_of_resistance3
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+		Norton_legitimacy_4 = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_war_of_resistance3
+			
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+		Norton_legitimacy_3 = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_war_of_resistance2
+			
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+		Norton_legitimacy_2 = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_war_of_resistance2
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		Norton_legitimacy_1 = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_chi_war_of_resistance
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		USA_sons_of_liberty = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				drift_defence_factor = -0.25
+				centrism_drift = 0.02
+				traditional_conservatism_drift = 0.02
+			}
+		}
+		USA_sons_of_liberty_weakened = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				drift_defence_factor = -0.2
+				centrism_drift = 0.01
+				traditional_conservatism_drift = 0.01
+			}
+		}
+		USA_norton_martial_law = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		USA_norton_support_gerrymandering_idea = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				autocracy_drift = 0.01
+				political_power_factor = 0.1
+			}
+		}
+		USA_norton_ban_gerrymandering_idea = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				drift_defence_factor = -0.25
+				autocracy_drift = -0.01
+				political_power_factor = -0.05
 			}
 		}
 	}

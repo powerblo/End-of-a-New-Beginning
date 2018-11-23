@@ -37,6 +37,11 @@ war_measures = {
 	}
 }
 
+eoanb_category_second_opium_war = {
+	icon = generic_propaganda
+	
+}
+
 economic_decisions = {
 	icon = generic_economy
 
@@ -44,11 +49,6 @@ economic_decisions = {
 
 scientific_advancement_decisions = {
 	icon = generic
-	
-}
-
-second_opium_war_decisions = {
-	icon = opium_war
 	
 }
 
@@ -131,17 +131,6 @@ eoanb_category_suez_canal = {
 		tag = FRA
 		has_country_flag = FRA_suez_company
 	}
-}
-
-aggressive_expansion_category = {
-	icon = generic_political_actions
-	
-	visible = {
-		any_other_country = {
-			has_added_tension_amount > 10
-		}
-	}
-	
 }
 
 eoanb_category_diplomatic_actions = {

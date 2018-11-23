@@ -512,7 +512,12 @@ country_event = {
 	option = {
 		name = random.14.a
 		ai_chance = { factor = 100 }
-		random_owned_controlled_state = { add_manpower = -1000 }
+		random_owned_controlled_state = { 
+			limit = {
+				is_capital = no
+			}
+			add_manpower = -1000 
+		}
 		capital_scope = { add_manpower = 1000 }
 	}
 }

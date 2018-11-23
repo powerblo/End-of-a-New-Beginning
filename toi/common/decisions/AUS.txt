@@ -7,7 +7,8 @@ economic_decisions = {
 
 		available = {
 			AUS = { controls_state = 956 }
-			956 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			956 = { free_building_slots = { building = infrastructure size > 1 include_locked = yes } }
+			num_of_available_civilian_factories > 1
 		}
 
 		visible = {
@@ -22,11 +23,15 @@ economic_decisions = {
 
 		cost = 25
 
-		complete_effect = {
+		remove_effect = {
 			956 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			hidden_effect = {
 				set_country_flag = eoanb_flag_AUS_completed_mein_wille
 			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
 		}
 
 		ai_will_do = {

@@ -49,6 +49,8 @@ country = {
 	        has_country_flag = otto_win
         }		
 		
+		cancel_if_invalid = no
+		
 		ai_will_do = {
 			factor = 0
 		}
@@ -72,6 +74,8 @@ country = {
 	    available = {
         	has_country_flag = otto_lose
         }	
+		
+		cancel_if_invalid = no
 		
 		ai_will_do = {
 			factor = 1
@@ -390,7 +394,7 @@ focus = {
 		available_if_capitulated = no
 		
 	available = {
-        always = no
+        GRE = { has_country_flag = otto_removed } 
         }
 		
 		mutually_exclusive = { focus = GRE_otto_succession }
@@ -416,7 +420,7 @@ focus = {
 		available_if_capitulated = no
 		
 	available = {
-        always = no
+        GRE = { has_country_flag = GRE_flag_George_I }
         }
 		
 		ai_will_do = {
@@ -442,7 +446,7 @@ focus = {
 		available_if_capitulated = no
 		
 	available = {
-        always = no
+        GRE = { has_country_flag = GRE_flag_Alfred_I }
         }
 		
 		ai_will_do = {
@@ -523,7 +527,7 @@ focus = {
 		available_if_capitulated = no
 		
 		available = {
-        always = no
+        GRE = { has_country_flag = GRE_flag_Republic }
         }
 		
 		ai_will_do = {
@@ -689,7 +693,7 @@ focus = {
 		}
 		
 	available = {
-        always = no
+        GRE = { has_country_flag = GRE_flag_Luitpold_I } 
         }
 
 		prerequisite = { focus = 
@@ -907,6 +911,8 @@ focus = {
         GRE = { has_political_power > 100 }
         } 		
 		
+		cancel_if_invalid = no
+		
 		prerequisite = { focus = GRE_agrarian_nation }
 		
 		completion_reward = {
@@ -1040,6 +1046,8 @@ focus = {
         GRE = { has_political_power > 250 }
         } 
 		
+		cancel_if_invalid = no
+		
 		prerequisite = { focus = GRE_agrarian_nation }
 	
         select_effect = {
@@ -1146,6 +1154,8 @@ focus = {
 		date > 1864.01.01 
         } 
 		
+		cancel_if_invalid = no
+		
         select_effect = {
         add_political_power = -75    
         }
@@ -1175,6 +1185,8 @@ focus = {
 		available = {
         GRE = { has_political_power > 50 }
         } 
+		
+		cancel_if_invalid = no
 		
         select_effect = {
         add_political_power = -50    
@@ -1234,6 +1246,8 @@ focus = {
         GRE = { has_political_power > 50 }
         } 
 		
+		cancel_if_invalid = no
+		
 		prerequisite = { focus = GRE_rural_exodus }
 		
         select_effect = {
@@ -1262,6 +1276,8 @@ focus = {
 		available = {
         GRE = { has_political_power > 50 }
         } 
+		
+		cancel_if_invalid = no
 		
         select_effect = {
         add_political_power = -50    
@@ -1460,6 +1476,8 @@ focus = {
 		available = {
         GRE = { has_political_power > 50 }
         } 
+		
+		cancel_if_invalid = no
 		
         select_effect = {
         add_political_power = -50    

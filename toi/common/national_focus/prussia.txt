@@ -626,7 +626,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_powerful_economy
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_research
 		x = 6
 		y = 6
 		cost = 70
@@ -801,7 +801,11 @@ focus_tree = {
 					name = "General von Moltke"
 					picture = "Portrait_PRS_Helmuth_Karl_Bernhard_von_Moltke.dds"
 					traits = { } 
-					skill = 3
+					skill = 5
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 5
+					logistics_skill = 1
 				}
 			}
 		}
@@ -1258,6 +1262,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_tt_king_abdicate
+			custom_effect_tooltip = PRS_focus_tt_king_abdicate_warning
 			hidden_effect = {
 				swap_ideas = { remove_idea = PRS_Wilhelm_I add_idea = hos_is_leader }
 			}
@@ -1496,6 +1501,8 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_focus_prussian_republic }
 		
 		completion_reward = {
+			set_party_name = { ideology = centrism long_name = PRS_centrism_king_party_long name = PRS_centrism_king_party }
+			set_politics = { ruling_party = centrism elections_allowed = no }
 			custom_effect_tooltip = PRS_focus_tt_liberal_king
 			hidden_effect = {
 				swap_ideas = { remove_idea = hos_is_leader add_idea = PRS_Friedrich_III }
@@ -1655,6 +1662,8 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_focus_liberal_kingdom }
 		
 		completion_reward = {
+			set_party_name = { ideology = centrism long_name = PRS_centrism_republic_party_long name = PRS_centrism_republic_party }
+			set_politics = { ruling_party = centrism elections_allowed = no }
 			set_cosmetic_tag = PRS_cosmetic_republic
 		}
 	}
@@ -2236,6 +2245,9 @@ focus_tree = {
 					}   
 					load_focus_tree = germany_united_focus_socialist
 				}
+				else = {
+					load_focus_tree = germany_united_focus
+				}
 			}
 		}
 	}
@@ -2639,6 +2651,7 @@ focus_tree = {
 			}
 		}
 		available = {
+			NOT = { has_global_flag = eoanb_flag_second_schleswig_war }
 			OR = {
 				PRS = { has_navy_size = { size > 24 } }
 				PRS = { has_tech = tech_naval_1857_troops }

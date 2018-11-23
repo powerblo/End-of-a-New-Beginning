@@ -90,6 +90,7 @@
 	early_artificial_fertilizer = 1
 	electrical_engineering = 1
 	basic_cavalry = 1
+	tech_naval_1812_troops = 1 
   }
 
   # POLITICAL LEADERS
@@ -120,18 +121,6 @@ add_ideas = GRE_Otto_I
 add_ideas = GRE_Queen_Amalia
 
 
-create_field_marshal = {
-  name = "Theodoros Grivas"
-  picture = "Portrait_GRE_Theodoros_Grivas.dds"
-  traits = { }
-  skill = 2
-  attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-
 
 create_corps_commander = {
   name = "Christodoulos Chatzipetros"
@@ -140,8 +129,8 @@ create_corps_commander = {
   skill = 2
   attack_skill = 1
 	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -149,10 +138,21 @@ create_corps_commander = {
   picture = "Portrait_GRE_Ioannis_Mamouris.dds"
   traits = { }
   skill = 2
-  attack_skill = 1
-	defense_skill = 1
+  attack_skill = 2
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "Panos Koronaios"
+  picture = "Portrait_GRE_Panos_Koronaios.dds"
+  traits = { }
+  skill = 2
+  attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
 }
 
 }

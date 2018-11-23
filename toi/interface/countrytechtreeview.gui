@@ -79,11 +79,24 @@ guiTypes = {
 				
 				instantTextBoxType = {
 					name = "infantry_subtitle_machine_guns"
-					position = { x = 1230 y = 725 }
+					position = { x = 1230 y = 860 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = { x = 0 y = 0}
 					text = "INFANTRY_TITLE_MACHINE_GUNS"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "infantry_subtitle_shotguns"
+					position = { x = 3690 y = 725 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = { x = 0 y = 0}
+					text = "INFANTRY_TITLE_SHOTGUNS"
 					maxWidth = 600
 					maxHeight = 62
 					format = left

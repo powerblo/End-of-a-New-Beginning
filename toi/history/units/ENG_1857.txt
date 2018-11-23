@@ -201,6 +201,14 @@ units = {
 			start_equipment_factor = 0.9
 
 		}
+		
+		division= {
+			name = "Hong Kong Defense Regiment"
+			location = 10062
+			division_template = "Line Infantry Regiment"
+			start_experience_factor = 0.1
+
+		}
 
 		
 		navy = {				
@@ -428,12 +436,70 @@ units = {
 		}
 }
 
-#air_wings = {
-#	126 = {
-#		balloon_equipment_0 =  {
-#			owner = "ENG" 
-#			amount = 25
-#		}
-#		name = "British Recon Balloons"
-#	}
-#}
+instant_effect = {
+	#Military Equipment
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_rifle_1
+			creator = "ENG"
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 30
+	}
+	add_equipment_production = {
+		equipment = {
+			type = uniform_equipment_2
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.9
+		efficiency = 30
+	}
+	add_equipment_production = {
+		equipment = {
+			type = cavalry_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 20
+	}
+	add_equipment_production = {
+		equipment = {
+			type = cannon_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.8
+		efficiency = 20
+	}
+	
+	#Ships
+	add_equipment_production = {
+		equipment = {
+			type = convoy_1
+			creator = "ENG" 
+		}
+		requested_factories = 2
+		progress = 0.4
+	}
+	add_equipment_production = {
+		equipment = {
+			type = equipment_1840_corvette
+			creator = "ENG" 
+		}
+		requested_factories = 2
+		progress = 0.85
+		amount = 4
+	}
+	add_equipment_production = {
+		equipment = {
+			type = equipment_1812_lineship
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		amount = 1
+	}
+}
