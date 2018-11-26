@@ -75,33 +75,3 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = peru.4
-	title = peru.4.t
-	desc = peru.4.d
-	
-	fire_only_once = yes
-	hidden = yes
-	trigger = {
-	tag = PRU
-	PRR = {
-	is_puppet_of = PRU
-	}
-	
-	}
-	
-	option = {
-	PRU = {
-	annex_country = PRR
-	transfer_troops = no
-	}
-		every_state = {
-			limit = {
-				is_core_of = PRR
-			}
-			remove_core_of = PRR
-		}
-	
-	
-	}
-}
