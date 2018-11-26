@@ -321,7 +321,27 @@ ideas = {
 			land_reinforce_rate	= 0.01
 			supply_consumption_factor = -0.15
 			}
-		}		
+		}
+
+		BRA_not_prepared_paraguay = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = chi_army_corruption2
+			
+			modifier = {
+				war_support_factor = -0.10
+			}
+
+			targeted_modifier = {
+				tag = PAR
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.3
+			}
+		}
 }
 
 hidden_ideas = {
