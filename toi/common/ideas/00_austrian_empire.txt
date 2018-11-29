@@ -16,7 +16,7 @@ ideas = {
 			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				conscription_factor = -0.15 
+				conscription_factor = -0.3  
 				army_org_Factor = -0.05
 				stability_factor = -0.25  
 			}
@@ -98,7 +98,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = AUS_hungarian_revolution
+			picture = AUS_Hungarian_Nationalism
 			
 			modifier = {
 			}
@@ -488,16 +488,20 @@ ideas = {
 			}
 		}	
 	}
-	theorist = {
-		AUS_theorist_naval_ludwig_von_fautz = {
+	high_command = {
+		AUS_idea_naval_ludwig_von_fautz = {
 
 			allowed = {
 				original_tag = AUS
 			}
 			
+			available = {
+				has_completed_focus = GER_focus_historical_minister_von_stosch
+			}
+			
 			picture = placeholder 
 			
-			cost = 250
+			cost = 50 
 
 			research_bonus = {
 				naval_doctrine = 0.1
@@ -505,5 +509,42 @@ ideas = {
 
 			traits = { # }
 		}
+		AUS_idea_naval_maximilian_austria = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			picture = placeholder 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		}		
+		AUS_idea_army_archduke_albrecht = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+				has_completed_focus = AUS_Archduke_Albrecht
+			}
+			
+			picture = placeholder 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		}
+	
 	}
 }

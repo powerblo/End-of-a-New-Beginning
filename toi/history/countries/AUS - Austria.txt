@@ -59,7 +59,10 @@
 				freedom_level = 0.1 
             }			
 	}
-	else = {
+	else_if = {
+	    limit = {
+		    NOT = { has_dlc = "Together for Victory" }
+		}
 		puppet = LVN
 	}
 
