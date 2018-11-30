@@ -1,13 +1,13 @@
 
 state={
 	id=528
-	name="STATE_528" # Kyushu
-	manpower = 4000000
-	state_category = large_city
+	name="STATE_528" # Higo
+	manpower = 1150000
+	state_category = town
 	resources={
-		chromium=20
+		chromium=16
 		iron=2
-		wood=4
+		wood=3
 	}
 
 	history={
@@ -18,22 +18,10 @@ state={
 			dockyard = 1
 			industrial_complex = 1
 			cotton_farm = 1
-			9950 = {
-				naval_base = 2
-			}
-		}
-		victory_points = {
-			1025 10
-		}
-		victory_points = {
-			4102 15
-		}
-		victory_points = {
-			9950 30
 		}
 	}
 
 	provinces={
-		1020 1025 1158 1183 4027 4164 4198 7110 7178 9950 10020 10092 11925 11949 12006 13549
+		1020 1183 7178 11925 11949 12006 13549
 	}
 }

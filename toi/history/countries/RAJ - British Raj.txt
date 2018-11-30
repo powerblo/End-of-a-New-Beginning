@@ -35,7 +35,8 @@
     state_religion
 	religion_hindu
          #NATIONAL SPIRITS
-	
+	ENG_idea_RAJ_civil_unrest
+	ENG_idea_RAJ_gse_act
   }
 
   set_politics = {
@@ -80,6 +81,11 @@ give_military_access = KAR
 give_military_access = KAS
 
 set_cosmetic_tag = EIC
+
+set_variable = {
+	var = ENG_RAJ_revolt_risk
+	value = 4
+}
 
   set_technology = {
 	infantry_weapons = 1

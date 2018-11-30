@@ -58,16 +58,72 @@ ideas = {
 			picture = SWE_Toxic_Politics
 
 			modifier = {
-			surrender_limit = 3.00
-			ai_focus_aggressive_factor = -0.50
-			army_defence_factor = 1.00
-			army_attack_factor = -0.95
-			attrition = -0.4
-			max_dig_in = -0.5
-			supply_consumption_factor = -0.3
-			army_infantry_defence_factor = 0.2
-			army_infantry_attack_factor = -0.4
-			army_speed_factor = -0.5
+				surrender_limit = 3.00
+				attrition = -0.25
+				max_dig_in = -0.5
+				supply_consumption_factor = -0.25
+				MONTHLY_POPULATION = -0.2
+			}
+		}
+
+		PAR_disorganized_attack = {
+			
+			allowed = {
+				original_tag = PAR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = SWE_Toxic_Politics
+
+			modifier = {
+				army_attack_factor = -0.25
+				army_org_factor = -0.1
+				army_speed_factor = -0.5
+			}
+		}
+
+		PAR_brazil_occupation = {
+			
+			allowed = {
+				original_tag = PAR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_matignon_agreements
+
+			modifier = {
+				autonomy_gain = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription = -0.01
+			}
+		}
+
+		PAR_land_of_women = {
+			
+			allowed = {
+				original_tag = PAR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ENG_the_war_to_end_all_wars
+
+			modifier = {
+				MONTHLY_POPULATION = -0.75
+				war_support_factor = -0.2
+				conscription = -0.01
 			}
 		}
 		

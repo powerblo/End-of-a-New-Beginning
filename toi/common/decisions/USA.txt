@@ -22,7 +22,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		383 = { add_core_of = USA }
-		1052 = { add_core_of = USA }
+		1052 = {
+			remove_claim_by = USA
+			add_core_of = USA
+			}
 		}
 
 		ai_will_do = {
@@ -96,7 +99,6 @@ USA_grant_statehood = {
 		available = {
 			USA = { controls_state = 379 }
 			379 = { state_population > 40000 }
-			has_country_flag = USAUtah_War_Over
 		}
 
 		visible = {
@@ -111,7 +113,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		379 = { add_core_of = USA }
-		1093 = { add_core_of = USA }
+		1093 = {
+			remove_claim_by = USA
+			add_core_of = USA
+			}
 		}
 
 		ai_will_do = {
@@ -127,7 +132,6 @@ USA_grant_statehood = {
 		available = {
 			USA = { controls_state = 380 }
 			380 = { state_population > 40000 }
-			has_country_flag = USAUtah_War_Over
 		}
 
 		visible = {
@@ -141,7 +145,10 @@ USA_grant_statehood = {
 		cost = 50
 
 		complete_effect = {
-		380 = { add_core_of = USA }
+		380 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
 		}
 
 		ai_will_do = {
@@ -171,8 +178,14 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		381 = { add_core_of = USA }
-		1049 = { add_core_of = USA }
-		1947 = { add_core_of = USA }
+		1049 = {
+			add_core_of = USA
+			remove_claim_by = USA
+		}
+		1047 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
 		}
 
 		ai_will_do = {
@@ -218,7 +231,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		382 = { add_core_of = USA }
-		1051 = { add_core_of = USA }
+		1051 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
 		1092 = { add_core_of = USA }
 		}
 
@@ -249,8 +265,14 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		384 = { add_core_of = USA }
-		1046 = { add_core_of = USA }
-		1050 = { add_core_of = USA }
+		1046 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
+		1050 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
 		}
 
 		ai_will_do = {
@@ -280,7 +302,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 			385 = { add_core_of = USA }
-			1075 = { add_core_of = USA }
+			1075 = {
+				remove_claim_by = USA
+				add_core_of = USA
+			}
 		}
 
 		ai_will_do = {
@@ -310,7 +335,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 			386 = { add_core_of = USA }
-			3851073 = { add_core_of = USA }
+			1073 = {
+				remove_claim_by = USA
+				add_core_of = USA
+			}
 		}
 
 		ai_will_do = {
@@ -340,8 +368,14 @@ USA_grant_statehood = {
 
 		complete_effect = {
 			387 = { add_core_of = USA }
-			1074 = { add_core_of = USA }
-			1076 = { add_core_of = USA }
+			1074 = {
+				remove_claim_by = USA
+				add_core_of = USA
+			}
+			1076 = {
+				remove_claim_by = USA
+				add_core_of = USA
+			}
 		}
 
 		ai_will_do = {
@@ -371,7 +405,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		388 = { add_core_of = USA }
-		1048 = { add_core_of = USA }
+		1048 = {
+			remove_claim_by = USA
+			add_core_of = USA
+		}
 		}
 
 		ai_will_do = {
@@ -430,7 +467,10 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		390 = { add_core_of = USA }
-		1045 = { add_core_of = USA }
+		1045 = {
+			remove_claim_by = USA
+			add_core_of = USA
+			}
 		}
 
 		ai_will_do = {

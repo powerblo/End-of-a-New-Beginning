@@ -2,6 +2,8 @@ opinion_modifiers = { #USA
 
 	reminded_csa_slavery = {
 		value = -20
+		days = 10
+		decay = 1
 	}
 
 	trent_affair_never_happened = {
@@ -23,6 +25,11 @@ opinion_modifiers = { #USA
 	usa_csa_trade = {
 		trade = yes
 		value = 20
+	}
+
+	usa_refuse_csa_trade = {
+		trade = yes
+		value = -25
 	}
 	
 	usa_bra_visit = {
@@ -54,6 +61,24 @@ opinion_modifiers = { #USA
 
 	usa_bad_relations = {
 		value = -25
+		days = 30
+		decay = 1
+	}
+
+	usa_recognize_norton = {
+		value = 30
+		days = 30
+		decay = 1
+	}
+
+	usa_refuse_norton = {
+		value = -30
+		days = 30
+		decay = 1
+	}
+
+	usa_csa_embassy = {
+		value = 20
 		days = 30
 		decay = 1
 	}

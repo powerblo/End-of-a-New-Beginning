@@ -35,7 +35,7 @@
     state_religion
 	religion_confucian
          #NATIONAL SPIRITS
-	
+	CHI_idea_arrow_incident
   }
 
   set_politics = {
@@ -74,6 +74,10 @@
 
 	  ruling_party = autocracy
   }
+  
+  add_opinion_modifier = { target = USA modifier = eoanb_om_USA_CHI_opium_neutral }
+  add_opinion_modifier = { target = ENG modifier = eoanb_om_ENG_CHI_arrow_incident }
+  reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_ENG_CHI_arrow_incident }
 
   set_technology = {
 	infantry_weapons = 1

@@ -39,3 +39,134 @@ economic_decisions = {
 	}
 	
 }
+
+war_measures = {
+	
+	#Draft Emergency Regiments in India to fight the Sepoy
+	eoanb_decision_ENG_emergency_sepoy_fighters = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_completed_focus = ENG_focus_defend_jewel
+			RAJ = { has_idea = ENG_idea_RAJ_gse_act }
+		}
+		
+		visible = {
+			TAG = ENG
+			RAJ = { has_war_with = SRS }
+			RAJ = { has_full_control_of_state = 431 }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_ENG_emergencyunits_sepoy
+			hidden_effect = {
+				load_oob = "ENG_emergency_divisions_sepoy"
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+		
+	}
+	
+}
+
+political_actions = {
+	
+	#Send Peacekeeping Forces to RAJ
+	eoanb_decision_ENG_send_RAJ_peacekeepers = {
+		
+		icon = generic_civil_support
+		
+		available = {
+			has_manpower > 2000
+			has_equipment = {
+				infantry_equipment > 199
+			}
+			has_equipment = {
+				uniform_equipment > 199
+			}
+			has_equipment = {
+				convoy > 2
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			RAJ = { is_subject_of = ENG }
+			RAJ = {
+				check_variable = {
+					var = ENG_RAJ_revolt_risk
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_remove = 10
+		
+		days_re_enable = 180
+		
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = -200
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -3
+			}
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 3
+				producer = ENG
+			}
+			custom_effect_tooltip = eoanb_tt_decision_ENG_RAJ_peacekeepers
+			hidden_effect = {	
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 2
+					}
+				}
+			}
+		}
+		
+		#AI will do if revolt risk exceeds 10
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				NOT = {
+					RAJ = { 
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 10
+							compare = greater_than_or_equals
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+}
