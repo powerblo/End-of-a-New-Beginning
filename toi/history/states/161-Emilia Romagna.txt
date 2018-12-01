@@ -2,30 +2,32 @@
 state={
 	id=161
 	name="STATE_161"
-	manpower = 2052401
+	manpower = 3202401
 
 	state_category = large_city
 
 	resources={
-		aluminium=4
+		aluminium=16
 	}
 
 	history={
 		owner = PAP
 		victory_points = {
-			6606 5
-		}
-		victory_points = {
-			6793 3
+			6606 3
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 7
 			industrial_complex = 1
+
 			782 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 		add_core_of = PAP
+		1861.4.11 = {
+			owner = ITA
+			add_core_of = ITA
+		}
 	}
 
 	provinces={

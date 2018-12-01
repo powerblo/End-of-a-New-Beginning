@@ -1,140 +1,123 @@
-﻿1857.1.1 = {
-  capital = 319
+﻿capital = 319
 
-  oob = "DOM_1857"
+oob = "DOM_1861"
 
-  set_convoys = 5
-  
-  set_research_slots = 2
-
-  add_ideas = { 
-    #POLITICS 
-		  
-    hos_is_leader
-    pre_industrial_era
-    agrarian
-    non_monarchical_system
-    military_junta
-	
-    civilian_economy
-    limited_exports
-    five_percent
-    normal_taxes
-	cl_legal
-
-    stagnation_growth
-    border_control
-	limited_conscription
-    segregation
-    absolutism
-
-    human_rights
-    no_elections
-
-    privileged_education
-    state_religion
-	religion_catholic
-         #NATIONAL SPIRITS
-	
-  }
-
-  set_politics = {
+set_politics = {
     parties = {
-      anarchism = {
-        popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
-        popularity = 2.5
+      economic_liberalism = {
+        popularity = 20
       }
       traditional_conservatism = {
-        popularity = 45
+        popularity = 80
       }
-      radical_democracy = {
+      social_democracy = {
         popularity = 0
       }
-      chauvinist_populism = {
-        popularity = 50
+      radical_socialism = {
+        popularity = 0
       }
-      autocracy = {
-        popularity = 2.5
+      marxism_leninism = {
+        popularity = 0
       }
-      fundamentalism = {
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
         popularity = 0
       }
     }
 
-	  ruling_party = chauvinist_populism
-  }
+	ruling_party = traditional_conservatism
+}
 
-  set_technology = {
+set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
-	start_build_tech = 1
-	tech_naval_1812_frigate = 1
-  }
+	rifle_equipment1 = 1
+	 
+	hand_revolvers = 1
+	socket_bayonet = 1
+	vic_army_cloth = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+}
 
-  # POLITICAL LEADERS
-
-  create_country_leader = {
+create_country_leader = {
     name = "Pedro Santana"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_DOM_Pedro_Santana.dds"
+    picture = "Portrait_DOM_Pedro_Santana_.dds"
     expire = 1862.7.2
-    ideology = military_goverment
+    ideology = conserv
 }
 
-create_corps_commander {
-  name = "Gregorio Luperón"
-  picture = "Portrait_DOM_Gregorio_Luperon.dds"
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
+1857.5.11 = {
+oob = "DOM_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 20
+      }
+      traditional_conservatism = {
+        popularity = 80
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = traditional_conservatism
 }
 
-create_corps_commander {
-  name = "Gaspar Polanco"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
 }
 
-create_corps_commander {
-  name = "Santiago Rodríguez"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
+create_country_leader = {
+    name = "Buenaventura Báez"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_DOM_Beunaventura_Baez_.dds"
+    expire = 1860.1.1
+    ideology = conserv
 }
-
-create_corps_commander {
-  name = "Furcy Fondeur"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-
 }

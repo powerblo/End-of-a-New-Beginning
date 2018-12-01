@@ -1,31 +1,33 @@
 state= {
 	id=120
 	name="STATE_120"
-	manpower = 145476
+	manpower = 265873
 	
 	state_category = rural
 
 	resources={
 		chromium=2
-		tungsten=4
-		aluminium=8
-		wood=2
-		coal = 8
+		tungsten=22
+		aluminium=12
 	}
 
 	history=
 	{
 		owner = ENG
-		victory_points = { 9075 3 }
 		victory_points = { 11064 1 }
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
+			#anti_air_building = 2
+			industrial_complex = 1
+			
 			11064 = {
-				naval_base = 5	
+				naval_base = 8	
+			}
+			6196 = {
+				naval_base = 1	
 			}
 		}
 		add_core_of = ENG
-		add_core_of = SCO
 	}
 
 	provinces=

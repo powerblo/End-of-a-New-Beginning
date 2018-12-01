@@ -1,7 +1,7 @@
 state={
 	id=731
 	name="STATE_731"
-	manpower=715210
+	manpower=1155700
 	
 	state_category = town
 
@@ -11,18 +11,22 @@ state={
 			11818 5 
 		}
 		buildings = {
-			infrastructure = 3		
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 2
+			
 			11818 = {
-				naval_base = 2
+				naval_base = 3
 
 			}
 
 		}
 		add_core_of = OTO
-		add_core_of = GRE
+		add_claim_by = GRE
+
 	}
 	
 	provinces={
-		895 936 966 3526 3844 3936 10163 11818 6930
+		895 936 966 3526 3844 3936 10163 11818 
 	}
 }

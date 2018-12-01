@@ -2,23 +2,19 @@
 state={
 	id=365
 	name="STATE_365"
-	manpower = 957286
-	resources={
-		wood = 8
-		coal = 6
-	}
+	manpower = 2908504
 
 	state_category = city
 
 	history={
 		owner = USA
 		buildings = {
-			infrastructure = 3
-			arms_factory = 1
+			infrastructure = 6
+			industrial_complex = 3
+			
 			11975 = {
 				naval_base = 1
 			}
-			cotton_farm = 3
 		}
 		
 		add_core_of = USA
@@ -26,6 +22,12 @@ state={
 			12384 10
 		}
 
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		
 		1861.4.12 = {
 			owner = CSA
 			add_core_of = CSA

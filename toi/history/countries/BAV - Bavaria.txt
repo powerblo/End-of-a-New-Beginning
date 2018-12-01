@@ -1,156 +1,137 @@
-﻿1857.1.1 = {
-  capital = 52
+﻿capital = 52
 
-  oob = "BAV_1857"
+oob = "BAV_1861"
 
-  set_convoys = 0
-  
-  set_research_slots = 3
-
-  add_ideas = { 
-    #POLITICS 
-		  
-    hos_is_leader
-    victorian_era
-    agrarian
-    weak_heir
-    parliamentary_monarchy
-
-    civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_legal
-
-    stagnation_growth
-    border_control
-    volunteer_only
-    limited_equality
-    absolutism
-
-    no_constitution
-    no_elections
-
-    privileged_education
-    state_religion
-	religion_catholic
-	#NATIONAL SPIRITS
-	GER_general_idea_ger_confed
- 	PRS_Zollverein
-	BAV_unexperiencedgen
-	BAV_landtaghindrance
-	BAV_russiancampaign
-  }
-
-  set_politics = {
+set_politics = {
     parties = {
-      anarchism = {
-        popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
+      economic_liberalism = {
         popularity = 0
       }
       traditional_conservatism = {
         popularity = 0
       }
-      radical_democracy = {
+      social_democracy = {
         popularity = 0
       }
-      chauvinist_populism = {
+      radical_socialism = {
         popularity = 0
       }
-      autocracy = {
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
         popularity = 100
       }
-      fundamentalism = {
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
-  }
-  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = BAV }
-  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = BAV }
+	ruling_party = despotic_autocracy
+}
 
-  set_technology = {
+set_technology = {
 	infantry_weapons = 1
+	rifle_equipment1 = 1
+
+	hand_revolvers = 1
+	socket_bayonet = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
-	tech_infantry_napoleonic_uniform = 1
-	gw_artillery = 1
-	iron_railways = 1
-	steam_engine = 1
-	manufactories = 1
-	hot_blast_furnaces = 1
-	food_preserving_icebox = 1
-	early_artificial_fertilizer = 1
-	electrical_engineering = 1
+	civil_army_cloth = 1
 	basic_cavalry = 1
-	start_build_tech = 1
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+}
+
+create_country_leader = {
+  name = "Maximilian II"
+  desc = "POLITICS_MAXIMILIAN_II_DESC"
+  picture = "Portrait_BAV_Maximilian_II.dds"
+  expire = "1864.3.10"
+  ideology = despotism
+  traits = {
+
   }
+}
 
-  # POLITICAL LEADERS
+1857.5.11 = {
+oob = "BAV_1857"
 
-	create_country_leader = {
-	  name = "Maximilian II."
-	  desc = POLITICS_MAXIMILIAN_II_DESC
-	  picture = "Portrait_BAV_Maximilian_II.dds"
-	  expire = "1864.3.10"
-	  ideology = despotism
-	  traits = {  }
-	}
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
+  name = "Maximilian II"
+  desc = "POLITICS_MAXIMILIAN_II_DESC"
+  picture = "Portrait_BAV_Maximilian_II.dds"
+  expire = "1864.3.10"
+  ideology = despotism
+  traits = {
+
+  }
+}
 
 create_corps_commander = {
   name = "Eduard von Lutz"
   picture = "Portrait_BAV_Eduard_von_Lutz.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Jakob von Hartmann"
-  picture = "Portrait_BAV_Jakob_von_Hartmann.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Ludwig von der Tann"
-  picture = "Portrait_BAV_Ludwig_von_der_Tann.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Franz von Faust"
-  picture = ""
-  traits = { }
-  skill = 3
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -158,10 +139,6 @@ create_corps_commander = {
   picture = "Portrait_BAV_Joseph_Maximilian_von_Maillinger.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -169,10 +146,13 @@ create_corps_commander = {
   picture = "Portrait_BAV_Karl_Krazeisen.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "Karl Theodor of Bavaria"
+  picture = "Portrait_BAV_Karl_Theodor_of_Bavaria.dds"
+  traits = { }
+  skill = 3
 }
 
 create_corps_commander = {
@@ -180,10 +160,6 @@ create_corps_commander = {
   picture = "Portrait_BAV_Luitpold_of_Bavaria.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -191,22 +167,6 @@ create_corps_commander = {
   picture = "Portrait_BAV_Siegmund_von_Pranckh.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
 }
 
-create_field_marshal = {
-  name = "Karl Theodor von Bayern"
-  picture = "Portrait_BAV_Karl_Theodor_of_Bavaria.dds"
-  traits = {
-	old_guard
-  }
-  skill = 4
-  attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
 }

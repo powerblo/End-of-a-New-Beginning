@@ -1,13 +1,12 @@
 state={
 	id=70
 	name="STATE_70"
-	manpower = 870500
+	manpower = 1230500
 
 	state_category = city
 
 	resources={
-		tungsten=4
-		wood=4
+		tungsten=2
 	}
 
 	history={
@@ -16,10 +15,17 @@ state={
 			9692 10
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 5
+			industrial_complex = 3
+			
 		}
 		add_core_of = AUS
+
+		1939.3.14 = {
+			owner = SLO
+			controller = SLO
+			add_core_of = SLO
+		}
 	}
 
 	provinces={

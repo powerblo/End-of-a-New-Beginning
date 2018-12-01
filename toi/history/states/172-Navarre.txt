@@ -2,27 +2,32 @@
 state={
 	id=172
 	name="STATE_172"
-	manpower = 450000
+	manpower = 1794880
 	
-	state_category = town #fucking change the damn category cunts
+	state_category = city
 	
 	resources={
-		iron = 1
-		wood = 2
+		steel=12
 	}
 
 	history={
 		owner = SPR
 		victory_points = {
-			9857 3 
+			740 3 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			
+			740 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SPR
 	}
 
 	provinces={
-	3931 9857 
+		738 740 932 3735 3737 3931 3933 6756 9703 9857 11688 
 	}
 }

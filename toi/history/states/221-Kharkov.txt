@@ -2,14 +2,12 @@
 state={
 	id=221
 	name="STATE_221"
-	manpower = 1470163
+	manpower = 2227520
 	
 	state_category = city
 	
 	resources={
-		iron=14
-		coal=8
-		wood=6
+		steel=56
 	}
 
 	history={
@@ -18,10 +16,17 @@ state={
 			418 10
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 7
+			arms_factory = 2
 			
 		}
 		add_core_of = RUS
+		add_core_of = UKR
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+			}
+		}
 	}
 
 	provinces={

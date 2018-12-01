@@ -49,8 +49,7 @@ guiTypes = {
 			position = { x= 19 y = 305 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
-		}			
-		
+		}
 		containerWindowType = {
 			name = "chart_explanation"
 			position = { x = 300 y = 298 }
@@ -72,7 +71,6 @@ guiTypes = {
 				format = "UPPER_LEFT"
 			}
 		}
-
 		
 		containerWindowType = {
 			name = "political_pie_chart"
@@ -98,10 +96,19 @@ guiTypes = {
 			position = { x = 88 y = 305 }
 			size = { width = 255 height = 60 }
 			clipping = no
+					
+#			instantTextboxType = {
+#				name = "party"
+#				position = { x = 9 y = 2 }
+#				font = "hoi_18mbs"
+#				text = "party"
+#				maxWidth = 155
+#				maxHeight = 20
+#			}
 			
 			instantTextboxType = {
 				name = "ideology"
-				position = { x = 9 y = 2 }
+				position = { x = 9 y = 8 }
 				font = "hoi_18mbs"
 				text = "ideology"
 				maxWidth = 155
@@ -110,7 +117,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "elections"
-				position = { x = 9 y = 42 }
+				position = { x = 9 y = 34 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 155
@@ -165,14 +172,6 @@ guiTypes = {
 			}
 			
 			iconType = {
-				name = "prev_level_glow"
-				position = { x = 63 y = 2 }
-				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
-				alwaystransparent = yes				
-				scale = 0.5
-			}
-			
-			iconType = {
 				name = "prev_autonomy_level_icon"
 				position = { x = 75 y = 9 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
@@ -190,14 +189,6 @@ guiTypes = {
 				name = "next_autonomy_level"
 				position = { x = 299 y = 5 }
 				quadTextureSprite = "GFX_occupation_policy_button_selected"
-			}
-			
-			iconType = {
-				name = "next_level_glow"
-				position = { x = 287 y = -2 }
-				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
-				alwaystransparent = yes				
-				scale = 0.5
 			}
 			
 			iconType = {
@@ -221,6 +212,12 @@ guiTypes = {
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
 		}
+		
+#		buttonType = {
+#			name = "show_subjects_button"
+#			position = { x = 482 y = 246 }
+#			quadTextureSprite = "GFX_subject_button"
+#		}
 		
 		containerWindowType = {
 			name = "active_goal"
@@ -446,7 +443,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "show_subjects_button"
-			position = { x = 313 y = 390 }
+			position = { x = 280 y = 390 }
 			quadTextureSprite = "GFX_button_221x34"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_LEFT"
@@ -555,7 +552,7 @@ guiTypes = {
 					name = "box"
 					position = { x = 10 y = 10 }
 					size = { width = 500 height = 1 }
-					slotsize = { width = 231 height = 75 }
+					slotsize = { width = 231 height = 100 }
 					max_slots_horizontal = 2
 					add_horizontal = yes
 					format = "UPPER_LEFT"
@@ -654,7 +651,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_selectable_idea_entry"
-		size = { width = 231 height = 74 }
+		size = { width = 231 height = 100 }
 		clipping = no
 			
 		background = {
@@ -665,7 +662,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 42 y = 42 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes
@@ -696,14 +693,14 @@ guiTypes = {
 			name = "traits_grid"
 			position = { x = 90 y = 28 }
 			size = { width = 231 height = 100%% }
-			slotsize = { width = 200 height = 15 }
+			slotsize = { width = 200 height = 37 }
 			add_horizontal = no
 			format = "UPPER_LEFT"
 		}
 		
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 80 y = 47 }
+			position = { x = -80 y = 69 }
 			font = "hoi_16mbs"
 			text = ""
 			maxWidth = 142
@@ -908,7 +905,7 @@ guiTypes = {
 			}
 
 			iconType = {
-				name = "prev_level_glow"
+				name = "continuous_glow"
 				position = { x = 60 y = -12 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				alwaystransparent = yes				
@@ -933,14 +930,6 @@ guiTypes = {
 				name = "next_autonomy_level"
 				position = { x = 214 y = -5 }
 				quadTextureSprite = "GFX_occupation_policy_button_selected"
-			}
-			
-			iconType = {
-				name = "next_level_glow"
-				position = { x = 202 y = -12 }
-				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
-				alwaystransparent = yes				
-				scale = 0.5
 			}
 			
 			iconType = {
@@ -1043,7 +1032,7 @@ guiTypes = {
 		buttonType = {
 			name = "release"
 			position = { x = 323 y = 36 }
-			quadTextureSprite = "GFX_sort_button_171x35"
+			quadTextureSprite = "GFX_sort_173"
 	 		buttonFont = "hoi_18mbs"
 			Orientation = "UPPER_LEFT"
 			buttonText = "RELEASE"

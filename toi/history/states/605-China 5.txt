@@ -2,13 +2,12 @@ state=
 {
 	id=605
 	name="STATE_605" # Sichuan
-	manpower = 24164000
+	manpower = 52963300
 
 	state_category = city
 
 	resources={
-		iron = 10
-		wood=4
+		steel = 20
 	}
 	history=
 	{
@@ -16,14 +15,24 @@ state=
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 2
-			cotton_farm = 2
+			infrastructure = 4
+			industrial_complex = 2
+			
 		}
 		victory_points = {
 			4925 5
 		}
 		victory_points = {
 			6999 20
+		}
+
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 6
+				infrastructure = 6
+				
+				arms_factory = 3
+			}
 		}
 
 	}

@@ -2,11 +2,10 @@
 state={
 	id=19
 	name="STATE_19"
-	manpower = 826587
+	manpower = 1340400
 	resources={
-		iron = 16
-		aluminium = 6
-		wood = 4
+		steel=40
+		aluminium=18
 	}
 	
 	state_category = city
@@ -17,12 +16,14 @@ state={
 			9737 20
 		}
 		buildings = {
-			infrastructure = 4
-			arms_factory = 4		
+			infrastructure = 6
+			arms_factory = 1
+			dockyard = 1
+			
 			9737 = {
-				naval_base = 1
+				naval_base = 3
+				coastal_bunker = 1
 			}
-			fabric_weavery=1
 		}
 		add_core_of = FRA
 	}

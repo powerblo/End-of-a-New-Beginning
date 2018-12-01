@@ -1,108 +1,109 @@
-﻿1857.1.1 = {
-  capital = 3
+﻿capital = 3
 
-  oob = "SWI_1857"
+oob = "SWI_1861"
 
-  set_convoys = 0
-  
-  set_research_slots = 3
-
-  add_ideas = { 
-    #POLITICS 
-		  
-    hos_is_leader
-    victorian_era
-	law_victorian_army
-    industrializing
-    non_monarchical_system
-    parliamentary_republic
-
-    civilian_economy
-    export_focus
-    two_percent
-    low_taxes
-	cl_restricted
-	ten_hour_work_day
-
-    stagnation_growth
-    border_control
-	volunteer_only
-    limited_equality
-    universal_male_suffrage
-
-    constitution_adopted
-    free_elections
-
-    open_schools
-    secular_state
-	religion_protestant
-        #NATIONAL SPIRITS
-	
-  }
-
-
-  set_politics = {
+set_politics = {
     parties = {
-      anarchism = {
-        popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
-        popularity = 50
+      economic_liberalism = {
+        popularity = 45
       }
       traditional_conservatism = {
         popularity = 40
       }
-      radical_democracy = {
-        popularity = 10
-      }
-      chauvinist_populism = {
+      social_democracy = {
         popularity = 0
       }
-      autocracy = {
+      radical_socialism = {
         popularity = 0
       }
-      fundamentalism = {
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 15
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
         popularity = 0
       }
     }
 
-	  ruling_party = centrism
-  }
-  
-  set_technology = {
+	ruling_party = economic_liberalism
+}
+
+set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
+	rifle_equipment1 = 1
+	 
+	hand_revolvers = 1
+	socket_bayonet = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
 	gw_artillery = 1
-	iron_railways = 1
-	steam_engine = 1
-	manufactories = 1
-	hot_blast_furnaces = 1
-	food_preserving_icebox = 1
-	early_artificial_fertilizer = 1
-	electrical_engineering = 1
-	start_build_tech = 1
-  }
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+}
 
-  # POLITICAL LEADERS
 
-create_country_leader = {
-  name = "James Guillaume"
-  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Portrait_SWI_James_Guillaume.dds"
-  expire = "1858.1.1"
-  ideology = anarchism_sub
-  traits = { }
+1857.5.11 = {
+oob = "SWI_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 45
+      }
+      traditional_conservatism = {
+        popularity = 40
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 0
+      }
+      parliamental_oligarchy = {
+        popularity = 15
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = economic_liberalism
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
 }
 
 create_country_leader = {
@@ -112,85 +113,4 @@ create_country_leader = {
   expire = "1858.1.1"
   ideology = social_liberal
   traits = { }
-}
-
-create_country_leader = {
-  name = "Caspar Decurtins"
-  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Portrait_SWI_Caspar_Decurtins.dds"
-  expire = "1858.1.1"
-  ideology = federal
-  traits = { }
-}
-
-create_country_leader = {
-  name = "Swiss Parliament"
-  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Portrait_SWI_Caspar_Decurtins.dds"
-  expire = "1858.1.1"
-  ideology = parlia_repub
-  traits = { }
-}
-
-create_country_leader = {
-  name = "Friedrich Emanuel Rudolf von Erlach"
-  desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-  picture = "Portrait_SWI_Friedrich_Emanuel_Rudolf_von_Erlach.dds"
-  expire = "1858.1.1"
-  ideology = constit_monarch
-  traits = { }
-}
-
-create_country_leader = {
-    name = "Karl Arnold-Obrist"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_SWI_Karl_Arnold_Obrist.dds"
-    expire = 1857.11.9
-    ideology = christian
-}
-
-create_corps_commander = {
-  name = "Guillaume Henri Dufour"
-  picture = "Portrait_SWI_Guillaume_Henri_Dufour.dds"
-  traits = { }
-  skill = 4
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Jean-Ulrich de Salis-Soglio"
-  picture = "Portrait_SWI_Jean_Ulrich_de_Salis_Soglio.dds"
-  traits = { }
-  skill = 1
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Louis-Henri Delarageaz"
-  picture = "Portrait_SWI_Louis_Henri_Delarageaz.dds"
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Hans Herzog"
-  picture = "Portrait_SWI_Hans_Herzog.dds"
-  traits = { }
-  skill = 1
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
 }

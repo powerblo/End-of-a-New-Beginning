@@ -2,12 +2,12 @@
 state={
 	id=291
 	name="STATE_291"
-	manpower = 491065
+	manpower = 2044165
 	
 	state_category = town
 	
 	resources={
-		oil=4
+		oil=22
 	}
 
 	history={
@@ -15,13 +15,22 @@ state={
 		victory_points = {
 			2097 5
 		}
+		victory_points = {
+			2089 1 
+		}
 		buildings = {
-			infrastructure = 3
+			inforstructure = 5
+			arms_factory = 1
+			industrial_complex = 2 
+			
+			2089 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = OTO
 	}
 
 	provinces={
-		78  2097 12855 
+		78 2004 2089 2097 3795 7977 7994 8001 10876 12046 12726 12839 12855 
 	}
 }

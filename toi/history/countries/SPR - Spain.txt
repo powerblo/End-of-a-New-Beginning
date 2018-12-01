@@ -1,106 +1,123 @@
-﻿1857.1.1 = {
-  capital = 804
+﻿capital = 41
 
-  oob = "SPR_1857"
+oob = "SPR_1861"
 
-  set_convoys = 50
-
-  set_research_slots = 4
-
-  add_ideas = { 
-  
-    #POLITICS
-		  
-    hos_is_leader
-    victorian_era
-	law_victorian_army
-    agrarian
-    no_heir
-    parliamentary_republic
-
-    civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_restricted
-	fourteen_hour_work_day
-
-    stagnation_growth
-    border_control
-	volunteer_only
-    limited_equality
-    parliamentary_suffrage
-
-    human_rights
-    no_elections
-
-    privileged_education
-    state_religion
-	religion_catholic
-    #NATIONAL SPIRITS
-	
-  }
-   give_guarantee = ADR 
-   
-  add_ideas = SPR_Isabella_II 
-
-  set_politics = {
+set_politics = {
     parties = {
-      anarchism = {
+      economic_liberalism = {
         popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
-        popularity = 60
       }
       traditional_conservatism = {
-        popularity = 25
-      }
-      radical_democracy = {
         popularity = 0
       }
-      chauvinist_populism = {
+      social_democracy = {
         popularity = 0
       }
-      autocracy = {
-        popularity = 15
+      radical_socialism = {
+        popularity = 0
       }
-      fundamentalism = {
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
         popularity = 0
       }
     }
 
-	  ruling_party = centrism
-  }
+	ruling_party = despotic_autocracy
+}
 
-  set_technology = {
+set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
+	rifle_equipment1 = 1
+	 
+	hand_revolvers = 1
+	socket_bayonet = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
-	gw_artillery = 1
-	iron_railways = 1
-	steam_engine = 1
-	manufactories = 1
-	hot_blast_furnaces = 1
-	start_build_tech = 1
-	food_preserving_icebox = 1
-	early_artificial_fertilizer = 1
-	electrical_engineering = 1
+	civil_army_cloth = 1
 	basic_cavalry = 1
-  }
+	horse_transport = 1
+	horse_artillery = 1
+	gw_artillery = 1
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+	fivesix_frigate = 1
+}
 
-  # POLITICAL LEADERS
+create_country_leader = {
+	name = "Isabella II"
+	desc = "POLITICS_ISABELLA_II_DESC"
+	picture = "Portrait_SPR_Isabella_II.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
 
-  create_country_leader = {
+1857.5.11 = {
+oob = "SPR_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 50
+      }
+      traditional_conservatism = {
+        popularity = 30
+      }
+      social_democracy = {
+        popularity = 10
+      }
+      radical_socialism = {
+        popularity = 3
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 7
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = economic_liberalism
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
 	name = "Isabella II"
 	desc = "POLITICS_ISABELLA_II_DESC"
 	picture = "Portrait_SPR_Isabella_II.dds"
@@ -149,7 +166,7 @@ create_country_leader = {
   desc = ""
   picture = "Portrait_SPR_Ramon_de_la_Sagra.dds"
   expire = "1965.1.1"
-  ideology = anarchism_sub
+  ideology = anarchism
   traits = {
     #
   }
@@ -171,10 +188,6 @@ create_corps_commander = {
   picture = "Portrait_SPR_Arsenio_Martinez_Campos_y_Anton.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -182,10 +195,6 @@ create_corps_commander = {
   picture = "Portrait_SPR_Blas_Villate.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -193,10 +202,6 @@ create_corps_commander = {
   picture = "Portrait_SPR_Domingo_Dulce_y_Garay.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -204,22 +209,6 @@ create_corps_commander = {
   picture = "Portrait_SPR_Joaquin_Jovellar.dds"
   traits = { }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = SUL
-		autonomous_state = autonomy_colony
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = SUL
-	}
-}
+
 }

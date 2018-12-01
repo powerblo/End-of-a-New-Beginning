@@ -1,23 +1,36 @@
 state= {
 	id=593
 	name="STATE_593"
-	manpower = 11942000
+	manpower = 12700000
 	state_category = town
 	resources={
-		tungsten=4
-		iron= 8
+		tungsten=20
+		steel= 20
 		chromium = 4
 	}
 
 	history= {
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = TAI
 		buildings = {
-			infrastructure = 2
-			cotton_farm = 2
+			infrastructure = 3
+			industrial_complex = 1
 			9938 = {
 				naval_base = 1
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+
+		1938.10.25 = {
+			remove_core_of = GXC
+			owner = CHI
+			JAP = {
+				set_province_controller = 1202
+				set_province_controller = 4050
+				set_province_controller = 7108
+				set_province_controller = 9938
+				set_province_controller = 12095
 			}
 		}
 	}

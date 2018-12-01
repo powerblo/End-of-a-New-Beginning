@@ -1,17 +1,26 @@
 ﻿division_template = {
-	name = "Infanteriedivision"
+  name = "Hessische Infanterie"
 
-	regiments = {
-		light_infantry = { x = 0 y = 0 }
-		light_infantry = { x = 0 y = 1 }
-	}
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 2 y = 0}
+  }
 }
 
 units = {
+		#Capital
 		division= {
-			name = "Kasseler Stadtwache"
-			location = 564
-			division_template = "Infanteriedivision"
-			start_experience_factor = 0.1
+			name = "Erste Hessische Infanterie"
+			location = 6488
+			division_template = "Hessische Infanterie"
+			start_experience_factor = 0.2
+		}
+		#Scattered Divisions
+		division= {
+			name = "Zweite Hessische Infanterie"
+			location = 6549
+			division_template = "Hessische Infanterie"
+			start_experience_factor = 0.2
 		}
 }

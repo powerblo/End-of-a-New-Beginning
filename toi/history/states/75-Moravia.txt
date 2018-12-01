@@ -3,9 +3,7 @@ state={
 	id=75
 	name="STATE_75"
 	resources={
-		iron=8
-		wood = 8
-		coal = 2
+		steel=8.000
 	}
 
 	history={
@@ -14,15 +12,24 @@ state={
 			3569 1 
 		}
 		buildings = {
-			infrastructure = 4 
+			infrastructure = 7
+			industrial_complex = 4
+			
+
 		}
 		add_core_of = AUS
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+
+		}
+
 	}
 
 	provinces={
-		 569 3553 3569 6562 6576 6590 11511
+		557 569 3553 3569 6562 6576 6590 11511 11525 
 	}
-	manpower=1798400
+	manpower=2598400
 	buildings_max_level_factor=1.000
 	state_category=city
 }

@@ -1,22 +1,25 @@
 
 state={
 	id=535
-	name="STATE_535" # Echizen
+	name="STATE_535" # Koshinetsu
 	manpower = 3871000
 	state_category = large_city
 	
 	resources={
-		iron=10
-		wood=2
-		tungsten=4
+		steel=35
+		tungsten=10
 	}
 
 	history={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			industrial_complex = 1
-			infrastructure = 2
+		
+			arms_factory = 1
+			industrial_complex = 2
+			infrastructure = 3
+			dockyard = 1
+
 		}
 		
 		victory_points = {
@@ -26,6 +29,6 @@ state={
 	}
 
 	provinces={
-		998 7102 7217 10015 10032 1067 4172 7187 10128 
+		998 7102 7217 10015 10032 
 	}
 }

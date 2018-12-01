@@ -2,7 +2,7 @@ state=
 {
 	id=145
 	name="STATE_145"
-	manpower = 14400
+	manpower = 27400
 
 	state_category = small_island
 
@@ -10,11 +10,12 @@ state=
 	{
 		owner = RUS
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+			9228 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = RUS
-		add_claim_by = SWE
-		add_claim_by = FIN
 	}
 
 	provinces=	{

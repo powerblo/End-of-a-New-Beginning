@@ -1,25 +1,26 @@
 
 state={
 	id=533
-	name="STATE_533" # Mutsu
-	manpower = 3275000
+	name="STATE_533" # Tohoku
+	manpower = 6575000
 	state_category = large_city
 	resources={
-		iron=12
-		wood=4
+		steel=35
 	}
 
 	history={
 		owner = JAP
 		add_core_of = JAP
-		add_core_of = NOA
 		buildings = {
+		
 			arms_factory = 1
-			industrial_complex = 1
-			infrastructure = 2
+			industrial_complex = 2
+		
+			infrastructure = 3
 			
 			9859 = {
-				naval_base = 3
+				naval_base = 6
+
 			}
 		}
 		
@@ -34,6 +35,6 @@ state={
 	}
 
 	provinces={
-		1024 1165 4118 4122 4153 6870 6873 6994 7169 9807 9859 11847 
+		1024 1063 1165 3848 4067 4118 4122 4153 6870 6873 6994 7169 9807 9859 9865 11847 12056 
 	}
 }

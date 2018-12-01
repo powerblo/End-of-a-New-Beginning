@@ -2,7 +2,7 @@ state=
 {
 	id=779
 	name="STATE_779"
-	manpower = 23452
+	manpower = 1100
 	
 	state_category = rural
 	resources={
@@ -12,13 +12,16 @@ state=
 	history= {
 		owner = SOT
 		add_core_of = SOT
-		add_claim_by = OFS
 		buildings = {
 			infrastructure = 1
-			cotton_farm=1
 		}
 		victory_points = {
 			13245 1
+		}
+		1866.3.1 = {
+			owner = OFS
+			controller = OFS
+			add_core_of = OFS
 		}
 	}
 	provinces={

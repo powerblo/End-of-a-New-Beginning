@@ -3,11 +3,10 @@ state={
 	id=586
 	name="STATE_586" #Alma Alta
 	resources={
-		iron=20
-		chromium=16
-		tungsten=4
-		aluminium=4
-		wood=4
+		steel=48
+		chromium=44
+		tungsten=14
+		aluminium=32
 	}
 
 
@@ -16,16 +15,25 @@ state={
 	history={
 		owner = KOK
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			cotton_farm=2
+			infrastructure = 3
+			industrial_complex = 3
+
+		}
+		victory_points = {
+			1591 3 
 		}
 		add_core_of = KOK
+		#add_core_of = KAZ
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+			}
+		}
 
 	}
 
 	provinces={
-		 4686 7706 10148 10660 12640 
+		1591 1825 4224 4686 7706 10148 10660 12583 12640 13147 
 	}
-	manpower=1708936     
+	manpower=2563404
 }

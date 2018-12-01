@@ -1,94 +1,144 @@
-﻿1857.1.1 = {
-  capital = 554
+﻿capital = 49
 
-  oob = "SYR_1857"
+oob = "TUR_1936"
 
-  set_convoys = 0
-  
-  set_research_slots = 2
+set_research_slots = 3
 
-  add_ideas = { 
-    #POLITICS 
-		  
-    hos_is_leader
-    pre_industrial_era
-    agrarian
-    no_heir
-    absolute_monarchy
-
-    civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_legal
-
-    stagnation_growth
-    border_control
+add_ideas = {
 	limited_conscription
-    slavery
-    absolutism
+}
 
-    no_constitution
-    no_elections
-
-    privileged_education
-    state_religion
-	religion_sunni
-         #NATIONAL SPIRITS
-	
-  }
-
-  set_politics = {
-    parties = {
-      anarchism = {
-        popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
-        popularity = 0
-      }
-      traditional_conservatism = {
-        popularity = 0
-      }
-      radical_democracy = {
-        popularity = 0
-      }
-      chauvinist_populism = {
-        popularity = 0
-      }
-      autocracy = {
-        popularity = 100
-      }
-      fundamentalism = {
-        popularity = 0
-      }
-    }
-
-	  ruling_party = autocracy
-  }
-
-  set_technology = {
+set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
-	tech_naval_1812_frigate = 1
-	start_build_tech = 1
-  }
+}
 
-  # POLITICAL LEADERS
+set_politics = {
+
+	parties = {
+		economic_liberalism = { 
+			popularity = 10
+		}
+
+		totalitarian_nationalism = {
+			popularity = 0
+			banned = yes
+		}
+		
+		marxism_leninism = {
+			popularity = 0
+			banned = yes #default is no
+		}
+		
+		despotic_autocracy = { 
+			popularity = 100
+		}
+	}
+	
+	ruling_party = despotic_autocracy
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_convoys = 20
+set_national_unity = 0.55
+
+# Atatürk still alive in '36, however, Inönü was already Prime Minister (but not President)
+create_country_leader = {
+	name = "Ismet Inönü"
+	desc = "POLITICS_ISMET_INÖNÜ_DESC"
+	picture = "Portrait_Turkey_Ismet_Inonu.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
 
 create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
-    ideology = despotism
+	name = "Mustafa Kemal Atatürk"
+	desc = "POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
+	picture = "gfx/leaders/TUR/Portrait_Turkey_Mustafa_Kemal_Ataturk.dds"
+	expire = "1938.11.10"
+	ideology = despotism
+	traits = {
+		#
+	}
 }
+
+create_country_leader = {
+	name = "Sefik Hüsnü"
+	desc = "POLITICS_SEFIK_HUSNU_DESC"
+	picture = "gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Celâl Bayar"
+	desc = "POLITICS_CELAL_BAYAR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = conserv
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Fevzi Çakmak"
+	desc = "POLITICS_OGUZ_REMZI_ARIK_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Cemil Cahit Toydemir"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+	traits = { desert_fox }
+	skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Nazmi Solok"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+	traits = { trickster }
+	skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Salih Omurtak"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	traits = {  hill_fighter }
+	skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Rauf Orbay"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
+	traits = {  }
+	skill = 2
+}
+
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Dumlupinar Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		sub_engine_upgrade = 2
+		sub_stealth_upgrade = 2
+		sub_torpedo_upgrade = 2
+	}
 }

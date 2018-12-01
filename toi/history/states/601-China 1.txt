@@ -2,13 +2,12 @@
 state={
 	id=601
 	name="STATE_601" # Xikang
-	manpower = 468200
+	manpower = 968200
 
 	state_category = pastoral
 
 	resources={
 		oil=2
-		wood=2
 	}
 
 	history={
@@ -16,6 +15,13 @@ state={
 		add_core_of = CHI
 		buildings = {
 			infrastructure = 1
+		}
+
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 2
+			}
 		}
 
 	}

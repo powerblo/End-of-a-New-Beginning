@@ -1,108 +1,122 @@
-﻿1857.1.1 = {
-  capital = 44
+﻿capital = 44
 
-  oob = "ALB_1857"
+oob = "ALB_1861"
 
-  set_convoys = 5
-
-  set_research_slots = 2
-
-  add_ideas = { 
-  
-    #POLITICS
-		  
-    hos_is_leader
-    victorian_era
-	law_victorian_army
-    agrarian
-    no_heir
-    absolute_monarchy
-
-    civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_legal
-
-    stagnation_growth
-    border_control
-	volunteer_only
-    limited_equality
-    absolutism
-
-    no_constitution
-    no_elections
-
-    privileged_education
-    state_religion
-	religion_sunni
-    #NATIONAL SPIRITS
-	
-  }
-
-  set_politics = {
+set_politics = {
     parties = {
-      anarchism = {
-        popularity = 0
-      }
-      vanguard_communism = {
-        popularity = 0
-      }
-      collectivist_socialism = {
-        popularity = 0
-      }
-      social_egalitarianism = {
-        popularity = 0
-      }
-      centrism = {
+      economic_liberalism = {
         popularity = 0
       }
       traditional_conservatism = {
         popularity = 0
       }
-      radical_democracy = {
+      social_democracy = {
         popularity = 0
       }
-      chauvinist_populism = {
+      radical_socialism = {
         popularity = 0
       }
-      autocracy = {
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
         popularity = 100
       }
-      fundamentalism = {
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
-  }
-  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = ALB }
-  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = ALB }
+	ruling_party = despotic_autocracy
+}
 
-
-  set_technology = {
+set_technology = {
 	infantry_weapons = 1
-	tech_infantry_napoleonic_uniform = 1
+	rifle_equipment1 = 1
+	hand_revolvers = 1
+	socket_bayonet = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	civil_army_cloth = 1
+	basic_cavalry = 1
+	horse_transport = 1
+	horse_artillery = 1
 	gw_artillery = 1
-	iron_railways = 1
-	steam_engine = 1
-	manufactories = 1
-	hot_blast_furnaces = 1
-	start_build_tech = 1
-	food_preserving_icebox = 1
-	early_artificial_fertilizer = 1
-	electrical_engineering = 1
-  }
+	improved_smoothbore = 1
+	early_howitzer = 1
+	foureight_frigate = 1
+	#early_rockets = 1
+	early_destroyer = 1 transport = 1
+}
 
-  # POLITICAL LEADERS
-
-  create_country_leader = {
-    name = "Leader"
+create_country_leader = {
+    name = "powerblo"
     desc = "POLITICS_TEMP_DESC"
     picture = ""
-    expire = 2100.1.1
+    expire = 2000.09.10
+    ideology = despotism
+}
+
+1857.5.11 = {
+oob = "ALB_1857"
+
+set_politics = {
+    parties = {
+      economic_liberalism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      social_democracy = {
+        popularity = 0
+      }
+      radical_socialism = {
+        popularity = 0
+      }
+      marxism_leninism = {
+        popularity = 0
+      }
+      despotic_autocracy = {
+        popularity = 100
+      }
+      parliamental_oligarchy = {
+        popularity = 0
+      }
+      totalitarian_nationalism = {
+        popularity = 0
+      }
+      rexism_falangism = {
+        popularity = 0
+      }
+      theocracy = {
+        popularity = 0
+      }
+    }
+
+	ruling_party = despotic_autocracy
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
+    name = "powerblo"
+    desc = "POLITICS_TEMP_DESC"
+    picture = ""
+    expire = 2000.09.10
     ideology = despotism
 }
 }

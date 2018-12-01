@@ -2,18 +2,22 @@
 state={
 	id=262
 	name="STATE_262" # Pechora
-	manpower = 23590
+	manpower = 43590
 	
 	state_category = rural
 	
 	resources={
-		oil=1
+		oil=8
 	}
 
 	history={
 		owner = RUS
 		buildings = {
 			infrastructure = 1
+			12530 = {
+				naval_base = 1
+			}
+
 		}
 		add_core_of = RUS
 	}

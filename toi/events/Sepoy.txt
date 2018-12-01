@@ -11,6 +11,7 @@ country_event = {
 		
 		option = {
 				name = sepoy.1.a
+				create_faction = "sepoy_mutiny_1857"
 				hidden_effect = {
 					OUD = { country_event = { days = 10 id = sepoy.2 } }
 					GWA = { country_event = { days = 10 id = sepoy.2 } }
@@ -88,6 +89,7 @@ country_event = {
 				hidden_effect = {
 					ENG = { end_puppet = BIK }
 					add_to_war = { targeted_alliance = SRS enemy = ENG }
+					SRS = { add_to_faction = BIK }
 				}
 		}
 		
@@ -115,6 +117,7 @@ country_event = {
 		
 		option = {
 				name = sepoy.5.a
+				SRS = { add_to_faction = OUD }
 		}
 }
 
@@ -136,5 +139,6 @@ country_event = {
 		
 		option = {
 				name = sepoy.6.a
+				SRS = { add_to_faction = GWA }
 		}
 }

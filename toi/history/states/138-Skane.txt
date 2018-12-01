@@ -2,7 +2,7 @@
 state={
 	id=138
 	name="STATE_138"
-	manpower = 747701
+	manpower = 1047701
 	
 	state_category = city
 
@@ -15,16 +15,19 @@ state={
 			11215 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+			industrial_complex = 1
+			dockyard = 1
 			11215 = {
-				naval_base = 2
+				naval_base = 5
+				coastal_bunker = 3
 			}
 			9279 = {
-				naval_base = 1
+				naval_base = 5
+				coastal_bunker = 1
 			}
 		}
 		add_core_of = SWE
-		add_claim_by = DEN
 	}
 
 	provinces={

@@ -2,15 +2,9 @@
 state={
 	id=218
 	name="STATE_218"
-	manpower = 653868
+	manpower = 1501076
 	
 	state_category = city
-
-	resources = {
-		iron = 4
-		coal = 6
-		wood = 2
-	}
 
 	history={
 		owner = RUS
@@ -18,13 +12,20 @@ state={
 			9417 15 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
 			
 			9417 ={
-				naval_base = 3
+				naval_base = 5
 			}
 		}
 		add_core_of = RUS
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+			}
+		}
 	}
 
 	provinces={

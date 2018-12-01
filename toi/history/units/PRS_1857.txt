@@ -1,215 +1,158 @@
 ﻿division_template = {
-   name = "Infanterie-Brigade"
-   division_names_group = PRS_INF_01
+   name = "Infanterie Division"
 
    regiments = {
-    line_infantry = { x = 0 y = 0 }
-    line_infantry = { x = 0 y = 1 }
-	line_infantry = { x = 0 y = 2 }
-	line_infantry = { x = 1 y = 0 } 
-	line_infantry = { x = 1 y = 1 }
-	line_infantry = { x = 1 y = 2 }
+     line_infantry = { x = 0 y = 0 }
+     line_infantry = { x = 0 y = 1 }
+     line_infantry = { x = 1 y = 0 }
+     line_infantry = { x = 1 y = 1 }
+     light_cavalry = { x = 2 y = 0 }
+     light_infantry = { x = 3 y = 0 }
   }
   support = {
-    cannon_artillery_support = { x = 0 y = 0 }
+      artillery = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+  }
+}
+
+division_template = {
+	name = "Kavalerie Division"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+		light_cavalry = { x = 0 y = 1 }
+		light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+		light_cavalry = { x = 1 y = 2 }
+	 }
+}
+division_template  =  {
+ name = "Landwehr Kavalerie Division"
+
+ regiments = {
+   light_cavalry = { x = 0 y = 0 }
+   light_cavalry = { x = 0 y = 1 }
+   light_cavalry = { x = 1 y = 0 }
+   light_cavalry = { x = 1 y = 1 }
+   light_cavalry = { x = 2 y = 0 }
+   light_cavalry = { x = 2 y = 1 }
   }
 }
 division_template = {
-   name = "Kavallerie-Brigade"
-   division_names_group = PRS_CAV_01
+  name = "Garde Division"
 
-   regiments = {
-    light_cavalry = { x = 0 y = 0 }
-	light_cavalry = { x = 0 y = 1 }
-    light_infantry = { x = 1 y = 0 }
-	light_infantry = { x = 1 y = 1 }
-	light_infantry = { x = 1 y = 2 }
+  regiments = {
+    line_infantry = { x = 0 y = 0 }
+    line_infantry = { x = 0 y = 1 }
+    line_infantry = { x = 1 y = 0 }
+    line_infantry = { x = 1 y = 1 }
+    dragoon = { x = 2 y = 0 }
+    light_infantry = { x = 3 y = 0 }
   }
-  
   support = {
-    cannon_artillery_support = { x = 0 y = 0 }
+    artillery = { x = 0 y = 0 }
+    engineer = { x = 0 y = 1 }
   }
+  priority = 2
 }
 
-units = {
-	#1. Division Köningsberg
+	units = {
+		#Kaiserliche Preussische Armee
 		division= {
-			name = "1. Infanterie-Brigade"
+			name = "1. Division"
 			location = 6332
-			division_template = "Infanterie-Brigade"
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
 		}
-	#2. Division Danzig
 		division= {
-			name = "3. Infanterie-Brigade"
+			name = "2. Division"
 			location = 362
-			division_template = "Infanterie-Brigade"
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#3. Division Stettin
+    }
 		division= {
-			name = "5. Kavallerie-Brigade"
-			location = 6390
-			division_template = "Kavallerie-Brigade"
+			name = "3. Division"
+			location = 6282
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#4. Division Bromberg
+    }
 		division= {
-			name = "7. Infanterie-Brigade"
-			location = 243
-			division_template = "Infanterie-Brigade"
+			name = "4. Division"
+			location = 3295
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#5. Division Frankfurt
+    }
 		division= {
-			name = "9. Infanterie-Brigade"
-			location = 9496
-			division_template = "Infanterie-Brigade"
+			name = "5. Division"
+			location = 3207
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#6. Division Berlin/Brandenburg
+    }
 		division= {
-			name = "11. Kavallerie-Brigade"
-			location = 9456
-			division_template = "Kavallerie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#7. Division Magdeburg
-		division= {
-			name = "13. Infanterie-Brigade"
-			location = 6521
-			division_template = "Infanterie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#8. Division Erfurt
-		division= {
-			name = "15. Infanterie-Brigade"
-			location = 11402
-			division_template = "Infanterie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#9. Division Glogau
-		division= {
-			name = "17. Kavallerie-Brigade"
-			location = 9470
-			division_template = "Kavallerie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#10. Division Posen
-		division= {
-			name = "19. Infanterie-Brigade"
-			location = 6558
-			division_template = "Infanterie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#11. Division Breslau
-		division= {
-			name = "21. Infanterie-Brigade"
-			location = 9570
-			division_template = "Infanterie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#12. Division Neiße
-		division= {
-			name = "23. Kavallerie-Brigade"
-			location = 9535
-			division_template = "Kavallerie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#13. Division Münster
-		division= {
-			name = "25. Infanterie-Brigade"
-			location = 6535
-			division_template = "Infanterie-Brigade"
-			start_experience_factor = 0.3
-
-		}
-	#14. Division Düsseldorf
-		division= {
-			name = "27. Infanterie-Brigade"
+			name = "6. Division"
 			location = 3444
-			division_template = "Infanterie-Brigade"
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#15. Division Cologne/Köln
+    }
 		division= {
-			name = "29. Kavallerie-Brigade"
+			name = "7. Division"
+			location = 3522
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "8. Division"
+			location = 6521
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "9. Division"
+			location = 3283
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "10. Division"
+			location = 6558
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+    division= {
+			name = "11. Division"
+			location = 9570
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "12. Division"
+			location = 9457
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "13. Division"
+			location = 6535
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+    }
+		division= {
+			name = "14. Division"
+			location = 3444
+			division_template = "Infanterie Division"
+			start_experience_factor = 0.3
+                }
+		division= {
+			name = "15. Division"
 			location = 587
-			division_template = "Kavallerie-Brigade"
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
-
-		}
-	#16. Division Trier
+    }
 		division= {
-			name = "31. Infanterie-Brigade"
-			location = 3423
-			division_template = "Infanterie-Brigade"
+			name = "16. Division"
+			location = 3547
+			division_template = "Infanterie Division"
 			start_experience_factor = 0.3
 
 		}
-
-
-	navy = {				
-		name = "Preussische Flotte"			
-		base = 6332
-		location = 6332
-		ship = { name = "Gefion" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Thetis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Danzig" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Barbarossa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Ancona" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Gazelle" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Amazon" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Grillon" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Mercury" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Hela" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Frauenlob" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Iltis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Royal Victoria" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Königsberg" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Berlin" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-	}
-}
-
-instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_rifle_0
-			creator = "PRS"
-		}
-		requested_factories = 5
-		progress = 0.4
-		efficiency = 20
-	}
-	add_equipment_production = {
-		equipment = {
-			type = uniform_equipment_1
-			creator = "PRS"
-		}
-		requested_factories = 2
-		progress = 0.7
-		efficiency = 30
-	}
-	add_equipment_production = {
-		equipment = {
-			type = cannon_equipment_0
-			creator = "PRS"
-		}
-		requested_factories = 1
-		progress = 0.3
-		efficiency = 15
-	}
 }

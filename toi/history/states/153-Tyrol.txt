@@ -2,7 +2,7 @@
 state={
 	id=153
 	name="STATE_153"
-	manpower = 1355340
+	manpower = 1655340
 	
 	state_category = town
 
@@ -12,9 +12,17 @@ state={
 			673 5 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+			industrial_complex = 1
+			
 		}
 		add_core_of = AUS
+
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
 	}
 
 	provinces={

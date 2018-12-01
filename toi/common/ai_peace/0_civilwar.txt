@@ -5,13 +5,11 @@
 civilwar_peace = {
 	# ROOT = Taker, FROM = Giver
 	enable = {
+		has_civil_war = yes
 		OR = {
-			has_civil_war = yes
-			OR = {
-				original_tag = FROM
-				FROM = {
-					original_tag = ROOT
-				}
+			original_tag = FROM
+			FROM = {
+				original_tag = ROOT
 			}
 		}
 	}

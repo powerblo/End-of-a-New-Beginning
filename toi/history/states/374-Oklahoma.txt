@@ -2,24 +2,35 @@
 state={
 	id=374
 	name="STATE_374"
-	manpower = 50372
+	manpower = 2396039
 
 	state_category = city
 
 	resources={
-		aluminium=2
-		wood = 2
+		oil=100
+		aluminium=32
 	}
 
 
 	history={
-		controller = USA
+		owner = USA
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
+			industrial_complex = 2
+			
 		}
+		add_core_of = USA
+		add_core_of = CSA
 		victory_points = {
 			1806 1
 		}
+
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 3
+			}
+		}
+
 	}
 
 	provinces={

@@ -1,0 +1,199 @@
+﻿division_template = {
+	name = "Infantry Regiment I"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+	}
+
+}
+
+division_template = {
+	name = "Infantry Regiment II"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment I"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0}
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment II"
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0}
+		light_cavalry = { x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Siege Artillery Regiment"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0}
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+  division = {
+    name = "1st Regiment Alabama Infantry"
+    location =12735
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Regiment Alabama Infantry"
+    location =12735
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "15th Arkansas Infantry Regiment 'Josey's Regiment'"
+    location = 12458
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Georgia Infantry"
+    location = 12384
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Georgia Infantry"
+    location = 12384
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "5th Georgia Infantry"
+    location = 12384
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Louisiana Infantry 'Nelligan's Regiment'"
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Louisiana Infantry"
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "3rd Louisiana Infantry"
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "5th Louisiana Infantry 'Hay's Fighting Tigers'"
+    location = 7552
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Mississippi Infantry 'Johnston's Regiment'"
+    location = 4464
+    division_template = "Infantry Regiment I"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Mississippi Infantry"
+    location = 4464
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Tennessee Infantry Regiment"
+    location = 10192
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Tennessee Infantry Regiment"
+    location = 10192
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Texas Infantry 'Ragged Old First'"
+    location = 3960
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "2nd Texas Infantry 'Moore's 1st Infantry'"
+    location = 10337
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+  division = {
+    name = "1st Virginia Infantry 'Old First'"
+    location = 7202
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+
+	division = {
+    name = "2nd Virginia Infantry"
+    location = 7202
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+	division = {
+    name = "3rd Virginia Infantry"
+    location = 7202
+    division_template = "Infantry Regiment II"
+    start_experience_factor = 0.2
+    start_equipment_factor = 0.8
+  }
+}

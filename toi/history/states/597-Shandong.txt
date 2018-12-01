@@ -2,7 +2,7 @@ state=
 {
 	id=597
 	name="STATE_597"
-	manpower = 23127000
+	manpower = 38758200
 	state_category = town
 
 
@@ -13,21 +13,26 @@ state=
 		victory_points = {
 			1069 3
 		}
-		
-		NIE = {
-			set_province_controller = 12069
+		victory_points = {
+			10000 5
 		}
-		
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 1
-			cotton_farm = 1
 			10000 = {
-				naval_base = 3
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
 			}
 			4205 = {
-				naval_base = 1
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
 			}
+		}
+
+		1938.10.25 = {
+			controller = JAP
 		}
 	}
 	provinces={

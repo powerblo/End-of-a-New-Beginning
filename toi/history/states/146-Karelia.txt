@@ -5,12 +5,22 @@ state={
 	state_category = town
 
 	history={
-		owner = FIN
-		add_core_of = FIN
-		add_claim_by = SWE
+		owner = RUS
+		add_core_of = RUS
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 5
+			industrial_complex = 2
+
+			#Mannerheim Line
+			9100 = {
+				bunker = 2
+			}
+			9105 = {
+				bunker = 2
+			}
+			9206 = {
+				coastal_bunker = 1
+			}
 		}
 		victory_points = {
 			9206 3

@@ -2,25 +2,28 @@
 state={
 	id=16
 	name="STATE_16"
-	resources={
-		wood=2.000
-	}
+	manpower = 38500
+	
+	state_category = metropolis
+	
 
 	history={
 		owner = FRA
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
-
+			#anti_air_building = 3
+			
 		}
 		add_core_of = FRA
-
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 4
+				industrial_complex = 6
+			}
+		}
 	}
 
 	provinces={
-		6949 9523 9534 9725 11491 11506 11518 
+		6547 6949 9507 9523 9534 9725 11491 11506 11518 
 	}
-	manpower=3967000
-	buildings_max_level_factor=1.000
-	state_category=metropolis
 }

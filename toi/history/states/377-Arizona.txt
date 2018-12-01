@@ -2,21 +2,24 @@
 state={
 	id=377
 	name="STATE_377"
-	manpower = 34557
+	manpower = 435572
 	
 	state_category = rural
 	
 	resources={
-		iron=2
-		aluminium=2
+		steel=40
+		oil=10
+		aluminium=16
 	}
 
 	history={
-		controller = USA
+		owner = USA
 		buildings = {
-			infrastructure = 1
+			infrastructure = 4
+			industrial_complex = 1
 			
 		}
+		add_core_of = USA
 		victory_points = {
 			853 3 
 		}

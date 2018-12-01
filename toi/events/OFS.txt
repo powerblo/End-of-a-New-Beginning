@@ -1,0 +1,28 @@
+﻿add_namespace = ofs
+
+#Truce with South African Republic
+country_event = {
+		id = ofs.1
+		title = ofs.1.t
+		desc = ofs.1.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+				TAG = OFS
+				OFS = { has_war_with = TRV }
+				date > 1858.1.1
+		}
+		
+		option = {
+				name = ofs.1.a
+				ai_chance = { factor = 100 }
+				custom_effect_tooltip = OFS_TRV_Truce
+				hidden_effect = { white_peace = TRV }
+		}
+		
+		option = {
+				name = ofs.1.b
+				ai_chance = { factor = 0 }
+		}
+}

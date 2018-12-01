@@ -2,21 +2,27 @@
 state={
 	id=144
 	name="STATE_144"
-	manpower = 255251
+	manpower = 355251
 
 	state_category = rural
 
 	resources={
-		iron=4
-		tungsten = 4
-		wood = 6
+		steel=12
+		tungsten = 20
 	}
 
 	history={
 		owner = SWE
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			
 			192 = {
+				naval_base = 3
+			}
+			9116 = {
+				naval_base = 3
+			}
+			11050 = {
 				naval_base = 2
 			}
 		}

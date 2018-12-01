@@ -2,21 +2,27 @@
 state={
 	id=187
 	name="STATE_187"
-	manpower = 91070
+	manpower = 322600
 	
 	state_category = small_island
 	
 	resources={
-		chromium=4
+		chromium=10
 	}
 
 	history={
 		owner = OTO
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
+			dockyard = 1
+			8435 = {
+				naval_base = 1
+			}
+			6550 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = OTO
-		add_core_of = GRE
 	}
 
 	provinces={

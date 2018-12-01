@@ -2,13 +2,9 @@ state=
 {
 	id=114
 	name="STATE_114"
-	manpower = 654670
+	manpower = 991921
 
 	state_category = town
-
-	resources = {
-	 	wood = 5
-	}
 
 	history=
 	{
@@ -17,7 +13,7 @@ state=
 			11773 3
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
 			arms_factory = 0
 			industrial_complex = 1
 
@@ -25,11 +21,14 @@ state=
 				naval_base = 3
 			}
 			6891 = {
-				naval_base = 2
+				naval_base = 5
 			}
 		}
 		add_core_of = PIE
-		add_core_of = SAR
+		1861.4.11 = {
+			owner = ITA
+			add_core_of = ITA
+		}
 	}
 	provinces=
 	{

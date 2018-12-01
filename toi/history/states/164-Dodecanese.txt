@@ -2,7 +2,7 @@ state=
 {
 	id=164
 	name="STATE_164"
-	manpower = 72105
+	manpower = 120000
 	
 	state_category = small_island
 	
@@ -14,9 +14,13 @@ state=
 			10007 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+			
 			10007 = {
-				naval_base = 2
+				naval_base = 4
+			}
+			7003 = {
+				naval_base = 1
 			}
 		}
 		add_core_of = GRE

@@ -2,31 +2,31 @@
 state={
 	id=378
 	name="STATE_378"
-	manpower = 335985
+	manpower = 5677248
 	
 	state_category = metropolis
 	
 	resources={
-		aluminium = 14
-		iron = 10
-		wood = 14
+		oil=350
+		aluminium=14
 	}
 
 	history={
 		owner = USA
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
-			dockyard = 1
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 6
+			dockyard = 2
 			
 			1562 = {
-				naval_base = 5
+				naval_base = 10
 			}
 			9671 = {
-				naval_base = 3
+				naval_base = 4
 			}
 			9814 = {
-				naval_base = 2
+				naval_base = 5
 			}
 			610 = {
 				naval_base = 1
@@ -34,7 +34,7 @@ state={
 		}
 		add_core_of = USA
 		victory_points = {
-			9814 20
+			9814 30
 		}
 		victory_points = {
 			1562 15 
@@ -44,6 +44,11 @@ state={
 		}
 		victory_points = {
 			9713 1 
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 7
+			}
 		}
 	}
 

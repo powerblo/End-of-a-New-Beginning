@@ -49,7 +49,7 @@ leader_traits = {
 	inexperienced_imperialist = {
 		random = no
 		political_power_factor = -0.3
-		stability_factor = 0.05
+		unity_factor = 0.05
 		justify_war_goal_time = -0.25
 		
 		ai_will_do = {
@@ -207,8 +207,7 @@ leader_traits = {
 	
 	popular_figurehead = {
 		sprite = 13
-		stability_factor = 0.05
-		stability_weekly = 0.001
+		unity_factor = 0.15 
 		
 		ai_will_do = {
 			factor = 1
@@ -275,32 +274,23 @@ leader_traits = {
 		}
 	}
 	
-	fortification_engineer_1 = {
+	fortification_engineer = {
 		sprite = 10
 		random = yes
-		production_speed_bunker_factor = 0.1
-		production_speed_coastal_bunker_factor = 0.1
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
-	war_industrialist_1 = {
+	war_industrialist = {
 		sprite = 10
 		random = yes
 		production_speed_arms_factory_factor = 0.1
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	captain_of_industry_1 = {
-		sprite = 10
-		random = yes
-		production_speed_industrial_complex_factor = 0.1
-		production_speed_infrastructure_factor = 0.05
+		production_speed_dockyard_factor = 0.1
 		
 		ai_will_do = {
 			factor = 1
@@ -309,9 +299,10 @@ leader_traits = {
 	
 	captain_of_industry = {
 		sprite = 10
-		random = no
+		random = yes
 		production_speed_industrial_complex_factor = 0.1
-		production_speed_infrastructure_factor = 0.05
+		production_speed_infrastructure_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
 		
 		ai_will_do = {
 			factor = 1
@@ -343,39 +334,6 @@ leader_traits = {
 		}
 	}
 	
-	eoanb_trait_pol_author = {
-		sprite = 10
-		random = yes
-		political_power_factor = 0.05
-		drift_defence_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	eoanb_trait_road_expert = {
-		sprite = 10
-		random = yes
-		production_speed_infrastructure_factor = 0.1
-		production_speed_buildings_factor = 0.025
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	eoanb_trait_work_minister = {
-		sprite = 10
-		random = yes
-		stability_factor = 0.05
-		stability_weekly = 0.001
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	rocket_scientist = {
 		random = no
 		sprite = 14
@@ -400,19 +358,6 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 500
-		}
-	}
-	
-	PRS_trait_land_moltke = {
-		sprite = 14
-		experience_gain_army = 0.05
-		planning_speed = 0.1
-		max_planning = 0.1
-		max_command_power = 50
-		military_leader_cost_factor = -0.1
-		
-		ai_will_do = {
-			factor = 1000
 		}
 	}
 	
@@ -458,16 +403,6 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 500
-		}
-	}
-	
-	PRS_trait_air_lilienthal = {
-		sprite = 14
-		experience_gain_air = 0.1
-		experience_gain_air_factor = 0.1
-		
-		ai_will_do = {
-			factor = 1000
 		}
 	}
 	
@@ -522,19 +457,6 @@ leader_traits = {
 		}
 	}
 	
-	PRS_trait_naval_adalbert = {
-		sprite = 14
-		experience_gain_navy = 0.05
-		experience_gain_navy_factor = 0.25
-		navy_max_range_factor = 0.1
-		navy_capital_ship_attack_factor = 0.05
-		navy_capital_ship_defence_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1000
-		}
-	}
-	
 	naval_aviation_pioneer = {
 		sprite = 14
 		experience_gain_navy = 0.05
@@ -582,7 +504,10 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			fighter_equipment = {
-				maximum_speed = 0.05
+				air_agility = 0.1 maximum_speed = 0.1
+			}
+			cv_fighter_equipment = {
+				air_agility = 0.1 maximum_speed = 0.1
 			}
 		}
 		
@@ -812,75 +737,7 @@ leader_traits = {
 	
 	naval_manufacturer = {
 		random = no
-		
-		equipment_bonus = {
-			screen_ship = {
-				naval_speed = 0.05 build_cost_ic = -0.05
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	eoanb_naval_manufacturer_light = {
-		random = no
-		
-		equipment_bonus = {
-			screen_ship = {
-				naval_range = 0.25
-				sub_detection = 0.05 
-				naval_speed = 0.05
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	eoanb_naval_manufacturer_heavy = {
-		random = no
-		
-		equipment_bonus = {
-			capital_ship = {
-				armor_value = 0.1
-				attack = 0.1
-				naval_range = 0.1
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	GER_trait_naval_lloyd = {
-		random = no
-		
-		equipment_bonus = {
-			capital_ship = {
-				armor_value = 0.15
-				attack = 0.1
-				naval_range = 0.1
-				naval_speed = 0.05
-			}
-			screen_ship = {
-				armor_value = 0.15
-				attack = 0.1
-				naval_range = 0.1
-				naval_speed = 0.05
-			}
-		}
-		
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	
-	artillery_manufacturer_1 = {
-		random = no
+		#generic
 		
 		ai_will_do = {
 			factor = 1
@@ -888,42 +745,6 @@ leader_traits = {
 	}
 	
 	artillery_manufacturer = {
-		random = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	PRS_trait_infantery_krupp = {
-		random = no
-		
-		equipment_bonus = {
-			infantry_equipment = {
-				soft_attack = 0.1
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	PRS_trait_artillery_spandau = {
-		random = no
-		
-		equipment_bonus = {
-			cannon_equipment = {
-				hard_attack = 0.1
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	infantry_equipment_manufacturer_1 = {
 		random = no
 		
 		ai_will_do = {
@@ -955,32 +776,11 @@ leader_traits = {
 		}
 	}
 	
-	industrial_concern_1 = {
+	industrial_concern = {
 		random = no
 		
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	
-	GER_trait_concern_siemens = {
-		random = no
-		
-		line_change_production_efficiency_factor = 0.05
-		production_speed_industrial_complex_factor = 0.05
-		
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	
-	GER_trait_concern_bayer = {
-		random = no
-		
-		local_resources_factor = 0.05
-		
-		ai_will_do = {
-			factor = 5
 		}
 	}
 	
@@ -992,23 +792,7 @@ leader_traits = {
 		}
 	}
 	
-	electronics_concern_1 = {
-		random = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	electronics_concern_2 = {
-		random = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	electronics_concern_3 = {
+	electronics_concern = {
 		random = no
 		
 		ai_will_do = {
@@ -1505,25 +1289,6 @@ leader_traits = {
 		}
 	}
 	
-	eoanb_trait_inf_defence_1 = { 
-		sprite = 6
-		army_infantry_defence_factor = 0.1
-		dig_in_speed_factor = 0.05
-		
-		ai_will_do = {
-			factor = 4
-		}
-	}
-	
-	eoanb_trait_cav_general_2 = { 
-		sprite = 6
-		cavalry_attack_factor = 0.1
-		cavalry_defence_factor = 0.1
-		
-		ai_will_do = {
-			factor = 4
-		}
-	}
 	
 	air_chief_reform_1 = {  # Rate at which air experience is gained increases by 5%
 		sprite = 5
@@ -2052,28 +1817,6 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	
-	eoanb_trait_GER_stosch = { 
-		sprite = 3
-		industrial_capacity_dockyard = 0.05
-		production_speed_dockyard_factor = 0.05
-		production_speed_naval_base_factor = 0.05
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	
-	eoanb_trait_GER_caprivi = { 
-		sprite = 3
-		experience_gain_navy_factor = 0.2
-		navy_max_range_factor = 0.05
-		convoy_escort_efficiency = 0.05
-		
-		ai_will_do = {
-			factor = 2
 		}
 	}
 	
