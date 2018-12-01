@@ -2,10 +2,11 @@ state=
 {
 	id=333
 	name="STATE_333"
-	manpower = 889800
+	manpower = 587268
 	resources={
-		rubber=72
-		oil=18
+		rubber=20
+		oil=10
+		wood=14
 	}
 
 	state_category = rural
@@ -14,9 +15,13 @@ state=
 	{
 		owner = INS
 		add_core_of = INS
+		buildings ={
+			infrastructure = 2
+			cotton_farm = 2
+		}
 	}
 
 	provinces={
-		1306 1335 2117 4338 7358 7443 10240 10269 12186 12228 
+		2117 7443 	 
 	}
 }

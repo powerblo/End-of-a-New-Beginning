@@ -2,15 +2,22 @@
 state={
 	id=477
 	name="STATE_477"
-	manpower = 1951460
+	manpower = 1287963
 	
+	resources = {
+		wood=8
+	}
+
 	state_category = town
 
 	history={
 		owner = MEX
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			12810 = {
+				naval_base = 3
+			}
+			10889 = {
 				naval_base = 3
 			}
 		}
@@ -21,7 +28,7 @@ state={
 	}
 
 	provinces={
-		8079 8089 10732 12810 
+		8079 10732 12810 10889 2021
 	}
 	
 }

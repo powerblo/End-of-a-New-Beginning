@@ -1,37 +1,30 @@
 state={
 	id=126
 	name="STATE_126"
-	manpower=9824296
+	manpower=4532035
 	
-	state_category = megalopolis
+	state_category = metropolis
+
+	resources = {
+		wood = 12
+	}
 
 	history={
 		owner = ENG
 		victory_points = {
-			6103 50 
+			9239 5
 		}
 		buildings = {
-			infrastructure = 9
-			arms_factory = 3
-			industrial_complex = 3
-			dockyard = 1
-			#anti_air_building = 5
-			#radar_station = 1
-			
+			infrastructure = 5
+			industrial_complex = 1
 			11374 = {
-				naval_base = 10
+				naval_base = 2
 			}
 		}
 		add_core_of = ENG
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 4
-				industrial_complex = 4
-			}
-		}
 	}
 
 	provinces={
-		6103 9239 11333 11374 
+		9239 11333 11374 
 	}
 }

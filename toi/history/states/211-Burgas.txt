@@ -3,32 +3,37 @@ state={
 	id=211
 	name="STATE_211"
 
+	resources = {
+		wood = 8
+		oil = 4
+		iron = 2
+	}
+
 	history={
 		owner = OTO
 		victory_points = {
 			9783 5 
 		}
+		victory_points = {
+			9769 3
+		}
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
+			infrastructure = 3
 			9783 = {
 				naval_base = 3
 
 			}
-			9902 = {
-				naval_base = 1
-
-			}
+	
 
 		}
 		add_core_of = OTO
-
+		add_core_of = BUL
 	}
 
 	provinces={
-		649 6967 9612 9769 9783 9888 9902 9919 
+		649 9612 9769 9783 
 	}
-	manpower=1575499
+	manpower=340180
 	buildings_max_level_factor=1.000
 	state_category=town
 }

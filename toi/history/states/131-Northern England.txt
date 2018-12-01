@@ -2,12 +2,14 @@
 state={
 	id=131
 	name="STATE_131"
-	manpower = 2128860
+	manpower = 1165055
 	
 	state_category = city
 	resources={
-		steel=60
+		iron=16
 		aluminium=8
+		wood = 6
+		coal = 35
 	}
 
 	history={
@@ -15,28 +17,22 @@ state={
 		victory_points = {
 			351 10 
 		}
+		victory_points = {
+			11332 3 
+		}
 		buildings = {
-			infrastructure = 6
+			infrastructure = 4
 			industrial_complex = 1
-			dockyard = 4
-			
+			steel_mill = 1
+			dockyard = 2
 			351 = {
-				naval_base = 6
-			}
-			3311 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 		add_core_of = ENG
-		1939.1.1 = {
-			buildings = {
-				dockyard = 5
-				industrial_complex = 2
-			}
-		}
 	}
 
 	provinces={
-		219 351 3311 6399 9285 11270 11299 11332 
+		219 351 6399 9285 11270 11299 11332 
 	}
 }

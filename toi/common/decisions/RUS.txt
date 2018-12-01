@@ -1,0 +1,136 @@
+internal_politics_eoanb = {
+	
+	internal_politics_RUS_constitution = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_country_flag = eoanb_flag_alexander_ii_legacy
+		}	
+
+		visible = {
+			has_country_flag = eoanb_flag_alexander_ii_legacy
+		}
+		
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			country_event = alIII.4
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	internal_politics_RUS_counter_reforms = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_country_flag = eoanb_flag_counter_reforms
+		}	
+
+		visible = {
+			has_country_flag = eoanb_flag_counter_reforms
+		}
+		
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			country_event = alIII.3
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	internal_politics_RUS_reform_question = {
+
+		icon = generic_political_discourse
+
+		available = {
+			date > 1882.1.1	
+		}	
+		
+		visible = {
+			has_country_flag = eoanb_flag_alexander_ii_dead
+		}
+		
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			country_event = alIII.2
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}       
+                      
+    RUS_circassia = {      
+		  
+		  visible = {
+          TAG = RUS 		  
+		  NOT = {country_exists = CIR } 
+		  }
+		  
+          available = {                           
+               controls_state = 233			   
+          }
+		  
+		  fire_only_once = yes      
+		  
+          is_good = yes            
+		  
+		  cost = 100
+		  days_remove = 365
+          complete_effect = {                    
+               233 = { add_core_of = RUS 
+			           remove_core_of = CIR} 
+               1123 = { add_core_of = RUS 
+			           remove_core_of = CIR}
+            hidden_effect = {
+			1115 = { add_core_of = GEO 
+			         remove_core_of = CIR }
+			}					   
+          }
+     }
+	 
+    RUS_caucasus = {      
+		  
+		  visible = {
+          TAG = RUS 		  
+		  NOT = {country_exists = CAU } 
+		  }
+		  
+          available = {                           
+               controls_state = 232			   
+          }
+		  
+		  fire_only_once = yes      
+		  
+          is_good = yes            
+		  
+		  cost = 100
+		  days_remove = 365
+          complete_effect = {                    
+               232 = { add_core_of = RUS 
+			           remove_core_of = CAU} 
+				1216 = { add_core_of = RUS 
+				         remove_core_of = CAU }
+				229 = { add_core_of = RUS 
+				         remove_core_of = CAU }
+				1008 = { add_core_of = RUS 
+				         remove_core_of = CAU }						 
+          }
+     }
+	 
+}

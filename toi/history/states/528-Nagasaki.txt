@@ -1,47 +1,27 @@
 
 state={
 	id=528
-	name="STATE_528" # Kyushu
-	manpower = 9069000
-	state_category = large_city
+	name="STATE_528" # Higo
+	manpower = 1150000
+	state_category = town
 	resources={
-		chromium=88
+		chromium=16
+		iron=2
+		wood=3
 	}
 
 	history={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 7
-			
-			dockyard = 4
-			arms_factory = 2
-			industrial_complex = 2
-			9950 = {
-				naval_base = 6
-
-			}
-
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 1
+			cotton_farm = 1
 		}
-		victory_points = {
-			1025 10 
-		}
-		victory_points = {
-			4102 15 
-		}
-		victory_points = {
-			9950 30
-		}
-		1939.1.1 = {
-			buildings = {
-				dockyard = 4
-				industrial_complex = 3
-			}
-		}
-
 	}
 
 	provinces={
-		1020 1025 1158 1183 4027 4102 4164 4198 7110 7178 9950 10011 10020 10092 11925 11949 12006 12032 
+		1020 1183 7178 11925 11949 12006 13549
 	}
 }

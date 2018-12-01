@@ -2,7 +2,11 @@
 state={
 	id=498
 	name="STATE_498"
-	manpower = 7746000
+	manpower = 200756
+
+	resources = {
+		coal=6
+	}
 
 	state_category = city
 
@@ -10,27 +14,16 @@ state={
 		owner = BRA
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 6
-			
-			5107 = {
-				naval_base = 3
-			}
-			5168 = {
-				naval_base = 1
-			}
+			cotton_farm = 1
 		}
 		add_core_of = BRA
 		victory_points = {
-			5107 3 
+			10933 3
 		}
-		victory_points = {
-			5168 5 
-		}
-
 	}
 
 	provinces={
-		1446 1524 2132 2164 2175 2178 2227 5107 5168 5182 7561 8179 8227 10345 10933 10939 10967 10989 10998 12961 
+		2175 10933 10989
 	}
 	
 }

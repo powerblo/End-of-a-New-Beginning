@@ -2,32 +2,33 @@
 state={
 	id=375
 	name="STATE_375"
-	manpower = 5824712
+	manpower = 559215
 
 
 	state_category = metropolis
 
 	resources={
-		oil=580
-		aluminium=96
+		aluminium=2
+		wood = 12
 	}
 
 
 	history={
 		owner = USA
 		buildings = {
-			infrastructure = 6
-			industrial_complex = 9
+			infrastructure = 3
 			
 			10337 = {
-				naval_base = 3
+				naval_base = 2
 			}
 			6785 = {
 				naval_base = 1
 			}
+			cotton_farm = 1
 		}
 		
 		add_core_of = USA
+		add_core_of = TEX
 		victory_points = {
 			10337 10
 		}

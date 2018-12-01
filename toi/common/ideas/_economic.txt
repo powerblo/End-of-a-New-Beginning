@@ -1,6 +1,6 @@
 ideas = {
 
-	economy = { 
+	economic_mobilization = { 
 		law = yes
 		undisturbed_isolation = {
 			
@@ -9,25 +9,23 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+			level = 1
 		
 			modifier = {
-				consumer_goods_factor = 0.40
-				production_speed_industrial_complex_factor = -0.5
-				production_speed_arms_factory_factor = -0.5
-				conversion_cost_civ_to_mil_factor = 0.5
-				conversion_cost_mil_to_civ_factor = 0.5
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
+				consumer_goods_factor = 0.75
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.6
+				conversion_cost_civ_to_mil_factor = 0.8
+				conversion_cost_mil_to_civ_factor = 0.8
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.5
+				lend_lease_tension = 0.25
+				send_volunteers_tension = 0.25
 				guarantee_tension = 0.75
 			}
 			
 			allowed_to_remove = {
-				OR = {
-					threat > 0.5
-					has_war = yes
-				}
+				always = no
 			}
 			
 			cancel_if_invalid = no
@@ -41,23 +39,21 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+			level = 2
 			
 			modifier = {
-				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = -0.4
-				conversion_cost_civ_to_mil_factor= 0.4
-				conversion_cost_mil_to_civ_factor = 0.4
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				send_volunteers_tension = 0.20
+				consumer_goods_factor = 0.5
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor= 0.7
+				conversion_cost_mil_to_civ_factor = 0.7
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.5
+				send_volunteers_tension = 0.25
 				guarantee_tension = 0.5
 			}
 			allowed_to_remove = {
-				OR = {
-					threat > 0.75
-					has_war = yes					
-				}
+				always = no
 			}
 			
 			cancel_if_invalid = no
@@ -65,16 +61,26 @@ ideas = {
 		
 		civilian_economy = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_civilian_economy
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 		
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 3
 			
 			modifier = {
-				consumer_goods_factor = 0.30
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
+				consumer_goods_factor = 0.5
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = -0.35
+				conversion_cost_civ_to_mil_factor= 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
 			}
 			
 			default = yes
@@ -86,21 +92,23 @@ ideas = {
 			
 			available = {
 				OR = {
-					has_government = fascism
-					has_government = communism
 					has_war = yes
 					threat > 0.05
+					has_war_support > 0.5
 				}	
 			}
 			
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 4
 			
 			modifier = {
-				consumer_goods_factor = 0.25
-
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				consumer_goods_factor = 0.45
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = -0.15
+				conversion_cost_civ_to_mil_factor= 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
 			}
 			
 			cancel_if_invalid = no
@@ -120,21 +128,24 @@ ideas = {
 			
 			available = {
 				OR = {
-					has_government = fascism
-					has_government = communism
 					has_war = yes
-					threat > 0.15
-				}
+					threat > 0.2
+					has_war_support > 0.65
+				}	
 			}
 
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 5
 			
 			modifier = {
-				consumer_goods_factor = 0.20
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				conversion_cost_civ_to_mil_factor= 0.05
+				conversion_cost_mil_to_civ_factor = 0.05
+				research_time_factor = 0.05
+				political_power_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -154,31 +165,26 @@ ideas = {
 			
 			
 			available = {
-				threat > 0.15
+				threat > 0.25
+				has_war = yes
 				OR = {
-					has_government = fascism
-					has_government = communism
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.4
-							}
-						}
-					}
-				}	
+					has_war_support > 0.9
+				}
 			}
 		
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 6
 			
 			modifier = {
-				consumer_goods_factor = 0.15
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
+				consumer_goods_factor = 0.35
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				research_time_factor = 0.05
+				political_power_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -199,13 +205,8 @@ ideas = {
 			
 			available = {
 				has_war = yes
-				threat > 0.2
-				any_enemy_country = {
-					ic_ratio = { 
-						tag = ROOT 
-						ratio > 0.5
-					}
-				}
+				threat > 0.5
+				has_war_support > 0.75
 			}
 
 			ai_will_do = {
@@ -234,15 +235,19 @@ ideas = {
 				}				
    			}
 			
-			cost = 150
+			cost = 250
 			removal_cost = -1
+			level = 7
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				conscription = -0.03
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = -0.6
 				production_speed_arms_factory_factor = 0.3
+				production_speed_buildings_factor = -0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
+				research_time_factor = 0.2
+				political_power_factor = -0.3
 			}
 			
 			cancel_if_invalid = no
@@ -254,16 +259,27 @@ ideas = {
 
 		free_trade = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_free_trade
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 			
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.8
+				min_export = 0.75
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_same_ideology_factor = 0.75
+				opinion_gain_monthly_factor = 0.35
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
-				research_time_factor = -0.10
+				research_time_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -271,16 +287,27 @@ ideas = {
 		
 		export_focus = {
 			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_export_focus
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
 			
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
 				min_export = 0.5
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				opinion_gain_monthly_factor = 0.25
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_time_factor = -0.05
+				research_time_factor = -0.02
 			}
 			
 			default = yes
@@ -290,35 +317,23 @@ ideas = {
 		
 		limited_exports = {
 			
-			
 			available = {
-				OR = {
-					AND = {
-						has_government = democratic
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.2
-							}
-						}
-					}
-					AND = {
-						NOT = { has_government = democratic }
-						OR = {
-							has_idea = partial_economic_mobilisation
-							has_idea = war_economy
-							has_idea = tot_economic_mobilisation
-						}
-					}
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_limited_exports
+				}
+				hidden_trigger = {
+					always = yes
 				}
 			}
 		
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
 				min_export = 0.25
+				improve_relations_maintain_cost_factor = -0.15
+				opinion_gain_monthly_same_ideology_factor = 0.35
+				opinion_gain_monthly_factor = 0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
@@ -345,26 +360,21 @@ ideas = {
 			
 			available = {
 				has_war = yes
-				OR = { 
-					has_government = fascism
-					has_government = communism
-				}
-				OR = {
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
-				}
-				OR = {
-					NOT = {	tag = SOV }
-					NOT = { has_opinion_modifier = MR_pact }
+				has_idea = tot_economic_mobilisation
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_closed_economy		
 				}
 			}
 			
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			
 			modifier = {
 				min_export = 0
+				improve_relations_maintain_cost_factor = 0.25
+				opinion_gain_monthly_same_ideology_factor = -0.25
+				opinion_gain_monthly_factor = -0.5
 			}
 			
 			on_add = {
@@ -388,18 +398,57 @@ ideas = {
 	}
 
 	military_spendage = {
+		#The effects of 10% for half the cost. Achievable by focus.
+		prussian_military_spendage = {
+		
+			allowed = {
+				TAG = PRS
+			}
+			
+			available = {
+				has_completed_focus = PRS_mil_supreme
+			}
+			
+			cost = 450
+			removal_cost = -1
+			level = 6
+
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				military_leader_cost_factor = -0.50
+				planning_speed = 0.3
+				army_org_Factor = 0.1
+				defence = 0.1
+				offence = 0.1
+				experience_gain_army = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	
 		ten_percent = {
 						
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 5
 			
 			available = {
-				
+				OR = {
+					TAG = PRS
+					has_war_support > 0.6
+				}
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				military_leader_cost_factor = -0.50
+				planning_speed = 0.3
+				army_org_Factor = 0.1
+				defence = 0.1
+				offence = 0.1
+				experience_gain_army = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -407,12 +456,17 @@ ideas = {
 		
 		five_percent = {
 						
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 4
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_five_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {
@@ -424,7 +478,14 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				military_leader_cost_factor = -0.3
+				planning_speed = 0.15
+				army_org_Factor = 0.08
+				defence = 0.075
+				offence = 0.075
+				experience_gain_army = 0.03
 			}
 			
 			cancel_if_invalid = no
@@ -432,16 +493,28 @@ ideas = {
 		
 		three_percent = {
 					
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 3
 
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_three_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			modifier = {
-				
+				political_power_factor = -0.03
+				consumer_goods_factor = 0.03
+				military_leader_cost_factor = -0.15
+				planning_speed = 0.08
+				army_org_Factor = 0.04
+				defence = 0.04
+				offence = 0.04
+				experience_gain_army = 0.01
 			}
 
 			ai_will_do = {
@@ -459,7 +532,12 @@ ideas = {
 		two_percent = {
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_two_percent
+				}
+				hidden_trigger = {
+					always = yes
+				}
 			}
 
 			ai_will_do = {
@@ -469,12 +547,19 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 2
 			
 			modifier = {
-				
+				political_power_factor = -0.02
+				consumer_goods_factor = 0.02
+				military_leader_cost_factor = -0.05
+				planning_speed = 0.04
+				army_org_Factor = 0.02
+				defence = 0.02
+				offence = 0.02
+				experience_gain_army = 0.005
 			}
 			
 			cancel_if_invalid = no
@@ -483,7 +568,9 @@ ideas = {
 		one_percent = {
 			
 			available = {
-				
+				NOT = {
+					TAG = PRS
+				}
 			}
 
 			ai_will_do = {
@@ -493,12 +580,17 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 1
 			
 			modifier = {
-				
+				political_power_factor = -0.01
+				consumer_goods_factor = 0.01
+				military_leader_cost_factor = 0.1
+				planning_speed = 0.02
+				army_org_Factor = 0.02
+				experience_gain_army = 0.002
 			}
 			
 			cancel_if_invalid = no
@@ -508,16 +600,33 @@ ideas = {
 	tax_rates = {
 		very_high_taxes = {
 						
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 5
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.15
+				research_time_factor = -0.04
+				consumer_goods_factor = -0.04
+				stability_weekly = -0.001
+				drift_defence_factor = -0.4
 			}
 			
 			cancel_if_invalid = no
@@ -525,12 +634,25 @@ ideas = {
 		
 		high_taxes = {
 						
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 4
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
 			}
 
 			ai_will_do = {
@@ -542,7 +664,11 @@ ideas = {
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.1
+				research_time_factor = -0.02
+				consumer_goods_factor = -0.02
+				stability_weekly = -0.0005
+				drift_defence_factor = -0.2
 			}
 			
 			cancel_if_invalid = no
@@ -550,16 +676,29 @@ ideas = {
 		
 		normal_taxes = {
 					
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 3
 
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
 			}
 
 			modifier = {
-				
+				political_power_factor = 0.05
 			}
 
 			ai_will_do = {
@@ -577,7 +716,20 @@ ideas = {
 		low_taxes = {
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
 			}
 
 			ai_will_do = {
@@ -587,12 +739,15 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 2
 			
 			modifier = {
-				
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.03
+				stability_weekly = 0.0002
+				drift_defence_factor = 0.1
 			}
 			
 			cancel_if_invalid = no
@@ -601,7 +756,20 @@ ideas = {
 		very_low_taxes = {
 			
 			available = {
-				
+				custom_trigger_tooltip = {
+					tooltip = eoanb_trigger_tt_law_african_unorg	
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = AF_T_unorganized_tribal_nation
+							has_idea = AF_T_unorganized_tribal_nation_2
+							has_idea = AF_T_unorganized_tribal_nation_3
+							has_idea = AF_T_unorganized_tribal_nation_4
+							has_idea = AF_T_unorganized_tribal_nation_5
+						}
+					}
+				}
 			}
 
 			ai_will_do = {
@@ -611,15 +779,390 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 450
 			removal_cost = -1
 			level = 1
 			
 			modifier = {
-				
+				political_power_factor = -0.1
+				research_time_factor = 0.02
+				consumer_goods_factor = 0.05
+				stability_weekly = 0.0005
+				drift_defence_factor = 0.2
 			}
 			
 			cancel_if_invalid = no
+		}
+	}
+	
+	child_labour = { 
+		cl_legal = {
+			
+			available = {
+				NOT = {
+					has_idea = full_equality
+					has_idea = universal_suffrage
+				}
+			}
+			
+			removal_cost = -1
+			level = 1
+			cost = 250
+		
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				MONTHLY_POPULATION = -0.1
+				political_power_gain = -0.1
+				trade_opinion_factor = -0.25
+				research_time_factor = 0.08
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		cl_restricted = {
+			
+			available = {
+				NOT = {
+					has_idea = full_equality
+					has_idea = universal_suffrage
+				}
+			}
+			
+			removal_cost = -1
+			level = 2
+			cost = 250
+		
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				MONTHLY_POPULATION = -0.05
+				political_power_gain = -0.05
+				trade_opinion_factor = -0.1
+				research_time_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		cl_illegal = {
+			
+			available = {
+				NOT = {
+					has_idea = agrarian
+				}
+			}
+			
+			removal_cost = -1
+			level = 3
+			cost = 250
+		
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+	    }
+	}	
+	
+	maximum_workhours = { 
+		unlimited_work_day = {
+			
+			available = {
+				NOT = {
+					has_idea = universal_suffrage
+					has_idea = constitution_adopted
+				}
+			}
+			
+			removal_cost = -1
+			level = 1
+			cost = 500
+		
+			modifier = {
+				line_change_production_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.1
+				research_time_factor = -0.05
+				MONTHLY_POPULATION = -0.15
+				conscription_factor = -0.1
+				political_power_factor = -0.2
+				trade_laws_cost_factor = 0.4
+				#mobilization_laws_cost_factor = 0.4
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		fourteen_hour_work_day = {
+			
+			available = {
+				NOT = {
+					has_idea = universal_suffrage
+					has_idea = constitution_adopted
+					has_idea = free_elections
+				}
+			}
+			
+			removal_cost = -1
+			level = 2
+			cost = 500
+		
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.05
+				research_time_factor = -0.02
+				MONTHLY_POPULATION = -0.1
+				conscription_factor = -0.05
+				political_power_factor = -0.1
+				trade_laws_cost_factor = 0.2
+				#mobilization_laws_cost_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		twelve_hour_work_day = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_always_available		
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
+			
+			removal_cost = -1
+			level = 3
+			cost = 500
+		
+			modifier = {
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				MONTHLY_POPULATION = -0.05
+				political_power_factor = -0.05
+				trade_laws_cost_factor = 0.1
+				#mobilization_laws_cost_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		ten_hour_work_day = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_always_available		
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
+			
+			removal_cost = -1
+			level = 4
+			cost = 500
+		
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				research_time_factor = 0.02
+				trade_laws_cost_factor = -0.1
+				#mobilization_laws_cost_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		eight_hour_work_day = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_always_available		
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
+			
+			removal_cost = -1
+			level = 5
+			cost = 500
+		
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				local_resources_factor = -0.1
+				research_time_factor = 0.05
+				MONTHLY_POPULATION = 0.05
+				conscription_factor = 0.05
+				trade_laws_cost_factor = -0.25
+				#mobilization_laws_cost_factor = -0.25
+			}
+			
+			cancel_if_invalid = no
+			
+	    }
+	}	
+	
+	land_property = { 
+		lp_serfdom = {
+			
+			available = {
+				OR = {
+					has_idea = agrarian
+					has_idea = industrializing
+				}
+			}
+			
+			removal_cost = -1
+			level = 1
+			cost = 1000
+		
+			modifier = {
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+				army_core_defence_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				recon_factor = -0.1
+				consumer_goods_factor = -0.1
+				political_power_gain = 0.3
+				conscription_factor = 0.05 
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		lp_land_estates = {
+		
+			available = {
+				NOT = {
+					has_idea = universal_suffrage
+					has_idea = free_elections
+					has_idea = constitution_adopted
+					has_idea = full_equality
+				}
+			}
+			
+			removal_cost = -1
+			level = 2
+			cost = 1000
+		
+			modifier = {
+				political_power_gain = -0.1
+				production_speed_infrastructure_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+		
+		lp_land_purchase = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_always_available		
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
+			
+			removal_cost = -1
+			level = 3
+			cost = 1000
+		
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.2
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no	
+			
+		}
+		
+		lp_peasant_holdings = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_lp_peasant_holdings		
+				}
+				hidden_trigger = {
+					always = no
+				}
+			}
+			
+			removal_cost = -1
+			level = 4
+			cost = 1000
+		
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.15
+			}
+			
+			cancel_if_invalid = no	
+			
+		}
+		
+		lp_collectivization = {
+			
+			available = {
+				OR = {
+					has_government = vanguard_communism
+					has_government = collectivist_socialism
+					has_government = social_egalitarianism
+				}
+				NOT = {
+					OR = {
+						has_idea = tribal_slavery
+						has_idea = slavery
+						has_idea = racial_laws
+						has_idea = segregation
+					}
+				}
+			}
+			
+			removal_cost = -1
+			level = 5
+			cost = 1000
+		
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			
+			cancel_if_invalid = no	
+			
 		}
 	}
 }

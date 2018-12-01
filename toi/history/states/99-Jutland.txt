@@ -1,9 +1,11 @@
 state= {
 	id=99
 	name="STATE_99"
-	manpower = 1672235
+	manpower = 1172235
 	resources={
-		aluminium=10
+		aluminium=4
+		iron = 2
+		wood = 2
 	}
 	
 	state_category = town
@@ -15,13 +17,9 @@ state= {
 			6364 3 
 		}
 		buildings = {
-			infrastructure = 8
-			industrial_complex = 3
-			
+			infrastructure = 5
+			industrial_complex = 1
 			394 = {
-				naval_base = 3
-			}
-			6364 = {
 				naval_base = 1
 			}
 		}
@@ -29,5 +27,6 @@ state= {
 	}
 	provinces=
 	{
-316 332 394 399 3206 3277 3341 6235 6364 11251 	}
+316 394 399 3206 3277 3341 6235 6364 
+	}
 }

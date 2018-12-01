@@ -2,27 +2,38 @@
 state={
 	id=3
 	name="STATE_3"
-	manpower = 2211689
 	resources={
-		aluminium=28
+		aluminium=6.000
+		wood=2.000
+		coal=2.000
 	}
-
-	state_category = large_city
-
 
 	history={
 		owner = SWI
-		victory_points = { 9620 15 }
+		victory_points = {
+			9620 15 
+		}
+		victory_points = {
+			9638 5 
+		}
+		victory_points = {
+			6666 5 
+		}
 		buildings = {
-			infrastructure = 6
-			arms_factory = 4
-			industrial_complex = 4
-			
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 2
+			logging_camp = 1
+
 		}
 		add_core_of = SWI
+
 	}
 
 	provinces={
-		636 3612 6666 6683 9587 9618 9620 9622 9638 11590 11604 13124 
+		6666 6683 9618 9620 9622 9638 11590 11604 13124 
 	}
+	manpower=1581000
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

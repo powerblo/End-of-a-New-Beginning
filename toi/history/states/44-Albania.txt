@@ -2,39 +2,37 @@
 state={
 	id=44
 	name="STATE_44"
-	manpower = 1003000
+	manpower = 514200
 	resources={
-		aluminium=3
-		chromium=3
+		aluminium=2
+		chromium=2
+		wood = 2
 	}
 	
-	state_category = town
+	state_category = rural
 	
 	history={
 		owner = OTO
 		victory_points = {
 			9914 5 
 		}
+		victory_points = {
+			11767 1
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			arms_factory = 1
-			industrial_complex = 2 
-			
+			industrial_complex = 1
 			11767 = {
-				naval_base = 4
+				naval_base = 1
 			}
 		}
 		add_core_of = OTO
 		add_claim_by = OTO
-
-		1939.4.12 = {
-			owner = OTO
-			controller = OTO
-			remove_claim_by = OTO
-		}
+		add_core_of = ALB
 	}
 
 	provinces={
-		914 3448 3884 3896 6900 9780 9875 9914 11762 11767 
+		 3884 3896 9780 9875 9914 11762 11767 
 	}
 }
