@@ -645,29 +645,6 @@ country_event = { # Henri Mouhot's death
   }
 }
 
-country_event = { # Pierre Bosquet's death
-  id = nap_france.103
-  title = nap_france.103.t
-  desc = nap_france.103.d
-  picture = GFX_report_event_pierre_boquet
-
-  fire_only_once = yes
-
-  trigger = {
-    date > 1861.1.1
-    tag = FRA
-  }
-
-  mean_time_to_happen = {
-    days = 150
-  }
-
-  option = { # A great hero indeed
-    name = nap_france.103.a
-    remove_unit_leader = 178901
-  }
-}
-
 country_event = { # Manifeste des Soixante
   id = nap_france.104
   title = nap_france.104.t
