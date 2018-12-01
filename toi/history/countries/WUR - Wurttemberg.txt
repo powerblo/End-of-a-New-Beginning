@@ -1,86 +1,152 @@
-﻿capital = 50
+﻿1857.1.1 = {
+  capital = 50
 
-oob = "WUR_1857"
+  oob = "WUR_1857"
 
-set_politics = {
+  set_convoys = 0
+  
+  set_research_slots = 2
+
+  add_ideas = { 
+          #POLITICS
+    hos_is_leader
+    victorian_era
+	law_victorian_army
+    industrializing
+    has_heir
+    constitutional_monarchy
+
+    civilian_economy
+    limited_exports
+    three_percent
+    normal_taxes
+	cl_legal
+
+    stagnation_growth
+    open_borders
+    limited_equality
+    volunteer_only
+    parliamentary_suffrage
+
+    constitution_adopted
+    no_elections
+
+    privileged_education
+    state_religion
+	religion_protestant
+         #NATIONAL SPIRITS
+	GER_general_idea_ger_confed
+   PRS_Zollverein
+  }
+
+  set_politics = {
     parties = {
-      economic_liberalism = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
         popularity = 0
       }
       traditional_conservatism = {
+        popularity = 5
+      }
+      radical_democracy = {
         popularity = 0
       }
-      social_democracy = {
+      chauvinist_populism = {
         popularity = 0
       }
-      radical_socialism = {
-        popularity = 0
+      autocracy = {
+        popularity = 85
       }
-      marxism_leninism = {
-        popularity = 0
-      }
-      despotic_autocracy = {
-        popularity = 100
-      }
-      parliamental_oligarchy = {
-        popularity = 0
-      }
-      totalitarian_nationalism = {
-        popularity = 0
-      }
-      rexism_falangism = {
-        popularity = 0
-      }
-      theocracy = {
-        popularity = 0
+      fundamentalism = {
+        popularity = 10
       }
     }
 
-	ruling_party = despotic_autocracy
-}
-
-set_technology = {
-	infantry_weapons = 1
-	vic_army_cloth = 1
-	basic_cavalry = 1
-	gw_artillery = 1
-}
-
-create_country_leader = {
-  name = "Wilhelm I"
-  desc = "POLITICS_WILLIAM_I_DESC"
-  picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds"
-  expire = "1864.1.1"
-  ideology = despotism
-  traits = {
-
+    ruling_party = autocracy
   }
-}
 
-create_corps_commander = {
-  name = "Eduard von Kallee"
-  picture = "Portrait_WUR_Eduard_von_Kallee.dds"
-  traits = { }
-  skill = 3
-}
+  set_technology = {
+    infantry_weapons = 1
+	tech_infantry_napoleonic_uniform = 1
+    vic_army_cloth = 1
+    tech_naval_1812_frigate = 1
+    gw_artillery = 1
+    iron_railways = 1
+    steam_engine = 1
+    manufactories = 1
+    hot_blast_furnaces = 1
+    food_preserving_icebox = 1
+    early_artificial_fertilizer = 1
+    electrical_engineering = 1
+	basic_cavalry = 1
+	start_build_tech = 1
+  }
 
-create_corps_commander = {
-  name = "Ferdinand von Zeppelin"
-  picture = "Portrait_WUR_Ferdinand_von_Zeppelin.dds"
-  traits = { }
-  skill = 3
-}
+  # POLITICAL LEADERS
 
-create_corps_commander = {
-  name = "Graf von Scheler"
-  picture = "Portrait_WUR_Graf_von_Scheler.dds"
-  traits = { }
-  skill = 3
-}
+  create_country_leader = {
+    name = "Wilhelm I"
+    desc = "POLITICS_WILHELM_I_WURTTEMBERG__DESC"
+    picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds"
+    expire = "1864.1.1"
+    ideology = despotism
+    traits = { }
+  }
 
-create_corps_commander = {
-  name = "Oskar von Hardegg"
-  picture = "Portrait_WUR_Oskar_von_Hardegg.dds"
-  traits = { }
-  skill = 3
+  # GENERALS
+
+  create_corps_commander = {
+    name = "Eduard von Kallee"
+    picture = "Portrait_WUR_Eduard_von_Kallee.dds"
+    traits = { }
+    skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+  }
+
+  create_corps_commander = {
+    name = "Ferdinand von Zeppelin"
+    picture = "Portrait_WUR_Ferdinand_von_Zeppelin.dds"
+    traits = { }
+    skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+  }
+
+  create_corps_commander = {
+    name = "Graf von Scheler"
+    picture = "Portrait_WUR_Graf_von_Scheler.dds"
+    traits = { }
+    skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+  }
+
+  create_corps_commander = {
+    name = "Oskar von Hardegg"
+    picture = "Portrait_WUR_Oskar_von_Hardegg.dds"
+    traits = { }
+    skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+  }
 }

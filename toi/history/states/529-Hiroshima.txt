@@ -1,39 +1,25 @@
 
 state={
 	id=529
-	name="STATE_529" # Chugoku
-	manpower = 5341000
-	state_category = large_city
+	name="STATE_529" # Iwami
+	manpower = 927000
+	state_category = town
 
 	history={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 7
-			
-			dockyard = 2
-			arms_factory = 2
-			industrial_complex = 2
-			1092 = {
-				naval_base = 10
-
-			}
+			infrastructure = 5
+			cotton_farm = 3
 		}
-		
-		victory_points = {
-			1092 30
-		}
-		1939.1.1 = {
-			buildings = {
-				dockyard = 3
-				arms_factory = 3
-				industrial_complex = 3
-			}
-		}
-
+	}
+	
+	resources = {
+		wood=2
+		coal=1
 	}
 
 	provinces={
-		1092 1167 1191 4197 7050 7145 7212 9968 10052 10055 11946 11985 
+		 1167 1191 7145 10055
 	}
 }

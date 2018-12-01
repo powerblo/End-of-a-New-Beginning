@@ -4,10 +4,8 @@
   regiments = {
     line_infantry = { x = 0 y = 0}
     line_infantry = { x = 0 y = 1}
-	line_infantry = { x = 0 y = 2}
     line_infantry = { x = 1 y = 0}
     line_infantry = { x = 1 y = 1}
-	line_infantry = { x = 1 y = 2}
   }
 }
 
@@ -28,7 +26,6 @@ division_template = {
   regiments = {
     light_cavalry = { x = 0 y = 0}
 	light_cavalry = { x = 1 y = 0}
-	light_cavalry = { x = 2 y = 0}
   }
 }
 
@@ -72,30 +69,6 @@ units = {
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "2nd Grenadiers"
-			location = 9660
-			division_template = "Imperial Grenadiers"
-			start_experience_factor = 0.2
-		}
-		division= {
-			name = "2nd Hussars"
-			location = 3569
-			division_template = "Austrian Hussars"
-			start_experience_factor = 0.1
-		}
-		division= {
-			name = "5th Line Infantry"
-			location = 6626
-			division_template = "Imperial Line Infantry"
-			start_experience_factor = 0.2
-		}
-		division= {
-			name = "6th Line Infantry"
-			location = 9648
-			division_template = "Imperial Line Infantry"
-			start_experience_factor = 0.2
-		}
-		division= {
 			name = "3rd Grenadiers"
 			location = 11581
 			division_template = "Imperial Grenadiers"
@@ -106,5 +79,35 @@ units = {
 			location = 11479
 			division_template = "Austrian Hussars"
 			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Hussars"
+			location = 9427
+			division_template = "Austrian Hussars"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Transylvanian Division"
+			location = 6711
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "2nd Transylvanian Division"
+			location = 662
+			division_template = "Imperial Line Infantry"
+			start_experience_factor = 0.2
+		}
+		navy = {				
+			name = "Imperiale Flotte Österreichs"			
+			base = 11584
+			location = 11584
+			ship = { name = "SMS Novara" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Radetzky" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Adria" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Donau" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Wien" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Trieste" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+			ship = { name = "SMS Graz" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
 		}
 }

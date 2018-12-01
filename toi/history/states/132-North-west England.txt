@@ -1,13 +1,14 @@
 state= {
 	id=132
 	name="STATE_132" # Lancashire
-	manpower = 5770454
+	manpower = 3408499
 	
 	state_category = metropolis
 	
 	resources={
-		steel=56
+		iron=32
 		aluminium=4
+		coal=5
 	}
 
 	history= {
@@ -20,22 +21,12 @@ state= {
 		}
 		
 		buildings = {
-			infrastructure = 8
-			arms_factory = 1
-			industrial_complex = 1
-			dockyard = 3
-			
+			infrastructure = 4
 			6384 = {
-				naval_base = 5
+				naval_base = 1
 			}
 		}
 		add_core_of = ENG
-		1939.1.1 = {
-			buildings = {
-				dockyard = 4
-				industrial_complex = 2
-			}
-		}
 	}
 	provinces= {
 		3205 6318 6335 6384

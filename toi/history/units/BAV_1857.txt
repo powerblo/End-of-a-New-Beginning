@@ -3,16 +3,14 @@
 
    regiments = {
      line_infantry = { x = 0 y = 0 }
-     line_infantry = { x = 0 y = 1 }
-     light_infantry = { x = 0 y = 2 }
+     light_infantry = { x = 0 y = 1 }
      line_infantry = { x = 1 y = 0 }
-     line_infantry = { x = 1 y = 1 }
-     light_infantry = { x = 1 y = 2 }
+     light_infantry = { x = 1 y = 1 }
      light_cavalry = { x = 2 y = 0 }
- 		 light_cavalry = { x = 2 y = 1 }
+	 light_cavalry = { x = 2 y = 1 }
   }
   support = {
-      artillery = { x = 0 y = 0 }
+      cannon_artillery_support = { x = 0 y = 0 }
   }
 }
 
@@ -24,7 +22,6 @@ division_template = {
 		light_cavalry = { x = 0 y = 1 }
 		light_cavalry = { x = 1 y = 0 }
 		light_cavalry = { x = 1 y = 1 }
-		light_cavalry = { x = 1 y = 2 }
 	 }
 }
 
@@ -41,7 +38,7 @@ units = {
 			location = 532
 			division_template = "Infanterie Division"
 			start_experience_factor = 0.1
-			start_equipment_factor = 0.7
+			start_equipment_factor = 0.8
 		}
 		division= {
 			name = "3.Infanterie Division"

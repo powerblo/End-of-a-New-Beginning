@@ -1,25 +1,24 @@
 ﻿division_template = {
-  name = "Colonial Infantry"
+  name = "English Infantry"
 
   regiments = {
-    line_infantry = { x = 0 y = 0}
-    line_infantry = { x = 0 y = 1}
+    light_infantry = { x = 0 y = 0}
+	light_infantry = { x = 0 y = 0}
   }
 }
 
 units = {
-		#Capital
 		division= {
-			name = "1st Colonial Infantry"
-			location = 1814
-			division_template = "Colonial Infantry"
+			name = "1st English Infantry"
+			location = 4543
+			division_template = "English Infantry"
 			start_experience_factor = 0.1
 		}
-		#Scattered Divisions
 		division= {
-			name = "2nd Colonial Infantry"
-			location = 4543
-			division_template = "Colonial Infantry"
+			name = "1st NZ Regulars"
+			location = 1814
+			division_template = "English Infantry"
 			start_experience_factor = 0.1
+			start_equipment_factor = 0.5
 		}
 }

@@ -2,7 +2,13 @@
 state={
 	id=499
 	name="STATE_499"
-	manpower = 4233900
+	manpower = 1183723
+
+	resources = {
+		wood=10
+		coal=3
+		chromium = 12
+	}
 	
 	state_category = large_town
 
@@ -10,7 +16,8 @@ state={
 		owner = BRA
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 1
+			cotton_farm = 2
 			
 			10946 = {
 				naval_base = 1
@@ -18,12 +25,12 @@ state={
 		}
 		add_core_of = BRA
 		victory_points = {
-			10946 1 
+			10946 30
 		}
 
 	}
 
 	provinces={
-		4617 5194 8143 8177 8184 8197 8242 10392 10926 10946 
+		4617 5174 5194 5218 8129 8177 8184 8197 8242 10392 10419 10926 10946 11002 12422 
 	}
 }

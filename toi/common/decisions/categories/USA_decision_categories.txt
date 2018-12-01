@@ -1,0 +1,39 @@
+USA_grant_statehood = {
+	icon = generic_political_actions
+
+	available = {
+		tag = USA
+	}
+}
+USA_american_civil_war_descision = {
+	icon = power_struggle
+
+	available = {
+		OR = {
+			has_global_flag = ACWAmerican_Civil_War
+			OR = {
+				AND = {
+					tag = CSA
+					has_war_with = USA
+				}
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+			}
+		}
+	}
+}
+USA_reconstruction_period = {
+	icon = generic_independence
+
+	available = {
+		tag = USA
+		hidden_trigger = {
+			OR = {
+				has_country_flag = USA_first_kkk
+				has_country_flag = USA_enforcement_act
+			}
+		}
+	}
+}

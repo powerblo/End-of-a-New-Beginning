@@ -1,0 +1,1505 @@
+focus_tree = {
+	id = 'aus_empire_focus'
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+	
+	default = no
+	
+#####################################
+#          Political Tree           #
+#               Start               #
+#####################################
+
+	focus = { 
+		id = AUS_Franz_den_Kaiser
+		icon = GFX_goal_focus_AUS_franz_kaiser
+		x = 4
+		y = 0 
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		    AUS = {
+		    add_ideas = AUS_kaiser_franz
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Italian_Question
+		icon = GFX_goal_focus_AUS_Italian_Question
+		x = 1
+		y = 2
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Viceroy_Maximilian
+        }
+		
+		completion_reward = {
+            LVN = {
+			    add_war_support = 0.1 
+				add_political_power = 100  
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Reinforce_Lombardy
+		icon = GFX_focus_generic_home_defense
+		x = 1
+		y = 3
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available = {
+            AUS = { has_political_power > 50 }
+        }
+		
+        prerequisite = {
+        focus = AUS_Italian_Question
+        }
+		
+		cancel_if_invalid = no
+		
+		completion_reward = {
+		LVN = {
+		159 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 3780
+            }           
+		}
+		160 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 11584
+            }           
+		}
+        add_manpower = 10000
+		}
+	    }
+	}
+	
+	focus = { 
+		id = AUS_Viceroy_Maximilian
+		icon = GFX_goal_AUS_viceroy_maximilian
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Franz_den_Kaiser
+        }
+		
+		completion_reward = {
+		    LVN = {
+			    retire_country_leader = yes
+                create_country_leader = {
+	                name = "Maximilian of Austria"
+	                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	                picture = "Portrait_LVN_Maxililian_Ferdinand.dds"
+	                ideology = despotism
+	                traits = {
+		            #
+	                }
+                }
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Klerikalabsolutist
+		icon = GFX_goal_AUS_klerikabsolutist
+		x = 4
+		y = 1
+		cost = 50 
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		    AUS = {
+		    add_ideas = AUS_Klerikalabsolutist
+			}
+		}
+		
+        prerequisite = {
+        focus = AUS_Franz_den_Kaiser
+        }
+		
+		completion_reward = {
+
+		}
+	}
+	
+	focus = { 
+		id = AUS_Censor_Liberals
+		icon = GFX_AUS_placeholder
+		x = 3
+		y = 2
+		cost = 70 
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Klerikalabsolutist
+        }
+		
+		completion_reward = {
+		    add_political_power	= -150  
+		    add_popularity = {
+                ideology = centrism
+                popularity = -0.03
+            }
+		    add_popularity = {
+                ideology = traditional_conservatism
+                popularity = -0.05
+            }
+		    add_popularity = {
+                ideology = anarchism
+                popularity = -0.025 
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Abolish_Internal_Customs
+		icon = GFX_AUS_placeholder
+		x = 5
+		y = 2
+		cost = 70 
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Klerikalabsolutist
+        }
+		
+		completion_reward = {
+		AUS = {
+            swap_ideas = {
+			    add_idea = AUS_Klerikalabsolutist1
+				remove_idea = AUS_Klerikalabsolutist
+			}
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Abolish_Serfdom
+		icon = GFX_AUS_placeholder
+		x = 4
+		y = 3
+		cost = 70 
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Censor_Liberals
+        }
+        prerequisite = {
+        focus = AUS_Abolish_Internal_Customs
+        }
+		
+		completion_reward = {
+		    AUS = {
+		    swap_ideas = {
+			    add_idea = lp_land_estates
+				remove_idea = lp_serfdom
+			}
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Deal_With_Separatism
+		icon = GFX_AUS_placeholder
+		x = 8
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Franz_den_Kaiser
+        }
+		
+		completion_reward = {
+            add_political_power = 150 
+		}
+	}
+	
+	focus = { 
+		id = AUS_Subdue_Czechs
+		icon = GFX_AUS_placeholder
+		x = 7
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Deal_With_Separatism
+        }
+        prerequisite = {
+        focus = AUS_Klerikalabsolutist
+        }
+		
+		completion_reward = {
+		AUS = {
+            swap_ideas = {
+			    add_idea = AUS_SLA_Separatism1
+				remove_idea = AUS_SLA_Separatism
+			}
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Crack_Down_Hungarians
+		icon = GFX_AUS_placeholder
+		x = 9
+		y = 2
+		cost = 70 
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Deal_With_Separatism
+        }
+        prerequisite = {
+        focus = AUS_Klerikalabsolutist
+        }
+		
+		completion_reward = {
+		AUS = {
+            swap_ideas = {
+			    add_idea = AUS_HUN_Separatism1
+				remove_idea = AUS_HUN_Separatism
+			}
+		}
+		}
+	}
+	
+#####################################
+#          Political Tree           #
+#         After Italian War         #
+#####################################
+
+	focus = { 
+		id = AUS_Disaster_Italy 
+		icon = GFX_AUS_placeholder
+		x = 4
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        available = {
+		AND = {
+            date > 1859.10.05
+		    PIE = { owns_state = 159 }
+        }
+        }		
+		
+		cancel_if_invalid = no  
+		
+		mutually_exclusive = { focus = AUS_Victory_Italy }
+		
+		completion_reward = {
+		AUS = {
+            add_ideas = AUS_lost_italy
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Victory_Italy 
+		icon = GFX_AUS_placeholder
+		x = 8
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        available = {
+		AND = {
+            date > 1859.10.05
+		    NOT = { PIE = { owns_state = 159 } }
+        }
+        }		
+		
+		cancel_if_invalid = no
+		
+		mutually_exclusive = { focus = AUS_Disaster_Italy }
+		
+		completion_reward = {
+		AUS = {
+		    add_timed_idea = {
+                idea = AUS_win_italy
+                days = 800
+            }
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Future_Italy
+		icon = GFX_AUS_placeholder
+		x = 10 
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+       
+	    prerequisite = {
+		    focus = AUS_Victory_Italy
+		}
+		
+		completion_reward = {
+		    custom_effect_tooltip = AUS_tt_italian_lands_decisions
+		}
+	}
+	
+	focus = { 
+		id = AUS_Fall_von_Bach
+		icon = GFX_goal_focus_AUS_fall_von_bach
+		x = 4
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Disaster_Italy
+        }
+		
+		completion_reward = {
+            AUS = { country_event = AUSpolitics.1 }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Need_Reform
+		icon = GFX_AUS_placeholder
+		x = 3
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		
+		available = {
+		AUS = {
+		    has_country_leader = {
+                name = "Agenor Gołuchowski"
+                ruling_only = yes
+            }
+		}
+        }
+		
+        prerequisite = {
+        focus = AUS_Fall_von_Bach
+        }
+		
+		mutually_exclusive = { focus = AUS_Need_Absolutism }
+		
+		completion_reward = { 
+		AUS = {
+            remove_ideas = AUS_Klerikalabsolutist1 
+		}
+			add_stability = 0.05 
+		} 
+	}
+	
+	focus = { 
+		id = AUS_Reichsrat_Advice 
+		icon = GFX_AUS_placeholder
+		x = 3
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Need_Reform
+        }
+		
+		completion_reward = {
+            AUS = {
+			    swap_ideas = {
+				    remove_idea = absolute_monarchy
+					add_idea = constitutional_monarchy
+				} 	
+			    swap_ideas = {
+					remove_idea = AUS_lost_italy
+					add_idea = AUS_lost_italy1 
+				}
+				add_political_power = -100
+                				
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_October_Diploma
+		icon = GFX_goal_focus_enact_law
+		x = 3
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Reichsrat_Advice
+        }
+		
+		completion_reward = {
+			hidden_effect = {
+			    AUS = {
+			        swap_ideas = {
+				        remove_idea = human_rights
+					    add_idea = limited_constitution
+				    }
+			        swap_ideas = {
+				        remove_idea = no_elections
+					    add_idea = limited_elections
+				    }
+			    }
+			    country_event = {  id = AUSpolitics.2  days = 50  } 				
+			}
+			custom_effect_tooltip = AUS_tt_october_diploma 
+		}
+	}
+	
+	focus = { 
+		id = AUS_von_Schmerling
+		icon = GFX_goal_focus_AUS_Appoint_von_Schmerling
+		x = 3
+		y = 10
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}	
+	
+        prerequisite = {
+        focus = AUS_October_Diploma
+        }
+		
+		completion_reward = {
+		hidden_effect = {
+			AUS = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Anton von Schmerling"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Anton_von_Schmerling.dds"
+                    expire = 1893.05.23
+                    ideology = despotism 
+                }
+            }
+        }		
+            add_popularity = {
+                ideology = centrism
+                popularity = 0.3 
+            }		
+            custom_effect_tooltip = AUS_tt_appoint_anton_von_schmerling 		    
+		}
+	}
+	
+	focus = { 
+		id = AUS_February_Patent
+		icon = GFX_goal_focus_support_liberalism
+		x = 3
+		y = 11
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_von_Schmerling
+        }
+		
+		available = {
+		    AUS = {
+			    has_country_flag = AUS_flag_unlock_October_Diploma
+		    }
+	    }
+		
+		completion_reward = {
+		    AUS = {
+				remove_ideas = AUS_lost_italy1
+			}
+			hidden_effect = {
+			    AUS = {
+			        swap_ideas = {
+				        remove_idea = limited_constitution
+					    add_idea = constitution_adopted
+				    }
+			    }
+			}
+			custom_effect_tooltip = AUS_tt_february_patent
+
+		}
+	}
+	
+	focus = { 
+		id = AUS_Need_Absolutism
+		icon = GFX_AUS_placeholder
+		x = 5
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		AUS = {
+		    has_country_leader = {
+                name = "Archduke Rainier"
+                ruling_only = yes
+            }
+		}
+        }
+        prerequisite = {
+        focus = AUS_Fall_von_Bach
+        }
+		
+		mutually_exclusive = { focus = AUS_Need_Reform }
+		
+		completion_reward = {
+		AUS = {
+            swap_ideas = {
+			remove_idea = AUS_Klerikalabsolutist1
+			add_idea = AUS_neues_absolutist
+			}
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Maintain_Status_Quo
+		icon = GFX_AUS_placeholder
+		x = 8
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Need_Absolutism
+		focus = AUS_Victory_Italy
+        }
+		
+		completion_reward = {
+            if = {
+			    limit = {
+				    AUS = { has_idea = AUS_lost_italy }
+					}
+				AUS = { swap_ideas = {
+					    remove_idea = AUS_lost_italy 
+					    add_idea = AUS_lost_italy1   
+					}						
+				}
+			}
+			else = {
+			    AUS = { add_political_power = 50 } 
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Imprison_Dissenters
+		icon = GFX_AUS_placeholder
+		x = 8
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Maintain_Status_Quo
+        }
+		
+		completion_reward = {
+		AUS = {
+            swap_ideas = {
+			    remove_idea = AUS_neues_absolutist 
+				add_idea = AUS_neues_absolutist1 
+			}
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Metternichs_Legacy
+		icon = GFX_AUS_placeholder
+		x = 5
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Maintain_Status_Quo
+        }
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = AUS_Secret_Police
+		icon = GFX_AUS_placeholder
+		x = 5
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Metternichs_Legacy
+        }
+		
+		completion_reward = {
+
+		}
+	}
+	
+	focus = { 
+		id = AUS_Deal_with_Magyars
+		icon = GFX_AUS_placeholder
+		x = 8
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Imprison_Dissenters
+        }
+		
+		completion_reward = {
+
+		}
+	}
+	
+	focus = { 
+		id = AUS_Supress_Hungarian_Minorities
+		icon = GFX_AUS_placeholder
+		x = 7
+		y = 11
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Deal_with_Magyars
+        }
+		
+        mutually_exclusive = {
+        focus = AUS_Germanisation
+        }
+		
+		completion_reward = {
+            AUS = {
+			    swap_ideas = {
+				    remove_idea = AUS_HUN_Separatism1a
+					add_idea = AUS_HUN_Separatism2a
+				} 
+			}
+            AUS = {
+			    swap_ideas = {
+				    remove_idea = AUS_SLA_Separatism1a
+					add_idea = AUS_SLA_Separatism2a
+				} 
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Germanisation
+		icon = GFX_AUS_placeholder
+		x = 9
+		y = 11
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_Deal_with_Magyars
+        }
+		
+        mutually_exclusive = {
+        focus = AUS_Supress_Hungarian_Minorities
+        }
+		
+		completion_reward = {
+            AUS = {
+			    swap_ideas = {
+				    remove_idea = AUS_HUN_Separatism1a
+					add_idea = AUS_HUN_Separatism2b
+				} 
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Reform_Empire
+		icon = GFX_goal_AUS_reform_the_empire
+		x = 5
+		y = 12
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+		focus = AUS_February_Patent
+        focus = AUS_Supress_Hungarian_Minorities
+        }
+		
+		completion_reward = {
+
+		}
+	}
+   
+#####################################
+#             Army Tree             #
+#               Start               #
+#####################################
+    	focus = { 
+		id = AUS_The_Austrian_Army
+		icon = GFX_AUS_placeholder
+		x = 17
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		 completion_reward = {
+			 army_experience = 10
+			 add_political_power = 40
+             add_war_support = 0.03			 
+		}
+	  }
+		focus = { 
+		id = AUS_Abolish_The_Landswehr
+		icon = GFX_AUS_placeholder
+		x = 16  
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+		focus = AUS_The_Austrian_Army 
+	   }
+	   
+       mutually_exclusive = { focus = AUS_Reform_The_Landwehr }
+	   
+         completion_reward = {
+			       AUS = {
+		           add_ideas = AUS_abolish_landwehr
+			}
+		}
+	  }
+		
+		
+		focus = { 
+		id = AUS_Reform_The_Landwehr
+		icon = GFX_AUS_placeholder
+		x = 18  
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+	   focus = AUS_The_Austrian_Army 
+	  }
+      mutually_exclusive = { focus = AUS_Abolish_The_Landswehr }
+	  
+              completion_reward = {
+				        AUS = {
+		                add_ideas = AUS_reform_landwehr
+			}
+		}
+	 }
+		
+		focus = { 
+		id = AUS_Learn_From_The_Old_Guard
+		icon = GFX_AUS_placeholder
+		x = 16
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		   		mutually_exclusive = { focus = AUS_New_Generals_New_Tatics }
+        		prerequisite = {
+      focus = AUS_Italian_Lessons
+    }
+              completion_reward = {
+				army_experience = 5
+				add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
+		}
+	 }
+	 
+	    		focus = { 
+		id = AUS_New_Generals_New_Tatics
+		icon = GFX_AUS_placeholder
+		x = 18
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		   		mutually_exclusive = { focus = AUS_Learn_From_The_Old_Guard }
+        		prerequisite = {
+      focus = AUS_Italian_Lessons
+    }
+              completion_reward = {
+				army_experience = 5
+				
+		}
+	 }
+	 
+	            focus = { 
+		id = AUS_The_Fight_For_Dominance
+		icon = GFX_AUS_placeholder
+		x = 13  
+		y = 1  
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_The_Austrian_Army 
+    }
+    
+              completion_reward = {
+				#
+		}
+	  }
+
+                focus = { 
+		id = AUS_Recover_From_The_Revolution
+		icon = GFX_AUS_placeholder
+		x = 21  
+		y = 1 
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		prerequisite = { focus =  AUS_The_Austrian_Army }
+    
+    
+              completion_reward = {
+				        AUS = {
+		                remove_ideas = AUS_lack_of_recruits
+			}
+		}
+	  }	  
+		   
+                focus = { 
+		id = AUS_Protect_The_Border_Forts
+		icon = GFX_AUS_placeholder
+		x = 14    
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_The_Fight_For_Dominance
+    }
+    
+              completion_reward = {
+				69 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 11401
+            }           
+		}
+		
+		1232 = {
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = yes
+                province = 9427
+            }           
+		}
+	}
+}		    
+	  
+	            focus = { 
+		id = AUS_New_Recruits_From_The_Honved
+		icon = GFX_AUS_placeholder
+		x = 20  
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Recover_From_The_Revolution
+    }
+    
+              completion_reward = {
+				add_manpower = 10000
+		}
+	  }
+	  
+	            focus = { 
+		id = AUS_Fast_To_The_Border
+		icon = GFX_AUS_placeholder
+		x = 12   
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_The_Fight_For_Dominance
+    }
+    
+              completion_reward = {
+				        AUS = {
+		                add_ideas = AUS_austrian_railways
+			}
+		}
+	  }	
+
+                focus = { 
+		id = AUS_Modernize_The_General_Staff
+		icon = GFX_AUS_placeholder
+		x = 22    
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Recover_From_The_Revolution
+    }
+    
+              completion_reward = {
+	add_tech_bonus = {
+   bonus = 0.25
+   uses = 1
+   category = land_doctrine
+}
+		}
+	  }	  
+	  
+	     	    focus = { 
+		id = AUS_Halt_Und_Verstarken
+		icon = GFX_AUS_placeholder
+		x = 12  
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Fast_To_The_Border focus = AUS_Protect_The_Border_Forts
+    }
+    
+              completion_reward = {
+				        AUS = {
+		                add_ideas = AUS_halt_und_verstarken
+			}
+		}
+	  }	
+	  
+	            focus = { 
+		id = AUS_Heinrich_Von_Hess's_Ideas
+		icon = GFX_goal_AUS_heinrich_von_hesse
+		x = 22  
+		y = 3 
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Modernize_The_General_Staff focus = AUS_New_Recruits_From_The_Honved
+    }
+    
+              completion_reward = {
+				#
+		}
+	  }	  
+
+	      	    focus = { 
+		id = AUS_The_Strongest_Of_The_Confederation
+		icon = GFX_AUS_placeholder
+		x = 14   
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Fast_To_The_Border focus = AUS_Protect_The_Border_Forts
+    }
+    
+              completion_reward = {
+				        AUS = {
+		                add_ideas = AUS_strongest_confederation
+			}
+		}
+	  }	
+	  
+	  	        focus = { 
+		id = AUS_Recruits_From_The_Last_Town_Of_The_Empire
+		icon = GFX_AUS_placeholder
+		x = 20    
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+        		 prerequisite = {
+      focus = AUS_Modernize_The_General_Staff focus = AUS_New_Recruits_From_The_Honved
+    }
+    
+              completion_reward = {
+				  add_manpower = 10000
+		}
+	  }	
+
+	focus = { 
+		id = AUS_Italian_Lessons
+		icon = GFX_AUS_placeholder
+		x = 17   
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available = {
+            date > 1859.10.05
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_The_Landwehr focus = AUS_Abolish_The_Landswehr
+        }
+    
+        completion_reward = {
+				#
+		}
+	}	 
+
+	focus = { 
+		id = AUS_Archduke_Albrecht
+		icon = GFX_AUS_placeholder
+		x = 16     
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Learn_From_The_Old_Guard
+        }
+    
+        completion_reward = {
+				#
+		}
+	}
+
+	focus = { 
+		id = AUS_Professional_Military 
+		icon = GFX_AUS_placeholder
+		x = 18      
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_New_Generals_New_Tatics
+        }
+    
+        completion_reward = {
+				#
+		}
+	}	
+
+#####################################
+#             Navy Tree             #
+#               Start               #
+#####################################	
+
+	focus = { 
+		id = AUS_Kaiser_Navy
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 0 
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+    
+        completion_reward = {
+		    navy_experience = 5 
+		}
+	}
+	
+	focus = { 
+		id = AUS_Reform_Triest_Navy
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 1  
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Kaiser_Navy
+        }
+    
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.25 
+                uses = 1
+                category = naval_doctrine 
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Pola_Base
+		icon = GFX_AUS_placeholder
+		x = 29           
+		y = 2   
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+		1236 = {
+            add_building_construction = {
+                type = naval_base 
+                level = 2 
+                instant_build = yes
+                province = 11735 
+            } 
+		}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Maximilian_Lessons
+		icon = GFX_AUS_placeholder
+		x = 31             
+		y = 2  
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+				navy_experience = 25 
+		}
+	}
+	
+	focus = { 
+		id = AUS_Recover_Italy_Navy 
+		icon = GFX_AUS_placeholder
+		x = 27                  
+		y = 2  
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy
+        }
+    
+        completion_reward = {
+				AUS = {
+				    add_ideas = AUS_New_Navy_1 
+				}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Emperor_Adriatic_Navy 
+		icon = GFX_AUS_placeholder
+		x = 33                 
+		y = 2  
+		cost = 70 
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy 
+        }
+    
+        completion_reward = {
+		    add_political_power = 50 
+		1236 = {
+            add_building_construction = {
+                type = dockyard 
+                level = 1  
+                instant_build = yes
+            } 
+		}	
+		}
+	}
+	
+	focus = { 
+		id = AUS_Ironclads_Navy 
+		icon = GFX_AUS_placeholder
+		x = 25                  
+		y = 3   
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Austro_Italian_Race_Navy focus = AUS_Recover_Italy_Navy
+        }
+    
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.4  
+                uses = 1
+                category = monitor_tech 
+                category = lineship_tech 
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_Austro_Italian_Race_Navy
+		icon = GFX_AUS_placeholder
+		x = 25                  
+		y = 2  
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Reform_Triest_Navy 
+        }
+    
+        completion_reward = {
+		    AUS = {
+			    swap_ideas = {
+				    add_idea = AUS_New_Navy_2 
+					remove_idea = AUS_New_Navy_1
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Patrol_Italy_Coast 
+		icon = GFX_AUS_placeholder
+		x = 27                  
+		y = 3    
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Austro_Italian_Race_Navy  focus = AUS_Recover_Italy_Navy
+        }
+    
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.25   
+                uses = 1
+                category = sloop_tech 
+            }
+		}
+	}
+	
+	focus = { 
+		id = AUS_New_Leadership 
+		icon = GFX_AUS_placeholder
+		x = 31                  
+		y = 3    
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_Emperor_Adriatic_Navy  focus = AUS_Maximilian_Lessons
+        }
+    
+        completion_reward = {
+				AUS = {
+				    add_ideas = AUS_theorist_naval_ludwig_von_fautz
+				}
+		}
+	}
+	
+	focus = { 
+		id = AUS_Wilhelm_von_Tegetthoff  
+		icon = GFX_AUS_placeholder
+		x = 31                    
+		y = 4   
+		cost = 70
+		available_if_capitulated = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+            focus = AUS_New_Leadership
+        }
+    
+        completion_reward = {
+				AUS = {
+                    create_navy_leader = {
+                        name = "Wilhelm von Tegetthoff"
+                        picture = "Portrait_AUS_Wilhelm_von_Tegetthoff.dds"
+                        traits = { }
+                        skill = 4 
+						id = 168304  
+                }
+				}
+		}
+	}
+	
+}
+

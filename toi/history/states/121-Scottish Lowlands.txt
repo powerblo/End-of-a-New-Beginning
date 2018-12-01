@@ -2,24 +2,26 @@
 state={
 	id=121
 	name="STATE_121" # Lothian
-	manpower = 1431624
+	manpower = 944880
 	
 	state_category = city
+
+	resources = {
+		wood=2
+	}
 
 	history={
 		owner = ENG
 		victory_points = { 9392 10 }
 		victory_points = { 6300 1 }
 		buildings = {
-			infrastructure = 7
-			industrial_complex = 1
-			dockyard = 1
-			
+			infrastructure = 2
 			6300 = {
-				naval_base = 5
+				naval_base = 1
 			}
 		}
 		add_core_of = ENG
+		add_core_of = SCO
 	}
 
 	provinces={

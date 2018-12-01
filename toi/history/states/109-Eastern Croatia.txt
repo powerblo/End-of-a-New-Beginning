@@ -1,19 +1,27 @@
-
+	
 state={
 	id=109
 	name="STATE_109" # Croatia
-	manpower = 2224400
+	manpower = 1468104
+
+	resources {
+		wood = 25
+		iron = 4
+	}
 
 	state_category = large_town
 
 	history={
 		owner = AUS
 		buildings = {
-			infrastructure = 6
-			industrial_complex = 3
+			infrastructure = 4 
+			cotton_farm = 1
 		}
 		victory_points = {
-			11581 3
+			11581 10 
+		}
+		victory_points = {
+			9611 3
 		}
 		add_core_of = AUS
 		add_core_of = CRO
