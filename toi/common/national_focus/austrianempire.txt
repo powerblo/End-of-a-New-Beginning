@@ -976,7 +976,7 @@ focus_tree = {
 #####################################
     focus = { 
 		id = AUS_The_Austrian_Army
-		icon = GFX_goal_focus_landwehr
+		icon = GFX_goal_AUS_Austrian_Army
 		x = 17
 		y = 0
 		cost = 70
@@ -1092,6 +1092,7 @@ focus_tree = {
         }
 		
         completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = artillery category = support_tech }
 			army_experience = 5
 		}
 	}
@@ -1413,7 +1414,12 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+            add_tech_bonus = {
+                bonus = 0.25 
+                uses = 1
+                category = doctrine_victorian_innovative_tech 
+                category = doctrine_victorian_artillery_tech 
+            }			
 		}
 	}	
 
@@ -1424,7 +1430,7 @@ focus_tree = {
 
 	focus = { 
 		id = AUS_Kaiser_Navy
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_Kaiser_Navy
 		x = 29           
 		y = 0 
 		cost = 70
@@ -1565,7 +1571,8 @@ focus_tree = {
         completion_reward = {
 		    add_political_power = 50 
 			AUS = {
-			    add_ideas = 
+			    add_timed_idea = { idea = AUS_idea_adriatic_navy 
+				days = 500 }
 			}
 		#1236 = {
         #    add_building_construction = {
@@ -1671,9 +1678,7 @@ focus_tree = {
         }
     
         completion_reward = {
-				AUS = {
-				    add_ideas = AUS_theorist_naval_ludwig_von_fautz
-				}
+		    custom_effect_tooltip = AUS_tt_unlock_ludwig_von_fautz 
 		}
 	}
 	
@@ -1834,11 +1839,11 @@ focus_tree = {
         }
     
         completion_reward = {
-            # add_resource = {
-                # type = iron       
-                # amount = 8 
-                # state = 152  
-            # }
+            add_resource = {
+                type = iron       
+                amount = 8 
+                state = 152  
+            }
 		}
 	}
 	

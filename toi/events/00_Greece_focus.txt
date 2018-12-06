@@ -348,12 +348,12 @@ country_event = { #1859 elections results
 	
 	fire_only_once = yes
 	
-	hidden_effect = {
 	immediate = {
-	    GRE = {
-		    complete_national_focus = GRE_elections_1859
-		}
-	}
+		hidden_effect = {
+	        GRE = {
+		        complete_national_focus = GRE_elections_1859
+		    }
+	    }
 	}
 	
 	option = {

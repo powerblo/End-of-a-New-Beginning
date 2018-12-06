@@ -715,3 +715,217 @@ country_event = { #Trip to Hungary
     }		     
 }
 
+## Hungary Revolts alternate history
+
+add_namespace = AUShungaryrevolt
+
+country_event = { #Event to warn about the revolution           
+	id = AUShungaryrevolt.1
+	title = AUShungaryrevolt.1.t
+	desc = AUShungaryrevolt.1.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		AUS = {
+            check_variable = {
+                var = HUN_REVOLT_RISK
+                value = 10 
+                compare = greater_than_or_equals 
+            }
+		}     
+	}
+	
+	option = { 
+		name = AUShungaryrevolt.1.a 
+		ai_chance = { factor = 100 }
+		
+        country_event = {
+            id = AUShungaryrevolt.2
+            days = 35
+        }		
+    }		     
+}
+
+country_event = { #Beginning of Revolution           
+	id = AUShungaryrevolt.2
+	title = AUShungaryrevolt.2.t
+	desc = AUShungaryrevolt.2.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+
+	immediate = {
+	    hidden_effect = {
+		    HUN = {
+                transfer_state = 43	
+                transfer_state = 154
+                transfer_state = 155 	
+                transfer_state = 664 
+                transfer_state = 968 	
+                load_oob = "HUN_Revolt"		
+                add_ideas = HUN_idea_Revolt 
+                set_politics = {
+                    parties = {
+                        collectivist_socialism = {
+                            popularity = 3
+                        }
+                        social_egalitarianism = {
+                            popularity = 10
+                        }
+                        centrism = {
+                            popularity = 42
+                        }
+                        traditional_conservatism = {
+                            popularity = 38 
+                        }
+                        chauvinist_populism = {
+                            popularity = 7
+                        }
+                        autocracy = {
+                            popularity = 0
+                        }
+                    }
+	                ruling_party = centrism
+                }
+                create_country_leader = {
+                name = "Lajos Kossuth"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_HUN_Lajos_Kossuth"
+                expire = 2000.09.10
+                ideology = social_liberal
+                }		
+                create_country_leader = {
+                name = "Ferenc Deák"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_HUN_Ferenc_Deak"
+                expire = 2000.09.10
+                ideology = moderatism
+                }				
+		    }
+			if = {
+			    limit = {
+				AUS = { has_idea = AUS_hungarian_revolution }
+				}
+			    remove_ideas = AUS_hungarian_revolution
+			}
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 11 
+                       compare = equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                }			
+		    }
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 12 
+                        compare = equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 76  
+                }			
+		    }    
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 13 
+                        compare = equals 
+                    } 
+			    } 
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 82 
+			        transfer_state = 83  
+                    transfer_state = 76  		
+                    transfer_state = 45 
+                    transfer_state = 743 
+                }  			
+		    }
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 14  
+                        compare = greater_than_or_equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 76  		
+                    transfer_state = 45 
+                    transfer_state = 743   	
+                    transfer_state = 82  
+                    transfer_state = 83 
+                    transfer_state = 71  
+                    transfer_state = 70 	
+                }			
+		    }
+			HUN = {
+		        every_owned_state = {
+		            add_core_of = HUN 
+	             	remove_core_of = AUS 
+		        }
+            }			
+	    }
+	}
+	
+	
+	option = { 
+		name = AUShungaryrevolt.2.a #Remain Austria 
+		ai_chance = { factor = 100 }
+		
+    }
+
+	option = { 
+		name = AUShungaryrevolt.2.b #Play as Hungary  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+		    HUN = { 
+		        country_event = {
+                    id = AUShungaryrevolt.3
+                    days = 45 
+                }
+		   change_tag_from = ROOT
+            }	
+        }
+    }
+}
+
+country_event = { #Event introducing the player to Hungary            
+	id = AUShungaryrevolt.3
+	title = AUShungaryrevolt.3.t
+	desc = AUShungaryrevolt.3.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.3.a 
+		ai_chance = { factor = 100 }
+				
+    }		     
+}

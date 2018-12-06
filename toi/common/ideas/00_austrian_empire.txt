@@ -413,8 +413,50 @@ ideas = {
 	           production_speed_industrial_complex_factor = 0.05 
 			}
 	    }
+		
+		AUS_idea_expand_uhlan_army = {
 
+		   allowed = {
+			   always = no
+		   }
 
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           cavalry_attack_factor = 0.05
+			   cavalry_defence_factor = 0.05
+			}
+	    }
+		AUS_idea_adriatic_navy = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+			
+			equipment_bonus = {
+				tp_tech = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		   modifier = {
+	           production_speed_dockyard_factor = 0.1 
+			}
+	    }
 	}	
     political_advisor = {
 		AUS_advisor_hermann_dietrich_lindheim = {
@@ -496,10 +538,10 @@ ideas = {
 			}
 			
 			available = {
-				has_completed_focus = GER_focus_historical_minister_von_stosch
+				has_completed_focus = AUS_New_Leadership
 			}
 			
-			picture = placeholder 
+			picture = AUS_advisor_Ludwig_von_Fautz 
 			
 			cost = 50 
 
@@ -545,6 +587,28 @@ ideas = {
 
 			traits = { # }
 		}
+	}
 	
+	theorist = {
+		AUS_idea_theorist_heinrich_von_hess = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+				has_completed_focus = AUS_Heinrich_Von_Hess's_Ideas
+			}
+			
+			picture = AUS_theorist_Henrich_von_Hess 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		}	
 	}
 }
