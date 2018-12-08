@@ -13,11 +13,6 @@ ARG_centralize_military = {
 		}
 
 		visible = {
-			TAG = ARG
-			OR = {
-				has_idea = ARG_decentral_military_2
-				has_idea = ARG_decentral_military_1
-			}
 		}
 
 		cost = 50
@@ -27,9 +22,7 @@ ARG_centralize_military = {
 		}
 
 		days_remove = 100
-
 		days_re_enable = 1
-
 		remove_effect = {
 			if = {
 				limit = {
@@ -193,7 +186,7 @@ ARG_colonize_lands = {
 			}
 			if = {
 				limit = {
-					has_country_flag = Conquest_of_Desert_No_Negotiation
+					NOT = { has_country_flag = Conquest_of_Desert_Negotiation }
 				}
 				declare_war_on = {
 					target = WLL

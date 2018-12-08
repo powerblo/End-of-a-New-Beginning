@@ -15,7 +15,6 @@ focus_tree = {
 				tag = HAI
 				tag = VEN
 				tag = ECU
-				tag = PRU
 				tag = BOL
 				tag = ARG
 				tag = CHL
@@ -2076,42 +2075,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = LAT_generic_Keep_Slavery
-		icon = GFX_goal_demand_sudetenland
-		cost = 75
-		prerequisite = {
-			focus = LAT_generic_New_Industrial_Age
-		}
-		mutually_exclusive = {
-			focus = LAT_generic_Bring_Back_Slavery
-			focus = LAT_generic_Road_Abolishment
-			focus = LAT_generic_Keep_Abolishment
-		}
-		x = 32
-		y = 1
-		available = {
-			has_idea = slavery
-		}
-		completion_reward = {
-			add_political_power = 100
-		}
-
-	}
-	focus = {
-		id = LAT_generic_Keep_Farms
-		icon = GFX_goal_generic_construction2
-		cost = 75
-		prerequisite = {
-			focus = LAT_generic_Keep_Slavery
-		}
-		x = 32
-		y = 3
-		completion_reward = {
-			add_stability = 0.1
-		}
-
-	}
+	
 	focus = {
 		id = LAT_generic_Bring_Back_Slavery
 		icon = GFX_goal_generic_air_production
@@ -2120,8 +2084,6 @@ focus_tree = {
 			focus = LAT_generic_New_Industrial_Age
 		}
 		mutually_exclusive = {
-			focus = LAT_generic_Keep_Slavery
-			focus = LAT_generic_Road_Abolishment
 			focus = LAT_generic_Keep_Abolishment
 		}
 		ai_will_do = {
@@ -2211,7 +2173,6 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		cost = 75
 		prerequisite = {
-			focus = LAT_generic_Keep_Farms
 			focus = LAT_generic_Reintroduce_Slavery
 		}
 		x = 34
@@ -2334,37 +2295,16 @@ focus_tree = {
 			}
 		}
 
-	}
-	focus = {
-		id = LAT_generic_Road_Abolishment
-		icon = GFX_goal_generic_military_deal
-		cost = 75
-		prerequisite = {
-			focus = LAT_generic_New_Industrial_Age
-		}
-		mutually_exclusive = {
-			focus = LAT_generic_Keep_Slavery
-			focus = LAT_generic_Bring_Back_Slavery
-			focus = LAT_generic_Keep_Abolishment
-		}
-		x = 40
-		y = 1
-		available = {
-			has_idea = slavery
-		}
-		completion_reward = {
-			add_political_power = -50
-		}
-
-	}
+	} 
+	
 	focus = {
 		id = LAT_generic_Law_Free_Birth
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 75
 		prerequisite = {
-			focus = LAT_generic_Road_Abolishment
+		    focus = LAT_generic_Keep_Abolishment
 		}
-		x = 38
+		x = 40
 		y = 2
 		completion_reward = {
 			add_political_power = -20
@@ -2376,9 +2316,9 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 75
 		prerequisite = {
-			focus = LAT_generic_Road_Abolishment
+			focus = LAT_generic_Keep_Abolishment
 		}
-		x = 40
+		x = 42
 		y = 2
 		completion_reward = {
 			add_political_power = -20
@@ -2390,9 +2330,9 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 75
 		prerequisite = {
-			focus = LAT_generic_Road_Abolishment
+			focus = LAT_generic_Keep_Abolishment
 		}
-		x = 42
+		x = 44
 		y = 2
 		completion_reward = {
 			add_political_power = -20
@@ -2412,12 +2352,12 @@ focus_tree = {
 		prerequisite = {
 			focus = LAT_generic_Law_Free_Birth
 		}
-		x = 40
+		x = 42
 		y = 3
 		completion_reward = {
 			swap_ideas = {
-				add_idea = segregation
-				remove_idea = slavery
+				add_idea = limited_equality
+				remove_idea = segregation
 			}
 		}
 
@@ -2430,11 +2370,9 @@ focus_tree = {
 			focus = LAT_generic_New_Industrial_Age
 		}
 		mutually_exclusive = {
-			focus = LAT_generic_Keep_Slavery
 			focus = LAT_generic_Bring_Back_Slavery
-			focus = LAT_generic_Road_Abolishment
 		}
-		x = 44
+		x = 42
 		y = 1
 		ai_will_do = {
 			factor = 95

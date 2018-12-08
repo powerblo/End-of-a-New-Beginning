@@ -1501,6 +1501,8 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_focus_prussian_republic }
 		
 		completion_reward = {
+			set_party_name = { ideology = centrism long_name = PRS_centrism_king_party_long name = PRS_centrism_king_party }
+			set_politics = { ruling_party = centrism elections_allowed = no }
 			custom_effect_tooltip = PRS_focus_tt_liberal_king
 			hidden_effect = {
 				swap_ideas = { remove_idea = hos_is_leader add_idea = PRS_Friedrich_III }
@@ -1660,6 +1662,8 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_focus_liberal_kingdom }
 		
 		completion_reward = {
+			set_party_name = { ideology = centrism long_name = PRS_centrism_republic_party_long name = PRS_centrism_republic_party }
+			set_politics = { ruling_party = centrism elections_allowed = no }
 			set_cosmetic_tag = PRS_cosmetic_republic
 		}
 	}

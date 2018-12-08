@@ -645,29 +645,6 @@ country_event = { # Henri Mouhot's death
   }
 }
 
-country_event = { # Pierre Bosquet's death
-  id = nap_france.103
-  title = nap_france.103.t
-  desc = nap_france.103.d
-  picture = GFX_report_event_pierre_boquet
-
-  fire_only_once = yes
-
-  trigger = {
-    date > 1861.1.1
-    tag = FRA
-  }
-
-  mean_time_to_happen = {
-    days = 150
-  }
-
-  option = { # A great hero indeed
-    name = nap_france.103.a
-    remove_unit_leader = 178901
-  }
-}
-
 country_event = { # Manifeste des Soixante
   id = nap_france.104
   title = nap_france.104.t
@@ -1782,8 +1759,8 @@ country_event = { # The Kabyle manage to hold their lands
     tag = ALG
     has_war_with = KBY
     NOT = {
-      has_full_control_of_state = 459
-      has_full_control_of_state = 460
+      controls_state = 459
+      controls_state = 460
     }
   }
 
@@ -1796,8 +1773,17 @@ country_event = { # The Kabyle manage to hold their lands
     }
     KBY = {
       country_event = { id = nap_france.152 }
-      white_peace = FRA
-      white_peace = ALG
+      white_peace = {
+        tag = ALG
+      }
+      if = {
+        limit = {
+          has_war_with = FRA
+        }
+        white_peace = {
+          tag = FRA
+        }
+      }
       transfer_state = 459
       transfer_state = 460
       transfer_state = 513
@@ -1857,46 +1843,6 @@ country_event = { # The integration of Southern Algeria into our colony
     ALG = {
       transfer_state = 513
     }
-  }
-}
-
-country_event = { # Félix Charles Douay become general
-  id = nap_france.160
-  title = nap_france.160.t
-  desc = nap_france.160.d
-  picture = GFX_france_kepi_general
-
-  trigger = {
-    tag = FRA
-	has_war = yes
-  }
-
-  fire_only_once = yes
-
-  mean_time_to_happen = {
-    days = 500
-	modifier = {
-		factor = 0.3
-		has_war_with = AUS
-	}
-  }
-
-  option = {
-    name = nap_france.160.a
-	# https://fr.wikipedia.org/wiki/F%C3%A9lix_Charles_Douay
-	create_corps_commander = {
-		name = "Félix Charles Douay"
-		picture = "Portrait_FRA_Felix_Charles_Douay.dds"
-		id = 178920
-		traits = {
-			trait_reckless
-		}
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-	}
   }
 }
 

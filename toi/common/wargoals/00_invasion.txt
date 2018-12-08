@@ -292,29 +292,6 @@ wargoal_types = {
 		annex_threat_factor = 0.1
 		annex_cost = -75
 	}
-
-	contain_wargoal = { #aggressive expansion curtailing
-		# PREV = original target country
-		# ROOT = goal owner country
-
-		war_name = CONTAIN_WAR_NAME
-
-		allowed = {
-			always = no
-		}
-		
-		available = {
-			PREV = { has_added_tension_amount > 30 }
-		}
-
-		liberate = {
-			always = yes
-		}
-
-		threat = -1
-		generate_base_cost = 0
-		puppet_cost = 25
-	}
 	
 	independence_wargoal = { #subjects fighting for independence
 		# PREV = original target country
