@@ -1,12 +1,12 @@
 
 state={
-	id=533
-	name="STATE_533" # Mutsu
+	id=1277
+	name="STATE_1277" # Aomori
 	manpower = 3275000
-	state_category = large_city
+	state_category = town
 	resources={
-		iron=2
-		wood=1
+		iron=12
+		wood=4
 	}
 
 	history={
@@ -17,15 +17,19 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 			infrastructure = 2
+			
+			9859 = {
+				naval_base = 3
+			}
 		}
 		
 		victory_points = {
-			7169 15
+			6994 5
 		}
 
 	}
 
 	provinces={
-		1024 1165 4118 4122 4153 6870 7169 9807 11847 13826 
+	    6873 6994 9859 
 	}
 }
