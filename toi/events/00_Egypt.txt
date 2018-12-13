@@ -450,6 +450,150 @@ country_event = {
 	}
 }
 
-
-
+country_event = { #ENG- EGY is collapsing due to debt, should we move in?
+	id = afr_EGY_vic.11
+	title = afr_EGY_vic.11.t
+	desc = afr_EGY_vic.11.d 
+	
+	trigger = {
+		tag = ENG
+		EGY={
+			has_idea = egy_vic_debt
+			check_variable = {ROOT.debt_level > 24}
+		}
+	}
+		
+	option = {#move in with FRA
+		name = afr_EGY_vic.11.a
+		ai_chance = { factor = 100 }
+		add_manpower = -1000
+		FRA={
+			country_event={id=afr_EGY_vic.13}#egypt capitulates to ENG
+		}
+	}
+	option = {#move in ourselves
+		name = afr_EGY_vic.11.a
+		ai_chance = { factor = 0 }
+		add_manpower = -2000
+		EGY={
+			country_event={id=afr_EGY_vic.12}
+		}
+	}
+	option = {#we have no desire for egypt
+		name = afr_EGY_vic.11.a
+		ai_chance = { factor = 0 }
+		add_political_power = 75
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+}
+country_event = { #EGY - FRA and ENG are seizing control of our country, what do we do
+	id = afr_EGY_vic.12
+	title = afr_EGY_vic.12.t
+	desc = afr_EGY_vic.12.d 
+	
+	is_triggered_only = yes
+		
+	option = {#accept the move
+		name = afr_EGY_vic.12.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = remove_debt_effects
+		EGY={
+			set_variable = {debt_level = 0}
+		}
+		ENG={
+			country_event={id=afr_EGY_vic.14 days = 7}#egypt capitulates
+		}
+		add_ideas={
+			EGY_ENG_controlled_government
+		}
+		remove_ideas={
+			egy_vic_debt
+		}
+		if={
+			limit ={
+				FROM={
+					tag = FRA
+				}
+			}
+			add_ideas={
+				EGY_FRA_controlled_government
+			}
+		}
+	}
+}
+country_event = { #FRA- EGY is collapsing due to debt, ENG is moving in, should we join them
+	id = afr_EGY_vic.13
+	title = afr_EGY_vic.13.t
+	desc = afr_EGY_vic.13.d 
+	
+	is_triggered_only = yes
+		
+	option = {#agree to move in
+		name = afr_EGY_vic.13.a
+		ai_chance = { factor = 95 }
+		custom_effect_tooltip = FRA_help_ENG_attempt_seize_EGY
+		add_manpower = -1000
+		hidden_effect={
+			EGY={
+				country_event={id=afr_EGY_vic.12}
+			}
+		}
+	}
+	option = {#ignore it
+		name = afr_EGY_vic.13.a
+		ai_chance = { factor = 5 }
+		custom_effect_tooltip = ENG_attempt_seize_EGY
+		hidden_effect={
+			EGY={
+				country_event={id=afr_EGY_vic.12}
+			}
+		}
+	}
+}
+country_event = { #ENG - EGY submits
+	id = afr_EGY_vic.14
+	title = afr_EGY_vic.14.t
+	desc = afr_EGY_vic.14.d 
+	
+	is_triggered_only = yes
+	immediate={
+		ENG={
+			country_event={id=afr_EGY_vic.15 days = 100 random = 260}#conflict with france over EGY
+		}
+	}
+		
+	option = {#great
+		name = afr_EGY_vic.14.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+country_event = { #ENG - friction with FRA over EGY administration
+	id = afr_EGY_vic.15
+	title = afr_EGY_vic.15.t
+	desc = afr_EGY_vic.15.d 
+	
+	is_triggered_only = yes
+		
+	option = {#fully take over
+		name = afr_EGY_vic.15.a
+		ai_chance = { factor = 33 }
+		
+	}
+	option = {#fully take over
+		name = afr_EGY_vic.15.b
+		ai_chance = { factor = 33 }
+		trigger ={
+		
+		}
+		
+	}
+	option = {#fully take over
+		name = afr_EGY_vic.15.c
+		ai_chance = { factor = 33 }
+		
+	}
+}
 
