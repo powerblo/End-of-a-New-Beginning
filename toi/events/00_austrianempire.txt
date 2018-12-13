@@ -898,7 +898,13 @@ country_event = { #Beginning of Revolution
 			news_event = {
 			    id = AUSnewshungaryrevolt.1
 			    days = 10 
-			}		
+			}
+            AUS = {
+		        country_event = {
+                    id = AUShungaryrevolt.4
+                    days = 50  
+                }
+			}			
 		}
     }
 
@@ -914,7 +920,7 @@ country_event = { #Beginning of Revolution
 		    HUN = { 
 		        country_event = {
                     id = AUShungaryrevolt.3
-                    days = 45 
+                    days = 25 
                 }
 		        change_tag_from = ROOT
 				delete_unit_template_and_units = {
@@ -922,7 +928,13 @@ country_event = { #Beginning of Revolution
 					division_template = "Jäger Regiment"
 					division_template = "Hussar Regiment"					
                 }
-            }	
+            }
+			AUS = {
+		        country_event = {
+                    id = AUShungaryrevolt.4
+                    days = 50  
+                }
+			}			
         }
     }
 }
@@ -944,13 +956,50 @@ country_event = { #Event introducing the player to Hungary
     }		     
 }
 
+country_event = { #Event that actually starts the war             
+	id = AUShungaryrevolt.4
+	title = AUShungaryrevolt.4.t
+	desc = AUShungaryrevolt.4.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+	    hidden_effect = {
+	        AUS = {
+			    declare_war_on = {
+                    target = HUN
+                    type = annex_everything
+                } 
+			}
+			    967 = {
+			        create_unit = {
+		                division = "name = \"4. Gyalogezred"\
+				    	division_template = \"Gyalogezred\" 
+				    	start_experience_factor = 0.5 
+				    	start_equipment_factor = 0.5"
+                        owner = HUN
+                    }
+				}
+	    }
+	}
+	
+	option = { 
+		name = AUShungaryrevolt.4.a 
+		ai_chance = { factor = 100 }
+				
+    }		     
+}
+
 add_namespace = AUSnews 
 
 news_event = { #Hungarian Revolt news             
 	id = AUSnews.1
 	title = AUSnews.1.t
 	desc = AUSnews.1.d 
-	picture = GFX_report_event_AUS_habsburgs_1
+	picture = GFX_news_event_generic_rally2
 	
 	fire_only_once = yes 
 	
@@ -959,7 +1008,7 @@ news_event = { #Hungarian Revolt news
 	major = yes 
 	
 	option = { 
-		name = AUShungaryrevolt.3.a 
+		name = AUSnews.1.a 
 		ai_chance = { factor = 100 }		
     }		     
 }
