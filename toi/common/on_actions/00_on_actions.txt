@@ -551,29 +551,6 @@ on_actions = {
 		        FROM = { add_stability = -0.05 }
         		FROM = { add_war_support = -0.05 }
 			}
-			#Triggers "Capture of Guangzhou" Event if true
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							tag = ENG
-							tag = FRA
-						}
-					}
-					FROM = { tag = CHI }
-					FROM.FROM = { has_state_flag = eoanb_flag_battle_for_canton_ongoing }
-					has_global_flag = eoanb_flag_sow_ongoing
-				}
-				CHI = { country_event = { id = secondopiumwar.15 } }
-				ENG = { country_event = { id = secondopiumwar.16 } }
-				if = {
-					limit = {
-						has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
-					}
-					FRA = { country_event = { id = secondopiumwar.16 } }
-				}
-				592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
-			}
 		}
 	}
 	
