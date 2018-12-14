@@ -2,25 +2,25 @@
 state={
 	id=376
 	name="STATE_376"
-	manpower = 87034
-	
-	state_category = rural
-	
 	resources={
-		aluminium=2
-		wood = 2
+		aluminium=2.000
+		wood=2.000
 	}
 
-
 	history={
-		controller = USA
+		controller = NAV
 		buildings = {
 			infrastructure = 1
+
 		}
+		add_core_of = NAV
+		add_claim_by = USA
 	}
 
 	provinces={
-		1972 2102 3867 3883 4975 5044 8070 10642 10645 10867 10914 12552 12684 12720 12791 
+		10645 12552
 	}
-	
+	manpower=15034
+	buildings_max_level_factor=1.000
+	state_category=rural
 }
