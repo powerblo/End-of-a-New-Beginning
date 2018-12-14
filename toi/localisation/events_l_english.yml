@@ -1209,6 +1209,12 @@
  generic.15.d:0 "This mod has a few easter eggs built in, but most players are here to play a serious historical simulation. If you don't mind a few small in-jokes, impossible happenings, or Kanye West establishing an autocratic monarchy in the USA, you can enable \"Easter Egg Mode\" here.\n\nWhen playing in multiplayer, only the Host will see these events.\n\n§YACHTUNG! Playing with easter egg mode enables meme events, patreon rewards showing up in game, and other stuff that basically makes this a crazy comedy game. If you activate this mode, know what you are getting into and do not expect anything to go remotely historical or realistic in any way!§!"
  generic.15.a:0 "Toggle Easter Eggs ON"
  generic.15.b:0 "Toggle Easter Eggs OFF"
+ generic.16.t:0 "Help Menu - Page 1/1"
+ generic.16.d:0 "This menu will later encompass helpful texts to explain mechanics unique to EoanB.\n\nRight now, it does nothing and all the buttons close the menu."
+ generic.16.a:0 "Empty Button"
+ generic.16.b:0 "Empty Button"
+ generic.16.c:0 "Empty Button"
+ generic.16.e:0 "Exit Help Menu"
 
  #Portugal
  portugal.1.t:0 "France delivers an ultimatum!"
@@ -2772,6 +2778,10 @@
  britainindia.4.d:0 "After our occupation of Central India, the British have decided to cave in and grant us our demands, demanding that in exchange we immediately sign a treaty of peace. How could we pass up this opportunity?"
  britainindia.4.a:0 "A resounding victory!"
  britainindia.4.b:0 "We do not want peace! The war must go on!"
+ eoanb_flag_desire_to_join_sepoy:0 "This country desires to join the Sepoy Rebellion."
+ britainindia.5.t:0 "DEBUG: Indian Minor Rebelliousness"
+ britainindia.5.d:0 "This event is hidden and sets the rebelliousness of minor Indian states at the start of the game."
+ britainindia.5.a:0 "Close Event"
  
  #Crisis of 1873
  PRS_is_in_1873_crisis:0 "§Y[PRS.GetNameDef]§! is currently in an economic crisis§!"
@@ -2846,10 +2856,8 @@
  secondopiumwar.11.d:0 ""
  secondopiumwar.11.a:0 "Let us take the city!"
  secondopiumwar.11.b:0 "We must defend Guangzhou!"
- eoanb_tt_sow_event_11:0 "§Y[CHI.GetNameDef]§! must defend §YGuangzhou§! for §Y30§! days, or they will lose the Battle of Guangzhou."
- secondopiumwar.12.t:0 "HIDDEN EVENT: Check Owner of Guangzhou"
- secondopiumwar.12.d:0 "This hidden event checks whether China still owns Guangzhou after the battle of Canton has gone on for one month."
- secondopiumwar.12.a:0 "Close Event"
+ eoanb_tt_sow_event_11:0 "§Y[CHI.GetNameDef]§! must win the §Yborder war§!, or they will lose the Battle of Guangzhou."
+ #EVENT 12 WAS PURGED
  eoanb_tt_sow_event_10_b:0 "A §Ydecision§! to assault §YGuangzhou§! is available"
  eoanb_flag_sow_CHI_won_at_canton:0 "China won at Guangzhou"
  eoanb_flag_sow_ENG_lost_at_canton:0 "Britain lost at Guangzhou"
@@ -2870,7 +2878,11 @@
  secondopiumwar.16.d:0 ""
  secondopiumwar.16.a:0 "Hooray!"
  secondopiumwar.16.b:0 "And now, we secure our victory!"
+ secondopiumwar.17.t:0 "Battle for Canton ends in a draw"
+ secondopiumwar.17.d:0 ""
+ secondopiumwar.17.a:0 "Alright."
  eoanb_threat_starting_threat:0 "World Events"
+ eoanb_tt_sow_event_6_a:0 "§Y[FRA.GetNameDef]§! and §Y[ENG.GetNameDef]§! will cooperate in the Second Opium War."
  secondopiumwarnews.1.t:0 "Treaty of Nanjing ends the Second Opium War!"
  secondopiumwarnews.1.d:0 ""
  secondopiumwarnews.1.a:0 "The war in China is over..."

@@ -248,3 +248,91 @@ country_event = {
 	}
 	
 }
+
+#Hidden Event that assigns revolt willingness to minors (or not)
+country_event = {
+	id = britainindia.5
+	title = britainindia.5.t
+	desc = britainindia.5.d
+	
+	trigger = {
+		TAG = ENG
+		SRS = { has_war_with = RAJ }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	hidden = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			add_political_power = 1
+		}
+		else_if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			KAS = { 
+				random_list = {
+					35 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					65 = {
+						add_political_power = 1
+					}
+				}
+			}
+			KAR = { 
+				random_list = {
+					45 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					55 = {
+						add_political_power = 1
+					}
+				}
+			}
+			HYD = { 
+				random_list = {
+					70 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					30 = {
+						add_political_power = 1
+					}
+				}
+			}
+			REW = { 
+				random_list = {
+					50 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					50 = {
+						add_political_power = 1
+					}
+				}
+			}
+			BIK = { 
+				random_list = {
+					45 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					55 = {
+						add_political_power = 1
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = britainindia.5.a
+		ai_chance = { factor = 100 }
+	}
+	
+}

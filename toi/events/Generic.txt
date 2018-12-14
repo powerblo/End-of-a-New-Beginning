@@ -394,3 +394,32 @@ country_event = {
 	}
 	
 }
+
+#Help Menu
+country_event = {
+	id = generic.16
+	title = generic.16.t
+	desc = generic.16.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.16.a
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.16.b
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.16.c
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.16.e
+		ai_chance = { factor = 100 }
+	}
+}

@@ -235,6 +235,38 @@ country_event = {
         		}
         	remove_state_core = 375
         	add_state_claim = 375
+        	CSA = {
+        			transfer_state = 1305
+        			1305 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1305
+        	add_state_claim = 1305
+        	CSA = {
+        			transfer_state = 1306
+        			1306 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1306
+        	add_state_claim = 1306
+        	CSA = {
+        			transfer_state = 1304
+        			1304 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1304
+        	add_state_claim = 1304
+        	CSA = {
+        			transfer_state = 1303
+        			1303 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1303
+        	add_state_claim = 1303
         	hidden_effect = { CSA = { country_event = { id = csa.6 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
 			hidden_effect = {
@@ -459,4 +491,4 @@ country_event = {
 			}
 			name = csa.12.b
 		}
-}
+	}
