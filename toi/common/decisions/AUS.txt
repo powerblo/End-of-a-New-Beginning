@@ -249,4 +249,89 @@ eoanb_category_diplomatic_actions = {
 			base = 1
 		}
 	}
+	
+	eoanb_decision_AUS_peace_with_HUN = { #Offer Peace to Hungary   
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS
+			has_global_flag = flag_HUN_revolt_1
+			country_exists = HUN  
+			OR = {
+			    AND = {
+		         	AUS = { has_war_with = HUN 
+			            any_war_score < 20    
+			        }
+					HUN = {
+					controls_state = 43
+					}
+                }
+                AND = {
+		         	AUS = { has_war_with = HUN 
+			            any_war_score < 10   
+			        }			
+                    HUN = {
+					controls_state = 43
+					controls_state = 956
+					}					
+				}				
+		    }
+		}
+		
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUShungaryrevolt.5  
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_peace_with_HUN_2 = { #Offer Peace to Hungary 2 - Desperate offer 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS
+			has_global_flag = flag_HUN_revolt_1
+			country_exists = HUN  
+		    AUS = { has_war_with = HUN 
+			    any_war_score < 35     
+			}
+			HUN = {
+				controls_state = 43
+				controls_state = 956
+				controls_state = 109 
+			}			
+	    }
+			
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUShungaryrevolt.6   
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
 }

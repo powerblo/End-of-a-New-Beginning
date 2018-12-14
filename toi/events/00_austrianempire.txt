@@ -886,7 +886,8 @@ country_event = { #Beginning of Revolution
 		            add_core_of = HUN 
 	             	remove_core_of = AUS 
 		        }
-            }			
+            }
+			set_global_flag = flag_HUN_revolt_1			
 	    }
 	}
 	
@@ -896,7 +897,7 @@ country_event = { #Beginning of Revolution
 		ai_chance = { factor = 100 }
 		hidden_effect = {
 			news_event = {
-			    id = AUSnewshungaryrevolt.1
+			    id = AUSnews.1
 			    days = 10 
 			}
             AUS = {
@@ -974,15 +975,58 @@ country_event = { #Event that actually starts the war
                     type = annex_everything
                 } 
 			}
+			HUN = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 5000 
+                    producer = HUN 
+                }
+			}
+			set_province_controller = 3689  
+			set_province_controller = 6711 
+			set_province_controller = 619  
+			set_province_controller = 11592   
 			    967 = {
-			        create_unit = {
-		                division = "name = \"4. Gyalogezred"\
-				    	division_template = \"Gyalogezred\" 
-				    	start_experience_factor = 0.5 
-				    	start_equipment_factor = 0.5"
+                   create_unit = {
+                        division = "name = \"5. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
                         owner = HUN
+						prioritize_location = 3689 
                     }
 				}
+			    76 = {
+                   create_unit = {
+                        division = "name = \"6. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 6711  
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"7. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 619   
+                    }
+				}
+			    82 = {
+                   create_unit = {
+                        division = "name = \"2. Huszár ezred\" division_template = \"Huszár\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 11592   
+                    }
+				}
+			HUN = {
+                add_state_core = 70 	
+                add_state_core = 71 
+                add_state_core = 73 
+                add_state_core = 1233 
+                add_state_core = 76 
+                add_state_core = 83 
+                add_state_core = 84 
+                add_state_core = 82 
+                add_state_core = 743 
+                add_state_core = 45 
+				add_state_core = 967 
+			}
 	    }
 	}
 	
@@ -991,6 +1035,101 @@ country_event = { #Event that actually starts the war
 		ai_chance = { factor = 100 }
 				
     }		     
+}
+
+country_event = { #Peace Event in Favour of Hungary - No Croatia 
+	id = AUShungaryrevolt.5
+	title = AUShungaryrevolt.5.t
+	desc = AUShungaryrevolt.5.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.5.a #Accept Peace 
+		ai_chance = { factor = 85 }
+				
+		AUS = { 
+		    white_peace = HUN 
+        }				
+
+	    every_owned_state = {
+            limit = { is_core_of = HUN }
+		    HUN = {
+		    transfer_state = PREV        
+		    } 
+			remove_core_of = AUS
+		}
+		
+		HUN = {			
+			remove_ideas = {
+			HUN_idea_Revolt
+			}
+		}
+		news_event = {
+			id = AUSnews.2 
+			days = 1 
+		}
+    }
+	option = { 
+		name = AUShungaryrevolt.5.b #Reject Peace  
+		ai_chance = { factor = 15 }
+		
+        HUN = {
+		    add_war_support = -0.15 
+			add_stability = -0.1 
+		}		
+    }	
+}
+
+country_event = { #Peace Event in Favour of Hungary - Croatia 
+	id = AUShungaryrevolt.6
+	title = AUShungaryrevolt.6.t
+	desc = AUShungaryrevolt.6.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.6.a #Accept Peace 
+		ai_chance = { factor = 85 }
+				
+		AUS = { white_peace = HUN
+            add_ideas = AUS_idea_lost_hungary_revolt 
+		} 
+		
+		HUN = {
+            transfer_state = 71
+			transfer_state = 70
+			transfer_state = 73
+            transfer_state = 1233
+            transfer_state = 76	
+            transfer_state = 967 
+            transfer_state = 84 
+            transfer_state = 83 
+            transfer_state = 82 
+            transfer_state = 743 
+            transfer_state = 45 	
+			transfer_state = 1271
+			transfer_state = 109 
+			transfer_state = 1011 
+		    every_owned_state = {
+		        add_core_of = HUN 
+	            remove_core_of = AUS 
+		    }
+			remove_ideas = {
+			HUN_idea_Revolt
+			}
+		}
+		news_event = {
+			id = AUSnews.2
+			days = 1 
+		}
+    }	
 }
 
 add_namespace = AUSnews 
