@@ -90,6 +90,12 @@ PRS_trigger_formed_germany = {
 	}
 }
 
+#Basically does the same thing as "TAG = GER", but has to be used since Germany is a cosmetic tag
+trigger_is_germany = {
+	TAG = PRS
+	PRS_trigger_formed_germany = yes
+}
+
 nation_owns_chinese_trade_port = {
 	OR = {
 		owns_state = 326
