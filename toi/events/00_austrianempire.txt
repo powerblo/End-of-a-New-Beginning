@@ -792,6 +792,21 @@ country_event = { #Beginning of Revolution
                     }
 	                ruling_party = centrism
                 }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_rifle_0
+                    amount = 4000 
+                    producer = HUN 
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment_0
+                    amount = 4000  
+                    producer = HUN 
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment_0
+                    amount = 2000 
+                    producer = HUN 
+                }
                 create_country_leader = {
                 name = "Lajos Kossuth"
                 desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
@@ -839,7 +854,14 @@ country_event = { #Beginning of Revolution
                     transfer_state = 73 
                     transfer_state = 84 
                     transfer_state = 76  
-                }			
+                }
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}				
 		    }    
 		    if = {
 		        limit = { 
@@ -858,7 +880,21 @@ country_event = { #Beginning of Revolution
                     transfer_state = 76  		
                     transfer_state = 45 
                     transfer_state = 743 
-                }  			
+                }
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"9. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 3617    
+                    }
+				}					
 		    }
 		    if = {
 		        limit = { 
@@ -879,14 +915,29 @@ country_event = { #Beginning of Revolution
                     transfer_state = 83 
                     transfer_state = 71  
                     transfer_state = 70 	
-                }			
+                }	
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"9. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 3617    
+                    }
+				}
+			    70 = {
+                   create_unit = {
+                        division = "name = \"10. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 9692     
+                    }
+				}				
 		    }
-			HUN = {
-		        every_owned_state = {
-		            add_core_of = HUN 
-	             	remove_core_of = AUS 
-		        }
-            }
 			set_global_flag = flag_HUN_revolt_1			
 	    }
 	}
@@ -903,7 +954,7 @@ country_event = { #Beginning of Revolution
             AUS = {
 		        country_event = {
                     id = AUShungaryrevolt.4
-                    days = 50  
+                    days = 35   
                 }
 			}			
 		}
@@ -976,16 +1027,11 @@ country_event = { #Event that actually starts the war
                 } 
 			}
 			HUN = {
-                add_equipment_to_stockpile = {
-                    type = infantry_equipment
-                    amount = 5000 
-                    producer = HUN 
-                }
-			}
 			set_province_controller = 3689  
 			set_province_controller = 6711 
 			set_province_controller = 619  
-			set_province_controller = 11592   
+			set_province_controller = 11592
+			}
 			    967 = {
                    create_unit = {
                         division = "name = \"5. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
@@ -1054,13 +1100,15 @@ country_event = { #Peace Event in Favour of Hungary - No Croatia
 		AUS = { 
 		    white_peace = HUN 
         }				
-
-	    every_owned_state = {
-            limit = { is_core_of = HUN }
-		    HUN = {
-		    transfer_state = PREV        
-		    } 
-			remove_core_of = AUS
+        
+		AUS = {
+	        every_owned_state = {
+                limit = { is_core_of = HUN }
+		        HUN = {
+		            transfer_state = PREV        
+		        } 
+			    remove_core_of = AUS
+		    }
 		}
 		
 		HUN = {			
@@ -1077,6 +1125,9 @@ country_event = { #Peace Event in Favour of Hungary - No Croatia
 		name = AUShungaryrevolt.5.b #Reject Peace  
 		ai_chance = { factor = 15 }
 		
+		hidden_effect = {
+		    HUN = { set_country_flag = HUN_AUS_war_denied_peace_1 }
+		}
         HUN = {
 		    add_war_support = -0.15 
 			add_stability = -0.1 
@@ -1099,30 +1150,25 @@ country_event = { #Peace Event in Favour of Hungary - Croatia
 		ai_chance = { factor = 85 }
 				
 		AUS = { white_peace = HUN
-            add_ideas = AUS_idea_lost_hungary_revolt 
+            add_ideas = AUS_idea_lost_hungary_revolt 	
 		} 
 		
+		AUS = {
+	        every_owned_state = {
+                limit = { is_core_of = HUN }
+		        HUN = {
+		            transfer_state = PREV        
+		        } 
+			    remove_core_of = AUS
+		    }
+        }			
+		
 		HUN = {
-            transfer_state = 71
-			transfer_state = 70
-			transfer_state = 73
-            transfer_state = 1233
-            transfer_state = 76	
-            transfer_state = 967 
-            transfer_state = 84 
-            transfer_state = 83 
-            transfer_state = 82 
-            transfer_state = 743 
-            transfer_state = 45 	
-			transfer_state = 1271
 			transfer_state = 109 
 			transfer_state = 1011 
-		    every_owned_state = {
-		        add_core_of = HUN 
-	            remove_core_of = AUS 
-		    }
+			transfer_state = 1271 
 			remove_ideas = {
-			HUN_idea_Revolt
+			    HUN_idea_Revolt
 			}
 		}
 		news_event = {
