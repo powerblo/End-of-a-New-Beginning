@@ -54,6 +54,7 @@ political_actions = {
 				AND = {
 					TAG = PRS
 					date > 1871.6.1
+					NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
 				}
 			}
 		}
@@ -67,6 +68,7 @@ political_actions = {
 			PRS = { country_event = { days = 1 id = sevenweekswar.1 } }
 			hidden_effect = {
 				set_country_flag = eoanb_flag_PRS_made_reforms
+				PRS = { country_event = { days = 12 id = sevenweekswar.2 } }
 			}
 		}
 		
