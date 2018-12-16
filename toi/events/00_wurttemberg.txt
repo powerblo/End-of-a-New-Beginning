@@ -268,9 +268,6 @@ country_event = {
 		}
 		name = wurttem.9.b
 		custom_effect_tooltip = WUR_customeffect_deny_shitftin_flow
-		hidden_effect = {
-			set_country_flag = WUR_pursue_foreign_policy
-		}
 	}
 }
 
@@ -324,7 +321,6 @@ country_event = {
 		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
 		
 		hidden_effect = {
-			set_country_flag = WUR_foreign_policy_deny
 			WUR = {
 				country_event = { id = wurttem.12 days = 1 }
 			}
@@ -363,5 +359,191 @@ country_event = {
 			factor = 100
 		}
 		name = wurttem.12.a
+	}
+}
+
+#RUS invite
+country_event = {
+	id = wurttem.13
+	title = wurttem.13.t
+	desc = wurttem.13.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 80
+				RUS = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_RUS_accepted_invite
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 20
+				RUS = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_RUS_denied_invite
+			}
+		}
+	}
+}
+
+#FRA invite
+country_event = {
+	id = wurttem.14
+	title = wurttem.13.t
+	desc = wurttem.13.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 80
+				FRA = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_FRA_accepted_invite
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 20
+				FRA = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_FRA_denied_invite
+			}
+		}
+	}
+}
+
+#Zweikaisertreffen both
+news_event = {
+	id = wurttem.15
+	title = wurttem.15.t
+	desc = wurttem.15.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = WUR
+				tag = RUS
+				tag = FRA
+			}
+		}
+		name = wurttem.15.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.15.b
+	}
+}
+
+#Zweikaisertreffen none
+news_event = {
+	id = wurttem.16
+	title = wurttem.16.t
+	desc = wurttem.16.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			tag = WUR
+		}
+		name = wurttem.16.a
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = RUS
+				tag = FRA
+			}
+		}
+		name = wurttem.16.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.16.c
 	}
 }

@@ -971,6 +971,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = WUR_customeffect_rumpf_aftermath_advisors
+			#finish this
 			#advisors unlocked with has_completed_focus in /ideas
 		}
 	}
@@ -1020,7 +1021,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_RUS_invite
+			hidden_effect = {
+				country_event = { id = wurttem.13 days = 3 }
+			}
 		}
 	}
 	
@@ -1043,7 +1047,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_FRA_invite
+			hidden_effect = {
+				country_event = { id = wurttem.14 days = 3 }
+			}
 		}
 	}
 	
@@ -1067,7 +1074,27 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = [WUR_customeffect_zweikaisertreffen_endpoint]
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_RUS_accepted_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.15 days = 3 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_denied_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.16 days = 3 }
+					}
+				}
+			}
 		}
 	}
 	
@@ -1090,7 +1117,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_political_power = 50
 		}
 	}
 	
@@ -1113,7 +1140,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_ideas = WUR_wayofneutrality
 		}
 	}
 	
