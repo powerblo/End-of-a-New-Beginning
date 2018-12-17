@@ -165,5 +165,191 @@ ideas = {
 				#
 			}
 		}
+		ENG_idea_RAJ_army_indian = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		ENG_idea_RAJ_army_indian_2 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.1
+				recon_factor = 0.05
+			}
+		}
+		ENG_idea_RAJ_army_indian_3 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.1
+				recon_factor = 0.05
+				planning_speed = 0.1
+			}
+		}
+		ENG_idea_RAJ_army_indian_4 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.1
+				recon_factor = 0.05
+				planning_speed = 0.1
+				attrition = -0.05
+				no_supply_grace = 24
+			}
+		}
+		ENG_idea_RAJ_army_european = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = -0.05
+				planning_speed = 0.1
+				army_org_Factor = 0.05
+			}
+		}
+		ENG_idea_RAJ_army_european_2 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = -0.05
+				planning_speed = 0.1
+				army_org_Factor = 0.1
+			}
+		}
+		ENG_idea_RAJ_army_european_3 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = -0.05
+				planning_speed = 0.1
+				army_org_Factor = 0.1
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+		}
+		ENG_idea_RAJ_army_european_4 = {
+			allowed = {
+				original_tag = RAJ
+			}
+			
+			removal_cost = -1
+			
+			picture = raj_indian_gentlemen_officers
+			
+			modifier = {
+				stability_factor = -0.05
+				planning_speed = 0.1
+				max_planning = 0.1
+				army_org_Factor = 0.1
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				supply_consumption_factor = -0.2
+			}
+		}
+		ENG_idea_volunteer_movement = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cancel = { date > 1871.1.1 }
+			
+			removal_cost = -1
+			
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				political_power_gain = -0.25
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_Factor = -0.05
+			}
+		}
+		ENG_idea_volunteer_movement_2 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cancel = { date > 1871.1.1 }
+			
+			removal_cost = -1
+			
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				political_power_gain = -0.1
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.15
+			}
+		}
+		ENG_idea_volunteer_movement_3 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cancel = { date > 1871.1.1 }
+			
+			removal_cost = -1
+			
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				political_power_gain = -0.1
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.15
+				training_time_army_factor = -0.05
+			}
+		}
 	}
 }
