@@ -3,8 +3,12 @@ scripted_gui = {
        window_name = "industrisation_progress_container"
  
        context_type = country_context
+	   ai_enabled={
+		always = no
+	}
  
        visible = {
+			is_ai = no
 			OR = {
 				# has_idea = AF_T_unorganized_tribal_nation
 				# has_idea = AF_T_unorganized_tribal_nation_2
@@ -42,6 +46,9 @@ scripted_gui = {
 			has_country_flag = berlin_conferance_voter
 			has_country_flag = berlin_conferance_voting
 			#NOT = {check_variable = {berlin_conferance_voted = 1}}
+		}
+		ai_enabled={
+			always = no
 		}
 		effects = {
 			#industrisation_progress_bg_click = {
