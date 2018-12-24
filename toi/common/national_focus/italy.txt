@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = ITA_Focus_Politics
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 70
 		x = 10
 		y = 0
@@ -22,7 +22,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Industry_Agriculture_Focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_industrial_revolution
 		cost = 70
 		x = 37
 		y = 0
@@ -42,7 +42,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Military_Focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_divide_unite_army
 		cost = 70
 		x = 25
 		y = 1
@@ -787,7 +787,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Expand_Balloon_Activites
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ITA_Balloon
 		cost = 70
 		prerequisite = {
 			focus = ITA_Corpo_Aeronautico_Militare
@@ -818,7 +818,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Combine_Italian_Fleets
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_mass_produce_ships
 		cost = 70
 		prerequisite = {
 			focus = ITA_Partial_Unification_of_the_Army
