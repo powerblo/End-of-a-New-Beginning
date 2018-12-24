@@ -10,33 +10,34 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    HOL_William_III
     victorian_era
 	law_victorian_army
-    agrarian
-    no_heir
-    absolute_monarchy
+    industrializing
+    has_heir
+    parliamentary_monarchy
 
     civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_restricted
+    free_trade
+    three_percent
+    high_taxes
+	cl_legal
 
     stagnation_growth
     border_control
 	volunteer_only
     limited_equality
-    absolutism
+    property_owners_suffrage
 
-    no_constitution
-    no_elections
+    limited_constitution
+    limited_elections
 
     privileged_education
-    state_religion
-	religion_catholic
+    secular_state
+	religion_protestant
         #NATIONAL SPIRITS
-	
+    HOL_idea_treaty_of_london
+    HOL_idea_loss_belgium
   }
   
   puppet = INS
@@ -107,6 +108,12 @@
 		puppet = LUX
 	}
 }
+
+diplomatic_relation = {
+    country = BEL
+    relation = non_aggression_pact
+    active = yes
+  }
 
   # POLITICAL LEADERS
 
