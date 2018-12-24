@@ -1265,17 +1265,254 @@ ideas = {
 				factor = 1
 			}
 		}
+	}
+	
+	tank_manufacturer = {
 
-		aimable_pelissier = {
+		designer = yes
+	
+		# TECHNOLOGY
+		renault_fra = {
+		
+			picture = renault
+
+			available = {
+				#year = 1899
+				has_tech = armor_tech_steam_car
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+
+			traits = { heavy_tank_manufacturer }
+		}
+	
+		FRA_AMX = {
+		
+			picture = generic_tank_manufacturer_2
+
+			available = {
+				#year = 1936
+				has_tech = armor_tech_steam_car
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		somua = {
+			available = {
+				#year = 1916
+				has_tech = armor_tech_steam_car
+			}
+		
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}
+		
+		mas = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer_1 }
+		}
+	
+		schneider = {
+						
+			allowed = {
+				original_tag = FRA
+			}		
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer_1 }
+		}
+	}
+	
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		morane_saulnier = {
+			available = {
+				#year = 1910
+				has_tech = wright_flyer
+			}
+			
 			allowed = {
 				original_tag = FRA
 			}
 			
-			traits = { army_armored_1 }
-			
-			ai_will_do = {
-				factor = 1
+			research_bonus = {
+				air_equipment = 0.10
 			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		bloch = {
+			available = {
+				#year = 1929
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		amiot = {
+			available = {
+				#year = 1914
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		levasseur = {
+			available = {
+				#year = 1914
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		
+	}
+	naval_manufacturer = {
+
+		designer = yes
+		
+		fcm = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	industrial_concern = {
+		
+		famh = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern_1 }
+		}
+
+		denain = {
+
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				process_engineering = 0.05
+			}
+
+			traits = { electronics_concern_1 }
+		}
+		
+		saint_gobain = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				biochemistry = 0.05
+			}
+
+			traits = { electronics_concern_2 }
+		}
+		
+		gramme = {
+
+			picture = generic_electronics_concern_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				electronics_devices = 0.05
+			}
+
+			traits = { electronics_concern_3 }
 		}
 	}
 		
