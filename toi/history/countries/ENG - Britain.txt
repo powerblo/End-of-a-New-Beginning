@@ -9,11 +9,6 @@
   
   set_research_slots = 4
   
-   declare_war_on = {
-    target = CHI
-    type = annex_everything
-  }
-  
   create_import = {
     resource = cotton
     amount = 8
@@ -27,6 +22,7 @@
 
   give_guarantee = BEL
   give_guarantee = POR
+  give_guarantee = GRE 
   
       #Colective guarantee of the 7 great power
   give_guarantee = ROM
@@ -298,26 +294,6 @@
 		defense_skill = 1
 		planning_skill = 1
 		logistics_skill = 1
-	}
-	create_corps_commander = {
-        name = "Samuel Benjamin Auchmuty"
-  		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-	create_corps_commander = {
-        name = "Prince George Duke of Cambridge"
-  		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
 	}
 
 	create_field_marshal = {
