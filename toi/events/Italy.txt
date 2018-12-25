@@ -201,10 +201,6 @@ country_event = {
 		}
 	}
 	option = {
-		name = ita.9.b
-		add_research_slot = 1
-	}
-	option = {
 		name = ita.9.c
 		add_manpower = 10000
 	}
@@ -257,6 +253,66 @@ country_event = {
 		#do nothing :shrug:
 	}
 }
+country_event = { 
+	id = ita.15	
+	title = ita.15.t
+	desc = ita.15.d
+	picture = GFX_event_ITA_Po_Valley_Modernization
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.15.a
+		add_tech_bonus = {
+    		bonus = 0.25
+    		uses = 5
+    		category = biochemistry_tech
+		}
+	}
+	option = {
+		name = ita.15.b
+		PAP = { set_cosmetic_tag = RRP }
+		PAP = { 
+		set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 10
+      }
+      traditional_conservatism = {
+        popularity = 15
+      }
+      radical_democracy = {
+        popularity = 45
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 15
+      }
+      fundamentalism = {
+        popularity = 15
+      }
+    }
+
+	  ruling_party = radical_democracy
+ 
+	}
+
+}
+
 
 
 
