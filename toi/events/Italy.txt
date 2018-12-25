@@ -261,14 +261,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = {
-		name = ita.15.a
-		add_tech_bonus = {
-    		bonus = 0.25
-    		uses = 5
-    		category = biochemistry_tech
-		}
-	}
+	
 	option = {
 		name = ita.15.b
 		PAP = { set_cosmetic_tag = RRP }
@@ -309,9 +302,10 @@ country_event = {
 
 	  ruling_party = radical_democracy
  
+		}
 	}
-	set_cosmetic_tag = RRP
-
+	PAP = { set_cosmetic_tag = RRP }
+}
 }
 
 
