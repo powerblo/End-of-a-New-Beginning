@@ -732,11 +732,18 @@ focus_tree = {
 		x = 23
 		y = 4
 
+		completion_reward = {
+			country_event = {
+    			id = ita.18
+
+			}
+		}
+
 	}
 	focus = {
 		id = ITA_IV_Corps
 		icon = GFX_focus_generic_little_entente
-		cost = 70
+		cost = 25
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
@@ -744,21 +751,21 @@ focus_tree = {
 		y = 4
 
 	}
-	focus = {
-		id = ITA_Creation_Decree
-		icon = GFX_focus_generic_treaty
-		cost = 70
-		prerequisite = {
-			focus = ITA_IV_Corps
-		}
-		x = 25
-		y = 5
+	#focus = {
+		#id = ITA_Creation_Decree
+		#icon = GFX_focus_generic_treaty
+		#cost = 25
+		#prerequisite = {
+		#	focus = ITA_IV_Corps
+		#}
+		#x = 25
+		#y = 5
 
-	}
+	#}
 	focus = {
 		id = ITA_Corazzieri
 		icon = GFX_goal_generic_cavalry
-		cost = 70
+		cost = 35
 		prerequisite = {
 			focus = ITA_Carbinieri
 		}
@@ -769,18 +776,24 @@ focus_tree = {
 	focus = {
 		id = ITA_Regia_Marina
 		icon = GFX_focus_ITA_Marina
-		cost = 70
+		cost = 15
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
 		x = 27
 		y = 4
 
+		completion_reward = {
+				country_event = {
+    			id = ita.17
+			}
+		}
+
 	}
 	focus = {
 		id = ITA_Purchase_Foreign_Ships
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 70
+		cost = 25
 		prerequisite = {
 			focus = ITA_Regia_Marina
 		}
@@ -818,7 +831,7 @@ focus_tree = {
 			focus = ITA_Purchase_Foreign_Ships
 		}
 		prerequisite = {
-			focus = ITA_Creation_Decree
+			focus = ITA_IV_Corps
 		}
 		prerequisite = {
 			focus = ITA_Corazzieri
