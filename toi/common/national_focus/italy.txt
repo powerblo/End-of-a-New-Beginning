@@ -725,7 +725,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
-		x = 21
+		x = 23
 		y = 4
 
 	}
@@ -736,7 +736,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
-		x = 23
+		x = 25
 		y = 4
 
 	}
@@ -747,7 +747,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_IV_Corps
 		}
-		x = 23
+		x = 25
 		y = 5
 
 	}
@@ -758,7 +758,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Carbinieri
 		}
-		x = 21
+		x = 23
 		y = 5
 
 	}
@@ -784,26 +784,26 @@ focus_tree = {
 		y = 5
 
 	}
-	focus = {
-		id = ITA_Corpo_Aeronautico_Militare
-		icon = GFX_focus_ITA_Balloon
-		cost = 70
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 29
-		y = 4
+	#focus = {
+		#id = ITA_Corpo_Aeronautico_Militare
+		#icon = GFX_focus_ITA_Balloon
+		#cost = 70
+		#prerequisite = {
+			#focus = ITA_Deal_with_Brigandage
+		#}
+		#x = 29
+		#y = 4
 
-	}
-	focus = {
-		id = ITA_Expand_Balloon_Activites
-		icon = GFX_focus_ITA_Balloon
-		cost = 70
-		prerequisite = {
+	#}
+	#focus = {
+		#id = ITA_Expand_Balloon_Activites
+		#icon = GFX_focus_ITA_Balloon
+		#cost = 70
+		#prerequisite = {
 			focus = ITA_Corpo_Aeronautico_Militare
-		}
-		x = 29
-		y = 5
+		#}
+		#x = 29
+		#y = 5
 
 	}
 	focus = {
@@ -819,9 +819,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ITA_Corazzieri
 		}
-		prerequisite = {
-			focus = ITA_Expand_Balloon_Activites
-		}
+		#prerequisite = {
+			#focus = ITA_Expand_Balloon_Activites
+		#}
 		x = 25
 		y = 6
 
