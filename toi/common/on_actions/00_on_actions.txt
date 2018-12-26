@@ -584,22 +584,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					FROM.FROM = { is_owned_by = USA }
-					has_global_flag = ACWAmerican_Civil_War
-					USA = { surrender_progress > 0.7 }
-				}
-				CSA = { country_event = { id = acw.8 } }
-			}
-			if = {
-				limit = {
-					FROM.FROM = { is_owned_by = CSA }
-					has_global_flag = ACWAmerican_Civil_War
-					CSA = { surrender_progress > 0.75 }
-				}
-				USA = { country_event = { id = acw.7 } }
-			}
-			if = {
-				limit = {
 					OR = {
 						ROOT = { tag = CSA }
 						ROOT = { tag = MEX }

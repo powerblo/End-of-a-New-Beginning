@@ -257,7 +257,6 @@ country_event = {
         }
     }
 }
-
 country_event = {
     id = acw.7
     title = acw.7.t
@@ -266,7 +265,11 @@ country_event = {
     
     fire_only_once = yes
     
-    is_triggered_only = yes
+    trigger = {
+        tag = USA
+        CSA = { surrender_progress > 0.75 }
+        has_global_flag = ACWAmerican_Civil_War
+    }
     
     option = {
         trigger = {
@@ -361,7 +364,11 @@ country_event = {
     
     fire_only_once = yes
     
-    is_triggered_only = yes
+    trigger = {
+        tag = USA
+        CSA = { surrender_progress < 0.75 }
+        has_global_flag = ACWAmerican_Civil_War
+    }
     
     option = {
         trigger = {
