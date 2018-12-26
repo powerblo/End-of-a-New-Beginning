@@ -73,7 +73,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_Industry
 		cost = 70
 		allow_branch = {
-			always = no
+			has_completed_focus = ITA_Farmers_Mentality
 		}
 		x = 37
 		y = 0
@@ -185,9 +185,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_Nurture_Liberal_Ideals
 		}
-		allow_branch = {
-			always = false
-		}
+
 		x = 8
 		y = 2
 			completion_reward = {
