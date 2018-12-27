@@ -1,0 +1,181 @@
+CSA_whig_reform_decision = {
+
+	#Aristo
+	eoanb_descision_CSA_aristocracy = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_strong_aristocrats_1
+				has_idea = CSA_strong_aristocrats_2
+				has_idea = CSA_strong_aristocrats_3
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_aristocracy_reforms
+			has_stability > 0.4
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_strong_aristocrats_1
+				has_idea = CSA_strong_aristocrats_2
+				has_idea = CSA_strong_aristocrats_3
+			}
+		}
+
+		cost = 100
+		days_re_enable = 5
+		days_remove = 100
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_1
+				}
+				remove_ideas = CSA_strong_aristocrats_1
+			}
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_2
+				}
+				swap_ideas = {
+					remove_idea = CSA_strong_aristocrats_2
+					add_idea = CSA_strong_aristocrats_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_3
+				}
+				swap_ideas = {
+					remove_idea = CSA_strong_aristocrats_3
+					add_idea = CSA_strong_aristocrats_2
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Central
+	eoanb_descision_CSA_central = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_central_reforms
+			has_stability > 0.4
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+		}
+
+		cost = 100
+		days_re_enable = 5
+		days_remove = 100
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = CSA_federal_government
+				}
+				remove_ideas = CSA_federal_government
+			}
+			if = {
+				limit = {
+					has_idea = CSA_confederate_government
+				}
+				swap_ideas = {
+					remove_idea = CSA_confederate_government
+					add_idea = CSA_federal_government
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#Slavery
+	eoanb_descision_CSA_slavery = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = usa_slavery_law
+				has_idea = slavery_all_but_name
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_slavery_reforms
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+		}
+
+		cost = 100
+		days_re_enable = 10
+		days_remove = 365
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = slavery_all_but_name
+				}
+				remove_ideas = slavery_all_but_name
+			}
+			if = {
+				limit = {
+					has_idea = usa_slavery_law
+				}
+				swap_ideas = {
+					remove_idea = usa_slavery_law
+					add_idea = slavery_all_but_name
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = centrism
+				popularity = -0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

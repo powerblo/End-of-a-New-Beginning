@@ -447,6 +447,36 @@ on_actions = {
 		            }
 		        }
 			}
+			if = {
+				limit = {
+					original_tag = TEX
+					has_government = traditional_conservatism
+					TEX = { has_country_flag = TEX_civil_war }
+				}
+				TEX = { clr_country_flag = TEX_civil_war }
+				ROOT = { drop_cosmetic_tag = yes }
+				TEX = { drop_cosmetic_tag = yes }
+				TEX = { remove_ideas = houston_revolt }
+				ROOT = { country_event = { id = acw.62 } }
+			}
+			if = {
+				limit = {
+					original_tag = TEX
+					has_government = centrism
+					TEX = { has_country_flag = TEX_civil_war }
+				}
+				TEX = { clr_country_flag = TEX_civil_war }
+				ROOT = { drop_cosmetic_tag = yes }
+				random_other_country = {
+	                limit = {
+	                    original_tag = TEX
+	                    has_government = traditional_conservatism
+	                }
+	                drop_cosmetic_tag = yes
+	            }
+	            TEX = { remove_ideas = houston_revolt }
+				ROOT = { country_event = { id = acw.61 } }
+			}
 		}
 	}
 
@@ -551,6 +581,37 @@ on_actions = {
 		        ROOT = { add_equipment_to_stockpile = { type = cavalry_equipment amount = 50 } }
 		        FROM = { add_stability = -0.05 }
         		FROM = { add_war_support = -0.05 }
+			}
+			if = {
+				limit = {
+					OR = {
+						ROOT = { tag = CSA }
+						ROOT = { tag = MEX }
+						AND = {
+							ROOT = { tag = ENG }
+							CSA = { has_country_flag = CSA_UK_second_mexican_war }
+						}
+						AND = {
+							ROOT = { tag = CSA }
+							CSA = { has_country_flag = CSA_UK_second_mexican_war }
+						}
+						ROOT = { tag = FRA }
+					}
+					FROM.FROM = { is_owned_by = USA }
+					has_global_flag = ACW_second_mexican_war
+					USA = { surrender_progress > 0.2 }
+					CSA = { has_war_with = USA }
+				}
+				CSA = { country_event = { id = csa.31 } }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { is_owned_by = CSA }
+					has_global_flag = ACW_second_mexican_war
+					CSA = { surrender_progress > 0.2 }
+					CSA = { has_war_with = USA }
+				}
+				USA = { country_event = { id = csa.31 } }
 			}
 		}
 	}
