@@ -1,6 +1,6 @@
 ﻿add_namespace = wurttem
 
-#Wilhelm I dies + Karl I takes over
+#Wilhelm I dies
 country_event = {
 	id = wurttem.0
 	title = wurttem.0.t
@@ -17,13 +17,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			kill_country_leader = yes
-			create_country_leader = { 
-				name = "Karl I" 
-				desc = "POLITICS_KARL_I_DESC"
-				picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds" 
-				ideology = despotism
-				traits = { }
-			}
 			set_country_flag = WUR_victorian_wilhelm_dead
 		}
 	}
@@ -31,6 +24,35 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.0.a
+		
+		add_stability = -0.10
+	}
+}
+
+#Karl I takes over
+country_event = {
+	id = wurttem.17
+	title = wurttem.17.t
+	desc = wurttem.17.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = { 
+				name = "Karl I" 
+				desc = "POLITICS_KARL_I_DESC"
+				picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds" 
+				ideology = despotism
+				traits = { }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.17.a
 	}
 }
 
@@ -545,5 +567,249 @@ news_event = {
 			}
 		}
 		name = wurttem.16.c
+	}
+}
+
+#Zweikaisertreffen RUS
+news_event = {
+	id = wurttem.21
+	title = wurttem.21.t
+	desc = wurttem.21.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = RUS
+				tag = WUR
+			}
+		}
+		name = wurttem.21.a
+	}
+	
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		name = wurttem.21.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.21.c
+	}
+}
+
+#Zweikaisertreffen FRA
+news_event = {
+	id = wurttem.22
+	title = wurttem.22.t
+	desc = wurttem.22.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = WUR
+			}
+		}
+		name = wurttem.22.a
+	}
+	
+	option = {
+		trigger = {
+			tag = RUS
+		}
+		name = wurttem.22.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.22.c
+	}
+}
+
+#Start liberalizing
+country_event = {
+	id = wurttem.18
+	title = wurttem.18.t
+	desc = wurttem.18.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = WUR_start_liberalize
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.18.a
+		
+		custom_effect_tooltip = WUR_customeffect_start_liberalizing
+		
+		decrease_ps_by_one = yes
+	}
+}
+
+#Finish liberalizing
+country_event = {
+	id = wurttem.19
+	title = wurttem.19.t
+	desc = wurttem.19.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = WUR_start_liberalize
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.19.a
+		
+		custom_effect_tooltip = WUR_customeffect_finish_liberalizing
+		
+		increase_ps_by_two = yes
+		
+		add_popularity = {
+			ideology = centrism
+			popularity = 0.07
+		}
+		add_popularity = {
+			ideology = traditional_conservatism
+			popularity = 0.04
+		}
+	}
+}
+
+#Start suppression
+country_event = {
+	id = wurttem.20
+	title = wurttem.20.t
+	desc = wurttem.20.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = WUR_start_suppression
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.20.a
+		
+		custom_effect_tooltip = WUR_customeffect_start_suppression
+		
+		decrease_ps_by_one = yes
+	}
+}
+
+#Rally neighbours
+country_event = {
+	id = wurttem.23
+	title = wurttem.23.t
+	desc = wurttem.23.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 80
+				has_government = autocracy
+			}
+		}
+		name = wurttem.23.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		add_ideas = WUR_neighbour_supress_liberalism
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.24 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 20
+				has_government = autocracy
+			}
+		}
+		name = wurttem.23.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.25 days = 3 }
+			}
+		}
+	}
+}
+
+#Rally neighbours back good
+country_event = {
+	id = wurttem.24
+	title = wurttem.24.t
+	desc = wurttem.24.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.24.a
+	}
+}
+
+#Rally neighbours back bad
+country_event = {
+	id = wurttem.25
+	title = wurttem.25.t
+	desc = wurttem.25.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.25.a
 	}
 }

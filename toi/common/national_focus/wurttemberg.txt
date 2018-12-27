@@ -10,6 +10,8 @@ focus_tree = {
         }
     }
 	
+	continuous_focus_position = { x = 50 y = 1350 }
+	
 	default = no
 	
 	#Agrarian Society of Wurttemberg
@@ -788,6 +790,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = WUR_customeffect_friedrich_roemer
+			#unlocked via has_completed_focus trigger
 		}
 	}
 	
@@ -842,6 +845,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = WUR_customeffect_joseph_linden
+			#unlocked via has_completed_focus trigger
 		}
 	}
 	
@@ -971,7 +975,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = WUR_customeffect_rumpf_aftermath_advisors
-			#finish this
+			#change this
 			#advisors unlocked with has_completed_focus in /ideas
 		}
 	}
@@ -1094,6 +1098,24 @@ focus_tree = {
 						news_event = { id = wurttem.16 days = 3 }
 					}
 				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_denied_invite
+						has_country_flag = WUR_RUS_accepted_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.21 days = 3 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.22 days = 3 }
+					}
+				}
 			}
 		}
 	}
@@ -1148,16 +1170,24 @@ focus_tree = {
 	focus = {
 		id = WUR_karl_i
 		icon = GFX_goal_focus_karl_i
-		ai_will_do = { factor = 40 }
+		ai_will_do = { factor = 100 }
 		x = 31
 		y = 0
 		mutually_exclusive = { } 
 		prerequisite = {  }
-		cost = 70
+		cost = 0
 		available_if_capitulated = no  
 		
+		available = {
+			has_country_flag = WUR_victorian_wilhelm_dead
+		}
+		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_karl_i_focus
+			add_stability = 0.10
+			hidden_effect = {
+				country_event = { id = wurttem.17 days = 3 }
+			}
 		}
 	}
 	
@@ -1174,7 +1204,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_start_liberalizing
 			
+			hidden_effect = {
+				country_event { id = wurttem.18 days = 3 }
+			}
 		}
 	}
 	
@@ -1191,7 +1225,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -100
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_1
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 100
+				}
+			}
 		}
 	}
 	
@@ -1208,7 +1258,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -70
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_1
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 60
+				}
+			}
 		}
 	}
 	
@@ -1225,7 +1291,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -50
 			
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_2
+				days = 60
+			}
 		}
 	}
 	
@@ -1242,7 +1313,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -50
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_2
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_2
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_2
+					days = 60
+				}
+			}
 		}
 	}
 	
@@ -1259,7 +1346,8 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			custom_effect_tooltip = WUR_customeffect_karl_von_varnbueler_unlock
+			#advisors unlocked with has_completed_focus in /ideas
 		}
 	}
 	
@@ -1276,7 +1364,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -50
 			
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_4
+				days = 60
+			}
 		}
 	}
 	
@@ -1294,7 +1387,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_political_power = -100
+		
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_3
+				days = 60
+			}
 		}
 	}
 	
@@ -1313,7 +1411,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_finish_liberalizing
 			
+			hidden_effect = {
+				country_event { id = wurttem.19 days = 3 }
+			}
 		}
 	}
 	
@@ -1330,7 +1432,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_start_suppression
 			
+			hidden_effect = {
+				country_event { id = wurttem.20 days = 3 }
+			}
 		}
 	}
 	
@@ -1347,7 +1453,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_political_power = -100
+		
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_1
+				days = 60
+			}
 		}
 	}
 	
@@ -1381,7 +1492,22 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -200
 			
+			custom_effect_tooltip = WUR_customeffect_rally_neighbours
+			
+			hidden_effect = {
+				every_neighbor_country = {
+					if = {
+						limit = {
+							NOT = {
+								tag = PRS
+							}
+						}
+						country_event = { id = wurttem.23 days = 3 }
+					}
+				}
+			}
 		}
 	}
 	
