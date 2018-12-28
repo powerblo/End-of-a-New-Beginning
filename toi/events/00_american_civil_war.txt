@@ -267,8 +267,22 @@ country_event = {
     
     trigger = {
         tag = USA
-        CSA = { surrender_progress > 0.75 }
-        has_global_flag = ACWAmerican_Civil_War
+        OR = {
+            AND = {
+                TAG = USA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { surrender_progress > 0.8 }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { exists = no }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
@@ -365,9 +379,24 @@ country_event = {
     fire_only_once = yes
     
     trigger = {
-        tag = USA
-        CSA = { surrender_progress < 0.75 }
-        has_global_flag = ACWAmerican_Civil_War
+        tag = CSA
+        OR = {
+            AND = {
+                TAG = CSA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                USA = { surrender_progress > 0.7 }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                USA = { NOT = { has_war_with = CSA } }
+                CSA = { exists = yes }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
