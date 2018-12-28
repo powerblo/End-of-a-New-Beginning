@@ -1,0 +1,53 @@
+focus_tree = {
+    id = Liechtenstein
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LIE
+		}
+	}
+	default = no
+	focus = {
+	    id = LIE_Legacyofrheinbund
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 0
+		
+		completion_reward = {
+		    add_political_power = 100
+		    add_ideas = LIE_legacyofrheinbund
+		}
+	}
+	focus = {
+	    id = LIE_Bavariandistrust
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Legacyofrheinbund
+		}
+		x = 5
+		y = 1
+		
+		completion_reward = {
+		add_opinion_modifier = { target = BAV modifier = eoanb_om_LIE_BAV_lowered }
+		reverse_add_opinion_modifier = { target = BAV modifier = eoanb_om_LIE_BAV_lowered }
+	    }
+    }
+	focus = {
+	    id = LIE_Austrianpartnership
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Legacyofrheinbund
+		}
+		x = 10
+		y = 1
+		
+		completion_reward = {
+		    add_political_power = 100
+		    add_ideas = LIE_austrianpartnership
+		}
+	}
+}
