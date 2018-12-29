@@ -273,6 +273,7 @@ country_event = {
                 USA = { has_war_with = CSA }
                 has_global_flag = ACWAmerican_Civil_War
                 CSA = { surrender_progress > 0.8 }
+                NOT = { has_country_flag = USA_Radical_Coup }
             }
             AND = {
                 has_global_flag = ACWAmerican_Civil_War
@@ -386,6 +387,7 @@ country_event = {
                 USA = { has_war_with = CSA }
                 has_global_flag = ACWAmerican_Civil_War
                 USA = { surrender_progress > 0.7 }
+                NOT = { has_country_flag = USA_Radical_Coup }
             }
             AND = {
                 has_global_flag = ACWAmerican_Civil_War
