@@ -263,8 +263,6 @@ country_event = {
     desc = acw.7.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-    
     trigger = {
         tag = USA
         OR = {
@@ -376,8 +374,6 @@ country_event = {
     title = acw.8.t
     desc = acw.8.d
     picture = GFX_report_event_german_reichstag_gathering
-    
-    fire_only_once = yes
     
     trigger = {
         tag = CSA
@@ -3055,6 +3051,7 @@ country_event = {
         custom_effect_tooltip = 07_ACW_tt
         delete_unit_template_and_units = { division_template = "Union Regimental" }
         delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
+        set_country_flag = USABroken_Eagle
         hidden_effect = {
             if = {
                 limit = {
