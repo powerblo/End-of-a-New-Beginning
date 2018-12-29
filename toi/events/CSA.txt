@@ -943,6 +943,67 @@ country_event = {
 					}
 					TEX = {
 						transfer_state = 375
+						add_state_core = 375
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1305
+					}
+					TEX = {
+						transfer_state = 1305
+						add_state_core = 1305
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1306
+					}
+					TEX = {
+						transfer_state = 1306
+						add_state_core = 1306
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1304
+					}
+					TEX = {
+						transfer_state = 1304
+						add_state_core = 1304
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1303
+					}
+					TEX = {
+						transfer_state = 1303
+						add_state_core = 1303
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1281
+					}
+					TEX = {
+						transfer_state = 1281
+						add_state_core = 1281
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1280
+					}
+					TEX = {
+						transfer_state = 1280
+						add_state_core = 1280
 					}
 					puppet = TEX
 				}
@@ -968,21 +1029,31 @@ country_event = {
 				}
 				if = {
 					limit = {
-						owns_state = 376
+						owns_state = 1285
 					}
 					NMX = {
-						transfer_state = 376
-						add_state_core = 376
+						transfer_state = 1285
+						add_state_core = 1285
 					}
 					puppet = NMX
 				}
 				if = {
 					limit = {
-						owns_state = 377
+						owns_state = 1300
 					}
 					NMX = {
-						transfer_state = 377
-						add_state_core = 377
+						transfer_state = 1300
+						add_state_core = 1300
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1297
+					}
+					NMX = {
+						transfer_state = 1297
+						add_state_core = 1297
 					}
 					puppet = NMX
 				}
@@ -1100,6 +1171,67 @@ country_event = {
 					}
 					TEX = {
 						transfer_state = 375
+						add_state_core = 375
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1305
+					}
+					TEX = {
+						transfer_state = 1305
+						add_state_core = 1305
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1306
+					}
+					TEX = {
+						transfer_state = 1306
+						add_state_core = 1306
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1304
+					}
+					TEX = {
+						transfer_state = 1304
+						add_state_core = 1304
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1303
+					}
+					TEX = {
+						transfer_state = 1303
+						add_state_core = 1303
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1281
+					}
+					TEX = {
+						transfer_state = 1281
+						add_state_core = 1281
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1280
+					}
+					TEX = {
+						transfer_state = 1280
+						add_state_core = 1280
 					}
 					puppet = TEX
 				}
@@ -1125,21 +1257,31 @@ country_event = {
 				}
 				if = {
 					limit = {
-						owns_state = 376
+						owns_state = 1285
 					}
 					NMX = {
-						transfer_state = 376
-						add_state_core = 376
+						transfer_state = 1285
+						add_state_core = 1285
 					}
 					puppet = NMX
 				}
 				if = {
 					limit = {
-						owns_state = 377
+						owns_state = 1300
 					}
 					NMX = {
-						transfer_state = 377
-						add_state_core = 377
+						transfer_state = 1300
+						add_state_core = 1300
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1297
+					}
+					NMX = {
+						transfer_state = 1297
+						add_state_core = 1297
 					}
 					puppet = NMX
 				}
@@ -1261,12 +1403,18 @@ country_event = {
 		option = {
 			name = csa.21.a
 			set_politics = {
+				ruling_party = traditional_conservatism
 				elections_allowed = yes
 				election_frequency = 72
 			}
        	}
        	option = {
 			name = csa.21.b
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
 			create_country_leader = {
 				name = "John Breckinridge"
 				desc = ""
@@ -1276,13 +1424,14 @@ country_event = {
 				traits = {
 				}
 			}
-			set_politics = {
-				elections_allowed = yes
-				election_frequency = 72
-			}
 		}
 		option = {
 			name = csa.21.c
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
 			create_country_leader = {
 				name = "Robert Toombs"
 				desc = ""
@@ -1292,15 +1441,16 @@ country_event = {
 				traits = {
 				}
 			}
-			set_politics = {
-				elections_allowed = yes
-				election_frequency = 72
-			}
 		}
 		option = {
 			name = csa.21.e
 			trigger = {
 				NOT = { has_completed_focus = CSA_convention_unitarian_finish }
+			}
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
 			}
 			create_country_leader = {
 				name = "Robert E. Lee"
@@ -1310,10 +1460,6 @@ country_event = {
 				ideology = federal
 				traits = {
 				}
-			}
-			set_politics = {
-				elections_allowed = yes
-				election_frequency = 72
 			}
 		}
 	}
