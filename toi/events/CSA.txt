@@ -526,7 +526,14 @@ country_event = {
 			name = csa.13.b
 			trigger = {
 				check_variable = {
-					2 < CSA_convention < 8
+					var = CSA_convention
+					value = 2
+					compare = greater_than
+				}
+				check_variable = {
+					var = CSA_convention
+					value = 8
+					compare = less_than
 				}
 			}
 			set_country_flag = CSA_convention_federalism_path
