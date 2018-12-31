@@ -276,6 +276,7 @@ country_event = {
             AND = {
                 has_global_flag = ACWAmerican_Civil_War
                 CSA = { exists = no }
+                NOT = { has_country_flag = USA_Radical_Coup }
             }
         }
     }
@@ -382,13 +383,22 @@ country_event = {
                 TAG = CSA
                 USA = { has_war_with = CSA }
                 has_global_flag = ACWAmerican_Civil_War
-                USA = { surrender_progress > 0.7 }
-                NOT = { has_country_flag = USA_Radical_Coup }
+                USA = {
+                    surrender_progress > 0.7
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
+                }
             }
             AND = {
                 has_global_flag = ACWAmerican_Civil_War
                 USA = { NOT = { has_war_with = CSA } }
                 CSA = { exists = yes }
+                USA = {
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
+                }
             }
         }
     }
