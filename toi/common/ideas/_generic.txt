@@ -390,7 +390,7 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 			
 			allowed = {
-				NOT = { OR = { tag = USA tag = FRA } }
+				NOT = { OR = { tag = USA tag = FRA tag = HOL } }
 			}
 			
 			cost = 150
@@ -499,7 +499,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern_2 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = FRA } }
+				NOT = { OR = { tag = USA tag = FRA tag = HOL } }
 			}
 
 			cost = 150
@@ -520,7 +520,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern_3 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = FRA } }
+				NOT = { OR = { tag = USA tag = FRA tag = HOL } }
 			}
 
 			cost = 150
@@ -589,7 +589,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = captain_of_industry_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL } }
 			}
 
 			traits = { captain_of_industry_1 }
@@ -613,7 +613,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = war_industrialist_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL } }
 			}
 			
 			traits = { war_industrialist_1 }
@@ -625,7 +625,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_pol_author limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL } }
 			}
 			
 			traits = { eoanb_trait_pol_author }
