@@ -263,12 +263,26 @@ country_event = {
     desc = acw.7.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-    
     trigger = {
         tag = USA
-        CSA = { surrender_progress > 0.75 }
-        has_global_flag = ACWAmerican_Civil_War
+        OR = {
+            AND = {
+                TAG = USA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { surrender_progress > 0.8 }
+                NOT = { has_country_flag = USA_Radical_Coup }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { exists = no }
+                NOT = { has_country_flag = USA_Radical_Coup }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
@@ -362,12 +376,35 @@ country_event = {
     desc = acw.8.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-    
     trigger = {
-        tag = USA
-        CSA = { surrender_progress < 0.75 }
-        has_global_flag = ACWAmerican_Civil_War
+        tag = CSA
+        OR = {
+            AND = {
+                TAG = CSA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                USA = {
+                    surrender_progress > 0.7
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
+                }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                USA = { NOT = { has_war_with = CSA } }
+                CSA = { exists = yes }
+                USA = {
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
@@ -3024,6 +3061,7 @@ country_event = {
         custom_effect_tooltip = 07_ACW_tt
         delete_unit_template_and_units = { division_template = "Union Regimental" }
         delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
+        set_country_flag = USABroken_Eagle
         hidden_effect = {
             if = {
                 limit = {
@@ -3102,6 +3140,7 @@ country_event = {
             }
         }
         CSA = { transfer_state = 1285 }
+        CSA = { transfer_state = 1300 }
         CSA = { transfer_state = 1297 }
         CSA = { transfer_state = 374 }
         CSA = { transfer_state = 373 }
