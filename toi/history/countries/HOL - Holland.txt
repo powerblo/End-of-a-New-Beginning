@@ -39,6 +39,7 @@
     HOL_idea_treaty_of_london
     HOL_idea_loss_belgium
     HOL_idea_tiendaagse_veldtocht
+    HOL_idea_will_industrialize
   }
   
   puppet = INS
@@ -58,10 +59,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 20
+        popularity = 46
       }
       traditional_conservatism = {
-        popularity = 80
+        popularity = 54
       }
       radical_democracy = {
         popularity = 0
@@ -137,6 +138,22 @@ create_country_leader = {
     picture = "Portrait_HOL_William_III.dds"
     expire = 1900.1.1
     ideology = absolutism
+}
+
+create_country_leader = {
+    name = "Johan Rudolph Thorbecke"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HOL_William_III.dds"
+    expire = 1900.1.1
+    ideology = radical_liberal
+}
+
+create_country_leader = {
+    name = "Pieter Philip van Bosse"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HOL_William_III.dds"
+    expire = 1900.1.1
+    ideology = liberal_social
 }
 
 create_corps_commander = {
