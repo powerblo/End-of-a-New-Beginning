@@ -11,10 +11,17 @@ focus_tree = {
 	focus = {
 		id = HOL_Industrialise
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 70
 		x = 6
 		y = 0
 
+		completion_reward = {
+
+		 swap_ideas = { 
+		  add_idea = HOL_idea_will_industrialize_1
+		  remove_idea = HOL_idea_will_industrialize
+		 }
+	   }
 	}
 	focus = {
 		id = HOL_trading_spirit
@@ -74,7 +81,7 @@ focus_tree = {
 	focus = {
 		id = HOL_vanderbrugghen
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 70
 		x = 28
 		y = 0
 
@@ -82,7 +89,7 @@ focus_tree = {
 	focus = {
 		id = HOL_rise_of_steamtrain
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_Industrialise
 		}
@@ -111,12 +118,31 @@ focus_tree = {
 	focus = {
 		id = HOL_other_transport
 		icon = GFX_goal_generic_army_motorized
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_rise_of_steamtrain
 		}
 		x = 1
 		y = 2
+
+		completion_reward = {
+
+		 swap_ideas = {
+         remove_idea = HOL_idea_rise_steamtrain
+         add_idea = HOL_idea_rise_steamtrain_1
+         }
+
+         add_tech_bonus = {
+          bonus = 0.25
+          uses = 1
+          category = aviation_tech
+         }
+         add_tech_bonus = {
+          bonus = 0.25
+          uses = 1
+          category = armor
+         }
+		}
 
 	}
 	focus = {
@@ -128,6 +154,11 @@ focus_tree = {
 		}
 		x = 2
 		y = 3
+
+		completion_reward = {
+
+         unlock_decision_category_tooltip = HOL_land_reclaimation
+		}
 
 	}
 	focus = {
@@ -177,12 +208,20 @@ focus_tree = {
 	focus = {
 		id = HOL_Incentive
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_Industrialise
 		}
 		x = 3
 		y = 1
+
+		completion_reward {
+
+		swap_ideas = {
+         remove_idea = HOL_idea_will_industrialize_1
+         add_idea = HOL_idea_will_industrialize_2
+         }
+		}
 
 	}
 	focus = {
@@ -272,12 +311,25 @@ focus_tree = {
 	focus = {
 		id = HOL_develop_east
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_Industrialise
 		}
 		x = 5
 		y = 1
+
+		completion_reward = {
+
+		random_owned_controlled_state = {
+		 limit = { NOT = { state = 7 state = 1318 state = 35 state = 1317 } }
+		 add_extra_state_shared_building_slots = 2
+		 add_building_construction = {
+          type = arms_factory
+          level = 2
+          instant_build = yes
+          }    
+         }
+		}
 
 	}
 	focus = {
@@ -313,7 +365,7 @@ focus_tree = {
 	focus = {
 		id = HOL_staats_spoorwegen
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_national_railway
 			focus = HOL_compromise
@@ -322,11 +374,15 @@ focus_tree = {
 		x = 6
 		y = 4
 
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_staats_spoorwegen
+		}
 	}
 	focus = {
 		id = HOL_bridge_divided
 		icon = GFX_goal_generic_national_unity
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_landscape
 		}
@@ -340,12 +396,26 @@ focus_tree = {
 	focus = {
 		id = HOL_develop_amsterdam
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_Industrialise
 		}
 		x = 7
 		y = 1
+
+		completion_reward = {
+
+		unlock_decision_tooltip = eoanb_decision_land_reclamation_amsterdam
+
+		7 = {
+		 add_extra_state_shared_building_slots = 2
+		 add_building_construction = {
+          type = industrial_complex
+          level = 2
+          instant_build = yes
+          }    
+         }
+		}
 
 	}
 	focus = {
@@ -449,12 +519,17 @@ focus_tree = {
 	focus = {
 		id = HOL_philips
 		icon = GFX_goal_generic_production2
-		cost = 10
+		cost = 70
 		prerequisite = {
 			focus = HOL_design_dutch
 		}
 		x = 13
 		y = 3
+
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_Philips
+		}
 
 	}
 	focus = {
@@ -504,6 +579,10 @@ focus_tree = {
 		x = 15
 		y = 2
 
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_shell
+		}
 	}
 	focus = {
 		id = HOL_shell_batavia
