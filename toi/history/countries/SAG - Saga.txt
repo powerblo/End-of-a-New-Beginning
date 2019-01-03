@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-  capital = 1054
+  capital = 1259
 
-  oob = "SAT_1857"
+  #oob = "CHO_1857"
 
   set_convoys = 0
   
@@ -9,17 +9,11 @@
   
   JAP = {
       set_autonomy = {
-        target = SAT
+        target = SAG
         autonomous_state = autonomy_puppet
         freedom_level = 0.3
       }
   }
-
-      set_autonomy = {
-        target = RYU
-        autonomous_state = autonomy_puppet
-        freedom_level = 0.3
-      }
 
   add_ideas = { 
     #POLITICS 
@@ -100,9 +94,9 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-  name = "Shimazu Tadayoshi"
+  name = "Nabeshima Naomasa"
   desc = "POLITICS_TEMP_DESC"
-  picture = "Portait_SAT_Shimazu_Tadayoshi.dds"
+  picture = "Portait_SAG_Nabeshima_Naomasa.dds"
   expire = "1900.1.1"
   ideology = despotism
 
