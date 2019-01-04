@@ -13,11 +13,7 @@ country_event = {
 	  original_tag = HOL
 
 	  HOL = {
-	     has_id 18151 = {
-	         limit = {
-	             is_field_marshal = no
-	            }
-	        }
+	     has_unit_leader = 18152
 	    }
 	}
 	
@@ -46,7 +42,11 @@ country_event = {
 	     logistics_skill = 1
 	     id = 18151
         }
-	}	
+	}
+
+	option = {
+		name = holland_generals.1.b
+	}		
 }
 
 ####Johan Wilhelm Blanken promotion
@@ -62,11 +62,7 @@ country_event = {
 	  original_tag = HOL
 
 	  HOL = {
-	     has_id 18152 = {
-	         limit = {
-	             is_field_marshal = no
-	            }
-	        }
+	     has_unit_leader = 18152
 	    }
 	}
 	
@@ -96,6 +92,10 @@ country_event = {
 	     id = 18152
         }
 	}	
+
+	option = {
+		name = holland_generals.2.b
+	}	
 }
 
 ###Huibert Gerard Boumeester promotie
@@ -111,11 +111,7 @@ country_event = {
 	  original_tag = INS
 
 	  INS = {
-	     has_id 18153 = {
-	         limit = {
-	             is_field_marshal = no
-	            }
-	        }
+	     has_unit_leader = 18153
 	    }
 	}
 	
@@ -144,5 +140,9 @@ country_event = {
 	     logistics_skill = 1
 	     id = 18153
         }
+	}
+
+	option = {
+		name = holland_generals.3.b
 	}	
 }
