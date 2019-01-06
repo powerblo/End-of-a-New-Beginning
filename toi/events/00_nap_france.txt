@@ -570,6 +570,30 @@ country_event = { # Monaco votes to join France
   }
 }
 
+country_event = { # Kabyle startup event
+  id = nap_france.21
+  title = nap_france.21.t
+  desc = nap_france.21.d
+  
+  hidden = yes
+
+  is_triggered_only = yes
+
+  mean_time_to_happen = {
+    days = 100
+  }
+
+  fire_only_once = yes
+
+  option = { # Get wargoal to simulate the Grand Kabyle campaign
+    name = nap_france.21.a
+    create_wargoal = {
+		type = annex_everything
+		target = BAB
+	}
+  }
+}
+
 #----------------------------------------------------------------------------------------------
 # FLAVOR EVENTS - 1857 TO 1870
 #----------------------------------------------------------------------------------------------

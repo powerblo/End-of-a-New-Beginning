@@ -1565,7 +1565,7 @@ focus_tree = {
 		#-----------------------------------------------------------------------------------
 
 	focus = {
-		id = FRA_submit_kabyle
+		id = FRA_stabilize_algeria
 		icon = GFX_goal_focus_expand_french_algeria
 		cost = 70
 		prerequisite = {
@@ -1576,19 +1576,13 @@ focus_tree = {
 		}
 		x = 41
 		y = 1
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = BAB
-			}
-		}
 	}
 	focus = {
 		id = FRA_intervention_lebanon
 		icon = GFX_goal_demand_sudetenland
 		cost = 70
 		prerequisite = {
-			focus = FRA_submit_kabyle
+			focus = FRA_stabilize_algeria
 		}
 		x = 40
 		y = 2
@@ -1599,7 +1593,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 70
 		prerequisite = {
-			focus = FRA_submit_kabyle
+			focus = FRA_stabilize_algeria
 		}
 		x = 42
 		y = 2
