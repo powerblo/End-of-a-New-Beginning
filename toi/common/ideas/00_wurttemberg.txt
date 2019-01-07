@@ -255,6 +255,56 @@ ideas = {
 	}
 	
 	hidden_ideas = {
+		WUR_start_suppression_hidden_4 = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   has_government = autocracy
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				political_power_factor = 0.05
+				drift_defence_factor = 0.05
+			}
+		}
+	
+		WUR_start_suppression_hidden_3 = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   has_government = autocracy
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.05
+			}
+		}
+	
+		WUR_start_suppression_hidden_2 = {
+			allowed = {
+				original_tag = WUR
+			}
+			
+			allowed_civil_war = {
+			   has_government = autocracy
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	
 		WUR_start_suppression_hidden_1 = {
 			allowed = {
 				original_tag = WUR

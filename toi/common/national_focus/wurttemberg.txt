@@ -1475,7 +1475,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -50
 			
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_2
+				days = 60
+			}
 		}
 	}
 	
@@ -1524,7 +1529,12 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -100
 			
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_3
+				days = 60
+			}
 		}
 	}
 	
@@ -1541,7 +1551,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -100
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_3
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_3
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_3
+					days = 60
+				}
+			}
 		}
 	}
 	
@@ -1559,7 +1585,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -100
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_4
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
 		}
 	}
 	
@@ -1577,7 +1619,23 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			add_political_power = -100
 			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_4
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
 		}
 	}
 	
@@ -1596,7 +1654,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_finish_suppression
 			
+			hidden_effect = {
+				country_event { id = wurttem.26 days = 3 }
+			}
 		}
 	}
 	
@@ -1613,7 +1675,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	}
 	

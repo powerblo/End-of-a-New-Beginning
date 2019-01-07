@@ -698,13 +698,15 @@ country_event = {
 		
 		increase_ps_by_two = yes
 		
-		add_popularity = {
-			ideology = centrism
-			popularity = 0.07
-		}
-		add_popularity = {
-			ideology = traditional_conservatism
-			popularity = 0.04
+		hidden_effect = {
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.04
+			}
 		}
 	}
 }
@@ -755,7 +757,10 @@ country_event = {
 		
 		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
 		
-		add_ideas = WUR_neighbour_supress_liberalism
+		add_timed_idea = {
+			idea = WUR_neighbour_supress_liberalism
+			days = 70
+		}
 		
 		hidden_effect = {
 			WUR = {
@@ -811,5 +816,41 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = wurttem.25.a
+	}
+}
+
+#Finish suppression
+country_event = {
+	id = wurttem.26
+	title = wurttem.26.t
+	desc = wurttem.26.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = WUR_start_suppression
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.26.a
+		
+		custom_effect_tooltip = WUR_customeffect_finish_suppression
+		
+		increase_ps_by_two = yes
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = centrism
+				popularity = -0.07
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.04
+			}
+		}
 	}
 }
