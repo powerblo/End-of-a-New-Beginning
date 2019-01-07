@@ -1843,6 +1843,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = { has_war_with = USA }
+			USA = { exists = yes }
 		}
 		completion_reward = {
 			USA = { country_event = { id = csa.40 } }
@@ -1977,6 +1978,9 @@ focus_tree = {
 		y = 2
 		prerequisite = {
 			focus = CSA_postwar_internal_politics
+		}
+		available = {
+			has_country_flag = CSA_whig_party_flag
 		}
 		bypass = {
 			has_country_flag = CSA_whig_party_flag

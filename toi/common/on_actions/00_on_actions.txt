@@ -302,6 +302,52 @@ on_actions = {
 					type = annex_everything
 				}
 			}
+			if = {
+				limit = {
+					FROM = {
+						tag = USA
+					}
+					OR = {
+						tag = CAL
+						tag = NEG
+						tag = MHC
+					}
+					USA = { has_country_flag = USA_Radical_Coup }
+				}
+				if = {
+					limit = {
+						NEG = { exists = yes }
+					}
+					NEG = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						CAL = { exists = yes }
+					}
+					CAL = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						MHC = { exists = yes }
+					}
+					MHC = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
+				}
+			}
 		}
 	}
 
