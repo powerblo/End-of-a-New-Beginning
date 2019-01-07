@@ -1,0 +1,872 @@
+focus_tree = {
+	id = HOL_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HOL
+		}
+	}
+	default = no
+	focus = {
+		id = HOL_Industrialise
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 70
+		x = 6
+		y = 0
+
+		completion_reward = {
+
+		 swap_ideas = { 
+		  add_idea = HOL_idea_will_industrialize_1
+		  remove_idea = HOL_idea_will_industrialize
+		 }
+	   }
+	}
+	focus = {
+		id = HOL_trading_spirit
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 70
+		x = 0
+		y = 3
+
+		completion_reward = {
+		 custom_effect_tooltip = HOL_trading_spirit_custom
+		 hidden_effect = {
+			add_opinion_modifier = {
+             target = PRS
+             modifier = HOL_dutch_trading_spirit
+            }
+            add_opinion_modifier = {
+             target = FRA
+             modifier = HOL_dutch_trading_spirit
+            }
+            add_opinion_modifier = {
+             target = LUX
+             modifier = HOL_dutch_trading_spirit
+            }
+            add_opinion_modifier = {
+             target = BEL
+             modifier = HOL_dutch_trading_spirit
+            }
+            add_opinion_modifier = {
+             target = ENG
+             modifier = HOL_dutch_trading_spirit
+            }
+            reverse_add_opinion_modifier = {
+             target = PRS
+             modifier = HOL_dutch_trading_spirit
+            }
+            reverse_add_opinion_modifier = {
+             target = FRA
+             modifier = HOL_dutch_trading_spirit
+            }
+            reverse_add_opinion_modifier = {
+             target = LUX
+             modifier = HOL_dutch_trading_spirit
+            }
+            reverse_add_opinion_modifier = {
+             target = BEL
+             modifier = HOL_dutch_trading_spirit
+            }
+            reverse_add_opinion_modifier = {
+             target = ENG
+             modifier = HOL_dutch_trading_spirit
+            }
+
+            add_ideas = HOL_idea_dutch_trading
+         }		
+		}
+	}
+	focus = {
+		id = HOL_vanderbrugghen
+		icon = GFX_goal_unknown
+		cost = 70
+		x = 28
+		y = 0
+
+	}
+	focus = {
+		id = HOL_rise_of_steamtrain
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 70
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		x = 1
+		y = 1
+
+		completion_reward = {
+
+		 add_ideas = HOL_idea_rise_steamtrain
+
+		 add_tech_bonus = {
+          bonus = 0.5
+          uses = 1
+          category = armor
+         }
+         
+         add_tech_bonus = {
+          bonus = 0.5
+          uses = 1
+          category = mechanical_engineering_tech
+         }
+		}
+
+
+	}
+	focus = {
+		id = HOL_other_transport
+		icon = GFX_goal_generic_army_motorized
+		cost = 70
+		prerequisite = {
+			focus = HOL_rise_of_steamtrain
+		}
+		x = 1
+		y = 2
+
+		completion_reward = {
+
+		 swap_ideas = {
+         remove_idea = HOL_idea_rise_steamtrain
+         add_idea = HOL_idea_rise_steamtrain_1
+         }
+
+         add_tech_bonus = {
+          bonus = 0.25
+          uses = 1
+          category = aviation_tech
+         }
+         add_tech_bonus = {
+          bonus = 0.25
+          uses = 1
+          category = armor
+         }
+		}
+
+	}
+	focus = {
+		id = HOL_dig_canals
+		icon = GFX_goal_generic_construction2
+		cost = 70
+		prerequisite = {
+			focus = HOL_other_transport
+		}
+		x = 2
+		y = 3
+
+		completion_reward = {
+
+         unlock_decision_category_tooltip = HOL_land_reclaimation
+		}
+
+	}
+	focus = {
+		id = HOL_port_rotterdam
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 70
+		prerequisite = {
+			focus = HOL_dig_canals
+		}
+		prerequisite = {
+			focus = HOL_trading_spirit
+		}
+		x = 1
+		y = 4
+
+		available = { 
+			HOL = { 
+				controls_state = 1318
+			} 
+		}
+
+		completion_reward = {
+
+		 1318 = { add_extra_state_shared_building_slots = 2 }
+           
+         1318 = { add_building_construction = {
+             type = naval_base
+             level = 1
+             instant_build = yes
+             province = 9498
+            }
+           }
+        }
+
+	}
+	focus = {
+		id = HOL_gateway_europe
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		prerequisite = {
+			focus = HOL_port_rotterdam
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = HOL_Incentive
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 70
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		x = 3
+		y = 1
+
+		completion_reward {
+
+		swap_ideas = {
+         remove_idea = HOL_idea_will_industrialize_1
+         add_idea = HOL_idea_will_industrialize_2
+         }
+		}
+
+	}
+	focus = {
+		id = HOL_royal_funding
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		mutually_exclusive = {
+			focus = HOL_state_funding
+		}
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = HOL_state_funding
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		mutually_exclusive = {
+			focus = HOL_royal_funding
+		}
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = HOL_hofleveranciers_bedrijven
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		prerequisite = {
+			focus = HOL_Incentive
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = HOL_landscape
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = HOL_dig_canals
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = HOL_railway_debate
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		prerequisite = {
+			focus = HOL_rise_of_steamtrain
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = HOL_national_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = HOL_railway_debate
+		}
+		mutually_exclusive = {
+			focus = HOL_Private_railways
+			focus = HOL_compromise
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = HOL_develop_east
+		icon = GFX_goal_generic_construct_civilian
+		cost = 70
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		x = 5
+		y = 1
+
+		completion_reward = {
+
+		random_owned_controlled_state = {
+		 limit = { NOT = { state = 7 state = 1318 state = 35 state = 1317 } }
+		 add_extra_state_shared_building_slots = 2
+		 add_building_construction = {
+          type = arms_factory
+          level = 2
+          instant_build = yes
+          }    
+         }
+		}
+
+	}
+	focus = {
+		id = HOL_compromise
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = HOL_railway_debate
+		}
+		mutually_exclusive = {
+			focus = HOL_Private_railways
+			focus = HOL_national_railway
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = HOL_Private_railways
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = HOL_railway_debate
+		}
+		mutually_exclusive = {
+			focus = HOL_compromise
+			focus = HOL_national_railway
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = HOL_staats_spoorwegen
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 70
+		prerequisite = {
+			focus = HOL_national_railway
+			focus = HOL_compromise
+			focus = HOL_Private_railways
+		}
+		x = 6
+		y = 4
+
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_staats_spoorwegen
+		}
+	}
+	focus = {
+		id = HOL_bridge_divided
+		icon = GFX_goal_generic_national_unity
+		cost = 70
+		prerequisite = {
+			focus = HOL_landscape
+		}
+		prerequisite = {
+			focus = HOL_staats_spoorwegen
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = HOL_develop_amsterdam
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 70
+		prerequisite = {
+			focus = HOL_Industrialise
+		}
+		x = 7
+		y = 1
+
+		completion_reward = {
+
+		unlock_decision_tooltip = eoanb_decision_land_reclamation_amsterdam
+
+		7 = {
+		 add_extra_state_shared_building_slots = 2
+		 add_building_construction = {
+          type = industrial_complex
+          level = 2
+          instant_build = yes
+          }    
+         }
+		}
+
+	}
+	focus = {
+		id = HOL_textile
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = HOL_search_coal
+		icon = GFX_focus_generic_steel
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = HOL_industrial_backlog
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = HOL_limburg_mines
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = HOL_search_coal
+		}
+		prerequisite = {
+			focus = HOL_industrial_backlog
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = HOL_spoor_mijnen
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = HOL_staats_spoorwegen
+		}
+		prerequisite = {
+			focus = HOL_limburg_mines
+		}
+		x = 8
+		y = 5
+
+	}
+	focus = {
+		id = HOL_metal_winning
+		icon = GFX_focus_generic_steel
+		cost = 10
+		prerequisite = {
+			focus = HOL_limburg_mines
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = HOL_more_funding
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = HOL_limburg_mines
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = HOL_design_dutch
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10
+		prerequisite = {
+			focus = HOL_royal_funding
+			focus = HOL_state_funding
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = HOL_philips
+		icon = GFX_goal_generic_production2
+		cost = 70
+		prerequisite = {
+			focus = HOL_design_dutch
+		}
+		x = 13
+		y = 3
+
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_Philips
+		}
+
+	}
+	focus = {
+		id = HOL_allow_private
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = HOL_limburg_mines
+		}
+		mutually_exclusive = {
+			focus = HOL_national_mines
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = HOL_fund_oranje
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_allow_private
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = HOL_fund_Lauramines
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_fund_oranje
+		}
+		x = 13
+		y = 6
+
+	}
+	focus = {
+		id = HOL_shell
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10
+		prerequisite = {
+			focus = HOL_state_funding
+			focus = HOL_royal_funding
+		}
+		x = 15
+		y = 2
+
+		completion_reward = {
+
+		show_ideas_tooltip = eoanb_HOL_shell
+		}
+	}
+	focus = {
+		id = HOL_shell_batavia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_shell
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = HOL_national_mines
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = HOL_limburg_mines
+		}
+		mutually_exclusive = {
+			focus = HOL_allow_private
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = HOL_buy_oranje
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_national_mines
+		}
+		x = 15
+		y = 5
+
+	}
+	focus = {
+		id = HOL_buy_Lauramines
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_buy_oranje
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = HOL_ministry_war_budget
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = HOL_replace_forstner
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_ministry_war_budget
+		}
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = HOL_make_do
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_replace_forstner
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = HOL_keep_forstner
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_ministry_war_budget
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = HOL_ministry_marine
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = HOL_bigger_budget
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_keep_forstner
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = HOL_war_cabinet_concessions
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_keep_forstner
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = HOL_onderwijswet_1857
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = HOL_cabinet_falls
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		mutually_exclusive = {
+			focus = HOL_cabinet_survives
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = HOL_early_elections
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_cabinet_falls
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = HOL_election_campaigns
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_early_elections
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = HOL_cabinet_survives
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		mutually_exclusive = {
+			focus = HOL_cabinet_falls
+		}
+		x = 30
+		y = 1
+
+	}
+	focus = {
+		id = HOL_elections_1860
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_cabinet_survives
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = HOL_ministry_justice
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = HOL_ministry_internal
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = HOL_ministry_financial
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 36
+		y = 1
+
+	}
+	focus = {
+		id = HOL_ministry_colonies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 38
+		y = 1
+
+	}
+	focus = {
+		id = HOL_ministry_religious
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 40
+		y = 1
+
+	}
+	focus = {
+		id = HOL_unite_nation
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = HOL_bridge_divided
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = HOL_expand_ijzerenrijn
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = HOL_fund_Lauramines
+			focus = HOL_buy_Lauramines
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = HOL_ministry_foreign
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = HOL_vanderbrugghen
+		}
+		x = 42
+		y = 1
+
+	}
+}
