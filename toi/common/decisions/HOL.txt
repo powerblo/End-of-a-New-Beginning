@@ -11,6 +11,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			7 = { is_controlled_by = HOL }
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -42,6 +43,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -89,6 +91,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -135,6 +138,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -188,6 +192,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -224,6 +229,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -252,6 +258,7 @@ HOL_land_reclaimation = {
 		
 		visible = {
 			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
 		}
 		
 		fire_only_once = yes
@@ -268,6 +275,49 @@ HOL_land_reclaimation = {
          }
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+}
+
+HOL_KNIL_general_exchange = {
+
+	eoanb_decision_HOL_take_KNIL_general = {
+		
+		icon = generic_operation
+		
+		available = {
+			INS = { is_subject_of = HOL }
+		}
+		
+		visible = {
+			original_tag = HOL
+		}
+		
+		fire_only_once = no
+
+		days_remove = 180
+		remove_effect = {
+             hidden_effect = {
+             HOL = { country_event = holland_generals.7 }
+            }
+        }
+		
+		cost = 100
+		
+		complete_effect = {
+		 INS = {
+		  country_event = {
+		  id = holland_generals.4
+		  }
+		 }
+		}
+		
 		ai_will_do = {
 			base = 1
 			modifier = {

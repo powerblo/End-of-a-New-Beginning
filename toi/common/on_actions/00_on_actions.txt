@@ -12,6 +12,7 @@ on_actions = {
 			JAP = { country_event = { id = shogunate_japan.0 days = 1 } }
 			OUD = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			GWA = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
+			HOL = { country_event = { id = holland_oog.1 } }
 			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			set_global_flag = eoanb_flag_sow_ongoing
 		}
@@ -300,6 +301,52 @@ on_actions = {
 				declare_war_on = {
 					target = CAL
 					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = USA
+					}
+					OR = {
+						tag = CAL
+						tag = NEG
+						tag = MHC
+					}
+					USA = { has_country_flag = USA_Radical_Coup }
+				}
+				if = {
+					limit = {
+						NEG = { exists = yes }
+					}
+					NEG = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						CAL = { exists = yes }
+					}
+					CAL = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						MHC = { exists = yes }
+					}
+					MHC = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+					}
 				}
 			}
 		}

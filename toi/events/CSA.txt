@@ -1541,7 +1541,15 @@ country_event = {
 					num_of_civilian_factories > 39
 				}
 			}
-			USA = { country_event = { id = csa.25 hours = 3 } }
+			if = {
+				limit = {
+					USA = { exists = yes }
+				}
+				USA = { country_event = { id = csa.25 hours = 3 } }
+			}
+			else = {
+				CSA = { country_event = { id = csa.27 hours = 3 } }
+			}
        	}
        	option = {
 			name = csa.24.b
