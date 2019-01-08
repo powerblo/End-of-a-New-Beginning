@@ -232,10 +232,10 @@
  BAV_customeffect_sideprussia:0 "Bavaria sides with Prussia."
  BAV_customeffect_sideaustria:0 "Bavaria sides with Austria."
  BAV_customeffect_sueddeutscherzollverein:0 "The Süddeutscher Zollverein gets proposed.§R\n\nWhether the German middle states will accept depends on whether they accepted our previous proposals.§!"
- BAV_customeffect_sway_convince_accept:0 "Our nation accepts the Bavarian proposal."
- BAV_customeffect_sway_convince_deny:0 "Our nation denies the Bavarian proposal."
- BAV_customeffect_sueddeutscherzollverein_accept:0 "Our nation accepts the Bavarian proposal."
- BAV_customeffect_sueddeutscherzollverein_deny:0 "Our nation denies the Bavarian proposal."
+ BAV_customeffect_sway_convince_accept:0 "Our nation accepts the Bavarian proposal.\n"
+ BAV_customeffect_sway_convince_deny:0 "Our nation denies the Bavarian proposal.\n"
+ BAV_customeffect_sueddeutscherzollverein_accept:0 "Our nation accepts the Bavarian proposal.\n"
+ BAV_customeffect_sueddeutscherzollverein_deny:0 "Our nation denies the Bavarian proposal.\n"
  BAV_customeffect_germantwo:0 "The relations between Bavaria and Württemberg strengthen."
  BAV_customeffect_extendthetrias:0 "The Triaspolitik gets extended."
  BAV_customeffect_catholicchurch:0 "The Catholic Church prevails."
@@ -272,13 +272,24 @@
  BAV_customeffect_staatenbund_faction:0 "§Y[Root.GetName]§! forms the §YDeutscher Schutzbund§!."
  BAV_german_schutzbund:0 "Deutscher Schutzbund"
  BAV_customeffect_rise_divs_against_soc_prussia:0 "§YFreiwilligenkorps§! rise up to help us defend our country."
+ BAV_customeffect_decision_invite_trias:0 "The respective country receives an invite to the §YTrias§!."
  
  ###Flags###
  eoanb_flag_BAV_leave_up_AUS_sww:0 "§YBavaria§! withdrew from peace talks"
+ BAV_triaspolitik_maximilian_ii:0 "Triaspolitik of Maximilian II"
  
  ###Leaders###
  POLITICS_MAXIMILIAN_II_DESC:0 "Upon taking the responsibility of the throne after his father’s passing, Maximilian II restored stability of the Kingdom during the German Revolution of 1848. King Max, as his followers call him, stands up for Bavarian independence and culture, making him very popular among the people. Unlike his father, Maximilian takes more interest in governmental issues than personal extravagance. Following his policy of making Bavaria into a center of culture, education and arts, Maximilian II declined the Frankfurt Constitution proposed by the Frankfurt Assembly, triggering the 1849 Palatine uprising. With the help of the Prussian army and Bavarian military corps, however, the revolt was broken."
  POLITICS_BAV_LUDWIG_II_DESC:0 "Ludwig II Otto Friedrich Wilhelm von Wittelsbach ascended to the throne of King of Bavaria at the age of 18 after his father had died of an illness, not prepared for high office and unknown to politicians. Ludwig is committed to culture; his love for Richard Wagner's music, however, raised many concerns among the Bavarian government and first and foremost his own family. Maximilian II, his father, once said "You're a dreamer, Ludwig. Do you know what your love for art is in reality? Weakness" during a demonstration of the new M/1842 rifle. With straining relations with Prussia all we can do is hope our new King, Ludwig II, will lead us to glory, and not our doom."
+ 
+ ###New Decisions###
+ eoanb_decision_BAV_invite_WUR_BAD_trias:0 "Form the Trias"
+ eoanb_decision_BAV_invite_WUR_BAD_trias_desc:0 "We will try to officially invite both §Y[WUR.GetNameDef]§! and §Y[BAD.GetNameDef]§! to the Trias and as such form it."
+ eoanb_decision_BAV_invite_FRK_trias:0 "Invite [FRK.GetName] to the Trias"
+ eoanb_decision_BAV_invite_HES_trias:0 "Invite [HES.GetName] to the Trias"
+ eoanb_decision_BAV_invite_THU_trias:0 "Invite [THU.GetName] to the Trias"
+ eoanb_decision_BAV_invite_SAX_trias:0 "Invite [SAX.GetName] to the Trias"
+ eoanb_decision_BAV_invite_HAN_trias:0 "Invite [HAN.GetName] to the Trias"
  
  ###Opinion###
  bav_trias_result:0 "Results of the Triaspolitik"

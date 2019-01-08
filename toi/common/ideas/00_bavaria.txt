@@ -1,5 +1,23 @@
 ideas = {
 	country = {
+		BAV_member_trias = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_neutrality_drift_bonus
+		}
+	
 		BAV_bavindustry = {
 			allowed = {
 				original_tag = BAV
@@ -1026,7 +1044,7 @@ ideas = {
 			}
 			
 			available = {
-				has_country_flag = "Triaspolitik of Maximilian II"
+				has_country_flag = BAV_triaspolitik_maximilian_ii
 			}
 
 			traits = { 

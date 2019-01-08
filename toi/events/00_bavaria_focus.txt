@@ -185,7 +185,15 @@ country_event = {
 	option = {
 		name = bavariafocus.6.a
 		ai_chance = { 
-			factor = 50
+			factor = 30
+			modifier = {
+				factor = 70
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 80
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
 			modifier = {
 				factor = 60
 				has_opinion_modifier = bav_tried_common_policy
@@ -208,7 +216,15 @@ country_event = {
 	option = {
 		name = bavariafocus.6.b
 		ai_chance = { 
-			factor = 30
+			factor = 70
+			modifier = {
+				factor = 30
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
 			modifier = {
 				factor = 40
 				has_opinion_modifier = bav_tried_common_policy
@@ -295,6 +311,18 @@ country_event = {
 		ai_chance = { 
 			factor = 50
 			modifier = {
+				factor = 100
+				has_idea = BAV_member_trias
+			}
+			modifier = {
+				factor = 70
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 80
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
 				factor = 70
 				has_opinion_modifier = bav_tried_common_policy
 			}
@@ -324,6 +352,18 @@ country_event = {
 		name = bavariafocus.8.b
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 0
+				has_idea = BAV_member_trias
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
 			modifier = {
 				factor = 30
 				has_opinion_modifier = bav_tried_common_policy
@@ -357,6 +397,18 @@ country_event = {
 		ai_chance = { 
 			factor = 50
 			modifier = {
+				factor = 100
+				has_idea = BAV_member_trias
+			}
+			modifier = {
+				factor = 70
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 80
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
 				factor = 70
 				has_opinion_modifier = bav_tried_common_policy
 			}
@@ -378,6 +430,18 @@ country_event = {
 		name = bavariafocus.9.b
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 0
+				has_idea = BAV_member_trias
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
 			modifier = {
 				factor = 30
 				has_opinion_modifier = bav_tried_common_policy
@@ -1167,5 +1231,287 @@ country_event = {
 	
 	option = {
 		name = bavariafocus.44.a
+	}
+}
+
+#Invite to Trias - WUR
+country_event = {
+	id = bavariafocus.45
+	title = bavariafocus.45.t
+	desc = bavariafocus.45.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.45.a
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 60
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 70
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
+				factor = 60
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 80
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_accept
+		
+		hidden_effect = {
+			BAD = {
+				country_event = { id = bavariafocus.48 days = 3 }
+			}
+			BAV = {
+				country_event = { id = bavariafocus.49 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = bavariafocus.45.b
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 40
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
+				factor = 40
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 20
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.47 days = 3 }
+			}
+		}
+	}
+}
+
+#Invite to Trias - BAD
+country_event = {
+	id = bavariafocus.48
+	title = bavariafocus.48.t
+	desc = bavariafocus.48.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.48.a
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 60
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 70
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
+				factor = 60
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 80
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_accept
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.46 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = bavariafocus.48.b
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 40
+				has_country_flag = WUR_stance_middle_bav_accepted
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = WUR_stance_middle_both_accepted
+			}
+			modifier = {
+				factor = 40
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 20
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.47 days = 3 }
+			}
+		}
+	}
+}
+
+#Invite Trias (good)
+country_event = {
+	id = bavariafocus.46
+	title = bavariafocus.46.t
+	desc = bavariafocus.46.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			WUR = {
+				add_ideas = BAV_member_trias
+			}
+			BAD = {
+				add_ideas = BAV_member_trias
+			}
+			BAV = {
+				add_ideas = BAV_member_trias
+			}
+		}
+	}
+	
+	option = {
+		name = bavariafocus.46.a
+	}
+}
+
+#Invite Trias - WUR (good)
+country_event = {
+	id = bavariafocus.49
+	title = bavariafocus.49.t
+	desc = bavariafocus.49.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.49.a
+	}
+}
+
+#Invite Trias (bad)
+country_event = {
+	id = bavariafocus.47
+	title = bavariafocus.47.t
+	desc = bavariafocus.47.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.47.a
+	}
+}
+
+#Invite to Trias - Middle
+country_event = {
+	id = bavariafocus.50
+	title = bavariafocus.50.t
+	desc = bavariafocus.50.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.50.a
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 60
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 80
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_accept
+		
+		hidden_effect = {
+			add_ideas = BAV_member_trias
+			BAV = {
+				country_event = { id = bavariafocus.51 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = bavariafocus.50.b
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 40
+				has_opinion_modifier = bav_tried_common_policy
+			}
+			modifier = {
+				factor = 20
+				has_opinion_modifier = bav_common_policy
+			}
+		}
+		custom_effect_tooltip = BAV_customeffect_sueddeutscherzollverein_deny
+		
+		hidden_effect = {
+			BAV = {
+				country_event = { id = bavariafocus.52 days = 3 }
+			}
+		}
+	}
+}
+
+#Invite Trias - Middle (good)
+country_event = {
+	id = bavariafocus.51
+	title = bavariafocus.51.t
+	desc = bavariafocus.51.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.51.a
+	}
+}
+
+#Invite Trias - Middle (bad)
+country_event = {
+	id = bavariafocus.52
+	title = bavariafocus.52.t
+	desc = bavariafocus.52.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bavariafocus.52.a
 	}
 }
