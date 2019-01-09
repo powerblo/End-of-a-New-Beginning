@@ -1,0 +1,148 @@
+﻿add_namespace = holland_generals
+
+####Johannes Willem Berganius promotion
+country_event = {
+	id = holland_generals.1
+	title = holland_generals.1.t
+	desc = holland_generals.1.d
+
+	trigger = {
+	  date < 1887.12.12
+	  date > 1886.12.12
+
+	  original_tag = HOL
+
+	  HOL = {
+	     has_id 18151 = {
+	         limit = {
+	             is_field_marshal = no
+	            }
+	        }
+	    }
+	}
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	option = {
+		name = holland_generals.1.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+         limit = {
+          has_unit_leader = 18151
+         }
+          remove_unit_leader = 18151
+        }
+
+		create_field_marshal = {
+	     name = "Johannes Willem Bergansius"
+	     picture = ""
+	     traits = { }
+	     skill = 3
+	     attack_skill = 1
+	     defense_skill = 1
+	     planning_skill = 1
+	     logistics_skill = 1
+	     id = 18151
+        }
+	}	
+}
+
+####Johan Wilhelm Blanken promotion
+country_event = {
+	id = holland_generals.2
+	title = holland_generals.2.t
+	desc = holland_generals.2.d
+
+	trigger = {
+	  date < 1861.19.02
+	  date > 1861.19.02
+
+	  original_tag = HOL
+
+	  HOL = {
+	     has_id 18152 = {
+	         limit = {
+	             is_field_marshal = no
+	            }
+	        }
+	    }
+	}
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	option = {
+		name = holland_generals.2.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+         limit = {
+          has_unit_leader = 18152
+         }
+          remove_unit_leader = 18152
+        }
+
+		create_field_marshal = {
+	     name = "Johan Wilhelm Blanken"
+	     picture = ""
+	     traits = { }
+	     skill = 3
+	     attack_skill = 1
+	     defense_skill = 1
+	     planning_skill = 1
+	     logistics_skill = 1
+	     id = 18152
+        }
+	}	
+}
+
+###Huibert Gerard Boumeester promotie
+country_event = {
+	id = holland_generals.3
+	title = holland_generals.3.t
+	desc = holland_generals.3.d
+
+	trigger = {
+	  date < 1878.16.01
+	  date > 1878.16.01
+
+	  original_tag = INS
+
+	  INS = {
+	     has_id 18153 = {
+	         limit = {
+	             is_field_marshal = no
+	            }
+	        }
+	    }
+	}
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	option = {
+		name = holland_generals.3.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+         limit = {
+          has_unit_leader = 18153
+         }
+          remove_unit_leader = 18153
+        }
+
+		create_field_marshal = {
+	     name = "Huibert Gerard Boumeester"
+	     picture = ""
+	     traits = { }
+	     skill = 3
+	     attack_skill = 1
+	     defense_skill = 1
+	     planning_skill = 1
+	     logistics_skill = 1
+	     id = 18153
+        }
+	}	
+}
