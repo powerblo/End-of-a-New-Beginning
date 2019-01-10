@@ -199,7 +199,7 @@
 
   create_country_leader = {
     name = "Napoléon III"
-    desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+    desc = POLITICS_NAPOLEON_III_DESC
     picture = "Portrait_FRA_Napoleon_III.dds"
     expire = "1865.1.1"
     ideology = absolutism
@@ -284,7 +284,7 @@
   # https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Certain_de_Canrobert
   create_field_marshal = {
     name = "François Certain de Canrobert"
-    picture = "Portrait_FRA_François_Certain_de_Canrobert.dds"
+    picture = "Portrait_FRA_Francois_Certain_de_Canrobert.dds"
 	id = 178905
     traits = { 
       career_officer
@@ -537,7 +537,7 @@
   # https://fr.wikipedia.org/wiki/Abel_Douay
   create_corps_commander = {
     name = "Abel Douay"
-    picture = "Portrait_FRA_Abel Douay.dds"
+    picture = "Portrait_FRA_Abel_Douay.dds"
 	id = 178927
     traits = {
 		career_officer
@@ -545,6 +545,23 @@
 	}
     skill = 1
     attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
+  }
+
+  # https://fr.wikipedia.org/wiki/Pierre_Hippolyte_Publius_Renault
+  # http://military-photos.com/renault.htm
+  create_corps_commander = {
+    name = "Pierre Hippolyte Publius Renault"
+    picture = "Portrait_FRA_Pierre_Hippolyte_Publius_Renault.dds"
+	id = 178936
+    traits = {
+		career_officer
+		trait_reckless
+	}
+    skill = 2
+    attack_skill = 2
   	defense_skill = 1
   	planning_skill = 1
   	logistics_skill = 1

@@ -1,0 +1,717 @@
+﻿add_namespace = SERpolitical
+
+country_event = { #Tenka's Conspiracy
+	id = SERpolitical.1
+	title = SERpolitical.1.t
+	desc = SERpolitical.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = SER
+		date > 1857.9.10
+	}
+	
+	option = {
+		name = SERpolitical.1.a
+		ai_chance = { factor = 100 }
+        hidden_effect = {
+            country_event = { id = SERpolitical.2 days = 10 }
+        }       
+	}
+	
+}
+
+country_event = { #Conspirators
+	id = SERpolitical.2
+	title = SERpolitical.2.t
+	desc = SERpolitical.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.2.a #Execution
+		ai_chance = { factor = 90 }
+        add_political_power = 50
+        hidden_effect = {
+            country_event = { id = SERpolitical.3 days = 10 }
+        }       
+	}
+	
+    option = {
+		name = SERpolitical.2.b #Life sentence
+		ai_chance = { factor = 10 }
+        add_political_power = 20
+        hidden_effect = { country_event = { id = SERpolitical.4 days = 10 } }
+	}
+}
+
+country_event = { #Reduce sentence
+	id = SERpolitical.3
+	title = SERpolitical.3.t
+	desc = SERpolitical.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.3.a #Reduce sentence
+		ai_chance = { factor = 90 }
+        add_political_power = -50
+        add_stability = 0.01
+        hidden_effect = { country_event = { id = SERpolitical.4 days = 15 } }
+	}
+	
+    option = {
+		name = SERpolitical.3.b #Execution
+		ai_chance = { factor = 10 }
+        add_stability = -0.05
+        add_war_support = -0.02
+        hidden_effect = { country_event = { id = SERpolitical.4 days = 15 } }
+	}
+}
+
+country_event = { #Coup
+	id = SERpolitical.4
+	title = SERpolitical.4.t
+	desc = SERpolitical.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.4.a #Pressure them
+		ai_chance = { factor = 90 }
+        add_political_power = -20
+        add_stability = 0.1
+        hidden_effect = { country_event = { id = SERpolitical.5 days = 90 } }
+	}
+	
+    option = {
+		name = SERpolitical.4.b #Leave them
+		ai_chance = { factor = 10 }
+        add_political_power = 20
+        add_stability = -0.05
+        hidden_effect = { country_event = { id = SERpolitical.5 days = 90 } }
+	}
+}
+
+country_event = { #Pressure for an assembly
+	id = SERpolitical.5
+	title = SERpolitical.5.t
+	desc = SERpolitical.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.5.a
+		ai_chance = { factor = 100 }
+        add_political_power = -100
+        add_stability = -0.1
+        hidden_effect = { country_event = { id = SERpolitical.6 days = 90 } }
+	}
+}
+
+country_event = { #Situation destabilizing 
+	id = SERpolitical.6
+	title = SERpolitical.6.t
+	desc = SERpolitical.6.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.6.a
+		ai_chance = { factor = 100 }
+        add_political_power = -50
+        add_stability = -0.02
+        hidden_effect = { country_event = { id = SERpolitical.7 days = 90 } }
+	}
+}
+
+country_event = { #Elections requests
+	id = SERpolitical.7
+	title = SERpolitical.7.t
+	desc = SERpolitical.7.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.7.a
+		ai_chance = { factor = 100 }
+        add_political_power = -50
+        hidden_effect = { country_event = { id = SERpolitical.8 days = 90 } }
+	}
+}
+
+country_event = { #Law 
+	id = SERpolitical.8
+	title = SERpolitical.8.t
+	desc = SERpolitical.8.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.8.a
+		ai_chance = { factor = 100 }
+        add_political_power = -100
+        hidden_effect = { country_event = { id = SERpolitical.9 days = 15 } }
+	}
+}
+
+country_event = { #Elections 
+	id = SERpolitical.9
+	title = SERpolitical.9.t
+	desc = SERpolitical.9.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.9.a
+		ai_chance = { factor = 100 }
+        add_political_power = -50
+        add_stability = -0.02
+        hidden_effect = { country_event = { id = SERpolitical.10 days = 10 } }
+	}
+}
+
+country_event = { #Saint Andrew starts 
+	id = SERpolitical.10
+	title = SERpolitical.10.t
+	desc = SERpolitical.10.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.10.a
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Saint_Andrew_Assembly
+        hidden_effect = { country_event = { id = SERpolitical.11 days = 15 } }
+	}
+}
+
+country_event = { #Saint Andrew
+	id = SERpolitical.11
+	title = SERpolitical.11.t
+	desc = SERpolitical.11.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.11.a #Obrenović
+		ai_chance = { factor = 95 }       
+        complete_national_focus = SER_Return_Of_Obrenovic_Dynasty
+        hidden_effect = { country_event = { id = SERpolitical.12 days = 15 } }
+	}
+    
+    option = {
+		name = SERpolitical.11.b #Karađorđević
+		ai_chance = { factor = 5 }
+        complete_national_focus = SER_Karadjordjevic_Dynasty_Remains
+	}	
+}
+
+country_event = { #OBRENOVIC1: Change ministers
+	id = SERpolitical.12
+	title = SERpolitical.12.t
+	desc = SERpolitical.12.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.12.a #Change
+		ai_chance = { factor = 100 }
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_political_power = 50
+        hidden_effect = { country_event = { id = SERpolitical.13 days = 10 } }
+	}
+}
+
+country_event = { #OBRENOVIC2: Mihailo
+	id = SERpolitical.13
+	title = SERpolitical.13.t
+	desc = SERpolitical.13.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.13.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.05
+        hidden_effect = { country_event = { id = SERpolitical.14 days = 30 } }
+	}
+}
+
+country_event = { #OBRENOVIC3: They accept
+	id = SERpolitical.14
+	title = SERpolitical.14.t
+	desc = SERpolitical.14.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.14.a #Dynastic right
+		ai_chance = { factor = 100 }
+        add_stability = 0.05
+        hidden_effect = { country_event = { id = SERpolitical.15 days = 30 } }
+	}
+}
+
+country_event = { #OBRENOVIC4: They refuse
+	id = SERpolitical.15
+	title = SERpolitical.15.t
+	desc = SERpolitical.15.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.15.a 
+		ai_chance = { factor = 100 }
+        add_stability = -0.02
+        add_political_power = -50
+	}
+}
+
+country_event = { #KARADORDEVIC1
+	id = SERpolitical.16
+	title = SERpolitical.16.t
+	desc = SERpolitical.16.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.16.a 
+		ai_chance = { factor = 95 }
+        add_stability = 0.02
+        add_political_power = -50
+        hidden_effect = { country_event = { id = SERpolitical.17 days = 15 } }
+	}
+    
+    option = {
+		name = SERpolitical.16.b 
+		ai_chance = { factor = 5 }
+        add_stability = -0.1
+        add_political_power = 50
+	}
+}
+
+country_event = { #KARADORDEVIC2: Villagers
+	id = SERpolitical.17
+	title = SERpolitical.17.t
+	desc = SERpolitical.17.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.17.a 
+		ai_chance = { factor = 95 }
+        add_political_power = -50
+        add_stability = 0.04
+        add_war_support = 0.04
+        hidden_effect = { country_event = { id = SERpolitical.18 days = 15 } }
+	}
+    
+    option = {
+		name = SERpolitical.17.b 
+		ai_chance = { factor = 5 }
+        add_stability = -0.1
+        add_war_support = -0.1
+	}
+}
+
+country_event = { #KARADORDEVIC3: Ease the living
+	id = SERpolitical.18
+	title = SERpolitical.18.t
+	desc = SERpolitical.18.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.18.a 
+		ai_chance = { factor = 95 }
+        add_political_power = -50
+        add_stability = 0.03
+        add_war_support = 0.01
+	}
+    
+    option = {
+		name = SERpolitical.18.a 
+		ai_chance = { factor = 5 }
+        add_stability = -0.1
+        add_war_support = -0.1
+	}
+}
+
+country_event = { #KARADORDEVIC4: Liberals
+	id = SERpolitical.19
+	title = SERpolitical.19.t
+	desc = SERpolitical.19.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.19.a #good
+		ai_chance = { factor = 100 }
+        add_political_power = -50
+        add_stability = 0.05
+        add_war_support = 0.02
+        add_popularity = {
+            ideology = centrism
+            popularity = 0.05
+        }
+	}
+    
+    option = {
+		name = SERpolitical.19.b #bad
+		ai_chance = { factor = 100 }
+        add_political_power = 100
+        add_stability = -0.05
+        add_popularity = {
+            ideology = centrism
+            popularity = -0.05
+        }
+	}
+}
+
+country_event = { #KARADORDEVIC: Assassination
+	id = SERpolitical.20
+	title = SERpolitical.20.t
+	desc = SERpolitical.20.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.20.a #good
+		ai_chance = { factor = 100 }
+        add_political_power = -100
+        add_stability = -0.1
+        hidden_effect = {
+            random_list = { 50 = { country_event = SERpolitical.21 }
+                        50 = { country_event = SERpolitical.22 }}    
+        }
+	}
+}
+
+country_event = { #KARADORDEVIC: Survive
+	id = SERpolitical.21
+	title = SERpolitical.21.t
+	desc = SERpolitical.21.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.21.a
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Knez_Survives
+	}
+}
+
+country_event = { #KARADORDEVIC: Dies
+	id = SERpolitical.22
+	title = SERpolitical.22.t
+	desc = SERpolitical.22.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpolitical.22.a
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Knez_Dies
+	}
+}
+
+add_namespace = SERpol
+
+country_event = { #Cukur
+	id = SERpol.1
+	title = SERpol.1.t
+	desc = SERpol.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = { date > 1862.6.1 }
+	
+	option = {
+		name = SERpol.1.a
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Cukur_Fountain
+	}
+}
+
+country_event = { #Cukur2
+	id = SERpol.2
+	title = SERpol.2.t
+	desc = SERpol.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpol.2.a
+		ai_chance = { factor = 100 }
+        hidden_effect = { country_event = { id = SERpol.3 } }
+	}
+}
+
+country_event = { #Cukur3
+	id = SERpol.3
+	title = SERpol.3.t
+	desc = SERpol.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpol.3.a
+		ai_chance = { factor = 100 }
+        hidden_effect = { country_event = { id = SERpol.4 days = 1 } }
+	}
+}
+
+country_event = { #Cukur4
+	id = SERpol.4
+	title = SERpol.4.t
+	desc = SERpol.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpol.4.a
+		ai_chance = { factor = 100 }
+        hidden_effect = { country_event = { id = SERpol.5 days = 15 } } 
+	}
+}
+
+country_event = { #Cukur5
+	id = SERpol.5
+	title = SERpol.5.t
+	desc = SERpol.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpol.5.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.1
+        add_war_support = 0.05
+        add_political_power = -100
+        complete_national_focus = SER_Turkish_Withdrawal
+	}
+}
+
+country_event = { #Withdrawal
+	id = SERpol.6
+	title = SERpol.6.t
+	desc = SERpol.6.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = { tag = SER date > 1866.10.1 }
+	
+	option = {
+		name = SERpol.6.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.01
+        add_war_support = 0.05
+        add_political_power = -50
+        hidden_effect = { country_event = { id = SERpol.7 days = 120 } }
+	}
+    
+    #option = {
+	#	name = SERpol.6.b
+	#	ai_chance = { factor = 100 }
+    #    add_stability = -0.05
+    #    add_war_support = -0.1
+	#}
+}
+
+country_event = { #Withdrawal accept
+	id = SERpol.7
+	title = SERpol.7.t
+	desc = SERpol.7.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERpol.7.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.01
+        add_war_support = 0.05
+        add_political_power = -50
+	}
+}
+
+add_namespace = SERmisc
+
+country_event = { #First Uprising
+	id = SERmisc.1
+	title = SERmisc.1.t
+	desc = SERmisc.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERmisc.1.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.1
+        add_war_support = 0.1
+	}
+}
+
+country_event = { #Second Uprising
+	id = SERmisc.2
+	title = SERmisc.2.t
+	desc = SERmisc.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SERmisc.2.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.1
+        add_war_support = 0.1
+	}
+}
+
+country_event = { #Vuk Karadzic
+	id = SERmisc.3
+	title = SERmisc.3.t
+	desc = SERmisc.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = { date > 1864.2.7 }
+	
+	option = {
+		name = SERmisc.3.a
+		ai_chance = { factor = 100 }
+        add_stability = 0.1
+        add_war_support = 0.1
+	}
+}
+
+country_event = { #Best man
+	id = SERmisc.4
+	title = SERmisc.4.t
+	desc = SERmisc.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = { date > 1864.2.7 }
+	
+	option = {
+		name = SERmisc.4.a #accept
+		ai_chance = { factor = 100 }
+        add_war_support = 0.05
+        add_opinion_modifier = { target = MNT modifier = small_increase }
+	}
+    
+    option = {
+		name = SERmisc.4.b #decline 
+		ai_chance = { factor = 100 }
+        add_political_power = 50
+        add_stability = -0.05
+        add_war_support = -0.05
+	}
+}
+
+#country_event = { #START
+#	id = SERmisc.5
+#	title = SERmisc.5.t
+#	desc = SERmisc.5.d
+#	picture = GFX_report_event_second_vienna_award_pact
+#	
+#	fire_only_once = yes
+#	
+#	trigger = { date > 1857.5.10 }
+#	
+#	option = {
+#		name = SERmisc.5.a 
+#		ai_chance = { factor = 100 }
+#	}
+#}

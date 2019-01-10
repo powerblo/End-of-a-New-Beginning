@@ -10,33 +10,36 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    HOL_William_III
     victorian_era
 	law_victorian_army
-    agrarian
-    no_heir
-    absolute_monarchy
+    industrializing
+    has_heir
+    parliamentary_monarchy
 
     civilian_economy
-    limited_exports
-    two_percent
-    normal_taxes
-	cl_restricted
+    free_trade
+    three_percent
+    high_taxes
+	cl_legal
 
     stagnation_growth
     border_control
 	volunteer_only
     limited_equality
-    absolutism
+    property_owners_suffrage
 
-    no_constitution
-    no_elections
+    limited_constitution
+    limited_elections
 
     privileged_education
-    state_religion
-	religion_catholic
+    secular_state
+	religion_protestant
         #NATIONAL SPIRITS
-	
+    HOL_idea_treaty_of_london
+    HOL_idea_loss_belgium
+    HOL_idea_tiendaagse_veldtocht
+    HOL_idea_will_industrialize
   }
   
   puppet = INS
@@ -56,10 +59,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 20
+        popularity = 46
       }
       traditional_conservatism = {
-        popularity = 80
+        popularity = 54
       }
       radical_democracy = {
         popularity = 0
@@ -108,6 +111,17 @@
 	}
 }
 
+diplomatic_relation = {
+    country = BEL
+    relation = non_aggression_pact
+    active = yes
+  }
+
+add_opinion_modifier = {
+    target = BEL
+    modifier = HOL_political_tension
+  }
+
   # POLITICAL LEADERS
 
 create_country_leader = {
@@ -126,31 +140,33 @@ create_country_leader = {
     ideology = absolutism
 }
 
+create_country_leader = {
+    name = "Johan Rudolph Thorbecke"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HOL_Johan_Thorbecke.dds"
+    expire = 1900.1.1
+    ideology = radical_liberal
+}
+
+create_country_leader = {
+    name = "Pieter Philip van Bosse"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HOL_William_III.dds"
+    expire = 1900.1.1
+    ideology = liberal_social
+}
+
+create_country_leader = {
+    name = "H.F.Ch. baron Forstner van Dambenoy"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HOL_William_III.dds"
+    expire = 1900.1.1
+    ideology = reactionary
+}
+
 create_corps_commander = {
   name = "Johan D.C.C.W. d'Ablaing van Giessenburg"
   picture = "Portrait_HOL_Johan_Daniel_Cornelis_Carel_Willem_Ablaing_van_Giessenburg.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Philips Godard Reyndert Snouckaert van Schauburg"
-  picture = ""
-  traits = { }
-  skill = 3
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander = {
-  name = "Désiré Lambert de Brabant"
-  picture = "Portrait_HOL_Desire_Lambert_de_Brabant.dds"
   traits = { }
   skill = 3
   attack_skill = 1
@@ -280,4 +296,74 @@ create_corps_commander = {
 	logistics_skill = 1
 }
 
+create_corps_commander = {
+  name = "H.F.Ch. baron Forstner van Dambenoy"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
 }
+
+create_corps_commander = {
+  name = "Abraham Jacobus Frederik Egter van Wissekerke"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+
+create_field_marshal = {
+  name = "Willem Vincent Reinier Karel Baud"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "Johannes Willem Bergansius"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+  id=18151
+}
+
+create_corps_commander = {
+  name = "Johan Wilhelm Blanken"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+  id=18152
+}
+
+create_corps_commander = {
+  name = "Hendrik Frederik Karel Duycker"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+  id=18152
+}
+
+}
+
