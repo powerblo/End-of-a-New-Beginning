@@ -2281,7 +2281,7 @@ country_event = {
         }
         clr_country_flag = ACW_free_offer_return
         USA = { set_country_flag = ACW_csa_fsa_peace_offer }
-        USA = { country_event = { id = acw.51 hours = 6 } }
+        USA = { country_event = { id = acw.50 hours = 6 } }
     }
     option = {
         name = acw.49.c
@@ -2991,11 +2991,39 @@ country_event = {
             }
         }
         USA = {
-            add_ideas = {
-                socialist_republic
+            swap_ideas = {
+                remove_idea = presidential_republic
+                add_idea = socialist_state
             }
+            swap_ideas = {
+                remove_idea = usa_slavery_law
+                add_idea = limited_equality
+            }
+            load_focus_tree = usa_manhattan_commune
+            set_country_flag = usa_mhc_won_war
             set_politics = {
                 ruling_party = anarchism
+            }
+            create_country_leader = {
+                name = "Uriah Smith Stephens"
+                desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                picture = ""
+                expire = "1947.1.1"
+                ideology = liberal_social
+            }
+            create_country_leader = {
+                name = "Friedrich Sorge"
+                desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                picture = ""
+                expire = "1947.1.1"
+                ideology = owensim
+            }
+            create_country_leader = {
+                name = "Joseph Dietzgen"
+                desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                picture = ""
+                expire = "1947.1.1"
+                ideology = marxism
             }
             add_popularity = {
                 ideology = anarchism

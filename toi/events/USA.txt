@@ -6510,6 +6510,474 @@ country_event = {
 			set_country_flag = USA_Houston_Revolt_Marked
 		}
 }
+#Manhattan Commune MHC#
+#Matters of the Rich Estates
+country_event = {
+		id = usa.117
+		title = usa.117.t
+		desc = usa.117.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.117.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.117.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.117.c
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Executive Power
+country_event = {
+		id = usa.118
+		title = usa.118.t
+		desc = usa.118.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.118.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.118.b
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.118.c
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Social Ideals
+country_event = {
+		id = usa.119
+		title = usa.119.t
+		desc = usa.119.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.119.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.c
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.e
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Political Parties Issue
+country_event = {
+		id = usa.120
+		title = usa.120.t
+		desc = usa.120.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.120.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.120.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.120.c
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Democratic Spirit
+country_event = {
+		id = usa.121
+		title = usa.121.t
+		desc = usa.121.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.121.a
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = -0.1
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.121.b
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = USA_mhc_estates
+						has_completed_focus = USA_mhc_executive
+						has_completed_focus = USA_mhc_socialist_ideals
+						has_completed_focus = USA_mhc_political_parties
+						has_completed_focus = USA_mhc_democratic_spirit
+					}
+					country_event = { id = usa.122 }
+				}
+			}
+		}
+}
+#MHC Election
+country_event = {
+		id = usa.122
+		title = usa.122.t
+		desc = usa.122.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		immediate = {
+			set_variable = {
+				var = MHC_anarchism_points
+				value = party_popularity@anarchism
+			}
+			set_variable = {
+				var = MHC_social_points
+				value = party_popularity@social_egalitarianism
+			}
+			set_variable = {
+				var = MHC_collective_points
+				value = party_popularity@collectivist_socialism
+			}
+			set_variable = {
+				var = MHC_communist_points
+				value = party_popularity@vanguard_communism
+			}
+		}
+		
+		option = {
+			name = usa.122.a
+			trigger = {
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_social_points }
+					check_variable = { MHC_anarchism_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_collective_points }
+					check_variable = { MHC_anarchism_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_communist_points }
+					check_variable = { MHC_anarchism_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = anarchism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_warren_flag
+		}
+		option = {
+			name = usa.122.b
+			trigger = {
+				OR = {
+					check_variable = { MHC_social_points > MHC_anarchism_points }
+					check_variable = { MHC_social_points = MHC_anarchism_points }
+				}
+				OR = {
+					check_variable = { MHC_social_points > MHC_collective_points }
+					check_variable = { MHC_social_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_social_points > MHC_communist_points }
+					check_variable = { MHC_social_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = social_egalitarianism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_uriah_flag
+		}
+		option = {
+			name = usa.122.c
+			trigger = {
+				OR = {
+					check_variable = { MHC_collective_points > MHC_anarchism_points }
+					check_variable = { MHC_collective_points = MHC_anarchism_points }
+				}
+				OR = {
+					check_variable = { MHC_collective_points > MHC_social_points }
+					check_variable = { MHC_collective_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_collective_points > MHC_communist_points }
+					check_variable = { MHC_collective_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = collectivist_socialism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_sorge_flag
+		}
+		option = {
+			name = usa.122.e
+			trigger = {
+				OR = {
+					check_variable = { MHC_communist_points > MHC_social_points }
+					check_variable = { MHC_communist_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_communist_points > MHC_collective_points }
+					check_variable = { MHC_communist_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_communist_points > MHC_anarchism_points }
+					check_variable = { MHC_communist_points = MHC_anarchism_points }
+				}
+			}
+			set_politics = {
+				ruling_party = vanguard_communism
+				elections_allowed = no
+			}
+			set_country_flag = USA_mhc_dietzgen_flag
+		}
+}
+#Marx Invited
+country_event = {
+		id = usa.123
+		title = usa.123.t
+		desc = usa.123.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.123.a
+			add_political_power = 10
+		}
+		option = {
+			name = usa.123.b
+			trigger = {
+				NOT = {
+					any_other_country = {
+						has_country_leader = {
+							name = "Karl Marx"
+							ruling_only = yes
+						}
+					}
+				}
+			}
+			set_country_flag = USA_mhc_marx_leader
+		}
+}
 
 
 
