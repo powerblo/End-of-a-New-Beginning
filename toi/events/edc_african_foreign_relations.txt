@@ -2073,3 +2073,249 @@ news_event = { #the scramble begins
 		}
 	}
 }
+
+country_event = {###tribe - raid neighbour
+	id = EDC_afr.43
+	title = EDC_afr.43.t
+	desc = EDC_afr.43.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = {#send a small force: 500 - should always be true, minium a country starts with and the required amount to deside to raid
+		name = EDC_afr.43.a
+		trigger={
+			check_variable = { Tribal_army_num > 499 }
+		}
+		subtract_from_variable={Tribal_army_num = 500}
+		set_country_flag = sent_500_troops_on_a_raid
+		##10% chance to intercept
+		random_list = {
+			10 = {
+				FROM.FROM = {country_event = { id = EDC_afr.45 }}
+			}
+			90 = {
+			}
+		}
+		
+	}
+	option = {#send a medium force: 1000
+		name = EDC_afr.43.b
+		trigger={
+			check_variable = { Tribal_army_num > 999 }
+		}
+		subtract_from_variable={Tribal_army_num = 1000}
+		set_country_flag = sent_1000_troops_on_a_raid
+		random_list = {
+			25 = {
+				FROM.FROM = {country_event = { id = EDC_afr.45 }}
+			}
+			75 = {
+			}
+		}
+		##25% chance to intercept
+	}
+	option = {#send a large force: 2500
+		name = EDC_afr.43.c
+		trigger={
+			check_variable = { Tribal_army_num > 2499 }
+		}
+		subtract_from_variable={Tribal_army_num = 2500}
+		set_country_flag = sent_2500_troops_on_a_raid
+		random_list = {
+			50 = {
+				FROM.FROM = {country_event = { id = EDC_afr.45 }}
+			}
+			50 = {
+			}
+		}
+		##50% chance to intercept
+	}
+	option = {#send them all - risks a major confrentation
+		name = EDC_afr.43.e
+		##90% chance to intercept
+		random_list = {
+			50 = {
+				FROM.FROM = {country_event = { id = EDC_afr.45 }}
+			}
+			40={
+				FROM.FROM = {country_event = { id = EDC_afr.46 }}
+			}
+			10 = {
+			}
+		}
+		set_country_flag = @ROOT_sent_all_troops_on_a_raid
+	}
+}
+
+country_event = {###result of the raid
+	id = EDC_afr.44
+	title = EDC_afr.44.t
+	desc = EDC_afr.44.d
+	picture = GFX_report_event_chinese_army_training
+	#only one result will be shown, the desc will be dynamic based on troops sent,and  whether they where intercepted successfully
+	#this will only fire if a war did not break out over the raid
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EDC_afr.44.a
+		if={
+			limit={
+				has_country_flag = sent_500_troops_on_a_raid
+			}
+			add_to_variable={Tribal_army_num = 500}
+			random_list = {
+				50 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						random_neighbor_state={
+							#limit = {
+							#	owner = FROM.FROM
+							#}
+							add_manpower = -100
+						}
+						random_owned_state={
+							add_manpower = 100
+						}
+					}
+					else={
+						add_political_power = 10
+					}
+				}
+				20 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						random_neighbor_state={
+							limit = {
+								owner = FROM.FROM
+							}
+							add_manpower = -250
+						}
+						random_owned_state={
+							add_manpower = 250
+						}
+					}
+					else={
+						add_political_power = 25
+					}
+				}
+				10 = {
+					add_political_power = 100
+				}
+				8 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						random_neighbor_state={
+							limit = {
+								owner = FROM.FROM
+							}
+							add_manpower = -500
+						}
+						random_owned_state={
+							add_manpower = 500
+						}
+					}
+					else={
+						add_political_power = 50
+					}
+				}
+				6 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						random_neighbor_state={
+							limit = {
+								owner = FROM.FROM
+							}
+							add_manpower = -500
+						}
+						random_owned_state={
+							add_manpower = 500
+						}
+						add_political_power = 100
+					}
+					else={
+						add_political_power = 250
+					}
+				}
+				5 = {
+					add_political_power = 250
+					army_experience = 15
+				}
+				1={
+					add_to_variable={Tribal_army_num = 150}
+				}
+			}
+			
+		}
+		else_if={
+			limit={
+				has_country_flag = sent_1000_troops_on_a_raid
+			}
+		}
+		else_if={
+			limit={
+				has_country_flag = sent_2500_troops_on_a_raid
+			}
+		}
+		else={
+			
+		}
+	}
+}
+
+
+country_event = {###we are being raided
+	id = EDC_afr.45
+	title = EDC_afr.45.t
+	desc = EDC_afr.45.d
+	picture = GFX_report_event_chinese_army_training
+	#only one result will be shown, the desc will be dynamic based on troops sent,and  whether they where intercepted successfully
+	#this will only fire if a war did not break out over the raid
+	
+	is_triggered_only = yes
+	
+	option = {#send a Sortee after them, cost scaled base on their troop count
+		name = EDC_afr.45.a
+		trigger={
+			OR={
+				AND={
+					FROM = {has_country_flag = sent_500_troops_on_a_raid}
+					check_variable = { Tribal_army_num > 600 }
+				}
+				AND={
+					FROM = {has_country_flag = sent_100_troops_on_a_raid}
+					check_variable = { Tribal_army_num > 1100 }
+				}
+				AND={
+					FROM = {has_country_flag = @ROOT_sent_2500_troops_on_a_raid}
+					check_variable = { Tribal_army_num > 2600 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {has_country_flag = sent_500_troops_on_a_raid}
+			}
+			
+		}
+		##10% chance to intercept
+	}
+	option = {#we cannont afford to pursue every raider group
+		name = EDC_afr.45.b
+		##10% chance to intercept
+	}
+	option = {#this means war!
+		name = EDC_afr.45.c
+		
+		##10% chance to intercept
+	}
+}
