@@ -2281,7 +2281,7 @@ country_event = {
         }
         clr_country_flag = ACW_free_offer_return
         USA = { set_country_flag = ACW_csa_fsa_peace_offer }
-        USA = { country_event = { id = acw.51 hours = 6 } }
+        USA = { country_event = { id = acw.50 hours = 6 } }
     }
     option = {
         name = acw.49.c
@@ -2992,11 +2992,11 @@ country_event = {
         }
         USA = {
             swap_ideas = {
-                remove_idea = presidential_system
+                remove_idea = presidential_republic
                 add_idea = socialist_state
             }
             swap_ideas = {
-                remove_idea = acw_slavery_law
+                remove_idea = usa_slavery_law
                 add_idea = limited_equality
             }
             load_focus_tree = usa_manhattan_commune
