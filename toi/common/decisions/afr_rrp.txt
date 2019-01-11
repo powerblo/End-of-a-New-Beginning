@@ -377,7 +377,7 @@ afr_rrp_railway_line_5 = {
 afr_rrp_railway_infrastructure_construction = {
 
     available = {
-		has_technology = iron_railways
+		has_tech = iron_railways
     }
 
     visible = {
@@ -431,9 +431,9 @@ afr_rrp_main_railway_route_construction = {
 
     available = {
 		AND = {
-				has_technology = iron_railways
-				has_technology = steam_engine
-				has_technology = steam_locomotive
+				has_tech = iron_railways
+				has_tech = steam_engine
+				has_tech = steam_locomotive
 		}
     }
 

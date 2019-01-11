@@ -277,52 +277,52 @@ unidustrialized_warfare = {
 		}
 	}
 	
-     eoanb_mission_war_against_tribal = {
-          allowed = { 
-			NOT = {
-				OR={
-					afr_is_tribal = yes
-					capital = is_in_colonial_region
-				}
-			}
-			NOT={
-				has_global_flag = scramble_for_africa
-			}
-		  }          
-          available = {                            
-				any_country={ # is at war with a african tribal
-					limit={
-						afr_is_tribal = yes
-						capital = is_in_colonial_region
-					}
-					NOT = {has_war_with = ROOT  }
-				}			   
-          }
-          activation = {      
-				any_country={ # is at war with a african tribal
-					limit={
-						afr_is_tribal = yes
-						capital = is_in_colonial_region
-					}
-					has_war_with = ROOT  
-				}
+     # eoanb_mission_war_against_tribal = {
+          # allowed = { 
+			# NOT = {
+				# OR={
+					# afr_is_tribal = yes
+					# ROOT={capital_scope = {is_in_colonial_region = yes}}
+				# }
+			# }
+			# NOT={
+				# has_global_flag = scramble_for_africa
+			# }
+		  # }          
+          # available = {                            
+				# every_country={ # is at war with a african tribal
+					# limit={
+						# afr_is_tribal = yes
+						# capital_scope = {is_in_colonial_region = yes}
+					# }
+					# NOT = {has_war_with = ROOT  }
+				# }			   
+          # }
+          # activation = {      
+				# any_country={ # is at war with a african tribal
+					# limit={
+						# afr_is_tribal = yes
+						# capital_scope = {is_in_colonial_region = yes}
+					# }
+					# has_war_with = ROOT  
+				# }
                                     
-          }
-          is_good = no                           # This mission is color coded to be a positive thing (not a crisis)
-          days_mission_timeout = 180              # How many days before the mission fails?
-          timeout_effect = {                      # What happens when we fail the mission?
-               any_country={ # is at war with a african tribal
-					limit={
-						afr_is_tribal = yes
-						capital = is_in_colonial_region
-						has_war_with = ROOT
-					}
-					white_peace = ROOT  
-				}           # forced to withdraw
-          }
-          complete_effect = {                    # What happens when we activate the mission i.e. mission success?              # Gain 50 PP
-          }
-     }
+          # }
+          # is_good = no                           # This mission is color coded to be a positive thing (not a crisis)
+          # days_mission_timeout = 180              # How many days before the mission fails?
+          # timeout_effect = {                      # What happens when we fail the mission?
+               # any_country={ # is at war with a african tribal
+					# limit={
+						# afr_is_tribal = yes
+						# capital_scope = {is_in_colonial_region = yes}
+						# has_war_with = ROOT
+					# }
+					# white_peace = ROOT  
+				# }           # forced to withdraw
+          # }
+          # complete_effect = {                    # What happens when we activate the mission i.e. mission success?              # Gain 50 PP
+          # }
+     # }
 }
 
 political_actions = {

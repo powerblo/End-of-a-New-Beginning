@@ -358,6 +358,32 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = oma_vic_intergrate_TCS
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 0
+		y = 6
+		completion_reward = {
+			annex_country = {
+				target = TCS
+				transfer_troops = yes
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_demand_TCS
+		}
+		bypass={
+			OR={
+				TCS = {exists = no}
+				owns_state = 658
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = oma_vic_western_question
 		icon = GFX_goal_focus_continent_west_europe
 		cost = 70
@@ -552,7 +578,7 @@ focus_tree = {
 		x = 12
 		y = 5
 		prerequisite = {
-			focus = oma_vic_economic_reforms
+			focus = oma_vic_invest_in_steamships
 		}
 		completion_reward={
 			swap_ideas={

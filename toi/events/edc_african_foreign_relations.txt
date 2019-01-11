@@ -2171,14 +2171,21 @@ country_event = {###result of the raid
 						limit ={
 							has_idea = tribal_slavery
 						}
-						random_neighbor_state={
-							#limit = {
-							#	owner = FROM.FROM
-							#}
-							add_manpower = -100
-						}
-						random_owned_state={
-							add_manpower = 100
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 100
+							}
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -100
+							}
 						}
 					}
 					else={
@@ -2190,14 +2197,21 @@ country_event = {###result of the raid
 						limit ={
 							has_idea = tribal_slavery
 						}
-						random_neighbor_state={
-							limit = {
-								owner = FROM.FROM
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 250
 							}
-							add_manpower = -250
-						}
-						random_owned_state={
-							add_manpower = 250
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -250
+							}
 						}
 					}
 					else={
@@ -2212,14 +2226,21 @@ country_event = {###result of the raid
 						limit ={
 							has_idea = tribal_slavery
 						}
-						random_neighbor_state={
-							limit = {
-								owner = FROM.FROM
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 500
 							}
-							add_manpower = -500
-						}
-						random_owned_state={
-							add_manpower = 500
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -500
+							}
 						}
 					}
 					else={
@@ -2231,14 +2252,21 @@ country_event = {###result of the raid
 						limit ={
 							has_idea = tribal_slavery
 						}
-						random_neighbor_state={
-							limit = {
-								owner = FROM.FROM
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 500
 							}
-							add_manpower = -500
-						}
-						random_owned_state={
-							add_manpower = 500
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -500
+							}
 						}
 						add_political_power = 100
 					}
@@ -2259,6 +2287,103 @@ country_event = {###result of the raid
 		else_if={
 			limit={
 				has_country_flag = sent_1000_troops_on_a_raid
+			}
+			add_to_variable={Tribal_army_num = 1000}
+			random_list = {
+				45 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 200
+							}
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -200
+							}
+						}
+					}
+					else={
+						add_political_power = 20
+					}
+				}
+				20 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 400
+							}
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -400
+							}
+						}
+					}
+					else={
+						add_political_power = 25
+					}
+				}
+				12 = {
+					add_political_power = 200
+				}
+				7 = {#recruit border tribe
+					add_to_variable={Tribal_army_num = 100}
+				}
+				8 = {
+					if = {
+						limit ={
+							has_idea = tribal_slavery
+						}
+						FROM.FROM={
+							random_neighbor_state={
+								limit = {
+									owner = ROOT
+								}
+								add_manpower = 600
+							}
+							random_owned_state={
+								limit={
+									any_neighbor_state = {
+										owner = ROOT
+									}
+								}
+								add_manpower = -6000
+							}
+						}
+						add_political_power = 100
+					}
+					else={
+						add_political_power = 250
+					}
+				}
+				5 = {
+					army_experience = 25
+				}
+				2={
+				
+				}
+				1={
+					add_to_variable={Tribal_army_num = 200}
+				}
 			}
 		}
 		else_if={
