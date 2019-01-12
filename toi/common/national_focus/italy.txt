@@ -817,28 +817,6 @@ focus_tree = {
 		}
 
 	}
-	#focus = {
-		#id = ITA_Corpo_Aeronautico_Militare
-		#icon = GFX_focus_ITA_Balloon
-		#cost = 70
-		#prerequisite = {
-			#focus = ITA_Deal_with_Brigandage
-		#}
-		#x = 29
-		#y = 4
-
-	#}
-	#focus = {
-		#id = ITA_Expand_Balloon_Activites
-		#icon = GFX_focus_ITA_Balloon
-		#cost = 70
-		#prerequisite = {
-			focus = ITA_Corpo_Aeronautico_Militare
-		#}
-		#x = 29
-		#y = 5
-
-	}
 	focus = {
 		id = ITA_Partial_Unification_of_the_Army
 		icon = GFX_focus_ITA_Royal_Army
@@ -857,6 +835,10 @@ focus_tree = {
 		#}
 		x = 25
 		y = 6
+
+		completion_reward = {
+			remove_ideas = ITA_Unorganized_Army
+		}
 
 	}
 	focus = {
