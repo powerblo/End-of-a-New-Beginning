@@ -351,6 +351,171 @@ ideas = {
 				training_time_army_factor = -0.05
 			}
 		}
+		ENG_idea_wolseley_plan = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = { has_idea = law_trench_infantry }
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_org_Factor = 0.05
+				max_planning = 0.05
+			}
+		}
+		ENG_idea_wolseley_plan_2 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = { has_idea = law_trench_infantry }
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_org_Factor = 0.05
+				max_planning = 0.05
+				max_command_power = 10
+				command_power_gain_mult = 0.05
+			}
+		}
+		ENG_idea_jones_plan = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = { has_idea = law_trench_infantry }
+			
+			picture = chi_army_corruption3
+			
+			modifier = {
+				conscription = 0.005
+				army_core_defence_factor = 0.05
+				military_leader_cost_factor = -0.25
+			}
+		}
+		ENG_idea_jones_plan_2 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = { has_idea = law_trench_infantry }
+			
+			picture = chi_army_corruption3
+			
+			modifier = {
+				conscription = 0.005
+				army_core_defence_factor = 0.1
+				partisan_effect = 0.25
+				military_leader_cost_factor = -0.25
+			}
+		}
+		ENG_idea_cardwell_reforms = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = {
+				has_completed_focus = ENG_focus_create_new_military_offices
+				has_completed_focus = ENG_focus_new_service_weapons
+				has_completed_focus = ENG_focus_regimental_organization
+			}
+			
+			picture = new_deal
+			
+			modifier = {
+				political_power_factor = -0.05
+				army_org_Factor = -0.05
+				experience_gain_army_factor = -0.1
+			}
+		}
+		ENG_idea_army_reforms = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				#
+			}
+		}
+		ENG_idea_army_reforms_2 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				surrender_limit = 0.05
+			}
+		}
+		ENG_idea_army_reforms_3 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				surrender_limit = 0.05
+				max_planning = 0.05
+			}
+		}
+		ENG_idea_army_reforms_4 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				training_time_army_factor = 0.05
+				surrender_limit = 0.05
+				max_planning = 0.05
+				army_org_Factor = 0.05
+			}
+		}
+		ENG_idea_army_reforms_5 = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				training_time_army_factor = 0.05
+				non_core_manpower = 0.005
+				surrender_limit = 0.05
+				max_planning = 0.05
+				army_org_Factor = 0.05
+			}
+		}
 	}
 	political_advisor = {
 		ENG_political_advisor_crawshay_bailey = {
@@ -400,6 +565,14 @@ ideas = {
 			}
 
 			traits = { war_veteran }
+		}
+		ENG_political_advisor_edward_cardwell = {
+		
+			allowed = {
+				tag = ENG
+			}
+
+			traits = { efficient_administrator eoanb_trait_warmonger }
 		}
 	}
 	high_command = {

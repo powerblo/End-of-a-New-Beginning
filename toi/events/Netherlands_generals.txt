@@ -19,22 +19,20 @@ country_event = {
 	
 	is_triggered_only = no
 	fire_only_once = yes
+
+	hidden = yes
 	
-	option = {
-		name = holland_generals.1.a
-		ai_chance = { factor = 100 }
-
-		HOL = {
+	immediate = { 
+	    HOL = {
          every_unit_leader = {
-         limit = { has_id = 18151 }
-         promote_leader = yes
-         }
-        }	
+         	limit = { has_id = 18151 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
+           }
+          }
+        }
     }
-
-	option = {
-		name = holland_generals.1.b
-	}		
 }
 
 ####Johan Wilhelm Blanken promotion
@@ -61,10 +59,10 @@ country_event = {
 	immediate = { 
 	    HOL = {
          every_unit_leader = {
-         limit = { has_id = 18152 }
-         set_unit_leader_flag = promotion
-         unit_leader_event = {
-         id = holland_generals.6
+         	limit = { has_id = 18152 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
            }
           }
         }
@@ -91,18 +89,20 @@ country_event = {
 	
 	is_triggered_only = no
 	fire_only_once = yes
-	
-	option = {
-		name = holland_generals.3.a
-		ai_chance = { factor = 100 }
 
-		HOL = {
+	hidden = yes
+
+	immediate = { 
+	    INS = {
          every_unit_leader = {
-         limit = { has_id = 18153 }
-         promote_leader = yes
+         	limit = { has_id = 18153 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
+           	}
          }
         }
-	}
+    }
 }
 
 ### EVENT WHERE DUTCH EAST INDIES GIVES UP A GENERAL ###
@@ -116,9 +116,9 @@ country_event = {
 
 	immediate = {
 	 hidden_effect = {
-	 HOL = {
-	 save_event_target_as = netherlands_name
-	  }
+	 	HOL = {
+	 		save_event_target_as = netherlands_name
+	  	}
 	 }
 	}
 	
@@ -128,15 +128,16 @@ country_event = {
 
 		INS = {
          random_unit_leader = {
-         set_nationality = HOL
-         set_unit_leader_flag = taken_by_holland
-         }
+         	set_nationality = HOL
+         	set_unit_leader_flag = taken_by_holland
+         	}
 
          HOL = {
-         every_unit_leader = {
-         limit = { has_unit_leader_flag = taken_by_holland }
-         unit_leader_event = {
-         id = holland_generals.5
+         	every_unit_leader = {
+         		limit = { has_unit_leader_flag = taken_by_holland }
+         		add_unit_leader_trait = HOL_borrowed_general
+         	unit_leader_event = {
+         		id = holland_generals.5
            }
           }
          }
@@ -156,9 +157,9 @@ unit_leader_event = {
 
 	immediate = {
 	 hidden_effect = {
-	 every_unit_leader = {
-	 limit = { has_unit_leader_flag = taken_by_holland }
-	 save_event_target_as = taken_by_hol
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland }
+	 		save_event_target_as = taken_by_hol
 	  }
 	 }
 	}
@@ -190,10 +191,10 @@ unit_leader_event = {
 
 	immediate = {
 	 hidden_effect = {
-	 every_unit_leader = {
-	 limit = { has_unit_leader_flag = promotion }
-	 save_event_target_as = promotion_name
-	  }
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = promotion }
+	 		save_event_target_as = promotion_name
+	 	}
 	 }
 	}
 
@@ -202,7 +203,7 @@ unit_leader_event = {
 
 		every_unit_leader = {
          limit = { has_unit_leader_flag = promotion }
-		 promote_leader = yes
+		 	promote_leader = yes
 
 		 clr_unit_leader_flag = promotion
 		}
@@ -223,10 +224,10 @@ country_event = {
 	immediate = {
         HOL = {
          every_unit_leader = {
-         limit = { has_unit_leader_flag = taken_by_holland_2 }
-         unit_leader_event = {
-         id = holland_generals.8
-          }
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         	unit_leader_event = {
+         		id = holland_generals.8
+          	}
          }
         }
 	}
@@ -244,10 +245,10 @@ unit_leader_event = {
 
 	immediate = {
 	 hidden_effect = {
-	 every_unit_leader = {
-	 limit = { has_unit_leader_flag = taken_by_holland_2 }
-	 save_event_target_as = taken_name
-	  }
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland_2 }
+	 		save_event_target_as = taken_name
+	  	}
 	 }
 	}
 
@@ -256,17 +257,18 @@ unit_leader_event = {
 
 		HOL = {
 		 every_unit_leader = {
-         limit = { has_unit_leader_flag = taken_by_holland_2 }
-		 set_nationality = INS
-		 }
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         		remove_unit_leader_trait = HOL_borrowed_general
+		 		set_nationality = INS
+		 	}
 
 		 INS = {
          every_unit_leader = {
-         limit = { has_unit_leader_flag = taken_by_holland_2 }
-         unit_leader_event = {
-         id = holland_generals.9
-           }
-		  }
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         		unit_leader_event = {
+         		id = holland_generals.9
+           		}
+		  	}
 		 }
 		}
 	}	
@@ -284,10 +286,10 @@ unit_leader_event = {
 
 	immediate = {
 	 hidden_effect = {
-	 every_unit_leader = {
-	 limit = { has_unit_leader_flag = taken_by_holland_2 }
-	 save_event_target_as = taken_name_2
-	  }
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland_2 }
+	 		save_event_target_as = taken_name_2
+	  	}
 	 }
 	}
 
@@ -298,9 +300,9 @@ unit_leader_event = {
 
 		hidden_effect = {
 		every_unit_leader = {
-		limit = { has_unit_leader_flag = taken_by_holland_2 }
-		clr_unit_leader_flag = taken_by_holland_2
-		}
-	   }
+			limit = { has_unit_leader_flag = taken_by_holland_2 }
+			clr_unit_leader_flag = taken_by_holland_2
+			}
+	    }
 	}	
 }
