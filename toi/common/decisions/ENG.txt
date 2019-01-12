@@ -192,6 +192,190 @@ eoanb_category_military = {
 		}
 	}
 	
+	#Finance military equipment for Canada
+	eoanb_decision_ENG_finance_military_CAN = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = CAN
+			CAN = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = CAN
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		complete_effect = {
+			CAN = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				CAN = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for Australia
+	eoanb_decision_ENG_finance_military_AST = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = AST
+			AST = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = AST
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		complete_effect = {
+			AST = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				AST = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for New Zealand
+	eoanb_decision_ENG_finance_military_NZL = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = NZL
+			NZL = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = NZL
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		complete_effect = {
+			NZL = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				NZL = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for South Africa
+	eoanb_decision_ENG_finance_military_SAF = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = SAF
+			SAF = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = SAF
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		complete_effect = {
+			SAF = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				SAF = { num_divisions > 5 }
+			}
+		}
+	}
+	
 }
 
 political_actions = {
