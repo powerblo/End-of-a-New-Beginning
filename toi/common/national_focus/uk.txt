@@ -85,18 +85,18 @@ focus_tree = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
 				}
-				add_stability = 0.05
+				RAJ = { add_stability = 0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sunni }
 				}
-				add_stability = -0.05
+				RAJ = { add_stability = -0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 			else = {
-				add_stability = 0.02
+				RAJ = { add_stability = 0.02 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 		}
@@ -121,18 +121,18 @@ focus_tree = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
 				}
-				add_stability = -0.05
+				RAJ = { add_stability = -0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sunni }
 				}
-				add_stability = 0.05
+				RAJ = { add_stability = 0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 			else = {
-				add_stability = 0.02
+				RAJ = { add_stability = 0.02 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 		}
