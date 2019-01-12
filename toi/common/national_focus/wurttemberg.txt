@@ -2021,7 +2021,11 @@ focus_tree = {
 		available_if_capitulated = no  
 		
 		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_push_neutral_approach
 			
+			hidden_effect = {
+				set_country_flag = WUR_push_neutral_approach
+			}
 		}
 	}
 	

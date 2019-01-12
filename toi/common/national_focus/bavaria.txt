@@ -560,7 +560,7 @@ focus_tree = {
 	#Focus for Learn from the Austrians 
 	focus = { 
 		id = BAV_learnfromtheaustrians 
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_learnfromaustrians 
 		ai_will_do = {
 			factor = 40
 			
@@ -1266,9 +1266,34 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = BAV_landtagconvinced
-			swap_ideas = {
-				remove_idea = two_percent
-				add_idea = three_percent
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = three_percent
+							has_idea = five_percent
+							has_idea = ten_percent
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = two_percent
+					}
+					swap_ideas = {
+						remove_idea = two_percent
+						add_idea = three_percent
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = one_percent
+					}
+					swap_ideas = {
+						remove_idea = one_percent
+						add_idea = two_percent
+					}
+				}
 			}
 		}
 	}
@@ -1450,7 +1475,7 @@ focus_tree = {
 	#Focus for Military Consultative Commission
 	focus = { 
 		id = BAV_militaryconsultativecommission
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_military_consultative_commission 
 		ai_will_do = { factor = 40}
 		x = 23
 		y = 10
@@ -1610,7 +1635,7 @@ focus_tree = {
 	#Focus for Bavaria's Power 
 	focus = { 
 		id = BAV_bavariaspower 
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_bavarias_power
 		ai_will_do = {
 			factor = 40
 			
@@ -1927,7 +1952,7 @@ focus_tree = {
 	#Focus for The German Two
 	focus = { 
 		id = BAV_thegermantwo
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_the_german_two 
 		ai_will_do = {
 			factor = 40
 			
@@ -2130,9 +2155,21 @@ focus_tree = {
 		
 		completion_reward = {
 			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = no_elections
-				add_idea = one_party_elections
+			
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = one_party_elections
+							has_idea = limited_elections
+							has_idea = free_elections
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = no_elections
+					add_idea = one_party_elections
+				}
 			}
 		}
 	}
@@ -2283,18 +2320,10 @@ focus_tree = {
 		cost = 70
 		available_if_capitulated = no
 		
-		available = {
-			PRS = {
-				is_faction_leader = yes
-			}
-		}
-		
 		completion_reward = {
 			custom_effect_tooltip = BAV_customeffect_joinnorth
 			hidden_effect = {
-				PRS = {
-					add_to_faction = BAV
-				}
+				
 			}
 		}
 	}
@@ -2527,15 +2556,12 @@ focus_tree = {
 		cost = 70
 		available_if_capitulated = no
 		
-		available = {
-			OR = {
-				AUS = { has_defensive_war_with = PRS }
-				AUS = { has_offensive_war_with = PRS } 
-			}
-		}
-		
 		completion_reward = {
-			add_to_war = { targeted_alliance = AUS enemy = PRS } 
+			custom_effect_tooltip = BAV_customeffect_joinsouth
+			
+			hidden_effect = {
+			
+			}
 		}
 	}
  
@@ -2584,9 +2610,22 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
-			swap_ideas = {
-				remove_idea = absolutism
-				add_idea = parliamentary_suffrage
+			
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = parliamentary_suffrage
+							has_idea = property_owners_suffrage
+							has_idea = universal_male_suffrage
+							has_idea = universal_suffrage
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = absolutism
+					add_idea = parliamentary_suffrage
+				}
 			}
 		}
 	}
@@ -2720,7 +2759,6 @@ focus_tree = {
 		icon = GFX_goal_focus_industrial_revolution 
 		ai_will_do = {
 			factor = 40
-			
 			modifier = {
 				factor = 1
 				is_historical_focus_on = yes
@@ -2735,9 +2773,22 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = BAV_socreforms2
-			swap_ideas = {
-				remove_idea = agrarian
-				add_idea = industrializing
+			
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = industrializing
+							has_idea = industrialized
+							has_idea = electrification
+							has_idea = mass_production
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = agrarian
+					add_idea = industrializing
+				}
 			}
 		}
 	}
@@ -2763,9 +2814,25 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = BAV_socreforms3
-			swap_ideas = {
-				remove_idea = privileged_education
-				add_idea = open_schools
+			
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = open_schools
+							has_idea = compulsory_education
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = privileged_education
+					}
+					swap_ideas = {
+						remove_idea = privileged_education
+						add_idea = open_schools
+					}
+				}
 			}
 		}
 	}
