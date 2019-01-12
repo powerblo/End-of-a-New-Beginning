@@ -1726,13 +1726,20 @@ country_event = {
 		picture = GFX_report_event_election_vote
 		
 		fire_only_once = yes
+
+		is_triggered_only = yes
 		
 		trigger = {
 			TAG = USA
-			date > 1860.11.5
+			date > 1860.1.1
+			date < 1861.1.1
+			OR = {
+				has_government = centrism
+				has_government = traditional_conservatism
+				has_government = radical_democracy
+				has_government = social_egalitarianism
+			}
 		}
-
-		mean_time_to_happen = { days = 2 }
 		
 		option = {
 				name = usa.10.a
@@ -1743,7 +1750,7 @@ country_event = {
 					remove_idea = american_slavery_tension_6
 					add_idea = american_slavery_3
 				}
-				hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
+				hidden_effect = { USA = { country_event = { days = 45 id = acw.1 } } }
 				hidden_effect = { news_event = { id = usa_news.3 } }
 				hidden_effect = { USA = { set_country_flag = USA_LincolnElected } }
 				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
@@ -1763,7 +1770,7 @@ country_event = {
 					remove_idea = american_slavery_tension_6
 					add_idea = american_slavery_3
 				}
-				hidden_effect = { USA = { country_event = { days = 44 id = acw.0 } } }
+				hidden_effect = { USA = { country_event = { days = 45 id = acw.0 } } }
 				hidden_effect = { news_event = { id = usa_news.4 } }
 				hidden_effect = { USA = { set_country_flag = USA_BreckinridgeElected } }
 				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
@@ -1798,7 +1805,7 @@ country_event = {
 							}
 						}
 					}
-					hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
+					hidden_effect = { USA = { country_event = { days = 45 id = acw.1 } } }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_2 }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_3 }
@@ -1859,7 +1866,11 @@ country_event = {
 		option = {
 			name = usa.11.a
 			retire_country_leader = yes
-			set_politics = { ruling_party = centrism }
+			set_politics = {
+				ruling_party = centrism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
 			hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
 		}
 }
@@ -1885,7 +1896,11 @@ country_event = {
 		option = {
 				name = usa.12.a
 				retire_country_leader = yes
-				set_politics = { ruling_party = centrism }
+				set_politics = {
+					ruling_party = centrism
+					election_frequency = 48
+    				elections_allowed = yes
+				}
 				set_party_name = { ideology = centrism long_name = USA_northern_democrats name = USA_northern_democrats }
 				set_party_name = { ideology = traditional_conservatism long_name = USA_southern_democrats name = USA_southern_democrats }
 				create_country_leader = {
@@ -2511,7 +2526,9 @@ country_event = {
 		
 		option = {
 			name = usa.34.a
-			set_politics = { ruling_party = social_egalitarianism }
+			set_politics = {
+				ruling_party = social_egalitarianism
+			}
 			hidden_effect = { 
 				swap_ideas = {
 					remove_idea = presidential_republic
@@ -2574,6 +2591,8 @@ country_event = {
 		picture = report_event_election_vote
 
 		fire_only_once = yes
+
+		is_triggered_only = yes
 		
 		trigger = {
 			TAG = USA
@@ -2585,7 +2604,8 @@ country_event = {
 				has_government = collectivist_socialism
 				has_government = anarchism
 			}
-			date > 1864.11.8
+			date < 1865.1.1
+			date > 1864.1.1
 		}
 		
 		option = {
@@ -2709,7 +2729,7 @@ country_event = {
 				}
 			set_country_flag = USA_McClellanElected
 			set_party_name = { ideology = traditional_conservatism long_name = USA_copperhead_democrats name = USA_copperhead_democrats }
-			hidden_effect = { USA = { country_event = { days = 175 id = usa.37 } } }
+			hidden_effect = { USA = { country_event = { days = 120 id = usa.37 } } }
 		}
 		option = {
 			name = usa.36.e
@@ -2744,7 +2764,11 @@ country_event = {
 		option = {
 				name = usa.37.a
 				retire_country_leader = yes
-				set_politics = { ruling_party = traditional_conservatism }
+				set_politics = {
+					ruling_party = traditional_conservatism
+					election_frequency = 48
+    				elections_allowed = yes
+				}
 				create_country_leader = {
     				name = "George B. McClellan"
     				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -2775,13 +2799,15 @@ country_event = {
 				has_government = collectivist_socialism
 				has_government = anarchism
 			}
-			date > 1864.11.8
+			date < 1865.1.1
+			date > 1864.1.1
 		}
 		
 		option = {
 			name = usa.38.a
 			trigger = {
 				NOT = { has_country_flag = USA_DouglasElected }
+				NOT = { has_country_flag = Lincoln_Assassinated }
 			}
 			set_country_flag = USA_Lincoln1864
 			ai_chance = {
@@ -2817,7 +2843,7 @@ country_event = {
             set_party_name = { ideology = centrism long_name = USA_centrism_party name = USA_centrism_party }
             set_party_name = { ideology = traditional_conservatism long_name = USA_traditional_conservatism_party name = USA_traditional_conservatism_party }
             set_country_flag = USA_Pendleton_Elected
-            hidden_effect = { USA = { country_event = { days = 175 id = usa.39 } } }
+            hidden_effect = { USA = { country_event = { days = 120 id = usa.39 } } }
 		}
 		option = {
 			name = usa.38.e
@@ -2837,6 +2863,13 @@ country_event = {
 				factor = 1000
             }
 		}
+		option = {
+			name = usa.38.g
+			trigger = {
+				has_country_flag = Lincoln_Assassinated
+			}
+			hidden_effect = { USA = { country_event = { days = 120 id = usa.57 } } }
+		}
 }
 #Pendleton Inaugerated
 country_event = {
@@ -2852,7 +2885,11 @@ country_event = {
 		option = {
 				name = usa.39.a
 				retire_country_leader = yes
-				set_politics = { ruling_party = traditional_conservatism }
+				set_politics = {
+					ruling_party = traditional_conservatism
+					election_frequency = 48
+    				elections_allowed = yes
+				}
 				create_country_leader = {
     				name = "George H. Pendleton"
     				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -3108,16 +3145,46 @@ country_event = {
 			custom_effect_tooltip = 01_lincoln_tt
 			kill_country_leader = yes
 			hidden_effect = { news_event = { id = usa_news.18 } }
-			hidden_effect = {
-				create_country_leader = {
-    				name = "Andrew Johnson"
-    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    				picture = "Portrait_USA_Andrew_Johnson.dds"
-    				expire = "1947.1.1"
-    				ideology = federal
-  				}
+			if = {
+				limit = {
+					date > 1864.11.5
+				}
+				hidden_effect = {
+					create_country_leader = {
+    					name = "Andrew Johnson"
+    					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    					picture = "Portrait_USA_Andrew_Johnson.dds"
+    					expire = "1947.1.1"
+    					ideology = federal
+  					}
+  					set_politics = {
+						ruling_party = traditional_conservatism
+						last_election = "1864.11.5"
+	    				election_frequency = 48
+	    				elections_allowed = yes
+					}
+				}
 			}
-			set_politics = { ruling_party = traditional_conservatism }
+			if = {
+				limit = {
+					date < 1864.11.5
+				}
+				hidden_effect = {
+					create_country_leader = {
+    					name = "Hannibal Hamlin"
+    					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    					picture = ""
+    					expire = "1947.1.1"
+    					ideology = social_liberal
+  					}
+  					set_politics = {
+						ruling_party = centrism
+						last_election = "1860.11.5"
+	    				election_frequency = 48
+	    				elections_allowed = yes
+					}
+				}
+			}
 			add_stability = -0.2
 			set_global_flag = Lincoln_Assassinated
 			set_country_flag = Lincoln_Assassinated
@@ -3487,11 +3554,15 @@ country_event = {
     				expire = "1947.1.1"
     				ideology = liberal_social
   				}
-  			set_politics = { ruling_party = social_egalitarianism }
+  			set_politics = {
+  				ruling_party = social_egalitarianism
+  				election_frequency = 48
+    			elections_allowed = yes
+  			}
   			set_country_flag = USA_Radical_Lincoln
 		}
 }
-#vacant please adopt me
+#Hannibal Inaugeration
 country_event = {
 		id = usa.57
 		title = usa.57.t
@@ -3499,12 +3570,22 @@ country_event = {
 		picture = GFX_report_event_german_reichstag_gathering
 		
 		is_triggered_only = yes
-
-		mean_time_to_happen = {
-		}
 		
 		option = {
-			name = usa.57.a
+				name = usa.57.a
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = centrism
+					election_frequency = 48
+    				elections_allowed = yes
+				}
+				create_country_leader = {
+    				name = "Hannibal Hamlin"
+    				desc = ""
+    				picture = ""
+    				expire = "1947.1.1"
+    				ideology = liberal_social
+  				}
 		}
 }
 #Liberia Emigration
@@ -6219,11 +6300,685 @@ country_event = {
 				limit = {
 					has_country_flag = USA_CSA_arizona
 				}
-				transfer_state = 377
-				transfer_state = 376
+				if = {
+					limit = {
+						CSA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+				}
+				if = {
+					limit = {
+						CSA = { owns_state = 377 }
+					}
+					transfer_state = 377
+				}
+				if = {
+					limit = {
+						CSA = { owns_state = 1294 }
+					}
+					transfer_state = 1294
+				}
+				if = {
+					limit = {
+						CSA = { owns_state = 1286 }
+					}
+					transfer_state = 1286
+				}
+				if = {
+					limit = {
+						CSA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+				}
 			}
 		}
 }
+# Texas ACW Events #
+#Sam Houston Elected Governor of Texas
+country_event = {
+		id = usa.109
+		title = usa.109.t
+		desc = usa.109.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			owns_state = 375
+			date > 1859.8.1
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.109.a
+			add_popularity = {
+				ideology = radical_democracy
+				popularity = 0.01
+			}
+			add_political_power = 25
+			set_country_flag = USA_Houston_TX_Gov
+		}
+}
+#Houston Campaigns for Unionism
+country_event = {
+		id = usa.110
+		title = usa.110.t
+		desc = usa.110.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = USA
+			date > 1860.7.1
+			date < 1860.11.1
+			has_country_flag = USA_Houston_TX_Gov
+		}
+
+		mean_time_to_happen = {
+			days = 30
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = usa.110.a
+			add_political_power = 25
+		}
+		option = {
+			name = usa.110.b
+			hidden_effect = { country_event = { id = usa.111 days = 10 } }
+		}
+}
+#Attempt to Convince Houston to Rise Up like a true Gamer
+country_event = {
+		id = usa.111
+		title = usa.111.t
+		desc = usa.111.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.111.a
+			hidden_effect = { country_event = { id = usa.113 days = 5 } }
+		}
+		option = {
+			name = usa.111.b
+			hidden_effect = { country_event = { id = usa.112 days = 5 } }
+		}
+}
+#Fail to Convince Houston
+country_event = {
+		id = usa.112
+		title = usa.112.t
+		desc = usa.112.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.112.a
+		}
+}
+#Negotiation with Houston
+country_event = {
+		id = usa.113
+		title = usa.113.t
+		desc = usa.113.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.113.a
+			hidden_effect = { country_event = { id = usa.112 days = 5 } }
+		}
+		option = {
+			name = usa.113.b
+			hidden_effect = { country_event = { id = usa.114 days = 5 } }
+		}
+}
+#Plan of the Revolt
+country_event = {
+		id = usa.114
+		title = usa.114.t
+		desc = usa.114.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.114.a
+			hidden_effect = { country_event = { id = usa.112 days = 5 } }
+		}
+		option = {
+			name = usa.114.b
+			hidden_effect = { country_event = { id = usa.115 days = 5 } }
+		}
+		option = {
+			name = usa.114.c
+			hidden_effect = { country_event = { id = usa.112 days = 5 } }
+		}
+}
+#Offering of Supplies?
+country_event = {
+		id = usa.115
+		title = usa.115.t
+		desc = usa.115.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.115.a
+			add_political_power = -50
+			hidden_effect = { country_event = { id = usa.116 days = 5 } }
+		}
+		option = {
+			name = usa.115.b
+			add_political_power = -25
+			hidden_effect = {
+				random_list = {
+					50 = {
+						country_event = { id = usa.112 days = 5 }
+					}
+					50 = {
+						country_event = { id = usa.116 days = 5 }
+					}
+				}
+			}
+		}
+		option = {
+			name = usa.115.c
+			hidden_effect = { country_event = { id = usa.112 days = 5 } }
+		}
+}
+#Plan of the Revolt
+country_event = {
+		id = usa.116
+		title = usa.116.t
+		desc = usa.116.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.116.a
+			set_country_flag = USA_Houston_Revolt_Marked
+		}
+}
+#Manhattan Commune MHC#
+#Matters of the Rich Estates
+country_event = {
+		id = usa.117
+		title = usa.117.t
+		desc = usa.117.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.117.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.117.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.117.c
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Executive Power
+country_event = {
+		id = usa.118
+		title = usa.118.t
+		desc = usa.118.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.118.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.118.b
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.118.c
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.02
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Social Ideals
+country_event = {
+		id = usa.119
+		title = usa.119.t
+		desc = usa.119.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.119.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.c
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.119.e
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.04
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Political Parties Issue
+country_event = {
+		id = usa.120
+		title = usa.120.t
+		desc = usa.120.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.120.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.120.b
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.120.c
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.03
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+}
+#Democratic Spirit
+country_event = {
+		id = usa.121
+		title = usa.121.t
+		desc = usa.121.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.121.a
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = -0.1
+			}
+			if = {
+				limit = {
+					has_completed_focus = USA_mhc_estates
+					has_completed_focus = USA_mhc_executive
+					has_completed_focus = USA_mhc_socialist_ideals
+					has_completed_focus = USA_mhc_political_parties
+					has_completed_focus = USA_mhc_democratic_spirit
+				}
+				country_event = { id = usa.122 }
+			}
+		}
+		option = {
+			name = usa.121.b
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = USA_mhc_estates
+						has_completed_focus = USA_mhc_executive
+						has_completed_focus = USA_mhc_socialist_ideals
+						has_completed_focus = USA_mhc_political_parties
+						has_completed_focus = USA_mhc_democratic_spirit
+					}
+					country_event = { id = usa.122 }
+				}
+			}
+		}
+}
+#MHC Election
+country_event = {
+		id = usa.122
+		title = usa.122.t
+		desc = usa.122.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		immediate = {
+			set_variable = {
+				var = MHC_anarchism_points
+				value = party_popularity@anarchism
+			}
+			set_variable = {
+				var = MHC_social_points
+				value = party_popularity@social_egalitarianism
+			}
+			set_variable = {
+				var = MHC_collective_points
+				value = party_popularity@collectivist_socialism
+			}
+			set_variable = {
+				var = MHC_communist_points
+				value = party_popularity@vanguard_communism
+			}
+		}
+		
+		option = {
+			name = usa.122.a
+			trigger = {
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_social_points }
+					check_variable = { MHC_anarchism_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_collective_points }
+					check_variable = { MHC_anarchism_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_anarchism_points > MHC_communist_points }
+					check_variable = { MHC_anarchism_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = anarchism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_warren_flag
+		}
+		option = {
+			name = usa.122.b
+			trigger = {
+				OR = {
+					check_variable = { MHC_social_points > MHC_anarchism_points }
+					check_variable = { MHC_social_points = MHC_anarchism_points }
+				}
+				OR = {
+					check_variable = { MHC_social_points > MHC_collective_points }
+					check_variable = { MHC_social_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_social_points > MHC_communist_points }
+					check_variable = { MHC_social_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = social_egalitarianism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_uriah_flag
+		}
+		option = {
+			name = usa.122.c
+			trigger = {
+				OR = {
+					check_variable = { MHC_collective_points > MHC_anarchism_points }
+					check_variable = { MHC_collective_points = MHC_anarchism_points }
+				}
+				OR = {
+					check_variable = { MHC_collective_points > MHC_social_points }
+					check_variable = { MHC_collective_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_collective_points > MHC_communist_points }
+					check_variable = { MHC_collective_points = MHC_communist_points }
+				}
+			}
+			set_politics = {
+				ruling_party = collectivist_socialism
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			set_country_flag = USA_mhc_sorge_flag
+		}
+		option = {
+			name = usa.122.e
+			trigger = {
+				OR = {
+					check_variable = { MHC_communist_points > MHC_social_points }
+					check_variable = { MHC_communist_points = MHC_social_points }
+				}
+				OR = {
+					check_variable = { MHC_communist_points > MHC_collective_points }
+					check_variable = { MHC_communist_points = MHC_collective_points }
+				}
+				OR = {
+					check_variable = { MHC_communist_points > MHC_anarchism_points }
+					check_variable = { MHC_communist_points = MHC_anarchism_points }
+				}
+			}
+			set_politics = {
+				ruling_party = vanguard_communism
+				elections_allowed = no
+			}
+			set_country_flag = USA_mhc_dietzgen_flag
+		}
+}
+#Marx Invited
+country_event = {
+		id = usa.123
+		title = usa.123.t
+		desc = usa.123.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.123.a
+			add_political_power = 10
+		}
+		option = {
+			name = usa.123.b
+			trigger = {
+				NOT = {
+					any_other_country = {
+						has_country_leader = {
+							name = "Karl Marx"
+							ruling_only = yes
+						}
+					}
+				}
+			}
+			set_country_flag = USA_mhc_marx_leader
+		}
+}
+
 
 
 #News Events
@@ -6776,5 +7531,46 @@ news_event = {
 				NOT = { tag = USA }
 			}
 			name = usa_news.19.b
+		}
+}
+#Texas Revolt
+news_event = {
+		id = usa_news.20
+		title = usa_news.20.t
+		desc = usa_news.20.d
+
+		picture = GFX_news_event_usa_texas
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = {
+					tag = USA
+					tag = CSA
+					tag = TEX
+				}
+			}
+			name = usa_news.20.a
+		}
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.20.b
+		}
+		option = {
+			trigger = {
+				tag = CSA
+			}
+			name = usa_news.20.c
+		}
+		option = {
+			trigger = {
+				tag = TEX
+			}
+			name = usa_news.20.e
 		}
 }

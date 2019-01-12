@@ -526,6 +526,33 @@ USA_grant_statehood = {
 		}
 	}
 }
+USA_foreign_policy = {
+    
+    #Harris Treaty
+    eoanb_decision_USA_harris_treaty = {
+    
+        icon = generic_political_discourse
+
+        available = {
+            date > 1858.07.20
+        }
+
+        visible = {
+            TAG = USA
+        }
+
+        fire_only_once = yes
+
+        cost = 25
+
+        complete_effect = {
+             JAP = { country_event = { id = shogunate_japan.1 } }
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }    
+}
 #American Civil War
 USA_american_civil_war_descision = {
 
@@ -635,7 +662,7 @@ USA_american_civil_war_descision = {
 			}
 		}
 
-		cost = 100
+		cost = 75
 
 		days_re_enable = 5
 
@@ -647,7 +674,7 @@ USA_american_civil_war_descision = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 100000
 			modifier = {
 				factor = 0
 				OR = {
@@ -672,12 +699,10 @@ USA_american_civil_war_descision = {
 				AND = {
 					tag = CSA
 					has_war_with = USA
-					controls_state = 371
 				}
 				AND = {
 					tag = USA
 					has_war_with = CSA
-					controls_state = 954
 				}
 			}
 			date < 1865.1.1
@@ -703,7 +728,102 @@ USA_american_civil_war_descision = {
 
 		complete_effect = {
 			add_war_support = -0.1
-			add_manpower = 50000
+			add_manpower = 40000
+			if = {
+				limit = {
+					tag = USA
+				}
+				random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+			}
+	        if = {
+	            limit = {
+	            	tag = CSA
+	            }
+	            random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+	        }
 		}
 
 		ai_will_do = {
@@ -719,6 +839,12 @@ USA_american_civil_war_descision = {
 			modifier = {
 				factor = 0
 				num_divisions > 79
+				tag = CSA
+			}
+			modifier = {
+				factor = 0
+				num_divisions > 99
+				tag = USA
 			}
 			modifier = {
 				add = 100
