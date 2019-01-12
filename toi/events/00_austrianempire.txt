@@ -182,6 +182,85 @@ country_event = { #Hungarian Liberals Angered
 	}
 }
 
+country_event = { #von Schmerling's resignation 
+	id = AUSpolitics.6
+	title = AUSpolitics.6.t
+	desc = AUSpolitics.6.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            AUS = { 
+			    has_country_leader = {
+                    name = "Anton von Schmerling"
+                     ruling_only = yes
+                } 
+		    }
+			date > 1865.07.05 
+		}
+	
+	option = {
+		name = AUSpolitics.6.a  #Accept the resignation 
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Richard von Belcredi"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_AUS_Richard_Belcredi.dds"
+                expire = 2000.09.10
+                ideology = despotism
+            }			
+	    }		
+	}
+}
+
+country_event = { #Choose Beust or keep Belcredi  
+	id = AUSpolitics.7
+	title = AUSpolitics.7.t
+	desc = AUSpolitics.7.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            AUS = { 
+			    has_country_leader = {
+                    name = "Richard von Belcredi"
+                     ruling_only = yes
+                } 
+		    }
+			date > 1867.01.25  
+		}
+	
+	option = {
+		name = AUSpolitics.7.a  #Replace with Beust - Dual Monarchy  
+		ai_chance = { factor = 75 }
+		
+		AUS = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Friedrich von Beust"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_AUS_Friedrich_von_Beust.dds"
+                expire = 2000.09.10
+                ideology = despotism
+            }			
+	    }
+        custom_effect_tooltip = AUS_tt_appoint_von_beust	
+	}
+	option = {
+		name = AUSpolitics.7.b  #Keep Belcredi - Federalization 
+		ai_chance = { factor = 25  }
+		
+        custom_effect_tooltip = AUS_tt_keep_richard_belcredi 
+	}
+}
+
 add_namespace = AUSdiplo 
 
 country_event = { #Future of Lombardy Venetia    

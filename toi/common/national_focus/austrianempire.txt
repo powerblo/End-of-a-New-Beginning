@@ -940,15 +940,55 @@ focus_tree = {
 			factor = 1
 		}
 		
+		available = {
+		    AUS = {
+		        has_country_leader = {
+                    name = "Archduke Rainier"
+                    ruling_only = yes
+                }
+				hidden_trigger = {
+				    check_variable = {
+                        HUN_REVOLT_RISK > 8 
+                    }
+		        }
+            }
+            custom_trigger_tooltip = {
+                tooltip = AUS_tt_hun_revolt_risk_over_8 		
+                AUS = {
+			        check_variable = {
+                        HUN_REVOLT_RISK > 8 
+                    }
+			    }			
+            }
+        }		
+		
         prerequisite = {
-		focus = AUS_February_Patent
-        focus = AUS_Supress_Hungarian_Minorities
+		    focus = AUS_February_Patent
+            focus = AUS_Supress_Hungarian_Minorities
         }
 		
 		completion_reward = {
             custom_effect_tooltip = AUS_tt_reform_empire_compromise
-		}
-	}
+			if = {
+			    limit = {
+				    AUS = {
+			            has_country_leader = {
+                            name = "Richard von Belcredi"
+                           ruling_only = yes
+                        } 					    
+					}
+				}
+			    AUS = {
+				    country_event = AUSfedcompromise.1 
+				}
+			}
+			else = {
+			    AUS = {
+				    country_event = AUShuncompromise.1   
+				}
+			}
+	    } 
+    }		
 	
 	focus = { 
 		id = AUS_German_Empire 
