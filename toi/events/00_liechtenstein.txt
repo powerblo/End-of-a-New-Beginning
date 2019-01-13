@@ -1,0 +1,19 @@
+add_namespace = liechtenstein
+
+country_event = { # Liechtenstein does things
+  id = liechfocus.1
+  title = liechfocus.1.t
+  desc = liechfocus.1.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  trigger = {
+    TAG = LIE
+	has_completed_focus = LIE_joinwars
+	}
+
+  fire_only_once = yes
+
+  option = {
+    name = liechfocus.1.o
+  }
+}
