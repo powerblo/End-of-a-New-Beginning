@@ -352,6 +352,14 @@ focus_tree = {
 				owns_state = 658
 			}
 		}
+		available={
+			658={
+				OR={
+					is_core_of = OMA
+					is_claimed_by = OMA
+				}
+			}
+		}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -376,6 +384,14 @@ focus_tree = {
 			OR={
 				TCS = {exists = no}
 				owns_state = 658
+			}
+		}
+		available={
+			658={
+				OR={
+					is_core_of = OMA
+					is_claimed_by = OMA
+				}
 			}
 		}
 		available_if_capitulated = no
