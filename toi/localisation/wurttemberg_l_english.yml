@@ -293,6 +293,8 @@
  WUR_bypass_stance_prussia:0 "Wurttemberg goes for Prussia"
  wur_old_friends:0 "Old Friends"
  wur_foreign_policy:0 "Foreign Policy"
+ WUR_zweikaisertreffen_RUS:0 "[FRA.GetNameDef]"
+ WUR_zweikaisertreffen_FRA:0 "[RUS.GetNameDef]"
  
  ###Decisions###
  WUR_shifting_flow:0 "Shifting Flow"
@@ -301,15 +303,17 @@
  eoanb_decision_WUR_shifting_flow_russia:0 "Foreign Policy with Russia"
  
  ###Events###
- wurttem.0.t:0 ""
- wurttem.0.d:0 ""
- wurttem.0.a:0 ""
+ wurttem.0.t:0 "Wilhelm I Dead!"
+ wurttem.0.d:0 "On the 25th of June 1964, Wilhelm I, having reached the age of 83 years, has died of old age in the Rosenstein castle. Having led the [WUR.GetAdjective] people for many years with great success, the King was widely popular amongst his people. The burial of Wilhelm I will be carried out five days after his death, to be accompanied by his son and successor Karl I."
+ wurttem.0.a:0 "The country mourns."
  wurttem.1.t:0 "Emigration Stops"
  wurttem.1.d:0 "Following our recent policies on emigration, we have successfully stopped the waves of people leaving our country. This outcome will greatly benefit us in the long term, but will probably bring little results at the start. Either way, the new workforce of [Root.GetName] should now be able to boost our economy."
  wurttem.1.a:0 "Good to hear!"
  wurttem.2.t:0 "Emigration Continues"
  wurttem.2.d:0 "Following our recent and rather harsh policies on emigration, the discouraged [Root.GetAdjective] people continue to leave our country, in search of better work and life. Our workforce will take a toll because of this development, but experts do not expect to see serious consequences up until a few years."
  wurttem.2.a:0 "Why would one want to leave [Root.GetName] anyway?"
+ #3 is same as 1
+ #4 uses 2
  wurttem.4.d:0 "Even with our recent tries to advertise our country to settlers and farmers, the [Root.GetName] people still see no point in staying in our country. As they leave to find new work and life, taking their families with them, our workforce gets smaller by the day."
  wurttem.5.t:0 "Recovering from Unemployment"
  wurttem.5.d:0 "Thanks to our efforts, the dire situation regarding unemployment in our country is steadily improving. It will take time, for sure, but seeing how things seem to be getting better we should expect the employment rate to rise in a matter of a year or maybe even less."
@@ -342,3 +346,12 @@
  wurttem.12.t:0 "[From.GetName] Denies!"
  wurttem.12.d:0 "We just received a letter from [From.GetNameDef], stating that they would rather have a neutral stance towards us than a binding friendship."
  wurttem.12.a:0 "We have to accept their decision."
+ wurttem.13.t:0 "[WUR.GetNameDef] Invitation to Meeting"
+ wurttem.13.d:0 "Today we received a letter from [WUR.GetNameDef], inviting us to a meeting between the leaders of the Russian Empire, French Empire and [WUR.GetName]. Stating that his intentions are those of peace, [WUR.GetLeader] personally wants to see us and talk about the latest European events and politics overall. Additionally, [WUR.GetLeader] states that we could even try to strike a deal with our rival, [WUR_zweikaisertreffen_tag_addition], when it comes to the question of the conflicts in Italy."
+ wurttem.13.a:0 "Wa accept the invitation. Maybe this could lead us somewhere."
+ wurttem.13.b:0 "We deny the invitation. We want none of that."
+ #14 uses 13
+ 
+ wurttem.17.t:0 "Karl I Ascends to the Throne"
+ wurttem.17.d:0 "With the death of his father Wilhelm I, his son Karl I will now take the place of the King of [WUR.GetName]. After the enthronement of Karl I is carried out, the new King will proceed to review the current political issues within our country and address them. King Karl I is highly motivated by the wish of becoming a great King and doing justice to his father and will do everything necessary to ensure [WUR.GetNameDef]."
+ wurttem.17.a:0 "Heil to our new King!"

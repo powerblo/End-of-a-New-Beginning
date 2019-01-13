@@ -11,13 +11,21 @@ country_event = {
 	
 	trigger = {
 		TAG = WUR
-		date > 1864.07.01
+		date > 1864.07.25
 	}
 	
 	immediate = {
 		hidden_effect = {
-			kill_country_leader = yes
 			set_country_flag = WUR_victorian_wilhelm_dead
+			kill_country_leader = yes
+			create_country_leader = { 
+				name = "Württemberg Regency" 
+				desc = "POLITICS_WURTTEMBERG_REGENCY_DESC"
+				picture = "Portrait_Wurttemberg_Regency.dds" 
+				ideology = despotism
+				traits = { }
+			}
+			add_ideas = BAV_noleader
 		}
 	}
 	
@@ -40,6 +48,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
+			kill_country_leader = yes
 			create_country_leader = { 
 				name = "Karl I" 
 				desc = "POLITICS_KARL_I_DESC"
@@ -47,6 +56,7 @@ country_event = {
 				ideology = despotism
 				traits = { }
 			}
+			remove_ideas = BAV_noleader
 		}
 	}
 	
