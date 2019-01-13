@@ -40,6 +40,13 @@ country_event = {
 		name = system.2.a
 		ai_chance = { factor = 100 }
 		ENG = { country_event = { days = 365 id = system.3 } }
+		if = {
+			limit = {
+				NOT = { country_exists = IRE }
+				ENG = { controls_state = 113 }
+			}
+			ENG = { country_event = { days = 74 id = britain.3 } }
+		}
 	}
 	
 }
