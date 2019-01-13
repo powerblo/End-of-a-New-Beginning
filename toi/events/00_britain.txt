@@ -164,6 +164,133 @@ country_event = {
 	
 }
 
+#The Matrimonial Causes Act
+country_event = {
+	id = britain.5
+	title = britain.5.t
+	desc = britain.5.d
+	picture = GFX_report_event_uk_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		has_idea = parliamentary_suffrage
+		date > 1857.8.27
+	}
+	
+	option = {
+		name = britain.5.a
+		ai_chance = { factor = 95 }
+		add_political_power = -5
+		add_popularity = { ideology = centrism popularity = 0.01 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		hidden_effect = {
+			ENG = { country_event = { id = britain.6 } }
+		}
+	}
+	
+	option = {
+		name = britain.5.b
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -5
+		add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+		add_popularity = { ideology = fundamentalism popularity = 0.01 }
+		hidden_effect = {
+			ENG = { country_event = { id = britain.6 } }
+		}
+	}
+	
+}
+
+#The Obscene Publications Act
+country_event = {
+	id = britain.6
+	title = britain.6.t
+	desc = britain.6.d
+	picture = GFX_report_event_uk_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.6.a
+		ai_chance = { factor = 90 }
+		add_political_power = -5
+		add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+	}
+	
+	option = {
+		name = britain.6.b
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -5
+		add_popularity = { ideology = centrism popularity = 0.02 }
+		add_popularity = { ideology = fundamentalism popularity = -0.02 }
+	}
+	
+}
+
+#The HMS Defence catches fire off Woolwich Coast
+country_event = {
+	id = britain.7
+	title = britain.7.t
+	desc = britain.7.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1857.7.17
+	}
+	
+	option = {
+		name = britain.7.a
+		ai_chance = { factor = 100 }
+		add_political_power = -5
+		952 = { add_manpower = -20 }
+	}
+	
+}
+
+#Sheffield FC is founded as the worlds first football team
+country_event = {
+	id = britain.8
+	title = britain.8.t
+	desc = britain.8.d
+	picture = GFX_report_event_sheffield_fc
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		controls_state = 130
+		date > 1857.10.23
+	}
+	
+	option = {
+		name = britain.8.a
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = britain.8.b
+		ai_chance = { factor = 20 }
+	}
+	
+}
+
 ### POLITICAL EVENTS FOR BRITAIN BELOW ###
 
 #Elections of 1859
