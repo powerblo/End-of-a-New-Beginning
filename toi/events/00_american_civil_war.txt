@@ -1271,46 +1271,18 @@ country_event = {
     }
     option = {
         name = acw.27.b
-        start_border_war = {
-                change_state_after_war = no
-                attacker = {
-                    state = 1045
-                    num_provinces = 3
-                    on_win = acw.28
-                    on_lose = acw.29
-                }
-                
-                defender = {
-                    state = 390
-                    num_provinces = 3
-                    on_win = acw.30
-                    on_lose = acw.31
-                }
-            }
-        set_country_flag = Dakota_War_Loose
-        USA = { country_event = { id = acw.34 } }
-    }
-    option = {
-        name = acw.27.c
         SIX = {
             declare_war_on = { target = USA type = annex_everything }
-            set_country_flag = Dakota_War_Harsh
+            set_country_flag = Dakota_War
         }
         USA = { country_event = { id = acw.34 } }
     }
 }
-#Attacker Win
+#VACANT
 country_event = {
     id = acw.28
     title = acw.28.t
-    desc = {
-        trigger = { tag = SIX }
-        text = acw.28.d
-    }
-    desc = {
-        trigger = { tag = USA }
-        text = acw.28.d_a
-    }
+    desc = text = acw.28.d
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1318,55 +1290,13 @@ country_event = {
     
     option = {
         name = acw.28.a
-        add_political_power = 100
-        army_experience = 25
-        ROOT = { transfer_state = FROM.FROM.FROM }
-        if = {
-            limit = {
-                tag = SIX
-                NOT = { owns_state = 391 }
-                NOT = { owns_state = 389 }
-            }
-            country_event = { id = acw.35 days = 20 }
-        }
-        if = {
-            limit = {
-                tag = SIX
-                NOT = { owns_state = 391 }
-                owns_state = 389
-            }
-            country_event = { id = acw.36 days = 20 }
-        }
-        if = {
-            limit = {
-                tag = USA
-                NOT = { owns_state = 390 }
-                NOT = { owns_state = 389 }
-            }
-            country_event = { id = acw.38 days = 20 }
-        }
-        if = {
-            limit = {
-                tag = USA
-                NOT = { owns_state = 390 }
-                owns_state = 389
-            }
-            country_event = { id = acw.39 days = 20 }
-        }
     }   
 }
-#Attacker Defeat
+#VACANT
 country_event = {
     id = acw.29
     title = acw.29.t
-    desc = {
-        trigger = { tag = SIX }
-        text = acw.29.d
-    }
-    desc = {
-        trigger = { tag = USA }
-        text = acw.29.d_a
-    }
+    desc = acw.29.d
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1374,54 +1304,13 @@ country_event = {
     
     option = {
         name = acw.29.a
-        add_political_power = -50
-        army_experience = 10
-        if = {
-            limit = {
-                tag = SIX
-                NOT = { owns_state = 391 }
-                NOT = { owns_state = 389 }
-            }
-            USA = { country_event = { id = acw.39 days = 20 } }
-        }
-        if = {
-            limit = {
-                tag = SIX
-                NOT = { owns_state = 391 }
-                owns_state = 389
-            }
-            USA = { country_event = { id = acw.38 days = 20 } }
-        }
-        if = {
-            limit = {
-                tag = USA
-                NOT = { owns_state = 390 }
-                NOT = { owns_state = 389 }
-            }
-            country_event = { id = acw.36 days = 20 }
-        }
-        if = {
-            limit = {
-                tag = USA
-                NOT = { owns_state = 390 }
-                owns_state = 389
-            }
-            country_event = { id = acw.35 days = 20 }
-        }
     }   
 }
-#Defender Win
+#VACANT
 country_event = {
     id = acw.30
     title = acw.30.t
-    desc = {
-        trigger = { tag = SIX }
-        text = acw.30.d
-    }
-    desc = {
-        trigger = { tag = USA }
-        text = acw.30.d_a
-    }
+    desc = acw.30.d
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1429,22 +1318,13 @@ country_event = {
     
     option = {
         name = acw.30.a
-        add_political_power = 100
-        army_experience = 25
     }   
 }
-#Defender Lose
+#VACANT
 country_event = {
     id = acw.31
     title = acw.31.t
-    desc = {
-        trigger = { tag = SIX }
-        text = acw.31.d
-    }
-    desc = {
-        trigger = { tag = USA }
-        text = acw.31.d_a
-    }
+    desc = acw.31.d
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1452,8 +1332,6 @@ country_event = {
     
     option = {
         name = acw.31.a
-        add_political_power = -50
-        army_experience = 10
     }   
 }
 #Sioux Win Dakota War
@@ -1466,7 +1344,7 @@ country_event = {
 
     trigger = {
         tag = SIX
-        has_country_flag = Dakota_War_Harsh
+        has_country_flag = Dakota_War
         has_war_with = USA
         SIX = {
             controls_state = 390
@@ -1484,19 +1362,19 @@ country_event = {
     
     option = {
         name = acw.32.a
-        USA = {
+        SIX = {
             transfer_state = 390
             transfer_state = 389
             transfer_state = 391
         }
         white_peace = USA
-        clr_country_flag = Dakota_War_Harsh
+        clr_country_flag = Dakota_War
     }
     option = {
         name = acw.32.b
-        add_political_power = -50
-        add_stability = -0.05
-        clr_country_flag = Dakota_War_Harsh
+        add_political_power = -100
+        add_stability = -0.1
+        clr_country_flag = Dakota_War
     }
 }
 #USA Win Dakota War
@@ -1529,7 +1407,7 @@ country_event = {
     option = {
         name = acw.33.a
         white_peace = SIX
-        clr_country_flag = Dakota_War_Harsh
+        SIX = { clr_country_flag = Dakota_War }
     }
     option = {
         name = acw.33.b
@@ -1537,24 +1415,17 @@ country_event = {
             limit = {
                 has_war_with = CSA
             }
-            add_political_power = -50
-            add_stability = -0.05
+            add_political_power = -100
+            add_stability = -0.1
         }
-        clr_country_flag = Dakota_War_Harsh
+        SIX = { clr_country_flag = Dakota_War_Harsh }
     }
 }
 #USA Respond
 country_event = {
     id = acw.34
     title = acw.34.t
-    desc = {
-        trigger = { SIX = { has_country_flag = Dakota_War_Loose } }
-        text = acw.34.d
-    }
-    desc = {
-        trigger = { SIX = { has_country_flag = Dakota_War_Harsh } }
-        text = acw.34.d_a
-    }
+    desc = acw.34.d
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1564,7 +1435,7 @@ country_event = {
         name = acw.34.a
     }
 }
-#North Attack
+#VACANT
 country_event = {
     id = acw.35
     title = acw.35.t
@@ -1576,25 +1447,9 @@ country_event = {
     
     option = {
         name = acw.35.a
-        start_border_war = {
-                change_state_after_war = no
-                attacker = {
-                    state = 390
-                    num_provinces = 3
-                    on_win = acw.28
-                    on_lose = acw.29
-                }
-                
-                defender = {
-                    state = 389
-                    num_provinces = 3
-                    on_win = acw.30
-                    on_lose = acw.31
-                }
-            }
     }
 }
-#Minesotta Attack
+#VACANT
 country_event = {
     id = acw.36
     title = acw.36.t
@@ -1606,25 +1461,9 @@ country_event = {
     
     option = {
         name = acw.36.a
-        start_border_war = {
-                change_state_after_war = no
-                attacker = {
-                    state = 390
-                    num_provinces = 3
-                    on_win = acw.28
-                    on_lose = acw.29
-                }
-                
-                defender = {
-                    state = 391
-                    num_provinces = 3
-                    on_win = acw.30
-                    on_lose = acw.31
-                }
-            }
     }
 }
-#Sioux Win Loose War
+#VACANT
 country_event = {
     id = acw.37
     title = acw.37.t
@@ -1632,32 +1471,13 @@ country_event = {
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    trigger = {
-        tag = SIX
-        has_country_flag = Dakota_War_Loose
-        owns_state = 389
-        owns_state = 390
-        owns_state = 391
-        has_border_war = no
-    }
-
-    mean_time_to_happen = {
-        days = 2
-    }
+    is_triggered_only = yes
     
     option = {
         name = acw.37.a
-        clr_country_flag = Dakota_War_Loose
-        add_political_power = 100
-    }
-    option = {
-        name = acw.37.a
-        clr_country_flag = Dakota_War_Loose
-        declare_war_on = { target = USA type = annex_everything }
-        add_stability = -0.05
     }
 }
-#North Attack USA
+#VACANT
 country_event = {
     id = acw.38
     title = acw.38.t
@@ -1669,25 +1489,9 @@ country_event = {
     
     option = {
         name = acw.38.a
-        start_border_war = {
-                change_state_after_war = no
-                attacker = {
-                    state = 391
-                    num_provinces = 3
-                    on_win = acw.28
-                    on_lose = acw.29
-                }
-                
-                defender = {
-                    state = 389
-                    num_provinces = 3
-                    on_win = acw.30
-                    on_lose = acw.31
-                }
-            }
     }
 }
-#South Attack USA
+#VACANT
 country_event = {
     id = acw.39
     title = acw.39.t
@@ -1699,25 +1503,9 @@ country_event = {
     
     option = {
         name = acw.39.a
-        start_border_war = {
-                change_state_after_war = no
-                attacker = {
-                    state = 389
-                    num_provinces = 3
-                    on_win = acw.28
-                    on_lose = acw.29
-                }
-                
-                defender = {
-                    state = 390
-                    num_provinces = 3
-                    on_win = acw.30
-                    on_lose = acw.31
-                }
-            }
     }
 }
-#USA Win Loose War
+#VACANT
 country_event = {
     id = acw.40
     title = acw.40.t
@@ -1725,28 +1513,10 @@ country_event = {
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    trigger = {
-        tag = USA
-        SIX = { has_country_flag = Dakota_War_Loose }
-        owns_state = 389
-        owns_state = 390
-        owns_state = 391
-        has_border_war = no
-    }
-
-    mean_time_to_happen = {
-        days = 2
-    }
+    is_triggered_only = yes
     
     option = {
         name = acw.40.a
-        SIX = { clr_country_flag = Dakota_War_Loose }
-        add_political_power = 50
-    }
-    option = {
-        name = acw.40.a
-        SIX = { clr_country_flag = Dakota_War_Loose }
-        declare_war_on = { target = SIX type = annex_everything }
     }
 }
 #USA Question Monroe Doctrine during Civil War
@@ -1770,7 +1540,7 @@ country_event = {
     
     option = {
         ai_chance = {
-            factor = 75
+            factor = 100
         }
         name = acw.41.a
         add_political_power = 50
@@ -1881,7 +1651,7 @@ country_event = {
     }
     option = {
         ai_chance = {
-            factor = 25
+            factor = 0
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
@@ -1906,9 +1676,9 @@ country_event = {
     
     option = {
         ai_chance = {
-            factor = 90
+            factor = 95
             modifier = {
-                factor = 60
+                factor = 0.5
                 has_country_flag = USABroken_Eagle
             }
         }
@@ -1943,7 +1713,7 @@ country_event = {
             has_country_flag = USASoaring_Eagle
         }
         ai_chance = {
-            factor = 5
+            factor = 0
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
@@ -1960,7 +1730,7 @@ country_event = {
             has_country_flag = USABroken_Eagle
         }
         ai_chance = {
-            factor = 40
+            factor = 50
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
