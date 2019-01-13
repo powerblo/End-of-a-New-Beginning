@@ -941,22 +941,26 @@ focus_tree = {
 		}
 		
 		available = {
-		    AUS = {
-		        has_country_leader = {
+		    NOT = {
+		        AUS = {
+	 	            has_country_leader = {
                     name = "Archduke Rainier"
                     ruling_only = yes
-                }
-				hidden_trigger = {
-				    check_variable = {
-                        HUN_REVOLT_RISK > 8 
                     }
-		        }
-            }
+			    }
+			}
+		    hidden_trigger = {
+				AUS = {
+				    check_variable = {
+                        HUN_REVOLT_RISK > 7 
+                    }
+			    }
+		    }
             custom_trigger_tooltip = {
-                tooltip = AUS_tt_hun_revolt_risk_over_8 		
+                tooltip = AUS_tt_hun_revolt_risk_over 		
                 AUS = {
 			        check_variable = {
-                        HUN_REVOLT_RISK > 8 
+                        HUN_REVOLT_RISK > 7 
                     }
 			    }			
             }

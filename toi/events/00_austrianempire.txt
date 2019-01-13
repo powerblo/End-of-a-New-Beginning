@@ -1276,3 +1276,62 @@ news_event = { #Hungarian Revolt news
 		ai_chance = { factor = 100 }		
     }		     
 }
+
+add_namespace = AUShuncompromise
+add_namespace = AUSfedcompromise
+
+country_event = { #Begin Negotiating with the Hungarians  
+	id = AUShuncompromise.1
+	title = AUShuncompromise.1.t
+	desc = AUShuncompromise.1.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Ausgleich begins 
+		name = AUShuncompromise.1.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.2 days = 365 } 
+				set_country_flag = AUS_flag_dual_monarchy_begin 
+		    }		
+		}
+    }	
+}
+
+country_event = { #Choose Between Federalization or Dual Monarchy   
+	id = AUSfedcompromise.1
+	title = AUSfedcompromise.1.t
+	desc = AUSfedcompromise.1.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Dual Monarchy  
+		name = AUSfedcompromise.1.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.2 days = 365 } 
+			    set_country_flag = AUS_flag_dual_monarchy_begin
+		    }
+        }		
+    }	
+	
+	option = { #Federalization  
+		name = AUSfedcompromise.1.b  
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+		    country_event = { id = AUSfedcompromise.2 days = 365 } 
+			set_country_flag = AUS_flag_federalization_1_begin
+		}		
+    }	
+}
