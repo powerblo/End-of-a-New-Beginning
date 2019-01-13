@@ -1153,7 +1153,13 @@ focus_tree = {
 	focus = {
 		id = WUR_triaspolitik
 		icon = GFX_goal_focus_foreign_diplomacy
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		x = 24
 		y = 7
 		mutually_exclusive = { focus = WUR_inner_politics } 
