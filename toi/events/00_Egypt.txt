@@ -33,7 +33,7 @@ country_event = {
 				has_dlc = "Death or Dishonor"
 			}
 			FROM = {
-				add_autonomy_ratio = {
+				add_autonomy_score = {
 					value = 100
 					localization = OTO_allows_EGY_army_expansion
 				}
@@ -579,21 +579,82 @@ country_event = { #ENG - friction with FRA over EGY administration
 		
 	option = {#fully take over
 		name = afr_EGY_vic.15.a
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 50 }
 		
 	}
-	option = {#fully take over
+	option = {#leave it to france
 		name = afr_EGY_vic.15.b
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 25 }
 		trigger ={
 		
 		}
 		
 	}
-	option = {#fully take over
+	option = {#attempt to smooth relations
 		name = afr_EGY_vic.15.c
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 25 }
 		
+	}
+}
+country_event = { #OTO - due to EGY independance, lose hold on AWS and HRR
+	id = afr_EGY_vic.16
+	title = afr_EGY_vic.16.t
+	desc = afr_EGY_vic.16.d 
+	
+	trigger={
+		NOT={controls_state = 268}
+		NOT={controls_state = 983}
+		NOT={controls_state = 550}
+		MED = {
+			if={
+				limit={
+					is_subject = yes
+				}
+				NOT={is_subject_of = OTO}
+				OVERLORD={
+					if={
+						limit={
+							is_subject = yes
+						}
+						NOT={is_subject_of = OTO}
+					}
+				}
+			}
+		}
+		tag = OTO
+		HRR = {
+			is_subject_of = OTO
+		}
+		AWS = {
+			is_subject_of  = OTO
+		}
+	}
+		
+	option = {#damn
+		name = afr_EGY_vic.16.a
+		ai_chance = { factor = 50 }
+		if={
+			limit ={
+				HRR = {
+					is_subject_of = OTO
+				}
+			}
+			set_autonomy = {
+				target = HRR
+				autonomy_state = autonomy_free
+			}
+		}
+		if={
+			limit ={
+				AWS = {
+					is_subject_of = OTO
+				}
+			}
+			set_autonomy = {
+				target = AWS
+				autonomy_state = autonomy_free
+			}
+		}
 	}
 }
 
