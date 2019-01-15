@@ -376,6 +376,9 @@ focus_tree = {
 		id = EGY_vic_rally_the_men_against_ETH
 		icon = GFX_goal_generic_political_pressure
 		cost = 70
+		available = { 
+			NOT = { has_country_flag = ETH_EGY_alliance } 
+		}		
 		prerequisite = {
 			focus = EGY_vic_abyssian_campaign
 		}
@@ -399,12 +402,21 @@ focus_tree = {
 					modifier = small_decrease
 				}
 			}
+			hidden_effect = {
+				clr_country_flag = ETH_EGY_Ties
+				ETH = { clr_country_flag = ETH_EGY_Ties }
+				set_country_flag = ETH_EGY_Rivalry
+				ETH = { set_country_flag = ETH_EGY_Rivalry }
+			}
 		}
 	}
 	focus = {
 		id = EGY_vic_prepare_invasion_forces
 		icon = GFX_goal_generic_political_pressure
 		cost = 70
+		available = { 
+			has_country_flag = ETH_EGY_Rivalry 
+		}		
 		prerequisite = {
 			focus = EGY_vic_rally_the_men_against_ETH
 		}
@@ -436,6 +448,9 @@ focus_tree = {
 		id = EGY_vic_declare_war_on_ETH
 		icon = GFX_goal_generic_political_pressure
 		cost = 70
+		available = { 
+			has_country_flag = ETH_EGY_Rivalry 
+		}		
 		prerequisite = {
 			focus = EGY_vic_prepare_invasion_forces
 		}
@@ -477,6 +492,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = EGY_vic_rally_the_men_against_ETH
 		}
+		bypass={
+			has_country_flag = ETH_EGY_alliance
+		}		
 		x = 3
 		y = 9
 		available_if_capitulated = no
@@ -500,6 +518,9 @@ focus_tree = {
 		id = EGY_vic_send_envoy_to_ETH
 		icon = GFX_goal_generic_political_pressure
 		cost = 70
+		available = { 
+			has_country_flag = ETH_EGY_Ties 
+		}		
 		prerequisite = {
 			focus = EGY_vic_rally_the_men_with_ETH
 		}
@@ -519,6 +540,9 @@ focus_tree = {
 		id = EGY_vic_ETH_investments
 		icon = GFX_goal_generic_political_pressure
 		cost = 70
+		available = { 
+			has_country_flag = ETH_EGY_Ties 
+		}		
 		prerequisite = {
 			focus = EGY_vic_send_envoy_to_ETH
 		}
