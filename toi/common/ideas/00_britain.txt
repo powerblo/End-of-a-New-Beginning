@@ -516,6 +516,38 @@ ideas = {
 				army_org_Factor = 0.05
 			}
 		}
+		ENG_idea_irb_ireland = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			cancel = {
+				country_exists = IRE
+				IRE = { is_subject = no }
+			}
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		ENG_idea_trade_unions_banned = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				social_egalitarianism_drift = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
 	}
 	political_advisor = {
 		ENG_political_advisor_crawshay_bailey = {
