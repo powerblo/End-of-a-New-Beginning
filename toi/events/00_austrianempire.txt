@@ -1277,6 +1277,24 @@ news_event = { #Hungarian Revolt news
     }		     
 }
 
+news_event = { #Compromise Achieved             
+	id = AUSnews.2
+	title = AUSnews.2.t
+	desc = AUSnews.2.d 
+	picture = GFX_news_event_generic_rally2
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = { 
+		name = AUSnews.2.a 
+		ai_chance = { factor = 100 }		
+    }		     
+}
+
 add_namespace = AUShuncompromise
 add_namespace = AUSfedcompromise
 
@@ -1319,7 +1337,7 @@ country_event = { #Choose Between Federalization or Dual Monarchy
 		
 		hidden_effect = {
 	        AUS = {
-		        country_event = { id = AUShuncompromise.2 days = 365 } 
+		        country_event = { id = AUShuncompromise.2 days = 200 } 
 			    set_country_flag = AUS_flag_dual_monarchy_begin
 		    }
         }		
@@ -1330,8 +1348,177 @@ country_event = { #Choose Between Federalization or Dual Monarchy
 		ai_chance = { factor = 100 }
 		
 	    AUS = {
-		    country_event = { id = AUSfedcompromise.2 days = 365 } 
+		    country_event = { id = AUSfedcompromise.2 days = 200 } 
 			set_country_flag = AUS_flag_federalization_1_begin
 		}		
     }	
+}
+
+country_event = { #Restore the Constitution   
+	id = AUShuncompromise.2
+	title = AUShuncompromise.2.t
+	desc = AUShuncompromise.2.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Agree  
+		name = AUShuncompromise.2.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.3 days = 150 }  
+		    }		
+		}
+		custom_effect_tooltip = AUS_tt_restore_hun_constitution 
+    }	
+}
+
+country_event = { #Diet of Hungary restored and votes on it    
+	id = AUShuncompromise.3
+	title = AUShuncompromise.3.t
+	desc = AUShuncompromise.3.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Passes   
+		name = AUShuncompromise.3.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.4 days = 50 }  
+		    }		
+		}
+		custom_effect_tooltip = AUS_tt_diet_restored  
+    }	
+}
+
+country_event = { #Appoint Prime Minister for Hungary 
+	id = AUShuncompromise.4
+	title = AUShuncompromise.4.t
+	desc = AUShuncompromise.4.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.5 days = 50 }
+                #set_country_flag = AUS_flag_dual_monarchy_ui				
+		    }		
+		}
+	}
+	
+	option = { #Andrassy   
+		name = AUShuncompromise.4.a  
+		ai_chance = { factor = 80 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_andrassy_hun_pm 		
+		}
+		custom_effect_tooltip = AUS_tt_appoint_andrassy   
+    }
+
+	option = { #Deak    
+		name = AUShuncompromise.4.b   
+		ai_chance = { factor = 20 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_deak_hun_pm 		
+		}
+		custom_effect_tooltip = AUS_tt_appoint_deak    
+    }	
+}
+
+country_event = { #Franz Joseph crowned King of Hungary  
+	id = AUShuncompromise.5
+	title = AUShuncompromise.5.t
+	desc = AUShuncompromise.5.d
+	picture = GFX_report_event_AUS_franz_joseph_coronation
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		hidden_effect = {
+			set_cosmetic_tag = AUS_HUN_dual
+			news_event = AUSnews.2
+			AUS = {
+			    retire_country_leader = yes 
+                create_country_leader = {
+                    name = "Franz Joseph I"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Franz_Joseph_I.dds"
+                    expire = 1920.08.03
+                    ideology = despotism 
+                }
+				remove_ideas = AUS_Franz_Joseph_I
+				set_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 0   
+                }
+				add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 2   
+                }
+				every_owned_state = { 
+				    limit = { NOT = { is_core_of = AUS } }
+				    add_core_of = AUS 
+				}
+				every_owned_state = { 
+				    limit = { is_core_of = HUN }
+				    remove_core_of = HUN 
+				}
+                set_party_name = { 
+                    ideology = autocracy 
+                    long_name = AUS_autocracy_compromise_party_long 
+                    name = AUS_autocracy_compromise_party 
+                }
+			}
+		}		
+	}
+	
+	option = { #Sehr Schon    
+		name = AUShuncompromise.5.a  
+		ai_chance = { factor = 80 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_hun_dual_monarchy  		
+		}
+		custom_effect_tooltip = AUS_tt_dual_monarchy_enacted    
+    }	
+}
+
+country_event = { #The Vienna Conference 
+	id = AUSfedcompromise.2
+	title = AUSfedcompromise.2.t
+	desc = AUSfedcompromise.2.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Begin tbe Federalization Process   
+		name = AUSfedcompromise.1.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUSfedcompromise.3 days = 150 } #Conference End 
+			    set_country_flag = AUS_flag_federalization_begin
+		    }
+        }		
+    }		
 }
