@@ -1511,13 +1511,35 @@ country_event = { #The Vienna Conference
 	is_triggered_only = yes 
 	
 	option = { #Begin tbe Federalization Process   
-		name = AUSfedcompromise.1.a  
+		name = AUSfedcompromise.2.a  
 		ai_chance = { factor = 100 }
 		
 		hidden_effect = {
 	        AUS = {
 		        country_event = { id = AUSfedcompromise.3 days = 150 } #Conference End 
 			    set_country_flag = AUS_flag_federalization_begin
+		    }
+        }		
+    }		
+}
+
+country_event = { #Conference Ends  
+	id = AUSfedcompromise.3
+	title = AUSfedcompromise.3.t
+	desc = AUSfedcompromise.3.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #End the Process    
+		name = AUSfedcompromise.3.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867 
 		    }
         }		
     }		
