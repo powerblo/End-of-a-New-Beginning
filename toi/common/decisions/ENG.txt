@@ -70,7 +70,6 @@ eoanb_category_worker_unrest_ENG = {
 		days_remove = 90
 		
 		complete_effect = {
-			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
 			custom_effect_tooltip = eoanb_tt_ENG_decision_improve_worker_conditions
 			hidden_effect = {
 				subtract_from_variable = { var = ENG_worker_unrest value = 1 }
@@ -127,7 +126,6 @@ eoanb_category_worker_unrest_ENG = {
 		days_re_enable = 1000
 		
 		complete_effect = {
-			add_popularity = { ideology = social_egalitarianism popularity = 0.03 }
 			custom_effect_tooltip = eoanb_tt_ENG_decision_shorten_workday
 			if = {
 				limit = {
@@ -268,7 +266,6 @@ eoanb_category_worker_unrest_ENG = {
 		days_re_enable = 30
 		
 		complete_effect = {
-			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
 			custom_effect_tooltip = eoanb_tt_ENG_decision_trade_unions_reallow
 			remove_ideas = ENG_idea_trade_unions_banned
 			hidden_effect = {

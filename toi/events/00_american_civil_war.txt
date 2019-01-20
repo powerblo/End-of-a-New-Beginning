@@ -60,10 +60,6 @@ country_event = {
         trigger = { has_country_flag = USA_DouglasElected }
         text = acw.1.d_douglas
     }
-    desc = {
-        trigger = { has_country_flag = USA_BellElected }
-        text = acw.1.d_bell
-    }
     picture = GFX_report_event_german_reichstag_gathering
     
     fire_only_once = yes
@@ -139,6 +135,7 @@ country_event = {
             }
         custom_effect_tooltip = 04_ACW_tt
         hidden_effect = { CSA = { country_event = { days = 1 id = acw.4 } } }
+        hidden_effect = { USA = { country_event = { days = 1 id = csa.8 } } }
     }
 }
 country_event = {
@@ -162,26 +159,6 @@ country_event = {
             373 = { set_demilitarized_zone = no }
             374 = { set_demilitarized_zone = no }
             746 = { set_demilitarized_zone = no }
-            USA = {
-                CSA = { transfer_state = 362 }
-                remove_state_core = 362
-                add_state_claim = 362
-                362 = { add_core_of = CSA }
-                CSA = { transfer_state = 372 }
-                remove_state_core = 372
-                add_state_claim = 372
-                372 = { add_core_of = CSA }
-                CSA = { transfer_state = 368 }
-                remove_state_core = 368
-                add_state_claim = 368
-                368 = { add_core_of = CSA }
-                CSA = { transfer_state = 363 }
-                remove_state_core = 363
-                add_state_claim = 363
-                363 = { add_core_of = CSA }
-            }
-            USA = { country_event = { id = csa.8 } }
-            USA = { add_popularity = { ideology = traditional_conservatism popularity = -0.2 } }
         }
         declare_war_on = {
             target = USA
@@ -190,9 +167,10 @@ country_event = {
         hidden_effect = { set_global_flag = ACWAmerican_Civil_War }
         hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }
         hidden_effect = { CSA = { set_country_flag = CSAAmerican_Civil_War } }
-        hidden_effect = { USA = { country_event = { hours = 1 id = usa.14 } } }
-        hidden_effect = { CSA = { country_event = { hours = 1 id = csa.10 } } }
+        hidden_effect = { USA = { country_event = { days = 1 id = usa.14 } } }
+        hidden_effect = { CSA = { country_event = { days = 1 id = csa.10 } } }
         hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
+        hidden_effect = { USA = { country_event = { days = 3 id = acw.7 } } }
         hidden_effect = { USA = { country_event = { id = acw.6 } } }
         hidden_effect = { CSA = { country_event = { id = acw.6 } } }
         hidden_effect = { news_event = { id = acw_news.1 } }
@@ -285,88 +263,26 @@ country_event = {
     desc = acw.7.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = {
-                limit = {
-                    tag = USA
-                }
-                hidden_effect = { white_peace = CSA }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            ENG = { has_war_together_with = CSA }
-                        }
-                        white_peace = ENG
-                    }
-                }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            FRA = { has_war_together_with = CSA }
-                        }
-                        white_peace = FRA
-                    }
-                }
-                hidden_effect = { annex_country { target = CSA } }
-                set_global_flag = USAWins_Civil_War
-                clr_global_flag = ACWAmerican_Civil_War
-                set_country_flag = USASoaring_Eagle
-                add_ideas = USA_recovery
-                remove_ideas = USA_Civil_War
-                hidden_effect = { news_event = { id = acw_news.6 } }
-                hidden_effect = { CSA = { country_event = { id = acw.7 } } }
-                delete_unit_template_and_units = { division_template = "Union Regimental" }
-                delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
-                set_stability = 0.6
-                set_war_support = 0.5
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            is_historical_focus_on = yes
-                            has_idea = USA_civil_war_historical_buff_hidden
-                        }
-                        USA = {
-                            remove_ideas = USA_civil_war_historical_buff_hidden
-                        }
-                    }
-                }
-                CSA = {
-                    delete_unit_template_and_units = { division_template = "Confederate Regimental" }
-                    delete_unit_template_and_units = { division_template = "South American Confederate Volunteers" }
-                    remove_ideas = USA_Civil_War
-                    set_country_flag = CSAIndependence_Lost
-                    if = {
-                        limit = {
-                            has_idea = CSA_Civil_War_Scout_Dependency
-                        }
-                        remove_ideas = CSA_Civil_War_Scout_Dependency
-                    }
-                    if = {
-                        limit = {
-                            has_idea = CSA_Civil_War_Scout_Dependency2
-                        }
-                        remove_ideas = CSA_Civil_War_Scout_Dependency2
-                    }
-                    if = {
-                        limit = {
-                            has_idea = CSA_Civil_War_Total_War
-                        }
-                        remove_ideas = CSA_Civil_War_Total_War
-                    }
-                    if = {
-                        limit = {
-                            has_idea = CSA_Civil_War_Conscription
-                        }
-                        remove_ideas = CSA_Civil_War_Conscription
-                    }
-                    set_stability = 0
-                    set_war_support = 0
-                }
+    trigger = {
+        tag = USA
+        OR = {
+            AND = {
+                TAG = USA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { surrender_progress > 0.8 }
+                NOT = { has_country_flag = USA_Radical_Coup }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { exists = no }
+                NOT = { has_country_flag = USA_Radical_Coup }
             }
         }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
@@ -375,6 +291,46 @@ country_event = {
         }
         name = acw.7.a
         custom_effect_tooltip = 06_ACW_tt
+        hidden_effect = { white_peace = CSA }
+        hidden_effect = {
+            if = {
+                limit = {
+                    ENG = { has_war_together_with = CSA }
+                }
+                white_peace = ENG
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    FRA = { has_war_together_with = CSA }
+                }
+                white_peace = FRA
+            }
+        }
+        hidden_effect = { annex_country { target = CSA } }
+        set_global_flag = USAWins_Civil_War
+        clr_global_flag = ACWAmerican_Civil_War
+        set_country_flag = USASoaring_Eagle
+        add_ideas = USA_recovery
+        remove_ideas = USA_Civil_War
+        hidden_effect = { news_event = { id = acw_news.6 } }
+        hidden_effect = { CSA = { country_event = { id = acw.7 } } }
+        delete_unit_template_and_units = { division_template = "Union Regimental" }
+        delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
+        set_stability = 0.6
+        set_war_support = 0.5
+        hidden_effect = {
+            if = {
+                limit = {
+                    is_historical_focus_on = yes
+                    has_idea = USA_civil_war_historical_buff_hidden
+                }
+                USA = {
+                    remove_ideas = USA_civil_war_historical_buff_hidden
+                }
+            }
+        }
     }
     option = {
         trigger = {
@@ -382,6 +338,36 @@ country_event = {
         }
         name = acw.7.b
         custom_effect_tooltip = 06_ACW_tt
+        delete_unit_template_and_units = { division_template = "Confederate Regimental" }
+        delete_unit_template_and_units = { division_template = "South American Confederate Volunteers" }
+        remove_ideas = USA_Civil_War
+        set_country_flag = CSAIndependence_Lost
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Scout_Dependency
+            }
+            remove_ideas = CSA_Civil_War_Scout_Dependency
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Scout_Dependency2
+            }
+            remove_ideas = CSA_Civil_War_Scout_Dependency2
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Total_War
+            }
+            remove_ideas = CSA_Civil_War_Total_War
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Conscription
+            }
+            remove_ideas = CSA_Civil_War_Conscription
+        }
+        set_stability = 0
+        set_war_support = 0
     }
 }
 country_event = {
@@ -390,105 +376,35 @@ country_event = {
     desc = acw.8.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = {
-                limit = {
-                    tag = CSA
-                }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            USA = { exists = no }
-                        }
-                        release = USA
-                    }
-                }
-                remove_ideas = USA_Civil_War
-                if = {
-                    limit = {
-                        has_idea = CSA_Civil_War_Scout_Dependency
-                    }
-                    remove_ideas = CSA_Civil_War_Scout_Dependency
-                }
-                if = {
-                    limit = {
-                        has_idea = CSA_Civil_War_Scout_Dependency2
-                    }
-                    remove_ideas = CSA_Civil_War_Scout_Dependency2
-                }
-                if = {
-                    limit = {
-                        has_idea = CSA_Civil_War_Total_War
-                    }
-                    remove_ideas = CSA_Civil_War_Total_War
-                }
-                if = {
-                    limit = {
-                        has_idea = CSA_Civil_War_Conscription
-                    }
-                    remove_ideas = CSA_Civil_War_Conscription
-                }
-                hidden_effect = { white_peace = USA }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            ENG = { has_war_together_with = CSA }
-                        }
-                        USA = { white_peace = ENG }
-                    }
-                }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            FRA = { has_war_together_with = CSA }
-                        }
-                        USA = { white_peace = FRA }
-                    }
-                }
-                CSA = { transfer_state = 1285 }
-                CSA = { transfer_state = 1300 }
-                CSA = { transfer_state = 1297 }
-                CSA = { transfer_state = 374 }
-                CSA = { transfer_state = 373 }
-                CSA = { transfer_state = 746 }
-                if = {
-                    limit = {
-                        USA = { owns_state = 369 }
-                    }
-                    CSA = { transfer_state = 369 }
-                }
-                set_truce = { target = USA days = 400 }
-                hidden_effect = { USA = { country_event = { id = acw.8 } } }
-                set_global_flag = CSAWins_Civil_War
-                clr_global_flag = ACWAmerican_Civil_War
-                set_country_flag = CSAIndependence_Won
-                delete_unit_template_and_units = { division_template = "Confederate Regimental" }
-                delete_unit_template_and_units = { division_template = "South American Confederate Volunteers" }
-                set_stability = 0.8
-                set_war_support = 0.6
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            is_historical_focus_on = yes
-                            has_idea = USA_civil_war_historical_buff_hidden
-                        }
-                        USA = {
-                            remove_ideas = USA_civil_war_historical_buff_hidden
-                        }
-                    }
-                }
+    trigger = {
+        tag = CSA
+        OR = {
+            AND = {
+                TAG = CSA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
                 USA = {
-                    set_country_flag = USABroken_Eagle
-                    remove_ideas = USA_Civil_War
-                    add_ideas = USA_recovery
-                    delete_unit_template_and_units = { division_template = "Union Regimental" }
-                    delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
+                    surrender_progress > 0.7
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
+                }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                USA = { NOT = { has_war_with = CSA } }
+                CSA = { exists = yes }
+                USA = {
+                    NOT = {
+                        has_country_flag = USA_Radical_Coup
+                    }
                 }
             }
         }
+    }
+
+    mean_time_to_happen = {
+        days = 2
     }
     
     option = {
@@ -497,6 +413,11 @@ country_event = {
         }
         name = acw.8.a
         custom_effect_tooltip = 07_ACW_tt
+        set_country_flag = USABroken_Eagle
+        remove_ideas = USA_Civil_War
+        add_ideas = USA_recovery
+        delete_unit_template_and_units = { division_template = "Union Regimental" }
+        delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
     }
     option = {
         trigger = {
@@ -504,7 +425,89 @@ country_event = {
         }
         hidden_effect = { news_event = { id = acw_news.7 } }
         name = acw.8.b
+        hidden_effect = {
+            if = {
+                limit = {
+                    USA = { exists = no }
+                }
+                release = USA
+            }
+        }
         custom_effect_tooltip = 07_ACW_tt
+        remove_ideas = USA_Civil_War
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Scout_Dependency
+            }
+            remove_ideas = CSA_Civil_War_Scout_Dependency
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Scout_Dependency2
+            }
+            remove_ideas = CSA_Civil_War_Scout_Dependency2
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Total_War
+            }
+            remove_ideas = CSA_Civil_War_Total_War
+        }
+        if = {
+            limit = {
+                has_idea = CSA_Civil_War_Conscription
+            }
+            remove_ideas = CSA_Civil_War_Conscription
+        }
+        hidden_effect = { white_peace = USA }
+        hidden_effect = {
+            if = {
+                limit = {
+                    ENG = { has_war_together_with = CSA }
+                }
+                USA = { white_peace = ENG }
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    FRA = { has_war_together_with = CSA }
+                }
+                USA = { white_peace = FRA }
+            }
+        }
+        CSA = { transfer_state = 1285 }
+        CSA = { transfer_state = 1300 }
+        CSA = { transfer_state = 1297 }
+        CSA = { transfer_state = 374 }
+        CSA = { transfer_state = 373 }
+        CSA = { transfer_state = 746 }
+        if = {
+            limit = {
+                USA = { owns_state = 369 }
+            }
+            CSA = { transfer_state = 369 }
+        }
+        set_truce = { target = USA days = 400 }
+        hidden_effect = { USA = { country_event = { id = acw.8 } } }
+        set_global_flag = CSAWins_Civil_War
+        clr_global_flag = ACWAmerican_Civil_War
+        set_country_flag = CSAIndependence_Won
+        delete_unit_template_and_units = { division_template = "Confederate Regimental" }
+        delete_unit_template_and_units = { division_template = "South American Confederate Volunteers" }
+        set_stability = 0.8
+        set_war_support = 0.6
+        hidden_effect = {
+            if = {
+                limit = {
+                    is_historical_focus_on = yes
+                    has_idea = USA_civil_war_historical_buff_hidden
+                }
+                USA = {
+                    remove_ideas = USA_civil_war_historical_buff_hidden
+                }
+            }
+        }
     }
 }
 #Trent Affair
@@ -1268,70 +1271,157 @@ country_event = {
     }
     option = {
         name = acw.27.b
+        start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 1045
+                    num_provinces = 3
+                    on_win = acw.28
+                    on_lose = acw.29
+                }
+                
+                defender = {
+                    state = 390
+                    num_provinces = 3
+                    on_win = acw.30
+                    on_lose = acw.31
+                }
+            }
+        set_country_flag = Dakota_War_Loose
+        USA = { country_event = { id = acw.34 } }
+    }
+    option = {
+        name = acw.27.c
         SIX = {
             declare_war_on = { target = USA type = annex_everything }
-            set_country_flag = Dakota_War
+            set_country_flag = Dakota_War_Harsh
         }
         USA = { country_event = { id = acw.34 } }
     }
 }
-#Pushback Re-equipment for USA
+#Attacker Win
 country_event = {
     id = acw.28
     title = acw.28.t
-    desc = acw.28.d
+    desc = {
+        trigger = { tag = SIX }
+        text = acw.28.d
+    }
+    desc = {
+        trigger = { tag = USA }
+        text = acw.28.d_a
+    }
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    trigger = {
-        tag = USA
-        has_war_with = CSA
-        date < 1864.6.1
-        has_global_flag = ACWAmerican_Civil_War
-        surrender_progress > 0.2
-    }
-
-    fire_only_once = yes
+    is_triggered_only = yes
     
     option = {
         name = acw.28.a
-        add_equipment_to_stockpile = {
-            type = infantry_equipment
-            amount = 5000
+        add_political_power = 100
+        army_experience = 25
+        ROOT = { transfer_state = FROM.FROM.FROM }
+        if = {
+            limit = {
+                tag = SIX
+                NOT = { owns_state = 391 }
+                NOT = { owns_state = 389 }
+            }
+            country_event = { id = acw.35 days = 20 }
+        }
+        if = {
+            limit = {
+                tag = SIX
+                NOT = { owns_state = 391 }
+                owns_state = 389
+            }
+            country_event = { id = acw.36 days = 20 }
+        }
+        if = {
+            limit = {
+                tag = USA
+                NOT = { owns_state = 390 }
+                NOT = { owns_state = 389 }
+            }
+            country_event = { id = acw.38 days = 20 }
+        }
+        if = {
+            limit = {
+                tag = USA
+                NOT = { owns_state = 390 }
+                owns_state = 389
+            }
+            country_event = { id = acw.39 days = 20 }
         }
     }   
 }
-#Pushback Re-equipment for CSA
+#Attacker Defeat
 country_event = {
     id = acw.29
     title = acw.29.t
-    desc = acw.29.d
+    desc = {
+        trigger = { tag = SIX }
+        text = acw.29.d
+    }
+    desc = {
+        trigger = { tag = USA }
+        text = acw.29.d_a
+    }
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    trigger = {
-        tag = CSA
-        has_war_with = USA
-        date < 1864.6.1
-        has_global_flag = ACWAmerican_Civil_War
-        surrender_progress > 0.2
-    }
-
-    fire_only_once = yes
+    is_triggered_only = yes
     
     option = {
         name = acw.29.a
-        add_equipment_to_stockpile = {
-            type = infantry_equipment
-            amount = 5000
+        add_political_power = -50
+        army_experience = 10
+        if = {
+            limit = {
+                tag = SIX
+                NOT = { owns_state = 391 }
+                NOT = { owns_state = 389 }
+            }
+            USA = { country_event = { id = acw.39 days = 20 } }
+        }
+        if = {
+            limit = {
+                tag = SIX
+                NOT = { owns_state = 391 }
+                owns_state = 389
+            }
+            USA = { country_event = { id = acw.38 days = 20 } }
+        }
+        if = {
+            limit = {
+                tag = USA
+                NOT = { owns_state = 390 }
+                NOT = { owns_state = 389 }
+            }
+            country_event = { id = acw.36 days = 20 }
+        }
+        if = {
+            limit = {
+                tag = USA
+                NOT = { owns_state = 390 }
+                owns_state = 389
+            }
+            country_event = { id = acw.35 days = 20 }
         }
     }   
 }
-#VACANT
+#Defender Win
 country_event = {
     id = acw.30
     title = acw.30.t
-    desc = acw.30.d
+    desc = {
+        trigger = { tag = SIX }
+        text = acw.30.d
+    }
+    desc = {
+        trigger = { tag = USA }
+        text = acw.30.d_a
+    }
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1339,13 +1429,22 @@ country_event = {
     
     option = {
         name = acw.30.a
+        add_political_power = 100
+        army_experience = 25
     }   
 }
-#VACANT
+#Defender Lose
 country_event = {
     id = acw.31
     title = acw.31.t
-    desc = acw.31.d
+    desc = {
+        trigger = { tag = SIX }
+        text = acw.31.d
+    }
+    desc = {
+        trigger = { tag = USA }
+        text = acw.31.d_a
+    }
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1353,6 +1452,8 @@ country_event = {
     
     option = {
         name = acw.31.a
+        add_political_power = -50
+        army_experience = 10
     }   
 }
 #Sioux Win Dakota War
@@ -1365,7 +1466,7 @@ country_event = {
 
     trigger = {
         tag = SIX
-        has_country_flag = Dakota_War
+        has_country_flag = Dakota_War_Harsh
         has_war_with = USA
         SIX = {
             controls_state = 390
@@ -1383,19 +1484,19 @@ country_event = {
     
     option = {
         name = acw.32.a
-        SIX = {
+        USA = {
             transfer_state = 390
             transfer_state = 389
             transfer_state = 391
         }
         white_peace = USA
-        clr_country_flag = Dakota_War
+        clr_country_flag = Dakota_War_Harsh
     }
     option = {
         name = acw.32.b
-        add_political_power = -100
-        add_stability = -0.1
-        clr_country_flag = Dakota_War
+        add_political_power = -50
+        add_stability = -0.05
+        clr_country_flag = Dakota_War_Harsh
     }
 }
 #USA Win Dakota War
@@ -1428,7 +1529,7 @@ country_event = {
     option = {
         name = acw.33.a
         white_peace = SIX
-        SIX = { clr_country_flag = Dakota_War }
+        clr_country_flag = Dakota_War_Harsh
     }
     option = {
         name = acw.33.b
@@ -1436,17 +1537,24 @@ country_event = {
             limit = {
                 has_war_with = CSA
             }
-            add_political_power = -100
-            add_stability = -0.1
+            add_political_power = -50
+            add_stability = -0.05
         }
-        SIX = { clr_country_flag = Dakota_War_Harsh }
+        clr_country_flag = Dakota_War_Harsh
     }
 }
 #USA Respond
 country_event = {
     id = acw.34
     title = acw.34.t
-    desc = acw.34.d
+    desc = {
+        trigger = { SIX = { has_country_flag = Dakota_War_Loose } }
+        text = acw.34.d
+    }
+    desc = {
+        trigger = { SIX = { has_country_flag = Dakota_War_Harsh } }
+        text = acw.34.d_a
+    }
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
@@ -1456,7 +1564,7 @@ country_event = {
         name = acw.34.a
     }
 }
-#VACANT
+#North Attack
 country_event = {
     id = acw.35
     title = acw.35.t
@@ -1468,9 +1576,25 @@ country_event = {
     
     option = {
         name = acw.35.a
+        start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 390
+                    num_provinces = 3
+                    on_win = acw.28
+                    on_lose = acw.29
+                }
+                
+                defender = {
+                    state = 389
+                    num_provinces = 3
+                    on_win = acw.30
+                    on_lose = acw.31
+                }
+            }
     }
 }
-#VACANT
+#Minesotta Attack
 country_event = {
     id = acw.36
     title = acw.36.t
@@ -1482,9 +1606,25 @@ country_event = {
     
     option = {
         name = acw.36.a
+        start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 390
+                    num_provinces = 3
+                    on_win = acw.28
+                    on_lose = acw.29
+                }
+                
+                defender = {
+                    state = 391
+                    num_provinces = 3
+                    on_win = acw.30
+                    on_lose = acw.31
+                }
+            }
     }
 }
-#VACANT
+#Sioux Win Loose War
 country_event = {
     id = acw.37
     title = acw.37.t
@@ -1492,13 +1632,32 @@ country_event = {
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    is_triggered_only = yes
+    trigger = {
+        tag = SIX
+        has_country_flag = Dakota_War_Loose
+        owns_state = 389
+        owns_state = 390
+        owns_state = 391
+        has_border_war = no
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
     
     option = {
         name = acw.37.a
+        clr_country_flag = Dakota_War_Loose
+        add_political_power = 100
+    }
+    option = {
+        name = acw.37.a
+        clr_country_flag = Dakota_War_Loose
+        declare_war_on = { target = USA type = annex_everything }
+        add_stability = -0.05
     }
 }
-#VACANT
+#North Attack USA
 country_event = {
     id = acw.38
     title = acw.38.t
@@ -1510,9 +1669,25 @@ country_event = {
     
     option = {
         name = acw.38.a
+        start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 391
+                    num_provinces = 3
+                    on_win = acw.28
+                    on_lose = acw.29
+                }
+                
+                defender = {
+                    state = 389
+                    num_provinces = 3
+                    on_win = acw.30
+                    on_lose = acw.31
+                }
+            }
     }
 }
-#VACANT
+#South Attack USA
 country_event = {
     id = acw.39
     title = acw.39.t
@@ -1524,9 +1699,25 @@ country_event = {
     
     option = {
         name = acw.39.a
+        start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 389
+                    num_provinces = 3
+                    on_win = acw.28
+                    on_lose = acw.29
+                }
+                
+                defender = {
+                    state = 390
+                    num_provinces = 3
+                    on_win = acw.30
+                    on_lose = acw.31
+                }
+            }
     }
 }
-#VACANT
+#USA Win Loose War
 country_event = {
     id = acw.40
     title = acw.40.t
@@ -1534,10 +1725,28 @@ country_event = {
     
     picture = GFX_report_event_chinese_soldiers_city_ruin
 
-    is_triggered_only = yes
+    trigger = {
+        tag = USA
+        SIX = { has_country_flag = Dakota_War_Loose }
+        owns_state = 389
+        owns_state = 390
+        owns_state = 391
+        has_border_war = no
+    }
+
+    mean_time_to_happen = {
+        days = 2
+    }
     
     option = {
         name = acw.40.a
+        SIX = { clr_country_flag = Dakota_War_Loose }
+        add_political_power = 50
+    }
+    option = {
+        name = acw.40.a
+        SIX = { clr_country_flag = Dakota_War_Loose }
+        declare_war_on = { target = SIX type = annex_everything }
     }
 }
 #USA Question Monroe Doctrine during Civil War
@@ -1561,7 +1770,7 @@ country_event = {
     
     option = {
         ai_chance = {
-            factor = 100
+            factor = 75
         }
         name = acw.41.a
         add_political_power = 50
@@ -1672,7 +1881,7 @@ country_event = {
     }
     option = {
         ai_chance = {
-            factor = 0
+            factor = 25
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
@@ -1697,9 +1906,9 @@ country_event = {
     
     option = {
         ai_chance = {
-            factor = 95
+            factor = 90
             modifier = {
-                factor = 0.5
+                factor = 60
                 has_country_flag = USABroken_Eagle
             }
         }
@@ -1734,7 +1943,7 @@ country_event = {
             has_country_flag = USASoaring_Eagle
         }
         ai_chance = {
-            factor = 0
+            factor = 5
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
@@ -1751,7 +1960,7 @@ country_event = {
             has_country_flag = USABroken_Eagle
         }
         ai_chance = {
-            factor = 50
+            factor = 40
             modifier = {
                 factor = 0
                 is_historical_focus_on = yes
@@ -2204,7 +2413,6 @@ country_event = {
                 }
                 set_politics = {
                     ruling_party = autocracy
-                    elections_allowed = no
                 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
@@ -2295,7 +2503,6 @@ country_event = {
                 }
                 set_politics = {
                     ruling_party = autocracy
-                    elections_allowed = no
                 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
@@ -2518,7 +2725,6 @@ country_event = {
                 }
                 set_politics = {
                     ruling_party = radical_democracy
-                    elections_allowed = no
                 }
                 create_country_leader = {
                     name = "John Bell"
@@ -2629,7 +2835,6 @@ country_event = {
                 }
                 set_politics = {
                     ruling_party = radical_democracy
-                    elections_allowed = no
                 }
                 create_country_leader = {
                     name = "John Bell"
@@ -2743,7 +2948,6 @@ country_event = {
             }
             set_politics = {
                 ruling_party = autocracy
-                elections_allowed = no
             }
             add_popularity = {
                 ideology = autocracy
@@ -2799,7 +3003,6 @@ country_event = {
             set_country_flag = usa_mhc_won_war
             set_politics = {
                 ruling_party = anarchism
-                elections_allowed = no
             }
             create_country_leader = {
                 name = "Uriah Smith Stephens"
