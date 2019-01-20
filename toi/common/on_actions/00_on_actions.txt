@@ -13,17 +13,20 @@ on_actions = {
 			OUD = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			GWA = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			HOL = { country_event = { id = holland_oog.1 } }
+            SER = { country_event = { id = SERmisc.5 days = 1 } }
 			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			set_global_flag = eoanb_flag_sow_ongoing
 		}
 	}
 	
 	# country 
-	#on_new_term_election = {
-	#	effect = {
-	#		
-	#	}
-	#}
+	on_new_term_election = {
+		effect = {
+			random_events = {
+				100 = election.1 #Generic Elections
+			}
+		}
+	}
 
 	# Ace pilots
 	# country, FROM = ace
@@ -368,7 +371,23 @@ on_actions = {
 					    ROOT = { tag = CAU }
                     }   
                         FROM = { country_event = { id = caucasus.3 } }
-                }  				
+                }
+		if = {
+                	limit = {
+                		FROM = { tag = CSA }
+                		ROOT = { tag = USA }
+		                has_global_flag = ACWAmerican_Civil_War
+                	}
+                	FROM = { country_event = { id = acw.8 } }
+                }
+                if = {
+                	limit = {
+                		FROM = { tag = USA }
+                		ROOT = { tag = CSA }
+		                has_global_flag = ACWAmerican_Civil_War
+                	}
+                	FROM = { country_event = { id = acw.7 } }
+                }
 		}
 	}
 

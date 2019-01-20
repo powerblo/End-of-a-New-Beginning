@@ -794,16 +794,16 @@ focus_tree = {
 		available = {
 			#set_temp_variable = {country_pop_toal = max_manpower}
 			OR = {
-				num_of_controlled_states > 3
+				num_of_controlled_states > 2
 				AND = {
-					num_of_controlled_states > 2
+					num_of_controlled_states > 1
 					num_of_factories > 2
 				}
 				AND = {
 					custom_trigger_tooltip = {
-						tooltip = has_more_than_1M_pop	
+						tooltip = has_more_than_250K_pop	
 						set_temp_variable = {a = max_manpower}
-						check_variable = {a>1000000}
+						check_variable = {a>250000}
 					}
 					num_of_factories > 1
 				}
