@@ -24,7 +24,7 @@
   give_guarantee = POR
   give_guarantee = GRE 
   
-    #Collective guarantee of the 7 great powers
+      #Colective guarantee of the 7 great power
   give_guarantee = ROM
   give_guarantee = MOL
   
@@ -431,6 +431,11 @@
 		freedom_level = 0.4
 	}
 	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
 		target = NZL
 		autonomous_state = autonomy_colony
 		freedom_level = 0.2
@@ -440,8 +445,13 @@
 		autonomous_state = autonomy_colony
 		freedom_level = 0.2
 	}
+	set_autonomy = {
+		target = IOM
+		autonomous_state = autonomy_integrated_puppet
+	}
 	else = {
 		puppet = RAJ
+		puppet = IOM
 		puppet = NAT
 	}
 }
@@ -502,6 +512,11 @@ if = {
 		}
 		set_autonomy = {
 			target = NVS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		set_autonomy = {
+			target = AST
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
@@ -571,6 +586,7 @@ if = {
 			puppet = CAN
 			puppet = NFL
 			puppet = BRK
+			puppet = AST
 			puppet = NZL
 			puppet = ION
 			puppet = NSW
