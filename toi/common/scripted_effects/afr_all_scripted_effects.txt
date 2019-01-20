@@ -455,12 +455,36 @@ afr_ber_check_votes = {
 	}
 }
 afr_ber_assign_extra_votes_for_owned_states={
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_senegal = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_senegal = yes
 				check_variable = {GER.current_region_conferance_vote = 1}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_manuritania = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -469,12 +493,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_mali = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_mali = yes
 				check_variable = {GER.current_region_conferance_vote = 3}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_guinea = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -483,12 +533,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_sierra_leone = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_sierra_leone = yes
 				check_variable = {GER.current_region_conferance_vote = 5}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_nigeria = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -497,12 +573,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_gabon = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_gabon = yes
 				check_variable = {GER.current_region_conferance_vote = 7}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_kongo = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -511,12 +613,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_angola = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_angola = yes
 				check_variable = {GER.current_region_conferance_vote = 9}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_african_horn = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -525,12 +653,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_nambia = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_nambia = yes
 				check_variable = {GER.current_region_conferance_vote = 11}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_rhodesia = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -539,12 +693,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_zanzabar = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_zanzabar = yes
 				check_variable = {GER.current_region_conferance_vote = 13}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_kenya = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -553,12 +733,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_uganda = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_uganda = yes
 				check_variable = {GER.current_region_conferance_vote = 15}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_equatorial_africa = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -567,12 +773,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_ivory_coast = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_ivory_coast = yes
 				check_variable = {GER.current_region_conferance_vote = 17}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_ghana = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -581,12 +813,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_niger = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_niger = yes
 				check_variable = {GER.current_region_conferance_vote = 19}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_togo = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={
@@ -595,12 +853,38 @@ afr_ber_assign_extra_votes_for_owned_states={
 			}
 			afr_assign_extra_vote_to_country = yes
 		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_benin = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
+		}
 		every_owned_state = {
 			limit ={
 				is_in_benin = yes
 				check_variable = {GER.current_region_conferance_vote = 21}
 			}
 			afr_assign_extra_vote_to_country = yes
+		}
+		#
+		all_country={
+			limit={
+				is_subject_of = PREV
+			}
+			every_owned_state = {
+				limit ={
+					is_in_burkina_faso = yes
+					check_variable = {GER.current_region_conferance_vote = 1}
+				}
+				PREV={afr_assign_extra_vote_to_country = yes}
+			}
 		}
 		every_owned_state = {
 			limit ={

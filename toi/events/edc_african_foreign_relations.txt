@@ -1827,7 +1827,7 @@ country_event = {###natives researched Electrical Telegraph
 		}	
 	}
 }
-country_event = {###natives researched Industrial Society
+country_event = {###natives researched pasteurization
 	id = EDC_afr.34
 	title = EDC_afr.34.t
 	desc = EDC_afr.34.d
@@ -1837,8 +1837,8 @@ country_event = {###natives researched Industrial Society
 	trigger = {
 		check_variable = {ROOT.industrisation_progress < 100}
 		has_idea = afr_reforming_kingdom
-		has_tech = tech_humanities_industrial_society
-		NOT= {has_country_flag= af_t_tech_humanities_industrial_society}
+		has_tech = pasteurization
+		NOT= {has_country_flag= af_t_tech_biochem_pasteurization}
 		NOT = {has_idea = industrializing}
 	}
 	mean_time_to_happen = {
@@ -1847,7 +1847,7 @@ country_event = {###natives researched Industrial Society
 	
 	option = {#ok
 		name = EDC_afr.34.a
-		set_country_flag = af_t_tech_humanities_industrial_society
+		set_country_flag = af_t_tech_biochem_pasteurization
 		custom_effect_tooltip = EDC_afr.5.t
 		hidden_effect = {
 			country_event = { id = EDC_afr.5 hours = 1 }
@@ -1903,6 +1903,33 @@ country_event = {###natives researched industrial_fertilizers
 	option = {#ok
 		name = EDC_afr.36.a
 		set_country_flag = af_t_tech_industrial_fertilizers
+		custom_effect_tooltip = EDC_afr.5.t
+		hidden_effect = {
+			country_event = { id = EDC_afr.5 hours = 1 }
+		}	
+	}
+}
+country_event = {###natives researched industrial_fertilizers
+	id = EDC_afr.37
+	title = EDC_afr.37.t
+	desc = EDC_afr.37.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		check_variable = {ROOT.industrisation_progress < 100}
+		has_idea = afr_reforming_kingdom
+		NOT= {has_country_flag= af_t_tech_chemical_structure_model}
+		NOT = {has_idea = industrializing}
+		has_tech = chemical_structure_model
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#ok
+		name = EDC_afr.37.a
+		set_country_flag = af_t_tech_chemical_structure_model
 		custom_effect_tooltip = EDC_afr.5.t
 		hidden_effect = {
 			country_event = { id = EDC_afr.5 hours = 1 }
@@ -1984,7 +2011,7 @@ news_event = { #the scramble begins
 		set_global_flag = scramble_for_africa
 	}
 	trigger ={
-		tag = ENG
+		#tag = ENG
 		OR={
 			AND = {
 				any_country={
@@ -2038,16 +2065,6 @@ news_event = { #the scramble begins
 		set_country_flag = is_historical_colonial_power
 		if= {
 			limit = {
-				NOT = {
-					has_tech = tech_humanities_colonialism
-				}
-			}
-			set_technology = {
-				tech_humanities_colonialism = 1
-			}
-		}
-		if= {
-			limit = {
 				is_ai = yes
 				NOT = {
 					has_tech = tech_humanities_colonialism
@@ -2059,6 +2076,17 @@ news_event = { #the scramble begins
 				tech_humanities_colonial_ambitions = 1
 			}
 		}
+		else_if= {
+			limit = {
+				NOT = {
+					has_tech = tech_humanities_colonialism
+				}
+			}
+			set_technology = {
+				tech_humanities_colonialism = 1
+			}
+		}
+		
 	}
 	option = {#The Hordes of Europe do decend apon us
 		name = EDC_afr.42.c
