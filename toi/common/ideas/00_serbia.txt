@@ -8,8 +8,8 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				stability_factor = -0.3 
-				war_support_factor = -0.3
+				stability_factor = -0.3
+				war_support_factor = -0.05
 			}
         }
         
@@ -21,7 +21,7 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				political_power_gain = -0.15
+				political_power_gain = -0.2
 			}
         }
         
@@ -47,7 +47,17 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.2
 			}
-        }       
+        }
+
+        SER_idea_alliance = {
+            allowed = {
+				always = yes
+			}
+
+			picture = FRA_amateur_tacticians
+			
+            modifier = {}
+        }
 	}
    
     #PEOPLE
