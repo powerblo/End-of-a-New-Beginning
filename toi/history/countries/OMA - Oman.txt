@@ -35,7 +35,8 @@
     state_religion
 	religion_ibadi
          #NATIONAL SPIRITS
-	
+	OMA_economic_irrelevence
+	OMA_mothballed_shipyards
   }
 
   set_politics = {
@@ -80,17 +81,11 @@
       has_dlc = "Together for Victory"
     }
     set_autonomy = {
-      target = MOM
-      autonomous_state = autonomy_colony
-      freedom_level = 0.1
-    }
-    set_autonomy = {
       target = ZAN
       autonomous_state = autonomy_dominion
       freedom_level = 0.1
     }
     else = {
-      puppet = MOM
       puppet = ZAN
     }
   }
@@ -106,7 +101,7 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "Said II bin Sultan"
+    name = "Thuwaini bin Said"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_OMA_Said_II_bin_Sultan.dds"
     expire = 1900.1.1
