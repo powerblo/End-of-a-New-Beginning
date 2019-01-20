@@ -20,11 +20,13 @@ on_actions = {
 	}
 	
 	# country 
-	#on_new_term_election = {
-	#	effect = {
-	#		
-	#	}
-	#}
+	on_new_term_election = {
+		effect = {
+			random_events = {
+				100 = election.1 #Generic Elections
+			}
+		}
+	}
 
 	# Ace pilots
 	# country, FROM = ace
@@ -369,7 +371,23 @@ on_actions = {
 					    ROOT = { tag = CAU }
                     }   
                         FROM = { country_event = { id = caucasus.3 } }
-                }  				
+                }
+		if = {
+                	limit = {
+                		FROM = { tag = CSA }
+                		ROOT = { tag = USA }
+		                has_global_flag = ACWAmerican_Civil_War
+                	}
+                	FROM = { country_event = { id = acw.8 } }
+                }
+                if = {
+                	limit = {
+                		FROM = { tag = USA }
+                		ROOT = { tag = CSA }
+		                has_global_flag = ACWAmerican_Civil_War
+                	}
+                	FROM = { country_event = { id = acw.7 } }
+                }
 		}
 	}
 
