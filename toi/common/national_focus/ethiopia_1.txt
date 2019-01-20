@@ -11,10 +11,10 @@ focus_tree = {
 	}
 	continuous_focus_position = {x = 6000 y = 10000 }
 
-
+	
 	default = no
-
-
+	
+	
 	# # Tewodros is dead
 	# focus = {
 		# id = ETH_tewodros_dead
@@ -26,21 +26,21 @@ focus_tree = {
 		# ai_will_do = {
 			# factor = 1
 		# }
-
+		
 		# available = {
-				# has_country_leader = {
-					# ruling_only = yes
-					# name = "Kings_Court"
+				# has_country_leader = { 
+					# ruling_only = yes 
+					# name = "Kings_Court" 
 				# }
 			# }
-
+		
 		# completion_reward = {
-
-
+			
+		
 		# }
 	# }
-
-
+	
+	
 	# focus for Tewodros reforms
 	focus = {
 		id = ETH_tewodros_reforms
@@ -52,20 +52,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+		
 		completion_reward = {
 			add_political_power = -100
-
+		
 		}
 	}
-
+	
 	# focus for Tewodros industrial reforms
 	focus = {
 		id = ETH_begin_tewodros_industrial_reforms
@@ -78,9 +78,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_tewodros_reforms }
@@ -89,16 +89,16 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.75 uses = 1 technology = manufactories }
 			swap_ideas = { add_idea = very_high_taxes remove_idea = high_taxes }
 			add_ideas = ETH_idea_heavily_taxed_peasantry
-
+		
 		}
 	}
+	
 
-
-
-
-
-
-
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_connect_the_cities
 		icon = GFX_goal_generic_construction2
@@ -110,9 +110,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_clear_space_for_industry }
@@ -124,7 +124,7 @@ focus_tree = {
 				}
 			}
 		}
-
+		
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -155,7 +155,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_connect_isolated_villages
 		icon = GFX_goal_generic_construct_infrastructure
@@ -167,9 +167,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_connect_the_cities }
@@ -181,7 +181,7 @@ focus_tree = {
 				}
 			}
 		}
-
+		
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -212,8 +212,8 @@ focus_tree = {
 			}
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_connected_infrastructure
 		icon = GFX_goal_generic_construction2
@@ -225,9 +225,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_connect_isolated_villages }
@@ -237,9 +237,9 @@ focus_tree = {
 				add_idea = ETH_idea_isolated_villages_2
 			}
 		}
-
+		
 	}
-
+	
 	focus = {
 		id = ETH_finish_resource_exploration
 		icon = GFX_goal_generic_construction2
@@ -251,9 +251,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_clear_space_for_industry }
@@ -262,12 +262,12 @@ focus_tree = {
 				owns_state = 816
 			}
 		}
-
+		
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
-
+	
 	focus = {
 		id = ETH_exploit_resources
 		icon = GFX_goal_generic_construction2
@@ -279,9 +279,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_finish_resource_exploration }
@@ -290,7 +290,7 @@ focus_tree = {
 				owns_state = 816
 			}
 		}
-
+		
 		completion_reward = {
 			add_resource = {
 				type = iron
@@ -299,8 +299,8 @@ focus_tree = {
 			}
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_fabric_industry
 		icon = GFX_goal_generic_construction2
@@ -312,9 +312,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_exploit_resources }
@@ -360,7 +360,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_study_western_factories
 		icon = GFX_goal_generic_construction2
@@ -372,9 +372,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_clear_space_for_industry }
@@ -386,12 +386,12 @@ focus_tree = {
 				}
 			}
 		}
-
+		
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = mechanical_engineering_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_study_western_chemistry
 		icon = GFX_goal_generic_construction2
@@ -403,9 +403,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_study_western_factories }
@@ -417,13 +417,13 @@ focus_tree = {
 				}
 			}
 		}
-
+		
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = biochemistry_tech }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_study_western_refining
 		icon = GFX_goal_generic_construction2
@@ -435,21 +435,21 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_study_western_chemistry }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = process_engineering_tech }
 		}
-
+		
 	}
-
-
-
-
+	
+	
+	
+	
 	focus = {
 		id = ETH_clear_space_for_industry
 		icon = GFX_goal_generic_construction2
@@ -461,23 +461,23 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_begin_tewodros_industrial_reforms }
 		completion_reward = {
 			add_ideas = ETH_idea_alienated_parish_clergy
 			add_political_power = -150
-
+			
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 			}
 		}
-
+		
 	}
-
+	
 	focus = {
 		id = ETH_study_electricity
 		icon = GFX_goal_generic_construction2
@@ -489,9 +489,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_connected_infrastructure }
@@ -499,11 +499,11 @@ focus_tree = {
 		prerequisite = { focus = ETH_fabric_industry }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = electronics_devices_tech }
-
+			
 		}
-
+		
 	}
-
+	
 	focus = {
 		id = ETH_construct_civ_factory
 		icon = GFX_goal_generic_construct_civ_factory
@@ -515,9 +515,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_connected_infrastructure }
@@ -531,7 +531,7 @@ focus_tree = {
 				}
 			}
 		}
-
+		
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -565,11 +565,11 @@ focus_tree = {
 			}
 			custom_effect_tooltip = EDC_afr.5.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.5 hours = 1 }
+				country_event = { id = EDC_afr.5 hours = 1 } 
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_construct_another_civ_factory
 		icon = GFX_goal_generic_construct_civ_factory
@@ -581,9 +581,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_construct_civ_factory }
@@ -632,11 +632,11 @@ focus_tree = {
 			}
 			custom_effect_tooltip = EDC_afr.5.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.5 hours = 1 }
+				country_event = { id = EDC_afr.5 hours = 1 } 
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_construct_mil_factory
 		icon = GFX_goal_generic_construct_mil_factory
@@ -648,9 +648,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_construct_civ_factory }
@@ -699,12 +699,12 @@ focus_tree = {
 			}
 			custom_effect_tooltip = EDC_afr.5.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.5 hours = 1 }
+				country_event = { id = EDC_afr.5 hours = 1 } 
 			}
 		}
 	}
 
-
+	
 	focus = {
 		id = ETH_an_industrialing_nation
 		icon = GFX_goal_generic_construction2
@@ -716,21 +716,21 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_country_leader = {
-				ruling_only = yes
-				name = "Tewodros II"
+			has_country_leader = { 
+				ruling_only = yes 
+				name = "Tewodros II" 
 			}
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_construct_mil_factory
 			focus = ETH_construct_another_civ_factory
 		}
 		completion_reward = {
 			remove_ideas = ETH_idea_isolated_villages_2
 		}
-
+		
 	}
-
+	
 	focus = {
 		id = ETH_victorian_inspritation
 		icon = GFX_goal_generic_construction2
@@ -744,7 +744,7 @@ focus_tree = {
 		available = {
 			has_idea = industrializing
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_an_industrialing_nation
 		}
 		completion_reward = {
@@ -765,7 +765,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_victorian_inspritation
 		}
 		completion_reward = {
@@ -811,7 +811,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_victorian_inspritation
 		}
 		completion_reward = {
@@ -847,16 +847,16 @@ focus_tree = {
 			}
 		}
 	}
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
 	# focus for Tewodros military reforms
-
+	
 	focus = {
 		id = ETH_begin_tewodros_military_reforms
 		icon = GFX_goal_generic_army_doctrines
@@ -868,9 +868,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_tewodros_reforms }
@@ -881,11 +881,11 @@ focus_tree = {
 
 		}
 	}
-
-
-
-
-
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_reform_the_military_staff
 		icon = GFX_focus_generic_military_academy
@@ -897,32 +897,32 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_begin_tewodros_military_reforms }
-
+		
 		completion_reward = {
 			add_timed_idea = { idea = ETH_idea_reformed_military_staff days = 1095 }
 			add_war_support = -0.25
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_tradition_doctrine
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_train_defensive_tactics
 			focus = ETH_train_offensive_tactics
@@ -936,18 +936,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_traditional_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_4
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_tradition_doctrine
 		}
@@ -957,18 +957,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_traditional_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_improve_our_weapons
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_research_4
 		}
@@ -978,18 +978,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_innovation_doctrine
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_train_defensive_tactics
 			focus = ETH_train_offensive_tactics
@@ -1008,12 +1008,12 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_innovation_doctrine
 		}
@@ -1023,18 +1023,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_innovative_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_distribute_hand_revolvers
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_research_3
 		}
@@ -1044,9 +1044,9 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = tech_category_handguns }
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_train_offensive_tactics
 		icon = GFX_goal_generic_army_artillery
@@ -1058,9 +1058,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_reform_the_military_staff }
@@ -1070,22 +1070,22 @@ focus_tree = {
 			army_experience = 15
 			add_war_support = 0.35
 		}
-
+		
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_artillery_doctrine
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_train_offensive_tactics
 		}
@@ -1095,18 +1095,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_artillery_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_1
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_artillery_doctrine
 		}
@@ -1116,18 +1116,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_artillery_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_study_artillery
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_research_1
 		}
@@ -1137,9 +1137,9 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = artillery }
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_train_defensive_tactics
 		icon = GFX_goal_generic_cavalry
@@ -1151,9 +1151,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_reform_the_military_staff }
@@ -1164,8 +1164,8 @@ focus_tree = {
 			add_war_support = 0.35
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_build_forts
 		icon = GFX_goal_generic_cavalry
@@ -1177,29 +1177,29 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_train_defensive_tactics }
 		prerequisite = { focus = ETH_clear_space_for_industry }
 		completion_reward = {
-
+		
 		}
 	}
-
+	
 	focus = {
 		id = ETH_industry_doctrine
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_train_defensive_tactics
 		}
@@ -1209,18 +1209,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_industry_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_2
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_industry_doctrine
 		}
@@ -1230,18 +1230,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_industry_tech }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_provide_better_uniforms
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_research_2
 		}
@@ -1254,18 +1254,18 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_5
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_distribute_hand_revolvers
 			focus = ETH_improve_our_weapons
@@ -1277,21 +1277,21 @@ focus_tree = {
 		x = 19
 		y = 7
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_6
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_distribute_hand_revolvers
 			focus = ETH_improve_our_weapons
@@ -1303,21 +1303,21 @@ focus_tree = {
 		x = 16
 		y = 7
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_research_7
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = {
 			focus = ETH_distribute_hand_revolvers
 			focus = ETH_improve_our_weapons
@@ -1329,55 +1329,55 @@ focus_tree = {
 		x = 13
 		y = 7
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_purchase_portguese_equipment
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = { focus = ETH_research_5 }
 		prerequisite = { focus = ETH_research_6 }
 		prerequisite = { focus = ETH_research_7 }
 		x = 15
 		y = 8
 		completion_reward = {
-			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 producer = POR }
+			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2500 producer = POR }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_purchase_portguese_weapons
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-
+			
 		prerequisite = { focus = ETH_research_5 }
 		prerequisite = { focus = ETH_research_6 }
 		prerequisite = { focus = ETH_research_7 }
 		x = 17
 		y = 8
 		completion_reward = {
-			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 250 producer = POR }
+			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 2500 producer = POR }
 		}
 	}
-
-
-
-
+	
+	
+	
+	
 	focus = {
 		id = ETH_begin_tewodros_navy_reforms
 		icon = GFX_goal_generic_army_doctrines
@@ -1389,9 +1389,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1404,9 +1404,9 @@ focus_tree = {
 
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_emphasize_light_ships
 		icon = GFX_goal_generic_army_doctrines
@@ -1418,9 +1418,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1446,9 +1446,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1459,11 +1459,11 @@ focus_tree = {
 
 		}
 	}
-
-
-
-
-
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_emphasize_trade_ships
 		icon = GFX_goal_generic_army_doctrines
@@ -1475,9 +1475,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1503,9 +1503,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1516,9 +1516,9 @@ focus_tree = {
 
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_emphasize_heavy_ships
 		icon = GFX_goal_generic_army_doctrines
@@ -1530,9 +1530,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1558,9 +1558,9 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
@@ -1571,12 +1571,12 @@ focus_tree = {
 
 		}
 	}
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_build_new_port
 		icon = GFX_goal_generic_navy_battleship
@@ -1588,13 +1588,13 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
-		prerequisite = {
+		prerequisite = { 
 		focus = ETH_study_portuguese_escort_ships
 		focus = ETH_study_portuguese_heavy_ships
 		focus = ETH_study_portuguese_light_ships
@@ -1614,13 +1614,13 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
-		prerequisite = {
+		prerequisite = { 
 		focus = ETH_study_portuguese_escort_ships
 		focus = ETH_study_portuguese_heavy_ships
 		focus = ETH_study_portuguese_light_ships
@@ -1629,10 +1629,10 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
-					free_building_slots = {
+					free_building_slots = { 
 						building = dockyard
-						size > 0
-						include_locked = yes
+						size > 0 
+						include_locked = yes 
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1655,13 +1655,13 @@ focus_tree = {
 			factor = 1
 		}
 			available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 				any_owned_state = { is_coastal = yes }
 			}
-		prerequisite = {
+		prerequisite = { 
 		focus = ETH_study_portuguese_escort_ships
 		focus = ETH_study_portuguese_heavy_ships
 		focus = ETH_study_portuguese_light_ships
@@ -1671,25 +1671,25 @@ focus_tree = {
 
 		}
 	}
-
+	
 	focus = {
 		id = ETH_our_neighbors
 		icon = GFX_goal_generic_improve_relations
 		cost = 35
 		x = 6
 		y = 1
-		prerequisite = { focus = ETH_tewodros_reforms }
+		prerequisite = { focus = ETH_tewodros_reforms }		
 		completion_reward = {
-
+			
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_diplomatic_expansion
 		icon = GFX_goal_generic_major_alliance
 		cost = 70
-
+			
 		prerequisite = {
 			focus = ETH_our_neighbors
 		}
@@ -1709,7 +1709,7 @@ focus_tree = {
 		id = ETH_offer_integration_to_sidama
 		icon = GFX_goal_generic_major_alliance
 		cost = 70
-
+			
 		prerequisite = {
 			focus = ETH_diplomatic_expansion
 		}
@@ -1739,12 +1739,12 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_offer_integration_to_oromo
 		icon = GFX_goal_generic_major_alliance
 		cost = 70
-
+			
 		prerequisite = {
 			focus = ETH_offer_integration_to_sidama
 		}
@@ -1778,7 +1778,7 @@ focus_tree = {
 		id = ETH_agressive_expansion
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 70
-
+			
 		prerequisite = {
 			focus = ETH_our_neighbors
 		}
@@ -1799,7 +1799,7 @@ focus_tree = {
 		id = ETH_expand_south
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_agressive_expansion
 		}
@@ -1816,7 +1816,7 @@ focus_tree = {
 		id = ETH_expand_east
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_agressive_expansion
 		}
@@ -1838,12 +1838,12 @@ focus_tree = {
 			add_state_claim = 271
 		}
 	}
-
+	
 	focus = {
 		id = ETH_consolidate_power
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_expand_south
 		}
@@ -1864,7 +1864,7 @@ focus_tree = {
 		id = ETH_complete_integration
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_expand_south
 		}
@@ -1881,12 +1881,12 @@ focus_tree = {
 
 		}
 	}
-
+	
 	focus = {
 		id = ETH_prepare_to_annex_somalia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_consolidate_power
 		}
@@ -1929,12 +1929,12 @@ focus_tree = {
 			add_state_claim = 821
 		}
 	}
-
+	
 	focus = {
 		id = ETH_embargo_egypt
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 35
-
+			
 		prerequisite = {
 			focus = ETH_our_neighbors
 		}
@@ -1949,23 +1949,23 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = EGY modifier = eoanb_om_africa_trade_focus }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_attack_eritrea
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 40
-
+			
 		prerequisite = { focus = ETH_embargo_egypt }
 		prerequisite = { focus = ETH_train_offensive_tactics }
-
+		
 		x = 5
 		y = 4
 		completion_reward = {
-
+			
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_warm_up_to_egypt
 		icon = GFX_goal_generic_improve_relations
@@ -1994,8 +1994,8 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = EGY modifier = eoanb_om_africa_language_focus }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_exploit_egyption_economic_crises
 		icon = GFX_goal_generic_intelligence_exchange
@@ -2030,7 +2030,7 @@ focus_tree = {
 			EGY = { country_event = { days = 1 id = ethiopia.3 } }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_offer_alliance_to_EGY
 		icon = GFX_goal_generic_improve_relations
@@ -2067,36 +2067,36 @@ focus_tree = {
 			#}
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	# Industrialization +50%
-
-
-
-
-
-
-
-
-
-
-	# focus for Tewodros social reforms add_ideas =
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	# focus for Tewodros social reforms add_ideas =  
+	
+	
 	focus = {
 		id = ETH_begin_tewodros_social_reforms
 		icon = GFX_goal_generic_national_unity
@@ -2108,24 +2108,24 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_an_industrialing_nation }
 		completion_reward = {
 			add_political_power = -100
 			add_ideas = ETH_idea_tewodros_social_reforms
-
+		
 		}
 	}
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_adress_religion
 		icon = GFX_goal_generic_national_unity
@@ -2137,19 +2137,19 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_begin_tewodros_social_reforms }
 		completion_reward = {
 			add_political_power = -50
-
+		
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_supress_the_missionaries
 		icon = GFX_goal_generic_national_unity
@@ -2161,9 +2161,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		mutually_exclusive = {
@@ -2172,10 +2172,10 @@ focus_tree = {
 		prerequisite = { focus = ETH_adress_religion }
 		completion_reward = {
 			add_political_power = 50
-
+		
 		}
 	}
-
+	
 	focus = {
 		id = ETH_keep_the_missionaries
 		icon = GFX_goal_generic_national_unity
@@ -2187,9 +2187,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		mutually_exclusive = {
@@ -2198,11 +2198,11 @@ focus_tree = {
 		prerequisite = { focus = ETH_adress_religion }
 		completion_reward = {
 			add_political_power = -50
-
+		
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_convert_to_protestant
 		icon = eoanb_law_tt_religion_protestant
@@ -2214,16 +2214,16 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		mutually_exclusive = {
 			focus = ETH_keep_coptic
 			focus = ETH_convert_to_catholic
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_keep_the_missionaries
 		}
 		prerequisite = {
@@ -2234,8 +2234,8 @@ focus_tree = {
 			country_event = { days = 1 id = ethiopia.1 }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_keep_coptic
 		icon = eoanb_law_tt_religion_coptic
@@ -2247,23 +2247,23 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		mutually_exclusive = {
 			focus = ETH_convert_to_protestant
 			focus = ETH_convert_to_catholic
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_supress_the_missionaries
 		}
 		completion_reward = {
 			add_political_power = 150
 		}
 	}
-
+	
 	focus = {
 		id = ETH_return_land_to_clergy
 		icon = eoanb_law_tt_religion_coptic
@@ -2275,20 +2275,20 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_keep_coptic
 		}
 		completion_reward = {
 			add_political_power = -100
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_a_united_church_and_state
 		icon = eoanb_law_tt_religion_coptic
@@ -2300,19 +2300,19 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_return_land_to_clergy
 		}
 		completion_reward = {
 			remove_ideas = ETH_idea_alienated_parish_clergy
 		}
 	}
-
+	
 	focus = {
 		id = ETH_convert_to_catholic
 		icon = eoanb_law_tt_religion_catholic
@@ -2324,16 +2324,16 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		mutually_exclusive = {
 			focus = ETH_keep_coptic
 			focus = ETH_convert_to_protestant
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ETH_keep_the_missionaries
 		}
 		prerequisite = {
@@ -2345,9 +2345,9 @@ focus_tree = {
 			country_event = { days = 1 id = ethiopia.2 }
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_adress_education
 		icon = GFX_goal_generic_national_unity
@@ -2359,19 +2359,19 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_begin_tewodros_social_reforms }
 		completion_reward = {
 			add_political_power = -50
-
+		
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_open_schools_education
 		icon = GFX_goal_generic_national_unity
@@ -2383,9 +2383,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_adress_education }
@@ -2394,11 +2394,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = oral_tradition add_idea = open_schools }
-
+		
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_privileged_education
 		icon = GFX_goal_generic_national_unity
@@ -2410,9 +2410,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_adress_education }
@@ -2423,7 +2423,7 @@ focus_tree = {
 			swap_ideas = { remove_idea = oral_tradition add_idea = privileged_education }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_attempt_to_stablise_the_nation
 		icon = GFX_goal_generic_national_unity
@@ -2437,7 +2437,7 @@ focus_tree = {
 		prerequisite = { focus = ETH_begin_tewodros_social_reforms }
 		completion_reward = {
 			add_political_power = -50
-
+		
 		}
 	}
 	focus = {
@@ -2499,8 +2499,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = {
-			focus = ETH_assage_the_northern_oromo
+		prerequisite = { 
+			focus = ETH_assage_the_northern_oromo  
 			focus = ETH_crush_the_northern_oromo
 		}
 		completion_reward = {
@@ -2537,8 +2537,8 @@ focus_tree = {
 			has_political_power > 150
 			has_manpower > 5000
 		}
-		prerequisite = {
-			focus = ETH_disband_the_northern_oromo_militas
+		prerequisite = { 
+			focus = ETH_disband_the_northern_oromo_militas  
 		}
 		completion_reward = {
 			add_political_power = -150
@@ -2558,8 +2558,8 @@ focus_tree = {
 		available={
 			has_political_power > 150
 		}
-		prerequisite = {
-			focus = ETH_begin_to_supress_revolts
+		prerequisite = { 
+			focus = ETH_begin_to_supress_revolts  
 		}
 		completion_reward = {
 			add_political_power = -150
@@ -2568,11 +2568,11 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	# focus for Tewodros diplomatic reforms
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_begin_tewodros_diplomatic_reforms
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -2584,9 +2584,9 @@ focus_tree = {
 			factor = 1
 		}
 					available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_an_industrialing_nation }
@@ -2594,23 +2594,23 @@ focus_tree = {
 			add_political_power = -100
 			swap_ideas = { add_idea = limited_exports remove_idea = closed_economy }
 			add_ideas = AF_T_idea_trading_nation
-
+		
 		}
 	}
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 	focus = {
 		id = ETH_open_trading_post
 		icon = GFX_goal_generic_improve_relations
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
@@ -2625,9 +2625,9 @@ focus_tree = {
 			swap_ideas = { remove_idea = AF_T_idea_trading_nation add_idea = AF_T_idea_trading_nation_2 }
 			custom_effect_tooltip = EDC_afr.5.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.5 hours = 1 }
+				country_event = { id = EDC_afr.5 hours = 1 } 
 			}
-
+			
 		}
 	}
 	focus = {
@@ -2635,9 +2635,9 @@ focus_tree = {
 		icon = GFX_goal_focus_merchants_portugese
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
@@ -2690,8 +2690,8 @@ focus_tree = {
 			POR = { country_event = { days = 1 id = ethiopia.10 } }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_lease_portugal_company_port
 		icon = GFX_goal_generic_amphibious_assault
@@ -2705,10 +2705,10 @@ focus_tree = {
 		x = 07
 		y = 19
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_portugal_military_expertise
 		icon = GFX_focus_generic_military_mission
@@ -2717,7 +2717,7 @@ focus_tree = {
 			focus = ETH_lease_portugal_company_port
 		}
 		available = {
-
+		
 		}
 		x = 07
 		y = 20
@@ -2727,7 +2727,7 @@ focus_tree = {
 			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 5000 producer = POR }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_portugal_military_acess
 		icon = ETH_portugal_military_expertise
@@ -2736,15 +2736,15 @@ focus_tree = {
 			focus = ETH_portugal_companies
 		}
 		available = {
-
+		
 		}
 		x = 07
 		y = 21
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 		focus = {
 		id = ETH_portugal_companies_shipyard_company
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -2765,10 +2765,10 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
-					free_building_slots = {
+					free_building_slots = { 
 						building = dockyard
-						size > 0
-						include_locked = yes
+						size > 0 
+						include_locked = yes 
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -2780,8 +2780,8 @@ focus_tree = {
 			}
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_export_convoy_to_portugal
 		icon = GFX_goal_generic_navy_battleship
@@ -2799,7 +2799,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_portugal_companies_logging_plantation
 		icon = GFX_goal_generic_construct_civ_factory
@@ -2822,7 +2822,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_export_lumber_to_portugal
 		icon = GFX_goal_generic_navy_battleship
@@ -2840,7 +2840,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_portugal_companies_cotton_plantation
 		icon = GFX_goal_generic_construct_civ_factory
@@ -2863,7 +2863,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_export_cotton_to_portugal
 		icon = GFX_goal_generic_navy_battleship
@@ -2881,7 +2881,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_portugal_tech
 		icon = GFX_goal_generic_scientific_exchange
@@ -2901,7 +2901,7 @@ focus_tree = {
 		y = 22
 
 	}
-
+	
 	focus = {
 		id = ETH_request_portugal_license
 		icon = GFX_focus_generic_license_production
@@ -2916,7 +2916,7 @@ focus_tree = {
 		y = 23
 
 	}
-
+	
 	focus = {
 		id = ETH_portugal_corporate_coup
 		icon = GFX_goal_generic_cavalry
@@ -2932,15 +2932,15 @@ focus_tree = {
 		y = 24
 
 	}
-
+	
 	focus = {
 		id = ETH_french_merchants
 		icon = GFX_goal_focus_merchants_french
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
@@ -2954,15 +2954,15 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_french_investors
 		icon = GFX_goal_focus_merchants_french
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
@@ -2977,22 +2977,22 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_british_merchants
 		icon = GFX_goal_focus_merchants_british
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
 			focus = ETH_open_trading_post
 		}
-
+		
 		x = 13
 		y = 16
 		completion_reward = {
@@ -3000,8 +3000,8 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_trade_focus }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_british_companies
 		icon = GFX_goal_generic_consumer_goods
@@ -3022,7 +3022,7 @@ focus_tree = {
 			ENG = { country_event = { days = 1 id = ethiopia.6 } }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_lease_british_company_port
 		icon = GFX_goal_generic_amphibious_assault
@@ -3038,10 +3038,10 @@ focus_tree = {
 		x = 11
 		y = 19
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_british_military_expertise
 		icon = GFX_focus_generic_military_mission
@@ -3059,7 +3059,7 @@ focus_tree = {
 			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 5000 producer = ENG }
 		}
 	}
-
+	
 	focus = {
 		id = ETH_british_military_acess
 		icon = ETH_portugal_military_expertise
@@ -3072,10 +3072,10 @@ focus_tree = {
 		x = 11
 		y = 21
 		completion_reward = {
-
+			
 		}
 	}
-
+	
 	focus = {
 		id = ETH_british_companies_shipyard_company
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -3096,10 +3096,10 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
-					free_building_slots = {
+					free_building_slots = { 
 						building = dockyard
-						size > 0
-						include_locked = yes
+						size > 0 
+						include_locked = yes 
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -3111,7 +3111,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_export_convoy_to_britain
 		icon = GFX_goal_generic_navy_battleship
@@ -3129,7 +3129,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_british_companies_rubber_plantation
 		icon = GFX_goal_generic_construct_civ_factory
@@ -3152,7 +3152,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_export_rubber_to_britain
 		icon = GFX_goal_generic_navy_battleship
@@ -3170,7 +3170,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_british_companies_cotton_plantation
 		icon = GFX_goal_generic_construct_civ_factory
@@ -3178,7 +3178,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ETH_british_companies
 		}
-
+		
 		available = {
 		has_idea = ETH_anglo_ethiopian_cotton_company
 		}
@@ -3194,7 +3194,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ETH_export_cotton_to_britain
 		icon = GFX_goal_generic_navy_battleship
@@ -3212,7 +3212,7 @@ focus_tree = {
 		y = 21
 
 	}
-
+	
 	focus = {
 		id = ETH_british_tech
 		icon = GFX_goal_generic_scientific_exchange
@@ -3232,7 +3232,7 @@ focus_tree = {
 		y = 22
 
 	}
-
+	
 	focus = {
 		id = ETH_request_british_license
 		icon = GFX_focus_generic_license_production
@@ -3247,7 +3247,7 @@ focus_tree = {
 		y = 23
 
 	}
-
+	
 	focus = {
 		id = ETH_british_corporate_coup
 		icon = GFX_goal_generic_cavalry
@@ -3263,24 +3263,24 @@ focus_tree = {
 		y = 24
 
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_learn_english_language
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_british_merchants }
-		prerequisite = {
-			focus = ETH_open_schools_education
-			focus = ETH_privileged_education
+		prerequisite = { 
+			focus = ETH_open_schools_education 
+			focus = ETH_privileged_education 
 		}
-
+		
 		mutually_exclusive = {
 			focus = ETH_learn_portugese_language
 			focus = ETH_learn_french_language
@@ -3293,24 +3293,24 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_language_focus }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_learn_french_language
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_british_merchants }
-		prerequisite = {
-			focus = ETH_open_schools_education
-			focus = ETH_privileged_education
+		prerequisite = { 
+			focus = ETH_open_schools_education 
+			focus = ETH_privileged_education 
 		}
-
+		
 		mutually_exclusive = {
 			focus = ETH_learn_portugese_language
 			focus = ETH_learn_english_language
@@ -3323,21 +3323,21 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_africa_language_focus }
 		}
 	}
-
-
+	
+	
 	focus = {
 		id = ETH_learn_portugese_language
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 70
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = { focus = ETH_portugal_merchants }
-		prerequisite = {
-			focus = ETH_open_schools_education
+		prerequisite = { 
+			focus = ETH_open_schools_education 
 			focus = ETH_privileged_education
 		}
 		mutually_exclusive = {
@@ -3352,9 +3352,9 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = POR modifier = eoanb_om_africa_language_focus }
 		}
 	}
-
-
-
+	
+	
+	
 	focus = {
 		id = ETH_begin_to_invest_in_railways
 		icon = GFX_goal_focus_railroad_development
@@ -3367,11 +3367,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = EDC_afr.3.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.3 hours = 1 }
+				country_event = { id = EDC_afr.3 hours = 1 } 
 			}
-			add_tech_bonus = {
+			add_tech_bonus = { 
 				bonus = 0.2
-				uses = 2
+				uses = 2 
 				technology = iron_railways
 				technology = steam_engine
 				technology = steam_locomotive
@@ -3394,7 +3394,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = EDC_afr.6.t
 			hidden_effect = {
-				country_event = { id = EDC_afr.6 hours = 1 }
+				country_event = { id = EDC_afr.6 hours = 1 } 
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -3443,7 +3443,7 @@ focus_tree = {
 			custom_effect_tooltip = EDC_afr_20ip
 			hidden_effect = {
 				country_event = { id = EDC_afr.6 hours = 1 }
-				country_event = { id = EDC_afr.6 hours = 1 }
+				country_event = { id = EDC_afr.6 hours = 1 } 
 			}
 			add_ideas = { AF_T_small_scale_railways }
 		}
@@ -3451,7 +3451,7 @@ focus_tree = {
 		y = 22
 
 	}
-
+	
 	focus = {
 		id = ETH_construct_western_university
 		icon = GFX_goal_generic_scientific_exchange
@@ -3462,24 +3462,24 @@ focus_tree = {
 			focus = ETH_british_tech
 		}
 		completion_reward = {
-
+			
 		}
 		x = 9
 		y = 23
 
 	}
-
-
-
+	
+	
+	
 # Diplomacy
 	focus = {
 		id = ETH_proclaim_coalition_against_islam
 		icon = GFX_goal_anschluss
 		cost = 35
 		available = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Tewodros II"
+				has_country_leader = { 
+					ruling_only = yes 
+					name = "Tewodros II" 
 				}
 			}
 		prerequisite = {
@@ -3497,3 +3497,4 @@ focus_tree = {
 		}
 	}
 }
+	

@@ -5,11 +5,11 @@ country_event = {
 		title = usa.0.t
 		desc = usa.0.d
 		picture = GFX_report_event_usa_election_generic
-
+		
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.0.a
 			add_political_power = -5
@@ -21,14 +21,14 @@ country_event = {
 		title = usa.1.t
 		desc = usa.1.d
 		picture = GFX_report_event_generic_rally2
-
+		
 		fire_only_once = yes
-
+		
 		trigger = {
 				TAG = USA
 				date > 1857.9.1
 		}
-
+		
 		option = {
 				name = usa.1.a
 				hidden_effect = { USA = { set_country_flag = USAPanic_Of_1857 } }
@@ -42,9 +42,9 @@ country_event = {
 		title = usa.2.t
 		desc = usa.2.d
 		picture = GFX_report_event_merchant_ship_01
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.2.a
 				add_political_power = -50
@@ -58,12 +58,12 @@ country_event = {
 		picture = GFX_report_event_generic_riot
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			date > 1857.7.1
 		}
-
+		
 		option = {
 				name = usa.3.a
 				ai_chance = {
@@ -126,7 +126,7 @@ country_event = {
 		picture = GFX_report_event_generic_read_write
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			has_country_flag = USASlavery_Debate
@@ -135,7 +135,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 250
 		}
-
+		
 		option = {
 				name = usa.4.a
 				ai_chance = {
@@ -405,7 +405,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 500
 		}
-
+		
 		option = {
 				name = usa.5.a
 				ai_chance = {
@@ -663,13 +663,13 @@ country_event = {
 		picture = GFX_report_event_dead_soldiers
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			date > 1858.5.19
 			has_country_flag = USASlavery_Debate
 		}
-
+		
 		option = {
 				name = usa.6.a
 				ai_chance = {
@@ -928,13 +928,13 @@ country_event = {
 		picture = GFX_report_event_yugoslavian_cavalry
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			date > 1859.8.18
 			has_country_flag = USASlavery_Debate
 		}
-
+		
 		option = {
 				name = usa.7.a
 				ai_chance = {
@@ -1192,13 +1192,13 @@ country_event = {
 		picture = GFX_report_event_generic_riot
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			date > 1859.12.2
 			has_country_flag = USASlavery_Debate
 		}
-
+		
 		option = {
 				name = usa.8.a
 				ai_chance = {
@@ -1458,7 +1458,7 @@ country_event = {
 		picture = GFX_report_event_generic_rally_3
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			has_country_flag = USASlavery_Debate
@@ -1467,7 +1467,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 600
 		}
-
+		
 		option = {
 				name = usa.9.a
 				ai_chance = {
@@ -1724,11 +1724,11 @@ country_event = {
 		title = usa.10.t
 		desc = usa.10.d
 		picture = GFX_report_event_election_vote
-
+		
 		fire_only_once = yes
 
 		is_triggered_only = yes
-
+		
 		trigger = {
 			TAG = USA
 			date > 1860.1.1
@@ -1740,7 +1740,7 @@ country_event = {
 				has_government = social_egalitarianism
 			}
 		}
-
+		
 		option = {
 				name = usa.10.a
 				ai_chance = {
@@ -1850,9 +1850,9 @@ country_event = {
 		title = usa.11.t
 		desc = usa.11.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		fire_only_once = yes
-
+		
 		trigger = {
 			tag = USA
 			has_country_flag = USA_LincolnElected
@@ -1862,7 +1862,7 @@ country_event = {
 		}
 
 		mean_time_to_happen = { days = 2 }
-
+		
 		option = {
 			name = usa.11.a
 			retire_country_leader = yes
@@ -1880,9 +1880,9 @@ country_event = {
 		title = usa.12.t
 		desc = usa.12.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		fire_only_once = yes
-
+		
 		trigger = {
 			tag = USA
 			has_country_flag = USA_DouglasElected
@@ -1892,7 +1892,7 @@ country_event = {
 		}
 
 		mean_time_to_happen = { days = 2 }
-
+		
 		option = {
 				name = usa.12.a
 				retire_country_leader = yes
@@ -1910,36 +1910,6 @@ country_event = {
     				expire = "1947.1.1"
     				ideology = conserv_liberal
   				}
-				hidden_effect = { country_event = { days = 15 id = usa.143 } }
-		}
-}
-#Bell Inaugerated
-country_event = {
-		id = usa.13
-		title = usa.13.t
-		desc = usa.13.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		fire_only_once = yes
-
-		trigger = {
-			tag = USA
-			has_country_flag = USA_BellElected
-			date > 1861.3.4
-			NOT = { has_country_flag = CheaterDefeater }
-			NOT = { has_country_flag = CheaterDefeated }
-		}
-
-		mean_time_to_happen = { days = 2 }
-
-		option = {
-				name = usa.13.a
-				retire_country_leader = yes
-				set_politics = {
-					ruling_party = radical_democracy
-					election_frequency = 48
-    				elections_allowed = yes
-				}
 				hidden_effect = { CSA = { country_event = { days = 15 id = acw.2 } } }
 		}
 }
@@ -1949,11 +1919,11 @@ country_event = {
 		title = usa.14.t
 		desc = usa.14.d
 		picture = GFX_report_event_generic_military_parade
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.14.a
 			if = {
@@ -1975,9 +1945,9 @@ country_event = {
 		picture = GFX_report_event_worker_protests
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.15.a
 				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
@@ -2015,9 +1985,9 @@ country_event = {
 		picture = GFX_report_event_crowd_in_prague
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.16.a
 				hidden_effect = { USA = { country_event = { days = 10 id = usa.19 } } }
@@ -2055,9 +2025,9 @@ country_event = {
 		picture = GFX_report_event_election_vote
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.17.a
 				hidden_effect = { USA = { country_event = { days = 20 id = usa.19 } } }
@@ -2095,9 +2065,9 @@ country_event = {
 		picture = GFX_report_event_generic_rally_3
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.18.a
 				ai_chance = {
@@ -2120,9 +2090,9 @@ country_event = {
 		picture = GFX_report_event_worker_protests
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.19.a
 				ai_chance = {
@@ -2143,13 +2113,13 @@ country_event = {
 		mean_time_to_happen = {
 			days = 2
 		}
-
+		
 		trigger = {
 			owns_state = 360
 			controls_state = 360
 			date > 1857.8.25
 		}
-
+		
 		option = {
 			name = usa.20.a
 			360 = {
@@ -2169,9 +2139,9 @@ country_event = {
 		picture = GFX_report_event_generic_rally_3
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.21.a
 			add_political_power = 50
@@ -2187,9 +2157,9 @@ country_event = {
 		picture = GFX_report_event_generic_rally_3
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.22.a
 			add_political_power = 50
@@ -2205,9 +2175,9 @@ country_event = {
 		picture = GFX_report_event_generic_rally_3
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.23.a
 			add_political_power = 100
@@ -2222,9 +2192,9 @@ country_event = {
 		picture = GFX_report_event_german_politician_speech
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.24.a
 			add_political_power = 25
@@ -2244,9 +2214,9 @@ country_event = {
 		picture = GFX_report_event_worker_protests
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.25.a
 			add_political_power = 10
@@ -2280,7 +2250,7 @@ country_event = {
 		title = usa.26.t
 		desc = usa.26.d
 		picture = GFX_report_event_soldiers_marching
-
+		
 		trigger = {
 			OR = {
 				TAG = USA
@@ -2295,7 +2265,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			trigger = {
 				TAG = USA
@@ -2307,7 +2277,7 @@ country_event = {
 				TAG = ENG
 			}
 			name = usa.26.b
-		}
+		}	
 	}
 #Revitalization of Pig War in 1871
 country_event = {
@@ -2352,9 +2322,9 @@ country_event = {
 		picture = GFX_GFX_report_event_royal_visit
 
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.28.a
 			USA = { country_event = { days = 30 id = usa.29 } }
@@ -2384,7 +2354,7 @@ country_event = {
 				BCO = { country_event = { days = 30 id = usa.30 } }
 				NWT = { country_event = { days = 30 id = usa.30 } }
 			}
-		}
+		}	
 	}
 #Pig War - America
 country_event = {
@@ -2392,9 +2362,9 @@ country_event = {
 		title = usa.29.t
 		desc = usa.29.d
 		picture = GFX_report_event_generic_sign_treaty2
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			trigger = {
 				TAG = USA
@@ -2434,9 +2404,9 @@ country_event = {
 		title = usa.30.t
 		desc = usa.30.d
 		picture = GFX_report_event_generic_sign_treaty2
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			trigger = {
 				TAG = USA
@@ -2478,12 +2448,12 @@ country_event = {
 		picture = GFX_report_event_generic_funeral
 
 		fire_only_once = yes
-
+		
 		trigger = {
 			tag = USA
 			date > 1857.10.10
 		}
-
+		
 		option = {
 			name = usa.31.a
 			add_political_power = -10
@@ -2495,9 +2465,9 @@ country_event = {
 		title = usa.32.t
 		desc = usa.32.d
 		picture = report_event_generic_conference
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.32.a
 			annex_country = {
@@ -2520,9 +2490,9 @@ country_event = {
 		title = usa.33.t
 		desc = usa.33.d
 		picture = report_event_generic_riot
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.33.a
 			ai_chance = {
@@ -2551,15 +2521,15 @@ country_event = {
 		title = usa.34.t
 		desc = usa.34.d
 		picture = GFX_report_event_generic_military_parade
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.34.a
 			set_politics = {
 				ruling_party = social_egalitarianism
 			}
-			hidden_effect = {
+			hidden_effect = { 
 				swap_ideas = {
 					remove_idea = presidential_republic
 					add_idea = socialist_republic
@@ -2576,9 +2546,9 @@ country_event = {
 		title = usa.35.t
 		desc = usa.35.d
 		picture = GFX_report_event_generic_military_parade
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.35.a
 			hidden_effect = {
@@ -2623,7 +2593,7 @@ country_event = {
 		fire_only_once = yes
 
 		is_triggered_only = yes
-
+		
 		trigger = {
 			TAG = USA
 			has_war_with = CSA
@@ -2637,7 +2607,7 @@ country_event = {
 			date < 1865.1.1
 			date > 1864.1.1
 		}
-
+		
 		option = {
 			name = usa.36.a
 			trigger = {
@@ -2786,11 +2756,11 @@ country_event = {
 		title = usa.37.t
 		desc = usa.37.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.37.a
 				retire_country_leader = yes
@@ -2814,9 +2784,9 @@ country_event = {
 		title = usa.38.t
 		desc = usa.38.d
 		picture = GFX_report_event_election_vote
-
+		
 		fire_only_once = yes
-
+		
 		trigger = {
 			TAG = USA
 			OR = {
@@ -2832,7 +2802,7 @@ country_event = {
 			date < 1865.1.1
 			date > 1864.1.1
 		}
-
+		
 		option = {
 			name = usa.38.a
 			trigger = {
@@ -2907,11 +2877,11 @@ country_event = {
 		title = usa.39.t
 		desc = usa.39.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		fire_only_once = yes
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.39.a
 				retire_country_leader = yes
@@ -2935,9 +2905,9 @@ country_event = {
 		title = usa.40.t
 		desc = usa.40.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.40.a
 			ai_chance = {
@@ -2956,9 +2926,9 @@ country_event = {
 		title = usa.41.t
 		desc = usa.41.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.41.a
 			USA = { country_event = { id = usa.42 hours = 1 } }
@@ -2998,9 +2968,9 @@ country_event = {
 			trigger = { NOT { has_global_flag = USAAlaska_Purchased } }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			trigger = {
 				has_global_flag = USAAlaska_Purchased
@@ -3023,7 +2993,7 @@ country_event = {
 		title = usa.43.t
 		desc = usa.43.d
 		picture = GFX_report_event_royal_visit
-
+		
 		trigger = {
 			tag = USA
 			date > 1859.6.6
@@ -3034,7 +3004,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.43.a
 			add_political_power = -5
@@ -3060,7 +3030,7 @@ country_event = {
 		title = usa.44.t
 		desc = usa.44.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			TAG = USA
 			has_country_flag = USASoaring_Eagle
@@ -3071,7 +3041,7 @@ country_event = {
 		mean_time_to_happen = {
         	days = 3
     	}
-
+		
 		option = {
 			trigger = {
 				has_country_flag = USASoaring_Eagle
@@ -3145,7 +3115,7 @@ country_event = {
 		title = usa.45.t
 		desc = usa.45.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			TAG = USA
 			AND = {
@@ -3162,7 +3132,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.45.a
 			ai_chance = {
@@ -3240,7 +3210,7 @@ country_event = {
 		title = usa.46.t
 		desc = usa.46.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			TAG = USA
 			has_country_flag = Lincoln_Assassinated
@@ -3251,7 +3221,7 @@ country_event = {
 		mean_time_to_happen = {
         	days = 3
     	}
-
+		
 		option = {
 			name = usa.46.a
 			add_political_power = -50
@@ -3268,9 +3238,9 @@ country_event = {
 		title = usa.47.t
 		desc = usa.47.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.47.a
 			add_political_power = 25
@@ -3289,7 +3259,7 @@ country_event = {
 		title = usa.48.t
 		desc = usa.48.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			TAG = USA
 			NOT = { has_country_flag = USA_Confederate_Investigation }
@@ -3302,7 +3272,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 200
 		}
-
+		
 		option = {
 			name = usa.48.a
 			add_political_power = -50
@@ -3320,7 +3290,7 @@ country_event = {
 		title = usa.49.t
 		desc = usa.49.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			TAG = BRA
 			has_global_flag = Davis_Flees
@@ -3331,7 +3301,7 @@ country_event = {
 		mean_time_to_happen = {
         	days = 7
     	}
-
+		
 		option = {
 			name = usa.49.a
 			set_global_flag = Davis_Flees_Brazil
@@ -3367,9 +3337,9 @@ country_event = {
 		title = usa.50.t
 		desc = usa.50.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.49.a
 			set_global_flag = Davis_Flees_France
@@ -3405,9 +3375,9 @@ country_event = {
 		title = usa.51.t
 		desc = usa.51.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.49.a
 			set_global_flag = Davis_Flees_UK
@@ -3443,9 +3413,9 @@ country_event = {
 		title = usa.52.t
 		desc = usa.52.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.52.a
 			clr_global_flag = Davis_Flees
@@ -3470,9 +3440,9 @@ country_event = {
 			trigger = { has_country_flag = ENG_Davis_Returned }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.53.a
 			add_political_power = 10
@@ -3496,9 +3466,9 @@ country_event = {
 			trigger = { has_global_flag = Davis_Flees_UK }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.54.a
 			clr_global_flag = Davis_Flees
@@ -3517,9 +3487,9 @@ country_event = {
 		title = usa.55.t
 		desc = usa.55.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.55.a
 			add_political_power = 25
@@ -3555,7 +3525,7 @@ country_event = {
 		title = usa.56.t
 		desc = usa.56.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_country_flag = Lincoln_Survived
@@ -3566,7 +3536,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.56.a
 			add_political_power = 25
@@ -3598,9 +3568,9 @@ country_event = {
 		title = usa.57.t
 		desc = usa.57.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 				name = usa.57.a
 				retire_country_leader = yes
@@ -3624,7 +3594,7 @@ country_event = {
 		title = usa.58.t
 		desc = usa.58.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			NOT = { has_country_flag = USA_Reconstruction_Ended }
@@ -3637,7 +3607,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 75
 		}
-
+		
 		option = {
 			name = usa.58.a
 			add_political_power = -10
@@ -3804,9 +3774,9 @@ country_event = {
 		title = usa.59.t
 		desc = usa.59.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.59.a
 			add_political_power = -10
@@ -3841,9 +3811,9 @@ country_event = {
 		title = usa.60.t
 		desc = usa.60.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.60.a
 			add_equipment_to_stockpile = {
@@ -3865,9 +3835,9 @@ country_event = {
 		title = usa.61.t
 		desc = usa.61.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.61.a
 			ENG = { set_country_flag = USA_Mend_Relations }
@@ -3899,9 +3869,9 @@ country_event = {
 			trigger = { has_country_flag = USA_Mend_Alliance }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.62.a
 			trigger = { has_country_flag = USA_Mend_Relations }
@@ -3913,9 +3883,9 @@ country_event = {
 		}
 		option = {
 			name = usa.62.a
-			trigger = {
+			trigger = { 
 				AND = {
-					has_country_flag = USA_Mend_Alliance
+					has_country_flag = USA_Mend_Alliance 
 					is_ai = no
 				}
 			}
@@ -3936,10 +3906,10 @@ country_event = {
 				#}
 			}
 			name = usa.62.a
-			trigger = {
+			trigger = { 
 				AND = {
 					has_country_flag = USA_Mend_Alliance
-					is_ai = yes
+					is_ai = yes 
 				}
 			}
 			USA = { create_faction = "Anglosphere" }
@@ -3967,9 +3937,9 @@ country_event = {
 		title = usa.63.t
 		desc = usa.63.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.63.a
 			add_political_power = 25
@@ -3989,9 +3959,9 @@ country_event = {
 		title = usa.64.t
 		desc = usa.64.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.64.a
 		}
@@ -4005,7 +3975,7 @@ country_event = {
 		title = usa.65.t
 		desc = usa.65.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_country_flag = USA_UtahWar_Escalated
@@ -4020,7 +3990,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 2
 		}
-
+		
 		option = {
 			name = usa.65.a
 			remove_ideas = USA_UtahWar_2
@@ -4061,7 +4031,7 @@ country_event = {
 		title = usa.66.t
 		desc = usa.66.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_country_flag = USA_UtahWar_Escalated
@@ -4070,7 +4040,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.66.a
 			add_political_power = -100
@@ -4091,7 +4061,7 @@ country_event = {
 			trigger = { date > 1870.1.1 }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			has_idea = USA_Anti_Irish
 			OR = {
@@ -4107,7 +4077,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.67.a
 			if = {
@@ -4133,7 +4103,7 @@ country_event = {
 		title = usa.68.t
 		desc = usa.68.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_Anti_Irish_ACW
@@ -4141,7 +4111,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.67.a
 			swap_ideas = {
@@ -4156,7 +4126,7 @@ country_event = {
 		title = usa.69.t
 		desc = usa.69.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_Anti_Irish_2
@@ -4164,7 +4134,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.69.a
 			remove_ideas = USA_Anti_Irish_2
@@ -4176,9 +4146,9 @@ country_event = {
 		title = usa.70.t
 		desc = usa.70.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.70.a
 			hidden_effect = { country_event = { id = usa.71 days = 40 } }
@@ -4195,9 +4165,9 @@ country_event = {
 		title = usa.71.t
 		desc = usa.71.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.71.a
 			add_political_power = -5
@@ -4234,9 +4204,9 @@ country_event = {
 			trigger = { has_country_flag = USA_Norton_Mutiny }
 		}
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.72.a
 			add_political_power = 10
@@ -4253,7 +4223,7 @@ country_event = {
 		title = usa.73.t
 		desc = usa.73.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_1857Panic
@@ -4264,7 +4234,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.73.a
 			add_political_power = -10
@@ -4280,9 +4250,9 @@ country_event = {
 		title = usa.74.t
 		desc = usa.74.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.74.a
 			add_political_power = -20
@@ -4299,9 +4269,9 @@ country_event = {
 		title = usa.75.t
 		desc = usa.75.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.75.a
 			add_political_power = -5
@@ -4330,9 +4300,9 @@ country_event = {
 		title = usa.76.t
 		desc = usa.76.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.76.a
 			add_political_power = 10
@@ -4348,9 +4318,9 @@ country_event = {
 		title = usa.77.t
 		desc = usa.77.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.77.a
 			set_country_flag = USA_Norton_Marked_ACW
@@ -4362,9 +4332,9 @@ country_event = {
 		title = usa.78.t
 		desc = usa.78.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.78.a
 			set_country_flag = USA_Manhattan_Marked_ACW
@@ -4377,9 +4347,9 @@ country_event = {
 		title = usa.79.t
 		desc = usa.79.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.79.a
 			add_to_variable = {
@@ -4449,9 +4419,9 @@ country_event = {
 		title = usa.80.t
 		desc = usa.80.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.80.a
 			add_to_variable = {
@@ -4552,9 +4522,9 @@ country_event = {
 		title = usa.81.t
 		desc = usa.81.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.81.a
 			add_stability = -0.1
@@ -4646,9 +4616,9 @@ country_event = {
 		title = usa.82.t
 		desc = usa.82.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.82.a
 			add_stability = -0.05
@@ -4720,9 +4690,9 @@ country_event = {
 		title = usa.83.t
 		desc = usa.83.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.83.a
 			add_to_variable = {
@@ -4787,9 +4757,9 @@ country_event = {
 		title = usa.84.t
 		desc = usa.84.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.84.a
 			add_to_variable = {
@@ -4835,9 +4805,9 @@ country_event = {
 		title = usa.85.t
 		desc = usa.85.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.85.a
 			add_to_variable = {
@@ -4893,7 +4863,7 @@ country_event = {
 		title = usa.86.t
 		desc = usa.86.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -4906,7 +4876,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 1000
 		}
-
+		
 		option = {
 			name = usa.86.a
 			add_to_variable = {
@@ -4953,7 +4923,7 @@ country_event = {
 		title = usa.87.t
 		desc = usa.87.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -4968,7 +4938,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 30
 		}
-
+		
 		option = {
 			name = usa.87.a
 			set_country_flag = USA_first_kkk
@@ -4980,7 +4950,7 @@ country_event = {
 		title = usa.88.t
 		desc = usa.88.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -4996,7 +4966,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 60
 		}
-
+		
 		option = {
 			name = usa.88.a
 			add_to_variable = {
@@ -5043,7 +5013,7 @@ country_event = {
 		title = usa.89.t
 		desc = usa.89.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -5056,7 +5026,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 2
 		}
-
+		
 		option = {
 			name = usa.89.a
 			add_to_variable = {
@@ -5108,7 +5078,7 @@ country_event = {
 		title = usa.90.t
 		desc = usa.90.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -5138,7 +5108,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 400
 		}
-
+		
 		option = {
 			name = usa.90.a
 			add_political_power = -50
@@ -5258,7 +5228,7 @@ country_event = {
 		title = usa.91.t
 		desc = usa.91.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -5274,7 +5244,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 250
 		}
-
+		
 		option = {
 			name = usa.91.a
 			add_to_variable = {
@@ -5328,7 +5298,7 @@ country_event = {
 		title = usa.92.t
 		desc = usa.92.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -5343,7 +5313,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 500
 		}
-
+		
 		option = {
 			name = usa.92.a
 			add_to_variable = {
@@ -5406,9 +5376,9 @@ country_event = {
 		title = usa.93.t
 		desc = usa.93.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.93.a
 			add_to_variable = {
@@ -5428,7 +5398,7 @@ country_event = {
 		title = usa.94.t
 		desc = usa.94.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			has_idea = USA_recovery
@@ -5440,7 +5410,7 @@ country_event = {
 		mean_time_to_happen = {
 			days = 40
 		}
-
+		
 		option = {
 			name = usa.94.a
 			add_to_variable = {
@@ -5499,11 +5469,11 @@ country_event = {
 		title = usa.95.t
 		desc = usa.95.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.95.a
 			trigger = {
@@ -5572,11 +5542,11 @@ country_event = {
 		title = usa.96.t
 		desc = usa.96.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.96.a
 			swap_ideas = {
@@ -5595,11 +5565,11 @@ country_event = {
 		title = usa.97.t
 		desc = usa.97.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.97.a
 			swap_ideas = {
@@ -5618,11 +5588,11 @@ country_event = {
 		title = usa.98.t
 		desc = usa.98.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.98.a
 			add_opinion_modifier = {
@@ -5652,11 +5622,11 @@ country_event = {
 		title = usa.99.t
 		desc = usa.99.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.99.a
 			add_manpower = -5000
@@ -5676,11 +5646,11 @@ country_event = {
 		title = usa.100.t
 		desc = usa.100.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.101.a
 			add_ideas = USA_norton_martial_law
@@ -5699,11 +5669,11 @@ country_event = {
 		title = usa.101.t
 		desc = usa.101.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.102.a
 			add_stability = -0.05
@@ -5723,11 +5693,11 @@ country_event = {
 		title = usa.102.t
 		desc = usa.102.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.102.a
 			add_political_power = -75
@@ -5746,11 +5716,11 @@ country_event = {
 		title = usa.103.t
 		desc = usa.103.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.103.a #Absolutism
 			set_country_flag = USA_norton_absolute
@@ -5770,11 +5740,11 @@ country_event = {
 		title = usa.104.t
 		desc = usa.104.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.104.a
 			trigger = {
@@ -5785,7 +5755,7 @@ country_event = {
 			    size = 0.4
 			    only_own_territory = yes
 			    capital = 1091
-			    states = {
+			    states = { 
 			        357 1031 958 954
 			    }
 			}
@@ -5870,7 +5840,7 @@ country_event = {
 			    size = 0.3
 			    only_own_territory = yes
 			    capital = 1091
-			    states = {
+			    states = { 
 			        357 1031 958 954
 			    }
 			}
@@ -5949,7 +5919,7 @@ country_event = {
 			    size = 0.2
 			    only_own_territory = yes
 			    capital = 1091
-			    states = {
+			    states = { 
 			        357 1031 958 954
 			    }
 			}
@@ -6028,7 +5998,7 @@ country_event = {
 			    size = 0.15
 			    only_own_territory = yes
 			    capital = 1091
-			    states = {
+			    states = { 
 			        357 1031 958 954
 			    }
 			}
@@ -6107,7 +6077,7 @@ country_event = {
 			    size = 0.1
 			    only_own_territory = yes
 			    capital = 1091
-			    states = {
+			    states = { 
 			        357 1031 958 954
 			    }
 			}
@@ -6178,11 +6148,11 @@ country_event = {
 		title = usa.105.t
 		desc = usa.105.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.105.a
 			ai_chance = {
@@ -6233,11 +6203,11 @@ country_event = {
 		title = usa.106.t
 		desc = usa.106.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.106.a
 			ai_chance = {
@@ -6288,9 +6258,9 @@ country_event = {
 		title = usa.107.t
 		desc = usa.107.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.107.a
 			ai_chance = {
@@ -6314,9 +6284,9 @@ country_event = {
 		title = usa.108.t
 		desc = usa.108.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.108.a
 			if = {
@@ -6370,7 +6340,7 @@ country_event = {
 		title = usa.109.t
 		desc = usa.109.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			owns_state = 375
@@ -6382,7 +6352,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.109.a
 			add_popularity = {
@@ -6399,7 +6369,7 @@ country_event = {
 		title = usa.110.t
 		desc = usa.110.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		trigger = {
 			tag = USA
 			date > 1860.7.1
@@ -6412,7 +6382,7 @@ country_event = {
 		}
 
 		fire_only_once = yes
-
+		
 		option = {
 			name = usa.110.a
 			add_political_power = 25
@@ -6428,9 +6398,9 @@ country_event = {
 		title = usa.111.t
 		desc = usa.111.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.111.a
 			hidden_effect = { country_event = { id = usa.113 days = 5 } }
@@ -6446,9 +6416,9 @@ country_event = {
 		title = usa.112.t
 		desc = usa.112.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.112.a
 		}
@@ -6459,9 +6429,9 @@ country_event = {
 		title = usa.113.t
 		desc = usa.113.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.113.a
 			hidden_effect = { country_event = { id = usa.112 days = 5 } }
@@ -6477,9 +6447,9 @@ country_event = {
 		title = usa.114.t
 		desc = usa.114.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.114.a
 			hidden_effect = { country_event = { id = usa.112 days = 5 } }
@@ -6499,9 +6469,9 @@ country_event = {
 		title = usa.115.t
 		desc = usa.115.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.115.a
 			add_political_power = -50
@@ -6532,9 +6502,9 @@ country_event = {
 		title = usa.116.t
 		desc = usa.116.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.116.a
 			set_country_flag = USA_Houston_Revolt_Marked
@@ -6547,9 +6517,9 @@ country_event = {
 		title = usa.117.t
 		desc = usa.117.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.117.a
 			add_popularity = {
@@ -6612,9 +6582,9 @@ country_event = {
 		title = usa.118.t
 		desc = usa.118.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.118.a
 			add_popularity = {
@@ -6677,9 +6647,9 @@ country_event = {
 		title = usa.119.t
 		desc = usa.119.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.119.a
 			add_popularity = {
@@ -6755,9 +6725,9 @@ country_event = {
 		title = usa.120.t
 		desc = usa.120.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.120.a
 			add_popularity = {
@@ -6820,9 +6790,9 @@ country_event = {
 		title = usa.121.t
 		desc = usa.121.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.121.a
 			add_popularity = {
@@ -6866,7 +6836,7 @@ country_event = {
 		title = usa.122.t
 		desc = usa.122.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
 
 		immediate = {
@@ -6887,7 +6857,7 @@ country_event = {
 				value = party_popularity@vanguard_communism
 			}
 		}
-
+		
 		option = {
 			name = usa.122.a
 			trigger = {
@@ -6986,9 +6956,9 @@ country_event = {
 		title = usa.123.t
 		desc = usa.123.d
 		picture = GFX_report_event_german_reichstag_gathering
-
+		
 		is_triggered_only = yes
-
+		
 		option = {
 			name = usa.123.a
 			add_political_power = 10
@@ -7022,2245 +6992,7 @@ news_event = {
 		picture = GFX_news_event_panic_eighteen_fifty
 
 		major = yes
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.123.a #douglas lives
-			add_political_power = -25
-			ai_chance = {
-				factor = 60
-			}
-		}
-		option = {
-			name = usa.123.b #literally kill the nation
-			ai_chance = {
-				factor = 40
-			}
-			hidden_effect = {
-				set_country_flag = USA_collapse_inevitible
-				country_event = {
-					id = usa.125
-					days = 10
-				}
-			}
-			set_global_flag = Panic_of_1857
-		}
-}
-#Lincoln-Douglas debate
-news_event = {
-		id = usa_news.1
-		title = usa_news.1.t
-		desc = usa_news.1.d
-		picture = GFX_news_event_lincoln_douglas
-
-		fire_only_once = yes
-
-		major = no
-
-		trigger = {
-			TAG = USA
-			date > 1858.10.20
-		}
-
-		mean_time_to_happen = {
-			days = 2
-		}
-
-		option = {
-			name = usa.125.a #his vp gets in power
-			hidden_effect = {
-				country_event = {
-					id = usa.126
-					hours = 2
-				}
-			}
-			hidden_effect = {
-				news_event = {
-					id = usa_news.21
-				}
-			}
-			add_stability = -0.2
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "William Herschel"
-				desc = ""
-				picture = ""
-				expire = "1900.1.1"
-				ideology = conserv_liberal
-			}
-		}
-}
-#1860 Campaigning
-news_event = {
-		id = usa_news.2
-		title = usa_news.2.t
-		desc = usa_news.2.d
-		picture = GFX_news_event_1860_campaigning
-
-		fire_only_once = yes
-
-		major = no
-
-		trigger = {
-			TAG = USA
-			date > 1860.5.18
-		}
-
-		mean_time_to_happen = {
-			days = 2
-		}
-
-		option = {
-			name = usa_news.2.a
-			add_popularity = { ideology = centrism popularity = 0.05 }
-			create_country_leader = {
-    			name = "Abraham Lincoln"
-    			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    			picture = "Portrait_USA_Abraham_Lincoln.dds"
-    			expire = "1886.5.2"
-    			ideology = conserv_liberal
-    			traits = {
-    			  controversial_figure
-    			  eoanb_trait_patriotic_orator
-    			}
-  			}
-  			create_country_leader = {
-			    name = "John C. Frémont"
-			    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			    picture = "Portrait_USA_John_C_Fremont.dds"
-			    expire = "1886.5.2"
-			    ideology = liberal_social
-			    traits = {
-			    }
-			  }
-		}
-}
-#1860 Election - Lincoln
-news_event = {
-		id = usa_news.3
-		title = usa_news.3.t
-		desc = usa_news.3.d
-
-		picture = GFX_news_event_lincoln_elected
-
-		major = yes
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.127.a
-			hidden_effect = {
-				country_event = {
-					id = usa.128
-					hours = 12
-				}
-			}
-			hidden_effect = {
-				news_event = {
-					id = usa_news.22
-				}
-			}
-			add_stability = -0.2
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "William Pennington"
-				desc = ""
-				picture = ""
-				expire = "1900.1.1"
-				ideology = market_liberal
-			}
-		}
-}
-#1860 Election - Breckinridge
-news_event = {
-		id = usa_news.4
-		title = usa_news.4.t
-		desc = usa_news.4.d
-
-		picture = GFX_news_event_breckenridge_elected
-
-		major = yes
-
-		is_triggered_only = yes
-
-		option = {
-				name = usa_news.4.a
-		}
-}
-#1860 Election - Douglas
-news_event = {
-		id = usa_news.5
-		title = usa_news.5.t
-		desc = usa_news.5.d
-
-		picture = GFX_news_event_douglas_elected
-
-		major = yes
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.129.a
-			hidden_effect = {
-				country_event = {
-					id = usa.130
-					hours = 2
-				}
-			}
-			add_stability = -0.2
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Congressional Debate"
-				desc = ""
-				picture = ""
-				expire = "1900.1.1"
-				ideology = conserv_liberal
-			}
-		}
-}
-#South Carolina Independent
-news_event = {
-		id = usa_news.6
-		title = usa_news.6.t
-		desc = usa_news.6.d
-
-		picture = GFX_news_event_south_carolina
-
-		major = yes
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.130.a
-			add_political_power = -50
-			hidden_effect = {
-				division_template = {
-                	name = "Militiamen"
-                	regiments = {
-                		light_infantry = { x = 0 y = 0 }
-                		light_infantry = { x = 0 y = 1 }
-                		light_infantry = { x = 0 y = 1 }
-                	}
-                }
-			}
-			TEX = {
-                transfer_state = 375
-                transfer_state = 1305
-                transfer_state = 1306
-                transfer_state = 1304
-                transfer_state = 1303
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				set_politics = {
-					ruling_party = centrism
-					elections_allowed = yes
-					election_frequency = 48
-				}
-                random_owned_controlled_state = {
-                	limit = {
-		                is_fully_controlled_by = FROM
-		            	is_core_of = FROM
-		            }
-		            create_unit = {
-		                division = "name = \"1st Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
-		            }
-		            create_unit = {
-		                division = "name = \"2nd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
-		            }
-		            create_unit = {
-		                division = "name = \"3rd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
-		            }
-		            create_unit = {
-		                division = "name = \"4th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
-		            }
-		            create_unit = {
-		                division = "name = \"5th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
-		            }
-		        }
-                if = {
-                	limit = {
-                		USA = { owns_state = 1281 }
-                	}
-                	transfer_state = 1281
-                	add_state_core = 1281
-                }
-                else = {
-                	add_state_claim = 1281
-                }
-                if = {
-                	limit = {
-                		USA = { owns_state = 1280 }
-                	}
-                	transfer_state = 1280
-                	add_state_core = 1280
-                }
-                else = {
-                	add_state_claim = 1280
-                }
-            }
-            USA = { TEX = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.132
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.130.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			TEX = {
-                transfer_state = 375
-                transfer_state = 1305
-                transfer_state = 1306
-                transfer_state = 1304
-                transfer_state = 1303
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1281 }
-                	}
-                	transfer_state = 1281
-                	add_state_core = 1281
-                }
-                else = {
-                	add_state_claim = 1281
-                }
-                if = {
-                	limit = {
-                		USA = { owns_state = 1280 }
-                	}
-                	transfer_state = 1280
-                	add_state_core = 1280
-                }
-                else = {
-                	add_state_claim = 1280
-                }
-            }
-            USA = { TEX = { transfer_technology = yes } }
-            TEX = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.132
-					hours = 1
-				}
-			}
-		}
-}
-#California declares independence
-country_event = {
-		id = usa.131
-		title = usa.131.t
-		desc = usa.131.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.131.a
-			add_political_power = -50
-			CAL = {
-                transfer_state = 378
-                add_state_core = 378
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-	            	limit = {
-	            		USA = { owns_state = 1296 }
-	            	}
-	            	transfer_state = 1296
-	                add_state_core = 1296
-	            }
-	            else = {
-	            	add_state_claim = 1296
-	            }
-            }
-            USA = { CAL = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.135
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.131.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			CAL = {
-                transfer_state = 378
-                add_state_core = 378
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-	            	limit = {
-	            		USA = { owns_state = 1296 }
-	            	}
-	            	transfer_state = 1296
-	                add_state_core = 1296
-	            }
-	            else = {
-	            	add_state_claim = 1296
-	            }
-            }
-            USA = { CAL = { transfer_technology = yes } }
-            CAL = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.135
-					hours = 1
-				}
-			}
-		}
-}
-#Oregon declares independence
-country_event = {
-		id = usa.132
-		title = usa.132.t
-		desc = usa.132.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.132.a
-			add_political_power = -50
-			ORE = {
-                transfer_state = 385
-                add_state_core = 385
-                transfer_state = 386
-                add_state_core = 386
-                transfer_state = 1076
-                add_state_core = 1076
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-	            	limit = {
-	            		USA = { owns_state = 1075 }
-	            	}
-	            	transfer_state = 1075
-	                add_state_core = 1075
-	            }
-	            else = {
-	            	add_state_claim = 1075
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 1289 }
-	            	}
-	            	transfer_state = 1289
-	                add_state_core = 1289
-	            }
-	            else = {
-	            	add_state_claim = 1289
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 1073 }
-	            	}
-	            	transfer_state = 1073
-	                add_state_core = 1073
-	            }
-	            else = {
-	            	add_state_claim = 1073
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 1074 }
-	            	}
-	            	transfer_state = 1074
-	                add_state_core = 1074
-	            }
-	            else = {
-	            	add_state_claim = 1074
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 387 }
-	            	}
-	            	transfer_state = 387
-	                add_state_core = 387
-	            }
-	            else = {
-	            	add_state_claim = 387
-	            }
-            }
-            USA = { ORE = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.133
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.132.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			ORE = {
-                transfer_state = 378
-                add_state_core = 378
-                transfer_state = 368
-                add_state_core = 368
-                transfer_state = 1076
-                add_state_core = 1076
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-	            	limit = {
-	            		USA = { owns_state = 1075 }
-	            	}
-	            	transfer_state = 1075
-	                add_state_core = 1075
-	            }
-	            else = {
-	            	add_state_claim = 1075
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 1073 }
-	            	}
-	            	transfer_state = 1073
-	                add_state_core = 1073
-	            }
-	            else = {
-	            	add_state_claim = 1073
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 1074 }
-	            	}
-	            	transfer_state = 1074
-	                add_state_core = 1074
-	            }
-	            else = {
-	            	add_state_claim = 1074
-	            }
-	            if = {
-	            	limit = {
-	            		USA = { owns_state = 387 }
-	            	}
-	            	transfer_state = 387
-	                add_state_core = 387
-	            }
-	            else = {
-	            	add_state_claim = 387
-	            }
-            }
-            USA = { ORE = { transfer_technology = yes } }
-            ORE = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.133
-					hours = 1
-				}
-			}
-		}
-}
-#Kansas declares independence
-country_event = {
-		id = usa.133
-		title = usa.133.t
-		desc = usa.133.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.133.a
-			add_political_power = -50
-			KNS = {
-                transfer_state = 383
-                add_state_core = 383
-                transfer_state = 384
-                add_state_core = 384
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1050 }
-                	}
-                	transfer_state = 1050
-                	add_state_core = 1050
-                }
-                else = {
-					add_state_claim = 1050
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1046 }
-                	}
-                	transfer_state = 1046
-                	add_state_core = 1046
-                }
-                else = {
-					add_state_claim = 1046
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1051 }
-                	}
-                	transfer_state = 1051
-                	add_state_core = 1051
-                }
-                else = {
-					add_state_claim = 1051
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1052 }
-                	}
-                	transfer_state = 1052
-                	add_state_core = 1052
-                }
-                else = {
-					add_state_claim = 1052
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1283 }
-                	}
-                	transfer_state = 1283
-                	add_state_core = 1283
-                }
-                else = {
-					add_state_claim = 1283
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1049 }
-                	}
-                	transfer_state = 1049
-                	add_state_core = 1049
-                }
-                else = {
-					add_state_claim = 1049
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1299 }
-                	}
-                	transfer_state = 1299
-                	add_state_core = 1299
-                }
-                else = {
-					add_state_claim = 1299
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1298 }
-                	}
-                	transfer_state = 1298
-                	add_state_core = 1298
-                }
-                else = {
-					add_state_claim = 1298
-				}
-            }
-            USA = { KNS = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.134
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.133.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			KNS = {
-                transfer_state = 383
-                add_state_core = 383
-                transfer_state = 384
-                add_state_core = 384
-                hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1050 }
-                	}
-                	transfer_state = 1050
-                	add_state_core = 1050
-                }
-                else = {
-					add_state_claim = 1050
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1046 }
-                	}
-                	transfer_state = 1046
-                	add_state_core = 1046
-                }
-                else = {
-					add_state_claim = 1046
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1051 }
-                	}
-                	transfer_state = 1051
-                	add_state_core = 1051
-                }
-                else = {
-					add_state_claim = 1051
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1052 }
-                	}
-                	transfer_state = 1052
-                	add_state_core = 1052
-                }
-                else = {
-					add_state_claim = 1052
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1283 }
-                	}
-                	transfer_state = 1283
-                	add_state_core = 1283
-                }
-                else = {
-					add_state_claim = 1283
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1049 }
-                	}
-                	transfer_state = 1049
-                	add_state_core = 1049
-                }
-                else = {
-					add_state_claim = 1049
-				}
-                if = {
-                	limit = {
-                		USA = { owns_state = 1299 }
-                	}
-                	transfer_state = 1299
-                	add_state_core = 1299
-                }
-                else = {
-					add_state_claim = 1299
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1298 }
-                	}
-                	transfer_state = 1298
-                	add_state_core = 1298
-                }
-                else = {
-					add_state_claim = 1298
-				}
-            }
-            USA = { KNS = { transfer_technology = yes } }
-            KNS = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.134
-					hours = 1
-				}
-			}
-		}
-}
-#Dakota declares independence
-country_event = {
-		id = usa.134
-		title = usa.134.t
-		desc = usa.134.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.134.a
-			add_political_power = -50
-			DAK = {
-				transfer_state = 389
-				add_state_core = 389
-				transfer_state = 390
-				add_state_core = 390
-				transfer_state = 388
-				add_state_core = 388
-				transfer_state = 1284
-				add_state_core = 1284
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1290 }
-					}
-					transfer_state = 1290
-					add_state_core = 1290
-				}
-				else = {
-					add_state_claim = 1290
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 381 }
-					}
-					transfer_state = 381
-					add_state_core = 381
-				}
-				else = {
-					add_state_claim = 381
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1045 }
-					}
-					transfer_state = 1045
-					add_state_core = 1045
-				}
-				else = {
-					add_state_claim = 1045
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1048 }
-					}
-					transfer_state = 1048
-					add_state_core = 1048
-				}
-				else = {
-					add_state_claim = 1048
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1282 }
-					}
-					transfer_state = 1282
-					add_state_core = 1282
-				}
-				else = {
-					add_state_claim = 1282
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1292 }
-					}
-					transfer_state = 1292
-					add_state_core = 1292
-				}
-				else = {
-					add_state_claim = 1292
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1291 }
-					}
-					transfer_state = 1291
-					add_state_core = 1291
-				}
-				else = {
-					add_state_claim = 1291
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1047 }
-					}
-					transfer_state = 1047
-					add_state_core = 1047
-				}
-				else = {
-					add_state_claim = 1047
-				}
-            }
-            USA = { DAK = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.131
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.134.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			DAK = {
-				transfer_state = 389
-				add_state_core = 389
-				transfer_state = 390
-				add_state_core = 390
-				transfer_state = 388
-				add_state_core = 388
-				transfer_state = 1284
-				add_state_core = 1284
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1290 }
-					}
-					transfer_state = 1290
-					add_state_core = 1290
-				}
-				else = {
-					add_state_claim = 1290
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1045 }
-					}
-					transfer_state = 1045
-					add_state_core = 1045
-				}
-				else = {
-					add_state_claim = 1045
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1048 }
-					}
-					transfer_state = 1048
-					add_state_core = 1048
-				}
-				else = {
-					add_state_claim = 1048
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1282 }
-					}
-					transfer_state = 1282
-					add_state_core = 1282
-				}
-				else = {
-					add_state_claim = 1282
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1292 }
-					}
-					transfer_state = 1292
-					add_state_core = 1292
-				}
-				else = {
-					add_state_claim = 1292
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1291 }
-					}
-					transfer_state = 1291
-					add_state_core = 1291
-				}
-				else = {
-					add_state_claim = 1291
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1047 }
-					}
-					transfer_state = 1047
-					add_state_core = 1047
-				}
-				else = {
-					add_state_claim = 1047
-				}
-            }
-            USA = { DAK = { transfer_technology = yes } }
-            DAK = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.131
-					hours = 1
-				}
-			}
-		}
-}
-#Missouri declares independence
-country_event = {
-		id = usa.135
-		title = usa.135.t
-		desc = usa.135.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.135.a
-			add_political_power = -50
-			MIO = {
-				transfer_state = 373
-				add_state_core = 373
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { MIO = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.136
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.135.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			MIO = {
-				transfer_state = 373
-				add_state_core = 373
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { MIO = { transfer_technology = yes } }
-            MIO = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.136
-					hours = 1
-				}
-			}
-		}
-}
-#Kentucky declares independence
-country_event = {
-		id = usa.136
-		title = usa.136.t
-		desc = usa.136.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.136.a
-			add_political_power = -50
-			KTY = {
-				transfer_state = 369
-				add_state_core = 369
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { KTY = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.137
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.136.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			KTY = {
-				transfer_state = 369
-				add_state_core = 369
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { KTY = { transfer_technology = yes } }
-            KTY = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.137
-					hours = 2
-				}
-			}
-		}
-}
-#Great Lakes declares independence
-country_event = {
-		id = usa.137
-		title = usa.137.t
-		desc = usa.137.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.137.a
-			add_political_power = -50
-			GRL = {
-				transfer_state = 395
-				add_state_core = 395
-				transfer_state = 394
-				add_state_core = 394
-				transfer_state = 391
-				add_state_core = 391
-				transfer_state = 392
-				add_state_core = 392
-				transfer_state = 396
-				add_state_core = 396
-				transfer_state = 393
-				add_state_core = 393
-				transfer_state = 261
-				add_state_core = 261
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { GRL = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.138
-					hours = 1
-				}
-			}
-		}
-		option = {
-			name = usa.137.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			GRL = {
-				transfer_state = 395
-				add_state_core = 395
-				transfer_state = 394
-				add_state_core = 394
-				transfer_state = 391
-				add_state_core = 391
-				transfer_state = 392
-				add_state_core = 392
-				transfer_state = 396
-				add_state_core = 396
-				transfer_state = 393
-				add_state_core = 393
-				transfer_state = 261
-				add_state_core = 261
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { GRL = { transfer_technology = yes } }
-            GRL = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.138
-					hours = 1
-				}
-			}
-		}
-}
-#New England declares independence
-country_event = {
-		id = usa.138
-		title = usa.138.t
-		desc = usa.138.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.138.a
-			add_political_power = -50
-			NEG = {
-				transfer_state = 357
-				add_state_core = 357
-				transfer_state = 1031
-				add_state_core = 1031
-				transfer_state = 958
-				add_state_core = 958
-				transfer_state = 959
-				add_state_core = 959
-				transfer_state = 960
-				add_state_core = 960
-				transfer_state = 961
-				add_state_core = 961
-            	hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { NEG = { transfer_technology = yes } }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = USA_Manhattan_Marked_ACW
-					}
-					country_event = {
-						id = usa.139
-						hours = 1
-					}
-				}
-				else = {
-					country_event = {
-						id = usa.140
-					}
-				}
-			}
-		}
-		option = {
-			name = usa.138.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			NEG = {
-				transfer_state = 357
-				add_state_core = 357
-				transfer_state = 1031
-				add_state_core = 1031
-				transfer_state = 958
-				add_state_core = 958
-				transfer_state = 959
-				add_state_core = 959
-				transfer_state = 960
-				add_state_core = 960
-				transfer_state = 961
-				add_state_core = 961
-            	hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { NEG = { transfer_technology = yes } }
-            NEG = { change_tag_from = USA }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = USA_Manhattan_Marked_ACW
-					}
-					country_event = {
-						id = usa.139
-						hours = 1
-					}
-				}
-				else = {
-					country_event = {
-						id = usa.140
-					}
-				}
-			}
-		}
-}
-#Manhattan Commune declares independence
-country_event = {
-		id = usa.139
-		title = usa.139.t
-		desc = usa.139.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.139.a
-			add_political_power = -50
-			MHC = {
-				transfer_state = 954
-				add_state_core = 954
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { MHC = { transfer_technology = yes } }
-			hidden_effect = {
-				country_event = {
-					id = usa.140
-				}
-			}
-		}
-		option = {
-			name = usa.139.b
-			trigger = {
-				is_ai = no
-			}
-			add_political_power = -50
-			MHC = {
-				transfer_state = 954
-				add_state_core = 954
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            USA = { MHC = { transfer_technology = yes } }
-            MHC = { change_tag_from = USA }
-			hidden_effect = {
-				country_event = {
-					id = usa.140
-				}
-			}
-		}
-}
-#Rest of the Country oofs off
-country_event = {
-		id = usa.140
-		title = usa.140.t
-		desc = usa.140.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.140.a
-			hidden_effect = {
-				country_event = {
-					id = usa.141
-					hours = 1
-				}
-			}
-			UTA = {
-				transfer_state = 380
-				transfer_state = 379
-				transfer_state = 382
-				transfer_state = 1092
-				transfer_state = 1093
-				add_state_core = 1093
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-			}
-			USA = { UTA = { transfer_technology = yes } }
-			USA = { end_puppet = UTA }
-			OKL = {
-				transfer_state = 374
-				add_state_core = 374
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1293 }
-                	}
-                	transfer_state = 1293
-                	add_state_core = 1293
-                }
-                else = {
-                	add_state_claim = 1293
-                }
-			}
-			NMX = {
-				transfer_state = 1285
-				add_state_core = 1285
-				transfer_state = 1300
-				add_state_core = 1300
-				transfer_state = 1297
-				add_state_core = 1297
-				transfer_state = 377
-				add_state_core = 377
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1286 }
-					}
-					transfer_state = 1286
-					add_state_core = 1286
-				}
-				else = {
-					add_state_claim = 1286
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1302 }
-					}
-					transfer_state = 1302
-					add_state_core = 1302
-				}
-				else = {
-					add_state_claim = 1302
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1294 }
-					}
-					transfer_state = 1294
-					add_state_core = 1294
-				}
-				else = {
-					add_state_claim = 1294
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1287 }
-					}
-					transfer_state = 1287
-					add_state_core = 1287
-				}
-				else = {
-					add_state_claim = 1287
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1301 }
-					}
-					transfer_state = 1301
-					add_state_core = 1301
-				}
-				else = {
-					add_state_claim = 1301
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1295 }
-					}
-					transfer_state = 1295
-					add_state_core = 1295
-				}
-				else = {
-					add_state_claim = 1295
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1288 }
-					}
-					transfer_state = 1288
-					add_state_core = 1288
-				}
-				else = {
-					add_state_claim = 1288
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 376 }
-					}
-					transfer_state = 376
-					add_state_core = 376
-				}
-				else = {
-					add_state_claim = 376
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1278 }
-					}
-					transfer_state = 1278
-					add_state_core = 1278
-				}
-				else = {
-					add_state_claim = 1278
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1279 }
-					}
-					transfer_state = 1279
-					add_state_core = 1279
-				}
-				else = {
-					add_state_claim = 1279
-				}
-			}
-			USA = { OKL = { transfer_technology = yes } }
-			USA = { NMX = { transfer_technology = yes } }
-		}
-		option = {
-			name = usa.140.b
-			trigger = { is_ai = no }
-			hidden_effect = {
-				country_event = {
-					id = usa.141
-					hours = 1
-				}
-			}
-			UTA = {
-				transfer_state = 380
-				transfer_state = 379
-				transfer_state = 382
-				transfer_state = 1092
-				transfer_state = 1093
-				add_state_core = 1093
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-			}
-			USA = { UTA = { transfer_technology = yes } }
-			USA = { end_puppet = UTA }
-			OKL = {
-				transfer_state = 374
-				add_state_core = 374
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1293 }
-                	}
-                	transfer_state = 1293
-                	add_state_core = 1293
-                }
-                else = {
-                	add_state_claim = 1293
-                }
-			}
-			NMX = {
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				transfer_state = 1285
-				add_state_core = 1285
-				transfer_state = 1300
-				add_state_core = 1300
-				transfer_state = 1297
-				add_state_core = 1297
-				transfer_state = 377
-				add_state_core = 377
-				if = {
-					limit = {
-						USA = { owns_state = 1286 }
-					}
-					transfer_state = 1286
-					add_state_core = 1286
-				}
-				else = {
-					add_state_claim = 1286
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1302 }
-					}
-					transfer_state = 1302
-					add_state_core = 1302
-				}
-				else = {
-					add_state_claim = 1302
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1294 }
-					}
-					transfer_state = 1294
-					add_state_core = 1294
-				}
-				else = {
-					add_state_claim = 1294
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1287 }
-					}
-					transfer_state = 1287
-					add_state_core = 1287
-				}
-				else = {
-					add_state_claim = 1287
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1301 }
-					}
-					transfer_state = 1301
-					add_state_core = 1301
-				}
-				else = {
-					add_state_claim = 1301
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1295 }
-					}
-					transfer_state = 1295
-					add_state_core = 1295
-				}
-				else = {
-					add_state_claim = 1295
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1288 }
-					}
-					transfer_state = 1288
-					add_state_core = 1288
-				}
-				else = {
-					add_state_claim = 1288
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 376 }
-					}
-					transfer_state = 376
-					add_state_core = 376
-				}
-				else = {
-					add_state_claim = 376
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1278 }
-					}
-					transfer_state = 1278
-					add_state_core = 1278
-				}
-				else = {
-					add_state_claim = 1278
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1279 }
-					}
-					transfer_state = 1279
-					add_state_core = 1279
-				}
-				else = {
-					add_state_claim = 1279
-				}
-			}
-			UTA = { change_tag_from = USA }
-			USA = { OKL = { transfer_technology = yes } }
-			USA = { NMX = { transfer_technology = yes } }
-		}
-		option = {
-			name = usa.140.c
-			trigger = { is_ai = no }
-			hidden_effect = {
-				country_event = {
-					id = usa.141
-					hours = 1
-				}
-			}
-			UTA = {
-				transfer_state = 380
-				transfer_state = 379
-				transfer_state = 382
-				transfer_state = 1092
-				transfer_state = 1093
-				add_state_core = 1093
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-			}
-			USA = { UTA = { transfer_technology = yes } }
-			USA = { end_puppet = UTA }
-			OKL = {
-				transfer_state = 374
-				add_state_core = 374
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1293 }
-                	}
-                	transfer_state = 1293
-                	add_state_core = 1293
-                }
-                else = {
-                	add_state_claim = 1293
-                }
-			}
-			NMX = {
-				transfer_state = 1285
-				add_state_core = 1285
-				transfer_state = 1300
-				add_state_core = 1300
-				transfer_state = 1297
-				add_state_core = 1297
-				transfer_state = 377
-				add_state_core = 377
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1286 }
-					}
-					transfer_state = 1286
-					add_state_core = 1286
-				}
-				else = {
-					add_state_claim = 1286
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1302 }
-					}
-					transfer_state = 1302
-					add_state_core = 1302
-				}
-				else = {
-					add_state_claim = 1302
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1294 }
-					}
-					transfer_state = 1294
-					add_state_core = 1294
-				}
-				else = {
-					add_state_claim = 1294
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1287 }
-					}
-					transfer_state = 1287
-					add_state_core = 1287
-				}
-				else = {
-					add_state_claim = 1287
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1301 }
-					}
-					transfer_state = 1301
-					add_state_core = 1301
-				}
-				else = {
-					add_state_claim = 1301
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1295 }
-					}
-					transfer_state = 1295
-					add_state_core = 1295
-				}
-				else = {
-					add_state_claim = 1295
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1288 }
-					}
-					transfer_state = 1288
-					add_state_core = 1288
-				}
-				else = {
-					add_state_claim = 1288
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 376 }
-					}
-					transfer_state = 376
-					add_state_core = 376
-				}
-				else = {
-					add_state_claim = 376
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1278 }
-					}
-					transfer_state = 1278
-					add_state_core = 1278
-				}
-				else = {
-					add_state_claim = 1278
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1279 }
-					}
-					transfer_state = 1279
-					add_state_core = 1279
-				}
-				else = {
-					add_state_claim = 1279
-				}
-			}
-			OKL = { change_tag_from = USA }
-			USA = { OKL = { transfer_technology = yes } }
-			USA = { NMX = { transfer_technology = yes } }
-		}
-		option = {
-			name = usa.140.e
-			trigger = { is_ai = no }
-			hidden_effect = {
-				country_event = {
-					id = usa.141
-					hours = 1
-				}
-			}
-			UTA = {
-				transfer_state = 380
-				transfer_state = 379
-				transfer_state = 382
-				transfer_state = 1092
-				transfer_state = 1093
-				add_state_core = 1093
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-			}
-			USA = { UTA = { transfer_technology = yes } }
-			USA = { end_puppet = UTA }
-			OKL = {
-				transfer_state = 374
-				add_state_core = 374
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				if = {
-                	limit = {
-                		USA = { owns_state = 1293 }
-                	}
-                	transfer_state = 1293
-                	add_state_core = 1293
-                }
-                else = {
-                	add_state_claim = 1293
-                }
-			}
-			NMX = {
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-				transfer_state = 1285
-				add_state_core = 1285
-				transfer_state = 1300
-				add_state_core = 1300
-				transfer_state = 1297
-				add_state_core = 1297
-				transfer_state = 377
-				add_state_core = 377
-				if = {
-					limit = {
-						USA = { owns_state = 1286 }
-					}
-					transfer_state = 1286
-					add_state_core = 1286
-				}
-				else = {
-					add_state_claim = 1286
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1302 }
-					}
-					transfer_state = 1302
-					add_state_core = 1302
-				}
-				else = {
-					add_state_claim = 1302
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1294 }
-					}
-					transfer_state = 1294
-					add_state_core = 1294
-				}
-				else = {
-					add_state_claim = 1294
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1287 }
-					}
-					transfer_state = 1287
-					add_state_core = 1287
-				}
-				else = {
-					add_state_claim = 1287
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1301 }
-					}
-					transfer_state = 1301
-					add_state_core = 1301
-				}
-				else = {
-					add_state_claim = 1301
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1295 }
-					}
-					transfer_state = 1295
-					add_state_core = 1295
-				}
-				else = {
-					add_state_claim = 1295
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1288 }
-					}
-					transfer_state = 1288
-					add_state_core = 1288
-				}
-				else = {
-					add_state_claim = 1288
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 376 }
-					}
-					transfer_state = 376
-					add_state_core = 376
-				}
-				else = {
-					add_state_claim = 376
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1278 }
-					}
-					transfer_state = 1278
-					add_state_core = 1278
-				}
-				else = {
-					add_state_claim = 1278
-				}
-				if = {
-					limit = {
-						USA = { owns_state = 1279 }
-					}
-					transfer_state = 1279
-					add_state_core = 1279
-				}
-				else = {
-					add_state_claim = 1279
-				}
-			}
-			NMX = {
-				change_tag_from = USA
-			}
-			USA = { NMX = { transfer_technology = yes } }
-			USA = { OKL = { transfer_technology = yes } }
-		}
-}
-#USA becomes the Atlantic States of America
-country_event = {
-		id = usa.141
-		title = usa.141.t
-		desc = usa.141.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.141.a
-			retire_country_leader = yes
-			if = {
-				limit = {
-					is_ai = no
-				}
-				ASA = { change_tag_from = USA }
-			}
-			every_owned_state = {
-            	limit = {
-            		is_core_of = USA
-            	}
-            	add_core_of = ASA
-            }
-			ASA = {
-				annex_country = {
-					target = USA
-				}
-				hidden_effect = {
-					country_event = {
-						id = usa.142
-						hours = 1
-					}
-				}
-            }
-            set_global_flag = USA_great_collapse
-            ASA = { USA = { transfer_technology = yes } }
-            every_state = {
-            	limit = {
-            		OR = {
-            			is_core_of = USA
-            			is_claimed_by = USA
-            		}
-            	}
-            	remove_core_of = USA
-            	remove_claim_by = USA
-            }
-            hidden_effect = {
-            	news_event = {
-            		id = usa_news.23
-            	}
-            }
-            hidden_effect = {
-            	ENG = {
-					country_event = {
-            			id = usa.145
-            			days = 5
-            		}
-            	}
-            	FRA = {
-					country_event = {
-            			id = usa.145
-            			days = 5
-            		}
-            	}
-            	RUS = {
-					country_event = {
-            			id = usa.145
-            			days = 5
-            		}
-            	}
-            }
-		}
-}
-#Rise of Militiamen for Breakaway States
-country_event = {
-		id = usa.142
-		title = usa.142.t
-		desc = usa.142.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.142.a
-			hidden_effect = {
-				division_template = {
-                	name = "Militiamen"
-                	regiments = {
-                		light_infantry = { x = 0 y = 0 }
-                		light_infantry = { x = 0 y = 1 }
-                		light_infantry = { x = 0 y = 1 }
-                	}
-                }
-			}
-			random_owned_controlled_state = {
-                limit = {
-		            is_fully_controlled_by = ROOT
-			       	is_core_of = ROOT
-		        }
-		        create_unit = {
-		            division = "name = \"1st Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-		        }
-		        create_unit = {
-		            division = "name = \"2nd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-		        }
-		        create_unit = {
-		            division = "name = \"3rd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-		        }
-		        create_unit = {
-		            division = "name = \"4th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-	            }
-		        create_unit = {
-		            division = "name = \"5th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-		        }
-	        }
-	        if = {
-		       	limit = {
-		        	OR = {
-		        		tag = ASA
-		        		tag = GRL
-		        	}
-		        }
-		        random_owned_controlled_state = {
-	                limit = {
-			            is_fully_controlled_by = ROOT
-				       	is_core_of = ROOT
-			        }
-			        create_unit = {
-			            division = "name = \"6th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-			        }
-				    create_unit = {
-				        division = "name = \"7th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
-				    }
-				}
-		    }
-		}
-}
-#Stephen A. Douglas passes Popular Sovreignty
-country_event = {
-		id = usa.143
-		title = usa.143.t
-		desc = usa.143.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.143.a
-			add_stability = -0.05
-			country_event = {
-				id = usa.144
-				days = 10
-			}
-		}
-}
-#Stephen A. Douglas Plans the Tour
-country_event = {
-		id = usa.144
-		title = usa.144.t
-		desc = usa.144.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.144.a
-			country_event = {
-				id = usa.124
-				days = 10
-			}
-		}
-}
-#Europe Colonizes former USA islands in pacific
-country_event = {
-		id = usa.145
-		title = usa.145.t
-		desc = usa.145.d
-		picture = GFX_report_event_german_reichstag_gathering
-
-		is_triggered_only = yes
-
-		option = {
-			name = usa.145.a
-			trigger = {
-				tag = ENG
-			}
-			transfer_state = 632
-			transfer_state = 630
-			transfer_state = 631
-		}
-		option = {
-			name = usa.145.a
-			trigger = {
-				tag = FRA
-			}
-			transfer_state = 727
-			transfer_state = 726
-			transfer_state = 642
-		}
-		option = {
-			name = usa.145.a
-			trigger = {
-				tag = RUS
-			}
-			transfer_state = 650
-		}
-}
-
-#News Events
-
-add_namespace = usa_news
-#Panic of 1857
-news_event = {
-		id = usa_news.0
-		title = usa_news.0.t
-		desc = usa_news.0.d
-		picture = GFX_news_event_panic_eighteen_fifty
-
-		major = yes
-
+		
 		is_triggered_only = yes
 
 		option = {
@@ -9287,7 +7019,7 @@ news_event = {
 		fire_only_once = yes
 
 		major = no
-
+		
 		trigger = {
 			TAG = USA
 			date > 1858.10.20
@@ -9313,7 +7045,7 @@ news_event = {
 		fire_only_once = yes
 
 		major = no
-
+		
 		trigger = {
 			TAG = USA
 			date > 1860.5.18
@@ -9326,7 +7058,6 @@ news_event = {
 		option = {
 			name = usa_news.2.a
 			add_popularity = { ideology = centrism popularity = 0.05 }
-			add_popularity = { ideology = radical_democracy popularity = 0.05 }
 			create_country_leader = {
     			name = "Abraham Lincoln"
     			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -9469,13 +7200,13 @@ news_event = {
 		picture = GFX_news_event_acw_avoided
 
 		major = no
-
+		
 		is_triggered_only = yes
 
 		option = {
 			trigger = {
-				NOT = {
-					TAG = USA
+				NOT = { 
+					TAG = USA 
 				}
 			}
 			name = usa_news.8.a
@@ -9495,13 +7226,13 @@ news_event = {
 		picture = GFX_news_event_drake_well
 
 		major = yes
-
+		
 		is_triggered_only = yes
 
 		option = {
 			trigger = {
-				NOT = {
-					TAG = USA
+				NOT = { 
+					TAG = USA 
 				}
 			}
 			name = usa_news.9.a
@@ -9521,12 +7252,12 @@ news_event = {
 		picture = GFX_news_event_usa_socialist_revolution
 
 		major = yes
-
+		
 		is_triggered_only = yes
 
 		option = {
 			trigger = {
-				NOT = {
+				NOT = { 
 					TAG = USA
 					has_government = social_egalitarianism
 					has_government = vanguard_communism
@@ -9537,7 +7268,7 @@ news_event = {
 		}
 		option = {
 			trigger = {
-				NOT = {
+				NOT = { 
 					TAG = USA
 				}
 				has_government = social_egalitarianism
@@ -9561,12 +7292,12 @@ news_event = {
 		picture = GFX_news_event_usa_monarchist_revolution
 
 		major = yes
-
+		
 		is_triggered_only = yes
 
 		option = {
 			trigger = {
-				NOT = {
+				NOT = { 
 					TAG = USA
 					has_government = autocracy
 				}
@@ -9575,7 +7306,7 @@ news_event = {
 		}
 		option = {
 			trigger = {
-				NOT = {
+				NOT = { 
 					TAG = USA
 				}
 				has_government = autocracy
@@ -9618,7 +7349,7 @@ news_event = {
 		fire_only_once = yes
 
 		major = no
-
+		
 		trigger = {
 			TAG = USA
 			date > 1864.1.20
