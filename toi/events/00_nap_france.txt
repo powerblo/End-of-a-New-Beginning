@@ -3723,12 +3723,6 @@ country_event = { # Orsini Affair
       picture = "Portrait_FRA_Eugenie_de_Montijo.dds"
       ideology = despotism
     }
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     add_political_power = -100
     set_country_flag = fra_orsini_success
     add_ideas = FRA_idea_orsini_regency_empress
@@ -3741,12 +3735,6 @@ country_event = { # Orsini Affair
     name = nap_france.398.b
     ai_chance = { factor = 80 }
     add_stability = -0.05
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     set_country_flag = fra_orsini_failure
     hidden_effect = { 
       news_event = { id = nap_france_flavor.21 } 
@@ -3756,12 +3744,6 @@ country_event = { # Orsini Affair
     name = nap_france.398.c
     ai_chance = { factor = 15 }
     add_stability = -0.15
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     create_country_leader = {
       name = "Regency Council"
       picture = "Portrait_FRA_Regency_Council.dds"

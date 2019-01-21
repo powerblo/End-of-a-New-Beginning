@@ -532,38 +532,6 @@ economic_decisions = {
 			}
 		}
 	}
-	
-	#Holland: Amsterdam Area Land Reclamation
-	eoanb_decision_land_reclamation_amsterdam = {
-		
-		icon = generic_operation
-		
-		available = {
-			HOL = { has_tech = industrial_era_tools_1 }
-		}
-		
-		visible = {
-			TAG = HOL
-			7 = { is_controlled_by = HOL }
-		}
-		
-		fire_only_once = yes
-		
-		cost = 75
-		
-		complete_effect = {
-			7 = { add_extra_state_shared_building_slots = 3 }
-		}
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 100
-				TAG = HOL
-			}
-		}
-	}
-	
 }
 
 #Internal Politics
@@ -2029,6 +1997,34 @@ eoanb_category_traditions_celebrations = {
 }
 
 eoanb_category_options = {
+	
+	eoanb_decision_open_help = {
+		
+		icon = generic_decision
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			country_event = { id = generic.16 }
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
 	
 	eoanb_decision_open_options = {
 		

@@ -56,10 +56,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		TAG = PRS
-		has_country_flag = eoanb_flag_PRS_made_reforms
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = sevenweekswar.2.a
@@ -86,11 +83,24 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		TAG = PRS
-		has_country_flag = eoanb_flag_PRS_made_reforms
-		date > 1866.3.20
-		PRS = { owns_state = 66 }
-		PRS = { owns_state = 67 }
+		OR = {
+			AND = {
+				TAG = PRS
+				has_country_flag = eoanb_flag_PRS_made_reforms
+				date > 1866.3.20
+				PRS = { owns_state = 66 }
+				PRS = { owns_state = 67 }
+				NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
+			}
+			AND = {
+				TAG = PRS
+				date > 1866.6.20
+				PRS = { owns_state = 66 }
+				PRS = { owns_state = 67 }
+				NOT = { has_country_flag = eoanb_flag_PRS_made_reforms }
+				NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
+			}
+		}
 	}
 	
 	option = {
@@ -859,6 +869,9 @@ country_event = {
 			PRS = { annex_country = { target = BRE transfer_troops = no } }
 			PRS = { annex_country = { target = OLD transfer_troops = no } }
 			PRS = { set_cosmetic_tag = GER_north_confederation }
+			PRS = {
+				add_ideas = PRS_idea_rapid_expansion
+			}
 		}
 	}
 	
