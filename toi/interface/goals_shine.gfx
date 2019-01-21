@@ -1,4 +1,4 @@
-spriteTypes = {	
+spriteTypes = {
 
 	#### Generic continuous goal icons
 
@@ -15626,8 +15626,40 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_focus_german_unification_shine"
-		texturefile = "gfx/interface/goals/prussia/focus_german_unification.dds"
+		name = "GFX_goal_focus_paraguay_shine"
+		texturefile = "gfx/interface/goals/brazil/paraguay.dds"
+				effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/brazil/uruguay.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/brazil/uruguay.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_BRA_goal_research_treaty_shine"
+		texturefile = "gfx/interface/goals/brazil/BRA_research_treaty.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/prussia/focus_german_unification.dds"
@@ -16558,7 +16590,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_focus_military_consultative_commission"
 		texturefile = "gfx/interface/goals/bavaria/focus_military_consultative_commission.dds"
@@ -16590,7 +16622,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_focus_learnfromaustrians"
 		texturefile = "gfx/interface/goals/bavaria/focus_learnfromaustrians.dds"
@@ -16622,7 +16654,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_focus_bavarias_power"
 		texturefile = "gfx/interface/goals/bavaria/focus_bavarias_power.dds"
@@ -16654,7 +16686,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_focus_extend_trias"
 		texturefile = "gfx/interface/goals/bavaria/focus_extend_trias.dds"
