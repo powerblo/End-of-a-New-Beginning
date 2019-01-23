@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-    
+
     ### DYNASTIC ###
     focus = {
 		id = SER_Saint_Andrew_Assembly
@@ -21,8 +21,8 @@ focus_tree = {
             remove_ideas = SER_idea_Internal_Conflicts
             country_event = { id = serbia.2 }
 		}
-	}   
-    
+	}
+
     focus = {
 		id = SER_Return_Of_Obrenovic_Dynasty
 		icon = GFX_focus_rom_royal_dictatorship
@@ -33,50 +33,50 @@ focus_tree = {
         mutually_exclusive = { focus = SER_Karadjordjevic_Dynasty_Remains }
         prerequisite = { focus = SER_Saint_Andrew_Assembly }
 		completion_reward = {
-            SER = {                               
+            SER = {
                 hidden_effect = {
                     retire_country_leader = yes
-                
+
                     create_country_leader = {
                         name = "Miloš Obrenović"
                         desc = "POLITICS_TEMP_DESC"
                         picture = "Portrait_SER_Milos_Obrenovic.dds"
                         expire = 2000.09.10
                         ideology = despotism
-                        traits = { dictator } 
+                        traits = { dictator }
                     }
-                
-                    set_party_name = { 
-                        ideology = autocracy 
+
+                    set_party_name = {
+                        ideology = autocracy
                         long_name = "Obrenovic Dynasty"
                         name = "Obrenovic Dynasty"
                     }
-                    
+
                     set_politics = {
                         parties = {
-                            autocracy = { 
+                            autocracy = {
                                 popularity = 60
                             }
 
                             traditional_conservatism = {
                                 popularity = 25
                             }
-                            
+
                             centrism = {
                                 popularity = 15
                             }
                         }
-                        
+
                         ruling_party = autocracy
                     }
-                    
+
                 }
-                
+
                 custom_effect_tooltip = eoanb_tt_SER_obrenovic
             }
 		}
 	}
-    
+
     focus = {
 		id = SER_Karadjordjevic_Dynasty_Remains
 		icon = GFX_goal_unknown
@@ -104,7 +104,7 @@ focus_tree = {
             country_event = { id = SERpolitical.16 }
 		}
 	}
-    
+
     focus = {
 		id = SER_Compromise_With_Defenders
 		icon = GFX_goal_continuous_increase_nu
@@ -120,11 +120,11 @@ focus_tree = {
                 add_popularity = {
                     ideology = traditional_conservatism
                     popularity = 0.05
-                }   
+                }
             }
 		}
 	}
-    
+
     focus = {
 		id = SER_Liberals_Question
 		icon = GFX_goal_generic_neutrality_focus
@@ -133,10 +133,10 @@ focus_tree = {
 		y = 3
         prerequisite = { focus = SER_Restore_Your_Reputation }
 		completion_reward = {
-            country_event = { id = SERpolitical.19 } 
+            country_event = { id = SERpolitical.19 }
 		}
 	}
-    
+
     focus = {
 		id = SER_Change_Turkish_Constitution
 		icon = GFX_goal_focus_enact_law
@@ -144,14 +144,14 @@ focus_tree = {
 		x = 3
 		y = 4
         prerequisite = { focus = SER_Compromise_With_Defenders }
-        prerequisite = { focus = SER_Liberals_Question } 
+        prerequisite = { focus = SER_Liberals_Question }
 		completion_reward = {
             add_political_power = -50
             add_stability = 0.02
             swap_ideas = { remove_idea = SER_idea_1838constitution add_idea = SER_idea_1838constitution2 }
 		}
 	}
-    
+
     focus = {
 		id = SER_First_Uprising_Anniversary
 		icon = GFX_goal_unknown
@@ -164,7 +164,7 @@ focus_tree = {
             country_event = { id = SERmisc.1 }
 		}
 	}
-    
+
     focus = {
 		id = SER_Father_Of_Modern_Serbia
 		icon = GFX_goal_support_democracy
@@ -177,7 +177,7 @@ focus_tree = {
             add_war_support = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Assassination_Attempt
 		icon = GFX_focus_conspiracy_murder_act
@@ -193,7 +193,7 @@ focus_tree = {
             hidden_effect = { country_event = { id = SERpolitical.20 } }
 		}
 	}
-    
+
     focus = {
 		id = SER_Knez_Survives
 		icon = GFX_goal_unknown
@@ -207,7 +207,7 @@ focus_tree = {
             add_stability = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Improve_Royal_Security
 		icon = GFX_focus_generic_home_defense
@@ -220,7 +220,7 @@ focus_tree = {
             add_stability = 0.02
 		}
 	}
-    
+
     focus = {
 		id = SER_Execute_Conspirators
 		icon = GFX_goal_generic_political_pressure
@@ -233,7 +233,7 @@ focus_tree = {
             add_war_support = 0.02
 		}
 	}
-    
+
     focus = {
 		id = SER_Knez_Dies
 		icon = GFX_goal_unknown
@@ -252,12 +252,12 @@ focus_tree = {
                     expire = 2000.09.10
                     ideology = conserv
                     traits = {
-                        
+
                     }
-            }                                                    
+            }
 		}
 	}
-    
+
     focus = {
 		id = SER_Crown_Petar
 		icon = GFX_focus_hun_elect_a_king
@@ -269,7 +269,7 @@ focus_tree = {
             add_stability = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Constitution
 		icon = GFX_goal_focus_enact_law
@@ -284,7 +284,7 @@ focus_tree = {
             remove_ideas = SER_idea_1838constitution2
 		}
 	}
-    
+
     focus = {
 		id = SER_Old_Man_Dies
 		icon = GFX_goal_unknown
@@ -295,7 +295,7 @@ focus_tree = {
         prerequisite = { focus = SER_Return_Of_Obrenovic_Dynasty }
 		completion_reward = {
             kill_country_leader = yes
-            
+
             create_country_leader = {
                     name = "Mihailo Obrenović"
                     desc = "POLITICS_TEMP_DESC"
@@ -303,16 +303,16 @@ focus_tree = {
                     expire = 2000.09.10
                     ideology = despotism
                     traits = {
-                        
+
                     }
             }
-            
+
             add_stability = -0.05
             add_war_support = -0.05
             add_political_power = -50
 		}
 	}
-    
+
     focus = {
 		id = SER_Increase_Popularity_Among_People
 		icon = GFX_goal_generic_demand_territory
@@ -325,8 +325,8 @@ focus_tree = {
             add_war_support = 0.02
 		}
 	}
-    
-    
+
+
     focus = {
 		id = SER_State_Council_Reform
 		icon = GFX_goal_focus_enact_law
@@ -340,7 +340,7 @@ focus_tree = {
             swap_ideas = { remove_idea = SER_idea_1838constitution add_idea = SER_idea_1838constitution2 }
 		}
 	}
-    
+
     focus = {
 		id = SER_Stronger_Absolutist_Rule
 		icon = GFX_focus_generic_self_management
@@ -354,7 +354,7 @@ focus_tree = {
             add_political_power = -50
 		}
 	}
-    
+
     focus = {
 		id = SER_Loyal_Politicians
 		icon = GFX_goal_generic_improve_relations
@@ -368,7 +368,7 @@ focus_tree = {
             add_war_support = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Abolish_Opposing_Societies
 		icon = GFX_goal_continuous_suppression
@@ -382,7 +382,7 @@ focus_tree = {
             add_political_power = 50
 		}
 	}
-    
+
     focus = {
 		id = SER_Second_Uprising_Anniversary
 		icon = GFX_goal_unknown
@@ -395,7 +395,7 @@ focus_tree = {
             country_event = { id = SERmisc.2 }
 		}
 	}
-    
+
     focus = {
 		id = SER_National_Theatre
 		icon = GFX_focus_library_greece
@@ -408,7 +408,7 @@ focus_tree = {
             add_political_power = 50
 		}
 	}
-    
+
     focus = {
 		id = SER_Tripartite_Governorship
 		icon = GFX_goal_unknown
@@ -418,10 +418,10 @@ focus_tree = {
         available = { always = yes }
         prerequisite = { focus = SER_Abolish_Opposing_Societies }
         prerequisite = { focus = SER_Second_Uprising_Anniversary }
-		completion_reward = {            
+		completion_reward = {
             hidden_effect = {
                 kill_country_leader = yes
-                
+
                 create_country_leader = {
                         name = "Milan Obrenović"
                         desc = "POLITICS_TEMP_DESC"
@@ -429,20 +429,20 @@ focus_tree = {
                         expire = 2000.09.10
                         ideology = despotism
                         traits = {
-                            
+
                         }
                 }
-                
+
                 add_ideas = SER_idea_blaznavac
             }
-            
+
             custom_effect_tooltip = eoanb_tt_SER_blaznavac
-            
+
             add_stability = -0.05
             add_political_power = -75
 		}
 	}
-    
+
     focus = {
 		id = SER_New_Constitution
 		icon = GFX_goal_focus_enact_law
@@ -452,12 +452,12 @@ focus_tree = {
         prerequisite = { focus = SER_Tripartite_Governorship }
 		completion_reward = {
             add_stability = 0.05
-            add_war_support = 0.05
-            add_political_power = 50
+            add_war_support = 0.1
+            add_political_power = -50
             remove_ideas = SER_idea_1838constitution2
 		}
 	}
-    
+
     focus = {
 		id = SER_Improve_Government
 		icon = GFX_goal_focus_decentralisation_power
@@ -469,7 +469,7 @@ focus_tree = {
             add_war_support = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Improve_Milans_Security
 		icon = GFX_focus_generic_home_defense
@@ -482,7 +482,7 @@ focus_tree = {
             add_political_power = 20
 		}
 	}
-    
+
     focus = {
 		id = SER_Milan_Takes_The_Throne
 		icon = GFX_focus_hun_elect_a_king
@@ -496,9 +496,9 @@ focus_tree = {
 
 		}
 	}
-    
+
     ### POLITICAL ###
-    
+
     focus = {
 		id = SER_Principality_Of_Serbia
 		icon = GFX_goal_unknown
@@ -509,7 +509,7 @@ focus_tree = {
             add_political_power = 50
 		}
 	}
-    
+
     focus = {
 		id = SER_Satisfy_People
 		icon = GFX_goal_focus_the_workers
@@ -522,7 +522,7 @@ focus_tree = {
             add_war_support = 0.02
 		}
 	}
-    
+
     focus = {
 		id = SER_First_Balkan_Alliance
 		icon = GFX_focus_balkan_diplomacy
@@ -534,7 +534,7 @@ focus_tree = {
             add_war_support = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_Faster_Judical_Proceedings
 		icon = GFX_goal_unknown
@@ -547,7 +547,7 @@ focus_tree = {
             add_stability = 0.01
 		}
 	}
-    
+
     focus = {
 		id = SER_Red_Cross_Of_Serbia
 		icon = GFX_goal_unknown
@@ -560,7 +560,7 @@ focus_tree = {
             add_war_support = 0.02
 		}
 	}
-    
+
     focus = {
 		id = SER_Reforms
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -572,7 +572,7 @@ focus_tree = {
             add_political_power = 20
 		}
 	}
-    
+
     focus = {
 		id = SER_National_Assembly_Reform
 		icon = GFX_goal_unknown
@@ -586,7 +586,7 @@ focus_tree = {
             add_political_power = -50
 		}
 	}
-    
+
     focus = {
 		id = SER_State_Administration_Reform
 		icon = GFX_goal_unknown
@@ -599,7 +599,7 @@ focus_tree = {
             add_political_power = -25
 		}
 	}
-    
+
     focus = {
 		id = SER_Cukur_Fountain
 		icon = GFX_goal_unknown
@@ -613,7 +613,7 @@ focus_tree = {
             add_war_support = 0.15
 		}
 	}
-    
+
     focus = {
 		id = SER_Turkish_Withdrawal
 		icon = GFX_goal_focus_gerrymandering
@@ -628,7 +628,7 @@ focus_tree = {
             add_political_power = -50
 		}
 	}
-    
+
     focus = {
 		id = SER_Complete_Withdrawal
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -643,7 +643,7 @@ focus_tree = {
             add_political_power = -50
 		}
 	}
-    
+
     focus = {
 		id = SER_Herzegovina_Uprising
 		icon = GFX_focus_RAJ_lions_of_the_great_war
@@ -656,7 +656,7 @@ focus_tree = {
             add_war_support = 0.05
 		}
 	}
-    
+
     ### MILITARY ###
     focus = {
 		id = SER_Serbian_Military
@@ -668,7 +668,7 @@ focus_tree = {
 			army_experience = 10
 		}
 	}
-    
+
     focus = {
 		id = SER_Artillery_Effort
 		icon = GFX_goal_generic_army_artillery2
@@ -680,7 +680,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
 		}
 	}
-    
+
     focus = {
 		id = SER_New_Guns
 		icon = GFX_goal_generic_small_arms
@@ -692,7 +692,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
 		}
 	}
-    
+
     focus = {
 		id = SER_Army_Training
 		icon = GFX_focus_Make_a_Man_Out_Of_You
@@ -706,7 +706,7 @@ focus_tree = {
             add_war_support = 0.02
 		}
 	}
-    
+
     focus = {
 		id = SER_New_Era_Cavalry
 		icon = GFX_goal_generic_cavalry
@@ -718,7 +718,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = tech_category_cavalry }
 		}
 	}
-    
+
     focus = {
 		id = SER_Equipment_Modernization
 		icon = GFX_goal_generic_military_sphere
@@ -731,7 +731,7 @@ focus_tree = {
             add_tech_bonus = { bonus = 0.25 uses = 1 category = artillery }
 		}
 	}
-    
+
     focus = {
 		id = SER_Engineer_Corps
 		icon = GFX_goal_generic_construction2
@@ -744,7 +744,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = support_tech category = engineers_tech }
 		}
 	}
-    
+
     focus = {
 		id = SER_New_Army_Tactics
 		icon = GFX_focus_prc_infiltration
@@ -756,10 +756,10 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
-    
+
     focus = {
 		id = SER_Study_New_Strategies
-		icon = GFX_goal_generic_position_armies 
+		icon = GFX_goal_generic_position_armies
 		cost = 70
 		x = 21
 		y = 2
@@ -768,7 +768,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
-    
+
     focus = {
 		id = SER_Improve_Strategies
 		icon = GFX_goal_generic_defence
@@ -780,7 +780,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
-    
+
     focus = {
 		id = SER_National_Army_Law
 		icon = GFX_goal_rhineland
@@ -792,7 +792,7 @@ focus_tree = {
 			add_manpower = 10000
 		}
 	}
-    
+
     focus = {
 		id = SER_Foreign_Officers_Law
 		icon = GFX_focus_generic_military_mission
@@ -805,7 +805,7 @@ focus_tree = {
             army_experience = 10
 		}
 	}
-    
+
     focus = {
 		id = SER_First_Minister_Of_Military
 		icon = GFX_goal_unknown
@@ -817,7 +817,7 @@ focus_tree = {
 			add_ideas = SER_idea_hippolyte_mondain
 		}
 	}
-    
+
     focus = {
 		id = SER_Mobilization_Speed
 		icon = GFX_goal_continuous_reduce_training_time
@@ -832,8 +832,8 @@ focus_tree = {
             }
             custom_effect_tooltip = eoanb_tt_SER_focus_mobilization
 		}
-	}   
-    
+	}
+
     focus = {
 		id = SER_Military_Pension_Fund
 		icon = GFX_goal_unknown
@@ -845,7 +845,7 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 	}
-    
+
     focus = {
 		id = SER_French_Military_Rules
 		icon = GFX_goal_generic_army_doctrines
@@ -862,7 +862,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_focus_defense
 		}
 	}
-    
+
     focus = {
 		id = SER_Reorganize_Medical_Corps
 		icon = GFX_goal_unknown
@@ -877,7 +877,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_moralefactor
 		}
 	}
-    
+
     focus = {
 		id = SER_Reborn_Army
 		icon = GFX_goal_focus_military_reforms
@@ -892,7 +892,7 @@ focus_tree = {
 			add_ideas = SER_idea_serbianarmy
 		}
 	}
-    
+
     ### ECONOMY ###
     focus = {
 		id = SER_Serbian_Economy
@@ -904,7 +904,7 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}
-    
+
     focus = {
 		id = SER_Serbian_Roads
 		icon = GFX_goal_generic_construct_infrastructure
@@ -922,7 +922,7 @@ focus_tree = {
 			}
 		}
 	}
-    
+
     focus = {
 		id = SER_Promote_Trade
 		icon = GFX_goal_generic_trade
@@ -942,7 +942,7 @@ focus_tree = {
 		x = 33
 		y = 2
         prerequisite = { focus = SER_Serbian_Roads }
-        prerequisite = { focus = SER_Promote_Trade } 
+        prerequisite = { focus = SER_Promote_Trade }
 		completion_reward = {
 			107 = {
 				add_building_construction = {
@@ -953,52 +953,52 @@ focus_tree = {
 			}
 		}
 	}
-    
+
     focus = {
 		id = SER_Encourage_City_Life
 		icon = GFX_goal_generic_construction2
 		cost = 70
 		x = 35
 		y = 2
-        prerequisite = { focus = SER_Promote_Trade } 
+        prerequisite = { focus = SER_Promote_Trade }
 		completion_reward = {
 
 		}
 	}
-    
+
     focus = {
 		id = SER_Post_Service_Law
 		icon = GFX_focus_newspapers
 		cost = 70
 		x = 34
 		y = 3
-        available = { date > 1866.1.1 } 
+        available = { date > 1866.1.1 }
         prerequisite = { focus = SER_Improve_Roads }
         prerequisite = { focus = SER_Encourage_City_Life }
 		completion_reward = {
 			hidden_effect = {
                 add_ideas = SER_idea_powergain
             }
-            custom_effect_tooltip = eoanb_tt_SER_powergain 
+            custom_effect_tooltip = eoanb_tt_SER_powergain
 		}
 	}
-   
+
    focus = {
 		id = SER_Serbian_Coins
 		icon = GFX_focus_newspapers
 		cost = 70
 		x = 34
 		y = 4
-        available = { date > 1866.1.1 } 
+        available = { date > 1866.1.1 }
         prerequisite = { focus = SER_Post_Service_Law }
 		completion_reward = {
 			hidden_effect = {
                 add_ideas = SER_idea_powergain
             }
-            custom_effect_tooltip = eoanb_tt_SER_powergain 
+            custom_effect_tooltip = eoanb_tt_SER_powergain
 		}
 	}
-   
+
     focus = {
 		id = SER_Serbian_Industry
 		icon = GFX_goal_focus_industrial_revolution
@@ -1013,7 +1013,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_factoryoutput
 		}
 	}
-    
+
     focus = {
 		id = SER_Modernize_Factories
 		icon = GFX_goal_focus_industrial_revolution
@@ -1028,7 +1028,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_factoryef
 		}
 	}
-    
+
     focus = {
 		id = SER_Expand_Research_Potential
 		icon = GFX_goal_continuous_research
@@ -1040,7 +1040,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
-    
+
     focus = {
 		id = SER_Better_Resource_Management
 		icon = GFX_goal_generic_construction2
@@ -1055,7 +1055,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_focus_resourcegain
 		}
 	}
-    
+
     focus = {
 		id = SER_Build_Foundries
 		icon = GFX_goal_generic_construction2
@@ -1071,7 +1071,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_focus_resourcegain
 		}
 	}
-    
+
     focus = {
 		id = SER_Promote_Agriculture
 		icon = GFX_focus_ITA_Wheat
@@ -1086,7 +1086,7 @@ focus_tree = {
             custom_effect_tooltip = eoanb_tt_SER_focus_outofsupply
 		}
 	}
-    
+
     focus = {
 		id = SER_Livestock_Industry
 		icon = GFX_goal_unknown
@@ -1098,7 +1098,7 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}
-    
+
     focus = {
 		id = SER_Farming_Methods
 		icon = GFX_focus_ITA_Farms
@@ -1111,7 +1111,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = process_engineering_tech }
 		}
 	}
-    
+
     focus = {
 		id = SER_Agriculture_Schools
 		icon = GFX_goal_focus_tomato_farming
@@ -1123,7 +1123,7 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = biochemistry_tech }
 		}
 	}
-    
+
     focus = {
 		id = SER_Plum_Production
 		icon = GFX_goal_focus_tomato_farming

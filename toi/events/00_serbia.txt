@@ -5,22 +5,22 @@ country_event = { #Tenka's Conspiracy
 	title = SERpolitical.1.t
 	desc = SERpolitical.1.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		TAG = SER
 		date > 1857.9.10
 	}
-	
+
 	option = {
 		name = SERpolitical.1.a
 		ai_chance = { factor = 100 }
         hidden_effect = {
             country_event = { id = SERpolitical.2 days = 10 }
-        }       
+        }
 	}
-	
+
 }
 
 country_event = { #Conspirators
@@ -28,20 +28,20 @@ country_event = { #Conspirators
 	title = SERpolitical.2.t
 	desc = SERpolitical.2.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.2.a #Execution
 		ai_chance = { factor = 90 }
         add_political_power = 50
         hidden_effect = {
             country_event = { id = SERpolitical.3 days = 10 }
-        }       
+        }
 	}
-	
+
     option = {
 		name = SERpolitical.2.b #Life sentence
 		ai_chance = { factor = 10 }
@@ -55,11 +55,11 @@ country_event = { #Reduce sentence
 	title = SERpolitical.3.t
 	desc = SERpolitical.3.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.3.a #Reduce sentence
 		ai_chance = { factor = 90 }
@@ -67,7 +67,7 @@ country_event = { #Reduce sentence
         add_stability = 0.01
         hidden_effect = { country_event = { id = SERpolitical.4 days = 15 } }
 	}
-	
+
     option = {
 		name = SERpolitical.3.b #Execution
 		ai_chance = { factor = 10 }
@@ -82,11 +82,11 @@ country_event = { #Coup
 	title = SERpolitical.4.t
 	desc = SERpolitical.4.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.4.a #Pressure them
 		ai_chance = { factor = 90 }
@@ -94,7 +94,7 @@ country_event = { #Coup
         add_stability = 0.1
         hidden_effect = { country_event = { id = SERpolitical.5 days = 90 } }
 	}
-	
+
     option = {
 		name = SERpolitical.4.b #Leave them
 		ai_chance = { factor = 10 }
@@ -109,11 +109,11 @@ country_event = { #Pressure for an assembly
 	title = SERpolitical.5.t
 	desc = SERpolitical.5.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.5.a
 		ai_chance = { factor = 100 }
@@ -123,16 +123,16 @@ country_event = { #Pressure for an assembly
 	}
 }
 
-country_event = { #Situation destabilizing 
+country_event = { #Situation destabilizing
 	id = SERpolitical.6
 	title = SERpolitical.6.t
 	desc = SERpolitical.6.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.6.a
 		ai_chance = { factor = 100 }
@@ -147,11 +147,11 @@ country_event = { #Elections requests
 	title = SERpolitical.7.t
 	desc = SERpolitical.7.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.7.a
 		ai_chance = { factor = 100 }
@@ -160,16 +160,16 @@ country_event = { #Elections requests
 	}
 }
 
-country_event = { #Law 
+country_event = { #Law
 	id = SERpolitical.8
 	title = SERpolitical.8.t
 	desc = SERpolitical.8.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.8.a
 		ai_chance = { factor = 100 }
@@ -178,16 +178,16 @@ country_event = { #Law
 	}
 }
 
-country_event = { #Elections 
+country_event = { #Elections
 	id = SERpolitical.9
 	title = SERpolitical.9.t
 	desc = SERpolitical.9.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.9.a
 		ai_chance = { factor = 100 }
@@ -197,16 +197,16 @@ country_event = { #Elections
 	}
 }
 
-country_event = { #Saint Andrew starts 
+country_event = { #Saint Andrew starts
 	id = SERpolitical.10
 	title = SERpolitical.10.t
 	desc = SERpolitical.10.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.10.a
 		ai_chance = { factor = 100 }
@@ -220,23 +220,23 @@ country_event = { #Saint Andrew
 	title = SERpolitical.11.t
 	desc = SERpolitical.11.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
     is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.11.a #Obrenović
-		ai_chance = { factor = 95 }       
+		ai_chance = { factor = 95 }
         complete_national_focus = SER_Return_Of_Obrenovic_Dynasty
         hidden_effect = { country_event = { id = SERpolitical.12 days = 15 } }
 	}
-    
+
     option = {
 		name = SERpolitical.11.b #Karađorđević
 		ai_chance = { factor = 5 }
         complete_national_focus = SER_Karadjordjevic_Dynasty_Remains
-	}	
+	}
 }
 
 country_event = { #OBRENOVIC1: Change ministers
@@ -244,11 +244,11 @@ country_event = { #OBRENOVIC1: Change ministers
 	title = SERpolitical.12.t
 	desc = SERpolitical.12.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.12.a #Change
 		ai_chance = { factor = 100 }
@@ -264,11 +264,11 @@ country_event = { #OBRENOVIC2: Mihailo
 	title = SERpolitical.13.t
 	desc = SERpolitical.13.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.13.a
 		ai_chance = { factor = 100 }
@@ -282,11 +282,11 @@ country_event = { #OBRENOVIC3: They accept
 	title = SERpolitical.14.t
 	desc = SERpolitical.14.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.14.a #Dynastic right
 		ai_chance = { factor = 100 }
@@ -300,39 +300,91 @@ country_event = { #OBRENOVIC4: They refuse
 	title = SERpolitical.15.t
 	desc = SERpolitical.15.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
-		name = SERpolitical.15.a 
+		name = SERpolitical.15.a
 		ai_chance = { factor = 100 }
         add_stability = -0.02
         add_political_power = -50
 	}
 }
 
+country_event = { #OBRENOVIC5: Milos dies
+	id = SERobr.5
+	title = SERobr.5.t
+	desc = SERobr.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+
+	fire_only_once = yes
+
+	trigger = {
+        date > 1860.9.15
+    }
+
+	option = {
+		name = SERobr.5.a
+		ai_chance = { factor = 100 }
+        add_stability = -0.05
+        add_political_power = -100
+        complete_national_focus = SER_Old_Man_Dies
+	}
+}
+
+country_event = { #OBRENOVIC6: Woods
+	id = SERobr.6
+	title = SERobr.6.t
+	desc = SERobr.6.d
+	picture = GFX_report_event_second_vienna_award_pact
+
+	fire_only_once = yes
+	
+	trigger = {
+        date > 1868.5.20
+    }
+
+	immediate = {
+		complete_national_focus = SER_Day_In_Woods
+	}
+
+	option = {
+		name = SERobr.6.a
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Tripartite_Governorship
+	}
+
+    option = {
+		name = SERobr.6.b
+		ai_chance = { factor = 100 }
+        complete_national_focus = SER_Lucky_Day
+	}
+}
+
+add_namespace = SERkar
+
 country_event = { #KARADORDEVIC1
 	id = SERpolitical.16
 	title = SERpolitical.16.t
 	desc = SERpolitical.16.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
-		name = SERpolitical.16.a 
+		name = SERpolitical.16.a
 		ai_chance = { factor = 95 }
         add_stability = 0.02
         add_political_power = -50
         hidden_effect = { country_event = { id = SERpolitical.17 days = 15 } }
 	}
-    
+
     option = {
-		name = SERpolitical.16.b 
+		name = SERpolitical.16.b
 		ai_chance = { factor = 5 }
         add_stability = -0.1
         add_political_power = 50
@@ -344,22 +396,22 @@ country_event = { #KARADORDEVIC2: Villagers
 	title = SERpolitical.17.t
 	desc = SERpolitical.17.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
-		name = SERpolitical.17.a 
+		name = SERpolitical.17.a
 		ai_chance = { factor = 95 }
         add_political_power = -50
         add_stability = 0.04
         add_war_support = 0.04
         hidden_effect = { country_event = { id = SERpolitical.18 days = 15 } }
 	}
-    
+
     option = {
-		name = SERpolitical.17.b 
+		name = SERpolitical.17.b
 		ai_chance = { factor = 5 }
         add_stability = -0.1
         add_war_support = -0.1
@@ -371,21 +423,21 @@ country_event = { #KARADORDEVIC3: Ease the living
 	title = SERpolitical.18.t
 	desc = SERpolitical.18.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
-		name = SERpolitical.18.a 
+		name = SERpolitical.18.a
 		ai_chance = { factor = 95 }
         add_political_power = -50
         add_stability = 0.03
         add_war_support = 0.01
 	}
-    
+
     option = {
-		name = SERpolitical.18.a 
+		name = SERpolitical.18.a
 		ai_chance = { factor = 5 }
         add_stability = -0.1
         add_war_support = -0.1
@@ -397,11 +449,11 @@ country_event = { #KARADORDEVIC4: Liberals
 	title = SERpolitical.19.t
 	desc = SERpolitical.19.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.19.a #good
 		ai_chance = { factor = 100 }
@@ -413,7 +465,7 @@ country_event = { #KARADORDEVIC4: Liberals
             popularity = 0.05
         }
 	}
-    
+
     option = {
 		name = SERpolitical.19.b #bad
 		ai_chance = { factor = 100 }
@@ -431,11 +483,11 @@ country_event = { #KARADORDEVIC: Assassination
 	title = SERpolitical.20.t
 	desc = SERpolitical.20.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.20.a #good
 		ai_chance = { factor = 100 }
@@ -443,7 +495,7 @@ country_event = { #KARADORDEVIC: Assassination
         add_stability = -0.1
         hidden_effect = {
             random_list = { 50 = { country_event = SERpolitical.21 }
-                        50 = { country_event = SERpolitical.22 }}    
+                        50 = { country_event = SERpolitical.22 }}
         }
 	}
 }
@@ -453,11 +505,11 @@ country_event = { #KARADORDEVIC: Survive
 	title = SERpolitical.21.t
 	desc = SERpolitical.21.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.21.a
 		ai_chance = { factor = 100 }
@@ -470,11 +522,11 @@ country_event = { #KARADORDEVIC: Dies
 	title = SERpolitical.22.t
 	desc = SERpolitical.22.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpolitical.22.a
 		ai_chance = { factor = 100 }
@@ -489,11 +541,11 @@ country_event = { #Cukur
 	title = SERpol.1.t
 	desc = SERpol.1.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	trigger = { date > 1862.6.1 }
-	
+
 	option = {
 		name = SERpol.1.a
 		ai_chance = { factor = 100 }
@@ -506,11 +558,11 @@ country_event = { #Cukur2
 	title = SERpol.2.t
 	desc = SERpol.2.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpol.2.a
 		ai_chance = { factor = 100 }
@@ -523,11 +575,11 @@ country_event = { #Cukur3
 	title = SERpol.3.t
 	desc = SERpol.3.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpol.3.a
 		ai_chance = { factor = 100 }
@@ -540,15 +592,15 @@ country_event = { #Cukur4
 	title = SERpol.4.t
 	desc = SERpol.4.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpol.4.a
 		ai_chance = { factor = 100 }
-        hidden_effect = { country_event = { id = SERpol.5 days = 15 } } 
+        hidden_effect = { country_event = { id = SERpol.5 days = 15 } }
 	}
 }
 
@@ -557,11 +609,11 @@ country_event = { #Cukur5
 	title = SERpol.5.t
 	desc = SERpol.5.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpol.5.a
 		ai_chance = { factor = 100 }
@@ -577,11 +629,11 @@ country_event = { #Withdrawal
 	title = SERpol.6.t
 	desc = SERpol.6.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	trigger = { tag = SER date > 1866.10.1 }
-	
+
 	option = {
 		name = SERpol.6.a
 		ai_chance = { factor = 100 }
@@ -590,7 +642,7 @@ country_event = { #Withdrawal
         add_political_power = -50
         hidden_effect = { country_event = { id = SERpol.7 days = 120 } }
 	}
-    
+
     #option = {
 	#	name = SERpol.6.b
 	#	ai_chance = { factor = 100 }
@@ -604,11 +656,11 @@ country_event = { #Withdrawal accept
 	title = SERpol.7.t
 	desc = SERpol.7.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERpol.7.a
 		ai_chance = { factor = 100 }
@@ -625,11 +677,11 @@ country_event = { #First Uprising
 	title = SERmisc.1.t
 	desc = SERmisc.1.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERmisc.1.a
 		ai_chance = { factor = 100 }
@@ -643,11 +695,11 @@ country_event = { #Second Uprising
 	title = SERmisc.2.t
 	desc = SERmisc.2.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SERmisc.2.a
 		ai_chance = { factor = 100 }
@@ -661,11 +713,11 @@ country_event = { #Vuk Karadzic
 	title = SERmisc.3.t
 	desc = SERmisc.3.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	trigger = { date > 1864.2.7 }
-	
+
 	option = {
 		name = SERmisc.3.a
 		ai_chance = { factor = 100 }
@@ -679,20 +731,20 @@ country_event = { #Best man
 	title = SERmisc.4.t
 	desc = SERmisc.4.d
 	picture = GFX_report_event_second_vienna_award_pact
-	
+
 	fire_only_once = yes
-	
+
 	trigger = { date > 1864.2.7 }
-	
+
 	option = {
 		name = SERmisc.4.a #accept
 		ai_chance = { factor = 100 }
         add_war_support = 0.05
         add_opinion_modifier = { target = MNT modifier = small_increase }
 	}
-    
+
     option = {
-		name = SERmisc.4.b #decline 
+		name = SERmisc.4.b #decline
 		ai_chance = { factor = 100 }
         add_political_power = 50
         add_stability = -0.05
@@ -705,13 +757,13 @@ country_event = { #Best man
 #	title = SERmisc.5.t
 #	desc = SERmisc.5.d
 #	picture = GFX_report_event_second_vienna_award_pact
-#	
+#
 #	fire_only_once = yes
-#	
+#
 #	trigger = { date > 1857.5.10 }
-#	
+#
 #	option = {
-#		name = SERmisc.5.a 
+#		name = SERmisc.5.a
 #		ai_chance = { factor = 100 }
 #	}
 #}
