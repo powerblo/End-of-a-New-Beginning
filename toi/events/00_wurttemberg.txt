@@ -1247,6 +1247,7 @@ news_event = {
 		trigger = { 
 			tag = WUR
 		}
+		name = wurttem.37.a
 	}
 	
 	option = {
@@ -1282,6 +1283,7 @@ news_event = {
 		trigger = { 
 			tag = WUR
 		}
+		name = wurttem.38.a
 	}
 	
 	option = {
@@ -1304,7 +1306,7 @@ news_event = {
 	}
 }
 
-#Stance Prussia
+#Stance Middle
 news_event = {
 	id = wurttem.39
 	title = wurttem.39.t
@@ -1317,6 +1319,7 @@ news_event = {
 		trigger = { 
 			tag = WUR
 		}
+		name = wurttem.39.a
 	}
 	
 	option = {
@@ -1522,7 +1525,10 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 90
-				has_government = autocracy
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
 			}
 		}
 		custom_effect_tooltip = WUR_customeffect_propose_trias_accept
@@ -1540,7 +1546,10 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 10
-				has_government = autocracy
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
 			}
 		}
 		custom_effect_tooltip = WUR_customeffect_propose_trias_deny
@@ -1553,7 +1562,7 @@ country_event = {
 	}
 }
 
-#Invite Trias (good)
+#Invite Trias (good good)
 country_event = {
 	id = wurttem.48
 	title = wurttem.48.t
