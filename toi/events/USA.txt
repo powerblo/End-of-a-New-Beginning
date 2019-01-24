@@ -134,6 +134,10 @@ country_event = {
 
 		mean_time_to_happen = {
 			days = 250
+			modifier = {
+				factor = 0.1
+				date > 1860.1.1
+			}
 		}
 		
 		option = {
@@ -404,6 +408,10 @@ country_event = {
 
 		mean_time_to_happen = {
 			days = 500
+			modifier = {
+				factor = 0.1
+				date > 1860.1.1
+			}
 		}
 		
 		option = {
@@ -1466,6 +1474,10 @@ country_event = {
 
 		mean_time_to_happen = {
 			days = 600
+			modifier = {
+				factor = 0.1
+				date > 1860.1.1
+			}
 		}
 		
 		option = {
@@ -1946,7 +1958,7 @@ country_event = {
 		
 		trigger = {
 			tag = USA
-			has_country_flag = USA_DouglasElected
+			has_country_flag = USA_BellElected
 			date > 1861.3.4
 			NOT = { has_country_flag = CheaterDefeater }
 			NOT = { has_country_flag = CheaterDefeated }
@@ -7041,11 +7053,17 @@ country_event = {
 		is_triggered_only = yes
 		
 		option = {
-			name = usa.123.a #douglas lives
+			name = usa.124.a #douglas lives
 			add_political_power = -25
+			ai_chance = {
+				factor = 60
+			}
 		}
 		option = {
-			name = usa.123.b #literally kill the nation
+			name = usa.124.b #literally kill the nation
+			ai_chance = {
+				factor = 40
+			}
 			hidden_effect = {
 				set_country_flag = USA_collapse_inevitible
 				country_event = {
@@ -7078,6 +7096,14 @@ country_event = {
 				}
 			}
 			add_stability = -0.2
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "William Herschel"
+				desc = ""
+				picture = ""
+				expire = "1900.1.1"
+				ideology = conserv_liberal
+			}
 		}
 }
 #CSA declares independence due to death of stephen
@@ -7207,6 +7233,14 @@ country_event = {
 				}
 			}
 			add_stability = -0.2
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "William Pennington"
+				desc = ""
+				picture = ""
+				expire = "1900.1.1"
+				ideology = market_liberal
+			}
 		}
 }
 #More States join the CSA due to assassination
@@ -7266,6 +7300,14 @@ country_event = {
 				}
 			}
 			add_stability = -0.2
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Congressional Debate"
+				desc = ""
+				picture = ""
+				expire = "1900.1.1"
+				ideology = conserv_liberal
+			}
 		}
 }
 #Texas declares independence
@@ -9097,6 +9139,7 @@ country_event = {
 		
 		option = {
 			name = usa.141.a
+			retire_country_leader = yes
 			if = {
 				limit = {
 					is_ai = no
@@ -9235,6 +9278,10 @@ country_event = {
 		option = {
 			name = usa.143.a
 			add_stability = -0.05
+			country_event = {
+				id = usa.144
+				days = 10
+			}
 		}
 }
 #Stephen A. Douglas Plans the Tour
@@ -9248,6 +9295,10 @@ country_event = {
 		
 		option = {
 			name = usa.144.a
+			country_event = {
+				id = usa.124
+				days = 10
+			}
 		}
 }
 #Europe Colonizes former USA islands in pacific
