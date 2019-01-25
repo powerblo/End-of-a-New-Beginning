@@ -4,14 +4,14 @@
 #Railway_Construction_1_Info
 country_event = {
 	id = afr_rrp.1
-	title = Railway_Infrastructure_Construction.1.t
+	title = afr_rrp.1.t
 	desc = afr_rrp.1.d
 	picture = GFX_report_event_merchant_ship_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = Lets_Hope_They_Agree.1.a
+		name = afr_rrp.1.a
 		ai_chance = { factor = 100 }
 		
 		
@@ -22,14 +22,14 @@ country_event = {
  #Railway_Construction_1
 country_event = {
 	id = afr_rrp.2
-	title = Railway_Infrastructure_Construction.2.t
+	title = afr_rrp.2.t
 	desc = afr_rrp.2.d
 	picture = GFX_report_event_merchant_ship_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = Full_assistance_of_construction.2.a
+		name = afr_rrp.2.a
 		ai_chance = { factor = 30 }
 		FROM = { country_event = { days = 1 id = afr_rrp.3 } }
 		FROM = { activate_decision = afr_rrp_railway_infrastructure_construction }
@@ -49,7 +49,7 @@ country_event = {
 	}
 	
 	option = {
-		name = Supervise_construction.3.b
+		name = afr_rrp.3.b
 		ai_chance = { factor = 70 }
 		FROM = { country_event = { days = 1 id = afr_rrp.4 } }
 		FROM = {
@@ -67,7 +67,7 @@ country_event = {
 	}
 	
 	option = {
-		name = We_cannot_be_bothered.133.c
+		name = afr_rrp.3.c
 		ai_chance = { factor = 0 }
 		FROM = { country_event = { days = 1 id = afr_rrp.5 } }
 	}
@@ -77,14 +77,14 @@ country_event = {
 #Railway_Infrastructure_Construction_1_Full_Yes
 country_event = {
 	id = afr_rrp.3
-	title = Britain_Gives_Full_Assistance.3.t
+	title = afr_rrp.3.t
 	desc = afr_rrp.3.d
 	picture = GFX_report_event_soviet_finnish_pact
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = The_path_to_industrialization_has_started.3.a
+		name = afr_rrp.3.a
 		ai_chance = { factor = 100 }
 		
 

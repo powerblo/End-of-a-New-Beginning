@@ -535,7 +535,7 @@ country_event = {
 		if = {
 				limit = {
 					KRU = { 
-							ideology = autocracy
+						has_government = autocracy
 					}
 				}
 					create_country_leader = {
@@ -551,7 +551,7 @@ country_event = {
 		if = {
 				limit = {
 					KRU = { 
-							ideology = chauvinist_populist
+							has_government = chauvinist_populist
 					}
 				}
 					create_country_leader = {
@@ -627,10 +627,11 @@ country_event = {
 		
 		add_stability = -0.07
 		add_war_support = 0.05
-		
-		damage_building = {
-			type = infrastructure
-			damage = 1
+		298={
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
 		}
 		set_country_flag = LIB_KRU_raids_stockpile
 	}
@@ -828,7 +829,7 @@ country_event = {
 					add_idea = limited_conscription
 				}
 				swap_ideas = {
-					remove_idea = no_border
+					remove_idea = no_borders
 					add_idea = border_control
 				}
 				swap_ideas = {
@@ -1010,7 +1011,7 @@ country_event = {
 					}
 				}
 				swap_ideas = {
-					remove_idea = no_border
+					remove_idea = no_borders
 					add_idea = border_control
 				}
 				swap_ideas = {

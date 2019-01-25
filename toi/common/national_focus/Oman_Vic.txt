@@ -30,6 +30,7 @@ focus_tree = {
 		}
 		available={
 			ZAN = {is_subject_of = ROOT}
+			NOT={has_country_flag = OMA_abanoned_colonial_empire}
 		}
 		bypass={
 			OR = {
@@ -410,7 +411,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = OMA_decide_future
 			hidden_effect={
-				country_event ={id = arab_events.27}#finalise our foreign policy towards the west
+				country_event ={id = arab_events.29}#finalise our foreign policy towards the west
 			}
 		}
 		select_effect = {
@@ -498,10 +499,12 @@ focus_tree = {
 			focus = oma_vic_naval_reforms
 		}
 		completion_reward={
-			set_building_level = {
-				type = naval_base
-				level = 3
-				province = 107060
+			294={
+				set_building_level = {
+					type = naval_base
+					level = 3
+					province = 107060
+				}
 			}
 		}
 		available_if_capitulated = no
@@ -838,6 +841,40 @@ focus_tree = {
 				#send event to india
 				RAJ = {country_event ={id = arab_events.28}}
 			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_fund_industrialsion
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 13
+		y = 8
+		prerequisite = {
+			focus = oma_vic_victorianization
+		}
+		completion_reward={
+			
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_begin_coastal_resource_surveys
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 13
+		y = 9
+		prerequisite = {
+			focus = oma_vic_fund_industrialsion
+		}
+		completion_reward={
+			
 		}
 		available_if_capitulated = no
 		ai_will_do = {

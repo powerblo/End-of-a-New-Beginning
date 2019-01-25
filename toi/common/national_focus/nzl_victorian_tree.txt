@@ -65,7 +65,7 @@ focus_tree = {
 		id = nzl_vic_we_need_an_army
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 70
-		x = 17
+		x = 19
 		y = 0
 		completion_reward = {
 			army_experience = 10
@@ -544,7 +544,7 @@ focus_tree = {
 			focus = nzl_vic_reduce_reliance_on_local_iwi
 		}
 		available = {
-			NSW = { has_manpower > 3500}
+			NSW = { has_manpower > 2500}
 		}
 		x = 16
 		y = 2
@@ -559,8 +559,6 @@ focus_tree = {
 		cost = 70
 		prerequisite = {
 			focus = nzl_vic_petion_the_british_for_troops
-		}
-		prerequisite = {
 			focus = nzl_vic_ask_NSW_for_troops
 		}
 		available = {
@@ -934,7 +932,15 @@ focus_tree = {
 		}
 		available = {
 			NOT = {has_country_flag = nzl_maori_agatate_in_waikato}
-			controls_state = 1077
+			OR={
+				controls_state = 1077
+				KIN = {
+					AND={
+						controls_state = 1077
+						is_subject_of = NZL
+					}
+				}
+			}
 		}
 		completion_reward = {
 			1077 ={
@@ -1068,22 +1074,22 @@ focus_tree = {
 		completion_reward = {
 			add_resource= {  
 				type = wood  
-				amount = 12
+				amount = 6
 				state = 1077 
 			}
 			add_resource= {  
 				type = wood  
-				amount = 10
+				amount = 5
 				state = 1080
 			} 
 			add_resource= {  
 				type = wood  
-				amount = 8
+				amount = 4
 				state = 1079
 			}
 			add_resource= {  
-				type = wood  
-				amount = 8
+				type = wood 
+				amount = 4
 				state = 284
 			}
 		}
@@ -1299,7 +1305,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_resource= {  
-				type = steel  
+				type = iron  
 				amount = 7
 				state = 723  
 			}
@@ -1651,7 +1657,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ignore_him
 		icon = GFX_nzl_goal_generic_government
-		cost = 70
+		cost = 15
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1668,7 +1674,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_offer_him_land
 		icon = GFX_goal_focus_gerrymandering
-		cost = 70
+		cost = 15
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1925,9 +1931,9 @@ focus_tree = {
 		available = {
 			1080 = {
 				free_building_slots = {
-						building = dockyard
-						size > 2
-					}
+					building = dockyard
+					size > 2
+				}
 			}
 		}
 		x = 0
@@ -1942,7 +1948,7 @@ focus_tree = {
 				days = 90
 				idea = ofs_recovering_economy
 			}
-			1070 = {
+			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -1954,43 +1960,43 @@ focus_tree = {
 		ai_will_do = { factor = 10 } 
 	}
 	focus = {
-		id = nzl_vic_adopt_secret_ballots
-		icon = GFX_goal_focus_elections
-		cost = 70
-		prerequisite = {
-			focus = nzl_vic_the_capital_is_established
-		}
-		available = {
-			date > 1870.01.01
-		}
-		x = 3
-		y = 10
-		completion_reward = {
-			add_political_power = 45
-			swap_ideas={
-				add_idea = limited_elections
-				remove_idea = one_party_elections
-			}
-			swap_ideas={
-				add_idea = parliamentary_suffrage
-				remove_idea = absolutism
-			}
-			
-		}
-		ai_will_do = { factor = 10 } 
-	}
-	focus = {
 		id = nzl_vic_ideals_of_freedom
 		icon = GFX_focus_generic_the_giant_wakes
 		cost = 70
 		prerequisite = {
-			focus = nzl_vic_adopt_secret_ballots
+			focus = nzl_vic_a_nation_of_innovation
 		}
-		x = 2
-		y = 11
+		prerequisite = {
+			focus = nzl_vic_a_country_of_wonders
+		}
+		available = {
+			date > 1871.01.01
+		}
+		x = 3
+		y = 10
 		completion_reward = {
-			add_political_power = 45
-			add_stability = 0.05
+			if={#rump state, rebuilding NZL
+				limit = {
+					has_country_flag = lost_waikato_invasion
+					has_country_flag = lost_east_cape_war
+					TAA = {exists = yes}
+					KIN = {
+						exists = yes
+						is_subject = no
+					}
+					PAI = {exists = yes}
+				}
+				load_focus_tree = nzl_vic_shattered
+			}
+			else_if={#twin governership
+				limit = {
+					has_idea = nzl_split_adminastration
+				}
+				load_focus_tree = nzl_vic_aoutearoua
+			}
+			else={#default tree
+				load_focus_tree = nzl_vic_liberal
+			}
 		}
 		ai_will_do = { factor = 10 } 
 	}
@@ -2085,7 +2091,7 @@ focus_tree = {
 		completion_reward = {
 			723={
 				add_resource= {  
-				type = fabric
+				type = cotton
 				amount = 7
 				state = 723
 				}

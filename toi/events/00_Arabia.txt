@@ -75,9 +75,12 @@ country_event = {##ZAN - Oman offers an Alliance for our freedom
         }
 		set_country_flag = accepted_OMA_alliance
 		give_guarantee = FROM
+		set_autonomy = {
+			target = ROOT
+			autonomy_state = autonomy_free
+		}
 		FROM = {
 			give_guarantee = ROOT
-			release = ROOT
 			country_event = {id = arab_events.6}
 		}
 	}
@@ -113,6 +116,9 @@ country_event = {##OMA - ZAN Declares Independance
 		declare_war_on = {
 			target = FROM
 			type = annex_everything
+		}
+		hidden_effect = {
+			ZAN = {add_ideas = {ZAN_brothers_war}}
 		}
 		set_country_flag = OMA_brothers_war
 	}
@@ -214,12 +220,20 @@ country_event = {##ENG - OMA demands we hand over TCS
 		name = arab_events.8.a
 		ai_chance = { 
             factor = 90
+			modifier = {
+				factor = 0.9
+				SRS = {exists = yes}
+			}
         }
 	}
 	option = { ##Yes
 		name = arab_events.8.b
 		ai_chance = { 
             factor = 10
+			modifier = {
+				factor = 2
+				SRS = {exists = yes}
+			}
         }
 		FROM={
 			set_autonomy = {
@@ -245,11 +259,11 @@ country_event = {##OMA - policy towards Persian Territory
 	
 	option = { ##Matain Claims
 		name = arab_events.11.a
-		add_state_claim = 412
+		add_state_claim = 795
 	}
 	option = { ##Demand return of Laristan territories
 		name = arab_events.11.b
-		add_state_core = 412
+		add_state_core = 795
 		PER={country_event = {id = arab_events.12}}
 	}
 	option = { ##Laristan is lost to us
@@ -268,15 +282,15 @@ country_event = {##PER - OMA demands Laristan
 	option = { ##no
 		name = arab_events.12.a
 		ai_chance = { 
-            factor = 100
+            factor = 95
         }
 	}
 	option = { ##hand it over
 		name = arab_events.12.b
 		ai_chance = { 
-            factor = 0
+            factor = 5
         }
-		FROM={transfer_state = 412}
+		FROM={transfer_state = 795}
 	}
 }
 country_event = {##end of the OMA-ZAN war
@@ -285,14 +299,15 @@ country_event = {##end of the OMA-ZAN war
 	desc = arab_events.13.d
 	#picture = GFX_report_event_chinese_army_training
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 	#hidden = yes
 	trigger={
 		OMA={has_country_flag = OMA_brothers_war}
-		FROM = { 
-			tag = OMA 
-		}
 		tag = ZAN
+		surrender_progress > 0.33
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	
 	immediate = { ##ok
@@ -310,6 +325,7 @@ country_event = {##end of the OMA-ZAN war
 			}
 			ZAN={
 				set_country_flag = forced_under_OMA_lordship
+				remove_ideas = {ZAN_brothers_war}
 				set_political_party = {
 					ideology = autocracy
 					popularity = 100
@@ -842,5 +858,87 @@ country_event = {##India - OMA offers cheaper trade
 		ai_chance = { 
             factor = 5
         }
+	}
+}
+country_event = {##OMA - Finalise foreign policy
+	id = arab_events.29
+	title = arab_events.29.t
+	desc = arab_events.29.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Influencal[going full modernisation plus still has colonial empire]
+		name = arab_events.29.a
+		ai_chance = { 
+            factor = 95
+        }
+		trigger={
+			ZAN = {has_country_flag = accepted_OMA_lordship}
+			has_idea = OMA_agressive_modernisation
+		}
+		set_country_flag = OMA_Colonial_cadidate
+		add_political_power = 75
+	}
+	option = { ##increase our trade
+		name = arab_events.29.b
+		ai_chance = { 
+            factor = 5
+        }
+		add_ideas = {
+			export_focus
+		}
+	}
+	option = { ##remain a trading nation
+		name = arab_events.29.b
+		ai_chance = { 
+            factor = 5
+        }
+		add_stability = 0.025
+	}
+	option = { ##cut ourselves off
+		name = arab_events.29.c
+		ai_chance = { 
+            factor = 5
+        }
+		add_ideas = {
+			closed_economy
+		}
+		add_stability = 0.05
+	}
+}
+country_event = {###ZAN - OMA tribute is due
+	id = arab_events.30
+	title = arab_events.30.t
+	desc = arab_events.30.d
+	picture = GFX_report_event_chinese_army_training
+	
+	#is_triggered_only = yes
+	trigger = {
+		is_subject_of = OMA
+		NOT = {
+			has_country_flag = accepted_OMA_lordship
+		}
+	}
+	mean_time_to_happen = {
+		days = 360
+	}
+	
+	option = {#pay
+		name = arab_events.30.a
+		add_timed_idea = {
+			idea = ZAN_OMAtribute
+			days = 30
+		}
+		ai_chance = { 
+            factor = 10
+        }
+	}
+	option = {#break free
+		name = arab_events.30.a
+		ai_chance = { 
+            factor = 90
+        }
+		OMA = {country_event = {id = arab_events.5}}
 	}
 }

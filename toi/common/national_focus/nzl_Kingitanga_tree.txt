@@ -142,9 +142,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 		}
-		available = {
-			has_war = no
-		}
 		x = 5
 		y = 1
 
@@ -158,6 +155,9 @@ focus_tree = {
 		}
 		completion_reward={
 			1077={add_manpower = 1200}
+		}
+		bypass={
+			has_completed_focus = KIN_rally_the_waikato_tribes
 		}
 		x = 4
 		y = 2
@@ -227,6 +227,106 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 80
+		}
+	}
+	focus = {
+		id = KIN_build_up_the_waikato
+		icon = GFX_goal_unknown
+		cost = 70
+		x = 8
+		y = 1
+		completion_reward={
+			add_stability = 0.05
+		}
+		prerequisite = {
+			focus = KIN_matain_autonomy
+		}
+		available = {
+			is_puppet_of = NZL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KIN_rally_the_waikato_tribes
+		icon = GFX_goal_unknown
+		cost = 145
+		x = 8
+		y = 2
+		completion_reward={
+			1077={add_manpower = 1200}
+		}
+		prerequisite = {
+			focus = KIN_build_up_the_waikato
+		}
+		available = {
+			is_puppet_of = NZL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KIN_weapons_for_warriors
+		icon = GFX_goal_unknown
+		cost = 35
+		x = 10
+		y = 1
+		completion_reward={
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100
+				producer = KIN
+			}
+		}
+		prerequisite = {
+			focus = KIN_matain_autonomy
+		}
+		available = {
+			is_puppet_of = NZL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KIN_inspire_the_iwis
+		icon = GFX_goal_unknown
+		cost = 35
+		x = 10
+		y = 2
+		completion_reward={
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = KIN_weapons_for_warriors
+		}
+		available = {
+			is_puppet_of = NZL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KIN_devise_new_tactics
+		icon = GFX_goal_unknown
+		cost = 35
+		x = 10
+		y = 3
+		completion_reward={
+			add_ideas = { KIN_innovative_tatics }
+			add_stability = -0.075
+		}
+		prerequisite = {
+			focus = KIN_inspire_the_iwis
+		}
+		available = {
+			is_puppet_of = NZL
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {

@@ -3590,7 +3590,7 @@ country_event = {
 					if = {
 						limit = {
 							ROOT = { 
-								has_ideas = ETH_idea_alienated_parish_clergy
+								has_idea = ETH_idea_alienated_parish_clergy
 							}
 						}
 						#ROOT = { country_event = { days = 1 id = ethiopia.181 } }
@@ -3598,7 +3598,7 @@ country_event = {
 					if = {
 						limit = {
 							ROOT = { 
-								has_ideas = ETH_idea_furious_parish_clergy
+								has_idea = ETH_idea_furious_parish_clergy
 							}
 						}
 						#ROOT = { country_event = { days = 1 id = ethiopia.182 } }
@@ -4462,7 +4462,8 @@ country_event = {
 							value < 14
 						}
 					}
-					num_divisions = 0
+					num_divisions > -1
+					num_divisions < 1
 				}
 			}
 			
