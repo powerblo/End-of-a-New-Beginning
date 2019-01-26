@@ -372,22 +372,24 @@ on_actions = {
                     }   
                         FROM = { country_event = { id = caucasus.3 } }
                 }
-		if = {
-                	limit = {
-                		FROM = { tag = CSA }
-                		ROOT = { tag = USA }
-		                has_global_flag = ACWAmerican_Civil_War
-                	}
-                	FROM = { country_event = { id = acw.8 } }
+			if = {
+                limit = {
+                	FROM = { tag = CSA }
+                	ROOT = { tag = USA }
+		            has_global_flag = ACWAmerican_Civil_War
                 }
-                if = {
-                	limit = {
-                		FROM = { tag = USA }
-                		ROOT = { tag = CSA }
-		                has_global_flag = ACWAmerican_Civil_War
-                	}
-                	FROM = { country_event = { id = acw.7 } }
+                FROM = { country_event = { id = acw.8 } }
+                ROOT = { country_event = { id = acw.8 } }
+            }
+            if = {
+               	limit = {
+                	FROM = { tag = USA }
+                	ROOT = { tag = CSA }
+		            has_global_flag = ACWAmerican_Civil_War
                 }
+               	FROM = { country_event = { id = acw.7 } }
+               	ROOT = { country_event = { id = acw.7 } }
+            }
 		}
 	}
 
