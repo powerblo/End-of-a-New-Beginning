@@ -3,7 +3,7 @@
 
   oob = "OMA_1857"
 
-  set_convoys = 5
+  set_convoys = 9
   
   set_research_slots = 2
 
@@ -25,7 +25,7 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    limited_equality
     absolutism
 
     no_constitution
@@ -35,8 +35,28 @@
     state_religion
 	religion_ibadi
          #NATIONAL SPIRITS
-	
+	OMA_economic_irrelevence
+	OMA_mothballed_shipyards
+	OMA_heavly_militerised_state
   }
+  
+	diplomatic_relation = {
+		country = ENG
+		relation = non_aggression_pact
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ENG
+		relation = military_access
+		active = yes
+	}
+	ENG={
+		diplomatic_relation = {
+			country = OMA
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
 
   set_politics = {
     parties = {
@@ -80,17 +100,11 @@
       has_dlc = "Together for Victory"
     }
     set_autonomy = {
-      target = MOM
-      autonomous_state = autonomy_colony
-      freedom_level = 0.1
-    }
-    set_autonomy = {
       target = ZAN
       autonomous_state = autonomy_dominion
       freedom_level = 0.1
     }
     else = {
-      puppet = MOM
       puppet = ZAN
     }
   }
@@ -106,7 +120,7 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "Said II bin Sultan"
+    name = "Thuwaini bin Said"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_OMA_Said_II_bin_Sultan.dds"
     expire = 1900.1.1
