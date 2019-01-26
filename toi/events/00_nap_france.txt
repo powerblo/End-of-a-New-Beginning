@@ -1581,8 +1581,10 @@ country_event = { # Algerian natives discontent with their situation (FRA vision
 
   trigger = {
     tag = FRA
-    has_completed_focus = FRA_submit_kabyle
     has_completed_focus = FRA_keep_authoritarian_empire
+    ALG = {
+		controls_state = 513
+	}
   }
 
   mean_time_to_happen = {
