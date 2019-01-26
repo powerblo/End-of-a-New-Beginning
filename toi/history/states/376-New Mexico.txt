@@ -2,25 +2,23 @@
 state={
 	id=376
 	name="STATE_376"
-	resources={
-		aluminium=2.000
-		wood=2.000
+	
+	provinces={
+		4975 10642 12684 
 	}
-
 	history={
-		controller = NAV
+		owner = APA
 		buildings = {
 			infrastructure = 1
 
 		}
-		add_core_of = NAV
+		add_core_of = APA
 		add_claim_by = USA
+		victory_points = {
+			4975 3
+		}
 	}
-
-	provinces={
-		10645 12552
-	}
-	manpower=15034
+	manpower=8620
+	state_category = pastoral
 	buildings_max_level_factor=1.000
-	state_category=rural
 }

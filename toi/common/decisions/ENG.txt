@@ -40,6 +40,260 @@ economic_decisions = {
 	
 }
 
+eoanb_category_worker_unrest_ENG = {
+	
+	#Improve Conditions for Workers
+	eoanb_decision_ENG_improve_worker_conditions = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_improve_worker_conditions
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 0 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 75
+		
+		days_re_enable = 270
+		
+		days_remove = 90
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_improve_worker_conditions
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 1 }
+			}
+		}
+		
+		remove_effect = {
+			add_stability = 0.02
+		}
+		
+		modifier = {
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.25
+				check_variable = { ENG_worker_unrest < 20 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ENG_worker_unrest < 10 }
+			}
+		}
+		
+	}
+	
+	#Shorten the Workday
+	eoanb_decision_ENG_shorten_workday = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_shorten_workday
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 10 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			NOT = { has_idea = eight_hour_work_day }
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 200
+		
+		days_re_enable = 1000
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.03 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_shorten_workday
+			if = {
+				limit = {
+					has_idea = unlimited_work_day
+				}
+				swap_ideas = {
+					remove_idea = unlimited_work_day
+					add_idea = fourteen_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = fourteen_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = fourteen_hour_work_day
+					add_idea = twelve_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = twelve_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = twelve_hour_work_day
+					add_idea = ten_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ten_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = ten_hour_work_day
+					add_idea = eight_hour_work_day
+				}
+			}
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 10 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.1
+				check_variable = { ENG_worker_unrest < 30 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ENG_worker_unrest < 50 }
+			}
+		}
+		
+	}
+	
+	#Ban Trade Unions
+	eoanb_decision_ENG_trade_unions_ban = {
+		
+		icon = generic_civil_support
+		
+		available = {
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = vanguard_communism
+					has_government = collectivist_socialism
+				}
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			NOT = { has_idea = ENG_idea_trade_unions_banned }
+		}
+		
+		fire_only_once = no
+		
+		cost = 100
+		
+		days_re_enable = 30
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_trade_unions_ban
+			add_ideas = ENG_idea_trade_unions_banned
+			hidden_effect = {
+				add_to_variable = { var = ENG_worker_unrest value = 3 }
+				news_event = { id = britainnews.1 random = 24 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				social_egalitarianism < 0.4
+			}
+			modifier = {
+				factor = 0.25
+				social_egalitarianism < 0.35
+			}
+			modifier = {
+				factor = 0
+				social_egalitarianism < 0.3
+			}
+		}
+		
+	}
+	
+	#Lift the Ban on Trade Unions
+	eoanb_decision_ENG_trade_unions_reallow = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_trade_unions_reallow
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 5 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			has_idea = ENG_idea_trade_unions_banned
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 100
+		
+		days_re_enable = 30
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_trade_unions_reallow
+			remove_ideas = ENG_idea_trade_unions_banned
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = social_egalitarianism
+						has_government = vanguard_communism
+						has_government = collectivist_socialism
+					}
+				}
+			}
+		}
+		
+	}
+	
+}
+
 war_measures = {
 	
 	#Draft Emergency Regiments in India to fight the Sepoy
