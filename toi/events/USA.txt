@@ -2981,7 +2981,12 @@ country_event = {
                 	is_historical_focus_on = yes
                 }
             }
-			RUS = { country_event = { id = usa.41 hours = 1 } }
+            every_country = {
+            	limit = {
+            		owns_state = 463
+            	}
+            	country_event = { id = usa.41 hours = 1 }
+            }
 		}
 }
 #Alaska Russia
@@ -2996,7 +3001,14 @@ country_event = {
 		option = {
 			name = usa.41.a
 			USA = { country_event = { id = usa.42 hours = 1 } }
-			RUS = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			ROOT = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			if = {
+				limit = {
+					NOT = { tag = RUS }
+				}
+				save_global_event_target_as = sold_alaska_target
+				set_global_flag = alaska_sold_not_by_rus
+			}
 			set_global_flag = USAAlaska_Purchased
 			ai_chance = {
 					factor = 90
@@ -9336,6 +9348,422 @@ country_event = {
 			transfer_state = 650
 		}
 }
+#USA Purchase of Iceland/Greenland 1867
+country_event = {
+		id = usa.146
+		title = usa.146.t
+		desc = usa.146.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.146.a
+			ai_chance = {
+					factor = 40
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            if = {
+            	limit = {
+            		any_country = {
+            			owns_state = 101
+            			NOT = { owns_state = 100}
+            		}
+            	}
+            	101 = {
+            		owner = { country_event = { id = usa.149 hours = 1 } }
+            	}
+            	100 = {
+            		owner = { country_event = { id = usa.150 hours = 1 } }
+            	}
+            	set_country_flag = USA_purchasing_greenland
+            	set_country_flag = USA_purchasing_iceland
+            }
+            else = {
+            	every_country = {
+	            	limit = {
+	            		owns_state = 101
+	            		owns_state = 100
+	            	}
+	            	country_event = { id = usa.147 hours = 1 }
+	            }
+            }
+		}
+}
+#USA Purchase FROM Response (BOTH)
+country_event = {
+		id = usa.147
+		title = usa.147.t
+		desc = usa.147.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.147.a
+			ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_accept
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+		option = {
+			name = usa.147.b
+			ai_chance = {
+					factor = 40
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_greenland
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+		option = {
+			name = usa.147.c
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+}
+#USA Gets Response
+country_event = {
+		id = usa.148
+		title = usa.148.t
+		desc = usa.148.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.148.a
+			trigger = {
+				OR = {
+					AND = {
+						has_country_flag = USA_DEN_icebox_greenland
+						has_country_flag = USA_DEN_icebox_iceland
+					}
+					has_country_flag = USA_DEN_icebox_accept
+				}
+			}
+			set_global_flag = USA_DEN_sold_icegreen
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            USA = {
+            	transfer_state = 101
+            	transfer_state = 100
+            }
+            clr_country_flag = USA_DEN_icebox_accept
+            news_event = { id = usa_news.25 }
+		}
+		option = {
+			name = usa.148.b
+			trigger = {
+				has_country_flag = USA_DEN_icebox_greenland
+				NOT = {
+					has_country_flag = USA_DEN_icebox_iceland
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+			USA = {
+            	transfer_state = 101
+            }
+            clr_country_flag = USA_DEN_icebox_greenland
+            clr_country_flag = USA_purchasing_greenland
+            hidden_effect = {
+            	if = {
+            		limit = {
+            			NOT = {
+            				OR = {
+            					has_country_flag = USA_purchasing_greenland
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            			}
+            		}
+            		set_global_flag = USA_DEN_sold_green
+            		news_event = { id = usa_news.25 }
+            	}
+            }
+		}
+		option = {
+			name = usa.148.c
+			trigger = {
+				NOT = { has_country_flag = USA_DEN_icebox_accept }
+				NOT = { has_country_flag = USA_DEN_icebox_greenland }
+				NOT = { has_country_flag = USA_DEN_icebox_iceland }
+			}
+            add_political_power = -10
+		}
+		option = {
+			name = usa.148.e
+			trigger = {
+				has_country_flag = USA_DEN_icebox_iceland
+				NOT = {
+					has_country_flag = USA_DEN_icebox_iceland
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            USA = {
+            	transfer_state = 100
+            }
+            clr_country_flag = USA_DEN_icebox_iceland
+            clr_country_flag = USA_purchasing_iceland
+            hidden_effect = {
+            	if = {
+            		limit = {
+            			NOT = {
+            				OR = {
+            					has_country_flag = USA_purchasing_greenland
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            			}
+            		}
+            		set_global_flag = USA_DEN_sold_ice
+            		news_event = { id = usa_news.25 }
+            	}
+            }
+		}
+}
+#USA Purchase FROM Response (GREENLAND)
+country_event = {
+		id = usa.149
+		title = usa.149.t
+		desc = usa.149.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.149.a
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_greenland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            				has_country_flag = USA_DEN_icebox_iceland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+		option = {
+			name = usa.149.b
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	clr_country_flag = USA_purchasing_greenland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            				has_country_flag = USA_DEN_icebox_iceland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+}
+#USA Purchase FROM Response (ICELAND)
+country_event = {
+		id = usa.150
+		title = usa.150.t
+		desc = usa.150.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = usa.150.a
+			ai_chance = {
+					factor = 20
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_iceland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_greenland
+            				}
+            				has_country_flag = USA_DEN_icebox_greenland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+		option = {
+			name = usa.150.b
+			ai_chance = {
+					factor = 80
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	clr_country_flag = USA_purchasing_iceland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_greenland
+            				}
+            				has_country_flag = USA_DEN_icebox_greenland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+}
 
 #News Events
 
@@ -9812,7 +10240,14 @@ news_event = {
 news_event = {
 		id = usa_news.17
 		title = usa_news.17.t
-		desc = usa_news.17.d
+		desc = {
+			text = usa_news.17.d
+			trigger = { NOT = { has_global_flag = alaska_sold_not_by_rus } }
+		}
+		desc = {
+			text = usa_news.17.d_notrus
+			trigger = { has_global_flag = alaska_sold_not_by_rus }
+		}
 
 		picture = GFX_news_event_usa_alaska
 
@@ -9825,6 +10260,8 @@ news_event = {
 				tag = USA
 			}
 			name = usa_news.17.a
+			clr_global_flag = alaska_sold_not_by_rus
+			clear_global_event_target = alaska_sold_not_by_rus
 		}
 		option = {
 			trigger = {
@@ -10027,5 +10464,41 @@ news_event = {
 
 		option = {
 			name = usa_news.24.a
+		}
+}
+#Purchase of Iceland and Greenland
+news_event = {
+		id = usa_news.25
+		title = usa_news.25.t
+		desc = {
+			text = usa_news.25.d
+			trigger = { has_global_flag = USA_DEN_sold_icegreen }
+		}
+		desc = {
+			text = usa_news.25.d_ice
+			trigger = { has_global_flag = USA_DEN_sold_ice }
+		}
+		desc = {
+			text = usa_news.25.d_green
+			trigger = { has_global_flag = USA_DEN_sold_green }
+		}
+
+		picture = GFX_news_event_usa_alaska
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.25.a
+			trigger = {
+				NOT = { tag = USA }
+			}
+		}
+		option = {
+			name = usa_news.25.b
+			trigger = {
+				tag = USA
+			}
 		}
 }
