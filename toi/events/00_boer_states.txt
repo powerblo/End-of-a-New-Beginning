@@ -1558,17 +1558,8 @@ country_event = { #diamonds discovered in the campbell state
 		add_ideas = {
 			ofs_campbell_diamonds
 		}
-		
 		1149={
 			set_state_flag = campbell_diamonds
-		}
-		if={
-			limit={
-				has_completed_focus = ofs_vic_invest_in_resource_discovery
-			}
-			hidden_effect={
-				load_focus_tree = Orange_free_state
-			}
 		}
 		set_country_flag = ofs_discovered_diamonds
 		if = {
@@ -2107,14 +2098,6 @@ country_event = { #Coal discovered in the north
 				amount = 4
 			}
 		}
-		if={
-			limit={
-				has_completed_focus = ofs_vic_invest_in_resource_discovery
-			}
-			hidden_effect={
-				load_focus_tree = Orange_free_state
-			}
-		}
 		set_country_flag = ofs_discovered_coal
 	}
 }
@@ -2145,15 +2128,6 @@ country_event = { #gold discovered in the north
 	option = {
 		name = boer_states.73.a
 		ai_chance = { factor = 100 }
-		
-		if={
-			limit={
-				has_completed_focus = ofs_vic_invest_in_resource_discovery
-			}
-			hidden_effect={
-				load_focus_tree = Orange_free_state
-			}
-		}
 		
 		if = {
 			limit = {

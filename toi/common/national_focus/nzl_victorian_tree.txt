@@ -65,7 +65,7 @@ focus_tree = {
 		id = nzl_vic_we_need_an_army
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 70
-		x = 19
+		x = 17
 		y = 0
 		completion_reward = {
 			army_experience = 10
@@ -160,16 +160,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_auckland_is_where_the_people_are
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			1080 ={
 				add_building_construction = {
 					type = infrastructure
@@ -544,7 +535,7 @@ focus_tree = {
 			focus = nzl_vic_reduce_reliance_on_local_iwi
 		}
 		available = {
-			NSW = { has_manpower > 2500}
+			NSW = { has_manpower > 3500}
 		}
 		x = 16
 		y = 2
@@ -559,6 +550,8 @@ focus_tree = {
 		cost = 70
 		prerequisite = {
 			focus = nzl_vic_petion_the_british_for_troops
+		}
+		prerequisite = {
 			focus = nzl_vic_ask_NSW_for_troops
 		}
 		available = {
@@ -800,16 +793,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_our_industries
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 180
-				idea = ofs_recovering_economy
-			}
 			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -839,16 +823,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_northern_industrailising
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -870,16 +845,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_aucklands_industrial_expansion
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -932,15 +898,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {has_country_flag = nzl_maori_agatate_in_waikato}
-			OR={
-				controls_state = 1077
-				KIN = {
-					AND={
-						controls_state = 1077
-						is_subject_of = NZL
-					}
-				}
-			}
+			controls_state = 1077
 		}
 		completion_reward = {
 			1077 ={
@@ -1074,22 +1032,22 @@ focus_tree = {
 		completion_reward = {
 			add_resource= {  
 				type = wood  
-				amount = 6
+				amount = 12
 				state = 1077 
 			}
 			add_resource= {  
 				type = wood  
-				amount = 5
+				amount = 10
 				state = 1080
 			} 
 			add_resource= {  
 				type = wood  
-				amount = 4
+				amount = 8
 				state = 1079
 			}
 			add_resource= {  
-				type = wood 
-				amount = 4
+				type = wood  
+				amount = 8
 				state = 284
 			}
 		}
@@ -1189,16 +1147,7 @@ focus_tree = {
 		}
 		x = 28
 		y = 5
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
-		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
+		completion_reward={
 			add_resource= {  
 				type = oil 
 				amount = 7
@@ -1305,7 +1254,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_resource= {  
-				type = iron  
+				type = steel  
 				amount = 7
 				state = 723  
 			}
@@ -1437,16 +1386,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzl_vic_our_central_capital
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			284 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1468,16 +1408,7 @@ focus_tree = {
 		prerequisite = {
 			focus = nzzl_vic_our_populus_capital
 		}
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1657,7 +1588,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_ignore_him
 		icon = GFX_nzl_goal_generic_government
-		cost = 15
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1674,7 +1605,7 @@ focus_tree = {
 	focus = {
 		id = nzl_vic_offer_him_land
 		icon = GFX_goal_focus_gerrymandering
-		cost = 15
+		cost = 70
 		prerequisite = {
 			focus = nzl_vic_the_kingitanga_fallout
 		}
@@ -1699,16 +1630,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 9
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			723 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1731,16 +1653,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 10
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 180
-				idea = ofs_recovering_economy
-			}
 			1080 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1815,16 +1728,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 9
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1931,24 +1835,15 @@ focus_tree = {
 		available = {
 			1080 = {
 				free_building_slots = {
-					building = dockyard
-					size > 2
-				}
+						building = dockyard
+						size > 2
+					}
 			}
 		}
 		x = 0
 		y = 12
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
-			1080 = {
+			1070 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -1960,43 +1855,43 @@ focus_tree = {
 		ai_will_do = { factor = 10 } 
 	}
 	focus = {
-		id = nzl_vic_ideals_of_freedom
-		icon = GFX_focus_generic_the_giant_wakes
+		id = nzl_vic_adopt_secret_ballots
+		icon = GFX_goal_focus_elections
 		cost = 70
 		prerequisite = {
-			focus = nzl_vic_a_nation_of_innovation
-		}
-		prerequisite = {
-			focus = nzl_vic_a_country_of_wonders
+			focus = nzl_vic_the_capital_is_established
 		}
 		available = {
-			date > 1871.01.01
+			date > 1870.01.01
 		}
 		x = 3
 		y = 10
 		completion_reward = {
-			if={#rump state, rebuilding NZL
-				limit = {
-					has_country_flag = lost_waikato_invasion
-					has_country_flag = lost_east_cape_war
-					TAA = {exists = yes}
-					KIN = {
-						exists = yes
-						is_subject = no
-					}
-					PAI = {exists = yes}
-				}
-				load_focus_tree = nzl_vic_shattered
+			add_political_power = 45
+			swap_ideas={
+				add_idea = limited_elections
+				remove_idea = one_party_elections
 			}
-			else_if={#twin governership
-				limit = {
-					has_idea = nzl_split_adminastration
-				}
-				load_focus_tree = nzl_vic_aoutearoua
+			swap_ideas={
+				add_idea = parliamentary_suffrage
+				remove_idea = absolutism
 			}
-			else={#default tree
-				load_focus_tree = nzl_vic_liberal
-			}
+			
+		}
+		ai_will_do = { factor = 10 } 
+	}
+	focus = {
+		id = nzl_vic_ideals_of_freedom
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 70
+		prerequisite = {
+			focus = nzl_vic_adopt_secret_ballots
+		}
+		x = 2
+		y = 11
+		completion_reward = {
+			add_political_power = 45
+			add_stability = 0.05
 		}
 		ai_will_do = { factor = 10 } 
 	}
@@ -2091,7 +1986,7 @@ focus_tree = {
 		completion_reward = {
 			723={
 				add_resource= {  
-				type = cotton
+				type = fabric
 				amount = 7
 				state = 723
 				}
@@ -2108,16 +2003,7 @@ focus_tree = {
 		}
 		x = 30
 		y = 5
-		available={
-			NOT = {
-				has_idea = ofs_recovering_economy
-			}
-		}
 		completion_reward = {
-			add_timed_idea = {
-				days = 90
-				idea = ofs_recovering_economy
-			}
 			723 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
