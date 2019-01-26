@@ -1695,8 +1695,11 @@ country_event = { # The Kabyle Revolt (ALG version)
 
   immediate = {
     hidden_effect = {
-      ALG = {
-        create_country_leader = {
+      #ALG = {
+      #  declare_war_on = { target = ALG type = annex_everything }
+      #}
+      KBY = {
+		create_country_leader = {
           name = "Abdelkader ibn Muhieddine"
           desc = ""
           picture = "Portrait_KBY_Abdelkader_ibn_Muhieddine.dds"
@@ -1705,9 +1708,6 @@ country_event = { # The Kabyle Revolt (ALG version)
           traits = {
           }
         }
-        declare_war_on = { target = ALG type = annex_everything }
-      }
-      KBY = {
         transfer_state = 460
         load_oob = "KBY_REVOLT"
         declare_war_on= {
