@@ -3178,7 +3178,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_greek_merchants
-		icon = GFX_goal_focus_merchants_greek
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			GRE = {
@@ -3219,7 +3219,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_bremen_merchants
-		icon = GFX_goal_focus_merchants_portugese
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			country_exists = BRE
@@ -3256,7 +3256,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_hamburg_merchants
-		icon = GFX_goal_focus_merchants_portugese
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			HAM = { has_completed_focus = HAM_focus_professional_merchants }
@@ -3295,7 +3295,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_hamburg_investors
-		icon = GFX_goal_focus_merchants_french
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		prerequisite = { focus = ETH_hamburg_merchants }
 		available = {
@@ -3307,7 +3307,7 @@ focus_tree = {
 				has_completed_focus = ETH_learn_german_language 
 				has_completed_focus = ETH_put_down_revolts
 				HAM = { has_completed_focus = HAM_focus_trade_law }
-				
+				HAM = { any_owned_state = { is_coastal = yes } }
 			}
 		}
 		mutually_exclusive = { 
@@ -3321,8 +3321,8 @@ focus_tree = {
 		x = 02
 		y = 20
 		completion_reward = {
-			add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
-			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
+			add_opinion_modifier = { target = HAM modifier = eoanb_om_africa_trade_focus }
+			reverse_add_opinion_modifier = { target = HAM modifier = eoanb_om_africa_trade_focus }
 		}
 	}
 
@@ -3369,7 +3369,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_portugal_companies
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_focus_merchants_portugese
 		cost = 70
 		prerequisite = { focus = ETH_portugal_merchants }
 		available = {
@@ -3380,6 +3380,7 @@ focus_tree = {
 				}
 				has_completed_focus = ETH_learn_portugese_language 
 				has_completed_focus = ETH_put_down_revolts
+				POR = { any_owned_state = { is_coastal = yes } }
 			}
 		}
 		mutually_exclusive = { 
@@ -3405,7 +3406,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_italian_merchants
-		icon = GFX_goal_focus_merchants_italian
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			ITA = {
@@ -3495,6 +3496,7 @@ focus_tree = {
 				}
 				has_completed_focus = ETH_learn_french_language 
 				has_completed_focus = ETH_put_down_revolts
+				FRA = { any_owned_state = { is_coastal = yes } }
 			}
 		}
 		mutually_exclusive = { 
@@ -3508,7 +3510,7 @@ focus_tree = {
 		x = 6
 		y = 20
 		completion_reward = {
-			custom_effect_tooltip = eoanb_af_t_tt_focus_german_companies
+			custom_effect_tooltip = eoanb_af_t_tt_focus_french_companies
 			swap_ideas = { add_idea = export_focus remove_idea = limited_exports }
 			custom_effect_tooltip = EDC_afr.5.t
 			add_opinion_modifier = { target = FRA modifier = eoanb_om_africa_trade_focus }
@@ -3558,7 +3560,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_british_companies
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_focus_merchants_british
 		cost = 70
 		prerequisite = { focus = ETH_british_merchants }
 		available = {
@@ -3569,6 +3571,7 @@ focus_tree = {
 				}
 				has_completed_focus = ETH_learn_english_language 
 				has_completed_focus = ETH_put_down_revolts
+				ENG = { any_owned_state = { is_coastal = yes } }
 			}
 		}
 		mutually_exclusive = { 
@@ -3597,7 +3600,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_russian_merchants
-		icon = GFX_goal_focus_merchants_german
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			has_completed_focus = ETH_keep_coptic
@@ -3638,7 +3641,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_prussian_merchants
-		icon = GFX_goal_focus_merchants_german
+		icon = GFX_goal_generic_consumer_goods
 		cost = 70
 		available = {
 			OR = {

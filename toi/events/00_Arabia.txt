@@ -916,8 +916,14 @@ country_event = {###ZAN - OMA tribute is due
 	#is_triggered_only = yes
 	trigger = {
 		is_subject_of = OMA
+		tag = ZAN
 		NOT = {
 			has_country_flag = accepted_OMA_lordship
+		}
+		OMA={
+			NOT={
+				has_completed_focus
+			}
 		}
 	}
 	mean_time_to_happen = {

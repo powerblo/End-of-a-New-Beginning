@@ -2476,3 +2476,24 @@ country_event = {###we are being raided
 		##10% chance to intercept
 	}
 }
+country_event = {###we are being invaded
+	id = EDC_afr.46
+	title = EDC_afr.46.t
+	desc = EDC_afr.46.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = {#respond in force
+		name = EDC_afr.46.a
+		declare_war_on = {
+			target = FROM
+			type = take_state_focus
+		}
+	}
+	option = {#let them
+		name = EDC_afr.46.b
+		add_stability = -0.05
+		add_political_power = -25
+	}
+}
