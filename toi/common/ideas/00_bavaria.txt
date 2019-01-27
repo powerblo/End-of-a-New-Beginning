@@ -1,8 +1,34 @@
 ideas = {
 	country = {
+		BAV_member_trias = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				
+			}
+		}
+	
 		BAV_bavindustry = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -19,19 +45,8 @@ ideas = {
 				original_tag = BAV
 			}
 			
-			removal_cost = -1
-			
-			picture = generic_production_bonus
-			
-			modifier = {
-				industrial_capacity_factory = 0.02
-				production_speed_arms_factory_factor = 0.05
-			}
-		}
-		
-		BAV_bavindustryM2 = {
-			allowed = {
-				original_tag = BAV
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -41,7 +56,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.02
 				production_speed_arms_factory_factor = 0.05
-				industrial_capacity_factory = 0.02
 			}
 		}
 		
@@ -50,13 +64,37 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_production_bonus
 			
 			modifier = {
 				industrial_capacity_factory = 0.02
-				production_speed_industrial_complex_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.025
+			}
+		}
+		
+		BAV_bavindustryM2 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.02
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.02
 			}
 		}
 		
@@ -65,12 +103,37 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_production_bonus
 			
 			modifier = {
 				industrial_capacity_factory = 0.02
+				conversion_cost_civ_to_mil_factor = -0.025
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		BAV_bavindustry4 = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.02
+				conversion_cost_civ_to_mil_factor = -0.025
 				production_speed_industrial_complex_factor = 0.05
 				local_resources_factor = 0.02
 				production_speed_arms_factory_factor = -0.025
@@ -80,6 +143,10 @@ ideas = {
 		BAV_agriculture = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -94,6 +161,10 @@ ideas = {
 		BAV_agriculture2 = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -111,6 +182,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_reserve_divisions
@@ -125,6 +200,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_pp_unity_bonus
@@ -137,6 +220,10 @@ ideas = {
 		BAV_trainedgen = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -155,6 +242,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_army_problems
@@ -168,6 +259,14 @@ ideas = {
 		BAV_landtaghindrance = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -185,6 +284,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_political_support
@@ -200,6 +307,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_army_problems
@@ -212,6 +323,10 @@ ideas = {
 		BAV_karlslessons = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -230,6 +345,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_neutrality_drift_bonus
@@ -242,6 +365,14 @@ ideas = {
 		BAV_noleader = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -260,6 +391,14 @@ ideas = {
 				always = yes
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_local_self_management
@@ -269,12 +408,44 @@ ideas = {
 				consumer_goods_factor = -0.03
 			}
 		}
+		
+		BAV_defenders_of_god_and_king = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = AF_T_small_kingdom
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
 	}
 	
 	hidden_ideas = {
 		BAV_centrismrise = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = collectivist_socialism
+					has_government = traditional_conservatism
+				}
 			}
 		
 			removal_cost = -1
@@ -289,6 +460,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = collectivist_socialism
+					has_government = traditional_conservatism
+				}
+			}
 		
 			removal_cost = -1
 			
@@ -301,6 +480,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = collectivist_socialism
+					has_government = traditional_conservatism
+				}
+			}
 		
 			removal_cost = -1
 			
@@ -312,6 +499,14 @@ ideas = {
 		BAV_socegalrise = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 		
 			removal_cost = -1
@@ -326,6 +521,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
 		
 			removal_cost = -1
 			
@@ -338,7 +541,15 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
-		
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			modifier = {
@@ -350,6 +561,14 @@ ideas = {
 		BAV_socegalrise4 = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 		
 			removal_cost = -1
@@ -363,7 +582,15 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
-		
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			modifier = {
@@ -374,6 +601,14 @@ ideas = {
 		BAV_pride = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -390,6 +625,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = pp_unity_bonus
@@ -402,6 +645,10 @@ ideas = {
 		BAV_learnedfromthefrench = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -419,6 +666,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_manpower_bonus
@@ -432,6 +687,14 @@ ideas = {
 		BAV_maximilian = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -448,6 +711,14 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_neutrality_drift_bonus
@@ -461,6 +732,14 @@ ideas = {
 		BAV_maximilian3 = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -479,6 +758,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_political_support
@@ -491,6 +774,10 @@ ideas = {
 		BAV_visionaries2 = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -507,6 +794,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_political_support
@@ -519,6 +810,10 @@ ideas = {
 		BAV_socreforms2 = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+			   always = yes
 			}
 			
 			removal_cost = -1
@@ -535,6 +830,10 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
 			removal_cost = -1
 			
 			picture = generic_political_support
@@ -549,14 +848,12 @@ ideas = {
 				original_tag = BAV
 			}
 			
-			removal_cost = -1
-			
-			picture = generic_political_support
-		}
-		
-		BAV_catholicchurch = {
-			allowed = {
-				original_tag = BAV
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -564,7 +861,29 @@ ideas = {
 			picture = generic_political_support
 			
 			modifier = {
-				stability_factor = 0.10
+				
+			}
+		}
+		
+		BAV_catholicchurch = {
+			allowed = {
+				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_support
+			
+			modifier = {
+				stability_factor = 0.05
 				war_support_weekly  = -0.002
 			}
 		}
@@ -572,6 +891,14 @@ ideas = {
 		BAV_focusmilitary = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 			
 			removal_cost = -1
@@ -589,6 +916,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
 
 			traits = { 
 				clever_buisnessman 
@@ -600,6 +935,14 @@ ideas = {
 				original_tag = BAV
 			}
 
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			traits = { 
 				working_class_figurehead 
 			}
@@ -610,6 +953,14 @@ ideas = {
 				original_tag = BAV
 			}
 
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			traits = { 
 				efficient_administrator 
 			}
@@ -618,6 +969,14 @@ ideas = {
 		BAV_advisor_gustav_von_schloer = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 
 			traits = { 
@@ -629,6 +988,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
 
 			traits = { 
 				war_industrialist_1 
@@ -639,6 +1006,14 @@ ideas = {
 			allowed = {
 				original_tag = BAV
 			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
 
 			traits = { 
 				ingenious_scientist 
@@ -648,6 +1023,14 @@ ideas = {
 		BAV_advisor_ludwig_feuerbach = {
 			allowed = {
 				original_tag = BAV
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
 			}
 
 			traits = { 
@@ -660,8 +1043,16 @@ ideas = {
 				original_tag = BAV
 			}
 			
+			allowed_civil_war = {
+				OR = {
+					has_government = autocracy
+					has_government = centrism
+					has_government = traditional_conservatism
+				}
+			}
+			
 			available = {
-				has_country_flag = "Triaspolitik of Maximilian II."
+				has_country_flag = BAV_triaspolitik_maximilian_ii
 			}
 
 			traits = { 
