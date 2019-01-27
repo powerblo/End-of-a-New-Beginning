@@ -2929,7 +2929,12 @@ country_event = {
                 	is_historical_focus_on = yes
                 }
             }
-			RUS = { country_event = { id = usa.41 hours = 1 } }
+            every_country = {
+            	limit = {
+            		owns_state = 463
+            	}
+            	country_event = { id = usa.41 hours = 1 }
+            }
 		}
 }
 #Alaska Russia
@@ -2944,7 +2949,14 @@ country_event = {
 		option = {
 			name = usa.41.a
 			USA = { country_event = { id = usa.42 hours = 1 } }
-			RUS = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			ROOT = { add_timed_idea = { idea = USA_alaska_purchase_rus days = 365 } }
+			if = {
+				limit = {
+					NOT = { tag = RUS }
+				}
+				save_global_event_target_as = sold_alaska_target
+				set_global_flag = alaska_sold_not_by_rus
+			}
 			set_global_flag = USAAlaska_Purchased
 			ai_chance = {
 					factor = 90
@@ -7174,6 +7186,2613 @@ news_event = {
 			name = usa_news.6.b
 		}
 		option = {
+			name = usa.130.a
+			add_political_power = -50
+			hidden_effect = {
+				division_template = {
+                	name = "Militiamen"
+                	regiments = {
+                		light_infantry = { x = 0 y = 0 }
+                		light_infantry = { x = 0 y = 1 }
+                		light_infantry = { x = 0 y = 1 }
+                	}
+                }
+			}
+			TEX = {
+                transfer_state = 375
+                transfer_state = 1305
+                transfer_state = 1306
+                transfer_state = 1304
+                transfer_state = 1303
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				set_politics = {
+					ruling_party = centrism
+					elections_allowed = yes
+					election_frequency = 48
+				}
+                random_owned_controlled_state = {
+                	limit = {
+		                is_fully_controlled_by = FROM
+		            	is_core_of = FROM
+		            }
+		            create_unit = {
+		                division = "name = \"1st Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
+		            }
+		            create_unit = {
+		                division = "name = \"2nd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
+		            }
+		            create_unit = {
+		                division = "name = \"3rd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
+		            }
+		            create_unit = {
+		                division = "name = \"4th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
+		            }
+		            create_unit = {
+		                division = "name = \"5th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = FROM
+		            }
+		        }
+                if = {
+                	limit = {
+                		USA = { owns_state = 1281 }
+                	}
+                	transfer_state = 1281
+                	add_state_core = 1281
+                }
+                else = {
+                	add_state_claim = 1281
+                }
+                if = {
+                	limit = {
+                		USA = { owns_state = 1280 }
+                	}
+                	transfer_state = 1280
+                	add_state_core = 1280
+                }
+                else = {
+                	add_state_claim = 1280
+                }
+            }
+            USA = { TEX = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.132
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.130.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			TEX = {
+                transfer_state = 375
+                transfer_state = 1305
+                transfer_state = 1306
+                transfer_state = 1304
+                transfer_state = 1303
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1281 }
+                	}
+                	transfer_state = 1281
+                	add_state_core = 1281
+                }
+                else = {
+                	add_state_claim = 1281
+                }
+                if = {
+                	limit = {
+                		USA = { owns_state = 1280 }
+                	}
+                	transfer_state = 1280
+                	add_state_core = 1280
+                }
+                else = {
+                	add_state_claim = 1280
+                }
+            }
+            USA = { TEX = { transfer_technology = yes } }
+            TEX = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.132
+					hours = 1
+				}
+			}
+		}
+}
+#California declares independence
+country_event = {
+		id = usa.131
+		title = usa.131.t
+		desc = usa.131.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.131.a
+			add_political_power = -50
+			CAL = {
+                transfer_state = 378
+                add_state_core = 378
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+	            	limit = {
+	            		USA = { owns_state = 1296 }
+	            	}
+	            	transfer_state = 1296
+	                add_state_core = 1296
+	            }
+	            else = {
+	            	add_state_claim = 1296
+	            }
+            }
+            USA = { CAL = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.135
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.131.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			CAL = {
+                transfer_state = 378
+                add_state_core = 378
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+	            	limit = {
+	            		USA = { owns_state = 1296 }
+	            	}
+	            	transfer_state = 1296
+	                add_state_core = 1296
+	            }
+	            else = {
+	            	add_state_claim = 1296
+	            }
+            }
+            USA = { CAL = { transfer_technology = yes } }
+            CAL = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.135
+					hours = 1
+				}
+			}
+		}
+}
+#Oregon declares independence
+country_event = {
+		id = usa.132
+		title = usa.132.t
+		desc = usa.132.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.132.a
+			add_political_power = -50
+			ORE = {
+                transfer_state = 385
+                add_state_core = 385
+                transfer_state = 386
+                add_state_core = 386
+                transfer_state = 1076
+                add_state_core = 1076
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+	            	limit = {
+	            		USA = { owns_state = 1075 }
+	            	}
+	            	transfer_state = 1075
+	                add_state_core = 1075
+	            }
+	            else = {
+	            	add_state_claim = 1075
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 1289 }
+	            	}
+	            	transfer_state = 1289
+	                add_state_core = 1289
+	            }
+	            else = {
+	            	add_state_claim = 1289
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 1073 }
+	            	}
+	            	transfer_state = 1073
+	                add_state_core = 1073
+	            }
+	            else = {
+	            	add_state_claim = 1073
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 1074 }
+	            	}
+	            	transfer_state = 1074
+	                add_state_core = 1074
+	            }
+	            else = {
+	            	add_state_claim = 1074
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 387 }
+	            	}
+	            	transfer_state = 387
+	                add_state_core = 387
+	            }
+	            else = {
+	            	add_state_claim = 387
+	            }
+            }
+            USA = { ORE = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.133
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.132.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			ORE = {
+                transfer_state = 378
+                add_state_core = 378
+                transfer_state = 368
+                add_state_core = 368
+                transfer_state = 1076
+                add_state_core = 1076
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+	            	limit = {
+	            		USA = { owns_state = 1075 }
+	            	}
+	            	transfer_state = 1075
+	                add_state_core = 1075
+	            }
+	            else = {
+	            	add_state_claim = 1075
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 1073 }
+	            	}
+	            	transfer_state = 1073
+	                add_state_core = 1073
+	            }
+	            else = {
+	            	add_state_claim = 1073
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 1074 }
+	            	}
+	            	transfer_state = 1074
+	                add_state_core = 1074
+	            }
+	            else = {
+	            	add_state_claim = 1074
+	            }
+	            if = {
+	            	limit = {
+	            		USA = { owns_state = 387 }
+	            	}
+	            	transfer_state = 387
+	                add_state_core = 387
+	            }
+	            else = {
+	            	add_state_claim = 387
+	            }
+            }
+            USA = { ORE = { transfer_technology = yes } }
+            ORE = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.133
+					hours = 1
+				}
+			}
+		}
+}
+#Kansas declares independence
+country_event = {
+		id = usa.133
+		title = usa.133.t
+		desc = usa.133.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.133.a
+			add_political_power = -50
+			KNS = {
+                transfer_state = 383
+                add_state_core = 383
+                transfer_state = 384
+                add_state_core = 384
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1050 }
+                	}
+                	transfer_state = 1050
+                	add_state_core = 1050
+                }
+                else = {
+					add_state_claim = 1050
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1046 }
+                	}
+                	transfer_state = 1046
+                	add_state_core = 1046
+                }
+                else = {
+					add_state_claim = 1046
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1051 }
+                	}
+                	transfer_state = 1051
+                	add_state_core = 1051
+                }
+                else = {
+					add_state_claim = 1051
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1052 }
+                	}
+                	transfer_state = 1052
+                	add_state_core = 1052
+                }
+                else = {
+					add_state_claim = 1052
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1283 }
+                	}
+                	transfer_state = 1283
+                	add_state_core = 1283
+                }
+                else = {
+					add_state_claim = 1283
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1049 }
+                	}
+                	transfer_state = 1049
+                	add_state_core = 1049
+                }
+                else = {
+					add_state_claim = 1049
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1299 }
+                	}
+                	transfer_state = 1299
+                	add_state_core = 1299
+                }
+                else = {
+					add_state_claim = 1299
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1298 }
+                	}
+                	transfer_state = 1298
+                	add_state_core = 1298
+                }
+                else = {
+					add_state_claim = 1298
+				}
+            }
+            USA = { KNS = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.134
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.133.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			KNS = {
+                transfer_state = 383
+                add_state_core = 383
+                transfer_state = 384
+                add_state_core = 384
+                hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1050 }
+                	}
+                	transfer_state = 1050
+                	add_state_core = 1050
+                }
+                else = {
+					add_state_claim = 1050
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1046 }
+                	}
+                	transfer_state = 1046
+                	add_state_core = 1046
+                }
+                else = {
+					add_state_claim = 1046
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1051 }
+                	}
+                	transfer_state = 1051
+                	add_state_core = 1051
+                }
+                else = {
+					add_state_claim = 1051
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1052 }
+                	}
+                	transfer_state = 1052
+                	add_state_core = 1052
+                }
+                else = {
+					add_state_claim = 1052
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1283 }
+                	}
+                	transfer_state = 1283
+                	add_state_core = 1283
+                }
+                else = {
+					add_state_claim = 1283
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1049 }
+                	}
+                	transfer_state = 1049
+                	add_state_core = 1049
+                }
+                else = {
+					add_state_claim = 1049
+				}
+                if = {
+                	limit = {
+                		USA = { owns_state = 1299 }
+                	}
+                	transfer_state = 1299
+                	add_state_core = 1299
+                }
+                else = {
+					add_state_claim = 1299
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1298 }
+                	}
+                	transfer_state = 1298
+                	add_state_core = 1298
+                }
+                else = {
+					add_state_claim = 1298
+				}
+            }
+            USA = { KNS = { transfer_technology = yes } }
+            KNS = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.134
+					hours = 1
+				}
+			}
+		}
+}
+#Dakota declares independence
+country_event = {
+		id = usa.134
+		title = usa.134.t
+		desc = usa.134.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.134.a
+			add_political_power = -50
+			DAK = {
+				transfer_state = 389
+				add_state_core = 389
+				transfer_state = 390
+				add_state_core = 390
+				transfer_state = 388
+				add_state_core = 388
+				transfer_state = 1284
+				add_state_core = 1284
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1290 }
+					}
+					transfer_state = 1290
+					add_state_core = 1290
+				}
+				else = {
+					add_state_claim = 1290
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 381 }
+					}
+					transfer_state = 381
+					add_state_core = 381
+				}
+				else = {
+					add_state_claim = 381
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1045 }
+					}
+					transfer_state = 1045
+					add_state_core = 1045
+				}
+				else = {
+					add_state_claim = 1045
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1048 }
+					}
+					transfer_state = 1048
+					add_state_core = 1048
+				}
+				else = {
+					add_state_claim = 1048
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1282 }
+					}
+					transfer_state = 1282
+					add_state_core = 1282
+				}
+				else = {
+					add_state_claim = 1282
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1292 }
+					}
+					transfer_state = 1292
+					add_state_core = 1292
+				}
+				else = {
+					add_state_claim = 1292
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1291 }
+					}
+					transfer_state = 1291
+					add_state_core = 1291
+				}
+				else = {
+					add_state_claim = 1291
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1047 }
+					}
+					transfer_state = 1047
+					add_state_core = 1047
+				}
+				else = {
+					add_state_claim = 1047
+				}
+            }
+            USA = { DAK = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.131
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.134.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			DAK = {
+				transfer_state = 389
+				add_state_core = 389
+				transfer_state = 390
+				add_state_core = 390
+				transfer_state = 388
+				add_state_core = 388
+				transfer_state = 1284
+				add_state_core = 1284
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1290 }
+					}
+					transfer_state = 1290
+					add_state_core = 1290
+				}
+				else = {
+					add_state_claim = 1290
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1045 }
+					}
+					transfer_state = 1045
+					add_state_core = 1045
+				}
+				else = {
+					add_state_claim = 1045
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1048 }
+					}
+					transfer_state = 1048
+					add_state_core = 1048
+				}
+				else = {
+					add_state_claim = 1048
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1282 }
+					}
+					transfer_state = 1282
+					add_state_core = 1282
+				}
+				else = {
+					add_state_claim = 1282
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1292 }
+					}
+					transfer_state = 1292
+					add_state_core = 1292
+				}
+				else = {
+					add_state_claim = 1292
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1291 }
+					}
+					transfer_state = 1291
+					add_state_core = 1291
+				}
+				else = {
+					add_state_claim = 1291
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1047 }
+					}
+					transfer_state = 1047
+					add_state_core = 1047
+				}
+				else = {
+					add_state_claim = 1047
+				}
+            }
+            USA = { DAK = { transfer_technology = yes } }
+            DAK = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.131
+					hours = 1
+				}
+			}
+		}
+}
+#Missouri declares independence
+country_event = {
+		id = usa.135
+		title = usa.135.t
+		desc = usa.135.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.135.a
+			add_political_power = -50
+			MIO = {
+				transfer_state = 373
+				add_state_core = 373
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { MIO = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.136
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.135.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			MIO = {
+				transfer_state = 373
+				add_state_core = 373
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { MIO = { transfer_technology = yes } }
+            MIO = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.136
+					hours = 1
+				}
+			}
+		}
+}
+#Kentucky declares independence
+country_event = {
+		id = usa.136
+		title = usa.136.t
+		desc = usa.136.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.136.a
+			add_political_power = -50
+			KTY = {
+				transfer_state = 369
+				add_state_core = 369
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { KTY = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.137
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.136.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			KTY = {
+				transfer_state = 369
+				add_state_core = 369
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { KTY = { transfer_technology = yes } }
+            KTY = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.137
+					hours = 2
+				}
+			}
+		}
+}
+#Great Lakes declares independence
+country_event = {
+		id = usa.137
+		title = usa.137.t
+		desc = usa.137.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.137.a
+			add_political_power = -50
+			GRL = {
+				transfer_state = 395
+				add_state_core = 395
+				transfer_state = 394
+				add_state_core = 394
+				transfer_state = 391
+				add_state_core = 391
+				transfer_state = 392
+				add_state_core = 392
+				transfer_state = 396
+				add_state_core = 396
+				transfer_state = 393
+				add_state_core = 393
+				transfer_state = 261
+				add_state_core = 261
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { GRL = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.138
+					hours = 1
+				}
+			}
+		}
+		option = {
+			name = usa.137.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			GRL = {
+				transfer_state = 395
+				add_state_core = 395
+				transfer_state = 394
+				add_state_core = 394
+				transfer_state = 391
+				add_state_core = 391
+				transfer_state = 392
+				add_state_core = 392
+				transfer_state = 396
+				add_state_core = 396
+				transfer_state = 393
+				add_state_core = 393
+				transfer_state = 261
+				add_state_core = 261
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { GRL = { transfer_technology = yes } }
+            GRL = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.138
+					hours = 1
+				}
+			}
+		}
+}
+#New England declares independence
+country_event = {
+		id = usa.138
+		title = usa.138.t
+		desc = usa.138.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.138.a
+			add_political_power = -50
+			NEG = {
+				transfer_state = 357
+				add_state_core = 357
+				transfer_state = 1031
+				add_state_core = 1031
+				transfer_state = 958
+				add_state_core = 958
+				transfer_state = 959
+				add_state_core = 959
+				transfer_state = 960
+				add_state_core = 960
+				transfer_state = 961
+				add_state_core = 961
+            	hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { NEG = { transfer_technology = yes } }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = USA_Manhattan_Marked_ACW
+					}
+					country_event = {
+						id = usa.139
+						hours = 1
+					}
+				}
+				else = {
+					country_event = {
+						id = usa.140
+					}
+				}
+			}
+		}
+		option = {
+			name = usa.138.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			NEG = {
+				transfer_state = 357
+				add_state_core = 357
+				transfer_state = 1031
+				add_state_core = 1031
+				transfer_state = 958
+				add_state_core = 958
+				transfer_state = 959
+				add_state_core = 959
+				transfer_state = 960
+				add_state_core = 960
+				transfer_state = 961
+				add_state_core = 961
+            	hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { NEG = { transfer_technology = yes } }
+            NEG = { change_tag_from = USA }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = USA_Manhattan_Marked_ACW
+					}
+					country_event = {
+						id = usa.139
+						hours = 1
+					}
+				}
+				else = {
+					country_event = {
+						id = usa.140
+					}
+				}
+			}
+		}
+}
+#Manhattan Commune declares independence
+country_event = {
+		id = usa.139
+		title = usa.139.t
+		desc = usa.139.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.139.a
+			add_political_power = -50
+			MHC = {
+				transfer_state = 954
+				add_state_core = 954
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { MHC = { transfer_technology = yes } }
+			hidden_effect = {
+				country_event = {
+					id = usa.140
+				}
+			}
+		}
+		option = {
+			name = usa.139.b
+			trigger = {
+				is_ai = no
+			}
+			add_political_power = -50
+			MHC = {
+				transfer_state = 954
+				add_state_core = 954
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            USA = { MHC = { transfer_technology = yes } }
+            MHC = { change_tag_from = USA }
+			hidden_effect = {
+				country_event = {
+					id = usa.140
+				}
+			}
+		}
+}
+#Rest of the Country oofs off
+country_event = {
+		id = usa.140
+		title = usa.140.t
+		desc = usa.140.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.140.a
+			hidden_effect = {
+				country_event = {
+					id = usa.141
+					hours = 1
+				}
+			}
+			UTA = {
+				transfer_state = 380
+				transfer_state = 379
+				transfer_state = 382
+				transfer_state = 1092
+				transfer_state = 1093
+				add_state_core = 1093
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+			}
+			USA = { UTA = { transfer_technology = yes } }
+			USA = { end_puppet = UTA }
+			OKL = {
+				transfer_state = 374
+				add_state_core = 374
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1293 }
+                	}
+                	transfer_state = 1293
+                	add_state_core = 1293
+                }
+                else = {
+                	add_state_claim = 1293
+                }
+			}
+			NMX = {
+				transfer_state = 1285
+				add_state_core = 1285
+				transfer_state = 1300
+				add_state_core = 1300
+				transfer_state = 1297
+				add_state_core = 1297
+				transfer_state = 377
+				add_state_core = 377
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1286 }
+					}
+					transfer_state = 1286
+					add_state_core = 1286
+				}
+				else = {
+					add_state_claim = 1286
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1302 }
+					}
+					transfer_state = 1302
+					add_state_core = 1302
+				}
+				else = {
+					add_state_claim = 1302
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1294 }
+					}
+					transfer_state = 1294
+					add_state_core = 1294
+				}
+				else = {
+					add_state_claim = 1294
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+					add_state_core = 1287
+				}
+				else = {
+					add_state_claim = 1287
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1301 }
+					}
+					transfer_state = 1301
+					add_state_core = 1301
+				}
+				else = {
+					add_state_claim = 1301
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1295 }
+					}
+					transfer_state = 1295
+					add_state_core = 1295
+				}
+				else = {
+					add_state_claim = 1295
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1288 }
+					}
+					transfer_state = 1288
+					add_state_core = 1288
+				}
+				else = {
+					add_state_claim = 1288
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 376 }
+					}
+					transfer_state = 376
+					add_state_core = 376
+				}
+				else = {
+					add_state_claim = 376
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1278 }
+					}
+					transfer_state = 1278
+					add_state_core = 1278
+				}
+				else = {
+					add_state_claim = 1278
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1279 }
+					}
+					transfer_state = 1279
+					add_state_core = 1279
+				}
+				else = {
+					add_state_claim = 1279
+				}
+			}
+			USA = { OKL = { transfer_technology = yes } }
+			USA = { NMX = { transfer_technology = yes } }
+		}
+		option = {
+			name = usa.140.b
+			trigger = { is_ai = no }
+			hidden_effect = {
+				country_event = {
+					id = usa.141
+					hours = 1
+				}
+			}
+			UTA = {
+				transfer_state = 380
+				transfer_state = 379
+				transfer_state = 382
+				transfer_state = 1092
+				transfer_state = 1093
+				add_state_core = 1093
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+			}
+			USA = { UTA = { transfer_technology = yes } }
+			USA = { end_puppet = UTA }
+			OKL = {
+				transfer_state = 374
+				add_state_core = 374
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1293 }
+                	}
+                	transfer_state = 1293
+                	add_state_core = 1293
+                }
+                else = {
+                	add_state_claim = 1293
+                }
+			}
+			NMX = {
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				transfer_state = 1285
+				add_state_core = 1285
+				transfer_state = 1300
+				add_state_core = 1300
+				transfer_state = 1297
+				add_state_core = 1297
+				transfer_state = 377
+				add_state_core = 377
+				if = {
+					limit = {
+						USA = { owns_state = 1286 }
+					}
+					transfer_state = 1286
+					add_state_core = 1286
+				}
+				else = {
+					add_state_claim = 1286
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1302 }
+					}
+					transfer_state = 1302
+					add_state_core = 1302
+				}
+				else = {
+					add_state_claim = 1302
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1294 }
+					}
+					transfer_state = 1294
+					add_state_core = 1294
+				}
+				else = {
+					add_state_claim = 1294
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+					add_state_core = 1287
+				}
+				else = {
+					add_state_claim = 1287
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1301 }
+					}
+					transfer_state = 1301
+					add_state_core = 1301
+				}
+				else = {
+					add_state_claim = 1301
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1295 }
+					}
+					transfer_state = 1295
+					add_state_core = 1295
+				}
+				else = {
+					add_state_claim = 1295
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1288 }
+					}
+					transfer_state = 1288
+					add_state_core = 1288
+				}
+				else = {
+					add_state_claim = 1288
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 376 }
+					}
+					transfer_state = 376
+					add_state_core = 376
+				}
+				else = {
+					add_state_claim = 376
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1278 }
+					}
+					transfer_state = 1278
+					add_state_core = 1278
+				}
+				else = {
+					add_state_claim = 1278
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1279 }
+					}
+					transfer_state = 1279
+					add_state_core = 1279
+				}
+				else = {
+					add_state_claim = 1279
+				}
+			}
+			UTA = { change_tag_from = USA }
+			USA = { OKL = { transfer_technology = yes } }
+			USA = { NMX = { transfer_technology = yes } }
+		}
+		option = {
+			name = usa.140.c
+			trigger = { is_ai = no }
+			hidden_effect = {
+				country_event = {
+					id = usa.141
+					hours = 1
+				}
+			}
+			UTA = {
+				transfer_state = 380
+				transfer_state = 379
+				transfer_state = 382
+				transfer_state = 1092
+				transfer_state = 1093
+				add_state_core = 1093
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+			}
+			USA = { UTA = { transfer_technology = yes } }
+			USA = { end_puppet = UTA }
+			OKL = {
+				transfer_state = 374
+				add_state_core = 374
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1293 }
+                	}
+                	transfer_state = 1293
+                	add_state_core = 1293
+                }
+                else = {
+                	add_state_claim = 1293
+                }
+			}
+			NMX = {
+				transfer_state = 1285
+				add_state_core = 1285
+				transfer_state = 1300
+				add_state_core = 1300
+				transfer_state = 1297
+				add_state_core = 1297
+				transfer_state = 377
+				add_state_core = 377
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1286 }
+					}
+					transfer_state = 1286
+					add_state_core = 1286
+				}
+				else = {
+					add_state_claim = 1286
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1302 }
+					}
+					transfer_state = 1302
+					add_state_core = 1302
+				}
+				else = {
+					add_state_claim = 1302
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1294 }
+					}
+					transfer_state = 1294
+					add_state_core = 1294
+				}
+				else = {
+					add_state_claim = 1294
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+					add_state_core = 1287
+				}
+				else = {
+					add_state_claim = 1287
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1301 }
+					}
+					transfer_state = 1301
+					add_state_core = 1301
+				}
+				else = {
+					add_state_claim = 1301
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1295 }
+					}
+					transfer_state = 1295
+					add_state_core = 1295
+				}
+				else = {
+					add_state_claim = 1295
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1288 }
+					}
+					transfer_state = 1288
+					add_state_core = 1288
+				}
+				else = {
+					add_state_claim = 1288
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 376 }
+					}
+					transfer_state = 376
+					add_state_core = 376
+				}
+				else = {
+					add_state_claim = 376
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1278 }
+					}
+					transfer_state = 1278
+					add_state_core = 1278
+				}
+				else = {
+					add_state_claim = 1278
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1279 }
+					}
+					transfer_state = 1279
+					add_state_core = 1279
+				}
+				else = {
+					add_state_claim = 1279
+				}
+			}
+			OKL = { change_tag_from = USA }
+			USA = { OKL = { transfer_technology = yes } }
+			USA = { NMX = { transfer_technology = yes } }
+		}
+		option = {
+			name = usa.140.e
+			trigger = { is_ai = no }
+			hidden_effect = {
+				country_event = {
+					id = usa.141
+					hours = 1
+				}
+			}
+			UTA = {
+				transfer_state = 380
+				transfer_state = 379
+				transfer_state = 382
+				transfer_state = 1092
+				transfer_state = 1093
+				add_state_core = 1093
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+			}
+			USA = { UTA = { transfer_technology = yes } }
+			USA = { end_puppet = UTA }
+			OKL = {
+				transfer_state = 374
+				add_state_core = 374
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				if = {
+                	limit = {
+                		USA = { owns_state = 1293 }
+                	}
+                	transfer_state = 1293
+                	add_state_core = 1293
+                }
+                else = {
+                	add_state_claim = 1293
+                }
+			}
+			NMX = {
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+				transfer_state = 1285
+				add_state_core = 1285
+				transfer_state = 1300
+				add_state_core = 1300
+				transfer_state = 1297
+				add_state_core = 1297
+				transfer_state = 377
+				add_state_core = 377
+				if = {
+					limit = {
+						USA = { owns_state = 1286 }
+					}
+					transfer_state = 1286
+					add_state_core = 1286
+				}
+				else = {
+					add_state_claim = 1286
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1302 }
+					}
+					transfer_state = 1302
+					add_state_core = 1302
+				}
+				else = {
+					add_state_claim = 1302
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1294 }
+					}
+					transfer_state = 1294
+					add_state_core = 1294
+				}
+				else = {
+					add_state_claim = 1294
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1287 }
+					}
+					transfer_state = 1287
+					add_state_core = 1287
+				}
+				else = {
+					add_state_claim = 1287
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1301 }
+					}
+					transfer_state = 1301
+					add_state_core = 1301
+				}
+				else = {
+					add_state_claim = 1301
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1295 }
+					}
+					transfer_state = 1295
+					add_state_core = 1295
+				}
+				else = {
+					add_state_claim = 1295
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1288 }
+					}
+					transfer_state = 1288
+					add_state_core = 1288
+				}
+				else = {
+					add_state_claim = 1288
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 376 }
+					}
+					transfer_state = 376
+					add_state_core = 376
+				}
+				else = {
+					add_state_claim = 376
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1278 }
+					}
+					transfer_state = 1278
+					add_state_core = 1278
+				}
+				else = {
+					add_state_claim = 1278
+				}
+				if = {
+					limit = {
+						USA = { owns_state = 1279 }
+					}
+					transfer_state = 1279
+					add_state_core = 1279
+				}
+				else = {
+					add_state_claim = 1279
+				}
+			}
+			NMX = {
+				change_tag_from = USA
+			}
+			USA = { NMX = { transfer_technology = yes } }
+			USA = { OKL = { transfer_technology = yes } }
+		}
+}
+#USA becomes the Atlantic States of America
+country_event = {
+		id = usa.141
+		title = usa.141.t
+		desc = usa.141.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.141.a
+			retire_country_leader = yes
+			if = {
+				limit = {
+					is_ai = no
+				}
+				ASA = { change_tag_from = USA }
+			}
+			every_owned_state = {
+            	limit = {
+            		is_core_of = USA
+            	}
+            	add_core_of = ASA
+            }
+			ASA = {
+				annex_country = {
+					target = USA
+				}
+				hidden_effect = {
+					country_event = {
+						id = usa.142
+						hours = 1
+					}
+				}
+            }
+            set_global_flag = USA_great_collapse
+            ASA = { USA = { transfer_technology = yes } }
+            every_state = {
+            	limit = {
+            		OR = {
+            			is_core_of = USA
+            			is_claimed_by = USA
+            		}
+            	}
+            	remove_core_of = USA
+            	remove_claim_by = USA
+            }
+            hidden_effect = {
+            	news_event = {
+            		id = usa_news.23
+            	}
+            }
+            hidden_effect = {
+            	ENG = {
+					country_event = {
+            			id = usa.145
+            			days = 5
+            		}
+            	}
+            	FRA = {
+					country_event = {
+            			id = usa.145
+            			days = 5
+            		}
+            	}
+            	RUS = {
+					country_event = {
+            			id = usa.145
+            			days = 5
+            		}
+            	}
+            }
+		}
+}
+#Rise of Militiamen for Breakaway States
+country_event = {
+		id = usa.142
+		title = usa.142.t
+		desc = usa.142.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.142.a
+			hidden_effect = {
+				division_template = {
+                	name = "Militiamen"
+                	regiments = {
+                		light_infantry = { x = 0 y = 0 }
+                		light_infantry = { x = 0 y = 1 }
+                		light_infantry = { x = 0 y = 1 }
+                	}
+                }
+			}
+			random_owned_controlled_state = {
+                limit = {
+		            is_fully_controlled_by = ROOT
+			       	is_core_of = ROOT
+		        }
+		        create_unit = {
+		            division = "name = \"1st Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+		        }
+		        create_unit = {
+		            division = "name = \"2nd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+		        }
+		        create_unit = {
+		            division = "name = \"3rd Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+		        }
+		        create_unit = {
+		            division = "name = \"4th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+	            }
+		        create_unit = {
+		            division = "name = \"5th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+		        }
+	        }
+	        if = {
+		       	limit = {
+		        	OR = {
+		        		tag = ASA
+		        		tag = GRL
+		        	}
+		        }
+		        random_owned_controlled_state = {
+	                limit = {
+			            is_fully_controlled_by = ROOT
+				       	is_core_of = ROOT
+			        }
+			        create_unit = {
+			            division = "name = \"6th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+			        }
+				    create_unit = {
+				        division = "name = \"7th Militiamen\" division_template = \"Militiamen\" start_experience_factor = 0.0" owner = ROOT
+				    }
+				}
+		    }
+		}
+}
+#Stephen A. Douglas passes Popular Sovreignty
+country_event = {
+		id = usa.143
+		title = usa.143.t
+		desc = usa.143.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.143.a
+			add_stability = -0.05
+			country_event = {
+				id = usa.144
+				days = 10
+			}
+		}
+}
+#Stephen A. Douglas Plans the Tour
+country_event = {
+		id = usa.144
+		title = usa.144.t
+		desc = usa.144.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.144.a
+			country_event = {
+				id = usa.124
+				days = 10
+			}
+		}
+}
+#Europe Colonizes former USA islands in pacific
+country_event = {
+		id = usa.145
+		title = usa.145.t
+		desc = usa.145.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.145.a
+			trigger = {
+				tag = ENG
+			}
+			transfer_state = 632
+			transfer_state = 630
+			transfer_state = 631
+		}
+		option = {
+			name = usa.145.a
+			trigger = {
+				tag = FRA
+			}
+			transfer_state = 727
+			transfer_state = 726
+			transfer_state = 642
+		}
+		option = {
+			name = usa.145.a
+			trigger = {
+				tag = RUS
+			}
+			transfer_state = 650
+		}
+}
+#USA Purchase of Iceland/Greenland 1867
+country_event = {
+		id = usa.146
+		title = usa.146.t
+		desc = usa.146.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.146.a
+			ai_chance = {
+					factor = 40
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            if = {
+            	limit = {
+            		any_country = {
+            			owns_state = 101
+            			NOT = { owns_state = 100}
+            		}
+            	}
+            	101 = {
+            		owner = { country_event = { id = usa.149 hours = 1 } }
+            	}
+            	100 = {
+            		owner = { country_event = { id = usa.150 hours = 1 } }
+            	}
+            	set_country_flag = USA_purchasing_greenland
+            	set_country_flag = USA_purchasing_iceland
+            }
+            else = {
+            	every_country = {
+	            	limit = {
+	            		owns_state = 101
+	            		owns_state = 100
+	            	}
+	            	country_event = { id = usa.147 hours = 1 }
+	            }
+            }
+		}
+}
+#USA Purchase FROM Response (BOTH)
+country_event = {
+		id = usa.147
+		title = usa.147.t
+		desc = usa.147.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.147.a
+			ai_chance = {
+					factor = 10
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_accept
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+		option = {
+			name = usa.147.b
+			ai_chance = {
+					factor = 40
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_greenland
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+		option = {
+			name = usa.147.c
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	country_event = { id = usa.148 hours = 1 }
+            }
+		}
+}
+#USA Gets Response
+country_event = {
+		id = usa.148
+		title = usa.148.t
+		desc = usa.148.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.148.a
+			trigger = {
+				OR = {
+					AND = {
+						has_country_flag = USA_DEN_icebox_greenland
+						has_country_flag = USA_DEN_icebox_iceland
+					}
+					has_country_flag = USA_DEN_icebox_accept
+				}
+			}
+			set_global_flag = USA_DEN_sold_icegreen
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            USA = {
+            	transfer_state = 101
+            	transfer_state = 100
+            }
+            clr_country_flag = USA_DEN_icebox_accept
+            news_event = { id = usa_news.25 }
+		}
+		option = {
+			name = usa.148.b
+			trigger = {
+				has_country_flag = USA_DEN_icebox_greenland
+				NOT = {
+					has_country_flag = USA_DEN_icebox_iceland
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+			USA = {
+            	transfer_state = 101
+            }
+            clr_country_flag = USA_DEN_icebox_greenland
+            clr_country_flag = USA_purchasing_greenland
+            hidden_effect = {
+            	if = {
+            		limit = {
+            			NOT = {
+            				OR = {
+            					has_country_flag = USA_purchasing_greenland
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            			}
+            		}
+            		set_global_flag = USA_DEN_sold_green
+            		news_event = { id = usa_news.25 }
+            	}
+            }
+		}
+		option = {
+			name = usa.148.c
+			trigger = {
+				NOT = { has_country_flag = USA_DEN_icebox_accept }
+				NOT = { has_country_flag = USA_DEN_icebox_greenland }
+				NOT = { has_country_flag = USA_DEN_icebox_iceland }
+			}
+            add_political_power = -10
+		}
+		option = {
+			name = usa.148.e
+			trigger = {
+				has_country_flag = USA_DEN_icebox_iceland
+				NOT = {
+					has_country_flag = USA_DEN_icebox_iceland
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            random_owned_controlled_state = {
+            	limit = {
+					industrial_complex > 0
+				}
+            	remove_building = {
+				    type = industrial_complex
+				    level = 1
+				}
+            }
+            USA = {
+            	transfer_state = 100
+            }
+            clr_country_flag = USA_DEN_icebox_iceland
+            clr_country_flag = USA_purchasing_iceland
+            hidden_effect = {
+            	if = {
+            		limit = {
+            			NOT = {
+            				OR = {
+            					has_country_flag = USA_purchasing_greenland
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            			}
+            		}
+            		set_global_flag = USA_DEN_sold_ice
+            		news_event = { id = usa_news.25 }
+            	}
+            }
+		}
+}
+#USA Purchase FROM Response (GREENLAND)
+country_event = {
+		id = usa.149
+		title = usa.149.t
+		desc = usa.149.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.149.a
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_greenland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            				has_country_flag = USA_DEN_icebox_iceland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+		option = {
+			name = usa.149.b
+			ai_chance = {
+					factor = 50
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	clr_country_flag = USA_purchasing_greenland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_iceland
+            				}
+            				has_country_flag = USA_DEN_icebox_iceland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+}
+#USA Purchase FROM Response (ICELAND)
+country_event = {
+		id = usa.150
+		title = usa.150.t
+		desc = usa.150.d
+		picture = GFX_report_event_german_reichstag_gathering
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa.150.a
+			ai_chance = {
+					factor = 20
+					modifier = {
+                    	factor = 0
+                	is_historical_focus_on = yes
+                }
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            random_owned_controlled_state = {
+            	add_extra_state_shared_building_slots = 1
+            	add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+            }
+            USA = {
+            	set_country_flag = USA_DEN_icebox_iceland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_greenland
+            				}
+            				has_country_flag = USA_DEN_icebox_greenland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+		option = {
+			name = usa.150.b
+			ai_chance = {
+					factor = 80
+					modifier = {
+                    	factor = 100
+                	is_historical_focus_on = yes
+                }
+            }
+            USA = {
+            	clr_country_flag = USA_purchasing_iceland
+            	if = {
+            		limit = {
+            			OR = {
+            				NOT = {
+            					has_country_flag = USA_purchasing_greenland
+            				}
+            				has_country_flag = USA_DEN_icebox_greenland
+            			}
+            		}
+            		country_event = { id = usa.148 hours = 1 }
+            	}
+            }
+		}
+}
+
+#News Events
+
+add_namespace = usa_news
+#Panic of 1857
+news_event = {
+		id = usa_news.0
+		title = usa_news.0.t
+		desc = usa_news.0.d
+		picture = GFX_news_event_panic_eighteen_fifty
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.0.a
+			trigger = {
+				NOT = { tag = USA }
+			}
+		}
+		option = {
+			name = usa_news.0.b
+			trigger = {
+				tag = USA
+			}
+			set_global_flag = Panic_of_1857
+		}
+}
+#Lincoln-Douglas debate
+news_event = {
+		id = usa_news.1
+		title = usa_news.1.t
+		desc = usa_news.1.d
+		picture = GFX_news_event_lincoln_douglas
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			TAG = USA
+			date > 1858.10.20
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		option = {
+				name = usa_news.1.a
+				add_popularity = { ideology = centrism popularity = 0.1 }
+				add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		}
+}
+#1860 Campaigning
+news_event = {
+		id = usa_news.2
+		title = usa_news.2.t
+		desc = usa_news.2.d
+		picture = GFX_news_event_1860_campaigning
+
+		fire_only_once = yes
+
+		major = no
+
+		trigger = {
+			TAG = USA
+			date > 1860.5.18
+		}
+
+		mean_time_to_happen = {
+			days = 2
+		}
+
+		option = {
+			name = usa_news.2.a
+			add_popularity = { ideology = centrism popularity = 0.05 }
+			add_popularity = { ideology = radical_democracy popularity = 0.05 }
+			create_country_leader = {
+    			name = "Abraham Lincoln"
+    			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+    			picture = "Portrait_USA_Abraham_Lincoln.dds"
+    			expire = "1886.5.2"
+    			ideology = conserv_liberal
+    			traits = {
+    			  controversial_figure
+    			  eoanb_trait_patriotic_orator
+    			}
+  			}
+  			create_country_leader = {
+			    name = "John C. Frémont"
+			    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+			    picture = "Portrait_USA_John_C_Fremont.dds"
+			    expire = "1886.5.2"
+			    ideology = liberal_social
+			    traits = {
+			    }
+			  }
+		}
+}
+#1860 Election - Lincoln
+news_event = {
+		id = usa_news.3
+		title = usa_news.3.t
+		desc = usa_news.3.d
+
+		picture = GFX_news_event_lincoln_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.3.a
+		}
+}
+#1860 Election - Breckinridge
+news_event = {
+		id = usa_news.4
+		title = usa_news.4.t
+		desc = usa_news.4.d
+
+		picture = GFX_news_event_breckenridge_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.4.a
+		}
+}
+#1860 Election - Douglas
+news_event = {
+		id = usa_news.5
+		title = usa_news.5.t
+		desc = usa_news.5.d
+
+		picture = GFX_news_event_douglas_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+				name = usa_news.5.a
+		}
+}
+#South Carolina Independent
+news_event = {
+		id = usa_news.6
+		title = usa_news.6.t
+		desc = usa_news.6.d
+
+		picture = GFX_news_event_south_carolina
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = { TAG = USA }
+				NOT = { TAG = CSA }
+			}
+				name = usa_news.6.a
+		}
+		option = {
+			trigger = {
+				TAG = USA
+			}
+			name = usa_news.6.b
+		}
+		option = {
 			trigger = {
 				TAG = CSA
 			}
@@ -7475,7 +10094,14 @@ news_event = {
 news_event = {
 		id = usa_news.17
 		title = usa_news.17.t
-		desc = usa_news.17.d
+		desc = {
+			text = usa_news.17.d
+			trigger = { NOT = { has_global_flag = alaska_sold_not_by_rus } }
+		}
+		desc = {
+			text = usa_news.17.d_notrus
+			trigger = { has_global_flag = alaska_sold_not_by_rus }
+		}
 
 		picture = GFX_news_event_usa_alaska
 
@@ -7488,6 +10114,8 @@ news_event = {
 				tag = USA
 			}
 			name = usa_news.17.a
+			clr_global_flag = alaska_sold_not_by_rus
+			clear_global_event_target = alaska_sold_not_by_rus
 		}
 		option = {
 			trigger = {
@@ -7592,5 +10220,139 @@ news_event = {
 				tag = TEX
 			}
 			name = usa_news.20.e
+		}
+}
+#Death of Stephen A. Douglas
+news_event = {
+		id = usa_news.21
+		title = usa_news.21.t
+		desc = usa_news.21.d
+
+		picture = GFX_news_event_usa_douglas_2
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = {
+					tag = USA
+				}
+			}
+			name = usa_news.21.a
+		}
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.21.b
+		}
+}
+#Assassination of Herschel
+news_event = {
+		id = usa_news.22
+		title = usa_news.22.t
+		desc = usa_news.22.d
+
+		picture = GFX_news_event_usa_washington_rally
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = {
+					tag = USA
+				}
+			}
+			name = usa_news.22.a
+		}
+		option = {
+			trigger = {
+				tag = USA
+			}
+			name = usa_news.22.b
+		}
+}
+#Death of William Pennington
+#Collapse of the Union!
+news_event = {
+		id = usa_news.23
+		title = usa_news.23.t
+		desc = usa_news.23.d
+
+		picture = GFX_news_event_acw_radical_coup
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			trigger = {
+				NOT = {
+					has_government = autocracy
+				}
+			}
+			name = usa_news.23.a
+		}
+		option = {
+			trigger = {
+				has_government = autocracy
+			}
+			name = usa_news.23.b
+		}
+}
+#Bell Elected
+news_event = {
+		id = usa_news.24
+		title = usa_news.24.t
+		desc = usa_news.24.d
+
+		picture = GFX_news_event_bell_elected
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.24.a
+		}
+}
+#Purchase of Iceland and Greenland
+news_event = {
+		id = usa_news.25
+		title = usa_news.25.t
+		desc = {
+			text = usa_news.25.d
+			trigger = { has_global_flag = USA_DEN_sold_icegreen }
+		}
+		desc = {
+			text = usa_news.25.d_ice
+			trigger = { has_global_flag = USA_DEN_sold_ice }
+		}
+		desc = {
+			text = usa_news.25.d_green
+			trigger = { has_global_flag = USA_DEN_sold_green }
+		}
+
+		picture = GFX_news_event_usa_alaska
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = usa_news.25.a
+			trigger = {
+				NOT = { tag = USA }
+			}
+		}
+		option = {
+			name = usa_news.25.b
+			trigger = {
+				tag = USA
+			}
 		}
 }
