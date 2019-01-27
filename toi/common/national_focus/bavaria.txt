@@ -10,6 +10,8 @@ focus_tree = {
         }
     }
 	
+	continuous_focus_position = { x = 50 y = 1500 }
+	
 	default = no
 	
 	#Focus for Bavarian Agriculture 
@@ -1324,6 +1326,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_mid
+			}
 		}
 	}
  
@@ -2113,7 +2119,7 @@ focus_tree = {
 	#Focus for Blue Skies of Bavaria 
 	focus = { 
 		id = BAV_blueskiesofbavaria 
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_blue_skies
 		ai_will_do = {
 			factor = 40
 			
@@ -2323,7 +2329,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BAV_customeffect_joinnorth
 			hidden_effect = {
-				
+				set_country_flag = eoanb_flag_sww_side_prs
 			}
 		}
 	}
@@ -2560,7 +2566,7 @@ focus_tree = {
 			custom_effect_tooltip = BAV_customeffect_joinsouth
 			
 			hidden_effect = {
-			
+				set_country_flag = eoanb_flag_sww_side_aus
 			}
 		}
 	}
@@ -2633,7 +2639,7 @@ focus_tree = {
 	#Focus for New Muenchner Raete 
 	focus = { 
 		id = BAV_newmnchnerrte 
-		icon = GFX_goal_unknown 
+		icon = GFX_goal_focus_munchner_rate
 		ai_will_do = {
 			factor = 40
 			

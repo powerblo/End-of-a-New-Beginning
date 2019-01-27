@@ -83,7 +83,13 @@ country_event = {
 	
 	option = {
 		name = bavariafocus.2.a
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		custom_effect_tooltip = BAV_customeffect_sideprussia
 		
 		hidden_effect = {
@@ -93,7 +99,9 @@ country_event = {
 	
 	option = {
 		name = bavariafocus.2.b
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 40
+		}
 		custom_effect_tooltip = BAV_customeffect_sideaustria
 		
 		hidden_effect = {
@@ -188,6 +196,10 @@ country_event = {
 			factor = 30
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -221,6 +233,10 @@ country_event = {
 		name = bavariafocus.6.b
 		ai_chance = { 
 			factor = 70
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -266,6 +282,10 @@ country_event = {
 			factor = 30
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -291,6 +311,10 @@ country_event = {
 		name = bavariafocus.7.b
 		ai_chance = { 
 			factor = 70
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -326,6 +350,10 @@ country_event = {
 		name = bavariafocus.8.a
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 100
 				has_country_flag = WUR_push_neutral_approach
@@ -372,6 +400,10 @@ country_event = {
 		name = bavariafocus.8.b
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -422,6 +454,10 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -458,6 +494,10 @@ country_event = {
 		name = bavariafocus.9.b
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -1281,6 +1321,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -1316,6 +1360,10 @@ country_event = {
 		name = bavariafocus.45.b
 		ai_chance = { 
 			factor = 80
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -1366,6 +1414,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -1398,6 +1450,10 @@ country_event = {
 		name = bavariafocus.48.b
 		ai_chance = { 
 			factor = 80
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
@@ -1500,6 +1556,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 100
 				has_country_flag = WUR_push_neutral_approach
 			}
 			modifier = {
@@ -1525,6 +1585,10 @@ country_event = {
 		name = bavariafocus.50.b
 		ai_chance = { 
 			factor = 80
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = WUR_push_neutral_approach
