@@ -1484,11 +1484,11 @@
  generic.7.a:0 "Yes, I want custom Music!"
  generic.7.b:0 "No, I do not want custom Music."
  eoanb_tt_generic_4_a:0 "Some custom options are toggleable in the §Yoptions menu§! available via §Ydecisions§!."
- generic.8.t:0 "Options Menu - Page 1/2"
+ generic.8.t:0 "Options Menu - Page 1/3"
  generic.8.d:0 "Choose which options you want to change.\n\nIn Multiplayer, it is highly recommended that only the host uses this menu."
  generic.8.a:0 "Custom Music"
  generic.8.b:0 "Historical Flavor"
- generic.8.c:0 "Go to page 2/2"
+ generic.8.c:0 "Go to page 2/3"
  generic.8.e:0 "Exit Options Menu"
  eoanb_tt_generic_9_a:0 "§YCustom Music§! will be §Genabled§!."
  eoanb_tt_generic_9_b:0 "§YCustom Music§! will be §Rdisabled§!."
@@ -1499,7 +1499,7 @@
  eoanb_tt_generic_11_a:0 "§YHistorical Flavor§! will be §Genabled§!."
  eoanb_tt_generic_11_b:0 "§YHistorical Flavor§! will be §Rdisabled§!."
  generic.9.t:0 "Custom Music"
- generic.9.d:0 "This mod makes use of custom soundtrack sometimes, according to situations, to enhance the gaming experience. This may require a submod later on due to bloating of the mod folder, but regardless of whether or not a submod is installed or even exists, the Custom Music will be toggled on or off here."
+ generic.9.d:0 "This mod makes use of custom soundtrack sometimes, according to situations, to enhance the gaming experience.\n\nIf you are using one of the music submods, then the music in said submods has to be toggled here."
  generic.9.a:0 "Toggle Custom Music ON"
  generic.9.b:0 "Toggle Custom Music OFF"
  generic.10.t:0 "Controversial Content"
@@ -1518,12 +1518,12 @@
  generic.12.b:0 "Grant regional autonomy!"
  is_eoanb_jokes_custom_true:0 "Easter Eggs are enabled."
  is_eoanb_tutorial_custom_true:0 "Tutorials are enabled."
- generic.13.t:0 "Options Menu - Page 2/2"
+ generic.13.t:0 "Options Menu - Page 2/3"
  generic.13.d:0 "Choose which options you want to change.\n\nIn Multiplayer, it is highly recommended that only the host uses this menu."
  generic.13.a:0 "Controversial Content"
  generic.13.b:0 "Custom Tutorial"
- generic.13.c:0 "Easter Eggs"
- generic.13.e:0 "Go to page 1/2"
+ generic.13.c:0 "Go to page 3/3"
+ generic.13.e:0 "Go to page 1/3"
  eoanb_tt_generic_14_a:0 "§YCustom Tutorial§! will be §Genabled§!."
  eoanb_tt_generic_14_b:0 "§YCustom Tutorial§! will be §Rdisabled§!."
  eoanb_tt_generic_15_a:0 "§YEaster Eggs§! will be §Genabled§!."
@@ -1533,16 +1533,31 @@
  generic.14.a:0 "Toggle Custom Tutorial ON"
  generic.14.b:0 "Toggle Custom Tutorial OFF"
  generic.15.t:0 "Easter Eggs"
- generic.15.d:0 "This mod has a few easter eggs built in, but most players are here to play a serious historical simulation. If you don't mind a few small in-jokes, impossible happenings, or Kanye West establishing an autocratic monarchy in the USA, you can enable \"Easter Egg Mode\" here.\n\nWhen playing in multiplayer, only the Host will see these events.\n\n§YACHTUNG! Playing with easter egg mode enables meme events, patreon rewards showing up in game, and other stuff that basically makes this a crazy comedy game. If you activate this mode, know what you are getting into and do not expect anything to go remotely historical or realistic in any way!§!"
+ generic.15.d:0 "This mod has a few easter eggs built in, but most players are here to play a serious historical simulation. If you don't mind a few small in-jokes, impossible happenings, or Kanye West establishing an autocratic monarchy in the USA, you can enable \"Easter Egg Mode\" here.\n\nWhen playing in multiplayer, only the Host will see these events.\n\nACHTUNG: Playing with easter egg mode enables meme events, patreon rewards showing up in game, and other stuff that basically makes this a crazy comedy game. If you activate this mode, know what you are getting into and do not expect anything to go remotely historical or realistic in any way!"
  generic.15.a:0 "Toggle Easter Eggs ON"
  generic.15.b:0 "Toggle Easter Eggs OFF"
- generic.16.t:0 "Help Menu - Page 1/1"
- generic.16.d:0 "This menu will later encompass helpful texts to explain mechanics unique to EoanB.\n\nRight now, it does nothing and all the buttons close the menu."
- generic.16.a:0 "Empty Button"
- generic.16.b:0 "Empty Button"
- generic.16.c:0 "Empty Button"
- generic.16.e:0 "Exit Help Menu"
-
+ generic.16.t:0 "Options Menu - Page 3/3"
+ generic.16.d:0 "Choose which options you want to change.\n\nIn Multiplayer, it is highly recommended that only the host uses this menu."
+ generic.16.a:0 "§G-- Option Taken --§!"
+ generic.16.b:0 "Optimization - Unite Africa"
+ generic.16.c:0 "Easter Eggs"
+ generic.16.e:0 "Go to page 2/3"
+ eoanb_tt_generic_17_a:0 "§YAfrica§! will be §Gunited§!.\n"
+ generic.17.t:0 "Optimization - Unite Africa"
+ generic.17.d:0 "In order to reduce lag, the player can choose to unite the African lands under one representative \"nation\", cutting down on the African tags. If you experience lag and own a low-end computer, it's strongly recommended to enable this option.\n\nUpon selection, this option will unite all African nations except the ones that are required to exist in order for other focus trees/events/decisions/etc. to work.\n\nACHTUNG: This option is irreversible! You won't be able to see it after taking it!"
+ generic.17.a:0 "Unite Africa."
+ generic.17.b:0 "Go back."
+ is_eoanb_united_africa_true:0 "Africa is united."
+ generic.18.t:0 "EoaNB: GitHub Version"
+ generic.18.d:0 "As you might or might not know, End of a New Beginning is a community-driven project, being worked on by many devs at the same time. Such an organizational structure requires a certain development environment, which in our case is GitHub. Thanks to GitHub, every dev is able to work on the mod semi-independently. However, having the mod on GitHub with that many devs working on it automatically means that it is virtually impossible for us to regularly update the Steam version on the workshop. Consequently, the Steam version is only updated when major updates come out, being the reason for why EoaNB is perceived as \"idle\" or \"dead\" by many when only looking at the workshop page. Still, what has already been explained on the official workshop page is often overlooked.\n\nIf you want to experience an up-to-date End of a New Beginning, the first step would be to join our official Discord (linked on the workshop). After that, you can look up how to install the GitHub version in our #frequently_asked_questions channel. Generally seen, the GitHub version of EoaNB is way more developed and advanced than the Steam one. Do remember, however, that the mod on GitHub is an in-development version, prone to changes, bugs and balance issues."
+ generic.18.a:0 "I understand. Thank you for your efforts!"
+ generic.19.t:0 "Help Menu - Page 1/1"
+ generic.19.d:0 "This menu will later encompass helpful texts to explain mechanics unique to EoanB.\n\nRight now, it does nothing and all the buttons close the menu."
+ generic.19.a:0 "Empty Button"
+ generic.19.b:0 "Empty Button"
+ generic.19.c:0 "Empty Button"
+ generic.19.e:0 "Exit Help Menu"
+ 
  #Portugal
  portugal.1.t:0 "France delivers an ultimatum!"
  portugal.1.d:0 "Our people have captured a French barque in the Mozambique sea! The French have demanded that we are to release it immediately or they will consider this a declaration of war. They are now awaiting our response and we cannot stay silent on this matter. What shall we do?"
@@ -1713,27 +1728,27 @@
  prussia.29.d:0 "This mod gives you the option of playing with the German names for the states in the Germany region. Do you want to enable this?"
  prussia.29.a:0 "Yes, I want the German names."
  prussia.29.b:0 "No, keep it in English."
- 
+
  #Bavaria
  bavariafocus.0.t:0 "Maximilian II Dead!"
- bavariafocus.0.d:0 "Today the Kingdom mourns. As of late, our precious King of Bavaria Maximilian II. suffered under a severe illness. After being ill for a total of three days, Maximilian's body could no longer withstand the disease and fell victim to it. Maximilian II, being King of Bavaria for 16 years, died on the 10th March 1864, ultimately leaving the throne empty. This event will certainly influence the very existence of our Kingdom."
+ bavariafocus.0.d:0 "Today the Kingdom mourns. As of late, our precious King of Bavaria Maximilian II suffered under a severe illness. After being ill for a total of three days, Maximilian's body could no longer withstand the disease and fell victim to it. Maximilian II, being King of Bavaria for 16 years, died on the 10th March 1864, ultimately leaving the throne empty. This event will certainly influence the very existence of our Kingdom."
  bavariafocus.0.a:0 "May the King rest in peace."
  bavariafocus.1.t:0 "Ludwig II Decides"
- bavariafocus.1.d:0 "As the oldest son of Maximilian II with a right to the throne, Ludwig II Otto Friedrich Wilhelm von Wittelsbach ascended at the age of just 18 years after his fathers death, and is now officially the new King of Bavaria. Seeing as how the young King could be or have been a subject of manipulation from a foreign state, many politicians are worried about how Ludwig could behave in the future. In an attempt to eliminate this risk, a proposal has been made by some of the worried, which would try to persuade the King. The proposal would try to bring Ludwig II. closer to his fathers work, and maybe even push for the continuation of the Triaspolitik. However, a lot of people think that this would lead to no result, as Ludwig never was and probably still isn't interested in his fathers work and way of ruling. Whatever we decide to do, this will impact the future of the Kingdom of Bavaria greatly."
+ bavariafocus.1.d:0 "As the oldest son of Maximilian II with a right to the throne, Ludwig II Otto Friedrich Wilhelm von Wittelsbach ascended at the age of just 18 years after his fathers death, and is now officially the new King of Bavaria. Seeing as how the young King could be or have been a subject of manipulation from a foreign state, many politicians are worried about how Ludwig could behave in the future. In an attempt to eliminate this risk, a proposal has been made by some of the worried, which would try to persuade the King. The proposal would try to bring Ludwig II closer to his fathers work, and maybe even push for the continuation of the Triaspolitik. However, a lot of people think that this would lead to no result, as Ludwig never was and probably still isn't interested in his fathers work and way of ruling. Whatever we decide to do, this will impact the future of the Kingdom of Bavaria greatly."
  bavariafocus.1.a:0 "We must try to persuade the King."
  bavariafocus.1.b:0 "He's still just a kid. Let him be. This won't change anything for us."
  bavariafocus.2.t:0 "Pick our Side"
  bavariafocus.2.d:0 "We are now at the point where we have to choose a side. The Prussians in the north could be a strong ally, but the Austrians share a lot of similarities with us, unlike the Prussians. If we want to keep our Kingdom, culture and people safe, we have to act now."
  bavariafocus.2.a:0 "The Prussians are different than us, but they'll be a great ally and able to protect us."
  bavariafocus.2.b:0 "No way we will ally with the Prussian beasts. Austria is a much better choice."
- bavariafocus.3.t:0 "Ludwig II. Dead!"
- bavariafocus.3.d:0 "Yet again a tragedy hits the Wittelsbachs. Today Ludwig II., the eldest son of Maximilian II., was found dead, bleeding onto the white duvet cover, in his room by a maid, after she seemingly heard some kind of commotion going on inside. After she hesitantly entered the room no one aside from the dead Ludwig was in it anymore. His throat was pierced with a sharp knife or sword. The assassination and its real reason remain a mistery for now, but it is clear that the murder is connected to Maximilian's death and Ludwig's planned ascension of the throne."
+ bavariafocus.3.t:0 "Ludwig II Dead!"
+ bavariafocus.3.d:0 "Yet again a tragedy hits the Wittelsbachs. Today Ludwig II, the eldest son of Maximilian II, was found dead, bleeding onto the white duvet cover, in his room by a maid, after she seemingly heard some kind of commotion going on inside. After she hesitantly entered the room no one aside from the dead Ludwig was in it anymore. His throat was pierced with a sharp knife or sword. The assassination and its real reason remain a mistery for now, but it is clear that the murder is connected to Maximilian's death and Ludwig's planned ascension of the throne."
  bavariafocus.3.a:0 "Everything went according to plan then."
  bavariafocus.4.t:0 "Luitpold von Bayern Takes the Throne!"
- bavariafocus.4.d:0 "After the death of Ludwig II. and the following public commotion, Luitpold Karl Joseph Wilhelm von Bayern felt obligated to restore at least a part of the stability lost because of the lack of a King. As Otto I., Ludwig's younger brother and the next Prince to succeed the throne suffers under a mental illness, Luitpold will act as a Prince Regent for the time being."
+ bavariafocus.4.d:0 "After the death of Ludwig II and the following public commotion, Luitpold Karl Joseph Wilhelm von Bayern felt obligated to restore at least a part of the stability lost because of the lack of a King. As Otto I, Ludwig's younger brother and the next Prince to succeed the throne suffers under a mental illness, Luitpold will act as a Prince Regent for the time being."
  bavariafocus.4.a:0 "This might become a nuisance for us."
  bavariafocus.5.t:0 "Triaspolitik"
- bavariafocus.5.d:0 "The so-called Trias is a try of the southern German states to strengthen their bond and affront the great Germanic powers, being Prussia and Austria. The main contributors to this idea are Württemberg with Karl Augustus von Wangenheim, Bavaria with Maximilian II., the current King of Bavaria, and Prime Minister Friedrich Ferdinand von Beust from Hannover. This idea of a unified coalition in the south again experienced an upsurge in popularity after the German Revolution and is even being supported by France. Following the Prussian attempt at pulling through the Lesser Germany, the Four Kings Alliance became reality, consisting of Bavaria, Saxony, Hannover and Württemberg, which mainly supports the Greater Austrian Plan."
+ bavariafocus.5.d:0 "The so-called Trias is a try of the southern German states to strengthen their bond and affront the great Germanic powers, being Prussia and Austria. The main contributors to this idea are Württemberg with Karl Augustus von Wangenheim, Bavaria with Maximilian II, the current King of Bavaria, and Prime Minister Friedrich Ferdinand von Beust from Hannover. This idea of a unified coalition in the south again experienced an upsurge in popularity after the German Revolution and is even being supported by France. Following the Prussian attempt at pulling through the Lesser Germany, the Four Kings Alliance became reality, consisting of Bavaria, Saxony, Hannover and Württemberg, which mainly supports the Greater Austrian Plan."
  bavariafocus.5.a:0 "Bavaria should be the one to lead the Trias."
  bavariafocus.6.t:0 "Bavarian Proposal"
  bavariafocus.6.d:0 "Bavaria today proposed to strengthen our bond and maybe even establish an alliance, seeing how the tension between Austria and Prussia keeps on growing. Accepting the Bavarian proposal may have its benefits, but many think that the old idea of the Trias, a try of the southern German states to strengthen their bond and affront the great Germanic powers, would lead to both Austria and Prussia being against us. We should decide carefully."
@@ -1828,7 +1843,7 @@
  bavariafocus.33.d:0 "As we have instructed, the Bezirksamt Erlangen has been established. Because of how fast Erlangen, the small city in the proximity of Nuremberg has grown, the Bezirksamt makes sure that we as the Bavarian government have full control over the agrarian culture and industry in that area."
  bavariafocus.33.a:0 "Wunderbar!"
  bavariafocus.34.t:0 "The Culture of Munich"
- bavariafocus.34.d:0 "Since Ludwig I. Munich has been the centre of Bavarian culture. The city is the main contributor to the Bavarian image and is our capital at the same time. As instructed by us, Bavarian culture will now go beyond Munich and reach even the smallest villages and towns of the [Root.GetName]."
+ bavariafocus.34.d:0 "Since Ludwig I Munich has been the centre of Bavarian culture. The city is the main contributor to the Bavarian image and is our capital at the same time. As instructed by us, Bavarian culture will now go beyond Munich and reach even the smallest villages and towns of the [Root.GetName]."
  bavariafocus.34.a:0 "Ausgezeichnet!"
  bavariafocus.35.t:0 "The Pride of the Bavarians"
  bavariafocus.35.d:0 "Today [Root.GetLeader] made a speech, telling the people that they, as [From.GetAdjectiveCap]s, should be proud of themselves. The speech was received with loud clapping and the following night one could hear and see joyful singing, dancing and drinking everywhere. Ein Prosit auf Bayern!"
@@ -1842,10 +1857,10 @@
  bavariafocus.37.a:0 "We shall keep our principles."
  bavariafocus.37.b:0 "A wise decision."
  bavariafocus.38.t:0 "Ludwig-Donau-Main-Kanal Extended!"
- bavariafocus.38.d:0 "As we have instructed, the Ludwig-Donau-Main-Kanal has been extended. Finished in 1846 and built during the reign of Ludwig I., the Donau-Main-Kanal has been an important tool for Bavarian trade ever since. With the expansion finished, it now allows us to use more ships for trade, making Bavaria more important when it comes to trading."
+ bavariafocus.38.d:0 "As we have instructed, the Ludwig-Donau-Main-Kanal has been extended. Finished in 1846 and built during the reign of Ludwig I, the Donau-Main-Kanal has been an important tool for Bavarian trade ever since. With the expansion finished, it now allows us to use more ships for trade, making Bavaria more important when it comes to trading."
  bavariafocus.38.a:0 "Ships sure are something."
  bavariafocus.39.t:0 "Ludwig-Süd-Nord-Bahn Extended!"
- bavariafocus.39.d:0 "As we have instructed, the Ludwig-Süd-Nord-Bahn has been extended. Named after Ludwig I., just like the Ludwig-Donau-Main-Kanal, it allows for fast transportation between Franconia and Upper Bavaria, even going so far to reach Saxony. After extending it with additional lines, it now grants us the possibility to transport our goods to more corners of Bavaria faster than ever before."
+ bavariafocus.39.d:0 "As we have instructed, the Ludwig-Süd-Nord-Bahn has been extended. Named after Ludwig I, just like the Ludwig-Donau-Main-Kanal, it allows for fast transportation between Franconia and Upper Bavaria, even going so far to reach Saxony. After extending it with additional lines, it now grants us the possibility to transport our goods to more corners of Bavaria faster than ever before."
  bavariafocus.39.a:0 "Trains sure are something."
  bavariafocus.40.t:0 "Southgerman Confederation Formed!"
  bavariafocus.40.d:0 "It seems that the Triaspolitik of Bavaria and the other German middle states finally payed off. As of late, the middle states have been making common policy, guided by Bavaria, the biggest and most probably strongest middle state in the German area. Today, after endless discourses and debates, the Southgerman Confederation was born, officially lead by Bavaria. It is advertised by its members as the Third Deutschland, the third big Germanic power, right beside Austria and Prussia. However, it still remains a mystery whether this brand new alliance will bear any fruit and keep up with the European powers."
@@ -1863,8 +1878,8 @@
  bavariafocus.44.t:0 "[From.GetName] Denies the Southgerman Confederation!"
  bavariafocus.44.d:0 "After having considered the up- and downsides of our proposal, [From.GetName] decided to not join the new Southgerman Confederation. We will have to search for other members."
  bavariafocus.44.a:0 "After all this trouble we went through!?"
- bavariaevent.0.t:0 "Maximilian II. Tries to Push for Reforms"
- bavariaevent.0.d:0 "The Bavarian King Maximilian II. has today suggested withdrawing the freedom of the press and suffrage. Remembering the German Revolution of 1848 and 1849, the King thinks that there should be stricter laws to prevent a return of such a movement. However, multiple advisors and politicians are unsure if that really is such a good idea. Many are concerned that such reforms could incite the people, making the situation only worse. Whether these suggested reforms will be implemented or not is still up in the air."
+ bavariaevent.0.t:0 "Maximilian II Tries to Push for Reforms"
+ bavariaevent.0.d:0 "The Bavarian King Maximilian II has today suggested withdrawing the freedom of the press and suffrage. Remembering the German Revolution of 1848 and 1849, the King thinks that there should be stricter laws to prevent a return of such a movement. However, multiple advisors and politicians are unsure if that really is such a good idea. Many are concerned that such reforms could incite the people, making the situation only worse. Whether these suggested reforms will be implemented or not is still up in the air."
  bavariaevent.0.a:0 "We will follow the King's will."
  bavariaevent.1.t:0 "Frankfurter Fürstentag"
  bavariaevent.1.d:0 "The Frankfurter Fürstentag session began today on the 17th August 1863. The Fürstentag was initated by the Austrian Kaiser and deals with proposed reforms regarding the German Confederation. The proposed reforms, if enacted, would inter alia set up a parliamentary committee, bringing the German Confederation nearer to being a Federal State. On the other hand, Prussia proposed other plans for the reorganization of the German Confederation. We either could support the Austrian proposals, disapprove of them and support the Prussian ones or stay neutral."
@@ -1872,19 +1887,72 @@
  bavariaevent.1.b:0 "We don't want to incite anybody."
  bavariaevent.1.c:0 "We will support the Prussia proposals."
  bavariaevent.2.t:0 "King Max's Hike"
- bavariaevent.2.d:0 "Maximilian II. today hiked in the Alpine region in Upper Bavaria. The total length of the path amounts up to 26 km and stretches from the Hörnle summit by Bad Kohlgrub, the royal Jagdhaus on the Pürschling and the Klammspitze summit to the Brunnenkopfhäuser built by King Max himself."
+ bavariaevent.2.d:0 "Maximilian II today hiked in the Alpine region in Upper Bavaria. The total length of the path amounts up to 26 km and stretches from the Hörnle summit by Bad Kohlgrub, the royal Jagdhaus on the Pürschling and the Klammspitze summit to the Brunnenkopfhäuser built by King Max himself."
  bavariaevent.2.a:0 "We should name this path after our King!"
  bavariaevent.3.t:0 "Common Policy with [From.GetNameDef]"
  bavariaevent.3.d:0 "Our recent political actions have impressed the [From.GetAdjectiveCap] ministers and politicians. After many discussions, proposals and debates, our two countries finally agreed to make common policy and to grow stronger together in the future - side by side."
  bavariaevent.3.a:0 "A Prost to our new [From.GetAdjectiveCap] friends!"
  bavariaevent.4.t:0 "Common Policy with [From.GetNameDef]"
- bavariaevent.4.d:0 ""
+ bavariaevent.4.d:0 "Afraid that our latest try to make common policy with the [From.GetAdjectiveCap] would stir up the relations between them and other German states, [From.GetName] denied our proposal. However, they seem to be moved by our newly embraced open politics and want to stay on friendly terms."
  bavariaevent.4.a:0 "It is a shame, but we will have to respect their decision."
  bavariaevent.5.t:0 "[From.GetName] Proposes Common Policy"
  bavariaevent.5.d:0 "Today [From.GetNameDef] proposed common policy between our two countries. They think that this is a good way to improve the relations between us."
  bavariaevent.5.a:0 "[From.GetNameDef] are our friends. We should accept."
  bavariaevent.5.b:0 "Even if our countries are both German, there is a reason for why we are independent."
- 
+ #Unification
+ bavariaevent.7.t:0 "The German Question"
+ bavariaevent.7.d:0 "Now that the German threat is gone, the Austrians will look forward to unite Germany as they like. Luckily, we chose the right side and are now one of the winners. As such, we are allowed to partake in the peace talks. We could try to have a say and get a few advantages for ourselves, but we also could leave it up to the Austrians. However, if we were to take part in the peace talks, we would need to keep in mind that our chance of achieving what we want would be dependent on how much our country developed or performed in the war."
+ bavariaevent.7.a:0 "We should try to have a say."
+ bavariaevent.7.b:0 "Let's leave it up to the Austrians."
+ bavariaevent.8.t:0 "Treaty of Frankfurt"
+ bavariaevent.8.d:0 "The peace talks are finally here. As we decided to have a say and be present during the talks, we now have to propose our demands or suggestions. As the North, led by Prussia, lost the war, we now have full control over Germany and can push through our interests.\n\nFirstly, we could demand the annexation of the Ruhrgebiet by Bavaria, as we already own Palatinate in that region. This could greatly benefit our industry, but we should be aware that if the Austrians do not recognize Bavaria as an industrializing country, we would have little chances in succeeding with this demand.\n\nAnother approach would be to just sit at the table, but let the Austrians do all the actual work. Being present at the peace talks and being victorious already makes us quite popular. Additionally, it would not be a bad idea to be on the good side of the Austrians.\n\nThe by far most daring suggestions would be the ones concerning the German unification. As to not be completely thrown aside, we could try to submit some ideas on how the unification should go."
+ bavariaevent.8.a:0 "The Ruhr is rightfully Bavarian soil. We should demand it to be handed over to us."
+ bavariaevent.8.b:0 "Whatever the Austrians say, we should agree for the sake of relations."
+ bavariaevent.8.c:0 "Unification is key. Conveniently, we have some ideas how it could be reached."
+ bavariaevent.9.t:0 "Bavaria Demands the Ruhrgebiet"
+ bavariaevent.9.d:0 "Taking part in the peace talks, [BAV.GetNameDef] today demanded the Ruhr to be officially handed over to them. As we have defeated the Prussians on the field, we theoretically can do whatever we want with that piece of land. In fact, if Bavaria were to annex the Ruhrgebiet, it would weaken the industry of [PRS.GetNameDef] immensely. We could, however, decline and do something else with it."
+ bavariaevent.9.a:0 "Let them have it. Bavaria is a friend."
+ bavariaevent.9.b:0 "We shouldn't give Bavaria more power."
+ bavariaevent.10.t:0 "Deutscher Staatenbund"
+ bavariaevent.10.d:0 "As no apparent answer to the German Question could have been found until now, we have to decide what to do for the time being. Unification seems to be a much more complicated thing to accomplish than we thought it would be, and now we have to act before the German states turn away from us.\nMany in our government have come to like the temporary idea of forming a Schutzbund, a temporary, protective federation, to ensure stability and safety along the German areas. It was decided that this faction is to be established within the next days. However, it is yet to be decided how to handle this federation; we could either directly subjugate the German states and initiate the Schutzbund to play safe, or we could create the Schutzbund without subjugating anyone, as that could lead to mistrust."
+ bavariaevent.10.a:0 "Let's play safe."
+ bavariaevent.10.b:0 "The Schutzbund alone should be enough."
+ bavariaevent.11.t:0 "Bavaria Proposes Unification"
+ bavariaevent.11.d:0 "Today [BAV.GetNameDef] proposed the final unification of Germany under Bavaria as our subject. Every German state would be forcefully annexed by them, to be ruled from Vienna through Munich. If we were to agree to this proposal, German unification would finally be accomplished and we would have full power over all German land without risking too much, like protests in our home country. However, we have to keep in mind that this possibly could be a power grab from Bavaria, even though they have been quite well-disposed towards us."
+ bavariaevent.11.a:0 "So be it."
+ bavariaevent.11.b:0 "We will decide by ourselves how to handle this."
+ bavariaevent.12.t:0 "Bavaria Proposes Unification"
+ bavariaevent.12.d:0 "Today [BAV.GetNameDef] proposed the final unification of Germany under Bavaria as our subject. Every German state would be annexed by them, to be ruled from Vienna through Munich, except from the ones who were our allies in the past war. Instead, our past allies, mostly consisting of the southern German states, would be asked whether they would like to become a part of the to be formed German Confederation. If they deny, they will simply become subjects of the new Germany, maintaining their old and rightful borders and territories. It is now up to us to decide whether this new Germany becomes reality, or not."
+ bavariaevent.12.a:0 "Bavaria has been a good friend of ours. For a new Germany!"
+ bavariaevent.12.b:0 "We have better ideas than that."
+ bavariaevent.13.t:0 "The Road to Unification"
+ bavariaevent.13.d:0 "The time has come to present our plans for Germany to the Austrians. Still, we need to decide what exactly we will propose to them; on that matter we have two major ideas on how to establish a unified Germany.\n\nThe first idea would be to forcefully unify Germany under Bavaria, while Bavaria itself becomes a subjugated state of Austria. This would make our dream of a Bavarian Germany reality, even if Austria would become our overlord.\n\nThe second idea would be to give the German states who were our allies in the previous war a choice: either they join us and become a part of the New Germany, or they maintain their borders, but are subjugated to us.\n\nWhile the first idea sounds more pleasing, the second one would ensure that no previous ally turns sour on us. However, we should note that the ones who have the final say remain the Austrians. Whether they will accept our proposal depends on how we decided to be seen by the other European powers."
+ bavariaevent.13.a:0 "We will unite Germany, even if this could bother some people."
+ bavariaevent.13.b:0 "We can not afford to upset our allies."
+ bavariaevent.14.t:0 "German Unification"
+ bavariaevent.14.d:0 "The German peace talks seem to be coming to an end, and with that it seems that Austria has accepted Bavaria's proposal of unification; unification is but a step away. All German states who have been allied to [AUS.GetNameDef] have now to make a decision. Either they become a direct part of the new Germany, or they maintain their borders and territories, but become a subject. As we are one of the past allies, we have to make a choice."
+ bavariaevent.14.a:0 "We will become a part of the new Confederation."
+ bavariaevent.14.b:0 "Unification was never our dream. We want our [Root.GetAdjectiveCap] borders."
+ bavariaevent.15.t:0 "[From.GetNameDef] Becomes Part of Germany"
+ bavariaevent.15.d:0 "As [From.GetName] today announced, all of [From.GetAdjectiveCap] will be annexed by the new Germany and become a part of it. [From.GetAdjectiveCap] politicians will be integrated into the new political system as ministers and general members of the government."
+ bavariaevent.15.a:0 "Finally the German dream becomes reality."
+ bavariaevent.16.t:0 "[From.GetNameDef] Becomes Subject of Germany"
+ bavariaevent.16.d:0 "As [From.GetName] today announced, [From.GetNameDef] will hold on to their borders and territories. Instead of becoming a part of the new Germany, they rather would preserve their culture, political system and land, and turn into our subject."
+ bavariaevent.16.a:0 "They have to suit themselves."
+ bavariaevent.17.t:0 "Germany United!"
+ bavariaevent.17.d:0 "Today we received word that the German war between Austria and Prussia concluded in a victory of the South - meaning Austria and it's allies. A peace conference was held, deciding on how to proceed with the German states. Bavaria, the biggest southern German state, proposed uniting Germany under her, to be ruled from Vienna, Austria. The Austrians accepted the Bavarian proposal, seemingly liking the sound of finally uniting the German states, and as such [GEC.GetNameDef] was born. However, as the former Prussian allies and Prussia itself were forcefully integrated into the new country, it is yet to be seen whether this new Germany will hold."
+ bavariaevent.17.a:0 "Hurra!"
+ bavariaevent.17.b:0 "Good for them."
+ bavariaevent.18.t:0 "[From.GetNameDef] Agrees"
+ bavariaevent.18.d:0 "Austria has agreed to our proposal. The German unification under Bavaria can now become a real thing. "
+ bavariaevent.18.a:0 "Cheers!"
+ bavariaevent.19.t:0 "[From.GetNameDef] Denies"
+ bavariaevent.19.d:0 "Austria denied our proposal. They will now push through their own ideas and plans, instead of listening to others."
+ bavariaevent.19.a:0 "Damn."
+ bavariaevent.20.t:0 "Bavarian Freiwilligenkorps Rise Up"
+ bavariaevent.20.d:0 "Seeing how the treacherous Prussians attacked our beloved country, the Bavarian people are in turmoil. Multiple organized bodies have risen up and joined our army to help us in the defence of Bavaria. Generally, these Freiwilligenkorps are badly equipped, but they will do their best to help us out, understanding that if Bavaria falls, their beliefs will forcefully too. Together, we will stand firm against the Prussian revolutionary, united and arm in arm."
+ bavariaevent.20.a:0 "Bavaria will never fall!"
+
  #Austria
  aus.1.t:0 "Possible Military Reforms?"
  aus.1.d:0 "Due to our recent performance against the Italians and the growing threat of the Prussians, many of our top, high-ranking officials have requested that we consider reforming the army. Our economy is in a bad situation at the moment, which would make pouring money into the military look foolish to our subjects. It may be better to fund additional projects regarding the economy rather than this foolish nonsense!"
@@ -2011,7 +2079,7 @@
  random.23.d:0 "One of our coastal states has experienced a natural disaster yesterday when a flooding happened due to a dam breach. The coastal industry and infrastructure in the area is devastated, but if we redirect some of our budget to damage control funding, we could save a few chunks of important industrial commodity..."
  random.23.a:0 "Send aid to the affected area!"
  random.23.b:0 "We can't spare anything..."
- 
+
  #Second Fiji Expedition
  usa_second_fiji_flag:0 "The Events of the second Fiji Expedition are currently unfolding."
  usa_fiji_send_warship_tt:0 "§YYou will have to assign ships to the naval area around Fiji for the event chain to progress.§!"
@@ -2025,12 +2093,12 @@
  secondfijiexpedition.2.a:0 "Initiate the expedition!"
  usa_fiji_assault_begin_tt:0 "§YOur Men will begin the assault!§!"
  secondfijiexpedition.3.t:0 "Arrival at the Village"
- secondfijiexpedition.3.d:0 "The expedition is nearing its end, and our forces are near the village from which the trouble originated." 
+ secondfijiexpedition.3.d:0 "The expedition is nearing its end, and our forces are near the village from which the trouble originated."
  secondfijiexpedition.3.a:0 "Raze it to the ground!"
  secondfijiexpedition.4.t:0 "Success!"
  secondfijiexpedition.4.d:0 "Our man have taken the village, neutralized its defenders, and destroyed it!"
  secondfijiexpedition.4.a:0 "That will teach them not to mess with the USA!"
- 
+
  #Prussian Focus Tree
  prussiafocus.1.t:0 "Elections of 1858"
  prussiafocus.1.d:0 "The Prussian Elections of 1858 have taken place and the final results came in a few minutes ago - our current minister president, Otto Theodor von Manteuffel is to be replaced with Karl Anton von Hohenzollern. There has also been an unexpected wave of liberalism in the country, and it seems like this ideology is on the rise for now..."
@@ -2048,7 +2116,7 @@
  prussiafocus.5.t:0 "The Dutch denied our request"
  prussiafocus.5.d:0 "Our request to purchase Curacao was refused by the Dutch - it seems they want to keep the state for themselves."
  prussiafocus.5.a:0 "Schade..."
- 
+
  #German Confederation
  gerconfed.1.t:0 "Our Vote: The Frankfurter Reformakte"
  gerconfed.1.d:0 "Austria has recently proposed the \"Frankfurter Reformakte\" to the members of the German Confederation. Those reforms will strengthen their nation by means of some laws and will also move the German Confederation towards being a state of nations. The question now is: Will we support this reform? It would probably be taxing for our country..."
@@ -2094,7 +2162,7 @@
  gerconfed.8.b:0 "Decline the Invitation."
  eoanb_tt_event_gerconfed_9_yes:0 "§YAll other Members of the Confederation will also get some political power.§!"
  eoanb_tt_event_gerconfed_9_no:0 "§YAll other Members of the Confederation will also lose some political power.§!"
- gerconfed.9.t:0 "Second Würzburg Conference" 
+ gerconfed.9.t:0 "Second Würzburg Conference"
  gerconfed.9.d:0 "The Members of the German Confederation have been invited to take part in another conference in Würzburg - this time the military affairs of the Confederation will be discussed. Will Prussia attend?"
  gerconfed.9.a:0 "Accept the Invitation."
  gerconfed.9.b:0 "Decline the Invitation."
@@ -2136,7 +2204,7 @@
  gerconfed.18.t:0 "DEBUG: Clears 4 global flags"
  gerconfed.18.d:0 "This clears 4 flags about the German Confederation so the game doesn't lag."
  gerconfed.18.a:0 "Okay."
- 
+
  #Brazil
  brazil.1.t:0 "Brazil offers a Research Treaty"
  brazil.1.d:0 "The Empire of Brazil has sent an offer to use their best scientists and universities as a way to collaborate with our industrial revolution current research, should we accept?"
@@ -2219,7 +2287,7 @@
  brazil.25.b:0 "Oh no..! A Civil war?!"
  brazil.25.c:0 "An expected development."
  brazil.25.d1:0 "Send our support."
- 
+
  #Peru
  peru.1.t:0 "Peru blockades our ports!"
  peru.1.d:0 "When our first disagreements over our border began, we tried to avoid conflict, but nonetheless, when Peru was in a civil war, our troops tried to do a secret invasion and ocuppy some of our rightful land. But Peru, has enacted their revenge: They now claim our land as theirs and they blockaded our ports to force us to surrender! Supplies are running low and our morale is going down, we have to do something!"
@@ -2321,7 +2389,7 @@
  secschwar.20.t:0 "The Gastein Convention"
  secschwar.20.d:0 "The territories in Schleswig-Holstein that were recently split up between us and Austria will be reassigned in todays conference - the proposal is to unite Schleswig and Holstein in exchange for expanding Austrias political influence. This treaty is supported so universally we simply cant decline it."
  secschwar.20.a:0 "Its a win for us either way!"
- 
+
  #Heir System
  eoanb_tt_event_heir_1_desperate:0 "§YWe will take most people as long as they have a somewhat valid claim.§!"
  eoanb_tt_event_heir_1_careful:0 "§YWe will be more careful and make sure that our heir can back up his claim.§!"
@@ -2354,13 +2422,13 @@
  heir.7.t:0 "Our heir found dead!"
  heir.7.d:0 "[Root.GetName] is still in shock after news spread this morning that our heir was found dead. We do not know what got to him, it might have been an assasin, a sudden illness or simply old age, but the succession of our country is once again in shaky hands..."
  heir.7.a:0 "Our nation mourns today."
- 
+
  #Religion System
  religion.1.t:0 "Religious Tensions at our border"
  religion.1.d:0 "For quite some time now we have been bordering a nation in which the majority religion is one of the denominations of Islam, and our country believes in a denomination of Christianity. This has led to major religious tensions erupting at our border, and we have gotten word that one or two skirmishes have taken place. Should we do something?"
  religion.1.a:0 "These things happen."
  religion.1.b:0 "We need to prepare for war!"
- 
+
  #System
  system.1.t:0 "DEBUG: Init Event"
  system.1.d:0 "The Mod's initialization event for the 1857 start."
@@ -2407,7 +2475,7 @@
  system.15.t:0 "DEBUG: NWT CHI WP"
  system.15.d:0 "This Events white peaces NWT and CHI."
  system.15.a:0 "Ok."
- 
+
  #Seven Weeks War
  sevenweekswar.1.t:0 "Financial Preparations for War"
  sevenweekswar.1.d:0 "Since our recent reforms may result in a big conflict, we have begun tuning our industry towards a war economy a bit and have already benefitted from it."
@@ -2426,6 +2494,10 @@
  eoanb_om_PRS_AUS_hungary_seperatist:0 "Supported Hungarian Seperatists"
  eoanb_tt_PRS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!"
  eoanb_tt_AUS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!"
+ eoanb_customeffect_sww_side_prs:0 "§YWe will support Prussia.§!"
+ eoanb_customeffect_sww_side_aus:0 "§YWe will support Austria.§!"
+ eoanb_customeffect_sww_side_mid:0 "§YWe will support the Middle States.§!"
+ eoanb_customeffect_sww_side_neutral:0 "§YWe will stay neutral.§!"
  eoanb_flag_bundestag_meeting_pending:0 "A meeting of the Bundestag will soon be in order."
  eoanb_flag_participated_in_bundestag:0 "This country participated in the Bundestag meeting."
  eoanb_tt_PRS_gerconfed_over:0 "§RThis marks the end of the German Confederation.§!"
@@ -2529,8 +2601,8 @@
  sevenweekswar.29.t:0 "Offers to join the Confederation"
  sevenweekswar.29.d:0 "The Countries of Frankfurt, Hesse, Thuringia and Saxony, formerly neutral or even enemies of us, have appealed to us, wanting to join the North German Confederation."
  sevenweekswar.29.a:0 "What can we do but accept?"
- eoanb_tt_PRS_can_call:0 "§YPrussia§! will be able to call us into a war with §YAustria§!. We will §Rnot§! be able to decline this call to arms."
- eoanb_tt_AUS_can_call:0 "§YAustria will be able to call us into a war with §YPrussia§!. We will §Rnot§! be able to decline this call to arms."
+ eoanb_tt_PRS_can_call:0 "§YPrussia§! will be able to call us into a war with §YAustria§!. We will §Rnot§! be able to decline this call to arms.\n"
+ eoanb_tt_AUS_can_call:0 "§YAustria§! will be able to call us into a war with §YPrussia§!. We will §Rnot§! be able to decline this call to arms.\n"
  eoanb_flag_PRS_ally_sww:0 "This country is allied with Prussia in the Seven Weeks War."
  eoanb_flag_AUS_ally_sww:0 "This country is allied with Austria in the Seven Weeks War."
  sevenweekswar.30.t:0 "A Call to Arms by Prussia!"
@@ -2539,7 +2611,7 @@
  sevenweekswar.31.t:0 "A Call to Arms by Austria!"
  sevenweekswar.31.d:0 "We have been called into the military conflict between Prussia and Austria by Austria, who we agreed to ally with earlier! It is time for us to show those Prussians who rules in these lands..."
  sevenweekswar.31.a:0 "To War, [Root.GetName]!"
- 
+
  #Franco-Prussian War
  eoanb_tt_PRS_claims_SPR_leopold:0 "§YLeopold§! will lay claim to the §YSpanish Throne§!."
  eoanb_tt_FRA_allows_leopold_SPR:0 "§ROur neighbors and our own population will perceive us as extremely weak, which may lead to invasions or revolts.§!"
@@ -2659,7 +2731,7 @@
  fraprswarah.16.t:0 "We have won the war!"
  fraprswarah.16.d:0 "The war is won, and south Germany is ours! The time for unification has finally come!"
  fraprswarah.16.a:0 "South Germany is ours..."
- 
+
  #Austria-Hungary
  eoanb_tt_aushun_event_2_c:0 "§RThis may lead to a revolt in the future.§!"
  eoanb_tt_aushun_event_2_a:0 "§YA dual monarchy will be formed under the name of Austria-Hungary.§!"
@@ -2683,7 +2755,7 @@
  aushun.4.d:0 "Slovakia has long been included in fervent claims of Hungarian Seperatists. If we give it to the newly created nation of Hungary, we could improve our relations with them - plus, if the Slovakians decide to revolt too, it will not be our problem..."
  aushun.4.a:0 "Yes, it will strengthen our relations."
  aushun.4.b:0 "No, Slovakia rightfully belongs to us!"
- 
+
  #Technology
  eoanb_tt_tech_1:0 "We will switch from §YTraditional Army§! to §YVictorian Army§!."
  eoanb_tt_tech_2:0 "We will switch from §YVictorian Army§! to §YIndustrial Army§!."
@@ -2701,7 +2773,7 @@
  tech_news.1.d:0 "A renowned scientist in the field of biology from [ENG.GetNameDef] has recently published his newest book, entitled: \"On the Origin of Species\", in which he theorizes about the concept of evolution, how animals and other living matter on this planet came to be and evolved to exist in the forms we know them as today, and makes some predictions about the future of the field of biology and about evolution in general. Some voices in the church called for the banning of the book, but they were unsuccessfull, and it went on to become a massive success, with all of the 1250 stock copies ordered on the first day of its publication. The scientific community is hoping that knowledge in the biological sciences will be significantly brought forward by this book."
  tech_news.1.a:0 "An outstanding achievement."
  tech_news.1.b:0 "Great!"
- 
+
  #Russian Uprisings
  mahtra.1.t:0 "An Uprising In Estonia!"
  mahtra.1.d:0 "The Mahtra estate is full with rebellious peasants! They have risen up to protest the serfdom in the Russian Empire! How should we respond to such terrible acts of violence?"
@@ -2710,7 +2782,7 @@
  mahtra.2.t:0 "The Mahtra War is Over!"
  mahtra.2.d:0 "The Russian army has stopped the disasterous revolts in the Mahtra estate. The rebellious slaves were dealt with."
  mahtra.2.a:0 "Finally!"
- 
+
  #Russia
  russia.1.t:0 "Beijing Treatise"
  russia.1.d:0 "We have sent an envoy with count Nikolay Ignatiev in it's lead to the Qing empire to meet with Duke Gun of Aisin Goro. The treaty will decide on the exact boundaries between the Russian and the Qing Empires. We propose to decide the borders with the Amur river."
@@ -2725,7 +2797,7 @@
  russia.4.t:0 "The Qing Refuses!"
  russia.4.d:0 "The Qing empire has refused our proposal of the borders!"
  russia.4.a:0 "We will remember this!"
- 
+
  #French-Belgian Rail Crisis
  eoanb_tt_BEL_prepare_rail_law:0 "We will prepare a law against foreign investment in our state railways."
  eoanb_tt_FRA_call_rail_conference:0 "We will call Belgium and representatives of other major nations to a conference about the issue."
@@ -2769,7 +2841,7 @@
  fbrailcrisis.9.d:0 "Belgium has threatened to call in [ENG.GetNameDef], should we continue to threaten them. What is our response to this?"
  fbrailcrisis.9.a:0 "Let them have their railways then..."
  fbrailcrisis.9.b:0 "This doesn't scare us! Attack!"
- 
+
  #France
  france.1.t:0 "Suez Canal Technology"
  france.1.d:0 "We have the Technology to start building the Suez Canal!"
@@ -2865,7 +2937,7 @@
  arg_news.2.d:0 "The eight year long stalemate between the Argentine Confederation and Buenos Aires have broken, the Argentine Civil War has resumed. \n \nAfter the September 11th Revolution in 1852, the city of Buenos Aires acted independent from the Argentine Confederate government. Although foreign nations recognized the Confederation, the city of Buenos Aires was the most powerful and prosperous city in La Plata, which seriously damaged the capabilities of the Confederation. Now, the Governor of Buenos Aires, [BUE.GetLeader], has called for the renewal of war to end the Confederation. \n \nArgentina has become embroiled in another war against itself."
  arg_news.2.a:0 "Interesting"
  arg_news.2.b:0 "For Argentina!"
- 
+
  #Paraguay
  par.1.t:0 "The Death of Carlos Antonio Lopez"
  par.1.d:0 "The man who created a new paraguay, our presidente, has died today. He was the one that created our national anthem, our fleet, improved our arsenal and reformed our administrative system. As his health began to decay, he was slowly dying and finally, he died in this morning. He will be always remembered our own hearts, as the man who brought industry and agriculture to Paraguay and made our nation survive agaisnt our fellow platine neighbors. His son, Solano López, has assumed implementing his new modernization policies and a new nationalistic state."
@@ -2887,7 +2959,7 @@
  par.6.d:0 "Enough! Brazil has intervened in the affairs of our allies, we, the great country of Paraguay, will not stand down for this! Let us raise our swords, and march into the Brazilian land, for our revenge agaisnt our platine brothers. This dirty empire will be gone! Long live Paraguay! Viva el Presidente!"
  par.6.a:0 "Avante!!"
  par.7.t:0 "Paraguay invades Brazil!"
- par.7.d:0 "As a response to the Brazilian intervention in Uruguay that resulted in the Uruguay War, Lopez has claimed Brazilian land and captured the Brazilian ship 'Marquês de Olinda'. The Paraguayan colonel imprisoned and tortured the marines and as the news got to the Brazilian public, it was a shock that caused anger. Paraguayan ships quickly invaded the city of Coimbra in the Mato Grosso province of the Brazilian Empire. The Paraguayan president was quick to act, sending five thousand man towards Mato Grosso and oficially declaring war agaisnt an unprepared Brazilian army. Dom Pedro II has issued an emergency commission to reorganize the army and expand it, as he fear this conflict will not be a short one." 
+ par.7.d:0 "As a response to the Brazilian intervention in Uruguay that resulted in the Uruguay War, Lopez has claimed Brazilian land and captured the Brazilian ship 'Marquês de Olinda'. The Paraguayan colonel imprisoned and tortured the marines and as the news got to the Brazilian public, it was a shock that caused anger. Paraguayan ships quickly invaded the city of Coimbra in the Mato Grosso province of the Brazilian Empire. The Paraguayan president was quick to act, sending five thousand man towards Mato Grosso and oficially declaring war agaisnt an unprepared Brazilian army. Dom Pedro II has issued an emergency commission to reorganize the army and expand it, as he fear this conflict will not be a short one."
  par.7.a:0 "What?!"
  par.8.t:0 "Asking Argentina for Access"
  par.8.d:0 "Although the state of Argentina had declared neutrality in the conflict, both Paraguay and Brazil have sent requests to Argentina requesting that their armies be allowed to pass through their territory..."
@@ -2955,7 +3027,7 @@
  eoanb_om_heydt_edict:0 "Heydt's Repscript"
  eoanb_threat_ssw_war:0 "Second Schleswig War"
  eoanb_threat_sww_war:0 "Deutscher Krieg"
- 
+
  #Aces
  ace_promoted.1.t:0 "Ace Pilot Promoted"
  ace_promoted.2.t:0 "A Wild Ace Appears"
@@ -2983,7 +3055,7 @@
  eco_crash.1.t:0 "Panic of 1857 Hits Us!"
  eco_crash.1.d:0 "The Panic of 1857 is the first international economic downturn, spurred by the downturn in the American Stock Market. The ripples of this effect has not passed by us, and we are now feeling the effects of the crash!"
  eco_crash.1.a:0 "Damn!"
- 
+
  #Indepedence
  independence.1.t:0 "Our subject acting suspicious"
  independence.1.d:0 "One of our subjects has recently started acting very suspicious, gathering support for independence in their country and at the courts of other nations secretly...it might be best if we got some troops ready."
@@ -2995,7 +3067,7 @@
  independence.3.t:0 "Our struggle has succeeded!"
  independence.3.d:0 "Our fight for independence has succeeded - we have established ourselves as an independent nation on the world stage!"
  independence.3.a:0 "At last!"
- 
+
  #Germany
  germany.1.t:0 "The Flag of Germany"
  germany.1.d:0 "Our long and great struggle to unite the German states and secure our place as a considerable power in Europe has finally resulted in our victory! We have secured the emergence of a new, unitary German state - but now that we do have it there is one question to be raised: What flag shall our nation unite under? It would be for the best if we attend to this matter immediately..."
@@ -3099,7 +3171,7 @@
  eoanb_flag_GER_heligoland_offer_industry:0 "[PRS.GetNameDef] has offered industrial compensation in exchange for Heligoland"
  eoanb_flag_GER_heligoland_offer_curacao:0 "[PRS.GetNameDef] has offered the state of Curacao in exchange for Heligoland"
  eoanb_tt_ger_event_21_a:0 "§Y[PRS.GetNameDef]§! will transfer §YCuracao§! to us shortly."
- 
+
  #Britain
  eoanb_tt_ENG_event_1_a:0 "The §YThames§! will remain polluted until we clean it up."
  eoanb_flag_ENG_thames_polluted_stink:0 "The Thames is polluted with the \"Great Stink\""
@@ -3225,7 +3297,7 @@
  britainnews.1.a:0 "Finally, we are rid of them."
  britainnews.1.b:0 "Their lawmakers are class traitors!"
  britainnews.1.c:0 "Could be a wise move."
- 
+
  #Crisis of 1873
  PRS_is_in_1873_crisis:0 "§Y[PRS.GetNameDef]§! is currently in an economic crisis§!"
  eighteenseventhreecrisis.1.t:0 "Economic Crisis"
@@ -3237,7 +3309,7 @@
  eighteenseventhreecrisis.3.t:0 "Stabilization of the Industry"
  eighteenseventhreecrisis.3.d:0 "MISSING LOCALIZATION"
  eighteenseventhreecrisis.3.a:0 "It's looking good..."
- 
+
  #The Second Opium War
  eoanb_om_ENG_CHI_arrow_incident:0 "The Arrow Incident"
  eoanb_om_USA_CHI_opium_neutral:0 "US Neutrality"
