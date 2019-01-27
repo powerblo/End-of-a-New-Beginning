@@ -21,6 +21,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 40
+				is_historical_focus_on = yes
+			}
 		}
 		
 		completion_reward = {
@@ -48,6 +52,10 @@ focus_tree = {
 			reverse_add_opinion_modifier = {
 				target = PRS
 				modifier = eoanb_om_HAM_PRS_friend
+			}
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_prs
 			}
 		}
 	}
