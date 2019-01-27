@@ -400,7 +400,7 @@ focus_tree = {
 	
 	focus = { 
 		id = AUS_Future_Italy
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_Future_Habsburg_Italy
 		x = 10 
 		y = 6
 		cost = 70
@@ -672,6 +672,54 @@ focus_tree = {
 	}
 	
 	focus = { 
+		id = AUS_Keep_February_Patent
+		icon = GFX_goal_focus_support_liberalism
+		x = 2 
+		y = 12 
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_February_Patent
+        }
+		
+		available = {
+		    
+	    }
+		
+		completion_reward = {
+		   
+		}
+	}
+	
+	focus = { 
+		id = AUS_Discard_February_Patent
+		icon = GFX_goal_focus_support_liberalism
+		x = 4 
+		y = 12  
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+        prerequisite = {
+        focus = AUS_February_Patent
+        }
+		
+		available = {
+	    }
+		
+		completion_reward = {
+		   
+			
+		}
+	}
+	
+	focus = { 
 		id = AUS_Need_Absolutism
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 5
@@ -933,7 +981,7 @@ focus_tree = {
 		id = AUS_Reform_Empire
 		icon = GFX_goal_AUS_reform_the_empire
 		x = 5
-		y = 13 
+		y = 13  
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -967,7 +1015,7 @@ focus_tree = {
         }		
 		
         prerequisite = {
-		    focus = AUS_February_Patent
+		    focus = AUS_Discard_February_Patent
             focus = AUS_Supress_Hungarian_Minorities
         }
 		
@@ -993,6 +1041,37 @@ focus_tree = {
 			}
 	    } 
     }		
+	
+	focus = { 
+		id = AUS_Centralized_Constitutional_Monarchy 
+		icon = GFX_goal_AUS_reform_the_empire
+		x = 2  
+		y = 13  
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		    NOT = {
+		        AUS = {
+	 	            has_country_leader = {
+                    name = "Archduke Rainier"
+                    ruling_only = yes
+                    }
+			    }
+			}
+        }		
+		
+        prerequisite = {
+		    focus = AUS_Keep_February_Patent
+        }
+		
+		completion_reward = {
+            custom_effect_tooltip = AUS_tt_centralized_constitutional_monarchy 
+	    } 
+    }
 	
 	focus = { 
 		id = AUS_German_Empire 
@@ -1224,7 +1303,7 @@ focus_tree = {
 	  
 	focus = { 
 		id = AUS_New_Recruits_From_The_Honved #Expand the Uhlan Army 
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_Expand_Uhlans
 		x = 20  
 		y = 2
 		cost = 70
@@ -2044,7 +2123,7 @@ focus_tree = {
 	
 	focus = { 
 		id = AUS_Galician_Railways           
-		icon = GFX_AUS_placeholder
+		icon = GFX_goal_AUS_Finish_Galician_Railways
 		x = 18                       
 		y = 8         
 		cost = 70
