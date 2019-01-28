@@ -112,7 +112,7 @@ focus_tree = {
 		y = 5
 
 		prerequisite = {
-		focus = BRA_support_european_immigration
+		focus = BRA_italian_immigration
 		}
 		completion_reward = {
 		502 = {
@@ -2523,7 +2523,7 @@ focus = {
 	}
 	
 	focus = {
-		id = BRA_road_to_abolition
+		id = BRA_road_to_reforms
 		icon = GFX_goal_focus_enact_law
 		cost = 70
 		x = 34
@@ -2549,7 +2549,7 @@ focus = {
 		y = 13
 
 		prerequisite = {
-		focus = BRA_road_to_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2572,7 +2572,7 @@ focus = {
 		y = 13
 
 		prerequisite = {
-		focus = BRA_road_to_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2595,7 +2595,7 @@ focus = {
 		y = 13
 
 		prerequisite = {
-		focus = BRA_road_to_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2637,10 +2637,6 @@ focus = {
 	remove_idea = limited_constitution
 	add_idea = constitution_adopted
     }
-	swap_ideas = {
-	remove_idea = usa_slavery_law
-	add_idea = segregation
-	}
 	}
 	
 	}
