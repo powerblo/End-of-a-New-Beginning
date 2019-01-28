@@ -77,7 +77,7 @@ focus_tree = {
 		}
 		x = 5
 		y = 3
-		
+		mutually_exclusive = { focus = LIE_neutralism }
 		completion_reward = {
                 add_stability = 0.05
 		        add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_AUS_lowered }
@@ -177,7 +177,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-	    id = LIE_leaveprussia
+	    id = LIE_isolationismagain
 		icon = GFX_LIE_placeholder
 		cost = 75
 		x = 4
@@ -189,6 +189,77 @@ focus_tree = {
 		completion_reward = {
                      add_stability = -0.5
 					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_neutralism
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 3
+		prerequisite = {
+		focus = LIE_Confederationendangered
+		}
+		mutually_exclusive = { focus = LIE_Supportprussia }
+		completion_reward = {
+                     add_stability = 1.0
+					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_surviveforgotten
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 5
+		prerequisite = {
+		focus = LIE_neutralism
+		}
+		completion_reward = {
+					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_learnobserving
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 6
+		prerequisite = { 
+		focus = LIE_surviveforgotten
+		}
+		completion_reward = {
+					 add_political_power = 50
+					 add_ideas = LIE_warobserver
+		}
+	}
+	focus = {
+	    id = LIE_enforceindependence
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 7
+		prerequisite = {
+		focus = LIE_learnobserving
+		}
+		completion_reward = {
+					 add_political_power = 100
+					 add_stability = 0.1
+		}
+	}
+	focus = {
+	    id = LIE_austrianogood
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 8
+		y = 8
+		prerequisite = {
+		focus = LIE_enforceindependence
+		}
+		completion_reward = {
+					 remove_ideas = LIE_Austrianpartnership
+					  add_opinion_modifier = { target = AUS modifier = liechtensteinsaysbye }
+		              reverse_add_opinion_modifier = { target = AUS modifier = liechtensteinsaysbye }
 		}
 	}
 	
