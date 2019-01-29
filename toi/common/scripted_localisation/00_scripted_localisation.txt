@@ -58,3 +58,28 @@ defined_text = {
 		localization_key = eoanb_lockey_italian_celebrate_traditions_general
 	}
 }
+
+defined_text = {
+	name = GetGreekHeirOttoName 
+	text = {
+		trigger = {
+			THIS = {
+			    has_country_flag = GRE_flag_luitpold_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_luitpold"
+	}
+	text = {
+		trigger = { 
+			THIS = {
+			    has_country_flag = GRE_flag_ludwig_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_ludwig"
+	}
+	text = {
+		trigger = { 
+		}
+		localization_key = "eoanb_greek_heir_otto_none" 
+	}
+}

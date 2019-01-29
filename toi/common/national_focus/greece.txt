@@ -12,776 +12,617 @@ country = {
 #Start - Politics
 
 	focus = {
-		id = GRE_elections_1859
-		icon = GFX_goal_focus_elections
-		x = 4
+		id = GRE_Matters_of_Realm_1857 
+		icon = GFX_focus_government_icon 
+		x = 6   
 		y = 0
 		cost = 70
 		available_if_capitulated = no
-		
-	    available = {
-        always = no
-        }
 	
 		ai_will_do = {
-			factor = 0
+			factor = 1 
 		}
 		
 		completion_reward = {
-		    hidden_effect = {
-			    set_variable = {
-                    var = var_otto
-                    value = 0 
-				}
-		    }		
+		    GRE = {
+			    add_political_power = 100 
+			}
 	    }	
 	}
 	
 	focus = {
-		id = GRE_absolutism
-		icon = GFX_focus_rom_royal_dictatorship
-		x = 6
-		y = 1
+		id = GRE_Succession_Issue 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2         
+		y = 1 
 		cost = 70
 		available_if_capitulated = no
-		
-	    available = {
-	        has_country_flag = otto_win
-        }		
-		
-		cancel_if_invalid = no
-		
+	
 		ai_will_do = {
-			factor = 0
+			factor = 1 
 		}
-		mutually_exclusive = { focus = GRE_constitutionalism }
-		prerequisite = { focus = GRE_elections_1859 }
+		
+		prerequisite = {
+		    focus = GRE_Matters_of_Realm_1857
+		}
 		
 		completion_reward = {
-			add_political_power = -50
-			add_stability = -0.05
-		}
+		    GRE = { 
+			    country_event = GRE_succession.1 
+			}
+	    }	
 	}
 	
 	focus = {
-		id = GRE_constitutionalism
-		icon = GFX_focus_rom_handle_king
-		x = 2
-		y = 1
+		id = GRE_A_Visit_Munchen  
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2       
+		y = 2  
 		cost = 70
 		available_if_capitulated = no
-		
-	    available = {
-        	has_country_flag = otto_lose
-        }	
-		
-		cancel_if_invalid = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		mutually_exclusive = { focus = GRE_absolutism }
-		prerequisite = { focus = GRE_elections_1859 }
+		
+		prerequisite = {
+		    focus = GRE_Succession_Issue
+		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-		}
-	}
-
-#Constitutionalism sub-tree 
-
-	focus = {
-		id = GRE_reduce_corruption
-		icon = GFX_goal_focus_reform_administration
-		x = 1
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = GRE_constitutionalism }
-		
-		completion_reward = {
-		  GRE = {
-			add_political_power = -100
-			add_stability = -0.05
-			}
-		         hidden_effect = { 
-                 var_ottoc_value = yes
-                }
-             custom_effect_tooltip = GRE_constitutionalism_txt
-        }		
-    }
-
-	focus = {
-		id = GRE_rewrite_constitution
-		icon = GFX_goal_focus_enact_law
-		x = 3
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = GRE_constitutionalism }
-		
-		completion_reward = {
-		  GRE = {
-			add_political_power = 50
-			add_stability = 0.01
-			swap_ideas	= {
-			     add_idea = parliamentary_monarchy
-				 remove_idea = constitutional_monarchy
-		}
-			swap_ideas	= {
-				 add_idea = constitution_adopted
-				 remove_idea = limited_constitution
-		}
-			}
-		         hidden_effect = { 
-				 var_ottoc_value = yes
-                }
-             custom_effect_tooltip = GRE_absolutism_txt
-        }	
+		    GRE = { 
+			    country_event = GRE_succession.2 
+			}		    		
+	    }	
 	}
 	
 	focus = {
-		id = GRE_greek_customs
-		icon = GFX_goal_generic_neutrality_focus
-		x = 1
-		y = 3
+		id = GRE_A_New_Heir   
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3         
+		y = 3  
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { 
-	        focus =	GRE_reduce_corruption
-	        focus =	GRE_rewrite_constitution
+		
+		prerequisite = {
+		    focus = GRE_A_Visit_Munchen
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Deadlock_Persists
 		}
 		
 		completion_reward = {
 		    GRE = {
-                add_ideas = GRE_idea_Greekpolitics
-		    }
-		    hidden_effect = { 
-                var_ottoc_value = yes
-            }
-            custom_effect_tooltip = GRE_constitutionalism_txt
-        }	
+		        swap_ideas = {
+                    remove_idea = GRE_idea_uncertain_succession 
+                    add_idea = GRE_idea_certain_succession			    
+			    }	
+            }			
+	    }	
 	}
-
 	
 	focus = {
-		id = GRE_relax_censorship
-		icon = GFX_goal_focus_newspapers
-		x = 3
-		y = 3
+		id = GRE_Deadlock_Persists    
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1               
+		y = 3  
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_A_Visit_Munchen
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_A_New_Heir
+		}
+		
+		completion_reward = {
+		    add_stability = -0.05 
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Ludwigs_Conversion     
+		icon = GFX_focus_generic_treaty
+		relative_position_id = GRE_Matters_of_Realm_1857
+		dynamic = yes 
+		x = -3                      
+		y = 4  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_A_New_Heir
+		}
+		
+		completion_reward = {
+		    country_event = {
+			   id = GRE_succession.3 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Amalia_Succession      
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1              
+		y = 4  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Deadlock_Persists
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        swap_ideas = {
+                    remove_idea = GRE_idea_uncertain_succession 
+                    add_idea = GRE_idea_Amalia_succession 			    
+			    }	
+            }		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Otto_Death       
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2               
+		y = 5   
+		cost = 70
+		available_if_capitulated = no
+	
+        available = {
+		    GRE = {
+			    has_country_flag = w 
+			}
+		}	
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		        focus = GRE_Ludwigs_Conversion
+		    	focus = GRE_Amalia_Succession
 		}
 		prerequisite = {
-focus =	GRE_reduce_corruption
-focus =	GRE_rewrite_constitution
+		    focus = GRE_Monarchy_Stands_Strong
 		}
 		
 		completion_reward = {
-		  GRE = {
-         add_stability = 0.02
-		 add_political_power = 50 
-		  }
-		         hidden_effect = { 
-                 var_ottoc_value = yes
-                }
-             custom_effect_tooltip = GRE_constitutionalism_txt
-        }	
+		    
+	    }	
 	}
 	
 	focus = {
-		id = GRE_true_parliamentarism
-		icon = GFX_goal_support_democracy
-		x = 2
-		y = 4
+		id = GRE_Old_Order_Continues       
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2                 
+		y = 1   
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = 
-		GRE_greek_customs } 
-		prerequisite = { focus =
-		GRE_relax_censorship } 
+		
+		prerequisite = {
+		    focus = GRE_Matters_of_Realm_1857
+		}
+		
+		completion_reward = {
+		    add_political_power = 50 			
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Censorship_Autocracy        
+		icon = GFX_goal_focus_controlled_press
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2                
+		y = 2    
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Old_Order_Continues
+		}
 		
 		completion_reward = {
 		    GRE = {
-		        add_political_power = 150
-                add_stability = 0.05		  
-			    swap_ideas	= {
-			        add_idea = free_elections
-				    remove_idea = limited_elections
-		        }
-			    swap_ideas	= {
-			        add_idea = universal_male_suffrage
-				    remove_idea = parliamentary_suffrage
-		        }
-		    }
-		    hidden_effect = { 
-                var_ottoc_value = yes			
+		        add_ideas = GRE_idea_ottos_despotism
+            }			
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Enlightened_Despotism         
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2               
+		y = 3     
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Censorship_Autocracy 
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        add_ideas = GRE_idea_Enlightened_Despotism 
 			}
-            custom_effect_tooltip = GRE_constitutionalism_txt
-        }	
-	}
-	
-#Absolutism sub-tree 
-
-	focus = {
-		id = GRE_dissolve_parliament
-		#icon = 
-		x = 5
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = GRE_absolutism }
-		
-		completion_reward = {
-		  GRE = {
-		 add_political_power = 100 
-			swap_ideas	= {
-			     add_idea = no_constitution
-				 remove_idea = limited_constitution
-		}
-		  }
-		         hidden_effect = { 
-				  var_ottoa_value = yes
-                }
-             custom_effect_tooltip = GRE_absolutism_txt
-        }
+	    }	
 	}
 	
 	focus = {
-		id = GRE_imprison_dissent
-		icon = GFX_focus_generic_self_management
-		x = 7
-		y = 2
+		id = GRE_Monarchy_Stands_Strong          
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1               
+		y = 4      
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = GRE_absolutism }
+		
+		prerequisite = {
+		    focus = GRE_Enlightened_Despotism  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Old_Order_Overthrown
+		}
 		
 		completion_reward = {
-		  GRE = {
-         add_political_power = 100 
-		 add_stability = -0.05		 
-			swap_ideas	= {
-			     add_idea = absolutism
-				 remove_idea = parliamentary_suffrage
-		}
-		  }
-		         hidden_effect = { 
-                 var_ottoa_value = yes
-                }
-             custom_effect_tooltip = GRE_absolutism_txt
-        }
+		    		
+	    }	
 	}
 	
 	focus = {
-		id = GRE_royalist_administration
-		icon = GFX_focus_generic_self_management
-		x = 5
-		y = 3
+		id = GRE_Old_Order_Overthrown           
+		icon = GFX_goal_focus_brutal_end_monarchy
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 3                 
+		y = 4      
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = GRE_dissolve_parliament
-                         focus = GRE_imprison_dissent }
+		
+		prerequisite = {
+		    focus = GRE_Enlightened_Despotism  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Monarchy_Stands_Strong
+		}
 		
 		completion_reward = {
-		  GRE = { 
-		 add_stability = 0.02		 
-			swap_ideas	= {
-			     add_idea = no_elections
-				 remove_idea = limited_elections
-		}
-			swap_ideas	= {
-			     add_idea = absolute_monarchy
-				 remove_idea = constitutional_monarchy
-		}
-		  }
-		         hidden_effect = { 
-                 var_ottoa_value = yes
-                }
-             custom_effect_tooltip = GRE_absolutism_txt
-        }
+		    		
+	    }	
 	}
-
+	
 	focus = {
-		id = GRE_purge_civil_servants
-		icon = GFX_focus_generic_self_management
-		x = 7
-		y = 3
+		id = GRE_Ludwigs_Coronation            
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -4                        
+		y = 6       
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = GRE_dissolve_parliament
-                         focus = GRE_imprison_dissent	}
+		
+		prerequisite = {
+		    focus = GRE_Otto_Death  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Amalias_Regency 
+		}
 		
 		completion_reward = {
-		  GRE = {
-         add_political_power = -200 
-		 add_stability = 0.02		 
-		  }
-		         hidden_effect = { 
-                   var_ottoa_value = yes
-                }
-             custom_effect_tooltip = GRE_absolutism_txt
-        }
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_appease_populace
-		icon = GFX_focus_generic_self_management
-		x = 6
-		y = 4
+	focus = {
+		id = GRE_Amalias_Regency            
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 0                        
+		y = 6       
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = 
-		GRE_royalist_administration } 
-		prerequisite = { focus =
-		GRE_purge_civil_servants } 
+		
+		prerequisite = {
+		    focus = GRE_Otto_Death  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Ludwigs_Coronation 
+		}
 		
 		completion_reward = {
-		         hidden_effect = { 
-                    var_ottoa_value = yes			
-		            }
-             custom_effect_tooltip = GRE_appease_populace_txt
-        }
+		    		
+	    }	
 	}
 	
-#Otto Abdicates sub-tree
-
-focus = {
-		id = GRE_otto_abdication
-		#icon = GFX_focus_generic_self_management
-		x = 3
-		y = 5
+	focus = {
+		id = GRE_Royal_Tour             
+		icon = GFX_goal_focus_railroad_development
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -5                           
+		y = 7         
 		cost = 70
 		available_if_capitulated = no
-		
-	available = {
-        GRE = { has_country_flag = otto_removed } 
-        }
-		
-		mutually_exclusive = { focus = GRE_otto_succession }
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-		    custom_effect_tooltip = GRE_tt_otto_abdication
-		}
-
-	}
-
-#English-style Monarchy sub-sub-tree 
 	
-focus = {
-		id = GRE_king_george
-		icon = GFX_goal_GRE_king_george
-		x = 2
-		y = 6
-		cost = 70
-		available_if_capitulated = no
-		
-	available = {
-        GRE = { has_country_flag = GRE_flag_George_I }
-        }
-		
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { 
-	focus =	GRE_otto_abdication }  
-	
-	    mutually_exclusive = { focus = GRE_greek_republic focus = GRE_king_alfred focus = GRE_king_luitpold }
+		
+		prerequisite = {
+		    focus = GRE_Ludwigs_Coronation  
+		}
 		
 		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = GRE_tt_king_george
-		}
-}
-
-focus = {
-		id = GRE_king_alfred
-		icon = GFX_goal_GRE_king_alfred
-		x = 4
-		y = 6
-		cost = 70
-		available_if_capitulated = no
-		
-	available = {
-        GRE = { has_country_flag = GRE_flag_Alfred_I }
-        }
-		
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {  
-	focus =	GRE_otto_abdication }  
-	
-	    mutually_exclusive = { focus = GRE_greek_republic focus = GRE_king_george focus = GRE_king_luitpold }
-		
-		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = GRE_tt_king_alfred 
-		}
-	}
-
-focus = {
-		id = GRE_ionian_islands
-		icon = GFX_goal_GRE_ionian_islands
-		x = 3 
-		y = 7
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		available = {
-        always = no
-        }
-		
-		prerequisite = { focus = 
-		GRE_king_george }
-        prerequisite = { focus = 
-		GRE_king_alfred }		
-		
-		completion_reward = {
-			add_political_power = 100 
-			add_stability = 0.05
-		}
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_liberal_constitution
-		icon = GFX_goal_focus_enact_law
-		x = 3 
-		y = 8
+	focus = {
+		id = GRE_German_Customs              
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3                             
+		y = 7         
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = 
-		GRE_ionian_islands }	
+		
+		prerequisite = {
+		    focus = GRE_Ludwigs_Coronation  
+		}
 		
 		completion_reward = {
-			add_popularity = {
-                ideology = centrism
-                popularity = 0.15  
-            }
-			add_popularity = {
-                ideology = traditional_conservatism
-                popularity = 0.15   
-            }
-		}
+		    		
+	    }	
 	}
 	
-#Republic sub-sub-tree 
-
-focus = {
-		id = GRE_greek_republic
-		icon = GFX_goal_GRE_republic
-		x = 7
-		y = 6
+	focus = {
+		id = GRE_Search_for_Bride                
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -5                                 
+		y = 8          
 		cost = 70
 		available_if_capitulated = no
-		
-		available = {
-        GRE = { has_country_flag = GRE_flag_Republic }
-        }
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = 
-		GRE_otto_abdication }	
 		
-		mutually_exclusive = { focus = GRE_king_alfred focus = GRE_king_george focus = GRE_king_luitpold }
+		prerequisite = {
+		    focus = GRE_Royal_Tour   
+		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			custom_effect_tooltip = GRE_tt_greek_republic
-		}
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_sons_pericles
-		icon = GFX_focus_sons_pericles
-		x = 7
-		y = 7
+	focus = {
+		id = GRE_Look_Landstag               
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3                                
+		y = 8          
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
-		prerequisite = { focus = 
-		GRE_greek_republic }	
+		
+		prerequisite = {
+		    focus = GRE_German_Customs  
+		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			
-		}
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_liberal_republic
+	focus = {
+		id = GRE_Liberal_Administration                
 		icon = GFX_goal_focus_support_liberalism
-		x = 6 
-		y = 8
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1                                  
+		y = 7           
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
 		
-		mutually_exclusive = { focus = GRE_conservative_republic }
-
-		prerequisite = { focus = 
-		GRE_sons_pericles }	
+		prerequisite = {
+		    focus = GRE_Amalias_Regency  
+		}
 		
 		completion_reward = {
-			add_popularity = {
-                ideology = centrism
-                popularity = 0.25 
-            }
-			add_popularity = {
-                ideology = traditional_conservatism
-                popularity = 0.05     
-            }	
-		}
-	}
-
-focus = {
-		id = GRE_conservative_republic
-		icon = GFX_goal_focus_support_conservatism
-		x = 8
-		y = 8
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		mutually_exclusive = { focus = GRE_liberal_republic }
-
-		prerequisite = { focus = 
-		GRE_sons_pericles }	
-		
-		completion_reward = {
-			add_popularity = {
-                ideology = traditional_conservatism
-                popularity = 0.25 
-            }
-			add_popularity = {
-                ideology = centrism
-                popularity = 0.05     
-            }	
-		}
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_rule_majority
-		#icon = GFX_focus_generic_self_management
-		x = 7
-		y = 10 
+	focus = {
+		id = GRE_Search_New_King                 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                   
+		y = 7           
 		cost = 70
 		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-
-		prerequisite = { focus = GRE_conservative_republic 
-        focus = GRE_liberal_republic 
-         focus = GRE_liberal_constitution 		
-         focus = GRE_german_constitutionalism
-}		 
-		
-		completion_reward = {
-            GRE = {
-			    add_ideas = GRE_idea_rule_majority
-			}
-		}
-	}	
-
-#Otto Succession sub-tree
-
-focus = {
-		id = GRE_otto_succession
-		#icon = GFX_focus_generic_self_management
-		x = 11
-		y = 5
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-	available = {
-        always = no
-        }
-		
-	    mutually_exclusive = { focus = GRE_otto_abdication }
-
-		prerequisite = { 
-        focus = GRE_true_parliamentarism
-        focus = GRE_appease_populace }	
-		
-		completion_reward = {
-            custom_effect_tooltip = GRE_tt_otto_succession
-		}
-	}	
 	
-#King Leopold sub-sub-tree
-
-focus = {
-		id = GRE_king_luitpold
-		icon = GFX_goal_GRE_king_luitpold
-		x = 11 
-		y = 6
-		cost = 70
-		available_if_capitulated = no
-		
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
 		
-	available = {
-        GRE = { has_country_flag = GRE_flag_Luitpold_I } 
-        }
-
-		prerequisite = { focus = 
-		GRE_otto_succession }	
-		
-        mutually_exclusive = { focus = GRE_king_alfred focus = GRE_king_george focus = GRE_greek_republic }
+		prerequisite = {
+		    focus = GRE_Amalias_Regency  
+		}
 		
 		completion_reward = {
-			custom_effect_tooltip = GRE_tt_king_luitpold
-		}
+		    		
+	    }	
 	}
 	
-focus = {
-		id = GRE_unpopular_king
-		#icon = GFX_focus_generic_self_management
-		x = 11 
-		y = 7
+	focus = {
+		id = GRE_Queen_Victorias_Model                 
+		icon = GFX_goal_focus_queen_return
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1                                  
+		y = 8            
 		cost = 70
 		available_if_capitulated = no
-		
+	
 		ai_will_do = {
-			factor = 1
+			factor = 1 
 		}
+		
+		prerequisite = {
+		    focus = GRE_Liberal_Administration  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Prepare_Succession                 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                   
+		y = 8            
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Search_New_King  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Regent_Steps_Down                   
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                     
+		y = 9            
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Prepare_Succession  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Elections_of_Date_1                    
+		icon = GFX_goal_focus_elections
+		dynamic = yes 
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2                                      
+		y = 9             
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Look_Landstag  
+		    focus = GRE_Queen_Victorias_Model
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
 
-		prerequisite = { focus = 
-		GRE_king_luitpold }	
-		
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			
-		}
-	}
-	
-focus = {
-		id = GRE_continue_absolutism
-		icon = GFX_focus_rom_royal_dictatorship
-		x = 10 
-		y = 8
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		mutually_exclusive = { focus = GRE_german_constitutionalism }
-	
-		prerequisite = { focus = 
-		GRE_unpopular_king }
-		
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			
-		}
-	}
-	
-focus = {
-		id = GRE_german_constitutionalism
-		icon = GFX_focus_rom_handle_king
-		x = 12 
-		y = 8
-		cost = 70
-		available_if_capitulated = no
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-	    mutually_exclusive = { focus = GRE_continue_absolutism }
-	
-		prerequisite = { focus = 
-		GRE_unpopular_king }
-		
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			
-		}
-	}
 	
 #####Economic Tree#####
 
 focus = {
 		id = GRE_agrarian_nation
 		#icon = GFX_focus_generic_self_management
-		x = 16 
+		x = 16         
 		y = 0
 		cost = 70
 		available_if_capitulated = no
