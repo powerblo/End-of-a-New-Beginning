@@ -13,12 +13,14 @@ on_actions = {
 			OUD = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			GWA = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
 			HOL = { country_event = { id = holland_oog.1 } }
+      SER = { country_event = { id = SERmisc.5 days = 1 } }
+			FRA = { country_event = { id = nap_france.21 } }
 			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			set_global_flag = eoanb_flag_sow_ongoing
 		}
 	}
 
-	# country 
+	# country
 	on_new_term_election = {
 		random_events = {
 			100 = election.1 #Generic Elections
@@ -141,8 +143,8 @@ on_actions = {
 	#
 	#	}
 	#}
-
-	# ROOT is capitulated country, FROM is winner... Wrong, this is backwards according to testing.
+	
+	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
 			if = {
@@ -348,6 +350,13 @@ on_actions = {
 						}
 					}
 				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = FRA }
+					FROM = { tag = BAB }
+				}
+				country_event = { id = nap_france.153 }
 			}
 		}
 	}
