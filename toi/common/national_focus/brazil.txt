@@ -89,8 +89,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_italian_immigration
-		icon = GFX_goal_focus_form_italy
+		id = BRA_portuguese_immigration
+		icon = GFX_goal_focus_merchants_portugese
 		cost = 70
 		x = 2
 		y = 4
@@ -99,49 +99,59 @@ focus_tree = {
 		focus = BRA_support_european_immigration
 		}
 		completion_reward = {
-			add_political_power = 20
+        add_political_power = 10
 		}
 	}
 	
 	
 	focus = {
-		id = BRA_southern_italian_communities
-		icon = GFX_goal_focus_italycom
+		id = BRA_portuguese_communities
+		icon = GFX_goal_focus_portugalcom
 		cost = 70
 		x = 2
 		y = 5
 
 		prerequisite = {
-		focus = BRA_italian_immigration
+		focus = BRA_portuguese_immigration
 		}
 		completion_reward = {
-		502 = {
+		499 = {
+		add_manpower = 5000
+		}
+		
+		501 = {
 		add_manpower = 10000
 		}
-		503 = {
-		add_manpower = 8000
+		
+	    500 = {
+		add_manpower = 10000
 		}
-		1036 = {
-		add_manpower = 9000 
-		}
+		
+		add_political_power = 15
+		
 		}
 	}
 	
 	focus = {
-		id = BRA_italian_workforce_for_sao_paulo
+		id = BRA_land_for_immigrants
 		icon = GFX_focus_ITA_Farms
 		cost = 70
 		x = 2
 		y = 6
 
 		prerequisite = {
-		focus = BRA_southern_italian_communities
+		focus = BRA_portuguese_communities
 		}
 		completion_reward = {
-		501 = {
-		add_manpower = 10000
+		random_state = {
+		limit = { is_owned_by = BRA }
+		add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+		add_manpower = 3000		
 		}
-		add_timed_idea = { idea = BRA_italian_workforce days = 80 }
 		}
 	}
 	
@@ -229,7 +239,7 @@ focus_tree = {
 		focus = BRA_develop_the_south
 		}
 		prerequisite = {
-		focus = BRA_italian_workforce_for_sao_paulo
+		focus = BRA_land_for_immigrants
 		}
 		completion_reward = {
 		502 = {
@@ -659,7 +669,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_southern_railways
+		id = BRA_southern_railway
 		icon = GFX_goal_continuous_non_factory_construct
 		cost = 70
 		x = 14
@@ -677,20 +687,6 @@ focus_tree = {
 					instant_build = yes
 				}
 		}
-	    1036 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
-	503 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
 		}
 	}
 	
@@ -702,18 +698,11 @@ focus = {
 		y = 8
 
 		prerequisite = {
-		focus = BRA_southern_railways
+		focus = BRA_southern_railway
 		}
 
 		completion_reward = { 
-		1044 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
-	    499 = {
+	    1041 = {
 		add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -723,7 +712,7 @@ focus = {
 	504 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -1980,28 +1969,12 @@ USA = { country_event =  brazil.7  }
 	}
 	}
 	
-	focus = {
-		id = BRA_condemn_febrerista_dictatorship
-		icon = GFX_goal_generic_military_sphere
-		cost = 70
-		x = 56
-		y = 17
-        
-		prerequisite = {
-		focus = BRA_claim_brazilian_natural_borders
-		}
-		
-		
-	completion_reward = {
-    add_political_power = 35
-	}
-	}
 	
 	focus = {
 		id = BRA_reclaim_the_cisplatine_province
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 70
-		x = 54
+		x = 55
 		y = 17
         
 		prerequisite = {
@@ -2010,13 +1983,13 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-    add_state_core = 1097
-	add_state_core = 1096
-	add_state_core = 1095
-	add_state_core = 1081
-	add_state_core = 1082
-	add_state_core = 1094
-	add_state_core = 300
+    add_state_claim = 1097
+	add_state_claim = 1096
+	add_state_claim = 1095
+	add_state_claim = 1081
+	add_state_claim = 1082
+	add_state_claim = 1094
+	add_state_claim = 300
 	URG = { country_event = brazil.15 }
 	 }
 	}
@@ -2025,7 +1998,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_the_second_cisplatine_war
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 70
-		x = 54
+		x = 55
 		y = 18
         
 		prerequisite = {
@@ -2040,31 +2013,6 @@ USA = { country_event =  brazil.7  }
 }
 	 }
 	}
-	
-	focus = {
-		id = BRA_parana_river_claims
-		icon = GFX_goal_generic_amphibious_assault
-		cost = 70
-		x = 56
-		y = 18
-        
-		prerequisite = {
-		focus = BRA_condemn_febrerista_dictatorship
-		}
-		
-		
-	completion_reward = {
-       add_state_core = 1065
-	   add_state_core = 1071
-	   add_state_core = 1072
-	   add_state_core = 1069
-	   add_state_core = 1138
-	   add_state_core = 1139
-	   add_state_core = 1068
-	   add_state_core = 301
-	PAR = { country_event = brazil.16 }
-	}
-	 }
 	 
 
 	 
@@ -2072,7 +2020,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_our_greatest_foe
 		icon = GFX_goal_generic_attack_allies
 		cost = 70
-		x = 52
+		x = 53
 		y = 17
         
 		prerequisite = {
@@ -2107,7 +2055,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_challenge_the_confederation
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 70
-		x = 52
+		x = 53
 		y = 18
         
 		prerequisite = {
@@ -2116,8 +2064,7 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-           add_state_core = 1058
-		   add_state_core = 1062
+		add_state_claim = 1062
 	ARG = { country_event = brazil.17 }
  }
 	}
@@ -2154,26 +2101,8 @@ focus = {
 		
 		
 	completion_reward = {
-  add_state_core = 310
+  add_state_claim = 310
   add_political_power = 35
-}
-}
-
-focus = {
-		id = BRA_claim_the_dutch_guyana
-		icon = GFX_goal_generic_small_arms
-		cost = 70
-		x = 48
-		y = 16
-        
-		prerequisite = {
-		focus = BRA_northern_claims
-		}
-		
-		
-	completion_reward = {
-  add_state_core = 309
-  add_political_power = -15
 }
 }
 
@@ -2183,12 +2112,9 @@ focus = {
 		id = BRA_america_for_the_americans_doctrine
 		icon = GFX_goal_generic_propaganda
 		cost = 70
-		x = 49
+		x = 50
 		y = 17
         
-		prerequisite = {
-		focus = BRA_claim_the_dutch_guyana
-		}
 		prerequisite = {
 		focus = BRA_reclaim_the_portuguese_guyana
 		}
@@ -2201,10 +2127,10 @@ focus = {
 }
 
 focus = {
-		id = BRA_claim_the_british_guyana
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		id = BRA_protest_french_claims
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		cost = 70
-		x = 49
+		x = 50
 		y = 18
         
 		prerequisite = {
@@ -2213,26 +2139,29 @@ focus = {
 		
 		
 	completion_reward = {
-   add_state_core = 687
   add_political_power = -15
+  	    BRA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = protest_action_light
+				}
+			}
 }
 }
 
 focus = {
-		id = BRA_challenge_european_imperialism
+		id = BRA_challenge_french_imperialism
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 70
-		x = 49
+		x = 50
 		y = 19
         
 		prerequisite = {
-		focus = BRA_claim_the_british_guyana
+		focus = BRA_protest_french_claims
 		}
 		
 		
 	completion_reward = {
-   ENG = { country_event = brazil.19 }
-   HOL = { country_event = brazil.19 }
    FRA = { country_event = brazil.19 }
 }
 }
@@ -2267,13 +2196,13 @@ focus = {
 		
 		
 	completion_reward = {
-   add_state_core = 753
+   add_state_claim = 753
    add_political_power = -15
 }
 }
 
 focus = {
-		id = BRA_surprise_attack_bolivia
+		id = BRA_destabilize_bolivian_control
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 70
 		x = 46
@@ -2285,29 +2214,29 @@ focus = {
 		
 		
 	completion_reward = {
-    create_wargoal = {
-    type = take_core_state
-    target = BOL
+   BOL = {
+   remove_state_core = 753
 }
 }
 }
 
+
 focus = {
-		id = BRA_fortify_the_colombian_border
+		id = BRA_fortify_the_bolivian_border
 		icon = GFX_goal_generic_fortify_city
 		cost = 70
 		x = 46
 		y = 19
         
 		prerequisite = {
-		focus = BRA_surprise_attack_bolivia
+		focus = BRA_destabilize_bolivian_control
 		}
 		
 		
 	completion_reward = {
-    495 = { add_building_construction = { type = bunker province = 13083 level = 1 instant_build = yes } }
-	495 = { add_building_construction = { type = bunker province = 12919 level = 1 instant_build = yes } }
-	495 = { add_building_construction = { type = bunker province = 5083 level = 1 instant_build = yes } }
+    495 = { add_building_construction = { type = bunker province = 8254 level = 3 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 12965 level = 3 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 8185 level = 3 instant_build = yes } }
 }
 }
 
@@ -2316,14 +2245,14 @@ focus = {
 		id = BRA_learn_from_british_expeditions
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
 		cost = 70
-		x = 47
+		x = 48
 		y = 20
         
 		prerequisite = {
-		focus = BRA_fortify_the_colombian_border
+		focus = BRA_fortify_the_bolivian_border
 		}
 		prerequisite = {
-		focus = BRA_challenge_european_imperialism
+		focus = BRA_challenge_french_imperialism
 		}
 		
 		
@@ -2337,7 +2266,7 @@ focus = {
 		id = BRA_our_own_colonial_expeditions
 		icon = GFX_focus_secret_rearmament
 		cost = 70
-		x = 47
+		x = 48
 		y = 21
         
 		prerequisite = {
