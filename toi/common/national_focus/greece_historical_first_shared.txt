@@ -1,625 +1,6 @@
-focus_tree = {
-	id = greece_focus
-country = {
-		factor = 0
-		
-	modifier = {
-			add = 10
-			tag = GRE
-		}
-	}
-	
-#Start - Politics
+	#####Economic Tree#####
 
-	focus = {
-		id = GRE_Matters_of_Realm_1857 
-		icon = GFX_focus_government_icon 
-		x = 6   
-		y = 0
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		completion_reward = {
-		    GRE = {
-			    add_political_power = 100 
-			}
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Succession_Issue 
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -2         
-		y = 1 
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Matters_of_Realm_1857
-		}
-		
-		completion_reward = {
-		    GRE = { 
-			    country_event = GRE_succession.1 
-			}
-	    }	
-	}
-	
-	focus = {
-		id = GRE_A_Visit_Munchen  
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -2       
-		y = 2  
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Succession_Issue
-		}
-		
-		completion_reward = {
-		    GRE = { 
-			    country_event = GRE_succession.2 
-			}		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_A_New_Heir   
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -3         
-		y = 3  
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_A_Visit_Munchen
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_Deadlock_Persists
-		}
-		
-		completion_reward = {
-		    GRE = {
-		        swap_ideas = {
-                    remove_idea = GRE_idea_uncertain_succession 
-                    add_idea = GRE_idea_certain_succession			    
-			    }	
-            }			
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Deadlock_Persists    
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -1               
-		y = 3  
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_A_Visit_Munchen
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_A_New_Heir
-		}
-		
-		completion_reward = {
-		    add_stability = -0.05 
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Ludwigs_Conversion     
-		icon = GFX_focus_generic_treaty
-		relative_position_id = GRE_Matters_of_Realm_1857
-		dynamic = yes 
-		x = -3                      
-		y = 4  
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_A_New_Heir
-		}
-		
-		completion_reward = {
-		    country_event = {
-			   id = GRE_succession.3 
-			}
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Amalia_Succession      
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -1              
-		y = 4  
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Deadlock_Persists
-		}
-		
-		completion_reward = {
-		    GRE = {
-		        swap_ideas = {
-                    remove_idea = GRE_idea_uncertain_succession 
-                    add_idea = GRE_idea_Amalia_succession 			    
-			    }	
-            }		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Otto_Death       
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -2               
-		y = 5   
-		cost = 70
-		available_if_capitulated = no
-	
-        available = {
-		    GRE = {
-			    has_country_flag = w 
-			}
-		}	
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		        focus = GRE_Ludwigs_Conversion
-		    	focus = GRE_Amalia_Succession
-		}
-		prerequisite = {
-		    focus = GRE_Monarchy_Stands_Strong
-		}
-		
-		completion_reward = {
-		    
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Old_Order_Continues       
-		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 2                 
-		y = 1   
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Matters_of_Realm_1857
-		}
-		
-		completion_reward = {
-		    add_political_power = 50 			
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Censorship_Autocracy        
-		icon = GFX_goal_focus_controlled_press
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 2                
-		y = 2    
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Old_Order_Continues
-		}
-		
-		completion_reward = {
-		    GRE = {
-		        add_ideas = GRE_idea_ottos_despotism
-            }			
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Enlightened_Despotism         
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 2               
-		y = 3     
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Censorship_Autocracy 
-		}
-		
-		completion_reward = {
-		    GRE = {
-		        add_ideas = GRE_idea_Enlightened_Despotism 
-			}
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Monarchy_Stands_Strong          
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 1               
-		y = 4      
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Enlightened_Despotism  
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_Old_Order_Overthrown
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Old_Order_Overthrown           
-		icon = GFX_goal_focus_brutal_end_monarchy
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 3                 
-		y = 4      
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Enlightened_Despotism  
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_Monarchy_Stands_Strong
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Ludwigs_Coronation            
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -4                        
-		y = 6       
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Otto_Death  
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_Amalias_Regency 
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Amalias_Regency            
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 0                        
-		y = 6       
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Otto_Death  
-		}
-		
-		mutually_exclusive = {
-		    focus = GRE_Ludwigs_Coronation 
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Royal_Tour             
-		icon = GFX_goal_focus_railroad_development
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -5                           
-		y = 7         
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Ludwigs_Coronation  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_German_Customs              
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -3                             
-		y = 7         
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Ludwigs_Coronation  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Search_for_Bride                
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -5                                 
-		y = 8          
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Royal_Tour   
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Look_Landstag               
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -3                                
-		y = 8          
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_German_Customs  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Liberal_Administration                
-		icon = GFX_goal_focus_support_liberalism
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -1                                  
-		y = 7           
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Amalias_Regency  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Search_New_King                 
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 1                                   
-		y = 7           
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Amalias_Regency  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Queen_Victorias_Model                 
-		icon = GFX_goal_focus_queen_return
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -1                                  
-		y = 8            
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Liberal_Administration  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Prepare_Succession                 
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 1                                   
-		y = 8            
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Search_New_King  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Regent_Steps_Down                   
-		icon = GFX_goal_focus_elections
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = 1                                     
-		y = 9            
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Prepare_Succession  
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-	focus = {
-		id = GRE_Elections_of_Date_1                    
-		icon = GFX_goal_focus_elections
-		dynamic = yes 
-		relative_position_id = GRE_Matters_of_Realm_1857
-		x = -2                                      
-		y = 9             
-		cost = 70
-		available_if_capitulated = no
-	
-		ai_will_do = {
-			factor = 1 
-		}
-		
-		prerequisite = {
-		    focus = GRE_Look_Landstag  
-		    focus = GRE_Queen_Victorias_Model
-		}
-		
-		completion_reward = {
-		    		
-	    }	
-	}
-	
-
-	
-#####Economic Tree#####
-
-focus = {
+shared_focus = {
 		id = GRE_agrarian_nation
 		#icon = GFX_focus_generic_self_management
 		x = 16         
@@ -638,7 +19,7 @@ focus = {
 	
 #Reforms sub-tree
 	
-focus = {
+shared_focus  = {
 		id = GRE_control_debts
 		#icon = GFX_focus_generic_self_management
 		x = 12
@@ -657,7 +38,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_cut_administration
 		#icon = GFX_focus_generic_self_management
 		x = 11
@@ -676,7 +57,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_clamp_on_corruption
 		#icon = GFX_focus_generic_self_management
 		x = 13 
@@ -695,7 +76,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_fiscal_responsability
 		#icon = GFX_focus_generic_self_management
 		x = 12
@@ -715,7 +96,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_repay_debt
 		#icon = GFX_focus_generic_self_management
 		x = 12 
@@ -736,7 +117,7 @@ focus = {
 	
 #Agriculture sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_land_reform
 		#icon = GFX_focus_generic_self_management
 		x = 16 
@@ -763,7 +144,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_cotton
 		icon = GFX_goal_focus_confederate_cotton_trade
 		x = 15 
@@ -788,7 +169,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_promote_tobbaco
 		#icon = GFX_focus_generic_self_management
 		x = 17 
@@ -808,7 +189,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_wine_exports
 		#icon = GFX_focus_generic_self_management
 		x = 15
@@ -829,7 +210,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_fruit_exports
 		#icon = GFX_focus_generic_self_management
 		x = 17 
@@ -849,7 +230,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_dry_copais
 		#icon = 
 		x = 16 
@@ -871,7 +252,7 @@ focus = {
 	
 #Industrialization sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_industrialization
 		icon = GFX_goal_focus_industrial_revolution
 		x = 21 
@@ -905,7 +286,7 @@ focus = {
 	
 #Infrastructure sub-sub-tree	
 	
-focus = {
+shared_focus  = {
 		id = GRE_improve_roads
 		icon = GFX_goal_focus_telegraph_lines
 		x = 19 
@@ -935,7 +316,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_improve_ship_lines
 		icon = GFX_goal_focus_mass_produce_ships
 		x = 19
@@ -966,7 +347,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_athens-piraeus_rail
 		icon = GFX_goal_focus_railroad_development
 		x = 19 
@@ -1001,7 +382,7 @@ focus = {
 	
 #Urbanisation sub-sub-tree	
 
-focus = {
+shared_focus  = {
 		id = GRE_athens_industry
 		icon = GFX_goal_GRE_industrialize_athens
 		x = 23 
@@ -1041,7 +422,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_rural_exodus
 		#icon = GFX_focus_generic_self_management
 		x = 23 
@@ -1061,7 +442,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_urbanisation
 		icon = GFX_goal_GRE_urbanize_athens
 		x = 23 
@@ -1092,7 +473,7 @@ focus = {
 	
 #Trade sub-sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_syros_shipyards
 		#icon = GFX_focus_generic_self_management
 		x = 25
@@ -1127,7 +508,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_trade_and_industry
 		#icon = GFX_focus_generic_self_management
 		x = 25 
@@ -1148,7 +529,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_national_benefactors
 		#icon = GFX_focus_generic_self_management
 		x = 25 
@@ -1171,7 +552,7 @@ focus = {
 	
 #####Army Focus Tree#####
 
-focus = {
+shared_focus  = {
 		id = GRE_hellenic_army
 		icon = GFX_goal_GRE_Hellenic_Army
 		x = 19
@@ -1191,7 +572,7 @@ focus = {
 	
 #Equipment sub-tree
 	
-focus = {
+shared_focus  = {
 		id = GRE_standard_equip
 		#icon = GFX_focus_generic_self_management
 		x = 16
@@ -1214,7 +595,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_uk_equip
 		#icon = GFX_focus_generic_self_management
 		x = 14
@@ -1240,7 +621,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_prs_equip
 		#icon = GFX_focus_generic_self_management
 		x = 16
@@ -1266,7 +647,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_fr_equip
 		#icon = GFX_focus_generic_self_management
 		x = 18
@@ -1292,7 +673,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_mil_factories
 		#icon = GFX_focus_generic_self_management
 		x = 16
@@ -1331,7 +712,7 @@ focus = {
 
 #Improve Organisation sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_euvelpidon
 		#icon = 
 		x = 22
@@ -1352,7 +733,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_more_academies
 		#icon = GFX_focus_generic_self_management
 		x = 21
@@ -1371,7 +752,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_general_staff
 		#icon = GFX_focus_generic_self_management
 		x = 23
@@ -1392,7 +773,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_europe_training
 		#icon = GFX_focus_generic_self_management
 		x = 22
@@ -1416,7 +797,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_improve_formations
 		#icon = GFX_focus_generic_self_management
 		x = 19
@@ -1447,7 +828,7 @@ focus = {
 	
 #Navy Focus Tree 
 
-focus = {
+shared_focus  = {
 		id = GRE_hellenic_navy
 		icon = GFX_goal_GRE_Hellenic_Navy
 		x = 29
@@ -1467,7 +848,7 @@ focus = {
 	
 #Ship sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_steamships
 		#icon = GFX_focus_generic_self_management
 		x = 27
@@ -1490,7 +871,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_iron_wall
 		#icon = GFX_focus_generic_self_management
 		x = 27
@@ -1514,7 +895,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_comission_ships
 		#icon = GFX_focus_generic_self_management
 		x = 27
@@ -1535,7 +916,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_eng_ships
 		#icon = GFX_focus_generic_self_management
 		x = 25
@@ -1557,7 +938,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_fra_ships
 		#icon = GFX_focus_generic_self_management
 		x = 27
@@ -1579,7 +960,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_rus_ships
 		#icon = GFX_focus_generic_self_management
 		x = 29
@@ -1603,7 +984,7 @@ focus = {
 	
 #Modernize Navy sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_naval_academy
 		#icon = GFX_focus_generic_self_management
 		x = 31
@@ -1622,7 +1003,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_merchant_marine
 		#icon = GFX_focus_generic_self_management
 		x = 31
@@ -1645,7 +1026,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_naval_shipyard
 		#icon = GFX_focus_generic_self_management
 		x = 31
@@ -1670,7 +1051,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_modern_navy
 		#icon = GFX_focus_generic_self_management
 		x = 31
@@ -1691,7 +1072,7 @@ focus = {
 	
 #####Cultural Focus Tree#####
 
-focus = {
+shared_focus  = {
 		id = GRE_culture_revival
 		#icon = GFX_focus_generic_self_management
 		x = 33
@@ -1712,7 +1093,7 @@ focus = {
 	
 #Arts and Education sub-tree
 	
-focus = {
+shared_focus  = {
 		id = GRE_hansen_trilogy
 		#icon = GFX_focus_generic_self_management
 		x = 30
@@ -1733,7 +1114,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_university_athens
 		#icon = 
 		x = 28
@@ -1754,7 +1135,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_academy
 		#icon = 
 		x = 30
@@ -1775,7 +1156,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_library_athens
 		#icon = 
 		x = 32
@@ -1796,7 +1177,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_encourage_art
 		#icon = GFX_focus_generic_self_management
 		x = 29
@@ -1818,7 +1199,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_encourage_literacy
 		#icon = GFX_focus_generic_self_management
 		x = 31
@@ -1842,7 +1223,7 @@ focus = {
 	
 #Language sub-tree
 
-focus = {
+shared_focus  = {
 		id = GRE_language_question
 		#icon = GFX_focus_generic_self_management
 		x = 36
@@ -1863,7 +1244,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_demoticism
 		#icon = GFX_focus_generic_self_management
 		x = 35
@@ -1886,7 +1267,7 @@ focus = {
 		}
 	}
 	
-focus = {
+shared_focus  = {
 		id = GRE_katharevousa
 		#icon = GFX_focus_generic_self_management
 		x = 37 
