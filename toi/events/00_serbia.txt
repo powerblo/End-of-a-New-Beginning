@@ -401,6 +401,7 @@ country_event = { #OBRENOVIC5: Milos dies
 	fire_only_once = yes
 	
 	trigger = {
+		TAG = SER
         date > 1860.9.15
     }
 	
@@ -422,11 +423,12 @@ country_event = { #OBRENOVIC6: Woods
 	fire_only_once = yes
 	
 	trigger = {
+		TAG = SER
         date > 1868.5.20
     }
     
 	immediate = {
-		complete_national_focus = SER_Day_In_Woods
+		#complete_national_focus = SER_Day_In_Woods
 	}
 	
 	option = {
@@ -565,7 +567,10 @@ country_event = { #KARADORDEVIC: Call Assassination
 	
 	fire_only_once = yes
 	
-	trigger = { date > 1867.4.1 }
+	trigger = {
+		TAG = SER
+		date > 1867.4.1
+	}
 	
 	option = {
 		name = SERkar.8.a #good
@@ -640,7 +645,10 @@ country_event = { #Cukur
 	
 	fire_only_once = yes
 	
-	trigger = { date > 1862.6.1 }
+	trigger = {
+		TAG = SER
+		date > 1862.6.1
+	}
 	
 	option = {
 		name = SERcuk.1.a
@@ -728,7 +736,10 @@ country_event = { #Withdrawal
 	
 	fire_only_once = yes
 	
-	trigger = { tag = SER date > 1866.10.1 }
+	trigger = {
+		tag = SER
+		date > 1866.10.1
+	}
 	
 	option = {
 		name = SERcuk.6.a
@@ -812,7 +823,10 @@ country_event = { #Vuk Karadzic
 	
 	fire_only_once = yes
 	
-	trigger = { date > 1864.2.7 }
+	trigger = {
+		TAG = SER
+		date > 1864.2.7
+	}
 	
 	option = {
 		name = SERmisc.3.a
@@ -830,7 +844,10 @@ country_event = { #Best man
 	
 	fire_only_once = yes
 	
-	trigger = { date > 1864.2.7 }
+	trigger = {
+		TAG = SER
+		date > 1864.2.7
+	}
 	
 	option = {
 		name = SERmisc.4.a #accept
