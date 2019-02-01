@@ -11,15 +11,18 @@ country_event = {
   option = { 
     name = brazil.1.a
     BRA = {
-	add_ideas = BRA_anglo_brazilian_research_treaty
+	add_timed_idea = { 
+	idea = BRA_anglo_brazilian_research_treaty
+	days = 100
   }
-  add_ideas = BRA_anglo_brazilian_research_treaty
+  }
   }
   option = { 
     name = brazil.1.b
     add_political_power = 50
     BRA = { country_event = brazil.2 }
   }
+
 }
 
 country_event = { 
@@ -48,9 +51,11 @@ country_event = {
   option = { 
     name = brazil.3.a
     BRA = {
-	add_ideas = BRA_franco_brazilian_economic_treaty
+	add_timed_idea = { 
+	idea = BRA_franco_brazilian_economic_treaty
+	days = 100
   }
-  add_ideas = BRA_franco_brazilian_economic_treaty
+  }
   }
   option = { 
     name = brazil.3.b
