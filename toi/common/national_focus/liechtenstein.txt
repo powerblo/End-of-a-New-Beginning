@@ -77,7 +77,7 @@ focus_tree = {
 		}
 		x = 5
 		y = 3
-		mutually_exclusive = { focus = LIE_neutralism }
+		mutually_exclusive = { focus = LIE_neutralism focus = LIE_Supportaustria}
 		completion_reward = {
                 add_stability = 0.05
 		        add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_AUS_lowered }
@@ -121,11 +121,9 @@ focus_tree = {
 		completion_reward = {
 		             add_political_power = -50
                      add_stability = -0.05
-		hidden_effect = {
 				PRS = {
 					add_to_faction = LIE
 				}
-			}
 		}
 	}
 	focus = {
@@ -200,9 +198,9 @@ focus_tree = {
 		prerequisite = {
 		focus = LIE_Confederationendangered
 		}
-		mutually_exclusive = { focus = LIE_Supportprussia }
+		mutually_exclusive = { focus = LIE_Supportprussia focus = LIE_Supportaustria }
 		completion_reward = {
-                     add_stability = 1.0
+                     add_stability = 0.01
 					 add_political_power = 50
 		}
 	}
@@ -253,8 +251,9 @@ focus_tree = {
 		cost = 75
 		x = 8
 		y = 8
+		mutually_exclusive = { }
 		prerequisite = {
-		focus = LIE_enforceindependence
+		focus = LIE_enforceindependence focus = LIE_confirmsurvival
 		}
 		completion_reward = {
 					 remove_ideas = LIE_Austrianpartnership
@@ -262,6 +261,52 @@ focus_tree = {
 		              reverse_add_opinion_modifier = { target = AUS modifier = liechtensteinsaysbye }
 		}
 	}
+	focus = {
+	    id = LIE_Supportaustria
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Confederationendangered
+		}
+		x = 9
+		y = 3
+		mutually_exclusive = { focus = LIE_neutralism  focus = LIE_Supportprussia}
+		completion_reward = {
+                add_stability = 0.05
+            hidden_effect = {		       
+			   add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_AUS_lowered }
+	         	reverse_add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_AUS_lowered }		
+				add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_PRS_improved }
+	         	reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_PRS_improved }
+			}
+		}
+	}
+	focus = {
+	    id = LIE_totheborder
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 9
+		y = 4
+		prerequisite = {
+		focus = LIE_Supportaustria
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+	    id = LIE_confirmsurvival
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 9
+		y = 6
+		prerequisite = {
+		focus = LIE_totheborder
+		}
+		completion_reward = {
+		        add_stability = 0.025
+		}
+	}
+	
 	
 	#-----------------------------------------------------------------------------------
 	#	ECONOMIC BRANCH
