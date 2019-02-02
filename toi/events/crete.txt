@@ -19,43 +19,37 @@ country_event = {
 
 	immediate = {
 	hidden_effect = {
-		182 = {
-			add_core_of = CET
-			CET = { 
-				transfer_state = PREV 
-			}
-		}
 		1241 = {
 			add_core_of = CET
-			CET = { 
-				transfer_state = PREV 
-			}
 		}
-        CET = { 
+		182 = {
+			add_core_of = CET
+		}
+		CET = { 
+			transfer_state = 182 
+			transfer_state = 1241
 			add_ideas = CET_idea_cretan_fighters
 			set_cosmetic_tag = CET_Revolt_1 
 			set_country_flag = CET_cretan_revolt
+			#load_oob = "CET_rebellion_1"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500 
+				producer = CET
+			}
 		}
+		#GRE = { news_event = {id = GREcrete.6 } }
 	}
 	}
 
-	option = {
+	option = {	
 		name = GREcrete.1.a #Declare War as Ottomans 
 		
-		hidden_effect = {
-			CET ={
-				load_oob = CET_rebellion_1
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 500 
-					producer = CET
-				}
-			}
-			GRE = { news_event = {id = GREcrete.6 } } 
-		}
-		declare_war_on = {
-			target = CET
-			type = annex_everything
+	    OTO = {
+		    declare_war_on = {
+		    	target = CET
+		    	type = annex_everything
+		    }
 		}
 	}
 	option = {
@@ -67,20 +61,15 @@ country_event = {
 		
 		hidden_effect = {
 			CET ={
-				load_oob = CET_rebellion_1
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 500 
-					producer = CET
-				}
 				change_tag_from = ROOT
 			}
-			GRE = { news_event = {id = GREcrete.6 } } 
 		}
-		declare_war_on = {
-			target = CET
-			type = annex_everything
-		}
+	    OTO = {
+		    declare_war_on = {
+			    target = CET
+		    	type = annex_everything
+		    }
+	    }
 	}
 }
 
@@ -115,11 +104,10 @@ country_event = {#Arkadi explosision
 	
 	    immediate = {
 			hidden_effect = {
-	    	182={
-	     		add_manpower = -800
-		    }
-	 	    add_manpower = -250
-	    }
+	    	    182={
+	     		    add_manpower = -800
+		        }
+	        }
 	    }
 
 	option = {
@@ -195,7 +183,7 @@ country_event = {#If Crete won Annex into Greece
 		name = greek_events.5.a #integrate into greece
 		GRE = {
 			annex_country = {
-				target = ROOT
+				target = CET 
 				transfer_troops = yes
 			}
 		}
