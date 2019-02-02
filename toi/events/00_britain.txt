@@ -450,6 +450,127 @@ country_event = {
 	
 }
 
+#Opening of the National Portrait Gallery
+country_event = {
+	id = britain.15
+	title = britain.15.t
+	desc = britain.15.d
+	picture = GFX_report_event_general_post_office
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		owns_state = 952
+		date > 1859.1.14
+	}
+	
+	option = {
+		name = britain.15.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
+	
+}
+
+#Charles Dickens: All the Year Round Magazine
+country_event = {
+	id = britain.16
+	title = britain.16.t
+	desc = britain.16.d
+	picture = GFX_report_event_all_the_year_round
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.4.29
+	}
+	
+	option = {
+		name = britain.16.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Richard Carrington observes a Solar Flare
+country_event = {
+	id = britain.17
+	title = britain.17.t
+	desc = britain.17.d
+	picture = GFX_report_event_british_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.9.1
+	}
+	
+	option = {
+		name = britain.17.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = { has_tech = early_thermodynamics_theories }
+			}
+			add_tech_bonus = { bonus = 0.2 uses = 1 technology = early_thermodynamics_theories }
+		}
+	}
+	
+}
+
+#"Royal Charter" Storm Disaster
+country_event = {
+	id = britain.18
+	title = britain.18.t
+	desc = britain.18.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.10.24
+	}
+	
+	option = {
+		name = britain.18.a
+		ai_chance = { factor = 100 }
+		add_manpower = -800
+		if = {
+			limit = {
+				has_equipment = { convoy > 100 }
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -70
+			}
+		}
+		add_political_power = -50
+		add_stability = -0.02
+		every_owned_state = {
+			limit = {
+				is_coastal = yes
+				is_in_home_area = yes
+			}
+			random_list = {
+				25 = {
+					damage_building = { type = infrastructure damage = 1 }
+				}
+				50 = {
+					damage_building = { type = infrastructure damage = 0.5 }
+				}
+				25 = {
+					damage_building = { type = infrastructure damage = 0.25 }
+				}
+			}
+		}
+	}
+	
+}
+
 ### POLITICAL EVENTS FOR BRITAIN BELOW ###
 
 #Elections of 1859
