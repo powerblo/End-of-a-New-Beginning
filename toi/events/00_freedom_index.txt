@@ -1,14 +1,14 @@
 add_namespace = freedom_index
 
 news_event = {
-	id = freedom_index.0
-	picture = GFX_report_event_election_vote
-	
-	is_triggered_only = yes
+    id = freedom_index.0
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
 
     hidden = yes
 
-	immediate = {
+    immediate = {
 
         set_variable = {
             var = global.global_liberty
@@ -30,10 +30,16 @@ news_event = {
             #Initial calculation
             #Whenever this calculation runs, also add modified_liberty, which is a separate variable that stores liberty
             #from events, decisions and other sources
-        	set_variable = {
-        		var = liberty
-        		value = 0
-        	}
+            set_variable = {
+                var = liberty
+                value = 50
+            }
+
+            clamp_variable = {
+                var = liberty
+                min = 0
+                max = 100
+            }
 
             add_to_variable = { liberty = modified_liberty }
 
@@ -42,18 +48,10 @@ news_event = {
                 limit = {
                     OR = {
                         has_idea = open_schools
-                    }
-                }
-                add_to_variable = { liberty = 5 }
-            }
-
-            if = {
-                limit = {
-                    OR = {
                         has_idea = compulsory_education
                     }
                 }
-                add_to_variable = { liberty = 10 }
+                add_to_variable = { liberty = 2 }
             }
 
             #Population laws
@@ -343,7 +341,7 @@ news_event = {
                         has_idea = very_high_taxes
                     }
                 }
-                add_to_variable = { liberty = -2 }
+                add_to_variable = { liberty = -4 }
             }
             if = {
                 limit = {
@@ -351,7 +349,7 @@ news_event = {
                         has_idea = high_taxes
                     }
                 }
-                add_to_variable = { liberty = -1 }
+                add_to_variable = { liberty = -2 }
             }
             if = {
                 limit = {
@@ -576,14 +574,14 @@ news_event = {
 }
 
 news_event = {
-	id = freedom_index.1
-	picture = GFX_report_event_election_vote
-	
-	is_triggered_only = yes
+    id = freedom_index.1
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
 
     hidden = yes
 
-	immediate = {
+    immediate = {
 
         set_variable = {
             var = global.global_consciousness
@@ -605,10 +603,16 @@ news_event = {
             #Initial calculation
             #Whenever this calculation runs, also add modified_consciousness, which is a separate variable that stores consciousness
             #from events, decisions and other sources
-        	set_variable = {
-        		var = consciousness
-        		value = 0
-        	}
+            set_variable = {
+                var = consciousness
+                value = 50
+            }
+
+            clamp_variable = {
+                var = consciousness
+                min = 0
+                max = 100
+            }
 
             add_to_variable = { consciousness = modified_consciousness }
 
@@ -738,12 +742,27 @@ news_event = {
                 add_to_variable = { consciousness = 5 }
             }
 
+            # Discount the effect of American slavery, because of its deep institutionalisation
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = usa_slavery_law
+                    }
+                }
+                add_to_variable = { consciousness = -10 }
+            }
+
             #Education laws
 
             if = {
                 limit = {
                     OR = {
                         has_idea = privileged_education
+                    }
+                    NOT = {
+                        OR = {
+                            has_government = autocracy
+                        }
                     }
                 }
                 add_to_variable = { consciousness = 5 }
@@ -754,6 +773,12 @@ news_event = {
                     OR = {
                         has_idea = open_schools
                     }
+                    NOT = {
+                        OR = {
+                            has_government = vanguard_communism
+                            has_government = chauvinist_populism
+                        }
+                    }
                 }
                 add_to_variable = { consciousness = 10 }
             }
@@ -763,8 +788,58 @@ news_event = {
                     OR = {
                         has_idea = compulsory_education
                     }
+                    NOT = {
+                        OR = {
+                            has_government = vanguard_communism
+                            has_government = chauvinist_populism
+                        }
+                    }
                 }
                 add_to_variable = { consciousness = 20 }
+            }
+
+            # Negative modifiers for authoritarian education schemes
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = open_schools
+                    }
+                    # Has an authoritarian government type
+                    OR = {
+                        has_government = vanguard_communism
+                        has_government = chauvinist_populism
+                    }
+                    
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = compulsory_education
+                    }
+                    # Has an authoritarian government type
+                    OR = {
+                        has_government = vanguard_communism
+                        has_government = chauvinist_populism
+                    }
+                }
+                add_to_variable = { consciousness = -15 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = privileged_education
+                    }
+                    # Has a monarchist or religious government type
+                    OR = {
+                        has_government = autocracy
+                        has_government = fundamentalism
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
             }
 
             #Economic control laws
