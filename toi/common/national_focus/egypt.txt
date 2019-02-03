@@ -338,7 +338,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_plan_military_campaigns
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_napoleonic_tactics
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_new_army_expansion
@@ -699,7 +699,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_import_european_tech
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_international_investments
 		cost = 140
 		prerequisite = {
 			focus = EGY_vic_reforms_of_ismail
@@ -727,7 +727,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_fund_a_national_research_group
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_research
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_import_european_tech
@@ -775,7 +775,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_the_welfare_of_the_fellahin
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_increase_wages
 		cost = 140
 		prerequisite = {
 			focus = EGY_vic_the_said_reforms
@@ -810,11 +810,15 @@ focus_tree = {
 			remove_ideas = {
 				egy_sudan_slave_raids
 			}
+			swap_ideas={
+				add_idea = segregation
+				remove_idea = slavery_all_but_name
+			}
 		}
 	}
 	focus = {
 		id = EGY_vic_promulgate_the_saidiyah
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_newspapers
 		cost = 140
 		prerequisite = {
 			focus = EGY_vic_the_welfare_of_the_fellahin
@@ -831,7 +835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_expand_cairo
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_industrial_revolution
 		cost = 140
 		prerequisite = {
 			focus = EGY_vic_promulgate_the_saidiyah
@@ -885,7 +889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_reforms_of_ismail
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_reform_administration
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_education_investments
@@ -1118,7 +1122,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_firman_1867
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_enact_law
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_request_firman_stab_succ
@@ -1150,7 +1154,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_firman_1873
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_enact_law
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_firman_1867
@@ -1173,7 +1177,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_reforms_of_ahmad
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_reform_administration
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_education_investments
