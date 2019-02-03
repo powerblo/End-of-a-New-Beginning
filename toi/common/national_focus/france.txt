@@ -1821,10 +1821,24 @@ focus_tree = {
 		x = 49
 		y = 1
 		completion_reward = {
-			create_wargoal = {
-				target = VIN
-				type = puppet_wargoal_focus
+			add_timed_idea = {
+				idea = FRA_VIN_war
+				days = 1500
 			}
+			VIN = {
+				add_timed_idea = {
+					idea = VIN_FRA_war
+					days = 1500
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+					idea = SPR_VIN_war
+					days = 1500
+				}
+			}
+			# TODO : Add a monthly event to simulate equipment lost
+			# TODO : Add a final event which gives land and naval experience, puppetize VIN
 		}
 	}
 	focus = {
