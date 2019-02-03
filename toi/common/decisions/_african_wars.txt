@@ -482,9 +482,15 @@ foreign_politics={
 					has_country_flag = ZAN_expedition
 				}
 				AND={
-					tag = OMA
+					tag = MOM
 					has_country_flag = MOM_expedition
 				}
+			}
+			if={
+				limit = {
+					FROM = {tag = AFR}
+				}
+				has_political_power > 100
 			}
 		}
 
@@ -495,7 +501,7 @@ foreign_politics={
 					has_country_flag = ZAN_expedition
 				}
 				AND={
-					tag = OMA
+					tag = MOM
 					has_country_flag = MOM_expedition
 				}
 			}
@@ -507,7 +513,10 @@ foreign_politics={
 					is_claimed_by = ROOT
 				}
 				is_ai = yes
-				is_colonial_nation = no
+				OR={
+					is_colonial_nation = no
+					tag = AFR
+				}
 			}
 		}
 
@@ -516,8 +525,115 @@ foreign_politics={
 		cost = 10
 		days_remove = 30
 
-		complete_effect = {
-			annex_country = FROM
+		remove_effect = {
+			if={
+				limit = {
+					FROM = {tag =AFR}
+					ROOT = {tag =ZAN}
+				}
+				if={
+					limit ={
+						904={
+							is_owned_and_controlled_by = AFR
+							is_claimed_by = ROOT
+						}
+					}
+					transfer_state = 904 
+				}
+				if={
+					limit ={
+						546={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 546
+				}
+				if={
+					limit ={
+						905={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 905
+				}
+				if={
+					limit ={
+						907={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 907
+				}
+				if={
+					limit ={
+						908={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 908
+				}
+				if={
+					limit ={
+						929={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 929
+				}
+				if={
+					limit ={
+						895={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 895
+				}
+			}
+			else_if={
+				limit = {
+					FROM = {tag = AFR}
+					ROOT = {tag = MOM}
+				}
+				if={
+					limit ={
+						911={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 911
+				}
+				if={
+					limit ={
+						912={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 912 
+				}
+				if={
+					limit ={
+						906={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 906
+				}
+				if={
+					limit ={
+						547={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 547
+				}
+				if={
+					limit ={
+						913={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 913
+				}
+				if={
+					limit ={
+						915={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 915 
+				}
+				if={
+					limit ={
+						910={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 910 
+				}
+				if={
+					limit ={
+						914={is_owned_and_controlled_by = AFR}
+					}
+					transfer_state = 914
+				}
+			}
+			else={
+				annex_country = FROM
+			}
 		}
 
 		ai_will_do = {

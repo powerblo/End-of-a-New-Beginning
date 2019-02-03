@@ -1159,9 +1159,9 @@ focus_tree = {
 				country_event = {
 						#Cancel the Grand Vizier replacement system and remove the national ideas
 						id = OTO_focus.11
-						#Grand viziers will henceforth be elected by parliament.
-						set_country_flag = OTO_prime_minister_system
 				}
+				#Grand viziers will henceforth be elected by parliament.
+				set_country_flag = OTO_prime_minister_system
 		}
 
 	}
@@ -1320,7 +1320,7 @@ focus_tree = {
 			#Decrease cultural tolerance towards non-Turks
 			#Increas assimilation rate towards Turkish
 			add_political_power = 50
-			add_ideas = OTO_levantine_land_registration
+			add_ideas = {OTO_levantine_land_registration}
 			country_event = {
 				#This forces many minorities in the Levant to be displaced from their land where they may have been
 				# indentured. It also displeases a large number of wealthy, if corrupt, landowners.
@@ -1395,7 +1395,7 @@ focus_tree = {
 			#Add religious tolerance towards Christians and Jews
 			add_political_power = -50
 			#Emancipation of non-muslim minorities, allowing them to hold land.
-			add_ideas = OTO_emancipation_reform
+			add_ideas = {OTO_emancipation_reform}
 			news_event = {
 				#Good news for western Christian powers
 				id = OTO_focus.16

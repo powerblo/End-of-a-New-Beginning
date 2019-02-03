@@ -419,7 +419,10 @@ scripted_gui = {
 				#}
 			}
 			OWNER = {
-				afr_is_tribal = yes
+				OR={
+					tag = AFR
+					afr_is_tribal = yes
+				}
 				if={
 					limit={
 						is_puppet = yes

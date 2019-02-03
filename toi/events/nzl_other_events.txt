@@ -531,11 +531,12 @@ country_event = { #Kingitanga offers to intergrate the TAA
 }
 country_event = { #KIN - The Kingitanga deal - limited autonomy
 	id = nzl_other.21
-	title =  nzl_other.21.t
-	desc =  nzl_other.21.d
+	title = nzl_other.21.t
+	desc = nzl_other.21.d
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
+	
 	option = {
 		name = nzl_other.21.a #agree
 		ai_chance = {
@@ -543,8 +544,11 @@ country_event = { #KIN - The Kingitanga deal - limited autonomy
 		}
 		add_political_power = 25
 		add_stability = -0.025
-		add_autonomy_score = 250
-		FROM= {
+		add_autonomy_score = {
+			value = 250
+			localization = KIN_deal_autonomy_grant
+		}
+		FROM = {
 			country_event = {id = nzl_other.25}
 			add_stability = 0.025
 			add_political_power = 25
@@ -558,7 +562,7 @@ country_event = { #KIN - The Kingitanga deal - limited autonomy
 		KIN = {
 			end_puppet = NZL
 		}
-		FROM= {country_event = {id = nzl_other.24}}
+		FROM = {country_event = {id = nzl_other.24}}
 	}
 }
 country_event = { #KIN - The Kingitanga deal - greater autonomy
@@ -575,7 +579,10 @@ country_event = { #KIN - The Kingitanga deal - greater autonomy
 		}
 		add_political_power = 50
 		add_stability = -0.05
-		add_autonomy_score = 500
+		add_autonomy_score = {
+			value = 500
+			localization = KIN_deal_autonomy_grant
+		}
 		FROM= {
 			country_event = {id = nzl_other.25}
 			add_stability = 0.05
@@ -601,7 +608,7 @@ country_event = { #KIN - The Kingitanga deal - split_administration
 
 	is_triggered_only = yes
 	option = {
-		name = nzl_other.23.a #agree
+		name = nzl_other.23.a #agree, ai KIN
 		ai_chance = {
 			factor = 85
 		}
@@ -621,7 +628,7 @@ country_event = { #KIN - The Kingitanga deal - split_administration
 		}
 	}
 	option = {
-		name = nzl_other.23.b #revise the deal
+		name = nzl_other.23.b #revise the deal, for players
 		ai_chance = {
 			factor = 0
 		}
