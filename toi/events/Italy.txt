@@ -363,6 +363,32 @@ country_event = {
 	
 	
 }
+country_event = { 
+	id = ita.20	
+	title = ita.20.t
+	desc = ita.20.d
+	picture = GFX_event_ITA_Carvour_Death
+
+	is_triggered_only = yes
+
+	option = {
+		name = ita.20.a
+		kill_country_leader = yes
+		create_country_leader = {
+ 			name = "Bettino Ricasoli"
+  			#desc = "POLITICS_GIUSEPPE_MAZZINI_DESC"
+  			picture = "Portrait_ITA_Bettino_Ricasoli.dds"
+  			expire = "1965.1.1"
+  			ideology = conserv
+  				traits = {
+    		ITA_trait_Iron_Baron
+  			}
+
+		}
+	}
+	
+	
+}
 
 
 
