@@ -1291,9 +1291,9 @@ political_actions = {
 		cost = 25
 
 		complete_effect = {
-			BAD = { give_military_access = PRS }
-			WUR = { give_military_access = PRS }
-			HSD = { give_military_access = PRS }
+			PRS = { give_military_access = BAD }
+			PRS = { give_military_access = WUR }
+			PRS = { give_military_access = HSD }
 			custom_effect_tooltip = eoanb_tt_decision_PRS_southern_access
 			hidden_effect = {
 				PRS = { country_event = { days = 30 id = prussia.18 } }
