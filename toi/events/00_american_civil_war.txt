@@ -407,17 +407,7 @@ country_event = {
                 tag = CSA
             }
             hidden_effect = {
-                if = {
-                    limit = {
-                        tag = CSA
-                    }
-                    if = {
-                        limit = {
-                            USA = { exists = no }
-                        }
-                        release = USA
-                    }
-                }
+                release = USA
                 remove_ideas = USA_Civil_War
                 if = {
                     limit = {
@@ -2875,12 +2865,7 @@ country_event = {
                 limit = {
                     tag = CSA
                 }
-                if = {
-                    limit = {
-                        USA = { exists = no }
-                    }
-                    release = USA
-                }
+                release = USA
                 remove_ideas = USA_Civil_War
                 if = {
                     limit = {
