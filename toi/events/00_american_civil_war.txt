@@ -401,11 +401,6 @@ country_event = {
     
     is_triggered_only = yes
 
-    trigger = {
-        USA = { has_country_flag = USA_American_Civil_War }
-        USA = { has_global_flag = ACWAmerican_Civil_War }
-    }
-
     immediate = {
         if = {
             limit = {
@@ -2873,11 +2868,6 @@ country_event = {
     fire_only_once = yes
     
     is_triggered_only = yes
-
-    trigger = {
-        USA = { has_global_flag = ACWAmerican_Civil_War }
-        USA = { has_country_flag = USA_Radical_Coup }
-    }
 
     immediate = {
         hidden_effect = {
