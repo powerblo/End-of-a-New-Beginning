@@ -254,6 +254,7 @@ country_event = {
                 idea = USA_civil_war_over_by_christmas
                 days = 240
             }
+            set_country_flag = USA_American_Civil_War
         }
         add_war_support = 0.8
         add_stability = 0.8
@@ -287,11 +288,21 @@ country_event = {
     
     is_triggered_only = yes
 
+    trigger = {
+        OR = {
+            USA = { has_country_flag = USA_Radical_Coup }
+            USA = { has_country_flag = USA_American_Civil_War }
+        }
+        USA = { has_global_flag = ACWAmerican_Civil_War }
+    }
+
     immediate = {
         if = {
             limit = {
                 tag = USA
             }
+            clr_country_flag = USA_American_Civil_War
+            clr_country_flag = USA_Radical_Coup
             hidden_effect = {
                 if = {
                     limit = {
@@ -318,7 +329,6 @@ country_event = {
                 add_ideas = USA_recovery
                 remove_ideas = USA_Civil_War
                 hidden_effect = { news_event = { id = acw_news.6 } }
-                hidden_effect = { CSA = { country_event = { id = acw.7 } } }
                 delete_unit_template_and_units = { division_template = "Union Regimental" }
                 delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
                 set_stability = 0.6
@@ -390,6 +400,11 @@ country_event = {
     picture = GFX_report_event_german_reichstag_gathering
     
     is_triggered_only = yes
+
+    trigger = {
+        USA = { has_country_flag = USA_American_Civil_War }
+        USA = { has_global_flag = ACWAmerican_Civil_War }
+    }
 
     immediate = {
         if = {
@@ -464,7 +479,6 @@ country_event = {
                     CSA = { transfer_state = 369 }
                 }
                 set_truce = { target = USA days = 400 }
-                hidden_effect = { USA = { country_event = { id = acw.8 } } }
                 set_global_flag = CSAWins_Civil_War
                 clr_global_flag = ACWAmerican_Civil_War
                 set_country_flag = CSAIndependence_Won
@@ -484,6 +498,7 @@ country_event = {
                 USA = {
                     set_country_flag = USABroken_Eagle
                     remove_ideas = USA_Civil_War
+                    clr_country_flag = USA_American_Civil_War
                     add_ideas = USA_recovery
                     delete_unit_template_and_units = { division_template = "Union Regimental" }
                     delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
@@ -2859,6 +2874,11 @@ country_event = {
     
     is_triggered_only = yes
 
+    trigger = {
+        USA = { has_global_flag = ACWAmerican_Civil_War }
+        USA = { has_country_flag = USA_Radical_Coup }
+    }
+
     immediate = {
         hidden_effect = {
             if = {
@@ -2934,6 +2954,8 @@ country_event = {
                 limit = {
                     tag = USA
                 }
+                clr_country_flag = USA_American_Civil_War
+                clr_country_flag = USA_Radical_Coup
                 delete_unit_template_and_units = { division_template = "Union Regimental" }
                 delete_unit_template_and_units = { division_template = "South American Union Volunteers" }
                 set_country_flag = USABroken_Eagle

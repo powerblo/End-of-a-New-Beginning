@@ -147,32 +147,37 @@ on_actions = {
 	on_peaceconference_ended = {
 		effect = {
 			if = {
-                limit = {
-                	ROOT = { tag = CSA }
-                	FROM = { tag = USA }
-		            has_global_flag = ACWAmerican_Civil_War
-                }
-                USA = { country_event = { id = acw.8 } }
-                CSA = { country_event = { id = acw.8 } }
-            }
-            if = {
-               	limit = {
-                	ROOT = { tag = USA }
-                	FROM = { tag = CSA }
-		            has_global_flag = ACWAmerican_Civil_War
-                }
-                if = {
-                	limit = {
-                		USA = { has_country_flag = USA_Radical_Coup }
-                	}
-                	USA = { country_event = { id = acw.57 } }
-               		CSA = { country_event = { id = acw.57 } }
-                }
-                else = {
-                	USA = { country_event = { id = acw.7 } }
-               		CSA = { country_event = { id = acw.7 } }
-               	}
-            }
+				limit = {
+					tag = USA
+					FROM = { tag = CSA }
+					USA = { has_country_flag = USA_American_Civil_War }
+					USA = { has_global_flag = ACWAmerican_Civil_War }
+				}
+				USA = { country_event = { id = acw.7 } }
+				CSA = { country_event = { id = acw.7 } }
+			}
+			if = {
+				limit = {
+					tag = CSA
+					FROM = { tag = USA }
+					USA = { has_country_flag = USA_American_Civil_War }
+					USA = { has_global_flag = ACWAmerican_Civil_War }
+					NOT = { USA = { has_country_flag = USA_Radical_Coup } }
+				}
+				USA = { country_event = { id = acw.8 } }
+				CSA = { country_event = { id = acw.8 } }
+			}
+			if = {
+				limit = {
+					tag = CSA
+					FROM = { tag = USA }
+					USA = { has_country_flag = USA_American_Civil_War }
+					USA = { has_global_flag = ACWAmerican_Civil_War }
+					USA = { has_country_flag = USA_Radical_Coup }
+				}
+				USA = { country_event = { id = acw.57 } }
+				CSA = { country_event = { id = acw.57 } }
+			}
 			if = {
 				limit = {
 					FROM = { has_country_flag = containment_target } #containment target defeated
