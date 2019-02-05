@@ -59,7 +59,9 @@
  eoanb_decision_GER_brandenburg_coal_desc:0 "The state of Brandenburg has quite a bit of coal hidden underneath its surface - we should fund mining operations there."
  eoanb_decision_PRS_ask_HAN_access:0 "Ask Hannover for military access"
  eoanb_decision_PRS_ask_HAN_access_desc:0 "We own some territory on the other side of the Rhine, and the country of Hannover controls important supply routes leading to those regions. We should ask them for military access in order to supply our troops over there."
+ AUS_flag_about_to_form_g:0 "Austria is about to form Germany by themselves"
  BAV_make_common_policy:0 "Common Policy With the German States"
+ eoanb_decision_BAV_ask_austria_to_unify_germany:0 "Ask Austria for German Unification"
  eoanb_decision_BAV_common_policy_wurttemberg:0 "Try to make Common Policy with Württemberg"
  eoanb_decision_BAV_common_policy_baden:0 "Try to make Common Policy with Baden"
  eoanb_decision_BAV_common_policy_frankfurt:0 "Try to make Common Policy with Frankfurt"
@@ -130,8 +132,8 @@
  eoanb_decision_generic_rename_konigsberg_desc:0 "We have captured back Kaliningrad - or should we say Köngisberg? We should restore the old name of the proud city..."
  eoanb_category_formables:0 "Formable Nations"
  eoanb_decision_PRS_gerconfed_reforms1:0 "Prussian Reforms"
- eoanb_decision_PRS_gerconfed_reforms1_desc:0 "We will attempt to push some reforms in the German Confederation that would allow us to unify Germany more easily. Austria may be upset at our ambition to do that very thing, but we cannot neglect our own interests just to appease them - we should probably prepare for military conflict if we wish to take this decision."
- eoanb_tt_decision_prussian_reforms_1:0 "§RThis may lead to a conflict with [AUS.GetNameDef]!§!"
+ eoanb_decision_PRS_gerconfed_reforms1_desc:0 "We will attempt to push some reforms in the German Confederation that would allow us to unify Germany more easily. Austria may be upset at our ambition to do that very thing, but we cannot neglect our own interests just to appease them - we should probably prepare for military conflict if we wish to take this decision.\n\n§Y(This decision leads to the Brother's War)§!"
+ eoanb_tt_decision_prussian_reforms_1:0 "§RThis may lead to a conflict with [AUS.GetNameDef]!§!\n"
  eoanb_decision_PRS_sending_scheibert:0 "Send captain Justus Scheibert to observe American Civil War"
  eoanb_tt_decision_scheibert:0 "Captain Scheibert will be in America until the war is over or until he learns everything"
  eoanb_decision_generic_abolish_heir_system:0 "Abolish the Hereditary System"
@@ -169,6 +171,15 @@
  eoanb_decision_PRS_core_seven_weeks_war_desc:0 "After winning the war against Austria, some new territory has fallen under our control. Whether we control it directly or indirectly, we must work on integrating it into our administrative complex!"
  eoanb_tt_decision_core_united_reich:0 "We will receive §Ycores§! on the southern German states and §YAlsace§!.\nAdditionally, §YAlsace§! will be renamed to \"§YElsass§!\"."
  eoanb_tt_trigger_core_united_reich:0 "§Y[Root.GetNameDef]§! must own the southern German states and §YAlsace§!."
+ eoanb_decision_sww_side_with_prussia:0 "Support Prussia"
+ eoanb_decision_sww_side_with_prussia_desc:0 "In the case of war in the German areas, we will choose Prussias side."
+ eoanb_decision_sww_side_with_austria:0 "Support Austria"
+ eoanb_decision_sww_side_with_austria_desc:0 "In the case of war in the German areas, we will choose Austrias side."
+ eoanb_decision_sww_side_with_middle:0 "Support Middle States"
+ eoanb_decision_sww_side_with_middle_desc:0 "In the case of war in the German areas, we will choose the Middle States' side."
+ eoanb_decision_sww_side_neutral:0 "Stay Neutral"
+ eoanb_decision_sww_side_neutral_desc:0 "In the case of war in the German areas, we will stay neutral."
+ sevenweekswar.99.t:0 "[From.GetName]"
  eoanb_decision_GER_core_united_reich:0 "German State Administration"
  eoanb_decision_GER_core_united_reich_desc:0 "We need to properly incorporate our new states into [Root.GetNameDef]."
  eoanb_category_military:0 "Military Actions"
@@ -199,7 +210,7 @@
  eoanb_tt_decision_PRS_annex_HLS:0 "§Y[PRS.GetNameDef]§! will annex §Y[HLS.GetNameDef]§!.\n\n§Y[HLS.GetNameDef]§! will lose their cores.\n\n§RWithout the§! §YTogether for Victory§! §RDLC, this is the only way to annex§! §Y[HLS.GetNameDef]§!§R.§!"
  eoanb_om_PRS_annexes_HLS:0 "Preparing Annexation"
  eoanb_decision_PRS_annex_puppet_HLS:0 "Integrate Holstein"
- eoanb_decision_PRS_annex_puppet_HLS_desc:0 "We must integrate what we won in the Second Schleswig War." 
+ eoanb_decision_PRS_annex_puppet_HLS_desc:0 "We must integrate what we won in the Second Schleswig War."
  cheats_true:0 "Cheats are enabled for this nation."
  eoanb_category_cheats:0 "Cheat Menu"
  eoanb_decision_ENG_develop_IOM:0 "Develop the Isle of Man"
@@ -417,7 +428,7 @@
  eoanb_ttt_ENG_decision_improve_worker_conditions:0 "Requires a §RWorker Unrest§! level of at least §R1§!"
  eoanb_ttt_ENG_decision_shorten_workday:0 "Requires a §RWorker Unrest§! level of at least §R10§!"
  eoanb_ttt_ENG_decision_trade_unions_reallow:0 "Requires a §RWorker Unrest§! level of at least §R5§!"
- 
+
  #### USA Statehood Decisions ####
  USA_grant_statehood:0 "Admit States into the Union"
  eoanb_descision_USA_state_kansas:0 "Grant Statehood to Kansas"
@@ -490,7 +501,7 @@
  ITA_decision_spread_new_songs_desc:0 "Italy has gained a new culture, music. The music of Italy is spreading all throughtout Italy and some songs are popular outside of Italy aswell. It won't for the government to sponsor some songs."
  ITA_decision_pasta:0 "Embrace Popularity of Spaghetti"
  ITA_decision_pasta_desc:0 "Italian immigrants have chosen pasta as the cultural food of Italy. All around the world people will go to the nearest Little Italy to enjoy some Spaghetti".
- 
+
  #Spanish Decisions
  SPR_Patronage:0 "Spanish Patronage"
  SPR_Patronage_desc:0 "Spain is home to many brilliant minds. It would prove useful to help these individuals financially"
@@ -519,7 +530,7 @@
  Cesareo_Fernandez_Duro:0 "Cesáreo Fernández Duro"
  Cesareo_Fernandez_Duro_desc:0 "Admitted into naval school at only 15 years of age, Duro has proven himself a worthy admiral."
  eoanb_trigger_tt_law_african_all:0 "Your nation may not be any variation of an §YAfrican Tribe§!."
- 
+
  #Swedish Decisions
  swedish_politics_category:0 "Address the Political Issues"
  municipal_reforms:0 "Reform the Municipalities"
