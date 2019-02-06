@@ -11,6 +11,17 @@ country_event = {
 	
     is_triggered_only = yes 
 	
+	immediate = {
+	    hidden_effect = {
+		    AUS = {
+                set_party_name = { 
+                    ideology = neutrality  
+                    name = AUS_autocracy_party_1  
+                }			    
+			}
+		}
+	}
+	
 	option = {
 		name = AUSpolitics.1.a  #Appoint Gołuchowski - Reform Empire 
 		ai_chance = { 
@@ -75,21 +86,11 @@ country_event = {
 		ai_chance = { factor = 100 }
 		
 	    hidden_effect = {
-		AUS = { 
-		    set_country_flag = AUS_flag_unlock_October_Diploma # unlock february patent 
-            add_to_variable = {
-                var = HUN_REVOLT_RISK
-                value = 1 
-            }
-            add_to_variable = {
-                var = SLA_REVOLT_RISK
-                value = 1 
-            }		
-		}
+		    AUS = { 
+		        set_country_flag = AUS_flag_unlock_February_Patent # unlock february patent 		
+		    }
 		}	
 		add_political_power = -100 
-		custom_effect_tooltip = AUS_tt_add_hun_revolt_risk
-		custom_effect_tooltip = AUS_tt_add_sla_revolt_risk
 	}
 }
 
@@ -190,16 +191,7 @@ country_event = { #von Schmerling's resignation
 	
 	fire_only_once = yes
 	
-		trigger = {
-			tag = AUS 
-            AUS = { 
-			    has_country_leader = {
-                    name = "Anton von Schmerling"
-                     ruling_only = yes
-                } 
-		    }
-			date > 1865.07.05 
-		}
+    is_triggered_only = yes
 	
 	option = {
 		name = AUSpolitics.6.a  #Accept the resignation 
@@ -790,6 +782,97 @@ country_event = { #Trip to Hungary
 	
 	option = { 
 		name = AUShabsburg.3.a 
+		ai_chance = { factor = 100 }
+    }		     
+}
+
+country_event = { #The Birth of Archduchess Marie Valerie           
+	id = AUShabsburg.4 
+	title = AUShabsburg.4.t
+	desc = AUShabsburg.4.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.04.22      
+	}
+	
+	option = { 
+		name = AUShabsburg.4.a 
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		AUS = { has_country_flag = AUS_flag_hun_dual_monarchy }
+		}
+    }		
+
+	option = { 
+		name = AUShabsburg.4.b 
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		NOT = { AUS = { has_country_flag = AUS_flag_hun_dual_monarchy } } 
+		}
+    }		
+}
+
+add_namespace = AUSflavour 
+
+country_event = { #The Blue Danube Waltz            
+	id = AUSflavour.1 
+	title = AUSflavour.1.t
+	desc = AUSflavour.1.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1867.02.15       
+	}
+	
+	option = { 
+		name = AUSflavour.1.a 
+		ai_chance = { factor = 100 }
+    }		     
+}
+
+country_event = { #A German Requiem (Brahms)            
+	id = AUSflavour.2 
+	title = AUSflavour.2.t
+	desc = AUSflavour.2.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1868.07.24        
+	}
+	
+	option = { 
+		name = AUSflavour.2.a 
+		ai_chance = { factor = 100 }
+    }		     
+}
+
+country_event = { #Vienna Court Opera Opens             
+	id = AUSflavour.3 
+	title = AUSflavour.3.t
+	desc = AUSflavour.3.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1869.05.25         
+	}
+	
+	option = { 
+		name = AUSflavour.3.a 
 		ai_chance = { factor = 100 }
     }		     
 }
@@ -1914,4 +1997,60 @@ country_event = { #Negotiate with the Vojvodinans
 		    }
         }		
     }		
+}
+
+add_namespace = AUShidden #Hidden Events 
+
+country_event = { #hidden event to clear variable          
+	id = AUShidden.1 
+	title = AUShidden.1.t 
+	desc = AUShidden.1.t 
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+
+    trigger = {
+        TAG = AUS 
+        NOT = {
+            has_idea = AUS_idea_industrialization_bohemia
+        }     
+        has_variable = AUS_var_bohemian_industrialization
+    }
+
+    immediate = {
+	    AUS = {
+            clear_variable = AUS_var_bohemian_industrialization
+		}
+    }
+
+    option = {
+	
+	}	
+}
+
+country_event = { #hidden event to clear variable          
+	id = AUShidden.2 
+	title = AUShidden.2.t 
+	desc = AUShidden.2.t 
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+
+    trigger = {
+        TAG = AUS 
+        NOT = {
+            has_idea = AUS_idea_urbanise_wien
+        }     
+        has_variable = AUS_var_wien_urbanisation
+    }
+
+    immediate = {
+	    AUS = {
+            clear_variable = AUS_var_wien_urbanisation
+		}
+    }
+
+    option = {
+	
+	}		
 }

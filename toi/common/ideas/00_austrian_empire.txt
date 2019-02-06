@@ -467,6 +467,70 @@ ideas = {
 		   allowed_civil_war = {
 			   always = yes
 		   }
+		   
+		   cancel = {
+		        check_variable = { num_of_civilian_factories > AUS_var_bohemian_industrialization }
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_industrial_complex_factor = 0.25 
+			}
+	    }
+		
+		AUS_idea_urbanise_wien = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		   
+		   cancel = {
+		        check_variable = { num_of_civilian_factories > AUS_var_wien_urbanisation }
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_industrial_complex_factor = 0.2 	 
+				production_speed_infrastructure_factor = 0.1 
+			}
+	    }
+		AUS_idea_migration_prag = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                MONTHLY_POPULATION = 0.001 
+			}
+	    }
+		AUS_idea_Metternich_Legacy = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
 
 		   removal_cost = -1
 
@@ -474,6 +538,42 @@ ideas = {
 			
 		   modifier = {
 	           production_speed_dockyard_factor = 0.1 
+			}
+	    }
+		AUS_idea_Hungarian_Wheat = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                consumer_goods_factor = -0.05 
+			}
+	    }
+		AUS_idea_Galician_Railways = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_infrastructure_factor = 0.1   
 			}
 	    }
 	}	
