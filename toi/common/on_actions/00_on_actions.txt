@@ -399,6 +399,13 @@ on_actions = {
                 }   
                 FROM = { country_event = { id = caucasus.3 } }
             }
+			if = {
+                limit = {
+					FROM = { tag = RAJ }
+					ROOT = { tag = SRS }
+                }   
+                FROM = { country_event = { id = britishindia.1 } }
+            }
 		}
 	}
 

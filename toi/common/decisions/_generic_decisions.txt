@@ -1132,6 +1132,14 @@ political_actions = {
 					has_autonomy_state = autonomy_personal_union
 				}
 			}
+			NOT = {
+				OR = {
+					TAG = RAJ
+					TAG = CAN
+					TAG = AST
+					TAG = SAF
+				}
+			}
 		}
 		
 		fire_only_once = no
