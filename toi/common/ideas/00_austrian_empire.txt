@@ -576,6 +576,25 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1   
 			}
 	    }
+		AUS_idea_lost_hungary_revolt = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+				stability_factor = -0.25 
+				political_power_gain = -0.25 
+			}
+		}
 	}	
     political_advisor = {
 		AUS_advisor_hermann_dietrich_lindheim = {
