@@ -29,6 +29,7 @@ focus_tree = {
 	x = 10
 	y = 1
 	completion_reward = {
+
 	}
 }
 	focus = {
@@ -63,6 +64,9 @@ focus_tree = {
 	}
 	x = 9
 	y = 3
+	completion_reward = {
+
+	}
 	available = {
 		has_war = no
 		has_country_flag = HUN_flag_first_elections_deak
@@ -71,6 +75,7 @@ focus_tree = {
 }
 	focus = {
 	id = HUN_keep_lajos
+	icon = GFX_goal_unknown
 	cost 10.00
 	prerequisite = {
 		focus = HUN_open_politics
@@ -80,6 +85,9 @@ focus_tree = {
 	}
 	x = 11
 	y = 3
+	completion_reward = {
+
+	}
 	available = {
 		has war = no
 		has_country_flag = HUN_flag_first_elections_lajos
@@ -88,10 +96,120 @@ focus_tree = {
 }
 	focus = {
 	id = HUN_legacy_of_regent
+	icon = GFX_goal_unknown
 	cost = 70
 	prerequisite = {
 		focus = HUN_keep_lajos
 	}
 	x = 11
 	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_minority_rights
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 11
+	y = 5
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_father_of_honved
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 12
+	y = 5
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_invest_in_poor
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 13
+	y = 5
+	completion_reward = {
+	
+	}
+}
+	focus = {
+	id = HUN_end_unpaid_labor
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_invest_in_poor
+		focus = HUN_father_of_honved
+		focus = HUN_minority_rights
+	}
+	x = 11.5
+	y = 6
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_hungary_for_hungarians
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 8
+	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_formalize_autrian_relations
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 9
+	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_realm_of_wise_man
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 6
+	y = 4
+	completion_reward = {
+	
+	}
+}
+	focus = {
+	id = HUN_new_horizons
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_realm_of_wise_man
+	}
+	x = 6
+	y = 5
+	completion_reward = {
+
+	}
 }
