@@ -1,0 +1,20 @@
+focus_tree = {
+	id = hungary
+	country = {
+	factor = 0
+	modifier = {
+		add = 10
+		tag = HUN
+		}
+	}
+	default = no
+	focus = {
+	id = HUN_new_hun
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 5
+	y = 0
+	completion_reward = {
+				add_political_power = 100
+	}
+}
