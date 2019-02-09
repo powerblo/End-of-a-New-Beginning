@@ -1,2 +1,62 @@
 ﻿add_namespace = britishindia
 add_namespace = britishcanada
+add_namespace = britishafrica
+add_namespace = britishaustralia
+add_namespace = britishoceania
+
+#The Sepoy Rebellion is won
+country_event = {
+	id = britishindia.1
+	title = britishindia.1.t
+	desc = britishindia.1.d
+	picture = GFX_report_event_sepoy_lucknow_surrender
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishindia.1.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		custom_effect_tooltip = eoanb_tt_event_britishindia_1_a
+		hidden_effect = {
+			if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					RAJ = {
+						check_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				RAJ = {
+					subtract_from_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+			else = {
+				RAJ = { add_stability = 0.05 }
+			}
+		}
+	}
+	
+}
