@@ -291,6 +291,7 @@ focus_tree = {
 		focus = LIE_Supportaustria
 		}
 		completion_reward = {
+		      country_event = { id = liechtenstein.1 }
 		}
 	}
 	focus = {
@@ -357,6 +358,16 @@ focus_tree = {
 		}
 		completion_reward = {
             add_political_power = 20
+			LIE = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Johann II"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "johann_ii_prt1.dds"
+                    expire = 1929.02.11
+                    ideology = despotism 
+                }
+			}
 		}
 	}
 	focus = {
