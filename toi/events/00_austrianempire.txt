@@ -132,11 +132,17 @@ country_event = { #Bohemians Protests stopped
 	fire_only_once = yes
 	
 		trigger = {
-			tag = AUS 
-            focus_progress = {
-                focus = AUS_Imprison_Dissenters
-                progress > 0.5 
-            }			 
+			tag = AUS 	 
+			OR = {
+                focus_progress = {
+                    focus = AUS_Imprison_Dissenters
+                    progress > 0.5 
+                }		
+                focus_progress = {
+                    focus = AUS_February_Patent
+                    progress > 0.3  
+                }					
+		    }
 		}
 	
 	option = {
@@ -146,9 +152,9 @@ country_event = { #Bohemians Protests stopped
 		AUS = {
             add_to_variable = {
                 var = SLA_REVOLT_RISK
-                value = 1   
+                value = 0.5    
             }
-            custom_effect_tooltip = AUS_tt_add_sla_revolt_risk			
+            custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk			
 		}
 	}
 }
@@ -163,10 +169,16 @@ country_event = { #Hungarian Liberals Angered
 	
 		trigger = {
 			tag = AUS 
-            focus_progress = {
-                focus = AUS_Imprison_Dissenters
-                progress > 0.8 
-            }			 
+			OR = {
+                focus_progress = {
+                    focus = AUS_Imprison_Dissenters
+                    progress > 0.8 
+                }		
+                focus_progress = {
+                    focus = AUS_February_Patent
+                    progress > 0.9  
+                }					
+		    }
 		}
 	
 	option = {
@@ -176,9 +188,9 @@ country_event = { #Hungarian Liberals Angered
 		AUS = {
             add_to_variable = {
                 var = HUN_REVOLT_RISK
-                value = 1   
+                value = 0.5    
             }
-            custom_effect_tooltip = AUS_tt_add_hun_revolt_risk			
+            custom_effect_tooltip = AUS_tt_add_half_hun_revolt_risk			
 		}
 	}
 }
@@ -265,7 +277,13 @@ country_event = { #Future of Lombardy Venetia
 	
 	option = { #Annex only Venetia   
 		name = AUSdiplo.1.a
-		ai_chance = { factor = 20 }
+		ai_chance = { 
+            factor = 25  
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+        }		
 		
 		AUS = {
           transfer_state = 160             
@@ -280,13 +298,25 @@ country_event = { #Future of Lombardy Venetia
 
 	option = { #Keep the Puppet   
 		name = AUSdiplo.1.b 
-		ai_chance = { factor = 80 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 100  
+                is_historical_focus_on = yes
+            }
+        }
 
 	}
 	
 	option = { #TfV - Give more freedom    
 		name = AUSdiplo.1.c 
-		ai_chance = { factor = 80 }
+		ai_chance = { 
+            factor = 15   
+            modifier = {
+                factor = 0   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		if ={
 		    limit = {
@@ -315,7 +345,13 @@ country_event = { #Future of Modena, Parma and Tuscany
 	
 	option = { #TfV - Make Puppets     
 		name = AUSdiplo.2.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 0   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		if ={
 		    limit = {
@@ -385,7 +421,13 @@ country_event = { #Future of Modena, Parma and Tuscany
 	
 	option = { #Status Quo    
 		name = AUSdiplo.2.b 
-		ai_chance = { factor = 40 }
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 100  
+                is_historical_focus_on = yes
+            }
+        }
 		
 	}
 }
@@ -400,7 +442,19 @@ country_event = { #Cede Savoy and Nice to France
 	
 	option = { #Give Savoy and Nice to France      
 		name = AUSdiplo.3.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 10   
+                FRA = {
+				    has_completed_focus = FRA_close_relations_austria 
+				}
+            }
+            modifier = {
+                factor = 10   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		custom_effect_tooltip = AUS_tt_FRA_savoy_nice  
 		
@@ -411,8 +465,13 @@ country_event = { #Cede Savoy and Nice to France
 	
 	option = { #Let Piedmont keep them     
 		name = AUSdiplo.3.b 
-		ai_chance = { factor = 40 }
-		
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 5    
+                is_historical_focus_on = yes
+            }
+        }
 	}
 }
 
@@ -492,14 +551,26 @@ country_event = { #Retire Ferenc Gyulay
 	
 	option = { #Retire him      
 		name = AUSgenerals.1.a 
-		ai_chance = { factor = 100 }
+		ai_chance = { 
+            factor = 75     
+            modifier = {
+                factor = 100    
+                is_historical_focus_on = yes
+            }
+        }
 		
 	    remove_unit_leader = 168305
 	}
 	
 	option = { #Do not Retire him      
 		name = AUSgenerals.1.b 
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+            factor = 25     
+            modifier = {
+                factor = 0     
+                is_historical_focus_on = yes
+            }
+        }
 	
 	    AUS = {
 		    add_stability = -0.05 
@@ -1279,7 +1350,7 @@ country_event = { #Peace Event in Favour of Hungary - No Croatia
 			}
 		}
 		news_event = {
-			id = AUSnews.2 
+			id = AUSnews.3
 			days = 1 
 		}
     }
@@ -1332,7 +1403,7 @@ country_event = { #Peace Event in Favour of Hungary - Croatia
 			}
 		}
 		news_event = {
-			id = AUSnews.2
+			id = AUSnews.3
 			days = 1 
 		}
     }	
@@ -1376,6 +1447,24 @@ news_event = { #Compromise Achieved
     }		     
 }
 
+news_event = { #Hungarian Revolt Peace              
+	id = AUSnews.3
+	title = AUSnews.3.t
+	desc = AUSnews.3.d 
+	picture = GFX_news_event_generic_rally2
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = { 
+		name = AUSnews.3.a 
+		ai_chance = { factor = 100 }		
+    }		     
+}
+
 add_namespace = AUShuncompromise
 add_namespace = AUSfedcompromise
 
@@ -1414,7 +1503,13 @@ country_event = { #Choose Between Federalization or Dual Monarchy
 	
 	option = { #Dual Monarchy  
 		name = AUSfedcompromise.1.a  
-		ai_chance = { factor = 100 }
+		ai_chance = { 
+            factor = 60    
+            modifier = {
+                factor = 100    
+                is_historical_focus_on = yes
+            }
+        }
 		
 		hidden_effect = {
 	        AUS = {
@@ -1426,7 +1521,13 @@ country_event = { #Choose Between Federalization or Dual Monarchy
 	
 	option = { #Federalization  
 		name = AUSfedcompromise.1.b  
-		ai_chance = { factor = 100 }
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 0     
+                is_historical_focus_on = yes
+            }
+        }
 		
 	    AUS = {
 		    country_event = { id = AUSfedcompromise.2 days = 200 } 
@@ -1769,7 +1870,7 @@ country_event = { #Negotiate with the Croats
 	
 	option = { #Full Autonomy with Dalmatia     
 		name = AUSfedcompromise.7.a  
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 25 }
 		
 		hidden_effect = {
 	        AUS = {
@@ -1785,7 +1886,7 @@ country_event = { #Negotiate with the Croats
 
 	option = { #Autonomy without Dalmatia      
 		name = AUSfedcompromise.7.b   
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 15 }
 		
 		hidden_effect = {
 	        AUS = {
@@ -1807,7 +1908,7 @@ country_event = { #Negotiate with the Croats
 
 	option = { #Croatia under Hungary      
 		name = AUSfedcompromise.7.c    
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 60 }
 		
 		hidden_effect = {
 	        AUS = {
@@ -1936,16 +2037,46 @@ country_event = { #Negotiate with the Bohemians
 	
 	is_triggered_only = yes 
 	
-	option = { #End the Process    
+	option = { #Full Autonomy     
 		name = AUSfedcompromise.9.a  
 		ai_chance = { factor = 100 }
 		
 		hidden_effect = {
 	        AUS = {
-			    set_country_flag = AUS_flag_federalization_1867 
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_autonomy 
 		    }
         }		
-    }		
+    }	
+	option = { #Sudentenland under Austria      
+		name = AUSfedcompromise.9.b  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_sudentenland_austrian  
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 0.5    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk		
+    }
+	option = { #All under Austria       
+		name = AUSfedcompromise.9.c  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_austrian  
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 1    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_sla_revolt_risk		
+    }	
 }
 
 country_event = { #Negotiate with the Galicians        
