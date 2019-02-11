@@ -30,6 +30,10 @@ eoanb_category_options = {
                 name = "Prag"
             }
 			set_province_name = {
+                id = 9606   
+                name = "Temeschwar"
+            }
+			set_province_name = {
                 id = 9427  
                 name = "Krakau"
             }
@@ -138,6 +142,135 @@ eoanb_category_options = {
 			}
 		    43 = {
 			set_state_name = "Nordungarn"
+			}
+		}
+
+	}
+	
+	eoanb_decision_cultural_name_aus_reset = {
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		visible = {
+			is_ai = no 
+			has_country_flag = eoanb_cultural_name_aus
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+            clr_global_flag = eoanb_cultural_name_aus 
+			reset_province_name	= 6626
+			reset_province_name	= 9660
+			reset_province_name	= 11542
+			reset_province_name	= 9606
+			reset_province_name	= 9427
+			reset_province_name	= 11666
+			1235 = {
+			reset_state_name = yes
+			}
+			1236 = {
+			reset_state_name = yes
+			}
+			736 = {
+			reset_state_name = yes
+			}
+			103 = {
+			reset_state_name = yes
+			}
+			970 = {
+			reset_state_name = yes
+			}
+			102 = {
+			reset_state_name = yes
+			}
+			109 = {
+			reset_state_name = yes
+			}
+			39 = {
+			reset_state_name = yes
+			}
+			153 = {
+			reset_state_name = yes
+			}
+			1234 = {
+			reset_state_name = yes
+			}
+			4 = {
+			reset_state_name = yes
+			}
+			152 = {
+			reset_state_name = yes
+			}
+			1010 = {
+			reset_state_name = yes
+			}
+			9 = {
+			reset_state_name = yes
+			}
+			75 = {
+			reset_state_name = yes
+			}
+			74 = {
+			reset_state_name = yes
+			}
+			45 = {
+			reset_state_name = yes
+			}
+			743 = {
+			reset_state_name = yes
+			}
+			82 = {
+			reset_state_name = yes
+			}
+			84 = {
+			reset_state_name = yes
+			}
+			76 = {
+			reset_state_name = yes
+			}
+			1055 = {
+			reset_state_name = yes
+			}
+			967 = {
+			reset_state_name = yes
+			}
+			70 = {
+			reset_state_name = yes
+			}
+			71 = {
+			reset_state_name = yes
+			}
+			73 = {
+			reset_state_name = yes
+			}
+			89 = {
+			reset_state_name = yes
+			}
+		    91 = {
+			reset_state_name = yes
+			}
+		    88 = {
+			reset_state_name = yes
+			}
+		    1232 = {
+			reset_state_name = yes
+			}
+		    664 = {
+			reset_state_name = yes
+			}
+		    154 = {
+			reset_state_name = yes
+			}
+		    155 = {
+			reset_state_name = yes
+			}
+		    43 = {
+			reset_state_name = yes
 			}
 		}
 
