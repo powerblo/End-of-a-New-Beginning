@@ -8,6 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
+####### First Election focus tree
 	focus = {
 	id = HUN_new_hungary
 	icon = GFX_goal_unknown
@@ -227,3 +228,95 @@ focus_tree = {
 	
 	}
 }
+###### Navy Tree
+	focus = {
+	id = HUN_recreate_navy
+	icon = GFX_goal_unknown
+	cost = 35
+	x = 15 
+	y = 0
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_open_first_dock
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_recreate_navy
+	}
+	x = 15
+	y = 1	
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_recruit_navy_leaders
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_recreate_navy
+	}
+	x = 16
+	y = 1
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_navy_pressure
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_open_first_dock
+	}
+	x = 15
+	y = 2
+	completion_reward = {
+
+	}	
+}
+	focus = {
+	id = HUN_train_recruits
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_recruit_navy_leaders
+	}
+	x = 16
+	y = 2
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_contest_austrian_supremacy
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_train_recruits
+		focus = HUN_navy_pressure
+	}
+	mutually_exclusive = {
+		focus = HUN_adriatic_treaties
+	}
+	x = 15
+	y = 3
+	completion_reward {
+
+	}
+}
+	focus = {
+	id = HUN_adriatic_treaties
+	cost = 70
+	prerequisite = {
+		focus = HUN_train_recruits
+		focus = HUN_navy_pressure
+	}
+	mutually_exclusive = {
+		focus = HUN_contest_austrian_supremacy
+	}
+}
+	
