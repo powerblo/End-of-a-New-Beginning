@@ -49,6 +49,7 @@ political_actions = {
 			}
 			SRS = { exists = yes }
 			SRS = { has_war_with = ENG }
+			NOT = { ENG = { has_completed_focus = ENG_focus_humiliation_by_sepoy } }
 		}
 		
 		fire_only_once = yes
@@ -73,6 +74,17 @@ political_actions = {
 			modifier = {
 				factor = 0
 				has_war = no
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 25
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					RAJ = { surrender_progress > 0.5 }
+					SRS = { surrender_progress > 0.5 }
+				}
 			}
 			modifier = {
 				factor = 0.05
