@@ -1898,6 +1898,45 @@ country_event = { # The integration of Southern Algeria into our colony
   }
 }
 
+country_event = { # Cochinchina war simulation
+  id = nap_france.160
+  title = nap_france.160.t
+  desc = nap_france.160.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+
+  option = { # Continue the war
+    name = nap_france.160.a
+	ai_chance = { factor = 100 }
+    add_equipment_to_stockpile = {
+	  type = uniform_equipment_2
+      amount = -50
+      producer = FRA
+	}
+    add_equipment_to_stockpile = {
+	  type = infantry_equipment_rifle_1
+      amount = -30
+      producer = FRA
+	}
+	country_event = { id = nap_france.160 days = 30 }
+  }
+  option = { # Stop the war
+    name = nap_france.160.b
+	ai_chance = { factor = 0 }
+    add_stability = -0.10
+	remove_ideas = FRA_VIN_war
+	VIN = {
+	  add_stability = 0.10
+	  remove_ideas = VIN_FRA_war
+	}
+	SPR = {
+	  add_stability = -0.01
+	  remove_ideas = SPR_VIN_war
+	}
+  }
+}
+
 #----------------------------------------------------------------------------------------------
 # ORSINI TRAGEDY AND CONSEQUENCES EVENTS
 #----------------------------------------------------------------------------------------------
