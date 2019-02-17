@@ -1528,7 +1528,7 @@ focus = {
 		id = BRA_mend_relations_with_argentina
 		icon = GFX_goal_focus_negotiate_argentina
 		cost = 70
-		x = 41
+		x = 40
 		y = 15
           
 		available = {
@@ -1559,13 +1559,13 @@ focus = {
 	
 	focus = {
 		id = BRA_mend_relations_with_uruguay
-		icon = GFX_goal_focus_unknown
+		icon = GFX_goal_focus_ally_URG
 		cost = 70
 		x = 39
-		y = 15
+		y = 16
           		
 		prerequisite = {
-		focus = BRA_a_new_foreign_policy
+		focus = BRA_mend_relations_with_argentina
 		}
 		
 		
@@ -1588,9 +1588,9 @@ focus = {
 	
 	focus = {
 		id = BRA_mend_relations_with_peru
-		icon = GFX_goal_focus_unknown
+		icon = GFX_goal_focus_ally_PRU
 		cost = 70
-		x = 40
+		x = 41
 		y = 16
 		
 		available = {
@@ -1599,7 +1599,6 @@ focus = {
           		
 		prerequisite = {
 		focus = BRA_mend_relations_with_argentina
-		focus = BRA_mend_relations_with_uruguay
 		}
 
 		
