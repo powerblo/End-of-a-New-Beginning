@@ -1824,6 +1824,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRA_french_indochina_tooltip
 			country_event = { id = nap_france.160 days = 30 }
+			country_event = { id = nap_france.161 days = 1500 }
 			add_timed_idea = {
 				idea = FRA_VIN_war
 				days = 1500
@@ -1831,7 +1832,7 @@ focus_tree = {
 			VIN = {
 				add_timed_idea = {
 					idea = VIN_FRA_war
-					days = 1500
+					days = 2000
 				}
 			}
 			SPR = {
@@ -1840,7 +1841,6 @@ focus_tree = {
 					days = 1500
 				}
 			}
-			# TODO : Add a final event which gives land and naval experience, puppetize VIN
 		}
 	}
 	focus = {
@@ -1853,8 +1853,8 @@ focus_tree = {
 		x = 48
 		y = 2
 		available = {
-			VIN = {
-				is_puppet = yes
+			FRA = {
+				controls_state = 998
 			}
 		}
 		completion_reward = {

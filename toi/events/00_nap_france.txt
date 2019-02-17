@@ -1905,6 +1905,10 @@ country_event = { # Cochinchina war simulation
   picture = GFX_report_event_nap_france_carbonari
 
   is_triggered_only = yes
+  
+  trigger = {
+	has_idea = FRA_VIN_war
+  }
 
   option = { # Continue the war
     name = nap_france.160.a
@@ -1934,6 +1938,52 @@ country_event = { # Cochinchina war simulation
 	  add_stability = -0.01
 	  remove_ideas = SPR_VIN_war
 	}
+  }
+}
+
+country_event = { # Cochinchina war FRA victory
+  id = nap_france.161
+  title = nap_france.161.t
+  desc = nap_france.161.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+  
+  trigger = {
+	has_idea = FRA_VIN_war
+  }
+
+  option = { # Get gold and territory reparations
+    name = nap_france.161.a
+	ai_chance = { factor = 100 }
+	transfer_state = 998
+    add_timed_idea = {
+	  idea = FRA_VIN_victory
+	  days = 300
+	}
+	SPR = {
+      add_timed_idea = {
+	    idea = SPR_VIN_victory
+		days = 300
+	  }
+	}
+	hidden_effect = { news_event = { id = nap_france_flavor.23 } }
+  }
+
+  option = { # Get only gold reparations
+    name = nap_france.161.b
+	ai_chance = { factor = 0 }
+    add_timed_idea = {
+	  idea = FRA_VIN_victory
+	  days = 300
+	}
+	SPR = {
+      add_timed_idea = {
+	    idea = SPR_VIN_victory
+		days = 300
+	  }
+	}
+	hidden_effect = { news_event = { id = nap_france_flavor.24 } }
   }
 }
 
