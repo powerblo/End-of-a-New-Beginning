@@ -1166,18 +1166,14 @@ country_event = {
 				1006 = { is_controlled_by = SRS }
 			}
 			AND = {
-				431 = { is_controlled_by = OUD }
-				435 = { is_controlled_by = OUD }
-				433 = { is_controlled_by = OUD }
-				436 = { is_controlled_by = OUD }
-				1006 = { is_controlled_by = OUD }
-			}
-			AND = {
-				431 = { is_controlled_by = GWA }
-				435 = { is_controlled_by = GWA }
-				433 = { is_controlled_by = GWA }
-				436 = { is_controlled_by = GWA }
-				1006 = { is_controlled_by = GWA }
+				any_country = {
+					has_war_together_with = SRS 
+					controls_state = 431
+					controls_state = 435
+					controls_state = 433
+					controls_state = 436
+					controls_state = 1006
+				}
 			}
 		}
 	}
@@ -1291,6 +1287,53 @@ country_event = {
 	option = {
 		name = britainindia.5.a
 		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#ENG gets message RAJ is trying to distance itself
+country_event = {
+	id = britainindia.6
+	title = britainindia.6.t
+	desc = britainindia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#Send them a warning
+	option = {
+		name = britainindia.6.a
+		ai_chance = { factor = 90 }
+		RAJ = { country_event = { id = britishindia.2 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_a
+	}
+	
+	#Threaten War
+	option = {
+		name = britainindia.6.b
+		ai_chance = { 
+			factor = 8 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.3 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_b
+	}
+	
+	#Release them
+	option = {
+		name = britainindia.6.c
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.4 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_c
 	}
 	
 }
