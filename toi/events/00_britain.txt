@@ -1166,18 +1166,14 @@ country_event = {
 				1006 = { is_controlled_by = SRS }
 			}
 			AND = {
-				431 = { is_controlled_by = OUD }
-				435 = { is_controlled_by = OUD }
-				433 = { is_controlled_by = OUD }
-				436 = { is_controlled_by = OUD }
-				1006 = { is_controlled_by = OUD }
-			}
-			AND = {
-				431 = { is_controlled_by = GWA }
-				435 = { is_controlled_by = GWA }
-				433 = { is_controlled_by = GWA }
-				436 = { is_controlled_by = GWA }
-				1006 = { is_controlled_by = GWA }
+				any_country = {
+					has_war_together_with = SRS 
+					controls_state = 431
+					controls_state = 435
+					controls_state = 433
+					controls_state = 436
+					controls_state = 1006
+				}
 			}
 		}
 	}
