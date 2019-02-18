@@ -1291,6 +1291,53 @@ country_event = {
 	
 }
 
+#ENG gets message RAJ is trying to distance itself
+country_event = {
+	id = britainindia.6
+	title = britainindia.6.t
+	desc = britainindia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#Send them a warning
+	option = {
+		name = britainindia.6.a
+		ai_chance = { factor = 90 }
+		RAJ = { country_event = { id = britishindia.2 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_a
+	}
+	
+	#Threaten War
+	option = {
+		name = britainindia.6.b
+		ai_chance = { 
+			factor = 8 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.3 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_b
+	}
+	
+	#Release them
+	option = {
+		name = britainindia.6.c
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.4 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_c
+	}
+	
+}
+
 ### NEWS EVENTS RELATING TO BRITAIN BELOW ###
 
 #Britain bans Trade Unions
