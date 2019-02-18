@@ -958,6 +958,14 @@ focus_tree = {
 		x = 34
 		y = 3
 
+		completion_reward = {
+			add_tech_bonus = {
+							bonus = 0.15
+							uses = 2
+							category = biochemistry_tech
+						}
+		}
+
 	}
 	focus = {
 		id = ITA_Tomatoes
@@ -968,6 +976,11 @@ focus_tree = {
 		}
 		x = 36
 		y = 2
+
+		completion_reward = {
+			add_stability = 0.05
+		} 
+
 
 	}
 	#focus = {
@@ -994,8 +1007,11 @@ focus_tree = {
 		x = 38
 		y = 2
 			completion_reward = {
-
-}
+			add_popularity = {
+    			ideology = centrism
+    			popularity = 0.05
+			}
+		}
 
 	}
 	focus = {
@@ -1008,8 +1024,9 @@ focus_tree = {
 		x = 38
 		y = 3
 			completion_reward = {
+				add_stability = 0.1
 
-}
+		}
 
 	}
 	focus = {
