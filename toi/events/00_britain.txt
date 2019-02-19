@@ -589,35 +589,35 @@ country_event = {
 	
 	option = { 
 		name = britain.19.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 50 }
 		add_political_power = 5
-hidden_effect = {	
-	HON = {
-		create_country_leader = {
-	name = "Fernando Caudillo"
-	desc = "POLITICS_CAUDILLO_DESC"
-	expire = "1861.1.1"
-	ideology = national_populism
-	traits = {
+		hidden_effect = {	
+			HON = {
+				create_country_leader = {
+					name = "Fernando Caudillo"
+					desc = "POLITICS_CAUDILLO_DESC"
+					expire = "1861.1.1"
+					ideology = national_populism
+					traits = {
 		
-	}
-}
-	}
-	}
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
 		name = britain.19.b 
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 50 }
 		add_political_power = -5
 		hidden_effect = {
-		ENG = { country_event = britain.20 }
-		HON = { country_event = britain.20 }
-		NIC = { country_event = britain.20 }
-		USA = { country_event = britain.20 }
-		ELS = { country_event = britain.20 }
-	}	
-}
+			ENG = { country_event = britain.20 }
+			HON = { country_event = britain.20 }
+			NIC = { country_event = britain.20 }
+			USA = { country_event = britain.20 }
+			ELS = { country_event = britain.20 }
+		}	
+	}
 
 }
 
@@ -632,41 +632,47 @@ country_event = {
 	
 	option = {
 		name = britain.20.a
+		ai_chance = { factor = 60 }
 		trigger = {
-		OR = {
-		TAG = USA 
-		TAG = ENG 
-		}
+			OR = {
+				TAG = USA 
+				TAG = ENG 
+			}
 		}
 		add_political_power = -5
 	}
 	
 	option = {
 		name = britain.20.b
+		ai_chance = { factor = 20 }
 		trigger = {
-		OR = {
-		TAG = NIC
-		TAG = ELS
-		}
+			OR = {
+				TAG = NIC
+				TAG = ELS
+			}
 		}
 		declare_war_on = {
-    target = HON
-    type = topple_government
-}
-} 
+			target = HON
+			type = topple_government
+		}
+	} 
 
 	option = {
 		name = britain.20.c
+		ai_chance = { factor = 20 }
 		trigger = {
-		TAG = HON
+			TAG = HON
 		}
 		set_politics = { ruling_party = chauvinist_populism elections_allowed = no }
-	set_political_party = {
-    ideology = chauvinist_populism
-    popularity = 55
-}
-load_oob = "HON_Walker"
-}
+		set_political_party = {
+			ideology = chauvinist_populism
+			popularity = 55
+		}
+		custom_effect_tooltip = eoanb_tt_ENG_event_20_b
+		hidden_effect = {
+			load_oob = "HON_Walker"
+		}
+	}
 
 }
 
