@@ -316,12 +316,14 @@ news_event = {
 	option = {
 		name = news.17.b
 		trigger = { TAG = JAP }
+		add_ideas = JAP_foreign_trade
 		add_stability = -0.10
 		add_opinion_modifier = { target = USA modifier = small_decrease }
 	}
 	option = {
 		name = news.17.c
 		trigger = { TAG = USA }
+		add_ideas = USA_JAP_trade
 		add_political_power = 50
 		add_opinion_modifier = { target = JAP modifier = small_increase }
 	}
@@ -358,6 +360,22 @@ news_event = {
 				TAG = RUS
 				TAG = HOL
 			}
+		}
+		if = {
+			limit = { tag = ENG }
+			add_ideas = ENG_JAP_trade
+		}
+		if = {
+			limit = { tag = FRA }
+			add_ideas = FRA_JAP_trade
+		}
+		if = {
+			limit = { tag = RUS }
+			add_ideas = RUS_JAP_trade
+		}
+		if = {
+			limit = { tag = HOL }
+			add_ideas = HOL_JAP_trade
 		}
 		add_political_power = 50
 		add_opinion_modifier = { target = JAP modifier = small_increase }
