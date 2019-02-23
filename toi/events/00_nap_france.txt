@@ -1956,7 +1956,10 @@ country_event = { # Cochinchina war FRA victory
   option = { # Get gold and territory reparations
     name = nap_france.161.a
 	ai_chance = { factor = 100 }
-	transfer_state = 998
+	CCH = {
+		transfer_state = 998
+	}
+	puppet = CCH
     add_timed_idea = {
 	  idea = FRA_VIN_victory
 	  days = 300
