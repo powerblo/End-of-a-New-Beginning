@@ -302,6 +302,14 @@ news_event = {
 			NOT = {
 				TAG = JAP
 				TAG = USA
+				TAG = CHO
+				TAG = SAT
+				TAG = SAG
+				TAG = TOS 
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL 
 			}
 		}
 	}
@@ -340,6 +348,19 @@ news_event = {
 		trigger = { TAG = TOS }
 		add_stability = -0.05
 		add_opinion_modifier = { target = JAP modifier = small_decrease }
+	}
+	option = {
+		name = news.17.h
+		trigger = {
+			OR = {
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL
+			}
+		}
+		add_political_power = 50
+		add_opinion_modifier = { target = JAP modifier = small_increase }
 	}
 }
 
