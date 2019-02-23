@@ -1959,7 +1959,19 @@ country_event = { # Cochinchina war FRA victory
 	CCH = {
 		transfer_state = 998
 	}
-	puppet = CCH
+    if = {
+      limit = {
+        has_dlc = "Together for Victory"
+      }
+      set_autonomy = {
+        target = CCH
+        autonomous_state = autonomy_colony
+        freedom_level = 0.01
+      }
+      else = {
+        puppet = CCH
+      }
+    }
     add_timed_idea = {
 	  idea = FRA_VIN_victory
 	  days = 300
