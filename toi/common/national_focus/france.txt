@@ -1881,103 +1881,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = FRA_land_in_da_nang
-		icon = GFX_focus_generic_coastal_fort
-		cost = 70
-		prerequisite = {
-			focus = FRA_convert_vietnamese
-		}
-		prerequisite = {
-			focus = FRA_research_angkor_wat
-		}
-		x = 49
-		y = 3
-
-	}
-	focus = {
-		id = FRA_secure_cochichina
-		icon = GFX_goal_focus_secure_cochichina
-		cost = 70
-		prerequisite = {
-			focus = FRA_land_in_da_nang
-		}
-		x = 49
-		y = 4
-
-	}
-	focus = {
-		id = FRA_faith_over_territory
-		icon = GFX_goal_focus_faith_vietnam
-		cost = 70
-		prerequisite = {
-			focus = FRA_secure_cochichina
-		}
-		mutually_exclusive = {
-			focus = FRA_capture_vietnam
-		}
-		x = 48
-		y = 5
-		completion_reward = {
-			add_political_power = 50
-			set_autonomy = {
-				target = VIN
-				autonomous_state = autonomy_protectorate
-				freedom_level = 0.1
-			}
-			VIN = {
-				set_cosmetic_tag = VIN_FRENCH_COCHICHINA
-				set_politics = {
-					ruling_party = autocracy
-				}
-				create_country_leader = {
-					name = "Tu Duc"
-					picture = "Portrait_VIN_Tu_Duc.dds"
-					ideology = despotism
-				}
-			}
-		}
-	}
-	focus = {
-		id = FRA_capture_vietnam
-		icon = GFX_goal_focus_colonize_vietnam
-		cost = 70
-		prerequisite = {
-			focus = FRA_secure_cochichina
-		}
-		mutually_exclusive = {
-			focus = FRA_faith_over_territory
-		}
-		x = 50
-		y = 5
-		completion_reward = {
-			set_autonomy = {
-				target = VIN
-				autonomous_state = autonomy_colony
-				freedom_level = 0.1
-			}
-			VIN = {
-				set_cosmetic_tag = VIN_FRENCH_COCHICHINA
-				set_politics = {
-					ruling_party = autocracy
-				}
-				create_country_leader = {
-					name = "Louis Adolphe Bonard"
-					picture = "Portrait_VIN_Louis_Adolphe_Bonard.dds"
-					ideology = despotism
-				}
-			}
-		}
-	}
-	focus = {
 		id = FRA_protectorate_cambodia
 		icon = GFX_goal_focus_protectorate_cambodia
 		cost = 70
 		prerequisite = {
-			focus = FRA_faith_over_territory
-			focus = FRA_capture_vietnam
+			focus = FRA_research_angkor_wat
+		}
+		prerequisite = {
+			focus = FRA_convert_vietnamese
+		}
+		available = {
+			date > 1867.5.1
 		}
 		x = 49
-		y = 6
+		y = 3
 		completion_reward = {
 			set_autonomy = {
 				target = CAM
