@@ -807,7 +807,7 @@ focus_tree = {
 			hidden_effect = {
     			load_oob = "ITA_Ship_Commision"
 			}
-			
+			custom_effect_tooltip = ITA_Purchase_Foreign_Ships
 
 		}
 
@@ -856,7 +856,11 @@ focus_tree = {
 		}
 		x = 27
 		y = 9
-
+		completion_reward = {
+			remove_ideas = {
+				ITA_Different_Naval_Doctorine
+			}		
+		}
 	}
 	focus = {
 		id = ITA_A_True_Pier_of_Europe
@@ -927,17 +931,6 @@ focus_tree = {
 				}
 
 	}
-	#focus = {
-		#id = ITA_Turn_Weeds_Into_Food
-		#icon = GFX_focus_ITA_Pasta
-		#cost = 70
-		#prerequisite = {
-		#	focus = ITA_Agriculture_Revival
-		#}
-		#x = 34
-		#y = 2
-
-	#}
 	focus = {
 		id = ITA_Spread_Moderning_Farming
 		icon = GFX_focus_ITA_Farms
