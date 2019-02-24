@@ -486,3 +486,26 @@ news_event = {
 	}
 	
 }
+
+#The Maritime Treaty (CAN, NVS, BRK)
+news_event = {
+	id = news.21
+	title = news.21.t
+	desc = news.21.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.21.a
+		trigger = { TAG = CAN }
+	}
+	
+	option = {
+		name = news.21.b
+		trigger = { NOT = { TAG = CAN } }
+	}
+	
+}
