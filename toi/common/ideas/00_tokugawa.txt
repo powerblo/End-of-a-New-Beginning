@@ -1,0 +1,346 @@
+ideas = {
+	country = {
+		TSH_vic_fiscal_crisis = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.20
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		TSH_vic_fiscal_crisis_2 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.20
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		TSH_vic_fiscal_crisis_3 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		tsh_vic_weight_based_system = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+		TSH_support_SAG = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_factory_factor = -0.05
+			}
+		}
+		TSH_support_CHO = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				MONTHLY_POPULATION = 0.03
+			}
+		}
+		TSH_support_TOS = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+		TSH_support_SAT = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		TSH_FRA_trade = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		tsh_vic_industrial_expansion={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		tsh_hatamoto_troops={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		tsh_army_centralization_efforts={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				political_power_gain = -0.25
+				army_org_factor = 0.05
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		tsh_army_centralization_efforts_2={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				political_power_gain = -0.25
+				army_org_factor = 0.1
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+				offence = 0.05
+			}
+		}
+		tsh_army_centralization_efforts_3={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				army_org_factor = 0.1
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+				offence = 0.05
+			}
+		}
+		tsh_decentralized_army_structure={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		tsh_decentralized_army_structure_2={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.1
+				army_core_defence_factor = 0.15
+				offence = 0.075
+			}
+		}
+		tsh_decentralized_army_structure_3={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.15
+				army_core_defence_factor = 0.15
+				offence = 0.075
+				max_planning = 0.2
+			}
+		}
+		TSH_vic_reverberatory_furnaces={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		TSH_foreign_engineering_contracts={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		TSH_nagasaki_arsenal={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		TSH_nagasaki_arsenal_naval={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_naval_base_factor = 0.25
+			}
+		}
+		TSH_yokosuka_arsenal={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		TSH_yokosuka_weapon_foundry={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				out_of_supply_factor = -0.05
+			}
+		}
+		TSH_yokosuka_shipyards={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_naval_base_factor = 0.15
+			}
+		}
+	}
+}
+	
