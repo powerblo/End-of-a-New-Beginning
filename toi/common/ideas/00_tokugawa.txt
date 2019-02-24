@@ -68,7 +68,7 @@ ideas = {
 			picture = jap_support
 
 			modifier = {
-				production_factory_factor = -0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 		TSH_support_CHO = {
@@ -340,6 +340,20 @@ ideas = {
 			modifier = {
 				production_speed_naval_base_factor = 0.15
 			}
+		TSH_foreign_trade={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				consumer_goods_factor = 0.01
+			}
+		}
+
 		}
 	}
 }
