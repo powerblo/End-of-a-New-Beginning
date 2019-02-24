@@ -24,6 +24,11 @@ focus_tree = {
 		id = ITA_Industry_Agriculture_Focus
 		icon = GFX_goal_focus_agriculture
 		cost = 70
+		allow_branch = {
+			NOT = {
+				set_country_flag = ITA_Agrigulture_Branch_Completion
+			}
+		}
 		x = 37
 		y = 0
 			completion_reward = {
@@ -1099,6 +1104,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_Unlock_Industrialization 
+			hidden_effect = {
+				set_country_flag = ITA_Agrigulture_Branch_Completion
+			}
 		}
 
 	}
