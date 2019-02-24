@@ -1007,7 +1007,7 @@ focus_tree = {
 		x = 38
 		y = 3
 			completion_reward = {
-				add_stability = 0.1
+				add_stability = 0.01
 
 		}
 
@@ -1050,6 +1050,12 @@ focus_tree = {
 		x = 40
 		y = 2
 
+		completion_reward = {
+			effect_tooltip = {
+        		add_manpower = 10000
+			}
+		}
+
 	}
 	focus = {
 		id = ITA_Export_Surplus_Food
@@ -1060,6 +1066,13 @@ focus_tree = {
 		}
 		x = 40
 		y = 3
+
+		completion_reward = {
+			add_timed_idea = {
+    			idea = ITA_Exports_1860
+    			days = 730
+			}
+		}
 
 	}
 	focus = {
