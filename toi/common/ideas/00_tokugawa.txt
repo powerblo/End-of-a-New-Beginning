@@ -351,7 +351,87 @@ ideas = {
 			picture = jap_support
 
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = -0.01
+			}
+		}
+		TSH_tenryo_improvements={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		TSH_silk_industry={ 
+			allowed = {
+				always
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		TSH_expand_agricultural_production={
+			allowed = {
+				always
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				monthly_population = 0.02
+			}
+		}
+		TSH_assist_merchant_classes={
+			allowed = {
+				always
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+		TSH_flat_tax_on_farmers={
+			allowed = {
+				always
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				monthly_population = 0.03
+				conscription_factor = 0.5
+			}
+		}
+		TSH_modern_defensive_theory={
+			allowed = {
+				always
+			}
+
+			removal_cost = -1
+
+			picture = jap_support
+
+			modifier = {
+				dig_in_speed_factor = 0.15
+				max_dig_in = 0.5
 			}
 		}
 	}
