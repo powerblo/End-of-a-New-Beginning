@@ -913,8 +913,41 @@ ideas = {
 				stability_factor = 0.2
 			}
 		}
-		
-		FRA_JAP_trade = {
+		FRA_VIN_war = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		FRA_VIN_victory = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_TSH_trade = {
 			allowed = {
 				always = no
 			}
