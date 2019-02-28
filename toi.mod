@@ -13,5 +13,5 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-supported_version="1.5.x"
+supported_version="1.6.x"
 picture="toi.jpg"
