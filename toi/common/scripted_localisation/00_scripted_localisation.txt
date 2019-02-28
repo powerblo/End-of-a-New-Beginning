@@ -60,6 +60,31 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetGreekHeirOttoName 
+	text = {
+		trigger = {
+			THIS = {
+			    has_country_flag = GRE_flag_luitpold_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_luitpold"
+	}
+	text = {
+		trigger = { 
+			THIS = {
+			    has_country_flag = GRE_flag_ludwig_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_ludwig"
+	}
+	text = {
+		trigger = { 
+		}
+		localization_key = "eoanb_greek_heir_otto_none" 
+    }
+}
+	
+defined_text = {
 	name = GetPowerStatusName
 	text = {
 		trigger = {
