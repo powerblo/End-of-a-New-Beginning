@@ -146,7 +146,7 @@ lacking_consumer_goods = {
 	production_factory_max_efficiency_factor = -0.1
 	production_speed_buildings_factor = -0.25
 	industry_free_repair_factor = -0.5
-	research_time_factor = -0.1
+	research_speed_factor = -0.1
 	MONTHLY_POPULATION = -0.5
 }
 
@@ -250,7 +250,7 @@ stability_good_modifier = {
 	army_org_Factor = 0.05
 	industry_repair_factor = 0.1
 	industry_free_repair_factor = 0.1
-	research_time_factor = -0.05
+	research_speed_factor = 0.05
 	MONTHLY_POPULATION = 0.1
 	war_support_factor = 0.05
 }
@@ -268,7 +268,7 @@ stability_bad_modifier = {
 	army_org_Factor = -0.05
 	industry_repair_factor = -0.25
 	industry_free_repair_factor = -0.25
-	research_time_factor = 0.05
+	research_speed_factor = -0.05
 	MONTHLY_POPULATION = -0.25
 	war_support_factor = -0.05
 }
@@ -312,14 +312,14 @@ diff_very_easy_player = {
 	industrial_capacity_factory = 0.25
 	industrial_capacity_dockyard = 0.25
 	political_power_factor = 0.25
-	research_time_factor = -0.1
+	research_speed_factor = 0.1
 }
 
 diff_easy_player = {
 	industrial_capacity_factory = 0.1
 	industrial_capacity_dockyard = 0.1
 	political_power_factor = 0.1
-	research_time_factor = -0.05
+	research_speed_factor = 0.05
 }
 
 diff_normal_player = {
@@ -329,14 +329,14 @@ diff_hard_player = {
 	industrial_capacity_factory = -0.1
 	industrial_capacity_dockyard = -0.1
 	political_power_factor = -0.1
-	research_time_factor = 0.05
+	research_speed_factor = -0.05
 }
 
 diff_very_hard_player = {
 	industrial_capacity_factory = -0.25
 	industrial_capacity_dockyard = -0.25
 	political_power_factor = -0.25
-	research_time_factor = 0.1
+	research_speed_factor = -0.1
 }
 
 
@@ -387,7 +387,7 @@ diff_strong_ai_generic = {
 	production_speed_buildings_factor = 0.25
 	industrial_capacity_dockyard = 0.625
 	political_power_factor = 0.125
-	research_time_factor = -0.1
+	research_speed_factor = 0.1
 
 	# xp gain
 	experience_gain_air_factor = 0.25
@@ -419,7 +419,7 @@ diff_weak_ai_generic = {
 	production_speed_buildings_factor = -0.075
 	industrial_capacity_dockyard = -0.075
 	political_power_factor = -0.05
-	research_time_factor = 0.0625
+	research_speed_factor = -0.0625
 
 	# xp gain
 	experience_gain_air_factor = -0.125
