@@ -256,9 +256,6 @@ units = {
 			division_template = "Colonial Garrison"
 			start_experience_factor = 0.1
 		}
-
-		navy = {
-		}
 		
 }
 
@@ -299,33 +296,5 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.8
 		efficiency = 20
-	}
-	
-	#Ships
-	add_equipment_production = {
-		equipment = {
-			type = convoy_1
-			creator = "ENG" 
-		}
-		requested_factories = 2
-		progress = 0.4
-	}
-	add_equipment_production = {
-		equipment = {
-			type = equipment_1840_corvette
-			creator = "ENG" 
-		}
-		requested_factories = 2
-		progress = 0.85
-		amount = 4
-	}
-	add_equipment_production = {
-		equipment = {
-			type = equipment_1812_lineship
-			creator = "ENG" 
-		}
-		requested_factories = 1
-		progress = 0.1
-		amount = 1
 	}
 }
