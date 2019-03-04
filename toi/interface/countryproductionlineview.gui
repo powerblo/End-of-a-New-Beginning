@@ -906,12 +906,12 @@ guiTypes = {
 
 				# SECOND LINE OF FILTERS
 
-				checkBoxType = {
-					name = "toggle_expand_all"
-					position = { x = 14 y = 297 }
-					quadTextureSprite ="GFX_expand_all_checkbox"
-					clicksound = click_checkbox
-				}
+				#checkBoxType = {
+				#	name = "toggle_expand_all"
+				#	position = { x = 5 y = 209 }
+				#	quadTextureSprite ="GFX_expand_all_checkbox_vertical"
+				#	clicksound = click_checkbox
+				#}
 				
 				checkBoxType = {
 					name = "show_resources"
@@ -2188,6 +2188,24 @@ guiTypes = {
 			name = "Background"		
 			quadTextureSprite ="GFX_tiled_plain_bg"
 		}
+
+		iconType = {
+			name ="header_bg"
+			spriteType = "GFX_ship_name_title_bg"
+			position = { x = 5 y = 5 }
+
+		}
+		
+		instantTextboxType = {
+			name = "title"
+			position = { x = 35 y = 4 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "PRODUCTION_NAVAL_DEPLOY_LIST"
+			maxWidth = 340
+			maxHeight = 20
+		}
 		
 		containerWindowType = {
 			name = "deployments"
@@ -2972,6 +2990,154 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
+
+	containerWindowType = {
+		name = "ship_name_list_window"
+		position = { x=-356 y=78}	
+		show_position = { x=544 y =78 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		size = { width=375 height=70%% }
+		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_plain_bg"
+		}
+		
+		iconType = {
+			name ="header_bg"
+			spriteType = "GFX_ship_name_title_bg"
+			position = { x = 5 y = 5 }
+
+		}
+		
+		instantTextboxType = {
+			name = "title"
+			position = { x = 35 y = 4 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "PRODUCTION_NAVAL_NAME_LIST"
+			maxWidth = 340
+			maxHeight = 20
+		}
+		
+		containerWindowType = {
+			name = "name_list_container"
+			position = { x=0 y=80 }
+			size = { width=100%% height=100%% }
+			verticalScrollbar = "right_vertical_slider"
+			smooth_scrolling = yes
+			margin = { top = 0 bottom = 12 left = 2}
+		
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+			}
+			
+			gridboxtype = {
+				name = "name_list_grid"
+				position = { x = 12 y = 15 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 335 height = 36 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+			}
+		}
+
+		containerWindowType = {	
+			name = "edit_box_container"
+			position = { x=10 y=49 }
+			size = { width=350 height=35 }
+			
+			iconType = {
+			name = "add_name"
+			position = { x=0 y=5 }	
+			spriteType = "GFX_edit_list_icon"
+			}
+			
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_name_list_item_bg"
+				position = { x=20 y=0 }
+				alwaystransparent = yes
+			}
+
+			editBoxType = {
+				name = "new_name_box"
+				position = { x = 35 y = 8 }
+				font = "hoi_18b"
+				size = { x=260 y=20 }
+			}
+
+			buttonType = {
+				name = "add_name_button"
+				position = { x = -32 y = -3 }
+				quadTextureSprite ="GFX_naval_increase_amount"
+				buttonFont = "Main_14_black"
+				shortcut = "RETURN"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_default
+				scale= 1.2
+			}
+		}
+		
+		buttonType = {
+			name = "close"
+			position = { x = -43 y = 7 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+
+	containerWindowType = {
+		name = "naval_name_list_entry"
+		position = { x=0 y=0 }
+		size = { width=335 height=35 }
+		clipping = no
+		
+		background = {
+			name = "Background"
+			spriteType ="GFX_name_list_item_bg"
+		}
+		instantTextboxType = {
+			name = "name"
+			position = { x = 12 y = 9 }
+			font = "hoi_18b"
+			borderSize = {x = 0 y = 0}
+			text = "HMS William Wallace"
+			maxWidth = 290
+			maxHeight = 25
+			fixedsize = yes
+			#format = center
+			alwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "remove"
+			position = { x = -30 y = 5 }
+			quadTextureSprite ="GFX_NV_btn_delete"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_default
+			scale = 0.8
+		}
+		
+		buttonType = {
+			name = "assign"
+			position = { x = -30 y = 5 }
+			quadTextureSprite ="GFX_NV_btn_add"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_default
+			scale = 0.8
+		}
+	}
 	
 	containerWindowType = {
 		name = "production_naval_line_entry"
@@ -2981,8 +3147,9 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_production_item"
+			quadTextureSprite ="GFX_naval_production_item_bg_strip"
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
+			frame = 1
 		}
 
 		iconType = {
@@ -3028,6 +3195,13 @@ guiTypes = {
 			spriteType = "GFX_tech_idea_bg"
 			position = { x = 238 y = 49 }
 			scale = 0.5
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="equipment_role"
+			spriteType = "GFX_naval_equipment_role_icons"
+			position = { x = 10 y = 49 }
 			alwaystransparent = yes
 		}
 
@@ -4470,6 +4644,12 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 		
+		iconType = {
+			name ="design_invalid"
+			spriteType = "GFX_design_not_valid"
+			position = { x = 348 y = 52 }
+			alwaystransparent = yes
+		}
 	}
 	
 	containerWindowType = {

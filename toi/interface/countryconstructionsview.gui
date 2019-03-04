@@ -615,4 +615,52 @@ guiTypes = {
 			allwaystransparent = yes
 		}		
 	}
+
+	containerWindowType = {
+		name = "static_project_factories_entry"
+		position = { x=0 y=0 }
+		size = { width = 400 height = 52 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_construction_special_entry_bg"
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 20 y = 16 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "CONSTRUCTION_FACTORIES_PROJECTS_LABEL"
+			maxWidth = 250
+			maxHeight = 20
+			format = left
+			
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "picture"
+			position = { x = 210 y = 26}
+			spriteType = "GFX_special_project_icon"
+			centerposition = yes
+			
+			allwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "factories"
+			position = { x = 254 y = 17 }
+			textureFile = ""
+			font = "hoi_18b"
+			text = "-"
+			maxWidth = 50
+			maxHeight = 20
+			format = center
+			
+			allwaystransparent = yes
+		}		
+	}
 }

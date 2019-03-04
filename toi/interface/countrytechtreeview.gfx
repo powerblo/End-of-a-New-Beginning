@@ -1334,6 +1334,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_tech_bonus"
 		textureFile = "gfx/interface/tech_bonus.dds"
+		noOfFrames = 6
+	}
+
+	spriteType = {
+		name = "GFX_bg_tech"
+		textureFile = "gfx/interface/divisiondesigner/bg_tech_wide.dds"
 		noOfFrames = 3
 	}
 
@@ -1686,10 +1692,5 @@ spriteTypes = {
 		looping = yes
 		play_on_show = yes
 		pause_on_loop = 0.0
-	}
-	spriteType = {
-		name = "GFX_bg_tech"
-		textureFile = "gfx/interface/divisiondesigner/bg_tech_wide.dds"
-		noOfFrames = 3
 	}
 }
