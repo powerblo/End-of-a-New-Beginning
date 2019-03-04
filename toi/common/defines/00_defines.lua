@@ -312,10 +312,10 @@ NCountry = {
 	FUEL_LAND_LEASE_RATIO = 1.0,					-- multiplier for guel gain that is added to maximum fuel that can be land leased per hour
 	FUEL_LEASE_CONVOY_RATIO = 0.0005,				-- num convoys needed per fuel land lease 
 	
-	STARTING_FUEL_RATIO = 0.25,						-- starting fuel ratio compared to max fuel for countries
+	STARTING_FUEL_RATIO = 0,						-- starting fuel ratio compared to max fuel for countries
 	BASE_FUEL_GAIN_PER_OIL = 2,						-- base amount of fuel gained hourly per excess oil
 	BASE_FUEL_GAIN = 2.0,							-- base amount of fuel gained hourly, independent of excess oil
-	BASE_FUEL_CAPACITY = 50000,						-- base amount of fuel capacity
+	BASE_FUEL_CAPACITY = 500,						-- base amount of fuel capacity
 
 	COUNTRY_MANPOWER_CAPITULATED_FREE_POOL_FACTOR = 0.1,	-- Factor on amount of normal manpower left for an exiled nation with no territory.
 	COUNTRY_MANPOWER_CAPITULATED_CORE_GAIN_FACTOR = 0.001,	-- Factor on amount of normal manpower gained for the exile nation. From owned states that are controlled by an enemy. State manpower reduced by factor 1000 in code.
@@ -419,7 +419,7 @@ NTechnology = {
 	LICENSE_PRODUCTION_TECH_BONUS = 0.2,	-- License production tech bonus
 	
 	DEFAULT_XP_RESEARCH_COST = 100,			-- default xp cost of a research to speed up the process
-	DEFAULT_XP_RESEARCH_BONUS = 1.0,		-- default research bonus gained when xp is used to research an item
+	DEFAULT_XP_RESEARCH_BONUS = 0.5,		-- default research bonus gained when xp is used to research an item
 	MIN_RESEARCH_SPEED = 0.0,				-- research speed can't go below this value
 },
 
