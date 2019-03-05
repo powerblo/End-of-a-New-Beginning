@@ -93,7 +93,7 @@ ideas = {
 			
 			picture = PRS_legacy_of_clausewitz
 			
-			research_bonus = { land_doctrine = -0.25 }
+			research_bonus = { land_doctrine = 0.25 }
 			
 			modifier = {
 				#
@@ -721,7 +721,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.05
+				artillery = -0.05
 			}
 
 			traits = { PRS_trait_artillery_spandau }
@@ -739,7 +739,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = -0.05
 			}
 
 			traits = { PRS_trait_infantery_krupp }
@@ -902,7 +902,7 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				naval_doctrine = 0.1
+				naval_doctrine = -0.1
 			}
 
 			traits = { PRS_trait_naval_adalbert }
@@ -919,8 +919,8 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				air_doctrine = 0.1
-				aviation_tech = 0.1
+				air_doctrine = -0.1
+				aviation_tech = -0.1
 			}
 
 			traits = { PRS_trait_air_lilienthal }
@@ -934,7 +934,7 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				land_doctrine = 0.1
+				land_doctrine = -0.1
 			}
 
 			traits = { PRS_trait_land_moltke }
