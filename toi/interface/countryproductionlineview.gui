@@ -682,7 +682,7 @@ guiTypes = {
 
 				buttonType = {
 					name = "naval_repair_button"
-					position = { x=430 y=122 }
+					position = { x=440 y=204 }
 					spriteType ="GFX_toggle_naval_repair_window"
 					clicksound = click_checkbox
 					frame = 1
@@ -690,7 +690,7 @@ guiTypes = {
 				
 				iconType = {
 					name = "naval_repair_button_glow"
-					position = { x = 430 y = 123 }
+					position = { x = 440 y = 205 }
 					spriteType = "GFX_prod_new_equipment_glow"
 					alwaystransparent = yes
 				}
@@ -711,14 +711,14 @@ guiTypes = {
 
 				iconType = {
 					name = "military_factory_icon"
-					position = { x = 20 y = 170 }
+					position = { x = 20 y = 160 }
 					spriteType = "GFX_military_factory_icon"
 					pdx_tooltip = "arms_factory_desc"					
 				}
 				
 				instantTextboxType = {
 					name = "operational_factories"
-					position = { x = 50 y = 173 }
+					position = { x = 50 y = 163 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
@@ -732,7 +732,7 @@ guiTypes = {
 				
 				instantTextboxType = {
 					name = "operational_factories_value"
-					position = { x = 200 y = 173 }
+					position = { x = 200 y = 163 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
@@ -744,14 +744,14 @@ guiTypes = {
 
 				iconType = {
 					name = "naval_factory_icon"
-					position = { x = 297 y = 173 }
+					position = { x = 297 y = 163 }
 					spriteType = "GFX_dockyard_icon"
 					pdx_tooltip = "arms_factory_desc"					
 				}
 				
 				instantTextboxType = {
 					name = "operational_naval_factories"
-					position = { x = 330 y = 173 }
+					position = { x = 330 y = 163 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
@@ -765,7 +765,7 @@ guiTypes = {
 				
 				instantTextboxType = {
 					name = "operational_naval_factories_value"
-					position = { x = 448 y = 173 }
+					position = { x = 448 y = 163 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
@@ -778,14 +778,14 @@ guiTypes = {
 				
 				iconType = {
 					name = "naval_factory_repair_icon"
-					position = { x = 455 y = 92 }
+					position = { x = 455 y = 182 }
 					spriteType = "GFX_dockyard_icon_with_wrench"
 					pdx_tooltip = "arms_factory_desc"					
 				}
 				
 				instantTextboxType = {
 					name = "operational_naval_factories_repair_value"
-					position = { x = 463 y = 93 }
+					position = { x = 471 y = 183 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
@@ -1005,14 +1005,14 @@ guiTypes = {
 				
 				checkBoxType = {
 					name = "show_refitting"
-					position = { x = 14 y = 208 }
+					position = { x = 12 y = 296 }
 					quadTextureSprite = "GFX_refit_ships_checkbox"
 					clicksound = click_checkbox
 				}
 				
 				instantTextboxType = {
 					name = "factories_used_refitting"
-					position = { x = 67 y = 218 }
+					position = { x = 65 y = 306 }
 					font = "hoi_18mbs"
 					text = "110"
 					maxWidth = 40
