@@ -1,7 +1,8 @@
 equipments = {
 
+	#Old Convoy, add newer Types
 	convoy = {
-		year = 1910
+		year = 1850
 
 		is_archetype = yes
 		type = convoy
@@ -13,22 +14,22 @@ equipments = {
 
 		# Unused by convoys
 		surface_detection = 10
-		sub_detection = 1
+		sub_detection = 0
 
 		fuel_consumption = 0
 
 		# Combat abilities
-		lg_armor_piercing = 1
+		lg_armor_piercing = 0.5
 		armor_value = 0
-		reliability = 0.8
-		surface_visibility = 10
+		reliability = 0.75
+		surface_visibility = 12
 
 		torpedo_attack = 0
-		lg_attack = 0.5
-		naval_speed = 12
-		max_strength = 60
-		max_organisation = 30
-		anti_air_attack = 0.2
+		lg_attack = 0.25
+		naval_speed = 10
+		max_strength = 25
+		max_organisation = 25
+		anti_air_attack = 0
 
 
         #Space taken in convoy
@@ -37,15 +38,14 @@ equipments = {
 		# (Describes combat behaviour - hidden stat)
 		offensive_weapons = no
 		
-		build_cost_ic = 70
+		build_cost_ic = 75
 		resources = {
-			#oil = 1
-			steel = 1
+			wood = 1
 		}
 	}
 
 	convoy_1 = {
-		year = 1910
+		year = 1850
 
 		archetype = convoy
 		type = { 
