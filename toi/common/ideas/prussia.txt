@@ -526,6 +526,25 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		PRS_idea_army_reserves_mobilizing = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				conscription = 0.01
+				weekly_manpower = 250
+				mobilization_speed = 1
+				training_time_army_factor = -0.1
+				experience_loss_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
 	}
 	political_advisor = {
 		PRS_advisor_august_von_der_heydt = {

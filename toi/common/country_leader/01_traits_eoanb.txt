@@ -693,18 +693,23 @@ leader_traits = {
 	
 	#Companies
 	
+	#Light Ship Designer
 	eoanb_naval_manufacturer_light = {
 		random = no
-		#generic
+		#TEMPORARY
+		navy_screen_defence_factor = 0.1
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
+	#Heavy Ship Designer
 	eoanb_naval_manufacturer_heavy = {
 		random = no
-		#generic
+		#TEMPORARY
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
@@ -720,18 +725,25 @@ leader_traits = {
 		}
 	}
 	
+	#Mass Ship Designer
 	ENG_trait_naval_whitworth = {
 		random = no
-		#generic
+		#TEMPORARY
+		navy_screen_attack_factor = 0.1
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
+	#Fleet Designer
 	GER_trait_naval_lloyd = {
 		random = no
-		#generic
+		#TEMPORARY
+		navy_screen_attack_factor = 0.05
+		navy_screen_defence_factor = 0.05
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
