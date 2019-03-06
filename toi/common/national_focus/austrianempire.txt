@@ -1647,17 +1647,7 @@ focus_tree = {
         }
     
         completion_reward = {
-		    if = {
-			    limit = {
-				    AUS = {
-					    has_idea = AUS_idea_naval_maximilian_of_austria
-					}
-				}
-			    navy_experience = 25 
-			}
-            else = {
-			    navy_experience = 5 
-			} 
+		   navy_experience = 5 
 		}
 	}
 	

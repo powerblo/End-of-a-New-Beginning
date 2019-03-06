@@ -879,10 +879,10 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				not = { has_completed_focus = USA_suspend_the_presecution }
-				factor = 0
-			}
+			#modifier = {
+			#	not = { has_completed_focus = USA_suspend_the_presecution }
+			#	factor = 0
+			#}
 		}
 	}
 	
@@ -905,10 +905,10 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = { 
-				not = { has_completed_focus = USA_america_first }
-				factor = 0
-			}
+			#modifier = { 
+			#	not = { has_completed_focus = USA_america_first }
+			#	factor = 0
+			#}
 		}
 	}
 	staunch_monarchist = {
@@ -919,10 +919,10 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				not = { has_completed_focus = HUN_invite_the_habsburg_prince }
-				factor = 0
-			}
+			#modifier = {
+			#	not = { has_completed_focus = HUN_invite_the_habsburg_prince }
+			#	factor = 0
+			#}
 		}
 	}
 	
@@ -1597,18 +1597,18 @@ leader_traits = {
 	pacific_fleet_naval_manufacturer = { #longer ranged, CVs favor larger hangers over armor
 		random = no
 		equipment_bonus = {
-			carrier = {
-				carrier_size = 0.25 armor_value = -0.15 naval_range = 0.25
-			}
+			#carrier = {
+			#	carrier_size = 0.25 armor_value = -0.15 naval_range = 0.25
+			#}
 			capital_ship = {
 				naval_range = 0.25
 			}
 			screen_ship = {
 				naval_range = 0.25
 			}
-			submarine = {
-				naval_range = 0.25
-			}
+			#submarine = {
+			#	naval_range = 0.25
+			#}
 		}
 		
 		ai_will_do = {
@@ -1659,20 +1659,20 @@ leader_traits = {
 	
 	raiding_fleet_naval_manufacturer = {
 		random = no
-		equipment_bonus = {
-			carrier = {
-				surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1
-			}
-			capital_ship = {
-				surface_visibility = -0.1 naval_speed = 0.1 hg_attack = -0.1
-			}
-			screen_ship = {
-				surface_visibility = -0.1 naval_speed = 0.1
-			}
-			submarine = {
-				sub_visibility = -0.1 surface_visibility = -0.1 naval_speed = 0.1
-			}
-		}
+		#equipment_bonus = {
+		#	carrier = {
+		#		surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1
+		#	}
+		#	capital_ship = {
+		#		surface_visibility = -0.1 naval_speed = 0.1 hg_attack = -0.1
+		#	}
+		#	screen_ship = {
+		#		surface_visibility = -0.1 naval_speed = 0.1
+		#	}
+		#	submarine = {
+		#		sub_visibility = -0.1 surface_visibility = -0.1 naval_speed = 0.1
+		#	}
+		#}
 		
 		ai_will_do = {
 			factor = 1
@@ -1694,20 +1694,20 @@ leader_traits = {
 	
 	coastal_defence_naval_manufacturer = {
 		random = no
-		equipment_bonus = {
-			carrier = {
-				build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5
-			}
-			capital_ship = {
-				build_cost_ic = -0.25 armor_value = -0.2 hg_attack = -0.2 naval_range = -0.5
-			}
-			screen_ship = {
-				build_cost_ic = -0.25 naval_range = -0.5
-			}
-			submarine = {
-				build_cost_ic = -0.25 naval_range = -0.5
-			}
-		}
+		#equipment_bonus = {
+		#	carrier = {
+		#		build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5
+		#	}
+		#	capital_ship = {
+		#		build_cost_ic = -0.25 armor_value = -0.2 hg_attack = -0.2 naval_range = -0.5
+		#	}
+		#	screen_ship = {
+		#		build_cost_ic = -0.25 naval_range = -0.5
+		#	}
+		#	submarine = {
+		#		build_cost_ic = -0.25 naval_range = -0.5
+		#	}
+		#}
 		
 		ai_will_do = {
 			factor = 1
@@ -3348,11 +3348,11 @@ leader_traits = {
 		sortie_efficiency = 0.2
 		
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 0
-				has_navy_size = { unit = carrier size < 1 }
-			}
+			factor = 0
+			#modifier = {
+			#	factor = 0
+			#	has_navy_size = { unit = carrier size < 1 }
+			#}
 		}
 	}
 }
