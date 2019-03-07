@@ -313,7 +313,7 @@ NCountry = {
 	FUEL_LEASE_CONVOY_RATIO = 0.0005,				-- num convoys needed per fuel land lease 
 	
 	STARTING_FUEL_RATIO = 0.0,						-- starting fuel ratio compared to max fuel for countries
-	BASE_FUEL_GAIN_PER_OIL = 0.5,					-- base amount of fuel gained hourly per excess oil
+	BASE_FUEL_GAIN_PER_OIL = 0.25,					-- base amount of fuel gained hourly per excess oil
 	BASE_FUEL_GAIN = 1.0,							-- base amount of fuel gained hourly, independent of excess oil
 	BASE_FUEL_CAPACITY = 500,						-- base amount of fuel capacity
 
