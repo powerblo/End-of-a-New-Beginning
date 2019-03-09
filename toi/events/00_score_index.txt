@@ -346,7 +346,7 @@ news_event = {
                 }	
                 add_to_variable = { global.score_array_position^v = 1 } 				
             }	
-        every_country = {
+		every_country = {
 		    set_temp_variable = { length_temp = global.score_array^num }
             for_loop_effect = {
                 start = 0
@@ -363,6 +363,5 @@ news_event = {
             }	 	
 			add_to_variable = { score_array_position_var = 1 } 
 		}		
-        }
-	}
+    }
 }
