@@ -72,19 +72,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = -0.5
-				political_power_factor = -0.25
-				army_org_Factor = -0.25
-				local_resources_factor = -0.5
-				industrial_capacity_factory = -0.25
-				industrial_capacity_dockyard = -0.25
-				max_planning = -0.25
+				drift_defence_factor = -0.2
+				political_power_factor = -0.2
+				army_org_Factor = -0.1
+				local_resources_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 				production_speed_arms_factory_factor = -0.25
-				MONTHLY_POPULATION = -0.25
-				research_time_factor = 0.05
-				production_speed_buildings_factor = -0.3
-				production_factory_max_efficiency_factor = -0.3
-				consumer_goods_factor = 0.1
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.25
+				production_factory_max_efficiency_factor = -0.25
 			}
 
 			default = yes
@@ -108,19 +105,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = -0.25
-				political_power_factor = -0.1
-				army_org_Factor = -0.1
-				local_resources_factor = -0.2
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				max_planning = -0.25
-				production_speed_arms_factory_factor = -0.1
-				MONTHLY_POPULATION = -0.1
-				research_time_factor = 0.1
-				production_speed_buildings_factor = -0.15
-				production_factory_max_efficiency_factor = -0.15
-				consumer_goods_factor = 0.05
+				drift_defence_factor = -0.15
+				political_power_factor = -0.15
+				army_org_Factor = -0.05
+				local_resources_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_arms_factory_factor = -0.2
+				research_speed_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
 			}
 			
 			cancel_if_invalid = no
@@ -143,14 +137,15 @@ ideas = {
 
 			modifier = {
 				drift_defence_factor = -0.1
-				army_org_Factor = -0.05
+				political_power_factor = -0.1
+				army_org_Factor = -0.025
 				local_resources_factor = -0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				max_planning = -0.1
-				research_time_factor = 0.15
-				production_speed_buildings_factor = -0.10
-				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_arms_factory_factor = -0.15
+				research_speed_factor = -0.3
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
 			}
 			
 			cancel_if_invalid = no
@@ -172,13 +167,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.05
-				political_power_factor = 0.05
-				research_time_factor = 0.2
-				MONTHLY_POPULATION = 0.05
-				production_speed_buildings_factor = -0.05
-				production_factory_max_efficiency_factor = -0.05
-				consumer_goods_factor = -0.05
+				drift_defence_factor = -0.05
+				political_power_factor = -0.05
+				army_org_Factor = 0.025
+				local_resources_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_arms_factory_factor = -0.1
+				research_speed_factor = -0.4
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -200,17 +198,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.1
-				political_power_factor = 0.1
+				drift_defence_factor = 0.05
+				political_power_factor = 0.05
 				army_org_Factor = 0.05
-				local_resources_factor = 0.1
+				local_resources_factor = 0.05
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-				max_planning = 0.1
-				production_speed_arms_factory_factor = 0.05
-				MONTHLY_POPULATION = 0.1
-				research_time_factor = 0.25
-				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				research_speed_factor = -0.5
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -232,19 +229,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.15
-				political_power_factor = 0.15
+				drift_defence_factor = 0.1
+				political_power_factor = 0.1
 				army_org_Factor = 0.1
-				local_resources_factor = 0.15
+				local_resources_factor = 0.1
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				max_planning = 0.2
-				production_speed_arms_factory_factor = 0.1
-				MONTHLY_POPULATION = 0.2
-				research_time_factor = 0.3
+				production_speed_arms_factory_factor = 0.05
+				research_speed_factor = -0.6
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -266,19 +260,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.25
-				political_power_factor = 0.25
-				army_org_Factor = 0.15
-				local_resources_factor = 0.15
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				max_planning = 0.25
+				drift_defence_factor = 0.125
+				political_power_factor = 0.125
+				army_org_Factor = 0.125
+				local_resources_factor = 0.125
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
 				production_speed_arms_factory_factor = 0.1
-				MONTHLY_POPULATION = 0.25
-				research_time_factor = 0.35
+				research_speed_factor = -0.7
 				production_speed_buildings_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
-				consumer_goods_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -300,19 +291,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.3
-				political_power_factor = 0.3
-				army_org_Factor = 0.2
-				local_resources_factor = 0.2
-				industrial_capacity_factory = 0.2
-				industrial_capacity_dockyard = 0.2
-				max_planning = 0.25
-				production_speed_arms_factory_factor = 0.1
-				MONTHLY_POPULATION = 0.35
-				research_time_factor = 0.4
+				drift_defence_factor = 0.15
+				political_power_factor = 0.15
+				army_org_Factor = 0.15
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_arms_factory_factor = 0.15
+				research_speed_factor = -0.8
 				production_speed_buildings_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
-				consumer_goods_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -334,19 +322,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.4
-				political_power_factor = 0.4
+				drift_defence_factor = 0.2
+				political_power_factor = 0.2
 				army_org_Factor = 0.2
-				local_resources_factor = 0.25
-				industrial_capacity_factory = 0.25
-				industrial_capacity_dockyard = 0.25
-				max_planning = 0.3
-				production_speed_arms_factory_factor = 0.15
-				MONTHLY_POPULATION = 0.4
-				research_time_factor = 0.45
+				local_resources_factor = 0.2
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_arms_factory_factor = 0.2
+				research_speed_factor = -0.9
 				production_speed_buildings_factor = 0.2
 				production_factory_max_efficiency_factor = 0.2
-				consumer_goods_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -368,19 +353,16 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.5
-				political_power_factor = 0.5
+				drift_defence_factor = 0.25
+				political_power_factor = 0.25
 				army_org_Factor = 0.25
 				local_resources_factor = 0.25
 				industrial_capacity_factory = 0.25
 				industrial_capacity_dockyard = 0.25
-				max_planning = 0.3
-				production_speed_arms_factory_factor = 0.2
-				MONTHLY_POPULATION = 0.5
-				research_time_factor = 0.5
+				production_speed_arms_factory_factor = 0.25
+				research_speed_factor = -1
 				production_speed_buildings_factor = 0.25
 				production_factory_max_efficiency_factor = 0.25
-				consumer_goods_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -1472,10 +1454,13 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
 				production_speed_buildings_factor = -0.1
+				production_speed_industrial_complex_factor = -0.75
+				production_speed_arms_factory_factor = -0.75
+				production_speed_dockyard_factor = -0.75
 				political_power_gain = -0.1
 				army_morale_factor = -0.05
-				consumer_goods_factor = -0.05
-				research_time_factor = -0.01
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.01
 			}
 
 			default = yes
@@ -1509,9 +1494,12 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.1
 				production_speed_buildings_factor = -0.05
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
 				political_power_gain = -0.05
-				consumer_goods_factor = -0.02
-				research_time_factor = -0.02
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.02
 			}
 			
 			cancel_if_invalid = no
@@ -1534,7 +1522,10 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.02
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
+				production_speed_industrial_complex_factor = -0.25
+				production_speed_arms_factory_factor = -0.25
+				production_speed_dockyard_factor = -0.25
 			}
 
 			ai_will_do = {
@@ -1571,10 +1562,13 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
 				political_power_gain = 0.05
 				army_morale_factor = 0.05
-				consumer_goods_factor = 0.02
-				research_time_factor = -0.04
+				consumer_goods_factor = 0.05
+				research_speed_factor = 0.04
 			}
 			
 			cancel_if_invalid = no
@@ -1607,8 +1601,8 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				political_power_gain = 0.1
 				army_morale_factor = 0.075
-				consumer_goods_factor = 0.05
-				research_time_factor = -0.05
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -1799,7 +1793,7 @@ ideas = {
 
 		religion_catholic = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1823,7 +1817,7 @@ ideas = {
 
 		religion_protestant = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 
@@ -1845,7 +1839,7 @@ ideas = {
 
 		religion_orthodox = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1869,7 +1863,7 @@ ideas = {
 
 		religion_coptic = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1893,7 +1887,7 @@ ideas = {
 
 		religion_sunni = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1917,7 +1911,7 @@ ideas = {
 
 		religion_shiite = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1941,7 +1935,7 @@ ideas = {
 
 		religion_ibadi = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1965,7 +1959,7 @@ ideas = {
 
 		religion_jewish = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1989,7 +1983,7 @@ ideas = {
 
 		religion_mahayana = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2013,7 +2007,7 @@ ideas = {
 
 		religion_gelugpa = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2037,7 +2031,7 @@ ideas = {
 
 		religion_theravada = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2061,7 +2055,7 @@ ideas = {
 		
 		religion_confucian = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2085,7 +2079,7 @@ ideas = {
 
 		religion_hindu = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2109,7 +2103,7 @@ ideas = {
 
 		religion_shinto = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2133,7 +2127,7 @@ ideas = {
 
 		religion_sikh = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2157,7 +2151,7 @@ ideas = {
 
 		religion_animist = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2179,9 +2173,33 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		religion_pagan = {
+						
+			cost = 0
+			removal_cost = -1
+			level = 1
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_pagan
+				}
+				hidden_trigger = {
+					always = no
+				}
+			}
+
+			modifier = {
+				
+			}
+
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
 		religion_secular = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			

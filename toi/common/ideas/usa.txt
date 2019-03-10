@@ -1451,7 +1451,7 @@ ideas = {
 			picture = GFX_generic_research_bonus
 			
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 
 		}
@@ -1988,6 +1988,24 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		
+		USA_TSH_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
 	}
 	hidden_ideas = {
 		USA_civil_war_historical_buff_hidden = {
@@ -2028,7 +2046,7 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = -0.10
 			}
 			
 			traits = { fast_tank_manufacturer }
@@ -2051,7 +2069,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = -0.10
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -2072,7 +2090,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = -0.10
 			}
 			
 			traits = { atlantic_fleet_naval_manufacturer }
@@ -2089,7 +2107,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = -0.10
 			}
 			
 			traits = { raiding_fleet_naval_manufacturer }
@@ -2112,7 +2130,7 @@ ideas = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = -0.10
 			}
 			
 			traits = { infantry_equipment_manufacturer_1 }
@@ -2131,7 +2149,7 @@ ideas = {
 
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = -0.10
 			}
 			
 			traits = { artillery_manufacturer_1 }
@@ -2151,7 +2169,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				mechanical_engineering = 0.05
+				mechanical_engineering = -0.05
 			}
 
 			traits = { industrial_concern_1 }
@@ -2166,7 +2184,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				process_engineering = 0.05
+				process_engineering = -0.05
 			}
 
 			traits = { electronics_concern_1 }
@@ -2181,7 +2199,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				biochemistry = 0.05
+				biochemistry = -0.05
 			}
 
 			traits = { electronics_concern_2 }
@@ -2196,7 +2214,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				electronics_devices = 0.05
+				electronics_devices = -0.05
 			}
 
 			traits = { electronics_concern_3 }
@@ -2492,7 +2510,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				doctrine_victorian_artillery_tech = 0.10
+				doctrine_victorian_artillery_tech = -0.10
 			}
 			
 			traits = { military_theorist }
@@ -2511,7 +2529,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				doctrine_victorian_innovative_tech = 0.10
+				doctrine_victorian_innovative_tech = -0.10
 			}
 			
 			traits = { military_theorist }
@@ -2525,7 +2543,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.10
+				naval_doctrine = -0.10
 			}
 			
 			traits = { naval_theorist }
@@ -2540,7 +2558,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				air_doctrine = 0.10
+				air_doctrine = -0.10
 			}
 			
 			traits = { air_warfare_theorist }

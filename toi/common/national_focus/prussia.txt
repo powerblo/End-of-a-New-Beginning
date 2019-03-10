@@ -119,7 +119,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_state_rail_0
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_focus_prussian_state_rail
 		x = 3
 		y = 1
 		cost = 70
@@ -441,7 +441,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_danzig_rifles
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_focus_prussia_milfactory_danzig
 		x = 7
 		y = 3
 		cost = 70
@@ -452,19 +452,19 @@ focus_tree = {
 		prerequisite = { focus = PRS_spandau_arsenal }
 		available = { 
 			PRS = { 
-				controls_state = 85
+				controls_state = 1002
 			} 
 		}
 		
 		completion_reward = {
-			85 = { add_extra_state_shared_building_slots = 1 }
-			85 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			1002 = { add_extra_state_shared_building_slots = 1 }
+			1002 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 		}
 	}
 	
 	focus = {
 		id = PRS_erfurt_rifles
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_focus_prussia_milfactory_erfurt
 		x = 7
 		y = 4
 		cost = 70
@@ -588,13 +588,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_make_big_city }
 		available = { 
 			PRS = { 
-				controls_state = 64
+				controls_state = 951
 			} 
 		}
 		
 		completion_reward = {
-			64 = { add_extra_state_shared_building_slots = 1 }
-			64 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			951 = { add_extra_state_shared_building_slots = 1 }
+			951 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -611,13 +611,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_berlin_factory_focus }
 		available = { 
 			PRS = { 
-				controls_state = 85
+				controls_state = 1002
 			} 
 		}
 		
 		completion_reward = {
-			85 = { add_extra_state_shared_building_slots = 1 }
-			85 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			1002 = { add_extra_state_shared_building_slots = 1 }
+			1002 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -634,13 +634,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_danzig_factory_focus }
 		available = { 
 			PRS = { 
-				controls_state = 62
+				controls_state = 63
 			} 
 		}
 		
 		completion_reward = {
-			62 = { add_extra_state_shared_building_slots = 1 }
-			62 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			63 = { add_extra_state_shared_building_slots = 1 }
+			63 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -820,7 +820,9 @@ focus_tree = {
 				create_corps_commander = {
 					name = "General von Moltke"
 					picture = "Portrait_PRS_Helmuth_Karl_Bernhard_von_Moltke.dds"
-					traits = { } 
+					traits = {
+						PRS_prussian_general
+					} 
 					skill = 5
 					attack_skill = 2
 					defense_skill = 2
@@ -2537,7 +2539,6 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.1
-			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
 	
@@ -2586,6 +2587,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_aussenpolitik }
+		bypass = {
+			AUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_NGC_improved }
@@ -2604,6 +2608,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_befriend_aus }
+		bypass = {
+			PRS_trigger_formed_germany = yes
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_PRS_focus_ngc_friendsouth
@@ -2631,6 +2638,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_aussenpolitik }
+		bypass = {
+			ENG = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_NGC_improved }
@@ -2649,6 +2659,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_befriend_eng }
+		bypass = {
+			RUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = RUS modifier = eoanb_om_PRS_NGC_improved }
@@ -2674,7 +2687,6 @@ focus_tree = {
 			NOT = { has_global_flag = eoanb_flag_second_schleswig_war }
 			OR = {
 				PRS = { has_navy_size = { size > 24 } }
-				PRS = { has_tech = tech_naval_1857_troops }
 				PRS = { has_completed_focus = PRS_high_seas }
 			}
 		}
@@ -2974,6 +2986,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		bypass = {
+			AUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_focus_like }
@@ -2992,6 +3007,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		bypass = {
+			SWI = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = SWI modifier = eoanb_om_PRS_focus_like }
