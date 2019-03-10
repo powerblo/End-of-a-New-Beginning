@@ -777,17 +777,21 @@ country_event = {
 	title = pssystem.16.t
 	desc = pssystem.16.d
 	
-	mean_time_to_happen = {
-		days = 365
-	}
+	is_triggered_only = yes
 	
-	trigger = {
-		
-	}
+	#mean_time_to_happen = {
+	#	days = 365
+	#}
+	
+	#trigger = {
+	#	
+	#}
 	
 	hidden = yes
 	
 	immediate = {
+		country_event = { id = pssystem.16 days = 365 }
+	
 		set_variable = {
 			var = ROOT.pol_stability_yearly_factor
 			value = 0

@@ -17,6 +17,9 @@ on_actions = {
 			FRA = { country_event = { id = nap_france.21 } }
 			set_global_flag = eoanb_flag_sepoy_rebellion_ongoing
 			set_global_flag = eoanb_flag_sow_ongoing
+			every_country = {
+				country_event = { id = pssystem.16 days = 365 }
+			}
 		}
 	}
 
