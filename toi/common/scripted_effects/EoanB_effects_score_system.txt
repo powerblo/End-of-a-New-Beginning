@@ -127,26 +127,10 @@ eoanb_add_50_tech_score = {
 }
 
 eoanb_score_system_calc = {
-        # set_variable = {
-            # var = global.global_liberty
-            # value = 0
-        # }
-
-        # set_variable = {
-            # var = global.global_industrial_liberty
-            # value = 0
-        # }
-
-        # set_variable = {
-            # var = global.global_agrarian_liberty
-            # value = 0
-        # }
 		clear_array = global.score_array 
 		clear_array = global.score_array_position
 		clear_array = global.score_tag_array
-
-        every_country = {
-                
+        every_country = {            
             #Initial calculation
             #Whenever this calculation runs, also add modified_liberty, which is a separate variable that stores liberty
             #from events, decisions and other sources
@@ -404,7 +388,6 @@ eoanb_score_system_calc = {
 			add_to_array = { global.score_array = overall_score }
 			add_to_array = { global.score_tag_array = THIS.id }
             set_temp_variable = { length_temp = global.score_array^num }
-			add_to_temp_array = { global.population_array_temp = manpower_k }
         }
             for_loop_effect = {
                 start = 0
@@ -464,7 +447,6 @@ eoanb_score_system_calc = {
                 add_to_variable = { global.score_array_position^v = 1 } 				
             }	
 		every_country = {
-		    set_temp_variable = { length_temp = global.score_array^num }
             for_loop_effect = {
                 start = 0
                 end = length_temp
@@ -484,38 +466,40 @@ eoanb_score_system_calc = {
 
 eoanb_ledger_system_calc = {
 
-		clear_array = global.population_array 
-            set_temp_variable = { length_temp = global.score_tag_array^num }
-		    subtract_from_temp_variable = { length_temp = 1  }		
-		every_country = {
-		    #add_to_temp_array = { global.population_array_temp = manpower_k }
-            for_loop_effect = {
-                start = 0
-                end = length_temp
-                add = 1
-                value = v  
+    clear_array = global.population_array 
+	clear_array = global.factories_array
+	clear_array = global.divisions_array
+	clear_array = global.ships_array
+    set_temp_variable = { length_temp = global.score_tag_array^num }
+	subtract_from_temp_variable = { length_temp = 1  }		
+	every_country = {
+        for_loop_effect = {
+            start = 0
+            end = length_temp
+            add = 1
+            value = v  
 				
-				add_to_array = { global.population_array = 1 }	
-				add_to_array = { global.factories_array = 1 }	
-				add_to_array = { global.divisions_array = 1 }
-                add_to_array = { global.ships_array = 1 }				
-            }
-            for_loop_effect = {
-                start = 0
-                end = length_temp
-                add = 1
-                value = v  
-                break = b 
+		    add_to_array = { global.population_array = 1 }	
+			add_to_array = { global.factories_array = 1 }	
+			add_to_array = { global.divisions_array = 1 }
+            add_to_array = { global.ships_array = 1 }				
+        }
+        for_loop_effect = {
+            start = 0
+            end = length_temp
+            add = 1
+            value = v  
+            break = b 
 				
-				if = {
-				    limit = { check_variable = { global.score_tag_array^v = THIS } }
-					set_variable = { global.population_array^v = max_manpower_k } 
-					multiply_variable = { global.population_array^v = 0.001 }		
-                    set_variable = { global.factories_array^v = num_of_factories }
-					set_variable = { global.divisions_array^v = num_divisions }
-					set_variable = { global.ships_array^v = num_ships }
-					set_variable = { b = 1 }
-				}		
-            }				
-		}
+		    if = {
+				limit = { check_variable = { global.score_tag_array^v = THIS } }
+			    set_variable = { global.population_array^v = max_manpower_k } 
+				multiply_variable = { global.population_array^v = 0.001 }		
+                set_variable = { global.factories_array^v = num_of_factories }
+			    set_variable = { global.divisions_array^v = num_divisions }
+				set_variable = { global.ships_array^v = num_ships }
+				set_variable = { b = 1 }
+			}		
+        }				
+    }
 }

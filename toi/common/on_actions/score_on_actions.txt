@@ -3,11 +3,11 @@ on_actions = {
     on_startup = {
         effect = {
 	        USA = {
-		    eoanb_score_system_calc = yes
-			eoanb_ledger_system_calc = yes 
-		}
-	}
-}
+		        eoanb_score_system_calc = yes
+			    eoanb_ledger_system_calc = yes 
+		    }
+	    }
+    }
 
 
     on_daily = {
@@ -28,20 +28,22 @@ on_actions = {
                 if = {
                     limit = {
                         check_variable = {
-                        global.time_counter > 15
+                        global.time_counter = 15
                         }
                     }
+					set_variable = { global.time_counter = 0 }
                     eoanb_score_system_calc = yes 
-                }
-                if = {
-                    limit = {
-                        check_variable = {
-                        global.time_counter > 17
-                        }
-                    }
-                    set_variable = { global.time_counter = 0 }
                     eoanb_ledger_system_calc = yes 
                 }
+                # if = {
+                    # limit = {
+                        # check_variable = {
+                        # global.time_counter > 30
+                        # }
+                    # }
+                    # set_variable = { global.time_counter = 0 }
+                    # eoanb_ledger_system_calc = yes 
+                # }
             }
             else_if = {
                 limit = {
@@ -62,20 +64,22 @@ on_actions = {
                     if = {
                         limit = {
                             check_variable = {
-                                global.time_counter > 15
+                                global.time_counter = 15
                             }
                         }
+						set_variable = { global.time_counter = 0 }
                         eoanb_score_system_calc = yes 
+						eoanb_ledger_system_calc = yes
                     }
-                    if = {
-                        limit = {
-                            check_variable = {
-                                global.time_counter > 17
-                            }
-                        }
-                        set_variable = { global.time_counter = 0 }
-                        eoanb_ledger_system_calc = yes 
-                    }
+                    # if = {
+                        # limit = {
+                            # check_variable = {
+                                # global.time_counter > 30 
+                            # }
+                        # }
+                        # set_variable = { global.time_counter = 0 }
+                        # eoanb_ledger_system_calc = yes 
+                    # }
                 }
             }
 	    }
