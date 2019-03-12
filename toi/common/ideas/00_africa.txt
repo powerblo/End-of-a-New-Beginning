@@ -12,7 +12,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 1
 				stability_factor = -0.35
-				research_time_factor = 8
+				research_speed_factor = -0.5
 				army_org_Factor = -0.4
 				stability_weekly = -0.003
 			}
@@ -29,7 +29,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.8
 				stability_factor = -0.3
-				research_time_factor = 8
+				research_speed_factor = -0.5
 				army_org_Factor = -0.4
 				stability_weekly = -0.003
 			}
@@ -46,7 +46,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.75
 				stability_factor = -0.25
-				research_time_factor = 8
+				research_speed_factor = -0.5
 				army_org_Factor = -0.35
 				stability_weekly = -0.003
 			}
@@ -63,7 +63,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.7
 				stability_factor = -0.25
-				research_time_factor = 8
+				research_speed_factor = -0.5
 				army_org_Factor = -0.3
 				stability_weekly = -0.003
 			}
@@ -80,7 +80,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.65
 				stability_factor = -0.25
-				research_time_factor = 8
+				research_speed_factor = -0.5
 				army_org_Factor = -0.25
 				stability_weekly = -0.003
 			}
@@ -97,7 +97,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.65
 				stability_factor = -0.25
-				research_time_factor = 4
+				research_speed_factor = -0.4
 				army_org_Factor = -0.25
 				stability_weekly = -0.002
 			}
@@ -114,7 +114,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.5
 				stability_factor = -0.2
-				research_time_factor = 4
+				research_speed_factor = -0.4
 				army_org_Factor = -0.2
 				stability_weekly = -0.002
 			}
@@ -131,7 +131,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.35
 				stability_factor = -0.15
-				research_time_factor = 4
+				research_speed_factor = -0.4
 				army_org_Factor = -0.15
 				stability_weekly = -0.002
 			}
@@ -148,7 +148,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.2
 				stability_factor = -0.1
-				research_time_factor = 1
+				research_speed_factor = -0.3
 				army_org_Factor = -0.1
 				stability_weekly = -0.001
 			}
@@ -522,7 +522,7 @@ ideas = {
 		}
 		ofs_SAR_partisans = {
 			allowed = {
-				always = yes
+				TRV={exists = yes}
 			}
 
 			removal_cost = -1
@@ -660,6 +660,32 @@ ideas = {
 				trade_opinion_factor = 0.2
 			}
 		}	
+		ofs_funding_rhodesian_industrialisation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		ofs_recovering_economy = {##attempt to justify free fac
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}
 		afr_supply_methods = {
 			allowed = {
 				always = yes
@@ -826,7 +852,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.5
 				production_speed_buildings_factor = -0.5
 				min_export = -0.05
-				research_time_factor = 0.50
+				research_speed_factor = -0.25
 				stability_factor = -0.65
 				war_support_factor = -0.9
 				drift_defence_factor = -1
@@ -841,5 +867,111 @@ ideas = {
 				army_org_Factor = -0.5
 			}
 		}
-	}
+		trv_idea_annoyed_church={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.002
+			}
+		}
+		trv_idea_god_fairing_people={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				defensive_war_stability_factor = 0.20
+				offensive_war_stability_factor = 0.15
+			}
+		}
+		trv_idea_disjointed_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_unstable_government
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.02
+			}
+		}
+		trv_idea_occupied_swazi_territory={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				conscription_factor = -0.05
+				political_power_gain = -0.02
+			}
+		}
+		SWZ_idea_bigger_than_it_looks={
+			allowed = {
+				TRV = {exists = yes}
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				conscription_factor = 0.25
+				political_power_gain = 0.02
+			}
+		}
+		EGY_ENG_controlled_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				political_power_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+		}
+		EGY_FRA_controlled_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				political_power_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = FRA
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+		}
 }

@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 470
+  capital = 467
 
   oob = "HBC_1857"
 
@@ -77,22 +77,30 @@
   }
   
   if = {
-    limit = {
-      has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-      target = NWT
-      autonomous_state = autonomy_integrated_puppet
-      freedom_level = 0.1
-    }
-}
+		limit = {
+		  has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+		  target = NWT
+		  autonomous_state = autonomy_integrated_puppet
+		  freedom_level = 0.1
+		}
+		set_autonomy = {
+		  target = BCO
+		  autonomous_state = autonomy_colony
+		  freedom_level = 0.52
+		}
+		else={
+	puppet = BCO
+	}
+	}
 
   set_technology = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
 	start_build_tech = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -112,5 +120,5 @@ create_country_leader = {
     expire = 1861.12.31
     ideology = despotism
 }
-puppet = BCO
+
 }

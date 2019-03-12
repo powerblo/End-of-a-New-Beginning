@@ -36,6 +36,8 @@
     state_religion
 	religion_catholic
         #NATIONAL SPIRITS
+    TUS_Incompetent_Ruling_Class
+    TUS_malaria
   
   }
 
@@ -81,7 +83,7 @@
   infantry_weapons = 1
   tech_infantry_napoleonic_uniform = 1
   vic_army_cloth = 1
-  tech_naval_1812_frigate = 1
+  #tech_naval_1812_frigate = 1
   gw_artillery = 1
   iron_railways = 1
   steam_engine = 1
@@ -109,6 +111,24 @@
     expire = "1862.11.7"
     picture = "Portrait_ICP_Carlo_Boncompagni_di_Mombello.dds"
     ideology = conserv_liberal
+    traits = {
+
+    }
+  }
+  create_country_leader = {
+    name = "Vincenzo Malenchini"
+    expire = "1862.11.7"
+    picture = ".dds"
+    ideology = market_social
+    traits = {
+
+    }
+  }
+  create_country_leader = {
+    name = "Ubaldino Peruzzi"
+    expire = "1862.11.7"
+    picture = ".dds"
+    ideology = conserv
     traits = {
 
     }

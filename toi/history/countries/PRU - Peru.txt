@@ -6,11 +6,6 @@
   set_convoys = 0
   
   set_research_slots = 2
-  
-      declare_war_on = {
-    target = PRR
-    type = civil_war
-  }
 
   add_ideas = { 
     #POLITICS 
@@ -86,8 +81,8 @@
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
-	tech_naval_1857_sloop_steam = 1
+	#tech_naval_1812_frigate = 1
+	#tech_naval_1857_sloop_steam = 1
 	start_build_tech = 1
   }
 
@@ -99,6 +94,14 @@ create_country_leader = {
     picture = "Portrait_PRU_Ramon_Castilla.dds"
     expire = 1900.1.1
     ideology = conserv_liberal
+}
+
+create_country_leader = {
+    name = "Juan Pezet"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_PRU_Juan_Pezet.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 
 create_field_marshal {

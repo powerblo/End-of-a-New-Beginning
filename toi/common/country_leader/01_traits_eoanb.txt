@@ -126,7 +126,6 @@ leader_traits = {
 
 	vanguard_communism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		vanguard_communism_drift = 0.05
 		
@@ -137,7 +136,6 @@ leader_traits = {
 
 	collectivist_socialism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		collectivist_socialism_drift = 0.05
 		
@@ -148,7 +146,6 @@ leader_traits = {
 
 	social_egalitarianism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		social_egalitarianism_drift = 0.05
 		
@@ -159,7 +156,6 @@ leader_traits = {
 
 	centrism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		centrism_drift = 0.05
 		
@@ -170,7 +166,6 @@ leader_traits = {
 
 	traditional_conservatism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		traditional_conservatism_drift = 0.05
 		
@@ -181,7 +176,6 @@ leader_traits = {
 
 	radical_democracy_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		radical_democracy_drift = 0.05
 		
@@ -192,7 +186,6 @@ leader_traits = {
 
 	autocracy_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		autocracy_drift = 0.05
 		
@@ -203,7 +196,6 @@ leader_traits = {
 
 	chauvinist_populism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		chauvinist_populism_drift = 0.05
 		
@@ -214,7 +206,6 @@ leader_traits = {
 
 	anarchism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		anarchism_drift = 0.05
 		
@@ -225,7 +216,6 @@ leader_traits = {
 
 	fundamentalism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		fundamentalism_drift = 0.05
 		
@@ -305,7 +295,7 @@ leader_traits = {
 		sprite = 10
 		random = yes
 		
-		research_time_factor = -0.02
+		research_speed_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -316,7 +306,7 @@ leader_traits = {
 		sprite = 10
 		random = yes
 		
-		research_time_factor = -0.03
+		research_speed_factor = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -440,6 +430,12 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				TAG = PRS
+				is_historical_focus_on = yes
+				date < 1920.1.1
+			}
 		}
 	}
 
@@ -665,6 +661,89 @@ leader_traits = {
 		
 		political_power_gain = 0.025
 		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### MILITARY HIGH COMMAND TRAITS
+	
+	eoanb_trait_high_rank_vrc = { 
+		sprite = 6
+		
+		conscription = 0.001
+		out_of_supply_factor = -0.05
+		army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	###Italian Leader Traits
+
+	ITA_trait_Iron_Baron = {
+		random = no
+		
+		political_power_gain = 0.5 
+		
+
+	}
+	
+	#Companies
+	
+	#Light Ship Designer
+	eoanb_naval_manufacturer_light = {
+		random = no
+		#TEMPORARY
+		navy_screen_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Heavy Ship Designer
+	eoanb_naval_manufacturer_heavy = {
+		random = no
+		#TEMPORARY
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	artillery_manufacturer_1 = {
+		random = no
+		#generic
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Mass Ship Designer
+	ENG_trait_naval_whitworth = {
+		random = no
+		#TEMPORARY
+		navy_screen_attack_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Fleet Designer
+	GER_trait_naval_lloyd = {
+		random = no
+		#TEMPORARY
+		navy_screen_attack_factor = 0.05
+		navy_screen_defence_factor = 0.05
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
