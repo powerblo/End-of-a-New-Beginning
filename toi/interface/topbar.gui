@@ -521,7 +521,7 @@ guiTypes = {
 				shortcut = "SPACE" #Will be disabled in MP from code
 				clicksound = pause_button
 			}
-			
+
 			buttonType = {
 				name = "button_speeddown"
 				quadTextureSprite ="GFX_zoom_out"
@@ -602,19 +602,6 @@ guiTypes = {
 			oversound = ui_menu_over
 			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "MAIN_MENU"
-		}
-
-		buttonType = {
-			name = "help_button"
-			position = { x = -29 y = 34 }
-			quadTextureSprite ="GFX_help_button"
-			buttonText = ""
-			buttonFont = "Main_14_black"
-			clicksound = click_ok
-			oversound = ui_menu_over
-			Orientation = "UPPER_RIGHT"
-			pdx_tooltip = "HELP_MENU"
-			web_link = ""
 		}
 
 		buttonType = {
