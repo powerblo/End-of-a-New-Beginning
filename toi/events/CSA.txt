@@ -332,25 +332,7 @@ country_event = {
 			trigger = {
 				tag = USA
 			}
-			CSA = { transfer_state = 362 }
-        	remove_state_core = 362
-        	add_state_claim = 362
-        	362 = { add_core_of = CSA }
-        	CSA = { transfer_state = 372 }
-        	remove_state_core = 372
-        	add_state_claim = 372
-        	372 = { add_core_of = CSA }
-        	CSA = { transfer_state = 368 }
-        	remove_state_core = 368
-        	add_state_claim = 368
-        	368 = { add_core_of = CSA }
-        	CSA = { transfer_state = 363 }
-        	remove_state_core = 363
-        	add_state_claim = 363
-        	363 = { add_core_of = CSA }
-			name = csa.1.a
-			hidden_effect = { CSA = { country_event = { id = csa.8 } } }
-			add_popularity = { ideology = traditional_conservatism popularity = -0.20 }
+			name = csa.8.a
 		}
 		option = {
 			trigger = {
@@ -376,7 +358,10 @@ country_event = {
 			CSA = { controls_state = 367 }
 			CSA = { controls_state = 370 }
 			CSA = { controls_state = 371 }
-			CSA = { controls_state = 375 }
+		}
+
+		mean_time_to_happen = {
+			days = 6
 		}
 		
 		option = {
@@ -397,6 +382,7 @@ country_event = {
 		
 		option = {
 			name = csa.9.a
+			add_ideas = CSA_Civil_War_Scout_Dependency
 			if = {
 				limit = {
 					USA = { has_country_flag = USA_Radical_Coup }
@@ -406,7 +392,6 @@ country_event = {
 			else = {
 				load_oob = CSA_AFTER_SUMTER
 			}
-			add_ideas = CSA_Civil_War_Scout_Dependency
        	}
 }
 #Flag Referendum

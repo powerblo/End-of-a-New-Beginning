@@ -87,7 +87,7 @@
 		completion_reward = {
 			declare_war_on = {
 				target = SIX
-				type = take_claimed_state
+				type = annex_everything
 			}
 		}
 	}
@@ -131,7 +131,7 @@
 		completion_reward = {
 			declare_war_on = {
 				target = CHY
-				type = take_claimed_state
+				type = annex_everything
 			}
 		}
 	}
@@ -451,6 +451,12 @@
 			focus = USA_diplomacy_attack_sioux
 			focus = USA_diplomacy_attack_cheyenne
 			focus = USA_diplomacy_attack_nez
+			focus = USA_diplomacy_attack_com
+			focus = USA_diplomacy_attack_bft
+			focus = USA_diplomacy_attack_sho
+			focus = USA_diplomacy_attack_apa
+			focus = USA_diplomacy_attack_nav
+			focus = USA_diplomacy_attack_crw
 		}
 		bypass = {
 			SEM = { exists = no }
@@ -476,9 +482,15 @@
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 70
 		prerequisite = {
-			focus = USA_diplomacy_attack_nez
-			focus = USA_diplomacy_attack_cheyenne
 			focus = USA_diplomacy_attack_sioux
+			focus = USA_diplomacy_attack_cheyenne
+			focus = USA_diplomacy_attack_nez
+			focus = USA_diplomacy_attack_com
+			focus = USA_diplomacy_attack_bft
+			focus = USA_diplomacy_attack_sho
+			focus = USA_diplomacy_attack_apa
+			focus = USA_diplomacy_attack_nav
+			focus = USA_diplomacy_attack_crw
 		}
 		bypass = {
 			UTA = { exists = no }
@@ -505,11 +517,35 @@
 		prerequisite = {
 			focus = USA_diplomacy_attack_nez
 		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_com
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_bft
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_sho
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_apa
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_nav
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_crw
+		}
 		available = {
 			AND = {
 				SIX = { exists = no }
 				CHY = { exists = no }
 				NEZ = { exists = no }
+				COM = { exists = no }
+				BFT = { exists = no }
+				SHO = { exists = no }
+				APA = { exists = no }
+				NAV = { exists = no }
+				CRW = { exists = no }
 			}
 		}
 		x = 37
