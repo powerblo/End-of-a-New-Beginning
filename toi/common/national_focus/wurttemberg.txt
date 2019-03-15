@@ -804,7 +804,13 @@ focus_tree = {
 	focus = {
 		id = WUR_suppress_wurttembergian_liberalism
 		icon = GFX_goal_focus_broken_democracy
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 21
 		y = 0
 		mutually_exclusive = { focus = WUR_integrate_wurttembergian_liberalism } 
@@ -835,7 +841,13 @@ focus_tree = {
 	focus = {
 		id = WUR_joseph_von_linden
 		icon = GFX_goal_focus_joseph_linden
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 21
 		y = 1
 		mutually_exclusive = { } 
@@ -859,7 +871,13 @@ focus_tree = {
 	focus = {
 		id = WUR_the_liberal_struggle
 		icon = GFX_goal_focus_liberty
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 20
 		y = 2
 		mutually_exclusive = { } 
@@ -892,7 +910,13 @@ focus_tree = {
 	focus = {
 		id = WUR_regierungskreise
 		icon = GFX_goal_focus_decentralisation_power
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 23
 		y = 0
 		mutually_exclusive = { } 
@@ -915,7 +939,13 @@ focus_tree = {
 	focus = {
 		id = WUR_kommunalverwaltung
 		icon = GFX_goal_focus_kommunalverwaltung
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 23
 		y = 1
 		mutually_exclusive = { } 
@@ -938,7 +968,13 @@ focus_tree = {
 	focus = {
 		id = WUR_enforce_the_schultheiss
 		icon = GFX_goal_generic_dangerous_deal
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 23
 		y = 2
 		mutually_exclusive = { } 
@@ -964,7 +1000,13 @@ focus_tree = {
 	focus = {
 		id = WUR_aftermath_of_the_rumpfparlament
 		icon = GFX_goal_focus_government_icon
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 3
 		mutually_exclusive = { } 
@@ -990,7 +1032,13 @@ focus_tree = {
 	focus = {
 		id = WUR_shifting_flow
 		icon = GFX_goal_focus_continent_west_europe
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 4
 		mutually_exclusive = { } 
@@ -1016,7 +1064,13 @@ focus_tree = {
 	focus = {
 		id = WUR_alexander_ii
 		icon = GFX_goal_focus_alexander_ii
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 23
 		y = 5
 		mutually_exclusive = { } 
@@ -1042,7 +1096,13 @@ focus_tree = {
 	focus = {
 		id = WUR_napoleon_iii
 		icon = GFX_goal_focus_napoleon_iii
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 21
 		y = 5
 		mutually_exclusive = { } 
@@ -1068,7 +1128,13 @@ focus_tree = {
 	focus = {
 		id = WUR_zweikaisertreffen
 		icon = GFX_goal_generic_major_alliance
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 22
 		y = 6
 		mutually_exclusive = { } 
@@ -1237,7 +1303,13 @@ focus_tree = {
 	focus = {
 		id = WUR_liberal_reforms
 		icon = GFX_goal_support_democracy
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 1
 		mutually_exclusive = { focus = WUR_conservative_norms } 
@@ -1258,7 +1330,13 @@ focus_tree = {
 	focus = {
 		id = WUR_freedom_of_press
 		icon = GFX_goal_focus_freedom_press
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 30
 		y = 2
 		mutually_exclusive = { } 
@@ -1291,7 +1369,13 @@ focus_tree = {
 	focus = {
 		id = WUR_freedom_of_association
 		icon = GFX_goal_focus_freedom_association
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 2
 		mutually_exclusive = { } 
@@ -1324,7 +1408,13 @@ focus_tree = {
 	focus = {
 		id = WUR_repeal_marriage_restrictions
 		icon = GFX_goal_focus_freedom_marriage
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 2
 		mutually_exclusive = { } 
@@ -1346,7 +1436,13 @@ focus_tree = {
 	focus = {
 		id = WUR_civil_rights_for_the_jews
 		icon = GFX_focus_generic_concessions
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 3
 		mutually_exclusive = { } 
@@ -1379,7 +1475,13 @@ focus_tree = {
 	focus = {
 		id = WUR_karl_von_varnbueler
 		icon = GFX_goal_focus_karl_von_varnbueler
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 26
 		y = 4
 		mutually_exclusive = { } 
@@ -1397,7 +1499,13 @@ focus_tree = {
 	focus = {
 		id = WUR_right_of_abode
 		icon = GFX_goal_focus_freedom_abode
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 4
 		mutually_exclusive = { } 
@@ -1419,7 +1527,13 @@ focus_tree = {
 	focus = {
 		id = WUR_economic_freedom
 		icon = GFX_goal_focus_freedom_economy
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 30
 		y = 4
 		mutually_exclusive = { } 
@@ -1442,7 +1556,13 @@ focus_tree = {
 	focus = {
 		id = WUR_reform_second_chamber
 		icon = GFX_goal_focus_reform_government
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 28
 		y = 5
 		mutually_exclusive = { } 
@@ -1714,7 +1834,7 @@ focus_tree = {
 	focus = {
 		id = WUR_our_stance_on_germany
 		icon = GFX_goal_focus_form_germany
-		ai_will_do = { factor = 40 }
+		ai_will_do = { factor = 100 }
 		x = 31
 		y = 6
 		mutually_exclusive = { } 
@@ -1794,7 +1914,13 @@ focus_tree = {
 	focus = {
 		id = WUR_the_south
 		icon = GFX_goal_focus_crown_of_austria
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 29
 		y = 7
 		mutually_exclusive = { focus = WUR_the_north focus = WUR_the_southern_states } 
@@ -1822,7 +1948,13 @@ focus_tree = {
 	focus = {
 		id = WUR_austrian_relations
 		icon = GFX_goal_focus_ally_AUS
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 29
 		y = 8
 		mutually_exclusive = { } 
@@ -2048,7 +2180,13 @@ focus_tree = {
 	focus = {
 		id = WUR_push_for_pro_austrian_approach
 		icon = GFX_goal_generic_major_alliance
-		ai_will_do = { factor = 40 }
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
 		x = 29
 		y = 12
 		prerequisite = { focus = WUR_austrian_relations }
