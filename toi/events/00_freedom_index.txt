@@ -541,7 +541,7 @@ news_event = {
 
             #Now add this country's liberty to the global liberty index.
             #Scale it for population. Bigger countries have a bigger effect on global liberty average
-            set_variable = { pop_modified_liberty = liberty }
+            set_variable = { score_modified_liberty = liberty }
             
             #Set a liberty level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
             if = {
@@ -550,9 +550,9 @@ news_event = {
                         has_idea = pre_industrial_era
                     }                
                 }
-            multiply_variable = { pop_modified_liberty = country_pop_in_millions }
-            add_to_variable = { global.global_industrial_liberty = pop_modified_liberty }
-            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            multiply_variable = { score_modified_liberty = overall_score }
+            add_to_variable = { global.global_industrial_liberty = score_modified_liberty }
+            add_to_variable = { global.global_liberty = score_modified_liberty }   
             }
 
             #Set a liberty level for all agrarian nations
@@ -560,9 +560,9 @@ news_event = {
                 limit = {
                     has_idea = pre_industrial_era               
                 }
-            multiply_variable = { pop_modified_liberty = country_pop_in_millions }
-            add_to_variable = { global.global_agrarian_liberty = pop_modified_liberty }
-            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            multiply_variable = { score_modified_liberty = overall_score }
+            add_to_variable = { global.global_agrarian_liberty = score_modified_liberty }
+            add_to_variable = { global.global_liberty = score_modified_liberty }   
             }
         }
 
@@ -1110,7 +1110,7 @@ news_event = {
 
             #Now add this country's consciousness to the global consciousness index.
             #Scale it for population. Bigger countries have a bigger effect on global consciousness average
-            set_variable = { pop_modified_consciousness = consciousness }
+            set_variable = { score_modified_consciousness = consciousness }
             
             #Set a consciousness level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
             if = {
@@ -1119,9 +1119,9 @@ news_event = {
                         has_idea = pre_industrial_era
                     }                
                 }
-            multiply_variable = { pop_modified_consciousness = country_pop_in_millions }
-            add_to_variable = { global.global_industrial_consciousness = pop_modified_consciousness }
-            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            multiply_variable = { score_modified_consciousness = overall_score }
+            add_to_variable = { global.global_industrial_consciousness = score_modified_consciousness }
+            add_to_variable = { global.global_consciousness = score_modified_consciousness }   
             }
 
             #Set a consciousness level for all agrarian nations
@@ -1129,9 +1129,9 @@ news_event = {
                 limit = {
                     has_idea = pre_industrial_era               
                 }
-            multiply_variable = { pop_modified_consciousness = country_pop_in_millions }
-            add_to_variable = { global.global_agrarian_consciousness = pop_modified_consciousness }
-            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            multiply_variable = { score_modified_consciousness = overall_score }
+            add_to_variable = { global.global_agrarian_consciousness = score_modified_consciousness }
+            add_to_variable = { global.global_consciousness = score_modified_consciousness }   
             }
         }
 
