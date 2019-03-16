@@ -84,7 +84,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = land_doctrine }
+			add_tech_bonus = { name = EGY_new_victorian_doctrines bonus = 0.25 uses = 2 category = land_doctrine }
 		}
 	}
 	focus = {
@@ -323,8 +323,11 @@ focus_tree = {
 		prerequisite = {
 			focus = EGY_vic_advances_in_the_army
 		}
-		prerequisite = {
-			focus = EGY_vic_reforms_of_ismail
+		available={
+			OR={
+				has_completed_focus = EGY_vic_reforms_of_ismail
+				has_completed_focus = EGY_vic_reforms_of_ahmad
+			}
 		}
 		x = 3
 		y = 6
@@ -553,7 +556,7 @@ focus_tree = {
 		prerequisite = {
 			focus = EGY_vic_send_envoy_to_ETH
 		}
-		x = 5
+		x = 3
 		y = 11
 		available_if_capitulated = no
 		ai_will_do = {
