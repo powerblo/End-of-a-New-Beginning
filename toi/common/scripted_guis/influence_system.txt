@@ -132,20 +132,11 @@ scripted_gui = {
 					}
 			    THIS = {
 			        remove_from_array = { influencer_array = influencer_var@ROOT }
+					remove_from_array = { influencer_tag_array = Root.ID }
 			        add_to_variable = { influencer_var@ROOT = 0.05 }
 					add_to_array = { influencer_array = influencer_var@ROOT }
-					if = {
-					    limit = { 
-				      	   NOT = { 
-					            check_variable = { 
-					                influencer_tag_array^v = ROOT.ID 
-						        } 
-					        } 
-					    }
-					add_to_array = { influencer_tag_array = ROOT.id }
-				    }
 	                clamp_variable = {
-	                    var = influencer_var
+	                    var = influencer_var@ROOT 
                    	    max = 1 
 	                 	min = 0 
 	                }					
