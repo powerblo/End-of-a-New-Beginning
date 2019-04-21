@@ -1,3 +1,7 @@
+THIS IS NOT THE CURRENT DEVELOPMENT VERSION OF THE MOD, THE EOANB TEAM SWITCHED TO A TEAM-OWNED REPOSITORY
+FIND THE NEW REPOSITORY HERE:
+https://github.com/team-eoanb/EoaNB
+
 # End-of-a-New-Beginning
 A Hearts of Iron IV project that extends the timeline from 1860 to the modern day.
 The American Civil War, Scramble for Africa, Unification of Germany and the Great Game are just some examples of the immense events that will be available in the Timeline of Iron. Expect an absolute, complete overhaul of everything you remember about HOI4.
